@@ -1,0 +1,134 @@
+{
+  "main": [
+    {
+      "id": "collections",
+      "label": "产品系列",
+      "href": "/collections",
+      "groups": [
+        {
+          "title": "客厅",
+          "links": [
+            { "label": "沙发", "href": "/collections/sofas" },
+            { "label": "组合沙发", "href": "/collections/sectionals" },
+            { "label": "休闲椅", "href": "/collections/lounge-chairs" },
+            { "label": "茶几", "href": "/collections/coffee-tables" }
+          ]
+        },
+        {
+          "title": "餐厅",
+          "links": [
+            { "label": "餐桌", "href": "/collections/dining-tables" },
+            { "label": "餐椅", "href": "/collections/dining-chairs" },
+            { "label": "餐边柜", "href": "/collections/sideboards" },
+            { "label": "吧凳", "href": "/collections/bar-stools" }
+          ]
+        },
+        {
+          "title": "卧室",
+          "links": [
+            { "label": "床", "href": "/collections/beds" },
+            { "label": "床头柜", "href": "/collections/nightstands" },
+            { "label": "梳妆台", "href": "/collections/dressers" },
+            { "label": "衣柜", "href": "/collections/wardrobes" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部系列",
+        "description": "按房间与品类浏览家具",
+        "href": "/collections",
+        "image": "/images/home-collections/living-room-v2.jpg"
+      }
+    },
+    {
+      "id": "joinery",
+      "label": "定制木作",
+      "href": "/joinery",
+      "groups": [
+        {
+          "title": "集成系统",
+          "links": [
+            { "label": "厨房橱柜", "href": "/joinery/kitchen-cabinetry", "description": "定制厨房与岛台" },
+            { "label": "衣柜衣帽间", "href": "/joinery/wardrobes-closets", "description": "嵌入式储物方案" },
+            { "label": "客厅定制", "href": "/joinery/living-built-ins", "description": "电视墙与书架" }
+          ]
+        },
+        {
+          "title": "专项",
+          "links": [
+            { "label": "浴室柜", "href": "/joinery/bathroom-vanities", "description": "定制浴室柜" },
+            { "label": "室内门", "href": "/joinery/interior-doors", "description": "平板与造型门" },
+            { "label": "墙板", "href": "/joinery/wall-panels", "description": "建筑墙面处理" }
+          ]
+        },
+        {
+          "title": "流程",
+          "links": [
+            { "label": "材料与饰面", "href": "/joinery/materials-finishes", "description": "木材、石材与金属选项" },
+            { "label": "制造与质量", "href": "/joinery/manufacturing-quality", "description": "生产标准与质检" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "集成木作系统",
+        "description": "与家具套餐协调的定制木作",
+        "href": "/joinery",
+        "image": "/images/finished-chair.webp"
+      }
+    },
+    {
+      "id": "solutions",
+      "label": "解决方案",
+      "links": [
+        { "label": "业主", "href": "/homeowners", "description": "一个完整的家，一体化设计与配置" },
+        { "label": "室内设计师", "href": "/designers", "description": "采购与定制制造支持" },
+        { "label": "建筑商与开发商", "href": "/builders", "description": "多单元项目的可复制套餐" },
+        { "label": "酒店餐饮", "href": "/hospitality", "description": "客房与公共空间解决方案" }
+      ]
+    },
+    {
+      "id": "projects",
+      "label": "项目案例",
+      "href": "/projects",
+      "links": [
+        { "label": "豪华住宅", "href": "/projects/luxury-residence" },
+        { "label": "别墅项目", "href": "/projects/villa-projects" },
+        { "label": "酒店", "href": "/projects/hospitality" },
+        { "label": "开发项目", "href": "/projects/developer-projects" }
+      ]
+    },
+    {
+      "id": "how",
+      "label": "合作流程",
+      "href": "/how-it-works",
+      "links": [
+        { "label": "$2,299 起套餐", "href": "/home-packages" },
+        { "label": "合作流程", "href": "/how-it-works" },
+        { "label": "工厂参观", "href": "/foshan-sourcing-tour" }
+      ]
+    },
+    {
+      "id": "resources",
+      "label": "资源",
+      "links": [
+        { "label": "产品目录", "href": "/catalogs" },
+        { "label": "家具指南", "href": "/furniture-guide" },
+        { "label": "中国家具指南", "href": "/china-furniture-guide" },
+        { "label": "制造能力", "href": "/manufacturing" },
+        { "label": "常见问题", "href": "/faq" },
+        { "label": "博客", "href": "/blog" }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "关于",
+      "links": [
+        { "label": "品牌故事", "href": "/about" },
+        { "label": "质量控制", "href": "/quality-control" },
+        { "label": "全球能力", "href": "/global-capabilities" },
+        { "label": "质保政策", "href": "/warranty-policy" },
+        { "label": "联系我们", "href": "/contact" }
+      ]
+    }
+  ]
+}

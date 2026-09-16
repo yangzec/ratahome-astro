@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "eyebrow": "设计、制造与交付——一体化项目管理",
+    "title": "全屋一站伙伴，无论您在哪里建造。",
+    "description": "我们设计、定制并交付完整住宅室内方案——从家具、木作到灯光与材料——依托佛山世界级制造生态系统。",
+    "image": "/images/hero-living-v2.webp",
+    "imageAlt": "现代客厅室内"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "3年结构质保", "description": "框架、木作与柜体" },
+    { "icon": "/icons/box-seam.svg", "title": "100% 出货前检验", "description": "每单附照片质检报告" },
+    { "icon": "/icons/shield-check.svg", "title": "出口保险包装", "description": "运输损坏承保并更换" },
+    { "icon": "/icons/clock.svg", "title": "48小时售后响应", "description": "一个联系人全程处理" }
+  ],
+  "metrics": [
+    { "value": "7周", "label": "典型套餐交付周期" },
+    { "value": "1,200+", "label": "全球已交付住宅" },
+    { "value": "18个城市", "label": "悉尼至洛杉矶" },
+    { "value": "100%", "label": "出货前检验" }
+  ],
+  "audiences": {
+    "title": "为每个项目提供解决方案。",
+    "description": "一个平台，适配不同决策者——从单栋私宅到可复制的开发项目。",
+    "items": [
+      { "title": "业主", "description": "一个完整的家，一体化设计与配置。", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
+      { "title": "室内设计师", "description": "采购与定制制造支持。", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
+      { "title": "建筑商与开发商", "description": "多单元项目的可复制套餐。", "href": "/builders", "image": "/images/home-audiences/builders-contractors-v4.webp" },
+      { "title": "酒店餐饮", "description": "客房与公共空间解决方案。", "href": "/hospitality", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" }
+    ]
+  },
+  "capabilities": {
+    "title": "家的每一层，统一项目管理。",
+    "description": "无需协调多个供应商，一个团队覆盖设计开发、家具选型、定制制造、质量控制和交付。",
+    "items": [
+      { "title": "家具", "description": "客厅、餐厅、卧室、书房与户外套餐。", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "定制木作", "description": "厨房、衣柜、储物与建筑木作。", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "灯光与材料", "description": "装饰灯具、地毯、配饰与饰面协调。", "image": "/images/package-living-california.webp" },
+      { "title": "项目交付", "description": "打样、施工图、质检、包装与国际物流。", "image": "/images/delivery-container.webp" }
+    ]
+  },
+  "process": {
+    "title": "一条路径，从平面图到完工之家。",
+    "description": "每项决策在生产前均已记录，项目有清晰路径和唯一沟通窗口。",
+    "image": "/images/home-process/completed-residence-v2.jpg",
+    "imageAlt": "完工住宅室内",
+    "steps": [
+      { "step": "01", "title": "了解", "description": "理解您的空间、生活方式与项目需求。" },
+      { "step": "02", "title": "设计", "description": "围绕需求开发家具布局与室内概念。" },
+      { "step": "03", "title": "甄选", "description": "在佛山制造生态中选型产品与材料。" },
+      { "step": "04", "title": "制造", "description": "认证工厂生产协调的家具与木作范围。" },
+      { "step": "05", "title": "交付", "description": "协调检验、出口包装、运输与安装支持。" }
+    ]
+  },
+  "testimonials": [
+    { "quote": "一个团队负责规格、工厂管控和运输。我们不再追着六个供应商跑。", "author": "Studio Marren · 悉尼" },
+    { "quote": "每个节点前都收到施工图和质检报告。跨境采购中这很少见。", "author": "Halden Developments · 迪拜" }
+  ],
+  "warranty": {
+    "eyebrow": "安心保障",
+    "title": "如果出现问题怎么办？",
+    "description": "跨境配置存在真实风险。我们以书面承诺回应——而非事后口头保证。",
+    "commitment": "每项承诺均有文档——质保条款、质检报告与理赔流程是项目文件的一部分，而非细则小字。",
+    "cases": [
+      { "question": "如果到货损坏", "title": "免费维修或更换。", "description": "每批货物投保并在发货前拍照记录。交付后14天内报告损坏；我们安排维修、更换零件或重新制作，费用全免。" },
+      { "question": "如果有缺陷", "title": "质保书面覆盖。", "description": "框架与木作3年结构质保，机构、饰面与软包2年。条款随订单确认发出——在生产开始前。" },
+      { "question": "如果有缺件", "title": "一个联系人快速解决。", "description": "项目经理在交付后持续负责——缺件7天内发货，每项索赔48小时内响应。" }
+    ]
+  },
+  "rooms": {
+    "title": "按房间探索家居。",
+    "items": [
+      { "label": "客厅", "slug": "living-room" },
+      { "label": "餐厅", "slug": "dining-room" },
+      { "label": "卧室", "slug": "bedroom" },
+      { "label": "厨房与吧台", "slug": "kitchen-bar" },
+      { "label": "书房", "slug": "home-office" },
+      { "label": "户外", "slug": "outdoor-living" },
+      { "label": "玄关与走廊", "slug": "entry-hallway" },
+      { "label": "灯光与装饰", "slug": "lighting-decor" }
+    ]
+  },
+  "projects": {
+    "title": "完整空间，围绕每个需求塑造。",
+    "items": [
+      { "location": "美国加州", "delivery": "9周交付", "type": "别墅", "title": "现代当代住宅", "scope": "完整家具套餐", "solution": "家具、灯光与定制件", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/projects/luxury-residence" },
+      { "location": "住宅室内", "delivery": "全屋配置", "type": "项目故事", "title": "内与外——层次分明的家", "scope": "木里木外住宅", "solution": "层次分明的家。", "image": "/images/package-living-california.webp", "href": "/projects/villa-projects" }
+    ]
+  },
+  "ecosystem": {
+    "title": "制造生态系统，而非商品市场。",
+    "description": "信任建立在文档化流程、认证来源与每阶段清晰职责之上——将佛山家具、木作与专业制造深度整合为一套协调的项目方案。",
+    "items": [
+      { "step": "01", "title": "佛山制造生态", "description": "直连家具、木作、材料与专业制造能力。" },
+      { "step": "02", "title": "全屋能力", "description": "家具、定制木作、灯光、材料与软装统一协调。" },
+      { "step": "03", "title": "全球项目经验", "description": "面向国际需求开发的住宅与项目支持。" },
+      { "step": "04", "title": "质量管理", "description": "材料确认、生产评审与出货前检验。" }
+    ]
+  },
+  "cta": {
+    "title": "与一个可信伙伴共创完整之家。",
+    "description": "分享平面图与项目需求——您将收到结构化下一步与套餐范围概算。",
+    "formTitle": "发送平面图",
+    "formDescription": "告诉我们房间、偏好风格、时间与预算。平面图或参考图有帮助，但非必需。",
+    "steps": [
+      "发送平面图——一个文件即可开始。",
+      "收到结构化项目简报与范围概算。",
+      "与唯一负责的项目团队审阅方案。"
+    ]
+  },
+  "footerFeatures": [
+    { "title": "佛山制造生态", "description": "家具、木作、灯光与材料" },
+    { "title": "出货前质检", "description": "发货前文档化审核" },
+    { "title": "全球协调", "description": "出口包装与交付支持" },
+    { "title": "单一项目团队", "description": "全程一个沟通窗口" }
+  ]
+}
