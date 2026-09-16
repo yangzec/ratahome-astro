@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import type { Locale } from '../i18n/config';
+import { getContent } from '../lib/content';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+}
+
+const { locale, title, description } = Astro.props;
+const { common } = getContent(locale);
+const { site } = common;
+
+const pageTitle = title
+  ? `${title} — ${site.name}`
+  : `${site.name} — ${site.title}`;
+const pageDescription = description ?? site.description;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={pageDescription} />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header locale={locale} currentPath={currentPath} />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <script>
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeBtn = document.getElementById('mobile-menu-close');
+
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+
+      document.querySelectorAll('[data-accordion]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const panel = btn.nextElementSibling;
+          const icon = btn.querySelector('[data-chevron]');
+          panel?.classList.toggle('hidden');
+          icon?.classList.toggle('rotate-180');
+        });
+      });
+    </script>
+  </body>
+</html>
