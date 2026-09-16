@@ -1,0 +1,73 @@
+---
+export const prerender = true;
+
+import GenericPage from '../templates/GenericPage.astro';
+import { getContent } from '../lib/content';
+import { collectionSlugs, joinerySlugs, projectSlugs, pageSlugs } from '../data/slugs';
+
+export function getStaticPaths() {
+  const paths: Array<{ params: { slug: string }; props: Record<string, unknown> }> = [];
+
+  for (const slug of pageSlugs) {
+    paths.push({ params: { slug }, props: { type: 'page', slug } });
+  }
+
+  for (const slug of collectionSlugs) {
+    paths.push({ params: { slug: `collections/${slug}` }, props: { type: 'collection', slug } });
+  }
+
+  for (const slug of joinerySlugs) {
+    paths.push({ params: { slug: `joinery/${slug}` }, props: { type: 'joinery', slug } });
+  }
+
+  for (const slug of projectSlugs) {
+    paths.push({ params: { slug: `projects/${slug}` }, props: { type: 'project', slug } });
+  }
+
+  return paths;
+}
+
+const { type, slug } = Astro.props;
+const { pages } = getContent('en');
+
+function titleize(s: string) {
+  return s.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+let title: string;
+let description: string;
+let content: string;
+let showCollectionBenefits = false;
+let ctaKey: 'requestQuote' | 'discussJoinery' | 'startProject' = 'startProject';
+
+if (type === 'page') {
+  const page = pages.slugs[slug as keyof typeof pages.slugs];
+  title = page?.title ?? titleize(slug);
+  description = page?.description ?? '';
+  content = page?.content ?? '';
+} else if (type === 'collection') {
+  title = titleize(slug);
+  description = `Explore our ${slug.replace(/-/g, ' ')} collection.`;
+  content = `Browse curated ${slug.replace(/-/g, ' ')} pieces selected to coordinate with whole-home furnishing packages.`;
+  showCollectionBenefits = true;
+  ctaKey = 'requestQuote';
+} else if (type === 'joinery') {
+  title = titleize(slug);
+  description = `Custom ${slug.replace(/-/g, ' ')} solutions.`;
+  content = `Our joinery team manufactures custom ${slug.replace(/-/g, ' ')} to match your furniture selections.`;
+  ctaKey = 'discussJoinery';
+} else {
+  title = titleize(slug);
+  description = `Project case study: ${slug.replace(/-/g, ' ')}.`;
+  content = `Explore how we delivered a complete furnishing solution for this ${slug.replace(/-/g, ' ')} project.`;
+}
+---
+
+<GenericPage
+  locale="en"
+  title={title}
+  description={description}
+  content={content}
+  showCollectionBenefits={showCollectionBenefits}
+  ctaKey={ctaKey}
+/>
