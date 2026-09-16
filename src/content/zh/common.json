@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Ratahome",
+    "title": "全屋家具采购与制造",
+    "description": "从佛山规划、采购、定制制造并交付完整家具套餐，服务住宅、别墅、酒店及开发项目。",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "周一至周五，10:00–19:00（UTC+8）",
+    "location": "中国佛山",
+    "email": "hello@ratahome.com",
+    "tagline": "每项决策在生产前均已记录——一条清晰路径，一个沟通窗口。"
+  },
+  "buttons": {
+    "startProject": "开始您的项目",
+    "uploadFloorPlan": "上传平面图",
+    "factoryTour": "工厂参观",
+    "sendFloorPlan": "发送平面图",
+    "sendMessage": "发送消息",
+    "whatsappUs": "WhatsApp 联系我们",
+    "viewAll": "查看全部",
+    "seeJourney": "了解完整流程",
+    "readWarranty": "阅读质保政策",
+    "exploreProjects": "探索项目案例",
+    "requestQuote": "获取该系列报价",
+    "discussJoinery": "咨询定制木作需求"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "projectType": "项目类型",
+    "message": "留言",
+    "projectDetails": "项目详情",
+    "floorPlan": "平面图（可选）",
+    "privacy": "信息保密 · 一个工作日内回复",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "请描述您的项目...",
+    "detailsPlaceholder": "房间、风格、时间、预算...",
+    "projectTypes": {
+      "residence": "私人住宅",
+      "design": "室内设计项目",
+      "development": "开发/多单元项目",
+      "hospitality": "酒店餐饮",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "通过佛山家具生态系统，提供全屋设计、制造与交付服务。",
+    "copyright": "保留所有权利。"
+  }
+}
