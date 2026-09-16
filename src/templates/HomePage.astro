@@ -1,0 +1,39 @@
+---
+import type { Locale } from '../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getContent } from '../lib/content';
+import HeroSection from '../components/sections/HeroSection.astro';
+import AssuranceBar from '../components/sections/AssuranceBar.astro';
+import MetricsBar from '../components/sections/MetricsBar.astro';
+import AudiencesSection from '../components/sections/AudiencesSection.astro';
+import CapabilitiesSection from '../components/sections/CapabilitiesSection.astro';
+import ProcessSection from '../components/sections/ProcessSection.astro';
+import TestimonialsSection from '../components/sections/TestimonialsSection.astro';
+import WarrantySection from '../components/sections/WarrantySection.astro';
+import RoomsSection from '../components/sections/RoomsSection.astro';
+import ProjectsSection from '../components/sections/ProjectsSection.astro';
+import EcosystemSection from '../components/sections/EcosystemSection.astro';
+import ContactCTA from '../components/sections/ContactCTA.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { common } = getContent(locale);
+---
+
+<BaseLayout locale={locale} description={common.site.description}>
+  <HeroSection locale={locale} />
+  <AssuranceBar locale={locale} />
+  <MetricsBar locale={locale} />
+  <AudiencesSection locale={locale} />
+  <CapabilitiesSection locale={locale} />
+  <ProcessSection locale={locale} />
+  <TestimonialsSection locale={locale} />
+  <WarrantySection locale={locale} />
+  <RoomsSection locale={locale} />
+  <ProjectsSection locale={locale} />
+  <EcosystemSection locale={locale} />
+  <ContactCTA locale={locale} />
+</BaseLayout>
