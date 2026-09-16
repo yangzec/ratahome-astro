@@ -1,0 +1,85 @@
+{
+  "about": {
+    "title": "About Our Foshan Furniture Team",
+    "eyebrow": "Our Story",
+    "heroTitle": "Bridging Global Design With Foshan's Manufacturing Excellence.",
+    "heroDescription": "Ratahome connects homeowners, designers and developers worldwide with China's most complete furniture manufacturing ecosystem — delivering customized interiors from concept to installation.",
+    "workflowTitle": "Not Just Furniture. A Complete Furnishing Workflow",
+    "workflowDescription": "Eight steps from your brief to a finished space — every one of them run by our team in Foshan.",
+    "closingTitle": "The future of home creation is not choosing between local design and global manufacturing.",
+    "closingDescription": "It is connecting the world's best designers, homeowners and manufacturing capabilities — together, as one project."
+  },
+  "collections": {
+    "title": "Collections",
+    "heroTitle": "You Are Buying a Room, Not a Product List.",
+    "heroDescription": "Each package is matched to your floor plan, dimensions, and style — furniture, rugs, lighting, curtains, and decor, quoted as one.",
+    "packagesTitle": "Six packages. Combine them for a whole home.",
+    "benefitsTitle": "One package means one team, one price, one delivery.",
+    "benefitsDescription": "Buying piece by piece means chasing a dozen suppliers, hoping the finishes match, and coordinating shipments yourself. A package removes all of that.",
+    "stylesTitle": "Pick a direction. We match every piece to it.",
+    "stylesDescription": "Or send your own references — the moodboard stays with one team from first match to final delivery.",
+    "styles": ["Warm Modern", "Soft Minimal", "Classic Contemporary", "Warm Luxury"]
+  },
+  "contact": {
+    "title": "Contact",
+    "heroTitle": "Share your floor plan, ideas or project requirements.",
+    "heroDescription": "Our team will help you build a complete home solution — one accountable partner from concept to installation.",
+    "getInTouch": "Get in touch"
+  },
+  "slugs": {
+    "homeowners": { "title": "Homeowners", "description": "A complete home, designed and furnished as one.", "content": "Ratahome provides homeowners with a single partner for the entire furnishing journey — from initial design concepts through custom manufacturing to delivery and installation." },
+    "designers": { "title": "Interior Designers", "description": "Sourcing and custom manufacturing support.", "content": "We help interior designers access Foshan's manufacturing ecosystem without managing hundreds of suppliers." },
+    "builders": { "title": "Builders & Developers", "description": "Repeatable packages for multi-unit programmes.", "content": "Large projects require consistency and control. We deliver scalable furnishing solutions from concept to completion." },
+    "hospitality": { "title": "Hospitality", "description": "Guestroom and public-space solutions.", "content": "From boutique hotels to restaurant fit-outs, we deliver coordinated furnishing packages." },
+    "how-it-works": { "title": "How It Works", "description": "One journey, from floor plan to finished home.", "content": "Each decision is documented before production begins. Our eight-step workflow covers design through installation." },
+    "home-packages": { "title": "Home Packages", "description": "Complete room packages from $2,299.", "content": "Each package is matched to your floor plan, dimensions, and style — quoted as one." },
+    "foshan-sourcing-tour": { "title": "Factory Tour", "description": "Visit Foshan's manufacturing ecosystem.", "content": "Experience Foshan's world-class furniture manufacturing firsthand." },
+    "joinery": { "title": "Integrated Joinery System", "description": "Custom cabinetry coordinated with your furniture package.", "content": "Kitchen cabinetry, wardrobes, built-ins, bathroom vanities, interior doors and wall panels." },
+    "projects": { "title": "Projects", "description": "Complete spaces, shaped around each brief.", "content": "Explore residential, villa, hospitality and developer projects delivered worldwide." },
+    "faq": { "title": "FAQ", "description": "Frequently asked questions about our process.", "content": "Find answers to common questions about pricing, timelines, quality control, shipping and warranty." },
+    "warranty-policy": { "title": "Warranty Policy", "description": "Written commitments, not promises made after the fact.", "content": "3-year structural warranty on frames and joinery, 2 years on mechanisms, finishes and upholstery." },
+    "manufacturing": { "title": "Manufacturing Capability", "description": "Access to Foshan's complete furniture ecosystem.", "content": "Direct access to thousands of specialized manufacturers." },
+    "quality-control": { "title": "Quality Control", "description": "Documented review before dispatch.", "content": "Material confirmation, production review and pre-shipment inspection." },
+    "global-capabilities": { "title": "Global Capabilities", "description": "Worldwide coordination and delivery support.", "content": "Export packing, international logistics and installation support." },
+    "catalogs": { "title": "Catalogs", "description": "Browse our product collections.", "content": "Download catalogs for furniture, joinery, lighting and materials." },
+    "furniture-guide": { "title": "Furniture Guide", "description": "Your guide to sourcing furniture from China.", "content": "Learn about materials, finishes and manufacturing standards." },
+    "china-furniture-guide": { "title": "China Furniture Guide", "description": "Navigate China's furniture manufacturing landscape.", "content": "A comprehensive guide to China's furniture industry." },
+    "blog": { "title": "Blog", "description": "Insights on design, manufacturing and delivery.", "content": "Articles on interior design trends and project case studies." },
+    "residential-projects": { "title": "Residential Projects", "description": "Private homes and residences.", "content": "Browse our portfolio of residential furnishing projects." },
+    "commercial-projects": { "title": "Commercial Projects", "description": "Commercial and mixed-use spaces.", "content": "Explore commercial furnishing solutions." }
+  },
+  "packageBenefits": [
+    { "title": "Faster, Not Slower", "description": "One quotation across every category instead of ten separate supplier conversations." },
+    { "title": "A Room That Matches", "description": "Furniture, rugs, and lighting are selected together, so finishes and scale read as one space." },
+    { "title": "One Delivery, Not Five", "description": "Every item ships consolidated from Foshan, so you clear customs and unpack once." },
+    { "title": "One Person to Call", "description": "A single project coordinator owns matching, QC, and shipping." }
+  ],
+  "collectionPackages": [
+    { "title": "Living Room", "description": "Sofa, coffee table, lounge chairs, rugs, lighting, decor", "image": "/images/home-collections/living-room-v2.jpg", "href": "/collections/living-room" },
+    { "title": "Bedroom", "description": "Bed, side tables, wardrobe, bedding, curtains, lighting", "image": "/images/home-complete-solution/living-room-v3.jpg", "href": "/collections/bedroom" },
+    { "title": "Dining Room", "description": "Dining table, chairs, sideboard, pendant lighting, rug", "image": "/images/home-complete-solution/dining-room-v2.jpg", "href": "/collections/dining-room" },
+    { "title": "Outdoor Living", "description": "Patio sets, lounge, dining, planters, outdoor lighting", "image": "/images/package-living-california.webp", "href": "/collections/outdoor-living" },
+    { "title": "Custom Cabinetry Add-On", "description": "Kitchens, wardrobes, vanities, built-in storage", "image": "/images/finished-chair.webp", "href": "/joinery" },
+    { "title": "Curtains, Rugs, Lighting & Decor", "description": "Soft furnishings and styling", "image": "/images/delivery-container.webp", "href": "/collections/lighting-decor" }
+  ],
+  "workflow": [
+    { "step": "01", "title": "Design Proposal", "description": "Your brief becomes a complete furnishing proposal — layouts, materials, and budget." },
+    { "step": "02", "title": "Project Coordination", "description": "One team aligns design intent, site conditions, and field measurements." },
+    { "step": "03", "title": "Mock-Up & Sampling", "description": "Mock-ups are built and reviewed with you before production." },
+    { "step": "04", "title": "Production", "description": "Manufacturing runs in Foshan against confirmed standards." },
+    { "step": "05", "title": "Quality Inspection", "description": "Checkpoints at every key stage, plus full inspection before packing." },
+    { "step": "06", "title": "Export Packing", "description": "Maritime-grade packing protects every piece for the journey overseas." },
+    { "step": "07", "title": "Global Shipping", "description": "Containers, documents, and cross-border logistics — managed door to door." },
+    { "step": "08", "title": "Installation", "description": "Our technicians install on site and hand over a space ready to use." }
+  ],
+  "aboutAudiences": [
+    { "title": "For Homeowners", "description": "Furnishing from many suppliers is complicated. Ratahome provides one integrated solution." },
+    { "title": "For Designers", "description": "Great design needs reliable execution. We help designers access customized manufacturing." },
+    { "title": "For Developers", "description": "Large projects require consistency and control. We deliver scalable furnishing solutions." }
+  ],
+  "collectionBenefits": [
+    { "title": "Coordinated selection", "description": "Every piece selected to work together in scale, finish and style." },
+    { "title": "One delivery", "description": "Consolidated shipping from Foshan — clear customs once, unpack once." },
+    { "title": "QC included", "description": "Photo-documented inspection before every shipment." }
+  ]
+}
