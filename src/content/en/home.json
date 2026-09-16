@@ -1,0 +1,116 @@
+{
+  "hero": {
+    "eyebrow": "Design, Manufacture and Delivery — Managed as One Project",
+    "title": "One Partner for the Whole Home, Wherever You Build.",
+    "description": "We design, customize and deliver complete residential interiors — from furniture and cabinetry to lighting and materials — through Foshan's world-class manufacturing ecosystem.",
+    "image": "/images/hero-living-v2.webp",
+    "imageAlt": "Modern living room interior"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "3-Year Structural Warranty", "description": "Frames, joinery and cabinetry carcasses" },
+    { "icon": "/icons/box-seam.svg", "title": "100% Pre-Shipment Inspection", "description": "Photo-documented QC report per order" },
+    { "icon": "/icons/shield-check.svg", "title": "Insured Export Packing", "description": "Transit damage covered and replaced" },
+    { "icon": "/icons/clock.svg", "title": "48-Hour After-Sales Response", "description": "One contact from claim to resolution" }
+  ],
+  "metrics": [
+    { "value": "7 weeks", "label": "Typical package delivery" },
+    { "value": "1,200+", "label": "Homes furnished worldwide" },
+    { "value": "18 Cities", "label": "delivered · Sydney to LA" },
+    { "value": "100%", "label": "Inspected before shipment" }
+  ],
+  "audiences": {
+    "title": "Solutions for every project.",
+    "description": "One platform, adapted to the people making decisions — from a single private home to a repeatable development programme.",
+    "items": [
+      { "title": "Homeowners", "description": "A complete home, designed and furnished as one.", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
+      { "title": "Interior Designers", "description": "Sourcing and custom manufacturing support.", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
+      { "title": "Builders & Developers", "description": "Repeatable packages for multi-unit programmes.", "href": "/builders", "image": "/images/home-audiences/builders-contractors-v4.webp" },
+      { "title": "Hospitality", "description": "Guestroom and public-space solutions.", "href": "/hospitality", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" }
+    ]
+  },
+  "capabilities": {
+    "title": "Every layer of the home, managed as one project.",
+    "description": "Instead of coordinating separate suppliers, you work with one team across design development, furniture selection, custom manufacture, quality control and delivery.",
+    "items": [
+      { "title": "Furniture", "description": "Living, dining, bedroom, office and outdoor packages.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "Custom Cabinetry", "description": "Kitchens, wardrobes, storage and architectural joinery.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "Lighting & Materials", "description": "Decorative lighting, rugs, accessories and finish coordination.", "image": "/images/package-living-california.webp" },
+      { "title": "Project Delivery", "description": "Sampling, shop drawings, QC, packing and international logistics.", "image": "/images/delivery-container.webp" }
+    ]
+  },
+  "process": {
+    "title": "One journey, from floor plan to finished home.",
+    "description": "Each decision is documented before production begins, giving the project a clear path and one point of communication.",
+    "image": "/images/home-process/completed-residence-v2.jpg",
+    "imageAlt": "Completed residence interior",
+    "steps": [
+      { "step": "01", "title": "Discover", "description": "Understand your space, lifestyle and project requirements." },
+      { "step": "02", "title": "Design", "description": "Develop furniture layouts and interior concepts around your needs." },
+      { "step": "03", "title": "Curate", "description": "Select products and materials across Foshan's manufacturing ecosystem." },
+      { "step": "04", "title": "Manufacture", "description": "Approved factories produce the coordinated furniture and joinery scope." },
+      { "step": "05", "title": "Deliver", "description": "We coordinate inspection, export packing, shipping and installation support." }
+    ]
+  },
+  "testimonials": [
+    { "quote": "One team handled specification, factory control and shipping. We stopped chasing six suppliers.", "author": "Studio Marren · Sydney" },
+    { "quote": "Shop drawings and QC reports arrived before every milestone. That is rare in cross-border sourcing.", "author": "Halden Developments · Dubai" }
+  ],
+  "warranty": {
+    "eyebrow": "Peace of mind",
+    "title": "What happens if something goes wrong?",
+    "description": "Cross-border furnishing carries real risks. We answer them with written commitments — not promises made after the fact.",
+    "commitment": "Every commitment is documented — warranty terms, QC reports and claim procedures are part of your project file, not fine print.",
+    "cases": [
+      { "question": "If it arrives damaged", "title": "We repair or replace it — free.", "description": "Every shipment is insured and photo-documented before dispatch. Report damage within 14 days of delivery; we arrange repair, replacement parts, or a remade piece at no cost." },
+      { "question": "If there is a defect", "title": "The warranty covers it in writing.", "description": "3-year structural warranty on frames and joinery, 2 years on mechanisms, finishes and upholstery. Terms are issued with your order confirmation — before production begins." },
+      { "question": "If something is missing", "title": "One contact resolves it, fast.", "description": "Your project manager stays accountable after delivery — missing hardware and parts ship within 7 days, and every claim receives a response within 48 hours." }
+    ]
+  },
+  "rooms": {
+    "title": "Explore the home by room.",
+    "items": [
+      { "label": "Living Room", "slug": "living-room" },
+      { "label": "Dining Room", "slug": "dining-room" },
+      { "label": "Bedroom", "slug": "bedroom" },
+      { "label": "Kitchen & Bar", "slug": "kitchen-bar" },
+      { "label": "Home Office", "slug": "home-office" },
+      { "label": "Outdoor Living", "slug": "outdoor-living" },
+      { "label": "Entry & Hallway", "slug": "entry-hallway" },
+      { "label": "Lighting & Decor", "slug": "lighting-decor" }
+    ]
+  },
+  "projects": {
+    "title": "Complete spaces, shaped around each brief.",
+    "items": [
+      { "location": "California, USA", "delivery": "Delivered in 9 weeks", "type": "Villa", "title": "Modern Contemporary Residence", "scope": "complete furnishing package", "solution": "furniture, lighting and custom pieces", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/projects/luxury-residence" },
+      { "location": "Residential Interior", "delivery": "Whole-home Furnishing", "type": "Project story", "title": "Inside / Outside — a home made in layers", "scope": "Mu Li Mu Wai Residence", "solution": "A home made in layers.", "image": "/images/package-living-california.webp", "href": "/projects/villa-projects" }
+    ]
+  },
+  "ecosystem": {
+    "title": "A manufacturing ecosystem, not a marketplace.",
+    "description": "Trust is built through a documented process, approved sources and clear responsibilities at every stage — turning Foshan's depth of furniture, cabinetry and specialist manufacturing into one coordinated project solution.",
+    "items": [
+      { "step": "01", "title": "Foshan Manufacturing Ecosystem", "description": "Direct access to furniture, cabinetry, materials and specialist manufacturing capabilities." },
+      { "step": "02", "title": "Complete Home Capability", "description": "Furniture, custom joinery, lighting, materials and soft furnishings coordinated together." },
+      { "step": "03", "title": "Global Project Experience", "description": "Residential and project support developed for international briefs and delivery requirements." },
+      { "step": "04", "title": "Quality Management", "description": "Material confirmation, production review and pre-shipment inspection before delivery." }
+    ]
+  },
+  "cta": {
+    "title": "Create your complete home with one trusted partner.",
+    "description": "Share your floor plan and project requirements — you will receive a structured next step and an indicative package scope from the Ratahome team.",
+    "formTitle": "Send your floor plan",
+    "formDescription": "Tell us about your rooms, preferred style, timing and budget. A floor plan or reference image is helpful, but not required.",
+    "steps": [
+      "Send your floor plan — one file is enough to begin.",
+      "Receive a structured project brief and indicative scope.",
+      "Review the plan with one accountable project team."
+    ]
+  },
+  "footerFeatures": [
+    { "title": "Foshan Manufacturing Ecosystem", "description": "Furniture, cabinetry, lighting and materials" },
+    { "title": "QC Before Shipment", "description": "Documented review before dispatch" },
+    { "title": "Worldwide Coordination", "description": "Export packing and delivery support" },
+    { "title": "One Project Team", "description": "One communication point throughout" }
+  ]
+}
