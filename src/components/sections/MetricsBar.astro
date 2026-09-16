@@ -1,0 +1,22 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+---
+
+<section class="container-site py-12">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    {home.metrics.map((m) => (
+      <div>
+        <div class="text-3xl md:text-4xl font-semibold text-izza-ink mb-2">{m.value}</div>
+        <div class="text-sm text-izza-gray-muted">{m.label}</div>
+      </div>
+    ))}
+  </div>
+</section>

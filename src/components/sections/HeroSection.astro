@@ -1,0 +1,31 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '../../i18n/utils';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home, common } = getContent(locale);
+const { hero } = home;
+const { buttons } = common;
+---
+
+<section class="relative min-h-[85vh] flex items-end overflow-hidden">
+  <img src={hero.image} alt={hero.imageAlt} class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
+  <div class="relative container-site pb-16 pt-32 w-full">
+    <p class="eyebrow text-white/90 mb-6">{hero.eyebrow}</p>
+    <h1 class="text-white text-4xl md:text-5xl lg:text-[52px] font-semibold max-w-4xl leading-tight mb-6">
+      {hero.title}
+    </h1>
+    <p class="text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">{hero.description}</p>
+    <div class="flex flex-wrap gap-4">
+      <Button href="#upload" variant="primary">{buttons.uploadFloorPlan}</Button>
+      <Button href={localizedPath('/foshan-sourcing-tour', locale)} variant="outline">{buttons.factoryTour}</Button>
+    </div>
+  </div>
+</section>
