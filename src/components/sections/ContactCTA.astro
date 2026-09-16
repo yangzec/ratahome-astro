@@ -1,0 +1,39 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+import ContactForm from '../forms/ContactForm.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home, common } = getContent(locale);
+const { cta } = home;
+const { site, buttons } = common;
+---
+
+<section id="upload" class="container-site py-20">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="section-title mb-4">{cta.title}</h2>
+      <p class="text-izza-gray-text text-lg mb-8">{cta.description}</p>
+      <ol class="space-y-4 mb-8">
+        {cta.steps.map((step, i) => (
+          <li class="flex gap-4">
+            <span class="eyebrow text-xs shrink-0">{String(i + 1).padStart(2, '0')}</span>
+            <span class="text-izza-gray-text">{step}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+    <div class="bg-izza-cream rounded-lg p-8">
+      <h3 class="text-xl font-semibold text-izza-ink mb-2">{cta.formTitle}</h3>
+      <p class="text-sm text-izza-gray-muted mb-6">{cta.formDescription}</p>
+      <ContactForm locale={locale} />
+      <div class="mt-4 text-center">
+        <a href={site.whatsappUrl} target="_blank" rel="noopener" class="text-izza-accent font-medium hover:underline">{buttons.whatsappUs}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+const { capabilities } = home;
+---
+
+<section class="bg-izza-cream py-20">
+  <div class="container-site">
+    <SectionHeader title={capabilities.title} description={capabilities.description} />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {capabilities.items.map((item) => (
+        <div class="group bg-white rounded-[20px] overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={item.image} alt={item.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-izza-ink mb-2">{item.title}</h3>
+            <p class="text-sm text-izza-gray-muted">{item.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
