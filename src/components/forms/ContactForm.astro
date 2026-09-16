@@ -1,0 +1,117 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  locale: Locale;
+  showFileUpload?: boolean;
+  action?: string;
+}
+
+const { locale, showFileUpload = true, action = '/api/contact' } = Astro.props;
+const { common } = getContent(locale);
+const { form, buttons } = common;
+---
+
+<form class="space-y-4 contact-form" data-action={action} enctype="multipart/form-data">
+  <input type="hidden" name="locale" value={locale} />
+
+  <div>
+    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.name}</label>
+    <input
+      type="text"
+      name="name"
+      required
+      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+      placeholder={form.namePlaceholder}
+    />
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.email}</label>
+    <input
+      type="email"
+      name="email"
+      required
+      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+      placeholder={form.emailPlaceholder}
+    />
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectType}</label>
+    <select name="projectType" class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm">
+      <option value="residence">{form.projectTypes.residence}</option>
+      <option value="design">{form.projectTypes.design}</option>
+      <option value="development">{form.projectTypes.development}</option>
+      <option value="hospitality">{form.projectTypes.hospitality}</option>
+      <option value="other">{form.projectTypes.other}</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectDetails}</label>
+    <textarea
+      name="message"
+      rows="4"
+      class="w-full px-5 py-4 rounded-[5px] border border-izza-border bg-white text-sm resize-none"
+      placeholder={form.detailsPlaceholder}
+    ></textarea>
+  </div>
+
+  {showFileUpload && (
+    <div>
+      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.floorPlan}</label>
+      <input
+        type="file"
+        name="file"
+        accept=".pdf,.jpg,.jpeg,.png,.webp,.dwg"
+        class="w-full text-sm text-izza-gray-text file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-izza-cream file:text-izza-ink file:font-medium hover:file:bg-izza-cream-deep"
+      />
+    </div>
+  )}
+
+  <Button type="submit" variant="primary" class="w-full">{buttons.sendFloorPlan}</Button>
+</form>
+
+<p class="text-xs text-izza-gray-muted mt-4 text-center">{form.privacy}</p>
+<div class="form-success hidden mt-4 p-4 rounded-lg bg-green-50 text-green-800 text-sm text-center"></div>
+<div class="form-error hidden mt-4 p-4 rounded-lg bg-red-50 text-red-800 text-sm text-center"></div>
+
+<script>
+  document.querySelectorAll('.contact-form').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const el = e.currentTarget as HTMLFormElement;
+      const action = el.dataset.action || '/api/contact';
+      const successEl = el.parentElement?.querySelector('.form-success') as HTMLElement;
+      const errorEl = el.parentElement?.querySelector('.form-error') as HTMLElement;
+      const btn = el.querySelector('button[type="submit"]') as HTMLButtonElement;
+
+      successEl?.classList.add('hidden');
+      errorEl?.classList.add('hidden');
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(action, { method: 'POST', body: new FormData(el) });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Submission failed');
+        el.reset();
+        if (successEl) {
+          successEl.textContent = el.querySelector('[name="locale"]')?.value === 'zh'
+            ? '提交成功！我们会尽快与您联系。'
+            : 'Submitted successfully! We will be in touch soon.';
+          successEl.classList.remove('hidden');
+        }
+      } catch (err) {
+        if (errorEl) {
+          errorEl.textContent = err instanceof Error ? err.message : 'Submission failed';
+          errorEl.classList.remove('hidden');
+        }
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
