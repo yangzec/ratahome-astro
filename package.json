@@ -1,0 +1,32 @@
+{
+  "name": "ratahome-astro",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "db:migrate": "wrangler d1 migrations apply ratahome --local",
+    "db:migrate:remote": "wrangler d1 migrations apply ratahome --remote",
+    "db:create": "wrangler d1 create ratahome",
+    "cf:deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.132.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260915.1"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}
