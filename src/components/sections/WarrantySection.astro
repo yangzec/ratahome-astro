@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../../i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '../../i18n/utils';
+import SectionHeader from '../ui/SectionHeader.astro';
+import Button from '../ui/Button.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home, common } = getContent(locale);
+const { warranty } = home;
+---
+
+<section class="container-site py-20">
+  <SectionHeader title={warranty.title} description={warranty.description} eyebrow={warranty.eyebrow} />
+  <div class="grid md:grid-cols-3 gap-6">
+    {warranty.cases.map((case_) => (
+      <div class="p-8 rounded-[20px] bg-izza-cream">
+        <p class="eyebrow text-xs mb-4">{case_.question}</p>
+        <h3 class="text-xl font-semibold text-izza-ink mb-3">{case_.title}</h3>
+        <p class="text-sm text-izza-gray-muted leading-relaxed">{case_.description}</p>
+      </div>
+    ))}
+  </div>
+  <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-8 rounded-[20px] border border-izza-border/50">
+    <p class="text-izza-gray-text max-w-xl">{warranty.commitment}</p>
+    <Button href={localizedPath('/warranty-policy', locale)} variant="secondary" class="shrink-0">{common.buttons.readWarranty}</Button>
+  </div>
+</section>
