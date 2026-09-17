@@ -1,0 +1,28 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getContent } from '../lib/content';
+import { sectionRegistry } from '../lib/sections';
+import homeBlueprint from '../../blueprints/home.json';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { common } = getContent(locale);
+const sections = homeBlueprint.sections;
+---
+
+<BaseLayout locale={locale} description={common.site.description}>
+  {
+    sections.map((sectionId) => {
+      const Section = sectionRegistry[sectionId];
+      if (!Section) {
+        console.warn(`Unknown section in blueprint: ${sectionId}`);
+        return null;
+      }
+      return <Section locale={locale} />;
+    })
+  }
+</BaseLayout>

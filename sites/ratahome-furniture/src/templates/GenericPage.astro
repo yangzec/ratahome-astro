@@ -1,0 +1,47 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import Button from '@trade/sections/ui/Button.astro';
+import { getContent } from '../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  content: string;
+  showCollectionBenefits?: boolean;
+  ctaKey?: 'requestQuote' | 'discussJoinery' | 'startProject';
+}
+
+const { locale, title, description, content, showCollectionBenefits = false, ctaKey = 'startProject' } = Astro.props;
+const { common, pages } = getContent(locale);
+---
+
+<BaseLayout locale={locale} title={title} description={description}>
+  <PageHero title={title} description={description} dark />
+
+  <section class="container-site py-20">
+    <div class="max-w-3xl">
+      <p class="text-izza-gray-text text-lg leading-relaxed mb-8">{content}</p>
+      <Button href={localizedPath('/contact', locale)} variant="primary">{common.buttons[ctaKey]}</Button>
+    </div>
+  </section>
+
+  {showCollectionBenefits && (
+    <section class="bg-izza-cream py-20">
+      <div class="container-site">
+        <h2 class="section-title mb-8">{locale === 'zh' ? '为什么选择套餐？' : 'Why choose a package?'}</h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          {pages.collectionBenefits.map((b) => (
+            <div class="p-6 bg-white rounded-[17px]">
+              <h3 class="font-semibold text-izza-ink mb-2">{b.title}</h3>
+              <p class="text-sm text-izza-gray-muted">{b.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
