@@ -55,6 +55,54 @@ const { site, buttons } = common;
         {buttons.startProject}
       </a>
     </div>
+
+    {navigation.main.filter((item) => item.groups || item.links).map((item) => (
+      <div class="nav-panel absolute left-0 right-0 top-full opacity-0 invisible pointer-events-none transition-all duration-200">
+        <div class="bg-white text-izza-ink shadow-2xl border-t border-izza-border/20">
+          {item.groups ? (
+            <div class={`container-site py-10 grid gap-8 ${item.feature ? 'grid-cols-4' : 'grid-cols-3'}`}>
+              {item.groups.map((group) => (
+                <div class="border-l border-izza-border/30 first:border-0 pl-8 first:pl-0">
+                  <h3 class="eyebrow mb-5 flex items-center gap-3">
+                    <span class="w-6 h-px bg-izza-accent"></span>
+                    {group.title}
+                  </h3>
+                  <ul class="space-y-1">
+                    {group.links.map((link) => (
+                      <li>
+                        <a href={localizedPath(link.href, locale)} class="block py-2.5 px-3 -mx-3 rounded-xl hover:bg-izza-cream transition-colors group/link">
+                          <strong class="block text-[16px] font-semibold text-izza-ink group-hover/link:text-izza-accent">{link.label}</strong>
+                          {link.description && <span class="text-sm text-izza-gray-muted">{link.description}</span>}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              {item.feature && (
+                <a href={localizedPath(item.feature.href, locale)} class="relative rounded-[17px] overflow-hidden min-h-[280px] flex flex-col justify-end p-6 group/feat">
+                  <img src={item.feature.image} alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover/feat:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div class="relative text-white">
+                    <strong class="block text-lg font-semibold">{item.feature.title}</strong>
+                    <span class="text-sm text-white/80">{item.feature.description}</span>
+                  </div>
+                </a>
+              )}
+            </div>
+          ) : item.links ? (
+            <div class="container-site py-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+              {item.links.map((link) => (
+                <a href={localizedPath(link.href, locale)} class="block p-4 rounded-xl hover:bg-izza-cream transition-colors">
+                  <strong class="block font-semibold text-izza-ink">{link.label}</strong>
+                  {link.description && <span class="text-sm text-izza-gray-muted">{link.description}</span>}
+                </a>
+              ))}
+            </div>
+          ) : null}
+        </div>
+      </div>
+    ))}
   </nav>
 
   <div class="container-site flex lg:hidden items-center justify-between py-4">
@@ -69,3 +117,45 @@ const { site, buttons } = common;
     </button>
   </div>
 </header>
+
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
+  <div class="flex items-center justify-between p-5 border-b border-izza-border/30">
+    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
+      <img src="/images/logo.png" alt={site.name} class="h-7 w-auto" />
+      <span class="font-display text-lg tracking-widest text-izza-ink">{site.name}</span>
+    </a>
+    <button id="mobile-menu-close" class="p-2" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <nav class="overflow-y-auto max-h-[calc(100vh-80px)] p-5">
+    {navigation.main.map((item) => (
+      <div class="border-b border-izza-border/20">
+        <button data-accordion class="w-full flex items-center justify-between py-4 text-left font-semibold text-izza-ink">
+          {item.label}
+          <svg data-chevron class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="hidden pb-4 pl-2 space-y-2">
+          {item.href && <a href={localizedPath(item.href, locale)} class="block py-2 text-izza-accent font-medium">{buttons.viewAll}</a>}
+          {(item.groups || []).flatMap((g) => g.links).concat(item.links || []).map((link) => (
+            <a href={localizedPath(link.href, locale)} class="block py-2 text-izza-gray-text hover:text-izza-accent">{link.label}</a>
+          ))}
+        </div>
+      </div>
+    ))}
+    <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary w-full mt-6">{buttons.startProject}</a>
+  </nav>
+</div>
+
+<style>
+  nav .group:hover .nav-panel,
+  .nav-panel:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+</style>
