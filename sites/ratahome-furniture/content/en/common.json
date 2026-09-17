@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Ratahome",
+    "title": "Whole-Home Furniture Sourcing & Manufacturing",
+    "description": "Plan, source, custom-manufacture and deliver complete furniture packages from Foshan for homes, villas, hospitality and development projects.",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
+    "location": "Foshan, China",
+    "email": "hello@ratahome.com",
+    "tagline": "Each decision is documented before production begins — one clear path, one point of communication."
+  },
+  "buttons": {
+    "startProject": "Start Your Project",
+    "uploadFloorPlan": "Upload Your Floor Plan",
+    "factoryTour": "Factory Tour",
+    "sendFloorPlan": "Send your floor plan",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp Us",
+    "viewAll": "View all",
+    "seeJourney": "See the complete journey",
+    "readWarranty": "Read the warranty policy",
+    "exploreProjects": "Explore project solutions",
+    "requestQuote": "Request a quote for this collection",
+    "discussJoinery": "Discuss your joinery requirements"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "projectType": "Project type",
+    "message": "Message",
+    "projectDetails": "Project details",
+    "floorPlan": "Floor plan (optional)",
+    "privacy": "Private and confidential · Reply within one business day",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "Tell us about your project...",
+    "detailsPlaceholder": "Rooms, style, timeline, budget...",
+    "projectTypes": {
+      "residence": "Private residence",
+      "design": "Interior design project",
+      "development": "Development / multi-unit",
+      "hospitality": "Hospitality",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "Complete home design, manufacturing and delivery through Foshan's furniture ecosystem.",
+    "copyright": "All rights reserved."
+  }
+}
