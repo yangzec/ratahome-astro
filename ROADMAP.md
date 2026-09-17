@@ -36,7 +36,7 @@
 - [x] API 路由适配 Astro 7 `cloudflare:workers` env
 - [x] 部署文档 `docs/DEPLOY.md`
 - [x] Monorepo 完整提交；canonical 远程为 GitHub `yangzec/ratahome-astro`
-- [ ] Cloudflare 生产部署（需 `wrangler login` + D1/R2 创建）
+- [x] Cloudflare 生产部署（D1 `trade-platform` + R2 `trade-platform-assets`；`ratahome-furniture.yangzec.workers.dev`）
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
@@ -320,7 +320,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| 自定义域名绑定 | 待将 `ratahome.com` 指向 Worker |
 
 ---
 
@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -349,9 +350,11 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
+| 2026-09-18 07:34 | 生产联系表单 | `POST /api/contact` + D1 远程查询 `site_id=ratahome-furniture` | 通过 |
+| 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
 | 2026-09-17 10:45 | 预览测试 en/zh | 浏览器访问 43124，首页/关于/联系/系列 | 通过 |
 | 2026-09-17 08:58 | 本地 build | `pnpm build` | 通过（152 页 prerender） |
-| 待确认 | Cloudflare 生产部署 | `pnpm cf:deploy` | 环境无 `wrangler login`，未执行 |

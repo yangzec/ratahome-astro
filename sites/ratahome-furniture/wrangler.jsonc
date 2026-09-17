@@ -15,7 +15,7 @@
 		{
 			"binding": "DB",
 			"database_name": "trade-platform",
-			"database_id": "00000000-0000-0000-0000-000000000001",
+			"database_id": "58956d48-3510-434d-93f1-5956aa0c47b5",
 			"migrations_dir": "../../migrations"
 		}
 	],
