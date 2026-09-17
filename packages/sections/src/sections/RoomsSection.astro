@@ -1,0 +1,29 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '@site/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+const { rooms } = home;
+---
+
+<section class="bg-izza-cream py-20">
+  <div class="container-site">
+    <h2 class="section-title mb-12">{rooms.title}</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {rooms.items.map((room) => (
+        <a
+          href={localizedPath(`/collections/${room.slug}`, locale)}
+          class="group p-6 rounded-[17px] bg-white border border-izza-border/30 hover:border-izza-accent/40 transition-colors text-center"
+        >
+          <span class="font-semibold text-izza-ink group-hover:text-izza-accent transition-colors">{room.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

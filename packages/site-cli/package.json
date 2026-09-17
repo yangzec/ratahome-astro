@@ -1,0 +1,12 @@
+{
+  "name": "@trade/site-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "site-cli": "./src/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/cli.mjs"
+  }
+}

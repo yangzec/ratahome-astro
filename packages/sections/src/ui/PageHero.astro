@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+  image?: string;
+  dark?: boolean;
+}
+
+const { title, description, eyebrow, image, dark = false } = Astro.props;
+---
+
+<section class={`relative py-24 md:py-32 ${image ? 'min-h-[50vh] flex items-end' : dark ? 'bg-izza-olive-dark' : 'bg-izza-cream'}`}>
+  {image && (
+    <>
+      <img src={image} alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
+    </>
+  )}
+  <div class={`container-site relative ${image ? 'pb-8' : ''}`}>
+    {eyebrow && <p class={`eyebrow mb-4 ${image || dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
+    <h1 class={`text-3xl md:text-5xl font-semibold max-w-3xl leading-tight mb-4 ${image || dark ? 'text-white' : 'text-izza-ink'}`}>
+      {title}
+    </h1>
+    {description && (
+      <p class={`text-lg max-w-2xl leading-relaxed ${image || dark ? 'text-white/80' : 'text-izza-gray-text'}`}>
+        {description}
+      </p>
+    )}
+  </div>
+</section>
