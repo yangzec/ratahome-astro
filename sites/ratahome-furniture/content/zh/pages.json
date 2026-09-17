@@ -1,1 +1,85 @@
-{}
+{
+  "about": {
+    "title": "关于我们的佛山家具团队",
+    "eyebrow": "品牌故事",
+    "heroTitle": "连接全球设计与佛山制造优势。",
+    "heroDescription": "Ratahome 将全球业主、设计师与开发商与中国最完整的家具制造生态系统连接——从概念到安装交付定制室内方案。",
+    "workflowTitle": "不仅是家具，更是完整的配置工作流",
+    "workflowDescription": "从需求到完工空间共八个步骤——全部由我们在佛山的团队执行。",
+    "closingTitle": "家居创造的未来，不是在本地设计与全球制造之间二选一。",
+    "closingDescription": "而是将全球优秀设计师、业主与制造能力连接在一起，作为一个项目。"
+  },
+  "collections": {
+    "title": "产品系列",
+    "heroTitle": "您购买的是一个房间，而非产品清单。",
+    "heroDescription": "每个套餐匹配您的平面图、尺寸与风格——家具、地毯、灯光、窗帘与装饰，统一报价。",
+    "packagesTitle": "六大套餐，组合成全屋方案。",
+    "benefitsTitle": "一个套餐意味着一个团队、一个价格、一次交付。",
+    "benefitsDescription": "逐件采购意味着追着十几个供应商跑，希望饰面匹配，自己协调运输。套餐消除这一切。",
+    "stylesTitle": "选定方向，我们匹配每一件。",
+    "stylesDescription": "或发送您的参考——情绪板从首次匹配到最终交付始终由同一团队负责。",
+    "styles": ["温暖现代", "柔和极简", "经典当代", "温暖奢华"]
+  },
+  "contact": {
+    "title": "联系我们",
+    "heroTitle": "分享平面图、想法或项目需求。",
+    "heroDescription": "我们的团队将帮助您构建完整家居方案——从概念到安装的唯一负责伙伴。",
+    "getInTouch": "联系方式"
+  },
+  "slugs": {
+    "homeowners": { "title": "业主", "description": "一个完整的家，一体化设计与配置。", "content": "Ratahome 为业主提供从设计概念、定制制造到交付安装的全流程单一伙伴服务。" },
+    "designers": { "title": "室内设计师", "description": "采购与定制制造支持。", "content": "我们帮助设计师接入佛山制造生态，无需管理数百家供应商。" },
+    "builders": { "title": "建筑商与开发商", "description": "多单元项目的可复制套餐。", "content": "大型项目需要一致性与管控。我们提供从概念到完工的可扩展配置方案。" },
+    "hospitality": { "title": "酒店餐饮", "description": "客房与公共空间解决方案。", "content": "从精品酒店到餐厅装修，我们交付协调一致的家具套餐。" },
+    "how-it-works": { "title": "合作流程", "description": "一条路径，从平面图到完工之家。", "content": "每项决策在生产前均已记录。八步工作流覆盖设计到安装。" },
+    "home-packages": { "title": "家居套餐", "description": "$2,299 起完整房间套餐。", "content": "每个套餐匹配平面图、尺寸与风格——统一报价。" },
+    "foshan-sourcing-tour": { "title": "工厂参观", "description": "参观佛山制造生态系统。", "content": "亲身体验佛山世界级家具制造。" },
+    "joinery": { "title": "集成木作系统", "description": "与家具套餐协调的定制木作。", "content": "厨房橱柜、衣柜、定制柜、浴室柜、室内门与墙板。" },
+    "projects": { "title": "项目案例", "description": "完整空间，围绕每个需求塑造。", "content": "探索全球交付的住宅、别墅、酒店与开发项目。" },
+    "faq": { "title": "常见问题", "description": "关于流程的常见问题。", "content": "查找定价、时间、质检、运输与质保的常见解答。" },
+    "warranty-policy": { "title": "质保政策", "description": "书面承诺，而非事后口头保证。", "content": "框架与木作3年结构质保，机构、饰面与软包2年。" },
+    "manufacturing": { "title": "制造能力", "description": "接入佛山完整家具生态。", "content": "直连数千家专业制造商。" },
+    "quality-control": { "title": "质量控制", "description": "发货前文档化审核。", "content": "材料确认、生产评审与出货前检验。" },
+    "global-capabilities": { "title": "全球能力", "description": "全球协调与交付支持。", "content": "出口包装、国际物流与安装支持。" },
+    "catalogs": { "title": "产品目录", "description": "浏览产品系列。", "content": "下载家具、木作、灯光与材料目录。" },
+    "furniture-guide": { "title": "家具指南", "description": "中国家具采购指南。", "content": "了解材料、饰面与制造标准。" },
+    "china-furniture-guide": { "title": "中国家具指南", "description": "导航中国家具制造格局。", "content": "全面了解中国家具行业。" },
+    "blog": { "title": "博客", "description": "设计、制造与交付洞察。", "content": "室内设计趋势与项目案例文章。" },
+    "residential-projects": { "title": "住宅项目", "description": "私宅与住宅。", "content": "浏览住宅配置项目作品集。" },
+    "commercial-projects": { "title": "商业项目", "description": "商业与混合用途空间。", "content": "探索商业配置解决方案。" }
+  },
+  "packageBenefits": [
+    { "title": "更快，而非更慢", "description": "一个报价覆盖所有品类，而非与十个供应商分别沟通。" },
+    { "title": "空间协调一致", "description": "家具、地毯与灯光统一选型，饰面与比例浑然一体。" },
+    { "title": "一次交付，而非五次", "description": "所有物品从佛山合并发货，清关一次，开箱一次。" },
+    { "title": "一个联系人", "description": "单一项目协调员负责匹配、质检与运输。" }
+  ],
+  "collectionPackages": [
+    { "title": "客厅", "description": "沙发、茶几、休闲椅、地毯、灯光、装饰", "image": "/images/home-collections/living-room-v2.jpg", "href": "/collections/living-room" },
+    { "title": "卧室", "description": "床、床头柜、衣柜、床品、窗帘、灯光", "image": "/images/home-complete-solution/living-room-v3.jpg", "href": "/collections/bedroom" },
+    { "title": "餐厅", "description": "餐桌、餐椅、餐边柜、吊灯、地毯", "image": "/images/home-complete-solution/dining-room-v2.jpg", "href": "/collections/dining-room" },
+    { "title": "户外", "description": "户外沙发、躺椅、餐桌、花盆、户外灯", "image": "/images/package-living-california.webp", "href": "/collections/outdoor-living" },
+    { "title": "定制木作附加", "description": "厨房、衣柜、浴室柜、嵌入式储物", "image": "/images/finished-chair.webp", "href": "/joinery" },
+    { "title": "窗帘、地毯、灯光与装饰", "description": "软装与造型", "image": "/images/delivery-container.webp", "href": "/collections/lighting-decor" }
+  ],
+  "workflow": [
+    { "step": "01", "title": "设计方案", "description": "您的需求转化为完整配置方案——布局、材料与预算。" },
+    { "step": "02", "title": "项目协调", "description": "一个团队对齐设计意图、现场条件与实测数据。" },
+    { "step": "03", "title": "打样与样品", "description": "制作模型并与您确认后再投产。" },
+    { "step": "04", "title": "生产", "description": "在佛山按确认标准制造。" },
+    { "step": "05", "title": "质量检验", "description": "每个关键节点检查，包装前全面检验。" },
+    { "step": "06", "title": "出口包装", "description": "海运级包装保护每件产品。" },
+    { "step": "07", "title": "全球运输", "description": "集装箱、文件与跨境物流——门到门管理。" },
+    { "step": "08", "title": "安装", "description": "技术人员现场安装，交付即可使用的空间。" }
+  ],
+  "aboutAudiences": [
+    { "title": "面向业主", "description": "多家供应商配置很复杂。Ratahome 提供一体化解决方案。" },
+    { "title": "面向设计师", "description": "好设计需要可靠执行。我们帮助设计师接入定制制造。" },
+    { "title": "面向开发商", "description": "大型项目需要一致性与管控。我们提供可扩展配置方案。" }
+  ],
+  "collectionBenefits": [
+    { "title": "协调选型", "description": "每件产品在比例、饰面与风格上协调一致。" },
+    { "title": "一次交付", "description": "从佛山合并发货——清关一次，开箱一次。" },
+    { "title": "含质检", "description": "每批货物发货前附照片检验记录。" }
+  ]
+}
