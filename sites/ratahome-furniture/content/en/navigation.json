@@ -1,0 +1,134 @@
+{
+  "main": [
+    {
+      "id": "collections",
+      "label": "Collections",
+      "href": "/collections",
+      "groups": [
+        {
+          "title": "Living Room",
+          "links": [
+            { "label": "Sofas", "href": "/collections/sofas" },
+            { "label": "Sectionals", "href": "/collections/sectionals" },
+            { "label": "Lounge Chairs", "href": "/collections/lounge-chairs" },
+            { "label": "Coffee Tables", "href": "/collections/coffee-tables" }
+          ]
+        },
+        {
+          "title": "Dining Room",
+          "links": [
+            { "label": "Dining Tables", "href": "/collections/dining-tables" },
+            { "label": "Dining Chairs", "href": "/collections/dining-chairs" },
+            { "label": "Sideboards", "href": "/collections/sideboards" },
+            { "label": "Bar Stools", "href": "/collections/bar-stools" }
+          ]
+        },
+        {
+          "title": "Bedroom",
+          "links": [
+            { "label": "Beds", "href": "/collections/beds" },
+            { "label": "Nightstands", "href": "/collections/nightstands" },
+            { "label": "Dressers", "href": "/collections/dressers" },
+            { "label": "Wardrobes", "href": "/collections/wardrobes" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Collections",
+        "description": "Explore furniture by room and category",
+        "href": "/collections",
+        "image": "/images/home-collections/living-room-v2.jpg"
+      }
+    },
+    {
+      "id": "joinery",
+      "label": "Joinery",
+      "href": "/joinery",
+      "groups": [
+        {
+          "title": "Integrated System",
+          "links": [
+            { "label": "Kitchen Cabinetry", "href": "/joinery/kitchen-cabinetry", "description": "Custom kitchens and islands" },
+            { "label": "Wardrobes & Closets", "href": "/joinery/wardrobes-closets", "description": "Built-in storage solutions" },
+            { "label": "Living & Built-ins", "href": "/joinery/living-built-ins", "description": "Media walls and shelving" }
+          ]
+        },
+        {
+          "title": "Specialist",
+          "links": [
+            { "label": "Bathroom Vanities", "href": "/joinery/bathroom-vanities", "description": "Custom vanity units" },
+            { "label": "Interior Doors", "href": "/joinery/interior-doors", "description": "Panel and flush doors" },
+            { "label": "Wall Panels", "href": "/joinery/wall-panels", "description": "Architectural wall treatments" }
+          ]
+        },
+        {
+          "title": "Process",
+          "links": [
+            { "label": "Materials & Finishes", "href": "/joinery/materials-finishes", "description": "Timber, stone and metal options" },
+            { "label": "Manufacturing & Quality", "href": "/joinery/manufacturing-quality", "description": "Production standards and QC" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "Integrated Joinery System",
+        "description": "Custom cabinetry coordinated with your furniture package",
+        "href": "/joinery",
+        "image": "/images/finished-chair.webp"
+      }
+    },
+    {
+      "id": "solutions",
+      "label": "Solutions",
+      "links": [
+        { "label": "Homeowners", "href": "/homeowners", "description": "A complete home, designed and furnished as one" },
+        { "label": "Interior Designers", "href": "/designers", "description": "Sourcing and custom manufacturing support" },
+        { "label": "Builders & Developers", "href": "/builders", "description": "Repeatable packages for multi-unit programmes" },
+        { "label": "Hospitality", "href": "/hospitality", "description": "Guestroom and public-space solutions" }
+      ]
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "href": "/projects",
+      "links": [
+        { "label": "Luxury Residence", "href": "/projects/luxury-residence" },
+        { "label": "Villa Projects", "href": "/projects/villa-projects" },
+        { "label": "Hospitality", "href": "/projects/hospitality" },
+        { "label": "Developer Projects", "href": "/projects/developer-projects" }
+      ]
+    },
+    {
+      "id": "how",
+      "label": "How It Works",
+      "href": "/how-it-works",
+      "links": [
+        { "label": "Packages from $2,299", "href": "/home-packages" },
+        { "label": "How It Works", "href": "/how-it-works" },
+        { "label": "Factory Tour", "href": "/foshan-sourcing-tour" }
+      ]
+    },
+    {
+      "id": "resources",
+      "label": "Resources",
+      "links": [
+        { "label": "Catalogs", "href": "/catalogs" },
+        { "label": "Furniture Guide", "href": "/furniture-guide" },
+        { "label": "China Furniture Guide", "href": "/china-furniture-guide" },
+        { "label": "Manufacturing Capability", "href": "/manufacturing" },
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Blog", "href": "/blog" }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "links": [
+        { "label": "Our Story", "href": "/about" },
+        { "label": "Quality Control", "href": "/quality-control" },
+        { "label": "Global Capabilities", "href": "/global-capabilities" },
+        { "label": "Warranty Policy", "href": "/warranty-policy" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    }
+  ]
+}
