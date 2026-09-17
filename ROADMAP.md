@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
 | 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
@@ -353,6 +354,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
 | 2026-09-18 07:34 | 生产联系表单 | `POST /api/contact` + D1 远程查询 `site_id=ratahome-furniture` | 通过 |
 | 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |
+| 2026-09-18 07:37 | 生产静态图片 | curl 检查 logo/hero/dining-room magic bytes | 通过（二进制 PNG/WebP/JPEG） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
