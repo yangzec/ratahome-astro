@@ -1,0 +1,13 @@
+{
+  "name": "@trade/sections",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./registry": "./src/registry.ts"
+  },
+  "peerDependencies": {
+    "@trade/core": "workspace:*",
+    "astro": "^7.3.2"
+  }
+}
