@@ -1,96 +1,51 @@
-# Ratahome — Astro + Cloudflare
+# Trade Site Platform
 
-Whole-home furniture sourcing site rebuilt with **Astro 7**, **Cloudflare D1**, and **R2**.
+Monorepo for multilingual B2B trade independent sites. First site: **Ratahome Furniture** (Astro 7 + Cloudflare D1/R2).
 
-## Architecture
+## Structure
 
 ```
-src/
-├── components/
-│   ├── ui/              # Button, SectionHeader, PageHero
-│   ├── sections/        # Homepage section components
-│   ├── layout/          # Header, Footer, LanguageSwitcher
-│   └── forms/           # ContactForm (D1 + R2)
-├── content/
-│   ├── en/              # English copy (JSON config)
-│   └── zh/              # Chinese copy (JSON config)
-├── templates/           # Page templates (locale-aware)
-├── pages/
-│   ├── index.astro      # English routes (/)
-│   ├── zh/              # Chinese routes (/zh/)
-│   └── api/             # D1 + R2 API endpoints
-├── lib/
-│   ├── content.ts       # Content loader
-│   ├── db.ts            # D1 helpers
-│   └── r2.ts            # R2 helpers
-└── i18n/                # Locale config & path utils
+packages/core/              Shared lib: db, r2, i18n
+packages/sections/          Shared Section components + registry
+packages/site-cli/          create / validate / deploy CLI
+sites/ratahome-furniture/   First site instance
+  site.config.ts            site_id, template, locales
+  theme.json                Design tokens (colors, fonts)
+  blueprints/home.json      Homepage section order
+  content/{en,zh}/          Copy JSON
+  src/                      Astro pages, templates, components
+migrations/                 Shared D1 schema (site_id isolation)
+```
+
+## Commands (from repo root)
+
+```bash
+pnpm install
+pnpm dev          # http://localhost:43123
+pnpm build
+pnpm db:migrate # local shared D1
+pnpm cf:deploy  # deploy ratahome-furniture
+pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"
+pnpm site-cli validate <slug>
+pnpm site-cli deploy <slug>
 ```
 
 ## Features
 
 | Feature | Implementation |
 |---------|----------------|
-| 页面组件化 | `components/sections/*` + `templates/*` |
-| 文案配置化 | `src/content/{en,zh}/*.json` |
-| 多语言 | Astro i18n (`en` default, `zh` at `/zh/`) |
-| 数据库 | Cloudflare D1 (`contact_submissions`, `assets`, `page_content`) |
-| 文件存储 | Cloudflare R2 (floor plans, uploads) |
+| Monorepo | pnpm workspace + `@trade/core` |
+| 页面组件化 | `@trade/sections` + Blueprint Section Registry |
+| Blueprint 首页 | `blueprints/home.json` drives section order |
+| 文案配置化 | `content/{en,zh}/*.json` |
+| 主题外置 | `theme.json` → CSS variables in BaseLayout |
+| 多语言 | en at `/`, zh at `/zh/` |
+| 共享 D1 | `trade-platform` database + `site_id` column |
+| R2 隔离 | Object keys prefixed `{site_id}/` |
 
-## API Endpoints
+## Docs
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `POST` | `/api/contact` | Submit contact form → D1 + optional R2 upload |
-| `POST` | `/api/upload` | Direct file upload → R2 |
-| `GET` | `/api/assets/[key]` | Serve R2 object |
-
-## Getting Started
-
-```bash
-npm install
-
-# Apply D1 migrations (local)
-npm run db:migrate
-
-# Dev server
-npm run dev
-```
-
-Open [http://localhost:43123](http://localhost:43123) (English) or [http://localhost:43123/zh](http://localhost:43123/zh) (Chinese).
-
-## Cloudflare Deployment
-
-1. Create D1 database:
-   ```bash
-   npm run db:create
-   ```
-   Update `database_id` in `wrangler.jsonc`.
-
-2. Create R2 bucket `ratahome-assets` in Cloudflare dashboard.
-
-3. Apply remote migrations:
-   ```bash
-   npm run db:migrate:remote
-   ```
-
-4. Deploy:
-   ```bash
-   npm run cf:deploy
-   ```
-
-## Content Editing
-
-All copy lives in JSON files — no code changes needed:
-
-- `src/content/en/common.json` — site meta, buttons, form labels
-- `src/content/en/home.json` — homepage sections
-- `src/content/en/navigation.json` — menu structure
-- `src/content/en/pages.json` — sub-page content
-- Mirror files in `src/content/zh/` for Chinese
-
-## Database Schema
-
-See `migrations/0001_init.sql`:
-- `contact_submissions` — form submissions with optional R2 file reference
-- `assets` — R2 object metadata
-- `page_content` — optional CMS overrides per locale/slug
+- **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
+- **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
+- Agent 协作规范：`AGENTS.md`
+- 进度与计划：`ROADMAP.md`
