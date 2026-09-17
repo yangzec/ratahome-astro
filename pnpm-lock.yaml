@@ -1,0 +1,71 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      '@trade/site-cli':
+        specifier: workspace:*
+        version: link:packages/site-cli
+      turbo:
+        specifier: ^2.5.4
+        version: 2.10.13
+
+  packages/core:
+    dependencies:
+      '@cloudflare/workers-types':
+        specifier: ^5.20260915.1
+        version: 5.20260916.1
+
+  packages/sections:
+    dependencies:
+      '@trade/core':
+        specifier: workspace:*
+        version: link:../core
+      astro:
+        specifier: ^7.3.2
+        version: 7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(jiti@2.7.0)
+
+  packages/site-cli: {}
+
+  sites/ratahome-furniture:
+    dependencies:
+      '@astrojs/cloudflare':
+        specifier: ^14.3.1
+        version: 14.3.2(astro@7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0))(esbuild@0.28.2)(jiti@2.7.0)(wrangler@4.133.0(@cloudflare/workers-types@5.20260916.1))
+      '@tailwindcss/vite':
+        specifier: ^4.3.3
+        version: 4.3.3(vite@8.3.0(esbuild@0.28.2)(jiti@2.7.0))
+      '@trade/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      '@trade/sections':
+        specifier: workspace:*
+        version: link:../../packages/sections
+      astro:
+        specifier: ^7.3.2
+        version: 7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0)
+      tailwindcss:
+        specifier: ^4.3.3
+        version: 4.3.3
+      wrangler:
+        specifier: ^4.132.0
+        version: 4.133.0(@cloudflare/workers-types@5.20260916.1)
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^5.20260915.1
+        version: 5.20260916.1
+
+packages:
+
+  '@astrojs/cloudflare@14.3.2':
+    resolution: {integrity: sha512-4aWixXcCsxOGUH/alrJ/a/Nm5pKYBy8vqDj6YDmG+yPSLrx5QptLVCJTGyKPRRWtWG4rExPXrD2ClO7jqpYauw==}
+    peerDependencies:
+      astro: ^7.2.0
+      wrangler: ^4.125.0
+
+  zwitch@2.0.4: {}
