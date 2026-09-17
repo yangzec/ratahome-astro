@@ -163,6 +163,9 @@
 
 基于 Astro 7 + Cloudflare（D1 / R2）的外贸 B2B 独立站模板，目标支撑 **100 个不同行业** 的多语言站点快速复制。当前首个实例为家具行业 Ratahome 复刻站。
 
+**Canonical 仓库：** `yangzec/ratahome-astro`（GitHub）  
+https://github.com/yangzec/ratahome-astro
+
 ### 核心目录及职责
 
 | 路径 | 职责 |
@@ -200,6 +203,7 @@
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
+- Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
 
 ### 验证入口
 
