@@ -14,28 +14,27 @@ const { common, navigation } = getContent(locale);
 const { site, buttons } = common;
 ---
 
-<header class="sticky top-0 z-50 bg-izza-olive-dark text-white">
+<header class="sticky top-0 z-50 bg-izza-olive-dark text-white pt-[env(safe-area-inset-top,0px)]">
   <div class="border-b border-white/10">
-    <div class="container-site flex items-center justify-between py-2.5 text-sm gap-4">
-      <p class="hidden lg:block text-white/70 flex-1">{site.tagline}</p>
+    <div class="container-site flex items-center justify-between py-2.5 text-sm gap-3 sm:gap-4">
+      <p class="hidden lg:block text-white/70 flex-1 min-w-0">{site.tagline}</p>
       <LanguageSwitcher locale={locale} currentPath={currentPath} />
       <a
         href={site.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-white/90 hover:text-white transition-colors shrink-0"
+        class="flex items-center gap-2 text-white/90 hover:text-white transition-colors shrink-0 min-w-0"
       >
-        <span class="font-medium">WhatsApp {site.whatsapp}</span>
-        <span class="hidden md:inline text-white/50">{site.hours}</span>
+        <span class="font-medium">WhatsApp <span class="hidden sm:inline">{site.whatsapp}</span></span>
+        <span class="hidden lg:inline text-white/50">{site.hours}</span>
       </a>
     </div>
   </div>
 
   <nav class="container-site hidden lg:block relative" aria-label="Main navigation">
     <div class="flex items-center justify-between py-5">
-      <a href={localizedPath('/', locale)} class="flex items-center gap-3">
+      <a href={localizedPath('/', locale)} class="flex items-center shrink-0">
         <img src="/images/logo.png" alt={site.name} class="h-8 w-auto brightness-0 invert" />
-        <span class="font-display text-xl tracking-widest text-white">{site.name}</span>
       </a>
 
       <div class="flex items-center gap-1">
@@ -105,10 +104,9 @@ const { site, buttons } = common;
     ))}
   </nav>
 
-  <div class="container-site flex lg:hidden items-center justify-between py-4">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
-      <img src="/images/logo.png" alt={site.name} class="h-7 w-auto brightness-0 invert" />
-      <span class="font-display text-lg tracking-widest text-white">{site.name}</span>
+  <div class="container-site flex lg:hidden items-center justify-between py-3 sm:py-4">
+    <a href={localizedPath('/', locale)} class="flex items-center shrink-0 min-w-0">
+      <img src="/images/logo.png" alt={site.name} class="h-7 sm:h-8 w-auto max-w-[10rem] sm:max-w-none brightness-0 invert" />
     </a>
     <button id="mobile-menu-btn" class="p-2 text-white" aria-label="Open menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,9 +118,8 @@ const { site, buttons } = common;
 
 <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
   <div class="flex items-center justify-between p-5 border-b border-izza-border/30">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
+    <a href={localizedPath('/', locale)} class="flex items-center shrink-0">
       <img src="/images/logo.png" alt={site.name} class="h-7 w-auto" />
-      <span class="font-display text-lg tracking-widest text-izza-ink">{site.name}</span>
     </a>
     <button id="mobile-menu-close" class="p-2" aria-label="Close menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

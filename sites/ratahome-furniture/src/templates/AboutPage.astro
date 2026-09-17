@@ -16,7 +16,7 @@ const about = pages.about;
 <BaseLayout locale={locale} title={about.title} description={about.heroDescription}>
   <PageHero eyebrow={about.eyebrow} title={about.heroTitle} description={about.heroDescription} image="/images/hero-living-v2.webp" />
 
-  <section class="container-site py-20">
+  <section class="container-site py-12 md:py-20">
     <h2 class="section-title mb-4">{about.workflowTitle}</h2>
     <p class="text-izza-gray-text text-lg mb-12 max-w-2xl">{about.workflowDescription}</p>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -30,7 +30,7 @@ const about = pages.about;
     </div>
   </section>
 
-  <section class="bg-izza-cream py-20">
+  <section class="bg-izza-cream py-12 md:py-20">
     <div class="container-site grid md:grid-cols-3 gap-8">
       {pages.aboutAudiences.map((item) => (
         <div class="p-8 bg-white rounded-[20px]">
@@ -41,7 +41,7 @@ const about = pages.about;
     </div>
   </section>
 
-  <section class="container-site py-20 text-center">
+  <section class="container-site py-12 md:py-20 text-center">
     <h2 class="section-title mb-4 max-w-3xl mx-auto">{about.closingTitle}</h2>
     <p class="text-izza-gray-text text-lg max-w-2xl mx-auto">{about.closingDescription}</p>
   </section>

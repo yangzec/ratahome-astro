@@ -11,13 +11,13 @@ const { home } = getContent(locale);
 ---
 
 <section class="bg-izza-cream border-y border-izza-border/30">
-  <div class="container-site py-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="container-site py-6 sm:py-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
     {home.assurances.map((item) => (
-      <div class="flex gap-4 items-start">
-        <img src={item.icon} alt="" class="w-6 h-6 mt-1 opacity-70" />
+      <div class="flex gap-3 sm:gap-4 items-start">
+        <img src={item.icon} alt="" class="w-6 h-6 mt-0.5 sm:mt-1 opacity-70 shrink-0" />
         <div>
-          <strong class="block text-izza-ink font-semibold text-sm mb-1">{item.title}</strong>
-          <span class="text-sm text-izza-gray-muted">{item.description}</span>
+          <strong class="block text-izza-ink font-semibold text-base sm:text-sm mb-1">{item.title}</strong>
+          <span class="text-sm text-izza-gray-muted leading-relaxed">{item.description}</span>
         </div>
       </div>
     ))}

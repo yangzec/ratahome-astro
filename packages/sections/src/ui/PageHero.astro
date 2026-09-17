@@ -10,7 +10,7 @@ interface Props {
 const { title, description, eyebrow, image, dark = false } = Astro.props;
 ---
 
-<section class={`relative py-24 md:py-32 ${image ? 'min-h-[50vh] flex items-end' : dark ? 'bg-izza-olive-dark' : 'bg-izza-cream'}`}>
+<section class={`relative py-16 sm:py-24 md:py-32 ${image ? 'min-h-[45vh] sm:min-h-[50vh] flex items-end' : dark ? 'bg-izza-olive-dark' : 'bg-izza-cream'}`}>
   {image && (
     <>
       <img src={image} alt="" class="absolute inset-0 w-full h-full object-cover" />
@@ -19,11 +19,11 @@ const { title, description, eyebrow, image, dark = false } = Astro.props;
   )}
   <div class={`container-site relative ${image ? 'pb-8' : ''}`}>
     {eyebrow && <p class={`eyebrow mb-4 ${image || dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
-    <h1 class={`text-3xl md:text-5xl font-semibold max-w-3xl leading-tight mb-4 ${image || dark ? 'text-white' : 'text-izza-ink'}`}>
+    <h1 class={`text-3xl sm:text-4xl md:text-5xl font-semibold max-w-3xl leading-tight mb-4 ${image || dark ? 'text-white' : 'text-izza-ink'}`}>
       {title}
     </h1>
     {description && (
-      <p class={`text-lg max-w-2xl leading-relaxed ${image || dark ? 'text-white/80' : 'text-izza-gray-text'}`}>
+      <p class={`text-base sm:text-lg max-w-2xl leading-relaxed ${image || dark ? 'text-white/80' : 'text-izza-gray-text'}`}>
         {description}
       </p>
     )}

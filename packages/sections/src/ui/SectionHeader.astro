@@ -14,7 +14,7 @@ const { title, description, eyebrow, dark = false, class: className = '' } = Ast
   {eyebrow && <p class={`eyebrow mb-3 ${dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
   <h2 class={`section-title mb-4 ${dark ? 'text-white' : ''}`}>{title}</h2>
   {description && (
-    <p class={`text-lg leading-relaxed ${dark ? 'text-white/70' : 'text-izza-gray-text'}`}>
+    <p class={`text-base sm:text-lg leading-relaxed ${dark ? 'text-white/70' : 'text-izza-gray-text'}`}>
       {description}
     </p>
   )}

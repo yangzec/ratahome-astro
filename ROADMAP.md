@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
 | 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
 | 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
