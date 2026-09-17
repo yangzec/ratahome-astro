@@ -28,6 +28,8 @@ pnpm-debug.log*
 
 # agent task temp files
 .tmp/
+.mcp_push*.json
+.push_*_args.json
 
 # pnpm
 pnpm-debug.log*
