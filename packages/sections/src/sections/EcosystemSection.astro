@@ -1,0 +1,28 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '@site/content';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+const { ecosystem } = home;
+---
+
+<section class="bg-izza-olive-dark text-white py-20">
+  <div class="container-site">
+    <SectionHeader title={ecosystem.title} description={ecosystem.description} dark />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {ecosystem.items.map((item) => (
+        <div class="p-6 rounded-[17px] border border-white/10">
+          <span class="text-izza-accent font-semibold text-sm mb-3 block">{item.step}</span>
+          <h3 class="text-lg font-semibold text-white mb-2">{item.title}</h3>
+          <p class="text-sm text-white/60">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
