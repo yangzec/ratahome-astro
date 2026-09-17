@@ -1,0 +1,27 @@
+---
+import { locales, localeLabels, type Locale } from '@trade/core/i18n/config';
+import { switchLocalePath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+---
+
+<div class="flex items-center gap-1 text-sm">
+  {locales.map((loc) => (
+    <a
+      href={switchLocalePath(currentPath, loc)}
+      class={`px-2 py-1 rounded transition-colors ${
+        loc === locale
+          ? 'text-izza-accent font-semibold'
+          : 'text-white/60 hover:text-white'
+      }`}
+      hreflang={loc}
+    >
+      {loc === 'en' ? 'EN' : '中文'}
+    </a>
+  ))}
+</div>
