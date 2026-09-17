@@ -1,32 +1,27 @@
 {
-  "name": "ratahome-astro",
+  "name": "trade-site-platform",
+  "private": true,
   "type": "module",
   "version": "1.0.0",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "generate-types": "wrangler types",
-    "db:migrate": "wrangler d1 migrations apply ratahome --local",
-    "db:migrate:remote": "wrangler d1 migrations apply ratahome --remote",
-    "db:create": "wrangler d1 create ratahome",
-    "cf:deploy": "npm run build && wrangler deploy"
-  },
-  "dependencies": {
-    "@astrojs/cloudflare": "^14.3.1",
-    "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.2",
-    "tailwindcss": "^4.3.3",
-    "wrangler": "^4.132.0"
+    "dev": "pnpm --filter ratahome-furniture dev",
+    "build": "pnpm --filter ratahome-furniture build",
+    "preview": "pnpm --filter ratahome-furniture preview",
+    "db:migrate": "pnpm --filter ratahome-furniture db:migrate",
+    "db:migrate:remote": "pnpm --filter ratahome-furniture db:migrate:remote",
+    "cf:deploy": "pnpm --filter ratahome-furniture cf:deploy",
+    "site-cli": "node packages/site-cli/src/cli.mjs",
+    "site:validate": "node packages/site-cli/src/cli.mjs validate ratahome-furniture"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260915.1"
+    "@trade/site-cli": "workspace:*",
+    "turbo": "^2.5.4"
   },
-  "allowScripts": {
-    "esbuild": true
+  "packageManager": "pnpm@10.12.1",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "workerd"]
   }
 }
