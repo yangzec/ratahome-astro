@@ -35,8 +35,7 @@
 - [x] 导航栏主题 CSS 修复（BaseLayout `set:html` 注入）
 - [x] API 路由适配 Astro 7 `cloudflare:workers` env
 - [x] 部署文档 `docs/DEPLOY.md`
-- [x] Monorepo 完整提交并推送 Cursor origin
-- [ ] GitHub `yangzec/ratahome-astro` 完整同步（需本地 git 凭据）
+- [x] Monorepo 完整提交；canonical 远程为 GitHub `yangzec/ratahome-astro`
 - [ ] Cloudflare 生产部署（需 `wrangler login` + D1/R2 创建）
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
@@ -313,7 +312,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | Monorepo 工具 | pnpm + Turborepo / Nx | pnpm + Turborepo |
 | 目标语言范围 | en + zh / 更多 | en + zh 先行 |
 | R2 策略 | 共享 bucket + 前缀 / 每站独立 bucket | 待实现时与 D1 策略一并落地 |
-| 仓库远程 | `yangzec/ratahome-astro` | 已创建，推送待完成 |
+| 仓库远程 | `yangzec/ratahome-astro`（GitHub） | canonical；Origin 可选作 Cursor 镜像 |
 
 ---
 
@@ -321,7 +320,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| GitHub 完整推送 `yangzec/ratahome-astro` | Cursor origin 已同步；GitHub 远程需凭据 `git push github main` |
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
 
 ---
@@ -330,6 +328,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
+| 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
 | 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
 | 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
