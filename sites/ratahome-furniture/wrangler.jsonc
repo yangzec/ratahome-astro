@@ -1,0 +1,32 @@
+{
+	"$schema": "../../node_modules/wrangler/config-schema.json",
+	"name": "ratahome-furniture",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"compatibility_date": "2026-09-15",
+	"compatibility_flags": ["global_fetch_strictly_public"],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "trade-platform",
+			"database_id": "00000000-0000-0000-0000-000000000001",
+			"migrations_dir": "../../migrations"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "R2",
+			"bucket_name": "trade-platform-assets"
+		}
+	],
+	"vars": {
+		"SITE_ID": "ratahome-furniture",
+		"R2_PUBLIC_URL": "https://assets.ratahome.com"
+	}
+}
