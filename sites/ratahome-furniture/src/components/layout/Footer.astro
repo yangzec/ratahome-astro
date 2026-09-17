@@ -1,0 +1,57 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { common, home, navigation } = getContent(locale);
+const { site, footer } = common;
+---
+
+<footer class="bg-izza-olive-dark text-white">
+  <div class="container-site py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      {home.footerFeatures.map((feature) => (
+        <div>
+          <h3 class="font-semibold text-white mb-2">{feature.title}</h3>
+          <p class="text-sm text-white/60">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="border-t border-white/10 pt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="lg:col-span-1">
+        <img src="/images/logo.png" alt={site.name} class="h-8 w-auto brightness-0 invert mb-4" />
+        <p class="text-sm text-white/60 leading-relaxed">{footer.description}</p>
+      </div>
+
+      {navigation.main.slice(0, 3).map((section) => (
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">{section.label}</h4>
+          <ul class="space-y-2">
+            {(section.groups?.flatMap((g) => g.links) || section.links || []).slice(0, 5).map((link) => (
+              <li>
+                <a href={localizedPath(link.href, locale)} class="text-sm text-white/60 hover:text-white transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+      <p>&copy; {new Date().getFullYear()} {site.name}. {footer.copyright}</p>
+      <div class="flex items-center gap-6">
+        <span>{site.location}</span>
+        <span>{site.hours}</span>
+        <a href={site.whatsappUrl} class="hover:text-white transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>
