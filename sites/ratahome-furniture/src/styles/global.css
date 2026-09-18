@@ -108,9 +108,9 @@
     color: var(--color-izza-gray-muted);
   }
 
-  /* Hero 内容区内距 */
+  /* Hero 内容区内距：移动端少占高度，留更多图片可视区 */
   .hero-panel {
-    padding-top: clamp(4rem, 14vw, 7rem);
+    padding-top: clamp(2.5rem, 10vw, 7rem);
     padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
   }
 
