@@ -145,7 +145,7 @@
     "notes": [
       "Official crawl: https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
       "Official markdown: https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/",
-      "Token needs Browser Rendering - Edit.",
+      "Token needs Browser Rendering - Edit. Without it, /markdown /crawl /content return 401 Authentication error even if the token can list Workers and D1.",
       "If robots.txt Content-Signal rejects ai-input/reference, skip that host; do not bypass."
     ]
   },

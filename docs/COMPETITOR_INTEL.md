@@ -2,7 +2,7 @@
 
 把行业竞品收成**可映射到现有建站文件**的结构化快照，而不是全站镜像。本文是方案正文；机器可读模型在 `/workspace/schemas/competitor/` 。
 
-当前状态：**模型与映射已落地。抓取由你用 Jina Reader 或 Cloudflare Browser Rendering 执行，仓库不写爬虫。** 家具站自映射仍是校验夹具。首个外站 `balkrushnatextiles.com` 已完成第一轮（首页 + sitemap + 公开 WP JSON），第二轮 URL 在 `.tmp/competitor-intel/textile/balkrushnatextiles.com/raw/seeds.json` 。可执行清单：`/workspace/schemas/competitor/crawl-brief.json` 。
+当前状态：**模型与映射已落地。仓库不写爬虫。** 家具站自映射仍是校验夹具。首个外站 `balkrushnatextiles.com` 两轮已用环境内 Cloudflare Token 点抓（`POST /browser-rendering/markdown`，8/8），快照在 `.tmp/competitor-intel/textile/balkrushnatextiles.com/` 。Token 必须带 **Browser Rendering - Edit**。可执行清单：`/workspace/schemas/competitor/crawl-brief.json` 。
 
 ---
 
@@ -324,7 +324,7 @@ node schemas/competitor/validate.mjs
 - 第一期必采 `pageType` 出现在样例里
 - `classify-seeds` 能把 `/our-story`、`/shop`、`/enquire-now` 标成正确类型
 
-已用 `balkrushnatextiles.com` 跑通第一轮（首页 + sitemap + 公开 WP JSON → `classify-seeds`）。未验证：你侧的 Jina / CF 第二轮点抓、浏览器渲染规格表、自动改写质量。
+已用 `balkrushnatextiles.com` 跑通两轮：第一轮首页 + sitemap + WP JSON → `classify-seeds`；第二轮环境内 CF `/markdown` 8/8。未验证：theme-tokens、自动改写质量、灌进 `sites/`。
 
 ---
 
