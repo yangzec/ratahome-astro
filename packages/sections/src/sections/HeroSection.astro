@@ -24,7 +24,7 @@ const { buttons } = common;
     </h1>
     <p class="text-white/85 text-base sm:text-lg max-w-2xl mb-5 sm:mb-6 leading-relaxed">{hero.description}</p>
     <div class="flex flex-wrap items-center gap-3">
-      <Button href="#upload" variant="primary">{buttons.uploadFloorPlan}</Button>
+      <Button href={hero.ctaHref ?? '#upload'} variant="primary">{buttons.uploadFloorPlan}</Button>
       <Button href={localizedPath('/foshan-sourcing-tour', locale)} variant="outline">{buttons.factoryTour}</Button>
     </div>
   </div>

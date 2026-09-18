@@ -1,0 +1,48 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import { getContent } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { pages } = getContent(locale);
+const about = pages.about;
+---
+
+<BaseLayout locale={locale} title={about.title} description={about.heroDescription}>
+  <PageHero eyebrow={about.eyebrow} title={about.heroTitle} description={about.heroDescription} image="/images/hero-living-v2.webp" />
+
+  <section class="container-site section-y">
+    <h2 class="section-title mb-4">{about.workflowTitle}</h2>
+    <p class="text-izza-gray-text text-lg section-header max-w-2xl">{about.workflowDescription}</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {pages.workflow.map((item) => (
+        <div class="card-pad rounded-[17px] border border-izza-border/50">
+          <span class="eyebrow text-xs mb-3 block">{item.step}</span>
+          <h3 class="font-semibold text-izza-ink mb-2">{item.title}</h3>
+          <p class="text-sm text-izza-gray-muted">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-izza-cream section-y">
+    <div class="container-site grid md:grid-cols-3 gap-6 md:gap-8">
+      {pages.aboutAudiences.map((item) => (
+        <div class="card-pad bg-white rounded-[20px]">
+          <h3 class="text-xl font-semibold text-izza-ink mb-3">{item.title}</h3>
+          <p class="text-izza-gray-muted">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="container-site section-y text-center">
+    <h2 class="section-title mb-4 max-w-3xl mx-auto">{about.closingTitle}</h2>
+    <p class="text-izza-gray-text text-lg max-w-2xl mx-auto">{about.closingDescription}</p>
+  </section>
+</BaseLayout>

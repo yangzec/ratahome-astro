@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "pnpm --filter ratahome-furniture dev",
     "build": "pnpm --filter ratahome-furniture build",
+    "build:all": "pnpm -r --filter './sites/*' build",
+    "site:validate:all": "node packages/site-cli/src/cli.mjs validate ratahome-furniture && node packages/site-cli/src/cli.mjs validate textile-fabric && node packages/site-cli/src/cli.mjs validate textile-apparel && node packages/site-cli/src/cli.mjs validate textile-home",
     "preview": "pnpm --filter ratahome-furniture preview",
     "db:migrate": "pnpm --filter ratahome-furniture db:migrate",
     "db:migrate:remote": "pnpm --filter ratahome-furniture db:migrate:remote",

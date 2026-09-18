@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "id": "fabrics",
+      "label": "Fabrics",
+      "href": "/fabrics/cotton",
+      "links": [
+        { "label": "Cotton", "href": "/fabrics/cotton" },
+        { "label": "Linen", "href": "/fabrics/linen" },
+        { "label": "Polyester blends", "href": "/fabrics/polyester-blends" },
+        { "label": "Functional fabrics", "href": "/fabrics/functional-fabrics" },
+        { "label": "Sustainable fibers", "href": "/fabrics/sustainable-fibers" },
+        { "label": "Custom weave", "href": "/fabrics/custom-weave" }
+      ]
+    },
+    {
+      "id": "programs",
+      "label": "Programs",
+      "href": "/sampling",
+      "links": [
+        { "label": "Sampling", "href": "/sampling", "description": "Swatches and lab dips" },
+        { "label": "MOQ & lead time", "href": "/moq", "description": "Development and bulk quantities" },
+        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX, GOTS and more" },
+        { "label": "Quality control", "href": "/quality-control", "description": "Roll inspection standards" }
+      ]
+    },
+    {
+      "id": "buyers",
+      "label": "Buyers",
+      "href": "/brands",
+      "links": [
+        { "label": "Brands", "href": "/brands" },
+        { "label": "Retailers", "href": "/retailers" },
+        { "label": "Agents", "href": "/agents" }
+      ]
+    },
+    { "id": "about", "label": "About", "href": "/about" },
+    { "id": "contact", "label": "Contact", "href": "/contact" }
+  ]
+}

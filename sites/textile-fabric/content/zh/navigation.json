@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "id": "fabrics",
+      "label": "面料",
+      "href": "/fabrics/cotton",
+      "links": [
+        { "label": "棉", "href": "/fabrics/cotton" },
+        { "label": "麻", "href": "/fabrics/linen" },
+        { "label": "涤纶混纺", "href": "/fabrics/polyester-blends" },
+        { "label": "功能性面料", "href": "/fabrics/functional-fabrics" },
+        { "label": "可持续纤维", "href": "/fabrics/sustainable-fibers" },
+        { "label": "定制织造", "href": "/fabrics/custom-weave" }
+      ]
+    },
+    {
+      "id": "programs",
+      "label": "项目服务",
+      "href": "/sampling",
+      "links": [
+        { "label": "打样", "href": "/sampling", "description": "色卡与 lab dip" },
+        { "label": "MOQ 与交期", "href": "/moq", "description": "开发量与大货起订" },
+        { "label": "认证", "href": "/certifications", "description": "OEKO-TEX、GOTS 等" },
+        { "label": "质量控制", "href": "/quality-control", "description": "验布标准" }
+      ]
+    },
+    {
+      "id": "buyers",
+      "label": "买家类型",
+      "href": "/brands",
+      "links": [
+        { "label": "品牌方", "href": "/brands" },
+        { "label": "工厂", "href": "/manufacturers" },
+        { "label": "贸易商", "href": "/traders" }
+      ]
+    },
+    { "id": "about", "label": "关于", "href": "/about" },
+    { "id": "contact", "label": "联系", "href": "/contact" }
+  ]
+}

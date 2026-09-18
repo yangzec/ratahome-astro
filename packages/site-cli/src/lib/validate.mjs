@@ -179,5 +179,5 @@ function collectNavHrefs(items) {
 
 function isKnownRoute(path) {
   const top = path.split('/')[0];
-  return ['collections', 'joinery', 'projects', 'zh'].includes(top);
+  return ['collections', 'fabrics', 'styles', 'products', 'joinery', 'projects', 'zh'].includes(top);
 }

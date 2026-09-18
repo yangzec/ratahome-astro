@@ -1,6 +1,10 @@
 {
   "b2b-manufacturing": {
     "source": "ratahome-furniture",
-    "description": "B2B manufacturing — Hero, capabilities grid, process, case studies"
+    "description": "B2B manufacturing — Hero, capabilities grid, process, case studies (furniture / joinery)"
+  },
+  "b2b-textile": {
+    "source": "textile-fabric",
+    "description": "B2B textile — Hero, fabric categories, MOQ, sampling, certifications (fabric / apparel / home textile)"
   }
 }

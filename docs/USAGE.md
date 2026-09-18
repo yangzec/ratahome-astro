@@ -224,8 +224,11 @@ pnpm db:migrate
 # 查看可用行业模板
 pnpm site-cli templates
 
-# 从模板创建新站（复制 sites/ratahome-furniture 并替换 site_id）
-pnpm site-cli create textile-fabric --from b2b-manufacturing --name "Textile Fabric"
+# 从家具模板创建（b2b-manufacturing）
+pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
+
+# 从纺织模板创建（b2b-textile，source: sites/textile-fabric）
+pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
 
 # 校验配置、JSON、Blueprint section、SITE_ID 一致性
 pnpm site-cli validate textile-fabric
@@ -238,7 +241,7 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后编辑 `sites/<slug>/content/`、`theme.json`、`blueprints/home.json`。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
+创建后编辑 `sites/<slug>/content/`、`theme.json`、`blueprints/home.json`。可用模板见 `pnpm site-cli templates`（`b2b-manufacturing`、`b2b-textile`）。
 
 ---
 

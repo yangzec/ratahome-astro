@@ -22,7 +22,9 @@
 
 ---
 
-## 当前状态（阶段 1 收尾中）
+## 当前状态（阶段 2 进行中）
+
+### 阶段 1 — 已完成
 
 - [x] Ratahome 家具站 Astro 复刻（组件化、JSON 文案、en/zh）
 - [x] Cloudflare D1 + R2 集成（联系表单、上传、资源 API）
@@ -40,7 +42,19 @@
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
-- [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
+- [x] 阶段 1 关账：四站 `site-cli validate` + `build` 通过；根目录遗留说明见 `docs/LEGACY.md`
+
+### 阶段 2 — 纺织类试点
+
+- [x] `b2b-textile` 注册于 `packages/site-cli/templates.json`（source: `textile-fabric`）
+- [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（en/zh 文案、Blueprint、独立 wrangler）
+- [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
+- [ ] 三站独立 Cloudflare 部署与域名
+- [ ] 纺织专属素材替换（当前复用家具占位图）
+- [ ] 阶段 2 复用率文档化
+
+### 后续阶段
+
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
 
@@ -328,6 +342,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
+| 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |
 | 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
 | 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
 | 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
@@ -352,6 +368,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 15:26 | 四站 build | `pnpm build:all`（ratahome + textile-fabric/apparel/home） | 通过 |
+| 2026-09-18 15:26 | 四站 validate | `pnpm site:validate:all` | 通过 |
 | 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
 | 2026-09-18 07:34 | 生产联系表单 | `POST /api/contact` + D1 远程查询 `site_id=ratahome-furniture` | 通过 |
 | 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |

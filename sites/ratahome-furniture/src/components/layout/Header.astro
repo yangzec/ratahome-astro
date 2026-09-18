@@ -12,6 +12,7 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 const { common, navigation } = getContent(locale);
 const { site, buttons } = common;
+const ctaHash = `#${site.ctaAnchor ?? 'upload'}`;
 ---
 
 <header class="sticky top-0 z-50 bg-izza-olive-dark text-white pt-[env(safe-area-inset-top,0px)]">
@@ -50,7 +51,7 @@ const { site, buttons } = common;
         ))}
       </div>
 
-      <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary">
+      <a href={`${localizedPath('/', locale)}${ctaHash}`} class="btn-primary">
         {buttons.startProject}
       </a>
     </div>

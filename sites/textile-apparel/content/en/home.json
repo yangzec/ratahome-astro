@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "eyebrow": "Garment development · Sampling · Bulk export",
+    "title": "Apparel programs built from tech pack to shipment.",
+    "description": "We develop knit and woven styles for brands and retailers — size specs, fit samples, bulk production and export documentation in one program.",
+    "image": "/images/hero-living-v2.webp",
+    "imageAlt": "Fabric swatches and textile mill",
+    "ctaHref": "#sample"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX & GOTS programs", "description": "Certified mills on request" },
+    { "icon": "/icons/box-seam.svg", "title": "Lab dip before bulk", "description": "Written approval on every color" },
+    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment inspection", "description": "GSM, width and roll report" },
+    { "icon": "/icons/clock.svg", "title": "48-hour sample response", "description": "One contact for specs and MOQ" }
+  ],
+  "metrics": [
+    { "value": "300+", "label": "Active fabric SKUs" },
+    { "value": "50 GSM–380", "label": "Weight range" },
+    { "value": "15 days", "label": "Typical lab dip cycle" },
+    { "value": "100%", "label": "Rolls inspected before ship" }
+  ],
+  "audiences": {
+    "title": "Built for every buyer in the chain.",
+    "description": "One platform for brands, contract manufacturers and trading houses — same documentation standards at every stage.",
+    "items": [
+      { "title": "Brands", "description": "Seasonal collections with stable quality and traceable mills.", "href": "/brands", "image": "/images/home-audiences/homeowner-v2.jpg" },
+      { "title": "Manufacturers", "description": "Bulk programs with locked specs and rolling deliveries.", "href": "/manufacturers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
+      { "title": "Traders", "description": "Consolidated sourcing with export documentation support.", "href": "/traders", "image": "/images/home-audiences/builders-contractors-v4.webp" },
+      { "title": "Product developers", "description": "Swatch libraries, lab dips and development yardage.", "href": "/sampling", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" }
+    ]
+  },
+  "capabilities": {
+    "title": "From swatch to container — one spec sheet.",
+    "description": "Instead of chasing mills, labs and forwarders separately, you work with one team across development, production and export.",
+    "items": [
+      { "title": "Composition & weight", "description": "Cotton, linen, viscose, polyester and blends — GSM and width locked in writing.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "Color development", "description": "Lab dips, strike-offs and bulk tolerance standards for every shade.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "MOQ & lead time", "description": "Development yardage, bulk MOQ and rolling schedules per program.", "image": "/images/package-living-california.webp" },
+      { "title": "Export delivery", "description": "Roll packing, inspection reports and shipping documentation.", "image": "/images/delivery-container.webp" }
+    ]
+  },
+  "process": {
+    "title": "One path from spec to shipment.",
+    "description": "Every milestone is documented — composition, lab dip approval and roll inspection before dispatch.",
+    "image": "/images/home-process/completed-residence-v2.jpg",
+    "imageAlt": "Fabric quality inspection",
+    "steps": [
+      { "step": "01", "title": "Share specs", "description": "Send composition, GSM, width, colors and target quantity." },
+      { "step": "02", "title": "Match mills", "description": "We shortlist vetted mills against your program requirements." },
+      { "step": "03", "title": "Lab dip", "description": "Approve colors in writing before bulk production begins." },
+      { "step": "04", "title": "Bulk run", "description": "Production with inline QC and roll-level traceability." },
+      { "step": "05", "title": "Ship", "description": "Final inspection, packing list and export documentation." }
+    ]
+  },
+  "testimonials": [
+    { "quote": "Lab dips arrived on schedule and bulk matched the approved standard — no surprises at receiving.", "author": "Meridian Apparel · UK" },
+    { "quote": "One spec sheet covered three mills and export docs. We stopped chasing separate WeChat threads.", "author": "Pacific Trading · Australia" }
+  ],
+  "warranty": {
+    "eyebrow": "Certifications",
+    "title": "What standards can we meet?",
+    "description": "Programs are matched to mill capabilities — certificates issued with your order file, not promised after the fact.",
+    "commitment": "Every certification claim is tied to a specific mill and lot — documentation travels with the goods.",
+    "cases": [
+      { "question": "If composition must be verified", "title": "Mill certificates + third-party test on request.", "description": "Composition reports and restricted-substance testing arranged before bulk approval when your program requires it." },
+      { "question": "If color shifts in bulk", "title": "Written tolerance and re-dip policy.", "description": "Lab dip approval defines acceptable delta. Out-of-tolerance rolls are flagged before shipment — not after arrival." },
+      { "question": "If rolls arrive short", "title": "Roll report reconciles meters vs. PO.", "description": "Every roll is measured at final inspection. Shortage claims are resolved against the signed inspection report." }
+    ]
+  },
+  "rooms": {
+    "title": "Browse by style category.",
+    "basePath": "/styles",
+    "items": [
+      { "label": "Knit tops", "slug": "knit-tops" },
+      { "label": "Woven shirts", "slug": "woven-shirts" },
+      { "label": "Outerwear", "slug": "outerwear" },
+      { "label": "Activewear", "slug": "activewear" },
+      { "label": "Uniforms", "slug": "uniforms" },
+      { "label": "Private label", "slug": "private-label" }
+    ]
+  },
+  "projects": {
+    "title": "Recent programs.",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "Mill network, not a marketplace.",
+    "description": "Vetted mills across Shaoxing and Guangzhou — one accountable team for specs, lab dips and export.",
+    "items": []
+  },
+  "cta": {
+    "anchorId": "sample",
+    "title": "Start with a spec sheet or reference swatch.",
+    "description": "Share composition, GSM, colors and quantity — you will receive mill options, MOQ and lab dip timeline within 48 hours.",
+    "formTitle": "Request fabric samples",
+    "formDescription": "Attach a spec sheet, target composition or photo of a reference swatch. Development yardage and bulk MOQ included in the reply.",
+    "steps": [
+      "Send specs or a reference swatch — one file is enough to begin.",
+      "Receive mill shortlist, MOQ and lab dip schedule.",
+      "Approve lab dips in writing before bulk production."
+    ]
+  },
+  "footerFeatures": [
+    { "title": "Vetted mill network", "description": "Shaoxing & Guangzhou woven and knit" },
+    { "title": "Lab dip first", "description": "Written color approval before bulk" },
+    { "title": "Export ready", "description": "Roll reports and shipping docs" },
+    { "title": "One program team", "description": "Single contact from spec to ship" }
+  ]
+}

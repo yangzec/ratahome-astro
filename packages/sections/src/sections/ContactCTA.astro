@@ -13,7 +13,7 @@ const { cta } = home;
 const { site, buttons } = common;
 ---
 
-<section id="upload" class="container-site section-y">
+<section id={cta.anchorId ?? 'upload'} class="container-site section-y">
   <div class="grid lg:grid-cols-2 stack-gap items-center">
     <div>
       <h2 class="section-title mb-4">{cta.title}</h2>

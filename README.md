@@ -22,7 +22,10 @@ pnpm dev
 packages/core/              Shared lib: db, r2, i18n
 packages/sections/          Shared Section components + registry
 packages/site-cli/          create / validate / deploy CLI
-sites/ratahome-furniture/   First site instance
+sites/ratahome-furniture/   First site (b2b-manufacturing)
+sites/textile-fabric/       Textile pilot — fabric (b2b-textile)
+sites/textile-apparel/      Textile pilot — apparel (b2b-textile)
+sites/textile-home/         Textile pilot — home textile (b2b-textile)
   site.config.ts            site_id, template, locales
   theme.json                Design tokens (colors, fonts)
   blueprints/home.json      Homepage section order
@@ -37,6 +40,8 @@ migrations/                 Shared D1 schema (site_id isolation)
 pnpm install
 pnpm dev          # http://localhost:43123
 pnpm build
+pnpm build:all          # all sites/*
+pnpm site:validate:all  # validate all sites
 pnpm db:migrate # local shared D1
 pnpm cf:deploy  # deploy ratahome-furniture
 pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"
