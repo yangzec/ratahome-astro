@@ -31,7 +31,7 @@
       "priority": 4,
       "required": true,
       "extract": ["markdown", "images"],
-      "limit": "1-2 samples",
+      "limit": "sample per URL cluster, not a global page budget",
       "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
     },
     "contact": {
