@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "owner": "user-jina-or-cloudflare",
   "repoDoesNotCrawl": true,
-  "description": "What to fetch with Jina Reader or Cloudflare Browser Rendering. Drop raw output into .tmp/competitor-intel/{industry}/{domain}/raw/. Do not spider the whole site.",
+  "description": "Two-pass fetch. Pass 1 is only homepage + sitemap + robots. Pass 2 URLs are classified from that dump — do not assume /about or /products.",
   "docs": {
     "jinaReader": "https://r.jina.ai/docs",
     "jinaProduct": "https://jina.ai/en-US/reader/",
@@ -17,20 +17,30 @@
     "blogPosts": 0,
     "legalBody": false
   },
-  "seed": {
-    "start": ["/", "/sitemap.xml", "/robots.txt"],
-    "pickFromSitemapOrNav": [
-      { "pageType": "home", "required": true, "match": ["/", "/home", "/index"] },
-      { "pageType": "about", "required": true, "match": ["/about", "/about-us", "/company", "/who-we-are"] },
-      { "pageType": "category", "required": true, "match": ["/products", "/collections", "/categories", "/solutions"] },
-      { "pageType": "product", "required": true, "limit": 2, "match": ["/product/", "/products/", "/collections/"] },
-      { "pageType": "contact", "required": true, "match": ["/contact", "/enquiry", "/inquiry", "/quote", "/request-a-quote", "/get-a-quote"] },
-      { "pageType": "case", "required": true, "alternateOf": ["faq"], "match": ["/projects", "/cases", "/portfolio", "/works"] },
-      { "pageType": "faq", "required": false, "match": ["/faq", "/faqs", "/help"] }
+  "pass1": {
+    "fetch": ["/", "/sitemap.xml", "/robots.txt"],
+    "alsoIfPresent": ["/sitemap_index.xml", "/sitemap-index.xml"],
+    "purpose": "Discover this site's real nav and URL patterns. Paths differ per site."
+  },
+  "pass2": {
+    "classifier": "schemas/competitor/classify-seeds.mjs",
+    "command": "node schemas/competitor/classify-seeds.mjs --origin {origin} --home raw/home.md --sitemap raw/sitemap.xml --out raw/seeds.json",
+    "select": [
+      { "pageType": "home", "required": true },
+      { "pageType": "about", "required": true },
+      { "pageType": "category", "required": true },
+      { "pageType": "product", "required": true, "limit": 2 },
+      { "pageType": "contact", "required": true },
+      { "pageType": "case", "required": true, "alternateOf": ["faq"] }
     ],
-    "optionalIfCheap": [
-      { "pageType": "download", "match": ["/catalog", "/catalogs", "/download", "/resources"] }
-    ]
+    "ifUnresolved": "Fetch one more nav page that looks closest, or skip that type and record it in seeds.json#/unresolved"
+  },
+  "pageTypeHints": {
+    "about": ["about", "company", "our-story", "who-we-are", "关于", "公司"],
+    "contact": ["contact", "enquiry", "inquire", "enquire", "quote", "联系", "询盘", "报价"],
+    "category": ["products", "collections", "shop", "solutions", "产品", "系列"],
+    "case": ["projects", "portfolio", "works", "cases", "案例"],
+    "faq": ["faq", "help", "常见问题"]
   },
   "exclude": {
     "paths": [
@@ -87,87 +97,61 @@
     },
     "notes": [
       "Official options: https://r.jina.ai/docs",
-      "X-Respond-With: frontmatter returns YAML title/description/url plus markdown body.",
-      "X-With-Images-Summary / X-With-links-Summary give dedicated image and link lists for manifest and IA.",
-      "Do not use X-Preset: spider for phase 1. Fetch the seed list only.",
-      "JS-heavy sites: keep X-Engine: browser, or X-Engine: cf-browser-rendering if that engine works better.",
+      "Pass 1: only homepage. Keep X-With-links-Summary so classify-seeds can read the nav.",
+      "Pass 2: fetch only URLs listed in raw/seeds.json.",
+      "Do not use X-Preset: spider.",
       "X-With-Generated-Alt does not work when X-Respond-With is set; skip it."
     ]
   },
   "cloudflare": {
-    "discoverThenFetch": {
+    "pass1Markdown": {
       "method": "POST",
-      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/crawl",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
       "body": {
         "url": "{origin}/",
+        "gotoOptions": { "waitUntil": "networkidle0" }
+      },
+      "useWhen": "Homepage only. Also download /sitemap.xml and /robots.txt as plain HTTP."
+    },
+    "pass2Markdown": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
+      "body": {
+        "url": "{seedUrl}",
+        "gotoOptions": { "waitUntil": "networkidle0" }
+      },
+      "useWhen": "Each classified seed in raw/seeds.json. Do not pre-bake /about or /products into includePatterns."
+    },
+    "wideCrawlDiscouraged": {
+      "reason": "Site IA varies. A wide /crawl with hardcoded includePatterns misses /our-story and /enquire-now.",
+      "ifUsedAnyway": {
         "limit": 12,
         "depth": 2,
-        "source": "all",
         "formats": ["markdown"],
         "render": true,
         "crawlPurposes": ["ai-input"],
         "contentUse": "reference",
-        "options": {
-          "includeExternalLinks": false,
-          "includeSubdomains": false,
-          "includePatterns": [
-            "{origin}/",
-            "{origin}/about**",
-            "{origin}/about-us**",
-            "{origin}/company**",
-            "{origin}/products**",
-            "{origin}/product/**",
-            "{origin}/collections**",
-            "{origin}/solutions**",
-            "{origin}/contact**",
-            "{origin}/enquiry**",
-            "{origin}/inquiry**",
-            "{origin}/quote**",
-            "{origin}/projects**",
-            "{origin}/cases**",
-            "{origin}/portfolio**",
-            "{origin}/faq**",
-            "{origin}/catalog**"
-          ],
-          "excludePatterns": [
-            "{origin}/blog/**",
-            "{origin}/news/**",
-            "{origin}/cart/**",
-            "{origin}/account/**",
-            "{origin}/login/**",
-            "{origin}/wp-admin/**",
-            "{origin}/search/**"
-          ]
-        }
+        "includePatterns": "Generate from seeds.json after pass 1, never from a fixed path list"
       }
-    },
-    "singlePageMarkdown": {
-      "method": "POST",
-      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
-      "body": {
-        "url": "{absoluteUrl}",
-        "gotoOptions": { "waitUntil": "networkidle0" }
-      },
-      "useWhen": "Preferred for the 6 seed URLs. More predictable than a wide /crawl job."
     },
     "notes": [
       "Official crawl: https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
       "Official markdown: https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/",
       "Token needs Browser Rendering - Edit.",
-      "contentUse: reference matches research/rewrite, not republishing.",
-      "If robots.txt Content-Signal rejects ai-input/reference, skip that host and record it; do not bypass.",
-      "JS category grids: render true or /markdown with waitUntil networkidle0.",
-      "Do not set formats to json for a full-site extract. Optional later, contact page only."
+      "If robots.txt Content-Signal rejects ai-input/reference, skip that host; do not bypass."
     ]
   },
   "drop": {
     "root": ".tmp/competitor-intel/{industry}/{domain}/",
-    "raw": [
-      "raw/pages/{pageType}-{slug}.md",
-      "raw/jina/{pageType}-{slug}.json",
-      "raw/cf-crawl.json",
+    "pass1": [
+      "raw/home.md",
+      "raw/home.jina.json",
       "raw/sitemap.xml",
       "raw/robots.txt"
+    ],
+    "pass2": [
+      "raw/seeds.json",
+      "raw/pages/{pageType}-{slug}.md"
     ],
     "afterNormalize": [
       "collection.json",

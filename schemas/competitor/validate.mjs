@@ -123,7 +123,7 @@ function listMarkdown(dir, acc = []) {
 }
 
 const crawlBrief = readJson(join(root, 'crawl-brief.json'));
-for (const key of ['quota', 'seed', 'exclude', 'jina', 'cloudflare', 'drop']) {
+for (const key of ['quota', 'pass1', 'pass2', 'exclude', 'jina', 'cloudflare', 'drop']) {
   if (!(key in crawlBrief)) fail(`crawl-brief.json missing "${key}"`);
 }
 if (crawlBrief.repoDoesNotCrawl !== true) fail('crawl-brief.json must set repoDoesNotCrawl=true');
@@ -238,6 +238,35 @@ for (const type of requiredPageTypes) {
   if (!exampleTypes.has(type)) fail(`phase-1 fixture missing pageType "${type}"`);
 }
 ok('phase-1 page types present in fixture');
+
+const { classifySeeds } = await import('./classify-seeds.mjs');
+const classifyDir = join(root, 'examples/classify-seeds');
+const classified = classifySeeds({
+  origin: 'https://acme.example',
+  homeText: readFileSync(join(classifyDir, 'home.md'), 'utf8'),
+  homeJson: readJson(join(classifyDir, 'home.jina.json')),
+  sitemapXml: readFileSync(join(classifyDir, 'sitemap.xml'), 'utf8'),
+});
+const expectedSeeds = readJson(join(classifyDir, 'expected.json'));
+for (const [type, url] of Object.entries(expectedSeeds.seeds)) {
+  const hit = classified.seeds.find((row) => row.pageType === type && row.url === url);
+  if (!hit) fail(`classify-seeds missed ${type} → ${url}`);
+}
+const products = classified.seeds.filter((row) => row.pageType === 'product');
+if (!products.length || products.some((row) => !row.url.startsWith(expectedSeeds.productPrefix))) {
+  fail('classify-seeds did not pick product URLs under the shop prefix');
+}
+const blob = JSON.stringify(classified);
+for (const banned of expectedSeeds.mustNotContain) {
+  if (classified.seeds.some((row) => row.url.includes(banned))) {
+    fail(`classify-seeds selected excluded URL containing ${banned}`);
+  }
+  if (!blob.includes('skip') && blob.includes(banned) && classified.seeds.some((row) => row.url.includes(banned))) {
+    fail(`classify-seeds leaked ${banned}`);
+  }
+}
+if (classified.unresolved.length) fail(`classify-seeds unresolved: ${classified.unresolved.join(', ')}`);
+ok('classify-seeds maps non-standard paths');
 
 if (failures) {
   console.error(`\n${failures} check(s) failed`);

@@ -19,7 +19,7 @@
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
-| 竞品采集 | **仓库只定模型；抓取用 Jina / CF** | Agent 不写爬虫。清单见 `schemas/competitor/crawl-brief.json`；原文默认 reference-only |
+| 竞品采集 | **仓库只定模型；抓取用 Jina / CF；路径两轮动态分类** | 先首页 + sitemap，再用 `classify-seeds.mjs` 选第二轮 URL，不写死 `/about` |
 
 ---
 
@@ -322,7 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| 竞品采集阶段 1 | 模型与抓取清单已定；待你用 Jina / CF 交 1 个竞品的 6 页 raw |
+| 竞品采集阶段 1 | 两轮清单已定；待你先交首页 + sitemap，再按 `seeds.json` 抓 6 页 |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 19:59 | 竞品路径改为两轮动态分类：`classify-seeds.mjs` 按导航文案 + sitemap 选 URL，不写死 `/about` |
 | 2026-09-18 17:15 | 确认抓取不在仓库实现；补 `crawl-brief.json`（Jina / CF 要爬的页、参数、落盘） |
 | 2026-09-18 15:54 | 落地竞品采集模型与映射：`schemas/competitor/` + `docs/COMPETITOR_INTEL.md`；爬虫未实现 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
@@ -353,6 +354,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 19:59 | 竞品路径分类器 | `node schemas/competitor/validate.mjs` + classify-seeds 样例 | 通过（`/our-story` `/shop` `/enquire-now` `/works` 能标对，博客/隐私未入选） |
 | 2026-09-18 17:15 | 竞品采集模型 + crawl-brief | `node schemas/competitor/validate.mjs` | 通过（含 crawl-brief 合同、12 个 Section 映射） |
 | 2026-09-18 15:54 | 竞品采集模型 | `node schemas/competitor/validate.mjs` | 通过（schema、12 个 Section 映射、home.json 键、第一期页面类型） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |

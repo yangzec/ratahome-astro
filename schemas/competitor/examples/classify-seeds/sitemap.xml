@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://acme.example/</loc></url>
+  <url><loc>https://acme.example/our-story</loc></url>
+  <url><loc>https://acme.example/shop</loc></url>
+  <url><loc>https://acme.example/shop/oak-sofa</loc></url>
+  <url><loc>https://acme.example/shop/linen-set</loc></url>
+  <url><loc>https://acme.example/enquire-now</loc></url>
+  <url><loc>https://acme.example/works</loc></url>
+  <url><loc>https://acme.example/blog/hello</loc></url>
+  <url><loc>https://acme.example/privacy</loc></url>
+</urlset>

@@ -1,0 +1,14 @@
+{
+  "data": {
+    "url": "https://acme.example/",
+    "title": "Acme Textiles",
+    "content": "# Fabric OEM\n\n[Our Story](/our-story)\n[Shop](/shop)\n[Enquire Now](/enquire-now)\n[Works](/works)",
+    "links": {
+      "Our Story": "https://acme.example/our-story",
+      "Shop": "https://acme.example/shop",
+      "Enquire Now": "https://acme.example/enquire-now",
+      "Works": "https://acme.example/works",
+      "Privacy": "https://acme.example/privacy"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "origin": "https://acme.example",
+  "seeds": {
+    "home": "https://acme.example/",
+    "about": "https://acme.example/our-story",
+    "category": "https://acme.example/shop",
+    "contact": "https://acme.example/enquire-now",
+    "case": "https://acme.example/works"
+  },
+  "productPrefix": "https://acme.example/shop/",
+  "mustNotContain": ["/blog/", "/privacy"]
+}

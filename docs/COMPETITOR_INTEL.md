@@ -175,20 +175,34 @@ images[reference-only]           →    不进站点
 - Cloudflare `/crawl`：https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/ 
 - Cloudflare `/markdown`：https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/ 
 
-不要全站镜像。每个竞品先看首页导航和 `/sitemap.xml`，**手选 6 个 URL** 再抓。
+不要全站镜像，也不要假设 `/about`、`/products`。每个站的 IA 不同，分两轮：
 
-### 6.1 必抓页面（每个域名 6 个）
+1. **只抓** 首页、`/sitemap.xml`、`/robots.txt`
+2. 把 dump 交给 `classify-seeds.mjs`，按导航文案 + URL 形态标出第二轮 6 个 URL
+3. 再按 `raw/seeds.json` 点抓
 
-| # | pageType | 典型路径 | 必须拿到 |
-|---|----------|----------|----------|
-| 1 | `home` | `/` | Markdown、主导航链接、Hero 文案、区块标题顺序、首屏图 URL |
-| 2 | `about` | `/about` `/about-us` `/company` | Markdown、H1、品牌故事段落 |
-| 3 | `category` | `/products` `/collections` `/solutions` | 分类名、href、分类图 URL |
-| 4 | `product` | 列表里点 1--2 个详情 | 品名、可见规格、主图 + 可选场景图 URL |
-| 5 | `contact` | `/contact` `/enquiry` `/quote` | **表单字段名 / 类型 / 是否必填**、CTA、公开 WhatsApp / 邮箱 / 电话 |
-| 6 | `case` 或 `faq` | `/projects` `/cases` 或 `/faq` | 案例卡片或 FAQ 问答 |
+`/about` 这类字符串只是分类词，不是路径合同。`/our-story`、`/enquire-now`、`/shop` 这种非标准路径应能被标出来。样例：`/workspace/schemas/competitor/examples/classify-seeds/` 。
 
-可选（有就抓，没有跳过）：`/catalog` 只收 PDF 入口 URL。`/robots.txt`、`/sitemap.xml` 各存一份原文。
+```bash
+node schemas/competitor/classify-seeds.mjs \
+  --origin https://acme.example \
+  --home raw/home.md \
+  --sitemap raw/sitemap.xml \
+  --out raw/seeds.json
+```
+
+### 6.1 第二轮要齐的页面类型（路径由分类器给出）
+
+| # | pageType | 分类依据（文案或路径片段） | 必须拿到 |
+|---|----------|---------------------------|----------|
+| 1 | `home` | `/` | Markdown、主导航链接、Hero、区块标题顺序、首屏图 URL |
+| 2 | `about` | Our Story / 关于 / company | Markdown、H1 |
+| 3 | `category` | Shop / Collections / 产品 | 分类名、href、分类图 URL |
+| 4 | `product` | 分类前缀下的 1--2 条详情 | 品名、可见规格、主图 URL |
+| 5 | `contact` | Enquire / Quote / 询盘 | **表单字段**、CTA、公开联系方式 |
+| 6 | `case` 或 `faq` | Works / Projects / FAQ | 案例卡或问答 |
+
+分类器给不出某类时，写入 `seeds.json#/unresolved`，不要退回猜 `/about`。`/catalog` 有就算可选。
 
 ### 6.2 不要抓
 
@@ -196,7 +210,7 @@ images[reference-only]           →    不进站点
 
 ### 6.3 Jina：按 URL 点抓（推荐）
 
-对每个选定 URL：
+第一轮只打首页（务必开 `X-With-links-Summary`）。第二轮只打 `seeds.json` 里的 URL：
 
 ```text
 GET https://r.jina.ai/{absoluteUrl}
@@ -215,9 +229,9 @@ X-Locale: en
 
 `frontmatter` 会带 `title` / `description` / `url`。图片摘要和链接摘要分别喂 `images/manifest.json` 与 `ia.json`。第一期不要用 `X-Preset: spider`。SPA 站可把 `X-Engine` 换成 `cf-browser-rendering`。设了 `X-Respond-With` 时，官方说明 `X-With-Generated-Alt` 无效，不必加。
 
-### 6.4 Cloudflare：单页 Markdown 优先，宽爬要加盖帽
+### 6.4 Cloudflare：按 seeds 单页抓，不要用固定路径宽爬
 
-6 个种子 URL 用 `/markdown`，比宽爬稳：
+第一轮用 `/markdown` 抓首页，sitemap / robots 用普通 HTTP。第二轮对 `seeds.json` 里每个 URL 再打 `/markdown`。不要把 `/about**`、`/products**` 写进 `includePatterns`。宽爬容易漏掉非标准路径，不作为默认。
 
 ```text
 POST /accounts/{account_id}/browser-rendering/markdown
@@ -231,7 +245,7 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
 - `formats`: `["markdown"]`，`render`: true（分类网格若是 JS 渲染）
 - `crawlPurposes`: `["ai-input"]`，`contentUse`: `"reference"`（研究改写，不原样转载）
 - `includeExternalLinks` / `includeSubdomains`: false
-- `includePatterns` / `excludePatterns` 见 `crawl-brief.json`
+- 若仍用 `/crawl`，`includePatterns` 必须从 `seeds.json` 生成，不能用固定路径表
 
 目标站 `robots.txt` 的 Content-Signal 若拒绝 `ai-input` 或 `reference`，官方会 400。记下该域名并跳过，不要绕过。
 
@@ -251,10 +265,12 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
 
 ```text
 .tmp/competitor-intel/{industry}/{domain}/
-  raw/pages/{pageType}-{slug}.md
-  raw/jina/{pageType}-{slug}.json
+  raw/home.md
+  raw/home.jina.json
   raw/sitemap.xml
   raw/robots.txt
+  raw/seeds.json
+  raw/pages/{pageType}-{slug}.md
 ```
 
 你交来 raw 之后，再规范化成 `pages/*.md`、`ia.json`、`images/manifest.json`。`sections/home.json`、`forms/contact.json`、`theme-tokens.json` 爬虫出不来，后补。
@@ -266,7 +282,7 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
 | 阶段 | 内容 | 谁做 | 状态 |
 |------|------|------|------|
 | 0 | Schema、映射、自映射样例、抓取清单 | Agent | **完成** |
-| 1 | 按 `crawl-brief.json` 抓 1 个外部竞品的 6 页 | **你（Jina / CF）** | 待你操作 |
+| 1 | 先交首页 + sitemap；按 `seeds.json` 再抓 6 页 | **你（Jina / CF）** | 待你操作 |
 | 2 | raw → 规范化快照（pages / ia / manifest） | Agent，等你交 raw | 未开始 |
 | 3 | 补 sections / forms / theme-tokens | 人工 + Agent | 未开始 |
 | 4 | 改写成站点 content 草稿（不发布） | Agent | 未开始 |
@@ -300,6 +316,7 @@ node schemas/competitor/validate.mjs
 - `content/en/home.json` 的每个顶层键都有映射
 - 映射指向的现有站点文件存在
 - 第一期必采 `pageType` 出现在样例里
+- `classify-seeds` 能把 `/our-story`、`/shop`、`/enquire-now` 标成正确类型
 
 未验证：真实外站抓取、浏览器渲染、自动改写质量。
 
