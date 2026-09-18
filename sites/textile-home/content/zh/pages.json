@@ -2,60 +2,60 @@
   "about": {
     "title": "关于",
     "eyebrow": "家纺",
-    "heroTitle": "我们在跑的床单和毛圈车间。",
-    "heroDescription": "酒店套件、浴巾和窗帘。订单点名绣花或认证批次，按单做。",
+    "heroTitle": "套装签字后才做大货的床单和毛圈车间。",
+    "heroDescription": "酒店床品和卫浴。发房型清单。先确认床垫高度和克重，再把套装铺到床上。",
     "workflowTitle": "车间怎么定。",
-    "workflowDescription": "后整和产量决定产线。套装样和 Logo 确认样决定什么时候装箱。",
-    "closingTitle": "有物业或系列要下？",
-    "closingDescription": "发房型清单或寄一套参考布草。我们回复车间和起订。"
+    "workflowDescription": "后整和产量定产线。签字套装定装箱周。",
+    "closingTitle": "有房型清单？",
+    "closingDescription": "发清单或床垫照片。48 小时内给打样日和套装起订。"
   },
   "contact": {
     "title": "联系",
-    "heroTitle": "找跟单。",
-    "heroDescription": "套装样、Logo 或酒店订单——写给会跟这个货号的人。",
+    "heroTitle": "写给跟这个货号的跟单。",
+    "heroDescription": "套装样、Logo 确认样或酒店订单——一个人写日期。",
     "getInTouch": "取得联系"
   },
   "collections": {
     "title": "产品",
-    "heroTitle": "我们做的东西",
-    "heroDescription": "床品、毛圈、窗帘、桌布和绣花件。",
+    "heroTitle": "能询价的产品",
+    "heroDescription": "床品、毛圈、窗帘、桌布、绣花件。",
     "packagesTitle": "报价里有什么",
-    "benefitsTitle": "报价单上能看到",
-    "benefitsDescription": "车间、起订、打样日期、克重或支数。",
+    "benefitsTitle": "报价单上会写",
+    "benefitsDescription": "车间、打样日、套装起订、克重或支数、床笠垂边。",
     "stylesTitle": "货去哪",
-    "stylesDescription": "酒店、货架和已装修的房间。"
+    "stylesDescription": "酒店、货架、已装修的房间。"
   },
   "slugs": {
-    "hotels": { "title": "酒店", "description": "同一支货号，年年补。", "content": "客房套件和绣花巾类。货号卡留下，补货不用当新开发。" },
-    "retailers": { "title": "零售商", "description": "一套颜色，按货架装箱。", "content": "季节床品和毛圈。码段和礼盒在做货前写进订单。" },
-    "developers": { "title": "开发商", "description": "一种房型，货号对齐。", "content": "床单、窗帘、卫浴一起定，开间和一房不要来成两种白。" },
-    "sampling": { "title": "打样", "description": "套件铺到床上。Logo 绣在毛圈上。", "content": "发房型清单或稿件。做一套能拍照的，确认样打在真实毛巾上。" },
-    "moq": { "title": "MOQ 与交期", "description": "按货号报，不按目录报。", "content": "套装样可以只要几套。大货按物业或色组。日期写在报价上。" },
-    "certifications": { "title": "认证", "description": "OEKO-TEX，或你点名的酒店标准。", "content": "货号放到已经有这份证书的车间。范围文件跟批次走。" },
-    "quality-control": { "title": "质量控制", "description": "先看后整，再数套数。", "content": "终检看缝迹、后整、绣花、套装是否齐、箱数。报告签字后，车才走。" },
-    "how-it-works": { "title": "怎么合作", "description": "房型清单进来，套件出去。", "content": "发清单 → 选车间 → 套装签字 → 做这一批 → 清点纸箱。中间不换跟单。" },
-    "faq": { "title": "常见问题", "description": "样品、证书、起订。", "content": "套装样时间、货号起订、绣花确认和包装——开大货订单前写清楚。" },
-    "blog": { "title": "博客", "description": "后整线上的笔记。", "content": "酒店规格、证书和套件怎么装。" }
+    "hotels": { "title": "酒店", "description": "克重看进洗衣房之后。", "content": "报价上看着厚的毛巾，工业洗后常会软塌。克重和圈密锁在洗过的样上，货号留下给补货。" },
+    "retailers": { "title": "零售商", "description": "下一缸对得上签字的白。", "content": "补货容易跑色。缸号卡跟签字套装走，下一缸装箱前先对色。" },
+    "developers": { "title": "开发商", "description": "先写床垫高度。", "content": "床笠失败，多半是垂边靠猜。床垫厚度和垂边开裁前写进房型清单。床单、窗帘、卫浴一起定。" },
+    "sampling": { "title": "打样", "description": "套装铺到床上。Logo 绣在毛圈上。", "content": "发房型清单或稿件。套装样一般 12 天。绣花确认样打在真实毛巾上，再上大货绣花头。" },
+    "moq": { "title": "MOQ 与交期", "description": "按货号报，签样之后定。", "content": "套装样可以只要几套。大货起订按物业或色组，签字后写在报价上。" },
+    "certifications": { "title": "认证", "description": "OEKO-TEX 跟你出的那批。", "content": "这批要认证，范围文件跟这些纸箱走。未认证的货不进认证箱。" },
+    "quality-control": { "title": "质量控制", "description": "先看后整，再数套数。", "content": "终检对照确认样看缝迹、后整、绣花、套装是否齐、箱数。" },
+    "how-it-works": { "title": "怎么合作", "description": "房型清单进来，签字套装，再大货。", "content": "发清单 → 锁定垂边和克重 → 做套装样 → 签 Logo → 生产 → 点数。中间不换跟单。" },
+    "faq": { "title": "常见问题", "description": "打样天数、垂边、证书。", "content": "套装样大约 12 天。床笠垂边和床垫高度开裁前要有。OEKO-TEX 按批次报。" },
+    "blog": { "title": "博客", "description": "后整线上的笔记。", "content": "工业水洗、酒店尺码和套件怎么装。" }
   },
   "workflow": [
-    { "step": "01", "title": "看房型清单", "description": "产品、尺寸、克重、颜色、绣花。" },
-    { "step": "02", "title": "选车间", "description": "床单、毛圈或窗帘。" },
-    { "step": "03", "title": "套装签字", "description": "货号和 Logo 打在真货上。" },
-    { "step": "04", "title": "生产和点数", "description": "线上看后整，门口数套数。" }
+    { "step": "01", "title": "看房型清单", "description": "尺寸、克重、床垫高度、Logo。" },
+    { "step": "02", "title": "锁定规格", "description": "垂边和水洗后克重。" },
+    { "step": "03", "title": "套装签字", "description": "铺到床上，Logo 在毛圈上。" },
+    { "step": "04", "title": "生产和点数", "description": "线上看后整，门口数套。" }
   ],
   "aboutAudiences": [
-    { "title": "酒店", "description": "补已知货号。" },
-    { "title": "零售商", "description": "一季一个色组。" },
-    { "title": "开发商", "description": "房型货号对齐。" }
+    { "title": "酒店", "description": "进得了洗衣房的毛巾。" },
+    { "title": "零售商", "description": "能补货的白。" },
+    { "title": "开发商", "description": "套得上床的床单。" }
   ],
   "packageBenefits": [
-    { "title": "先出货号卡", "description": "尺寸和后整先于批次。" },
-    { "title": "套装关", "description": "没签字套不装箱。" },
-    { "title": "清点套数", "description": "证书跟纸箱走。" }
+    { "title": "12 天套装样", "description": "铺到床上。" },
+    { "title": "先写垂边", "description": "再裁床单。" },
+    { "title": "确认样在毛圈上", "description": "再上绣花头。" }
   ],
   "collectionBenefits": [
-    { "title": "床单", "description": "酒店和零售套件。" },
-    { "title": "毛圈", "description": "卫浴，200–800 GSM。" },
+    { "title": "床单", "description": "酒店尺码和垂边。" },
+    { "title": "毛圈", "description": "水洗后 200–800 GSM。" },
     { "title": "窗帘", "description": "按窗清单裁。" }
   ],
   "collectionPackages": []

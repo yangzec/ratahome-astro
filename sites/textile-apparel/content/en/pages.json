@@ -2,61 +2,61 @@
   "about": {
     "title": "About",
     "eyebrow": "Cut-and-sew",
-    "heroTitle": "A sewing office in Shaoxing and Guangzhou.",
-    "heroDescription": "Knit jersey and fleece, woven shirts, outerwear and uniforms. We take a style from the first sample to packed cartons.",
-    "workflowTitle": "How a line gets chosen.",
-    "workflowDescription": "Construction and monthly volume decide the factory. Fit and PP decide when cutting starts.",
-    "closingTitle": "Have a style to place?",
-    "closingDescription": "Send a tech pack or a reference garment. We reply with a factory and an MOQ."
+    "heroTitle": "A sewing office that quotes MOQ before it cuts.",
+    "heroDescription": "Knit and woven in Shaoxing and Guangzhou. Send a tech pack or a reference garment. We date the sample and cut after PP.",
+    "workflowTitle": "How a line is picked.",
+    "workflowDescription": "Construction and monthly volume pick the factory. PP picks the cutting week.",
+    "closingTitle": "Have a style to price?",
+    "closingDescription": "Send the pack or a garment photo. MOQ per style/color and a sample date in 48 hours."
   },
   "contact": {
     "title": "Contact",
-    "heroTitle": "Talk to the merchandiser.",
-    "heroDescription": "Fit samples, size runs or a bulk PO — write to the person who will follow the style.",
+    "heroTitle": "Write to the merchandiser on the style.",
+    "heroDescription": "Fit sample, size run or a bulk PO — one person dates it.",
     "getInTouch": "Get in touch"
   },
   "collections": {
     "title": "Styles",
-    "heroTitle": "Garment types we sew",
-    "heroDescription": "Knit tops, woven shirts, outerwear, activewear, uniforms and private label.",
-    "packagesTitle": "What we quote",
-    "benefitsTitle": "What you get on a quote",
-    "benefitsDescription": "Factory, MOQ, sampling date, and a size range.",
-    "stylesTitle": "Where the garments go",
-    "stylesDescription": "Retail floors, staff uniforms, gyms and brand drops."
+    "heroTitle": "Garments we quote",
+    "heroDescription": "Knit tops, woven shirts, outerwear, activewear, uniforms, private label.",
+    "packagesTitle": "What is on the quote",
+    "benefitsTitle": "What the quote names",
+    "benefitsDescription": "Factory, MOQ per style/color, sample date, whether sample fee is deductible.",
+    "stylesTitle": "Where they go",
+    "stylesDescription": "Retail floors, staff uniforms, gyms, brand drops."
   },
   "slugs": {
-    "brands": { "title": "For brands", "description": "Keep the block. Change the colour.", "content": "Seasonal drops sew from a locked base size. We keep the factory assignment so a repeat order does not start from a new pattern." },
-    "retailers": { "title": "For retailers", "description": "Store sizes on the PO.", "content": "Private-label tops and uniforms. Size runs, hangtags and carton marks are written before cutting, so receiving does not relabel the floor." },
-    "agents": { "title": "For agents", "description": "Dated capacity and a measurement sheet.", "content": "We book a sewing slot you can show a principal, and we issue measurement records by colour and size." },
-    "size-specs": { "title": "Size specifications", "description": "Grade from a base size.", "content": "Send a chart or a fit sample. We grade XS–4XL for the market you sell into, and we do not cut bulk until the base is signed." },
-    "sampling": { "title": "Sampling", "description": "Proto, fit, then PP.", "content": "A reference garment or a tech pack is enough to start. Fit comments go on the sample. PP locks the marker." },
-    "certifications": { "title": "Certifications", "description": "BSCI, OEKO-TEX, and the audit you name.", "content": "We place the style in a factory that already holds the audit. Certificates travel with the order, not as a later email." },
-    "quality-control": { "title": "Quality control", "description": "Measure, then count the cartons.", "content": "Final audit covers measurements, stitch, appearance and carton count. The report is signed before the truck leaves." },
-    "how-it-works": { "title": "How it works", "description": "Style in, cartons out.", "content": "Send the style → pick the line → sign fit → sew the PO → count cartons. The merchandiser does not change in the middle." },
-    "faq": { "title": "FAQ", "description": "Sampling time, MOQ, payment.", "content": "Fit-sample cycles, MOQ by construction, deposit terms and AQL level — written before you open a bulk PO." },
-    "blog": { "title": "Blog", "description": "Notes from the sewing floor.", "content": "Grading, factory capability and how we pack a carton." }
+    "brands": { "title": "For brands", "description": "Keep the signed block on the repeat.", "content": "First bulk often misses the signed fit. We grade from that sample and keep the factory assignment so a repeat order does not start a new pattern." },
+    "retailers": { "title": "For retailers", "description": "MOQ per style and color.", "content": "If 500 pcs / color is too high for a test, we quote from about 100 pcs per style/color and a short size set. Hangtags and carton marks go on the PO before cutting." },
+    "agents": { "title": "For agents", "description": "Sample date and cutting week in writing.", "content": "Deposit without a dated slot is how orders slip. The merchandiser puts the PP date and the cutting week in the same mail." },
+    "size-specs": { "title": "Size specifications", "description": "Grade from the signed base.", "content": "Send a chart or a fit sample. We grade XS–4XL. Bulk does not cut until the base is signed." },
+    "sampling": { "title": "Sampling", "description": "No tech pack? Send a garment.", "content": "A reference garment plus size range opens a quote. First sample is about 7 days if fabric is here. Proto, fit, then PP. Sample fee comes off bulk." },
+    "certifications": { "title": "Certifications", "description": "BSCI and the audit you name.", "content": "We place the style in a factory that already holds the audit. The file goes with the quote, not after the deposit." },
+    "quality-control": { "title": "Quality control", "description": "Measure, then count.", "content": "Final audit: measurements against the signed spec, stitch, appearance, carton count. Report signed before the truck." },
+    "how-it-works": { "title": "How it works", "description": "File in, cutting ticket out.", "content": "Send pack or garment → quote MOQ and sample date → sign fit → sign PP → sew → AQL. Same merchandiser." },
+    "faq": { "title": "FAQ", "description": "MOQ, sample days, deposit.", "content": "Typical MOQ from 100 pcs per style/color. First sample about 7 days. Sample fee deductible on the first PO. Deposit and AQL level written before the bulk PO." },
+    "blog": { "title": "Blog", "description": "Notes from the sewing floor.", "content": "Grading, PP gates and how we pack a carton." }
   },
   "workflow": [
-    { "step": "01", "title": "Read the style", "description": "Fabric, construction, size range and colours." },
-    { "step": "02", "title": "Pick the line", "description": "Knit or woven, by monthly volume." },
-    { "step": "03", "title": "Sign the fit", "description": "Comments on the sample." },
-    { "step": "04", "title": "Sew and audit", "description": "Measurements on the line, cartons at the door." }
+    { "step": "01", "title": "Read the file", "description": "Tech pack or reference garment." },
+    { "step": "02", "title": "Quote", "description": "MOQ per style/color, sample date." },
+    { "step": "03", "title": "Sign fit and PP", "description": "Comments on the sample." },
+    { "step": "04", "title": "Cut and audit", "description": "Measure on the line, count at the door." }
   ],
   "aboutAudiences": [
-    { "title": "Brands", "description": "Repeat a locked block." },
-    { "title": "Retailers", "description": "Size runs for the floor." },
-    { "title": "Agents", "description": "Capacity you can date." }
+    { "title": "Brands", "description": "Repeat the signed block." },
+    { "title": "Retailers", "description": "Test at a dated MOQ." },
+    { "title": "Agents", "description": "A slot you can show." }
   ],
   "packageBenefits": [
-    { "title": "Style sheet first", "description": "Seams and trims before the marker." },
-    { "title": "Fit gate", "description": "No cutting without a signed sample." },
-    { "title": "Carton count", "description": "AQL before the truck." }
+    { "title": "7-day first sample", "description": "When fabric is in hand." },
+    { "title": "PP gate", "description": "No cutting without a signature." },
+    { "title": "Sample fee off bulk", "description": "On the first invoice." }
   ],
   "collectionBenefits": [
-    { "title": "Knit lines", "description": "Jersey and fleece." },
-    { "title": "Woven lines", "description": "Shirts, outerwear, uniforms." },
-    { "title": "Export bench", "description": "Marks and papers with the cartons." }
+    { "title": "Knit", "description": "Jersey and fleece." },
+    { "title": "Woven", "description": "Shirts, jackets, uniforms." },
+    { "title": "Export bench", "description": "Marks and AQL with the cartons." }
   ],
   "collectionPackages": []
 }

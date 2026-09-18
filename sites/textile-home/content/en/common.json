@@ -1,52 +1,52 @@
 {
   "site": {
     "name": "Textile Home Co.",
-    "title": "Hotel bedding and bath",
-    "description": "Sheet sets, terry and curtains — embroidery and OEKO-TEX lots when the order names them.",
+    "title": "Hotel bedding and bath terry",
+    "description": "Send the room list. We confirm mattress height and GSM before sampling. Sample set typically 12 days. Bulk after you sign the set and the logo proof.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "hometextile@example.com",
-    "tagline": "Sign the set. Then we pack.",
+    "tagline": "Room list first. Mattress height and GSM before sampling.",
     "ctaAnchor": "sample"
   },
   "buttons": {
-    "startProject": "Request Samples",
-    "uploadFloorPlan": "Request Home Textile Samples",
+    "startProject": "Request a sample set",
+    "uploadFloorPlan": "Send room list",
     "factoryTour": "Factory Tour",
     "sendFloorPlan": "Submit sample request",
     "sendMessage": "Send message",
     "whatsappUs": "WhatsApp Us",
     "viewAll": "View all",
-    "seeJourney": "See the sampling process",
+    "seeJourney": "See the sample-set path",
     "readWarranty": "View certifications",
-    "exploreProjects": "Explore programs",
-    "requestQuote": "Request quote for this product",
-    "discussJoinery": "Discuss specifications"
+    "exploreProjects": "See recent POs",
+    "requestQuote": "Quote this SKU",
+    "discussJoinery": "Send mattress height"
   },
   "form": {
     "name": "Name",
     "email": "Email",
-    "projectType": "Program type",
+    "projectType": "What you need priced",
     "message": "Message",
-    "projectDetails": "Product requirements",
-    "floorPlan": "Spec sheet or room photo (optional)",
-    "privacy": "Private and confidential · Reply within one business day",
+    "projectDetails": "Product, size, GSM",
+    "floorPlan": "Room list, mattress photo or embroidery artwork",
+    "privacy": "Private · Reply within one business day",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "Tell us about your home-textile program...",
+    "messagePlaceholder": "Room list, mattress height, GSM, embroidery, quantity, ship-to country...",
     "detailsPlaceholder": "Product, size, GSM, color, embroidery, quantity, ship date...",
     "projectTypes": {
-      "residence": "Hotel / hospitality program",
+      "residence": "Hotel / property set",
       "design": "Retail collection",
-      "development": "Bulk production",
-      "hospitality": "Property fit-out",
+      "development": "Bulk replenishment",
+      "hospitality": "Embroidery proof",
       "other": "Other"
     }
   },
   "footer": {
-    "description": "Sheeting, terry and curtain workshops.",
+    "description": "Hotel sheeting and terry. Fitted-sheet drop and GSM written before sampling.",
     "copyright": "All rights reserved."
   }
 }

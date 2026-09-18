@@ -1,52 +1,52 @@
 {
   "site": {
     "name": "Textile Apparel Co.",
-    "title": "Knit and woven garments",
-    "description": "Cut-and-sew in Shaoxing and Guangzhou — grading, fit samples and bulk by colour and size.",
+    "title": "Knit and woven cut-and-sew",
+    "description": "Send a tech pack or a reference garment. First sample in about 7 days. MOQ from 100 pcs per style and color. We cut after you sign the PP.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "apparel@example.com",
-    "tagline": "Sign the fit sample. Then we cut.",
+    "tagline": "Tech pack or a reference garment. First sample in about 7 days.",
     "ctaAnchor": "sample"
   },
   "buttons": {
-    "startProject": "Request Samples",
-    "uploadFloorPlan": "Request Garment Samples",
+    "startProject": "Request a sample quote",
+    "uploadFloorPlan": "Send tech pack",
     "factoryTour": "Factory Tour",
     "sendFloorPlan": "Submit sample request",
     "sendMessage": "Send message",
     "whatsappUs": "WhatsApp Us",
     "viewAll": "View all",
-    "seeJourney": "See the sampling process",
+    "seeJourney": "See sampling and PP",
     "readWarranty": "View certifications",
-    "exploreProjects": "Explore programs",
-    "requestQuote": "Request quote for this style",
-    "discussJoinery": "Discuss specifications"
+    "exploreProjects": "See recent POs",
+    "requestQuote": "Quote this style",
+    "discussJoinery": "Send size spec"
   },
   "form": {
     "name": "Name",
     "email": "Email",
-    "projectType": "Program type",
+    "projectType": "What you need priced",
     "message": "Message",
-    "projectDetails": "Style requirements",
-    "floorPlan": "Tech pack or reference photo (optional)",
-    "privacy": "Private and confidential · Reply within one business day",
+    "projectDetails": "Style, fabric, size range",
+    "floorPlan": "Tech pack or reference garment photo",
+    "privacy": "Private · Reply within one business day",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "Tell us about your apparel program...",
+    "messagePlaceholder": "Tech pack, reference garment, size range, colors, quantity, ship-to country...",
     "detailsPlaceholder": "Style, fabric, size range, colors, target quantity, ship date...",
     "projectTypes": {
-      "residence": "Brand / retail program",
-      "design": "Collection development",
-      "development": "Bulk production",
+      "residence": "Fit sample / proto",
+      "design": "Size set",
+      "development": "Bulk PO",
       "hospitality": "Private label",
       "other": "Other"
     }
   },
   "footer": {
-    "description": "Knit and woven lines in Shaoxing and Guangzhou.",
+    "description": "Knit and woven cut-and-sew in Shaoxing and Guangzhou. MOQ per style and color.",
     "copyright": "All rights reserved."
   }
 }

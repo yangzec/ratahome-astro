@@ -2,51 +2,51 @@
   "site": {
     "name": "成衣出口",
     "title": "针织与梭织成衣",
-    "description": "绍兴、广州车缝——放码、试穿样，大货按颜色和尺码出。",
+    "description": "发工艺单或寄一件参考成衣。首样大约 7 天。起订按款、按色，常从 100 件起。PP 签字后才开裁。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
     "email": "apparel@example.com",
-    "tagline": "试穿样签字后，再开裁。",
+    "tagline": "发工艺单或参考成衣。首样大约 7 天。",
     "ctaAnchor": "sample"
   },
   "buttons": {
-    "startProject": "申请样品",
-    "uploadFloorPlan": "申请成衣样品",
+    "startProject": "要打样报价",
+    "uploadFloorPlan": "发工艺单",
     "factoryTour": "参观工厂",
-    "sendFloorPlan": "提交样品申请",
+    "sendFloorPlan": "提交打样申请",
     "sendMessage": "发送消息",
     "whatsappUs": "WhatsApp 联系",
     "viewAll": "查看全部",
-    "seeJourney": "查看打样流程",
+    "seeJourney": "看打样和 PP",
     "readWarranty": "查看认证",
-    "exploreProjects": "查看项目",
-    "requestQuote": "询价该款式",
-    "discussJoinery": "讨论规格"
+    "exploreProjects": "看近期订单",
+    "requestQuote": "询价该款",
+    "discussJoinery": "发尺码表"
   },
   "form": {
     "name": "姓名",
     "email": "邮箱",
-    "projectType": "项目类型",
+    "projectType": "这次要报什么",
     "message": "留言",
-    "projectDetails": "款式需求",
-    "floorPlan": "工艺单或参考图（可选）",
+    "projectDetails": "款式、面料、码段",
+    "floorPlan": "工艺单或参考成衣照片",
     "privacy": "信息保密 · 一个工作日内回复",
     "namePlaceholder": "您的姓名",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "请描述您的成衣项目……",
-    "detailsPlaceholder": "款式、面料、尺码范围、颜色、数量、船期……",
+    "messagePlaceholder": "工艺单、参考成衣、码段、颜色、数量、目的港国家……",
+    "detailsPlaceholder": "款式、面料、码段、颜色、数量、船期……",
     "projectTypes": {
-      "residence": "品牌 / 零售项目",
-      "design": "系列开发",
-      "development": "大货生产",
+      "residence": "试穿样 / 初样",
+      "design": "码套",
+      "development": "大货订单",
       "hospitality": "贴牌",
       "other": "其他"
     }
   },
   "footer": {
-    "description": "绍兴、广州的针织和梭织产线。",
+    "description": "绍兴、广州针织和梭织车缝。起订按款、按色报。",
     "copyright": "版权所有。"
   }
 }
