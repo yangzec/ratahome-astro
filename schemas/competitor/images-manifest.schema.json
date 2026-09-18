@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/images-manifest.schema.json",
+  "title": "Collected image manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "domain", "items"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "domain": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "role", "sourceUrl", "license"],
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": [
+              "logo",
+              "logo-dark",
+              "favicon",
+              "og",
+              "hero",
+              "product",
+              "lifestyle",
+              "factory",
+              "cert",
+              "client-logo",
+              "icon",
+              "other"
+            ]
+          },
+          "sourceUrl": { "type": "string" },
+          "localPath": {
+            "type": "string",
+            "description": "Relative to the competitor snapshot root"
+          },
+          "alt": { "type": "string" },
+          "width": { "type": "integer" },
+          "height": { "type": "integer" },
+          "format": { "type": "string" },
+          "bytes": { "type": "integer" },
+          "usedBy": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "license": {
+            "type": "string",
+            "enum": ["own", "licensed", "reference-only", "unknown"]
+          },
+          "doNotPublish": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  }
+}

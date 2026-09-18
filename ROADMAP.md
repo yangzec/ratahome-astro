@@ -19,6 +19,7 @@
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
+| 竞品采集 | **仓库只定模型；抓取用 Jina / CF；按行业特征动态采集** | 先首页 + sitemap 学习 IA / 行业，再抽样特征页；不设页数预算，不写死路径 |
 
 ---
 
@@ -321,6 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| 竞品采集阶段 1 | `balkrushnatextiles.com` 两轮已抓；theme-tokens 已 CSS + computed 核对；待改写，不进 `sites/` |
 
 ---
 
@@ -328,6 +330,15 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 00:59 | Balkrushna `theme-tokens.json` 按第 6.7 节用 CF `/content` `getComputedStyle` 核对；页底改为 `#F7F7F7`，按钮圆角改为 `10px`；新增 `probe-theme.mjs` |
+| 2026-09-19 00:37 | Balkrushna `theme-tokens.json` 从公开主题 CSS 抽出（主色 `#E4282D`、Poppins）；文档补第 6.7 节 |
+| 2026-09-18 20:48 | 用环境 CF Token 点抓 Balkrushna 第二轮 8 页；规格表已渲成 Markdown；联系表单仍靠 WP REST |
+| 2026-09-18 20:28 | 实站 Balkrushna 第一轮完成：纺织站、7 个 SKU 抽 2、收 `/certificate`；`pageType` 补齐 `cert` / `sample` / `spec` |
+| 2026-09-18 20:22 | 竞品采集取消页数预算，改为按行业画像 + URL 簇抽样 |
+| 2026-09-18 20:15 | 竞品采集配额改为 6 类必齐、最多 12 页，不再把 6 当页数上限 |
+| 2026-09-18 19:59 | 竞品路径改为两轮动态分类：`classify-seeds.mjs` 按导航文案 + sitemap 选 URL，不写死 `/about` |
+| 2026-09-18 17:15 | 确认抓取不在仓库实现；补 `crawl-brief.json`（Jina / CF 要爬的页、参数、落盘） |
+| 2026-09-18 15:54 | 落地竞品采集模型与映射：`schemas/competitor/` + `docs/COMPETITOR_INTEL.md`；爬虫未实现 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -349,6 +360,14 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 00:59 | balkrushnatextiles.com theme-tokens | 公开 CSS + CF `/content` `addScriptTag` `getComputedStyle`（首页 + 聚酯产品页）；截图只校对 | 探针成功；computed 纠正页底 `#F7F7F7`、按钮半径 `10px`；主色 `#E4282D`、Poppins 与 CSS 一致；未进 `sites/` |
+| 2026-09-18 20:48 | balkrushnatextiles.com 第二轮 | CF `POST /browser-rendering/markdown` × 8 | 8/8 成功；`/product` 是 CPT 全量归档；聚酯页规格表可读；CF7 字段被 Markdown 丢掉 |
+| 2026-09-18 20:28 | balkrushnatextiles.com 第一轮 | 首页 HTML + Rank Math sitemap + WP REST + `classify-seeds.mjs` | 行业 textile；核心页齐；特征页收 certificate；`/product/{slug}` 7 抽 2；未选 blog / events / our-team |
+| 2026-09-18 20:22 | 竞品行业动态采集 | `node schemas/competitor/validate.mjs` | 通过（推断 textile；8 个 SKU 只抽 3 个；收 sample/catalog；无页数上限） |
+| 2026-09-18 20:15 | 竞品采集配额 | `node schemas/competitor/validate.mjs` | 通过（6 类必齐、最多 12 页；样例含 catalog 作为额外 download） |
+| 2026-09-18 19:59 | 竞品路径分类器 | `node schemas/competitor/validate.mjs` + classify-seeds 样例 | 通过（`/our-story` `/shop` `/enquire-now` `/works` 能标对，博客/隐私未入选） |
+| 2026-09-18 17:15 | 竞品采集模型 + crawl-brief | `node schemas/competitor/validate.mjs` | 通过（含 crawl-brief 合同、12 个 Section 映射） |
+| 2026-09-18 15:54 | 竞品采集模型 | `node schemas/competitor/validate.mjs` | 通过（schema、12 个 Section 映射、home.json 键、第一期页面类型） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |

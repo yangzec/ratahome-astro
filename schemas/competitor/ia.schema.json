@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/ia.schema.json",
+  "title": "Competitor information architecture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "domain", "locale", "nav", "urlPatterns", "pages"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "domain": { "type": "string" },
+    "locale": { "type": "string" },
+    "nav": {
+      "type": "array",
+      "description": "Primary nav tree. Groups become mega-menu columns.",
+      "items": { "$ref": "#/$defs/navItem" }
+    },
+    "footer": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/navItem" }
+    },
+    "urlPatterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["pattern", "pageType"],
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "description": "Path pattern with {slug} placeholders, e.g. /collections/{slug}"
+          },
+          "pageType": {
+            "type": "string",
+            "enum": [
+              "home",
+              "about",
+              "category",
+              "product",
+              "contact",
+              "faq",
+              "case",
+              "download",
+              "sample",
+              "spec",
+              "cert",
+              "legal",
+              "other"
+            ]
+          },
+          "slugList": {
+            "type": "string",
+            "description": "Target slug array in slugs.ts: collectionSlugs | joinerySlugs | projectSlugs | pageSlugs"
+          }
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "description": "Discovered URLs in this snapshot, not a full sitemap dump",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "pageType", "title"],
+        "properties": {
+          "url": { "type": "string" },
+          "path": { "type": "string" },
+          "pageType": {
+            "type": "string",
+            "enum": [
+              "home",
+              "about",
+              "category",
+              "product",
+              "contact",
+              "faq",
+              "case",
+              "download",
+              "sample",
+              "spec",
+              "cert",
+              "legal",
+              "other"
+            ]
+          },
+          "title": { "type": "string" },
+          "inPhase1": { "type": "boolean" },
+          "markdown": { "type": "string" },
+          "sections": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "navItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "href": { "type": "string" },
+        "description": { "type": "string" },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "links"],
+            "properties": {
+              "title": { "type": "string" },
+              "links": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/navLink" }
+              }
+            }
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/navLink" }
+        },
+        "feature": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "title": { "type": "string" },
+            "description": { "type": "string" },
+            "href": { "type": "string" },
+            "imageRef": { "type": "string" }
+          }
+        }
+      }
+    },
+    "navLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "href"],
+      "properties": {
+        "label": { "type": "string" },
+        "href": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    }
+  }
+}

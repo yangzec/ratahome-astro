@@ -1,0 +1,16 @@
+{
+  "origin": "https://acme.example",
+  "industry": "textile",
+  "seeds": {
+    "home": "https://acme.example/",
+    "about": "https://acme.example/our-story",
+    "category": "https://acme.example/shop",
+    "contact": "https://acme.example/enquire-now",
+    "case": "https://acme.example/works",
+    "download": "https://acme.example/catalog",
+    "sample": "https://acme.example/request-sample"
+  },
+  "productPrefix": "https://acme.example/shop/",
+  "productSampleCount": 3,
+  "mustNotContain": ["/blog/", "/privacy"]
+}

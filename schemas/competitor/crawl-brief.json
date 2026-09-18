@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "owner": "user-jina-or-cloudflare",
+  "repoDoesNotCrawl": true,
+  "description": "Two-pass fetch. Learn this site's IA and industry from homepage + sitemap, then collect characteristic pages. No page-count budget.",
+  "docs": {
+    "jinaReader": "https://r.jina.ai/docs",
+    "jinaProduct": "https://jina.ai/en-US/reader/",
+    "cfCrawl": "https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
+    "cfMarkdown": "https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/"
+  },
+  "policy": {
+    "pageBudget": false,
+    "competitorsPerIndustry": 3,
+    "learnIndustryFromHome": true,
+    "industryProfiles": "schemas/competitor/industry-profiles.json",
+    "samplePerPattern": {
+      "clusterSize2to7": 2,
+      "clusterSize8plus": 3
+    },
+    "collectIfPresent": [
+      "about",
+      "contact",
+      "case",
+      "faq",
+      "download",
+      "sample",
+      "spec",
+      "cert",
+      "warranty",
+      "process"
+    ],
+    "skip": ["blog", "legal-body", "full-sku-list", "login"]
+  },
+  "pass1": {
+    "fetch": ["/", "/sitemap.xml", "/robots.txt"],
+    "alsoIfPresent": ["/sitemap_index.xml", "/sitemap-index.xml"],
+    "purpose": "Discover this site's real nav and URL patterns. Paths differ per site."
+  },
+  "pass2": {
+    "classifier": "schemas/competitor/classify-seeds.mjs",
+    "command": "node schemas/competitor/classify-seeds.mjs --origin {origin} --home raw/home.md --sitemap raw/sitemap.xml --out raw/seeds.json",
+    "select": "All industry core/characteristic types that exist on this site, plus one listing and 2--3 samples per URL cluster",
+    "ifUnresolved": "Record missing industry core types. Do not invent /about or pad to a page count."
+  },
+  "pageTypeHints": {
+    "about": ["about", "company", "our-story", "who-we-are", "关于", "公司"],
+    "contact": ["contact", "enquiry", "inquire", "enquire", "quote", "联系", "询盘", "报价"],
+    "category": ["products", "collections", "shop", "solutions", "产品", "系列"],
+    "case": ["projects", "portfolio", "works", "cases", "案例"],
+    "faq": ["faq", "help", "常见问题"]
+  },
+  "exclude": {
+    "paths": [
+      "/blog/**",
+      "/news/**",
+      "/insights/**",
+      "/cart/**",
+      "/account/**",
+      "/login/**",
+      "/wp-admin/**",
+      "/search/**",
+      "/tag/**",
+      "/privacy",
+      "/terms",
+      "/cookie"
+    ],
+    "content": [
+      "login-gated pages",
+      "full SKU catalog",
+      "all product images at original resolution",
+      "CSS/JS source",
+      "third-party pixels",
+      "legal page bodies"
+    ]
+  },
+  "perPageExtract": {
+    "always": ["finalUrl", "httpStatus", "title", "description", "h1", "markdown", "imageUrls", "outboundLinks"],
+    "homeAlso": ["nav labels+hrefs", "hero copy", "section heading order"],
+    "contactAlso": ["form field names/types/required", "CTA labels", "whatsapp/email/phone if public"],
+    "categoryAlso": ["category cards: label, href, image"],
+    "productAlso": ["visible specs", "1 main image + 1 lifestyle if present"]
+  },
+  "notExpectedFromCrawler": [
+    "theme-tokens.json (not in Markdown; fill from public theme CSS, then CF /content addScriptTag getComputedStyle; do not use /json AI)",
+    "sections/*.json role mapping (fill after markdown lands)",
+    "license judgements beyond default reference-only"
+  ],
+  "jina": {
+    "method": "GET",
+    "url": "https://r.jina.ai/{absoluteUrl}",
+    "headers": {
+      "Authorization": "Bearer {JINA_TOKEN}",
+      "Accept": "application/json",
+      "X-Respond-With": "frontmatter",
+      "X-Retain-Images": "all",
+      "X-Retain-Links": "all",
+      "X-Retain-Media": "link",
+      "X-With-Images-Summary": "true",
+      "X-With-links-Summary": "true",
+      "X-Robots-Txt": "true",
+      "X-Engine": "browser",
+      "X-Timeout": "60",
+      "X-Locale": "{locale}"
+    },
+    "notes": [
+      "Official options: https://r.jina.ai/docs",
+      "Pass 1: only homepage. Keep X-With-links-Summary so classify-seeds can read the nav.",
+      "Pass 2: fetch only URLs listed in raw/seeds.json.",
+      "Do not use X-Preset: spider.",
+      "X-With-Generated-Alt does not work when X-Respond-With is set; skip it."
+    ]
+  },
+  "cloudflare": {
+    "pass1Markdown": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
+      "body": {
+        "url": "{origin}/",
+        "gotoOptions": { "waitUntil": "networkidle0" }
+      },
+      "useWhen": "Homepage only. Also download /sitemap.xml and /robots.txt as plain HTTP."
+    },
+    "pass2Markdown": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
+      "body": {
+        "url": "{seedUrl}",
+        "gotoOptions": { "waitUntil": "networkidle0" }
+      },
+      "useWhen": "Each classified seed in raw/seeds.json. Do not pre-bake /about or /products into includePatterns."
+    },
+    "wideCrawlDiscouraged": {
+      "reason": "Site IA varies. A wide /crawl with hardcoded includePatterns misses /our-story and /enquire-now.",
+      "ifUsedAnyway": {
+        "limit": "Do not use a fixed page budget. If /crawl is unavoidable, generate includePatterns from seeds.json",
+        "depth": 2,
+        "formats": ["markdown"],
+        "render": true,
+        "crawlPurposes": ["ai-input"],
+        "contentUse": "reference",
+        "includePatterns": "Generate from seeds.json after pass 1, never from a fixed path list"
+      }
+    },
+    "themeTokensComputed": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/content?cacheTTL=0",
+      "helper": "schemas/competitor/probe-theme.mjs",
+      "command": "node schemas/competitor/probe-theme.mjs --url {pageUrl} --out raw/theme-computed.json",
+      "body": {
+        "url": "{pageUrl}",
+        "addScriptTag": [{ "id": "theme-probe", "content": "getComputedStyle probe; see probe-theme.mjs" }],
+        "waitForSelector": { "selector": "#__theme_probe" },
+        "gotoOptions": { "waitUntil": "networkidle2" }
+      },
+      "useWhen": "After public theme CSS is read. Probe homepage plus one product/inner page that has cards or panels. Do not use /json + Workers AI for colors.",
+      "docs": "https://developers.cloudflare.com/api/resources/browser_rendering/subresources/content/methods/create/"
+    },
+    "notes": [
+      "Official crawl: https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
+      "Official markdown: https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/",
+      "Official content addScriptTag: https://developers.cloudflare.com/api/resources/browser_rendering/subresources/content/methods/create/",
+      "Token needs Browser Rendering - Edit. Without it, /markdown /crawl /content return 401 Authentication error even if the token can list Workers and D1.",
+      "If robots.txt Content-Signal rejects ai-input/reference, skip that host; do not bypass."
+    ]
+  },
+  "drop": {
+    "root": ".tmp/competitor-intel/{industry}/{domain}/",
+    "pass1": [
+      "raw/home.md",
+      "raw/home.jina.json",
+      "raw/sitemap.xml",
+      "raw/robots.txt"
+    ],
+    "pass2": [
+      "raw/seeds.json",
+      "raw/pages/{pageType}-{slug}.md"
+    ],
+    "afterNormalize": [
+      "collection.json",
+      "meta.json",
+      "ia.json",
+      "pages/{pageType}/{slug}.md",
+      "images/manifest.json"
+    ],
+    "fillLater": [
+      "sections/home.json",
+      "forms/contact.json",
+      "theme-tokens.json",
+      "products.json"
+    ]
+  }
+}

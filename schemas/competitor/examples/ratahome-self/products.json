@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "domain": "ratahome.local",
+  "locale": "en",
+  "taxonomy": [
+    { "label": "Living Room", "slug": "living-room", "href": "/collections/living-room", "kind": "room" },
+    { "label": "Sofas", "slug": "sofas", "href": "/collections/sofas", "parent": "living-room", "kind": "category" },
+    { "label": "Bedroom", "slug": "bedroom", "href": "/collections/bedroom", "kind": "room" },
+    { "label": "Beds", "slug": "beds", "href": "/collections/beds", "parent": "bedroom", "kind": "category" }
+  ],
+  "samples": [
+    {
+      "name": "Sofas",
+      "slug": "sofas",
+      "category": "living-room",
+      "href": "/collections/sofas",
+      "specs": { "quote": "request-quote", "package": "room" }
+    }
+  ],
+  "downloads": [
+    { "title": "Catalogs", "url": "/catalogs", "kind": "catalog" }
+  ]
+}

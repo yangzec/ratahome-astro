@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/products.schema.json",
+  "title": "Optional light product extract",
+  "description": "Phase 1: taxonomy plus a few samples. Not a full catalog crawl.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "domain", "taxonomy"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "domain": { "type": "string" },
+    "locale": { "type": "string" },
+    "taxonomy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "slug"],
+        "properties": {
+          "label": { "type": "string" },
+          "slug": { "type": "string" },
+          "href": { "type": "string" },
+          "parent": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": ["room", "category", "series", "material", "process", "other"]
+          },
+          "imageRef": { "type": "string" }
+        }
+      }
+    },
+    "samples": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "slug": { "type": "string" },
+          "category": { "type": "string" },
+          "href": { "type": "string" },
+          "specs": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "imageRefs": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "downloads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "kind": {
+            "type": "string",
+            "enum": ["catalog", "spec", "color-card", "other"]
+          },
+          "localPath": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "domain": "ratahome.local",
+  "sourceUrl": "http://localhost:43123/",
+  "colors": {
+    "accent": { "hex": "#C05C15", "rgb": "192 92 21", "role": "accent" },
+    "ink": { "hex": "#2B2C27", "rgb": "43 44 39", "role": "ink" },
+    "background": { "hex": "#FCF7F3", "rgb": "252 247 243", "role": "cream" },
+    "muted": { "hex": "#7D7D7D", "rgb": "125 125 125", "role": "grayMuted" },
+    "border": { "hex": "#DDDDDD", "rgb": "221 221 221", "role": "border" },
+    "button": { "hex": "#C05C15", "rgb": "192 92 21", "role": "accent" }
+  },
+  "fonts": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "display": "'Cinzel', Georgia, serif",
+    "label": "'Poppins', -apple-system, sans-serif"
+  },
+  "radius": {
+    "hero": "25px",
+    "image": "20px",
+    "button": "100px"
+  },
+  "imageStyle": ["lifestyle", "factory"],
+  "notes": "Copied from sites/ratahome-furniture/theme.json for the self-map fixture."
+}
