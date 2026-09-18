@@ -53,7 +53,7 @@
 - [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（独立 wrangler）
 - [x] 成衣 / 家纺用干净骨架 + `--brief` 重建；文案按 `industry.json` 正向拼接；`validate` 通过
 - [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
-- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；成衣 / 家纺按简报重建后待重新部署）
+- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；成衣 / 家纺已按简报重建重新部署）
 - [ ] 三站自定义域名绑定
 - [x] 纺织专属素材：三站独立 Hero / 受众 / 能力 / 流程图 + SVG 字标；成衣 / 家纺已去掉家具占位图
 - [ ] 阶段 2 复用率文档化
@@ -347,7 +347,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
-| 2026-09-19 02:49 | 成衣 / 家纺按干净骨架 + 行业简报删除重建；路由来自 `catalogSlugs`；文案去掉对照句 |
+| 2026-09-19 02:52 | 成衣 / 家纺按干净骨架 + 行业简报删除重建并重新部署；路由来自 `catalogSlugs`；文案去掉对照句 |
 | 2026-09-19 02:25 | `create` 改为只拷 `packages/site-cli/skeletons/{template}`，已上线站仅作泄漏对照 |
 | 2026-09-19 01:09 | 约束不得点名另一行业；`validate` 改为拦否定结构，去掉行业词黑名单 |
 | 2026-09-19 00:55 | 项目规范改为对外文案分通道（生成 / 约束 / 验收）；对照句正则降为探测器；写明成衣对照句混入在重写 `content/` |
@@ -374,7 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
-| 2026-09-19 02:49 | 成衣/家纺简报重建 | `create --brief` 先报空文案 error；拼接后两站 `validate` 通过；四站 `validate` + `site-cli:test` 13 通过；无 joinery/cotton/对照句 | 通过 |
+| 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
 | 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
 | 2026-09-19 01:09 | 去行业指向约束 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；规范与探测器均不列行业词 | 通过 |
 | 2026-09-19 00:55 | 文案分通道入规范 | 项目级 `AGENTS.md` 写入生成/约束/验收分通道与陌生人可读；USAGE 改为指针 | 已写入 |
