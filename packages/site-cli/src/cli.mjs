@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { parseArgs } from 'node:util';
+import { readFileSync } from 'node:fs';
 import { createSite } from './lib/create.mjs';
 import { deploySite } from './lib/deploy.mjs';
 import { validateSite } from './lib/validate.mjs';
@@ -12,6 +13,7 @@ const { positionals, values } = parseArgs({
     from: { type: 'string' },
     'site-id': { type: 'string' },
     name: { type: 'string' },
+    brief: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
     help: { type: 'boolean', short: 'h', default: false },
   },
@@ -24,8 +26,9 @@ function printHelp() {
 trade-site-cli — scaffold and manage trade independent sites
 
 Usage:
-  site-cli create <slug> --from <template> [--site-id <id>] [--name <name>]
-      copies structure only; source copy is not copied. validate then fails until you write industry content.
+  site-cli create <slug> --from <template> [--site-id <id>] [--name <name>] [--brief <file>]
+      copies a clean skeleton (no source-site prose, slugs, or catalog copy).
+      optional --brief JSON is spliced into industry.json / slugs / catalog prefix.
   site-cli validate <slug>
       errors on empty copy, leftover source-site copy, and dead nav / catalog links.
   site-cli deploy <slug> [--dry-run]
@@ -71,20 +74,25 @@ try {
     case 'create': {
       if (!slug) throw new Error('create requires <slug>');
       if (!values.from) throw new Error('create requires --from <template>');
+      const brief = values.brief
+        ? JSON.parse(readFileSync(values.brief, 'utf8'))
+        : undefined;
       const created = createSite({
         slug,
         templateId: values.from,
         siteId: values['site-id'],
         name: values.name,
+        brief,
         root,
       });
-      console.log(`\n✓ Scaffolded sites/${created.slug} (structure only — source copy was not copied)`);
+      console.log(`\n✓ Scaffolded sites/${created.slug} as a clean skeleton`);
       console.log(`  site_id: ${created.siteId}`);
       console.log(`  template: ${created.templateId}`);
       console.log(`  name: ${created.name}`);
+      console.log(`  brief: sites/${created.slug}/industry.json`);
       const result = validateSite(slug, root);
       printResult(result, 'Validation');
-      console.log(`\nWrite industry copy in sites/${created.slug}/content/{en,zh}/ then re-run:`);
+      console.log(`\nSplice site copy from sites/${created.slug}/industry.json into content/{en,zh}/ then re-run:`);
       console.log(`  site-cli validate ${created.slug}`);
       if (!result.ok) process.exit(1);
       break;
@@ -114,7 +122,7 @@ try {
     case 'templates': {
       const templates = loadTemplates();
       for (const [id, t] of Object.entries(templates)) {
-        console.log(`${id}\n  source: sites/${t.source}\n  ${t.description}\n`);
+        console.log(`${id}\n  leak-check: sites/${t.source}\n  ${t.description}\n`);
       }
       break;
     }

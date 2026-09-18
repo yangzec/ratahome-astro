@@ -103,7 +103,7 @@ sites/ratahome-furniture/content/
 
 改完后保存，开发服务器会自动热更新；生产需重新 `pnpm build`。
 
-对外文案走项目规范「对外文案分通道」（`AGENTS.md`）：JSON 只写该站访客材料；「不要拷贝源站」是验收条件，应变成本站对象、交付物、流程和品类。规范与任务指令不得点名另一行业来约束本站。`validate` 拦对照式否定结构，主防线是分通道。
+对外文案走项目规范「对外文案分通道」（`AGENTS.md`）：先有干净骨架和 `industry.json`，再按简报拼接 JSON。不要用「不要写成某行业」当指令。`validate` 拦空文案、源站全等和对照式否定结构。
 
 ---
 
@@ -229,11 +229,12 @@ pnpm site-cli templates
 # 从家具模板创建（b2b-manufacturing）
 pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
 
-# 从纺织模板创建骨架（b2b-textile，source: sites/textile-fabric）
-# 只拷结构：不拷源站 content、不拷 public/images。创建后 validate 会报错，直到写完本站文案。
+# 从纺织模板创建干净骨架（不带源站散文 / 品类 / 品类页文案）
 pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
+# 或把该站简报拼进骨架：
+# pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel" --brief ./apparel.brief.json
 
-# 校验：必填文案、源站文案复用、对照式行业否定句、导航/品类死链均为 error
+# 校验：必填文案、源站字段全等、对照式否定结构、导航/品类死链均为 error
 pnpm site-cli validate textile-fabric
 
 # 本地开发
@@ -244,7 +245,9 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后必须重写 `sites/<slug>/content/{en,zh}/` 与 `src/data/slugs.ts`，再 `validate`。可用模板见 `pnpm site-cli templates`（`b2b-manufacturing`、`b2b-textile`）。`deploy` 会先跑 `validate`，未过不能发布。
+创建后先填 `sites/<slug>/industry.json`（访客、交付物、`catalogPrefix`、品类、页面），再按这份简报正向写 `content/{en,zh}/`，不要加「不要写成某行业」。然后 `validate`。可用模板见 `pnpm site-cli templates`。`deploy` 会先跑 `validate`，未过不能发布。
+
+`industry.json` 字段：`visitors`、`deliverables`、`catalogPrefix`、`catalog`、`pages`。`--brief` 会写入该文件并套到 `slugs.ts` 与品类路由前缀。
 
 ---
 

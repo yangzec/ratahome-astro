@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { emptySlugArrays, skeletonNavigation, wipeCopy } from './skeleton.mjs';
+import { cleanSlugPageSource, cleanSlugsSource, emptyIndustryBrief, emptySlugArrays, normalizeIndustryBrief, skeletonNavigation, wipeCopy } from './skeleton.mjs';
 import { collectGeneratedRoutes, parseSlugPathBindings, parseSlugArrays } from './routes.mjs';
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -40,6 +40,36 @@ export const pageSlugs = [
     assert.match(next, /export const collectionSlugs: string\[\] = \[\];/);
     assert.match(next, /export const pageSlugs = \[\];/);
     assert.doesNotMatch(next, /cotton/);
+  });
+});
+
+describe('industry brief', () => {
+  it('writes clean slugs and slug-page without source-site catalog copy', () => {
+    const slugs = cleanSlugsSource(emptyIndustryBrief());
+    const page = cleanSlugPageSource({ catalogPrefix: 'styles', catalog: ['knit-tops'] });
+    assert.match(slugs, /export const catalogSlugs = \[\];/);
+    assert.match(slugs, /export const pageSlugs = \[\];/);
+    assert.match(page, /type: 'catalog'/);
+    assert.match(page, /styles\/\$\{slug\}/);
+    assert.doesNotMatch(page, /fabrics|面料|lab dip|joinery/i);
+    assert.match(page, /description = '';/);
+  });
+
+  it('normalizes brief lists and catalog prefix', () => {
+    assert.deepEqual(
+      normalizeIndustryBrief({
+        visitors: [' Brands ', ''],
+        catalogPrefix: '/Styles/',
+        catalog: ['knit-tops'],
+      }),
+      {
+        visitors: ['Brands'],
+        deliverables: [],
+        catalogPrefix: 'styles',
+        catalog: ['knit-tops'],
+        pages: [],
+      }
+    );
   });
 });
 

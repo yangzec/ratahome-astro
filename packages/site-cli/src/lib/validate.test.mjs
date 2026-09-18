@@ -156,13 +156,52 @@ describe('createSite', () => {
       const home = JSON.parse(readFileSync(join(created.path, 'content/en/home.json'), 'utf8'));
       const nav = JSON.parse(readFileSync(join(created.path, 'content/en/navigation.json'), 'utf8'));
       const slugs = readFileSync(join(created.path, 'src/data/slugs.ts'), 'utf8');
+      const slugPage = readFileSync(join(created.path, 'src/lib/slug-page.ts'), 'utf8');
+      const industry = JSON.parse(readFileSync(join(created.path, 'industry.json'), 'utf8'));
       assert.equal(home.hero.title, '');
       assert.equal(home.hero.description, '');
       assert.deepEqual(home.rooms.items, []);
+      assert.equal(home.rooms.basePath, '');
       assert.deepEqual(nav.main.map((item) => item.href), ['/about', '/contact']);
-      assert.doesNotMatch(slugs, /cotton/);
+      assert.doesNotMatch(slugs, /cotton|fabricSlugs/);
+      assert.match(slugs, /catalogSlugs/);
+      assert.doesNotMatch(slugPage, /fabrics|面料|lab dip/i);
+      assert.deepEqual(industry.catalog, []);
       assert.equal(existsSync(join(created.path, 'public/images/logo.svg')), true);
       assert.equal(existsSync(join(created.path, 'public/images/hero.jpg')), false);
+    } finally {
+      rmSync(created.path, { recursive: true, force: true });
+    }
+  });
+
+  it('splices a target-industry brief into slugs and catalog prefix', () => {
+    const root = getWorkspaceRoot();
+    const slug = `tmp-cli-${Date.now()}`;
+    const created = createSite({
+      slug,
+      templateId: 'b2b-textile',
+      name: 'Tmp Apparel',
+      brief: {
+        visitors: ['brands', 'retailers'],
+        deliverables: ['tech pack', 'size spec'],
+        catalogPrefix: 'styles',
+        catalog: ['knit-tops'],
+        pages: ['brands'],
+      },
+      root,
+    });
+
+    try {
+      const home = JSON.parse(readFileSync(join(created.path, 'content/en/home.json'), 'utf8'));
+      const slugs = readFileSync(join(created.path, 'src/data/slugs.ts'), 'utf8');
+      const slugPage = readFileSync(join(created.path, 'src/lib/slug-page.ts'), 'utf8');
+      const industry = JSON.parse(readFileSync(join(created.path, 'industry.json'), 'utf8'));
+      assert.equal(home.rooms.basePath, '/styles');
+      assert.match(slugs, /knit-tops/);
+      assert.match(slugs, /brands/);
+      assert.match(slugPage, /styles\/\$\{slug\}/);
+      assert.deepEqual(industry.visitors, ['brands', 'retailers']);
+      assert.equal(industry.catalogPrefix, 'styles');
     } finally {
       rmSync(created.path, { recursive: true, force: true });
     }

@@ -1,10 +1,10 @@
 {
   "b2b-manufacturing": {
     "source": "ratahome-furniture",
-    "description": "B2B manufacturing — Hero, capabilities grid, process, case studies (furniture / joinery)"
+    "description": "Clean B2B manufacturing shell. create writes a skeleton; splice site copy from industry.json."
   },
   "b2b-textile": {
     "source": "textile-fabric",
-    "description": "B2B textile — Hero, fabric categories, MOQ, sampling, certifications (fabric / apparel / home textile)"
+    "description": "Clean B2B textile shell. create writes a skeleton; splice site copy from industry.json."
   }
 }

@@ -190,7 +190,7 @@ https://github.com/yangzec/ratahome-astro
 5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
-8. 新建站点：`pnpm site-cli create <slug> --from <template>` 只拷骨架，必须重写 `content/{en,zh}/` 与 `slugs.ts`；写文案走「对外文案分通道」；约束不得点名另一行业；`validate` / `deploy` 对空文案、源站全等、对照式否定结构、死链报 error
+8. 新建站点：`pnpm site-cli create <slug> --from <template> [--brief <file>]` 产出干净骨架与 `industry.json`；写文案用简报正向拼接，不加否定约束；`validate` / `deploy` 对空文案、源站全等、对照式否定结构、死链报 error
 
 ### 文档指针
 
@@ -203,7 +203,9 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
-- `site-cli create` 不得拷贝源站文案或业务图；`validate` / `deploy` 遇空文案、源站全等、对照式否定句或无效路由必须 error，不得降为 warning
+- `site-cli create` 产出干净骨架：无源站散文、无源站品类 slug、无源站品类页文案；已上线站只作结构参考和泄漏对照，不是拷贝载荷
+- 写文案的指令 = 干净骨架 + 该站 `industry.json`（访客、交付物、品类、路由前缀）正向拼接，不要加「不要写成…」
+- `validate` / `deploy` 遇空文案、源站全等、对照式否定句或无效路由必须 error，不得降为 warning
 - 对外文案必须分通道，见下节；规范、任务指令和 `validate` 都不得写「不要写成某行业」「本站不是某行业」这类指向性约束
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
@@ -212,7 +214,9 @@ https://github.com/yangzec/ratahome-astro
 
 `sites/*/content/` 是访客读物，不是验收说明书。约束被遵守，应该看不见；看得见的，只该是访客用得上的话。写任何可见字符串前先分类，禁止把三类文本写进同一句。
 
-约束只谈**本站**（访客、交付物、品类、路由）和**源站**（不要拷贝、字段不得全等）。禁止点名另一行业来规定本站：不要写「不要写成某行业」「本站不是某行业」「避免某行业用语」。行业词只出现在该站自己的访客材料里，不出现在「不要像谁」的规则里。
+约束只谈**本站**（访客、交付物、品类、路由）。禁止点名另一行业来规定本站。行业词只出现在该站 `industry.json` 与由其拼接出的访客材料里，不出现在「不要像谁」的规则里。
+
+写 `content/` 时只拼接：干净骨架结构 + `industry.json` 里的访客、交付物、品类、路由前缀。不要把泄漏对照、validate 条文或否定句写进生成指令。
 
 | 通道 | 进入哪里 | 只允许 | 禁止写进页面 |
 |------|----------|--------|--------------|
@@ -224,7 +228,7 @@ https://github.com/yangzec/ratahome-astro
 
 `validate` 拦的是对照式否定结构（「而不是…贸易商 / 站」「built for … not …」），不维护行业词黑名单。这是探测器，不是定义。
 
-**混入点**：泄漏发生在写 `content/` 的生成环节，不在 `create` 骨架，也不在 `validate` 判定。`create` 之后若把「证明和源站不同」与起草同屏，验收语言会进标题。起草时生成上下文只留该站访客材料；源站 diff 和 validate 条文留在验收步骤，且二者都不得点名另一行业。
+**混入点**：泄漏发生在写 `content/` 的生成环节。当时拷贝源仍带着源站品类语义，生成指令又用否定约束补救，验收语言进了标题。正确做法是：先落干净骨架和该站简报，再用简报拼接文案。
 
 ### 验证入口
 

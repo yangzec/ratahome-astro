@@ -11,7 +11,7 @@
 | 部署顺序 | **先单站单部署，后多站单部署** | 先证明「站可复制」，再证明「部署可合并」 |
 | 代码组织 | Monorepo + `sites/{industry}/` | 共享 `packages/core`，每站独立配置 |
 | 行业语义 | **内容文案为主，组件为辅** | 80% 差异在 JSON / 路由 / 素材；仅 ~20% 需新 Section |
-| 对外文案 | **生成 / 约束 / 验收分通道** | `content/` 只写本站访客材料；约束不得点名另一行业；`validate` 拦否定结构，不维护行业词黑名单 |
+| 对外文案 | **干净骨架 + 简报拼接** | `create` 产出无源站文案的骨架；写文案只拼接 `industry.json`，不用否定约束 |
 | 页面多样化 | Section Registry + Page Blueprint | 首页等由 JSON 配置区块顺序，非写死模板 |
 | 多语言 | en 默认 + zh（`/zh/`） | 后续按需扩展 locale |
 | 技术栈 | Astro 7 + Tailwind 4 + Cloudflare D1/R2 | 不引入第二套 UI 框架 |
@@ -21,7 +21,7 @@
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
 
-对照句混入环节：`create` 只产出空骨架，没有写该句；旧 `validate` 只查与源站全等，也没有写该句，但奖励「看起来不同」。句子写在按骨架重写 `content/` 的生成环节——「证明和源站不同」被写成了点名另一行业的约束，并与访客文案同屏，进了 `home.audiences.title`。`deploy` 只是放行。根因是约束本身带了行业指向，不只是页面写错。
+对照句混入环节：当时拷贝源仍带着源站品类语义，写 `content/` 时又用否定约束补救，验收语言进了 `home.audiences.title`。应先落干净骨架和该站 `industry.json`，再用简报拼接文案。
 
 ---
 
@@ -147,8 +147,8 @@ trade-site-platform/
 | # | 任务 | 验收标准 |
 |---|------|----------|
 | 2.1 | 定义 `b2b-textile` JSON Schema | content / routes / blueprint / theme 有 schema；`templates.json` 注册模板 |
-| 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；阶段 2 执行面料 / 服装 / 家纺各 1 个 |
-| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站复用 / 对照式行业否定句 / 死链均为 error |
+| 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；create 写干净骨架 + `industry.json`；可用 `--brief` 拼接 |
+| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站全等 / 对照式否定结构 / 死链均为 error |
 | 2.4 | 完成 3 站 content + 素材 | 首页、导航、关于、联系可浏览（en + zh） |
 | 2.5 | 各站独立 wrangler 部署 | 3 个独立域名；**共享同一 D1**（`site_id` 隔离数据）；R2 用 `{site_id}/` 前缀 |
 | 2.6 | 记录复用率 | 列出复用 Section vs 新增 Section（目标新增 < 3 个） |
@@ -347,6 +347,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 01:31 | `create` 写干净骨架与 `industry.json`；文案指令改为简报正向拼接 |
 | 2026-09-19 01:09 | 约束不得点名另一行业；`validate` 改为拦否定结构，去掉行业词黑名单 |
 | 2026-09-19 00:55 | 项目规范改为对外文案分通道（生成 / 约束 / 验收）；对照句正则降为探测器；写明成衣对照句混入在重写 `content/` |
 | 2026-09-18 20:52 | 对外文案只写给访客；`validate` 拦截对照式行业否定句；去掉成衣站「而不是面料贸易商」 |
@@ -379,6 +380,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 01:31 | 干净骨架 + 简报 | `pnpm site-cli:test`；四站 `validate`；create 不再留下源站品类页文案 | 通过 |
 | 2026-09-19 01:09 | 去行业指向约束 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；规范与探测器均不列行业词 | 通过 |
 | 2026-09-19 00:55 | 文案分通道入规范 | 项目级 `AGENTS.md` 写入生成/约束/验收分通道与陌生人可读；USAGE 改为指针 | 已写入 |
 | 2026-09-18 20:52 | 对照句校验 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；成衣 audiences 不再含「而不是面料」 | 通过 |

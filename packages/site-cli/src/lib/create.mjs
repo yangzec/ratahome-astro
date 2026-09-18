@@ -21,7 +21,7 @@ function replaceInFile(path, replacements) {
   writeFileSync(path, content);
 }
 
-export function createSite({ slug, templateId, siteId, name, root = getWorkspaceRoot() }) {
+export function createSite({ slug, templateId, siteId, name, brief, root = getWorkspaceRoot() }) {
   if (!/^[a-z][a-z0-9-]*$/.test(slug)) {
     throw new Error('Slug must be kebab-case (lowercase letters, numbers, hyphens)');
   }
@@ -67,6 +67,7 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
     sourceDir: template.sourceDir,
     targetDir,
     displayName,
+    brief,
   });
   retargetLogo(targetDir);
 
