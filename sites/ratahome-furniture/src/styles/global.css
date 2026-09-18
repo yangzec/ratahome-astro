@@ -281,6 +281,11 @@
     max-width: 7.5rem;
   }
 
+  /* 深色顶栏：字标 PNG 反色为白 */
+  .site-logo--on-dark {
+    filter: brightness(0) invert(1);
+  }
+
   @media (min-width: 640px) {
     .site-logo {
       height: 1.75rem;
@@ -292,5 +297,10 @@
     .site-logo {
       height: 2rem;
     }
+  }
+
+  .mobile-header-bar {
+    min-height: 3.25rem;
+    padding-block: 0.625rem;
   }
 }

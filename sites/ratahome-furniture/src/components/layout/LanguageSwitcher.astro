@@ -5,9 +5,11 @@ import { switchLocalePath } from '@trade/core/i18n/utils';
 interface Props {
   locale: Locale;
   currentPath: string;
+  variant?: 'on-dark' | 'on-light';
 }
 
-const { locale, currentPath } = Astro.props;
+const { locale, currentPath, variant = 'on-dark' } = Astro.props;
+const onLight = variant === 'on-light';
 ---
 
 <div class="flex items-center gap-1 text-sm">
@@ -17,7 +19,9 @@ const { locale, currentPath } = Astro.props;
       class={`px-2 py-1 rounded transition-colors ${
         loc === locale
           ? 'text-izza-accent font-semibold'
-          : 'text-white/60 hover:text-white'
+          : onLight
+            ? 'text-izza-gray-muted hover:text-izza-ink'
+            : 'text-white/60 hover:text-white'
       }`}
       hreflang={loc}
     >
