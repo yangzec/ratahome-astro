@@ -122,6 +122,14 @@ function listMarkdown(dir, acc = []) {
   return acc;
 }
 
+const crawlBrief = readJson(join(root, 'crawl-brief.json'));
+for (const key of ['quota', 'seed', 'exclude', 'jina', 'cloudflare', 'drop']) {
+  if (!(key in crawlBrief)) fail(`crawl-brief.json missing "${key}"`);
+}
+if (crawlBrief.repoDoesNotCrawl !== true) fail('crawl-brief.json must set repoDoesNotCrawl=true');
+if (crawlBrief.quota?.pagesPerCompetitor !== 6) fail('crawl-brief.json quota.pagesPerCompetitor must be 6');
+ok('crawl-brief.json contract');
+
 const collection = readJson(join(exampleDir, 'collection.json'));
 validateAgainstSchema(collection, loadSchema('collection.schema.json'), 'collection.json');
 ok('collection.json schema');

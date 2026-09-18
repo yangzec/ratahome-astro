@@ -61,6 +61,6 @@ pnpm site-cli deploy <slug>
 
 - **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
 - **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
-- **竞品采集方案（模型，爬虫未实现）**：[`docs/COMPETITOR_INTEL.md`](docs/COMPETITOR_INTEL.md)
+- **竞品采集方案（模型 + 抓取清单；爬虫用 Jina / CF）**：[`docs/COMPETITOR_INTEL.md`](docs/COMPETITOR_INTEL.md)
 - Agent 协作规范：`AGENTS.md`
 - 进度与计划：`ROADMAP.md`

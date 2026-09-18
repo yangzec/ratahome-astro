@@ -3,6 +3,7 @@
 Machine-readable model for industry competitor snapshots.
 
 - **方案正文**：[`docs/COMPETITOR_INTEL.md`](../../docs/COMPETITOR_INTEL.md)
+- **抓取清单**：[`crawl-brief.json`](crawl-brief.json)（你用 Jina / CF 执行；仓库不写爬虫）
 - **字段映射**：[`mapping.json`](mapping.json)
 - **自映射样例**：[`examples/ratahome-self/`](examples/ratahome-self/)
 - **校验**：`node schemas/competitor/validate.mjs`

@@ -2,7 +2,7 @@
 
 把行业竞品收成**可映射到现有建站文件**的结构化快照，而不是全站镜像。本文是方案正文；机器可读模型在 `/workspace/schemas/competitor/` 。
 
-当前状态：**模型与映射已落地，爬虫未实现。** 样例是家具站自映射，不是外部竞品抓取。
+当前状态：**模型与映射已落地。抓取由你用 Jina Reader 或 Cloudflare Browser Rendering 执行，仓库不写爬虫。** 样例是家具站自映射，不是外部竞品抓取。可执行清单：`/workspace/schemas/competitor/crawl-brief.json` 。
 
 ---
 
@@ -12,6 +12,7 @@
 2. 映射目标只对准现有 8 类站点文件，不先发明第二套 CMS。
 3. 第一期每个竞品只采 6 类页。竞品原文和图片默认 `reference-only`，改写后才能进 `sites/`。
 4. 真实抓取结果写入 `.tmp/competitor-intel/{industry}/{domain}/` ，不进 Git。
+5. Agent 不实现爬虫。你按第 6 节抓公开页 Markdown 和图片 URL；结构层（sections / forms / theme）在落盘后再填。
 
 ---
 
@@ -22,7 +23,7 @@
 | 为阶段 2 起的新行业站提供 IA、区块、转化、视觉样本 | 全站博客、全量 SKU、整站 CSS/JS |
 | 输出能填 `content/`、`blueprints/`、`theme.json`、`slugs.ts` 的字段 | 自动上线竞品原文或原图 |
 | 用 `unmapped` 记下尚无 Section 的区块 | 为单个竞品 fork 组件 |
-| 人工或后续脚本按 schema 填快照 | 本轮实现爬虫、登录抓取、生产写入 |
+| 按 schema 消化你抓回来的 Markdown / 图链 | 在本仓库实现爬虫、登录抓取、生产写入 |
 
 ---
 
@@ -166,35 +167,111 @@ images[reference-only]           →    不进站点
 
 ---
 
-## 6. 第一期采集范围
+## 6. 你要爬什么（Jina / Cloudflare）
 
-每个行业先采 **3 个竞品 × 6 类页**：
+机器可读清单：`/workspace/schemas/competitor/crawl-brief.json` 。接口依据：
 
-1. 首页
-2. 关于
-3. 产品 / 系列列表
-4. 1--2 个详情
-5. 联系 / 询盘（必须含表单字段）
-6. 案例或 FAQ
+- Jina Reader：https://r.jina.ai/docs 
+- Cloudflare `/crawl`：https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/ 
+- Cloudflare `/markdown`：https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/ 
 
-同时必填：`meta.json`、`ia.json`、首页 `sections/home.json`、`forms/contact.json`、`theme-tokens.json`、`images/manifest.json`。
+不要全站镜像。每个竞品先看首页导航和 `/sitemap.xml`，**手选 6 个 URL** 再抓。
 
-`products.json` 只收分类树和最多 8 个样品。博客最多留 0 篇（第一期禁止）。法律页只记 URL。
+### 6.1 必抓页面（每个域名 6 个）
+
+| # | pageType | 典型路径 | 必须拿到 |
+|---|----------|----------|----------|
+| 1 | `home` | `/` | Markdown、主导航链接、Hero 文案、区块标题顺序、首屏图 URL |
+| 2 | `about` | `/about` `/about-us` `/company` | Markdown、H1、品牌故事段落 |
+| 3 | `category` | `/products` `/collections` `/solutions` | 分类名、href、分类图 URL |
+| 4 | `product` | 列表里点 1--2 个详情 | 品名、可见规格、主图 + 可选场景图 URL |
+| 5 | `contact` | `/contact` `/enquiry` `/quote` | **表单字段名 / 类型 / 是否必填**、CTA、公开 WhatsApp / 邮箱 / 电话 |
+| 6 | `case` 或 `faq` | `/projects` `/cases` 或 `/faq` | 案例卡片或 FAQ 问答 |
+
+可选（有就抓，没有跳过）：`/catalog` 只收 PDF 入口 URL。`/robots.txt`、`/sitemap.xml` 各存一份原文。
+
+### 6.2 不要抓
+
+博客 / 新闻、购物车、登录后、全量 SKU、法律页正文、CSS/JS、第三方像素。法律页只在 `meta.json` 记链接。
+
+### 6.3 Jina：按 URL 点抓（推荐）
+
+对每个选定 URL：
+
+```text
+GET https://r.jina.ai/{absoluteUrl}
+Authorization: Bearer {JINA_TOKEN}
+Accept: application/json
+X-Respond-With: frontmatter
+X-Retain-Images: all
+X-Retain-Links: all
+X-With-Images-Summary: true
+X-With-links-Summary: true
+X-Robots-Txt: true
+X-Engine: browser
+X-Timeout: 60
+X-Locale: en
+```
+
+`frontmatter` 会带 `title` / `description` / `url`。图片摘要和链接摘要分别喂 `images/manifest.json` 与 `ia.json`。第一期不要用 `X-Preset: spider`。SPA 站可把 `X-Engine` 换成 `cf-browser-rendering`。设了 `X-Respond-With` 时，官方说明 `X-With-Generated-Alt` 无效，不必加。
+
+### 6.4 Cloudflare：单页 Markdown 优先，宽爬要加盖帽
+
+6 个种子 URL 用 `/markdown`，比宽爬稳：
+
+```text
+POST /accounts/{account_id}/browser-rendering/markdown
+Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
+{ "url": "{absoluteUrl}", "gotoOptions": { "waitUntil": "networkidle0" } }
+```
+
+只有 sitemap 很乱、要靠链接发现时，才用 `/crawl`，并且必须限制：
+
+- `limit`: 12，`depth`: 2
+- `formats`: `["markdown"]`，`render`: true（分类网格若是 JS 渲染）
+- `crawlPurposes`: `["ai-input"]`，`contentUse`: `"reference"`（研究改写，不原样转载）
+- `includeExternalLinks` / `includeSubdomains`: false
+- `includePatterns` / `excludePatterns` 见 `crawl-brief.json`
+
+目标站 `robots.txt` 的 Content-Signal 若拒绝 `ai-input` 或 `reference`，官方会 400。记下该域名并跳过，不要绕过。
+
+联系页的表单字段 Markdown 经常丢。Jina 不够时，对联系页再抓一次 HTML，或自己从页面抄字段进 `forms/contact.json`。不要对整站开 CF `formats: ["json"]`。
+
+### 6.5 图片怎么收
+
+先收 URL，不先下原图。从 Markdown `![](url)` 和 Jina images summary 建 `images/manifest.json`。第一期只下载这些角色（仍标 `reference-only`）：
+
+- logo / favicon / og
+- 首页 hero 1 张
+- 分类图最多 8 张
+- 详情主图 1--2 张
+- 有工厂 / 认证图再各留 1--2 张
+
+### 6.6 落到哪里
+
+```text
+.tmp/competitor-intel/{industry}/{domain}/
+  raw/pages/{pageType}-{slug}.md
+  raw/jina/{pageType}-{slug}.json
+  raw/sitemap.xml
+  raw/robots.txt
+```
+
+你交来 raw 之后，再规范化成 `pages/*.md`、`ia.json`、`images/manifest.json`。`sections/home.json`、`forms/contact.json`、`theme-tokens.json` 爬虫出不来，后补。
 
 ---
 
 ## 7. 落地阶段
 
-| 阶段 | 内容 | 状态 |
-|------|------|------|
-| 0 | Schema、映射、自映射样例、校验脚本 | **本轮完成** |
-| 1 | 按 schema **手工**填 1 个外部竞品，验证字段是否够用 | 未开始 |
-| 2 | 爬虫：公开页 Markdown + 图片 + manifest | 未开始 |
-| 3 | 抽取：sections / forms / theme-tokens | 未开始 |
-| 4 | 映射草稿：生成改写后的 content JSON（不发布） | 未开始 |
-| 5 | 可选接入 `site-cli` | 未开始 |
+| 阶段 | 内容 | 谁做 | 状态 |
+|------|------|------|------|
+| 0 | Schema、映射、自映射样例、抓取清单 | Agent | **完成** |
+| 1 | 按 `crawl-brief.json` 抓 1 个外部竞品的 6 页 | **你（Jina / CF）** | 待你操作 |
+| 2 | raw → 规范化快照（pages / ia / manifest） | Agent，等你交 raw | 未开始 |
+| 3 | 补 sections / forms / theme-tokens | 人工 + Agent | 未开始 |
+| 4 | 改写成站点 content 草稿（不发布） | Agent | 未开始 |
 
-阶段 2 之前不要写爬虫。阶段 1 若发现缺字段，先改 schema，再扩采集。
+缺字段先改 schema，再扩抓取范围。
 
 ---
 
@@ -232,7 +309,7 @@ node schemas/competitor/validate.mjs
 
 | 项 | 当前假设 | 为何未锁 |
 |----|----------|----------|
-| 持久存储 | 先 `.tmp/competitor-intel/` ，以后再定 R2 | 爬虫未做，提前建 bucket 无必要 |
+| 持久存储 | 先 `.tmp/competitor-intel/` ，以后再定 R2 | 抓取在站外执行，提前建 bucket 无必要 |
 | 多语言目录 | 同一 domain 下用字段区分 locale | 若中英文 IA 差异大，再拆 `{locale}/` |
 | `rooms-grid` 跨行业复用 | 先换文案不换 Section | 阶段 2 纺织站做完再看是否要 `CategoryCards` |
 | 生成器是否进 `site-cli` | 不进第一期 | 先证明手工映射能建出一版站 |

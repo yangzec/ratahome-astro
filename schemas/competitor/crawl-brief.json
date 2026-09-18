@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "owner": "user-jina-or-cloudflare",
+  "repoDoesNotCrawl": true,
+  "description": "What to fetch with Jina Reader or Cloudflare Browser Rendering. Drop raw output into .tmp/competitor-intel/{industry}/{domain}/raw/. Do not spider the whole site.",
+  "docs": {
+    "jinaReader": "https://r.jina.ai/docs",
+    "jinaProduct": "https://jina.ai/en-US/reader/",
+    "cfCrawl": "https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
+    "cfMarkdown": "https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/"
+  },
+  "quota": {
+    "competitorsPerIndustry": 3,
+    "pagesPerCompetitor": 6,
+    "maxPagesHardCap": 12,
+    "productSamples": "1-2",
+    "blogPosts": 0,
+    "legalBody": false
+  },
+  "seed": {
+    "start": ["/", "/sitemap.xml", "/robots.txt"],
+    "pickFromSitemapOrNav": [
+      { "pageType": "home", "required": true, "match": ["/", "/home", "/index"] },
+      { "pageType": "about", "required": true, "match": ["/about", "/about-us", "/company", "/who-we-are"] },
+      { "pageType": "category", "required": true, "match": ["/products", "/collections", "/categories", "/solutions"] },
+      { "pageType": "product", "required": true, "limit": 2, "match": ["/product/", "/products/", "/collections/"] },
+      { "pageType": "contact", "required": true, "match": ["/contact", "/enquiry", "/inquiry", "/quote", "/request-a-quote", "/get-a-quote"] },
+      { "pageType": "case", "required": true, "alternateOf": ["faq"], "match": ["/projects", "/cases", "/portfolio", "/works"] },
+      { "pageType": "faq", "required": false, "match": ["/faq", "/faqs", "/help"] }
+    ],
+    "optionalIfCheap": [
+      { "pageType": "download", "match": ["/catalog", "/catalogs", "/download", "/resources"] }
+    ]
+  },
+  "exclude": {
+    "paths": [
+      "/blog/**",
+      "/news/**",
+      "/insights/**",
+      "/cart/**",
+      "/account/**",
+      "/login/**",
+      "/wp-admin/**",
+      "/search/**",
+      "/tag/**",
+      "/privacy",
+      "/terms",
+      "/cookie"
+    ],
+    "content": [
+      "login-gated pages",
+      "full SKU catalog",
+      "all product images at original resolution",
+      "CSS/JS source",
+      "third-party pixels",
+      "legal page bodies"
+    ]
+  },
+  "perPageExtract": {
+    "always": ["finalUrl", "httpStatus", "title", "description", "h1", "markdown", "imageUrls", "outboundLinks"],
+    "homeAlso": ["nav labels+hrefs", "hero copy", "section heading order"],
+    "contactAlso": ["form field names/types/required", "CTA labels", "whatsapp/email/phone if public"],
+    "categoryAlso": ["category cards: label, href, image"],
+    "productAlso": ["visible specs", "1 main image + 1 lifestyle if present"]
+  },
+  "notExpectedFromCrawler": [
+    "theme-tokens.json (needs computed CSS; fill later from screenshot or DevTools)",
+    "sections/*.json role mapping (fill after markdown lands)",
+    "license judgements beyond default reference-only"
+  ],
+  "jina": {
+    "method": "GET",
+    "url": "https://r.jina.ai/{absoluteUrl}",
+    "headers": {
+      "Authorization": "Bearer {JINA_TOKEN}",
+      "Accept": "application/json",
+      "X-Respond-With": "frontmatter",
+      "X-Retain-Images": "all",
+      "X-Retain-Links": "all",
+      "X-Retain-Media": "link",
+      "X-With-Images-Summary": "true",
+      "X-With-links-Summary": "true",
+      "X-Robots-Txt": "true",
+      "X-Engine": "browser",
+      "X-Timeout": "60",
+      "X-Locale": "{locale}"
+    },
+    "notes": [
+      "Official options: https://r.jina.ai/docs",
+      "X-Respond-With: frontmatter returns YAML title/description/url plus markdown body.",
+      "X-With-Images-Summary / X-With-links-Summary give dedicated image and link lists for manifest and IA.",
+      "Do not use X-Preset: spider for phase 1. Fetch the seed list only.",
+      "JS-heavy sites: keep X-Engine: browser, or X-Engine: cf-browser-rendering if that engine works better.",
+      "X-With-Generated-Alt does not work when X-Respond-With is set; skip it."
+    ]
+  },
+  "cloudflare": {
+    "discoverThenFetch": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/crawl",
+      "body": {
+        "url": "{origin}/",
+        "limit": 12,
+        "depth": 2,
+        "source": "all",
+        "formats": ["markdown"],
+        "render": true,
+        "crawlPurposes": ["ai-input"],
+        "contentUse": "reference",
+        "options": {
+          "includeExternalLinks": false,
+          "includeSubdomains": false,
+          "includePatterns": [
+            "{origin}/",
+            "{origin}/about**",
+            "{origin}/about-us**",
+            "{origin}/company**",
+            "{origin}/products**",
+            "{origin}/product/**",
+            "{origin}/collections**",
+            "{origin}/solutions**",
+            "{origin}/contact**",
+            "{origin}/enquiry**",
+            "{origin}/inquiry**",
+            "{origin}/quote**",
+            "{origin}/projects**",
+            "{origin}/cases**",
+            "{origin}/portfolio**",
+            "{origin}/faq**",
+            "{origin}/catalog**"
+          ],
+          "excludePatterns": [
+            "{origin}/blog/**",
+            "{origin}/news/**",
+            "{origin}/cart/**",
+            "{origin}/account/**",
+            "{origin}/login/**",
+            "{origin}/wp-admin/**",
+            "{origin}/search/**"
+          ]
+        }
+      }
+    },
+    "singlePageMarkdown": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/markdown",
+      "body": {
+        "url": "{absoluteUrl}",
+        "gotoOptions": { "waitUntil": "networkidle0" }
+      },
+      "useWhen": "Preferred for the 6 seed URLs. More predictable than a wide /crawl job."
+    },
+    "notes": [
+      "Official crawl: https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
+      "Official markdown: https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/",
+      "Token needs Browser Rendering - Edit.",
+      "contentUse: reference matches research/rewrite, not republishing.",
+      "If robots.txt Content-Signal rejects ai-input/reference, skip that host and record it; do not bypass.",
+      "JS category grids: render true or /markdown with waitUntil networkidle0.",
+      "Do not set formats to json for a full-site extract. Optional later, contact page only."
+    ]
+  },
+  "drop": {
+    "root": ".tmp/competitor-intel/{industry}/{domain}/",
+    "raw": [
+      "raw/pages/{pageType}-{slug}.md",
+      "raw/jina/{pageType}-{slug}.json",
+      "raw/cf-crawl.json",
+      "raw/sitemap.xml",
+      "raw/robots.txt"
+    ],
+    "afterNormalize": [
+      "collection.json",
+      "meta.json",
+      "ia.json",
+      "pages/{pageType}/{slug}.md",
+      "images/manifest.json"
+    ],
+    "fillLater": [
+      "sections/home.json",
+      "forms/contact.json",
+      "theme-tokens.json",
+      "products.json"
+    ]
+  }
+}

@@ -195,7 +195,7 @@ https://github.com/yangzec/ratahome-astro
 ### 文档指针
 
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
-- **竞品采集方案**：`docs/COMPETITOR_INTEL.md`（模型与映射；爬虫未实现）
+- **竞品采集方案**：`docs/COMPETITOR_INTEL.md`（模型与映射；抓取用 Jina / CF，仓库不写爬虫）
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件
