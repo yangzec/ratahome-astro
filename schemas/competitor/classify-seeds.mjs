@@ -220,11 +220,12 @@ function scoreLink(link, base) {
         evidence.push(`path~${token}→${pageType}`);
       }
     }
+    if (!score) continue;
     if (link.sources.includes('nav') || link.sources.includes('jina')) score += 1;
-    if (pageType === 'category' && depth(link.path) === 1 && score) score += 1;
-    if (pageType === 'product' && depth(link.path) >= 2 && score) score += 1;
-    if (pageType === 'download' && /\/(catalogs?|downloads?)$/i.test(link.path) && score) score += 2;
-    if (score) scores[pageType] = score;
+    if (pageType === 'category' && depth(link.path) === 1) score += 1;
+    if (pageType === 'product' && depth(link.path) >= 2) score += 1;
+    if (pageType === 'download' && /\/(catalogs?|downloads?)$/i.test(link.path)) score += 2;
+    scores[pageType] = score;
   }
 
   const ranked = Object.entries(scores).sort((a, b) => {
