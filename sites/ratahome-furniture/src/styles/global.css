@@ -276,14 +276,15 @@
   }
 
   .site-logo {
-    height: 1.25rem;
+    height: 1.375rem;
     width: auto;
-    max-width: 7.5rem;
+    max-width: 9.5rem;
   }
 
   /* 深色顶栏：字标 PNG 反色为白 */
   .site-logo--on-dark {
     filter: brightness(0) invert(1);
+    opacity: 0.95;
   }
 
   @media (min-width: 640px) {
