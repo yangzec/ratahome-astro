@@ -13,8 +13,8 @@ const { cta } = home;
 const { site, buttons } = common;
 ---
 
-<section id="upload" class="container-site py-12 md:py-20">
-  <div class="grid lg:grid-cols-2 gap-12 items-center">
+<section id="upload" class="container-site section-y">
+  <div class="grid lg:grid-cols-2 stack-gap items-center">
     <div>
       <h2 class="section-title mb-4">{cta.title}</h2>
       <p class="text-izza-gray-text text-lg mb-8">{cta.description}</p>
@@ -27,7 +27,7 @@ const { site, buttons } = common;
         ))}
       </ol>
     </div>
-    <div class="bg-izza-cream rounded-lg p-8">
+    <div class="bg-izza-cream rounded-lg card-pad">
       <h3 class="text-xl font-semibold text-izza-ink mb-2">{cta.formTitle}</h3>
       <p class="text-sm text-izza-gray-muted mb-6">{cta.formDescription}</p>
       <ContactForm locale={locale} />

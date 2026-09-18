@@ -54,7 +54,84 @@
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: clamp(1.25rem, 4vw, 3.875rem);
+    padding-inline: clamp(1rem, 3.5vw, 3.875rem);
+  }
+
+  /* 区块外距：section 上下 */
+  .section-y {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .section-y-sm {
+    padding-block: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  /* 标题区与内容区间距 */
+  .section-header {
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  /* 卡片 / 表单容器内距 */
+  .card-pad {
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+  }
+
+  /* 表单控件内距 */
+  .field-control {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-izza-border);
+    background: white;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .field-control:focus {
+    outline: 2px solid color-mix(in srgb, var(--color-izza-accent) 35%, transparent);
+    outline-offset: 1px;
+  }
+
+  textarea.field-control {
+    min-height: 6rem;
+    resize: vertical;
+  }
+
+  .field-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-izza-gray-muted);
+  }
+
+  /* Hero 内容区内距 */
+  .hero-panel {
+    padding-top: clamp(4rem, 14vw, 7rem);
+    padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  /* 双栏 / 大区块内容间距 */
+  .stack-gap {
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  /* 内页 Hero 上下外距 */
+  .page-hero-y {
+    padding-block: clamp(4rem, 10vw, 8rem);
+  }
+
+  /* Footer 上下外距与分隔 */
+  .footer-y {
+    padding-block: clamp(3rem, 5vw, 4rem);
+  }
+
+  .footer-divider {
+    margin-top: clamp(2rem, 4vw, 3rem);
+    padding-top: clamp(2rem, 4vw, 3rem);
   }
 
   .eyebrow {
@@ -71,7 +148,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.375rem;
-    padding: 0.625rem 1.25rem;
+    padding: 0.75rem 1.375rem;
     border-radius: var(--radius-pill);
     background: var(--color-izza-accent);
     color: white;
@@ -86,7 +163,7 @@
 
   @media (min-width: 640px) {
     .btn-primary {
-      padding: 0.6875rem 1.5rem;
+      padding: 0.8125rem 1.625rem;
       font-size: 0.875rem;
     }
   }
@@ -100,7 +177,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.375rem;
-    padding: calc(0.625rem - 1px) calc(1.25rem - 1px);
+    padding: calc(0.75rem - 1px) calc(1.375rem - 1px);
     border-radius: var(--radius-pill);
     border: 1px solid rgba(255 255 255 / 0.55);
     color: white;
@@ -116,7 +193,7 @@
 
   @media (min-width: 640px) {
     .btn-outline {
-      padding: calc(0.6875rem - 1px) calc(1.5rem - 1px);
+      padding: calc(0.8125rem - 1px) calc(1.625rem - 1px);
       font-size: 0.875rem;
     }
   }

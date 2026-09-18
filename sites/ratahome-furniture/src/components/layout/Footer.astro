@@ -13,8 +13,8 @@ const { site, footer } = common;
 ---
 
 <footer class="bg-izza-olive-dark text-white">
-  <div class="container-site py-16">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+  <div class="container-site footer-y">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 section-header">
       {home.footerFeatures.map((feature) => (
         <div>
           <h3 class="font-semibold text-white mb-2">{feature.title}</h3>
@@ -23,7 +23,7 @@ const { site, footer } = common;
       ))}
     </div>
 
-    <div class="border-t border-white/10 pt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="border-t border-white/10 footer-divider grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
       <div class="lg:col-span-1">
         <img src="/images/logo.png" alt={site.name} class="site-logo brightness-0 invert mb-4" />
         <p class="text-sm text-white/60 leading-relaxed">{footer.description}</p>
@@ -45,7 +45,7 @@ const { site, footer } = common;
       ))}
     </div>
 
-    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+    <div class="border-t border-white/10 footer-divider flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
       <p>&copy; {new Date().getFullYear()} {site.name}. {footer.copyright}</p>
       <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
         <span>{site.location}</span>

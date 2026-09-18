@@ -17,15 +17,15 @@ const collections = pages.collections;
 <BaseLayout locale={locale} title={collections.title} description={collections.heroDescription}>
   <PageHero title={collections.heroTitle} description={collections.heroDescription} dark />
 
-  <section class="container-site py-12 md:py-20">
-    <h2 class="section-title mb-12">{collections.packagesTitle}</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <section class="container-site section-y">
+    <h2 class="section-title section-header">{collections.packagesTitle}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
       {pages.collectionPackages.map((pkg) => (
         <a href={localizedPath(pkg.href, locale)} class="group block bg-izza-cream rounded-[20px] overflow-hidden hover:shadow-lg transition-shadow">
           <div class="aspect-[4/3] overflow-hidden">
             <img src={pkg.image} alt={pkg.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
-          <div class="p-6">
+          <div class="card-pad">
             <h3 class="text-xl font-semibold text-izza-ink mb-2 group-hover:text-izza-accent transition-colors">{pkg.title}</h3>
             <p class="text-sm text-izza-gray-muted">{pkg.description}</p>
           </div>
@@ -34,13 +34,13 @@ const collections = pages.collections;
     </div>
   </section>
 
-  <section class="bg-izza-olive-dark text-white py-12 md:py-20">
+  <section class="bg-izza-olive-dark text-white section-y">
     <div class="container-site">
       <h2 class="text-3xl font-semibold text-white mb-4">{collections.benefitsTitle}</h2>
-      <p class="text-white/70 text-lg mb-12 max-w-2xl">{collections.benefitsDescription}</p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <p class="text-white/70 text-lg section-header max-w-2xl">{collections.benefitsDescription}</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {pages.packageBenefits.map((b) => (
-          <div class="p-6 rounded-[17px] border border-white/10">
+          <div class="card-pad rounded-[17px] border border-white/10">
             <h3 class="font-semibold text-white mb-2">{b.title}</h3>
             <p class="text-sm text-white/60">{b.description}</p>
           </div>
@@ -49,7 +49,7 @@ const collections = pages.collections;
     </div>
   </section>
 
-  <section class="container-site py-12 md:py-20">
+  <section class="container-site section-y">
     <h2 class="section-title mb-4">{collections.stylesTitle}</h2>
     <p class="text-izza-gray-text mb-8">{collections.stylesDescription}</p>
     <div class="flex flex-wrap gap-3">

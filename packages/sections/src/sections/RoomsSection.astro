@@ -12,14 +12,14 @@ const { home } = getContent(locale);
 const { rooms } = home;
 ---
 
-<section class="bg-izza-cream py-12 md:py-20">
+<section class="bg-izza-cream section-y">
   <div class="container-site">
-    <h2 class="section-title mb-12">{rooms.title}</h2>
+    <h2 class="section-title section-header">{rooms.title}</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {rooms.items.map((room) => (
         <a
           href={localizedPath(`/collections/${room.slug}`, locale)}
-          class="group p-6 rounded-[17px] bg-white border border-izza-border/30 hover:border-izza-accent/40 transition-colors text-center"
+          class="group card-pad rounded-[17px] bg-white border border-izza-border/30 hover:border-izza-accent/40 transition-colors text-center"
         >
           <span class="font-semibold text-izza-ink group-hover:text-izza-accent transition-colors">{room.label}</span>
         </a>

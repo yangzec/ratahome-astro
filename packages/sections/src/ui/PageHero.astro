@@ -10,7 +10,7 @@ interface Props {
 const { title, description, eyebrow, image, dark = false } = Astro.props;
 ---
 
-<section class={`relative py-16 sm:py-24 md:py-32 ${image ? 'min-h-[45vh] sm:min-h-[50vh] flex items-end' : dark ? 'bg-izza-olive-dark' : 'bg-izza-cream'}`}>
+<section class={`relative page-hero-y ${image ? 'min-h-[45vh] sm:min-h-[50vh] flex items-end' : dark ? 'bg-izza-olive-dark' : 'bg-izza-cream'}`}>
   {image && (
     <>
       <img src={image} alt="" class="absolute inset-0 w-full h-full object-cover" />
