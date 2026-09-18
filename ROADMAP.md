@@ -353,6 +353,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 17:15 | 竞品采集模型 + crawl-brief | `node schemas/competitor/validate.mjs` | 通过（含 crawl-brief 合同、12 个 Section 映射） |
 | 2026-09-18 15:54 | 竞品采集模型 | `node schemas/competitor/validate.mjs` | 通过（schema、12 个 Section 映射、home.json 键、第一期页面类型） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
