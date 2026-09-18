@@ -20,8 +20,8 @@
     { "value": "100%", "label": "Cartons checked before ship" }
   ],
   "audiences": {
-    "title": "Built for apparel buyers, not fabric traders.",
-    "description": "Brands, retailers and agents work from the same tech pack, size spec and inspection standard.",
+    "title": "Brands, retailers and agents share one program file.",
+    "description": "The same tech pack, size spec and inspection standard follow every style from fit sample to shipment.",
     "items": [
       { "title": "Brands", "description": "Seasonal collections with locked blocks and repeatable factories.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "Retailers", "description": "Private-label programs with size specs and carton packing.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },

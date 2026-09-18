@@ -103,6 +103,8 @@ sites/ratahome-furniture/content/
 
 改完后保存，开发服务器会自动热更新；生产需重新 `pnpm build`。
 
+对外文案只写给该站访客（买家、品牌、对接人）。禁止用「而不是面料贸易商」「not fabric traders」等句子证明本站和源站不同；行业差异写在对象、交付物、流程和品类上。`validate` 会拦截这类对照句。
+
 ---
 
 ## 6. 修改首页区块顺序（Blueprint）
@@ -231,7 +233,7 @@ pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
 # 只拷结构：不拷源站 content、不拷 public/images。创建后 validate 会报错，直到写完本站文案。
 pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
 
-# 校验：必填文案、源站文案复用、导航/品类死链均为 error
+# 校验：必填文案、源站文案复用、对照式行业否定句、导航/品类死链均为 error
 pnpm site-cli validate textile-fabric
 
 # 本地开发

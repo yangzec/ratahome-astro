@@ -11,6 +11,7 @@
 | 部署顺序 | **先单站单部署，后多站单部署** | 先证明「站可复制」，再证明「部署可合并」 |
 | 代码组织 | Monorepo + `sites/{industry}/` | 共享 `packages/core`，每站独立配置 |
 | 行业语义 | **内容文案为主，组件为辅** | 80% 差异在 JSON / 路由 / 素材；仅 ~20% 需新 Section |
+| 对外文案 | **只写给该站访客** | 「不复用源站」是验收条件，禁止写成「不是面料/家具站」这类对照句 |
 | 页面多样化 | Section Registry + Page Blueprint | 首页等由 JSON 配置区块顺序，非写死模板 |
 | 多语言 | en 默认 + zh（`/zh/`） | 后续按需扩展 locale |
 | 技术栈 | Astro 7 + Tailwind 4 + Cloudflare D1/R2 | 不引入第二套 UI 框架 |
@@ -145,7 +146,7 @@ trade-site-platform/
 |---|------|----------|
 | 2.1 | 定义 `b2b-textile` JSON Schema | content / routes / blueprint / theme 有 schema；`templates.json` 注册模板 |
 | 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；阶段 2 执行面料 / 服装 / 家纺各 1 个 |
-| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站复用文案 / 死链均为 error |
+| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站复用 / 对照式行业否定句 / 死链均为 error |
 | 2.4 | 完成 3 站 content + 素材 | 首页、导航、关于、联系可浏览（en + zh） |
 | 2.5 | 各站独立 wrangler 部署 | 3 个独立域名；**共享同一 D1**（`site_id` 隔离数据）；R2 用 `{site_id}/` 前缀 |
 | 2.6 | 记录复用率 | 列出复用 Section vs 新增 Section（目标新增 < 3 个） |
@@ -344,6 +345,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 20:52 | 对外文案只写给访客；`validate` 拦截对照式行业否定句；去掉成衣站「而不是面料贸易商」 |
 | 2026-09-18 20:01 | 成衣 / 家纺重建站重新部署到 `textile-apparel` / `textile-home.yangzec.workers.dev` |
 | 2026-09-18 19:58 | 删除并重建 `textile-apparel` / `textile-home`：骨架 create + 成衣/家纺独立文案与路由，去掉家具占位图 |
 | 2026-09-18 18:26 | `site-cli create` 只拷骨架不拷文案；`validate`/`deploy` 对空文案、源站复用、死链报 error |
@@ -375,6 +377,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 20:52 | 对照句校验 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；成衣 audiences 不再含「而不是面料」 | 通过 |
 | 2026-09-18 20:01 | 成衣/家纺生产 | 首页 en/zh HTTP 200；`/styles/*` `/products/*` 200；旧 `/fabrics/cotton` 404；hero JPEG `FFD8FF`；浏览器核对成衣/家纺文案 | 通过 |
 | 2026-09-18 19:58 | 成衣/家纺重建 | `validate textile-apparel` / `textile-home` 通过；文案与 `/styles` `/products` 路由不再复用面料站 | 通过 |
 | 2026-09-18 18:26 | site-cli | `pnpm site-cli:test`（8）；`validate ratahome-furniture` / `textile-fabric` 通过；`textile-apparel` / `textile-home` 死链与源站文案复用报 error | 符合预期 |

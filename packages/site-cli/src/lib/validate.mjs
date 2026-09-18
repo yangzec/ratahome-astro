@@ -201,6 +201,10 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     errors.push(...findSourceCopyLeaks({ slug, template, siteDir, root }));
   }
 
+  for (const [fileKey, data] of Object.entries(parsed)) {
+    errors.push(...findContrastCopyLeaks(data, `content/${fileKey}`));
+  }
+
   return {
     slug,
     siteId,
@@ -229,6 +233,37 @@ function hrefOf(item) {
 
 function getPath(value, path) {
   return path.split('.').reduce((acc, key) => acc?.[key], value);
+}
+
+const CONTRAST_COPY = [
+  /而不是\s*(面料|家具|成衣|家纺)/,
+  /不是\s*(面料|家具)(贸易商|站|厂|商)?/,
+  /\bnot\s+(a\s+|the\s+)?(fabric|furniture|apparel|home[\s-]?textile)s?\b/i,
+  /\bbuilt for\b[\s\S]{0,80}\bnot\b/i,
+];
+
+function findContrastCopyLeaks(value, where, errors = []) {
+  if (typeof value === 'string') {
+    const text = value.trim();
+    if (CONTRAST_COPY.some((re) => re.test(text))) {
+      errors.push(`${where}: visitor copy must not define this site by negating another industry — rewrite "${truncate(text)}"`);
+    }
+    return errors;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => findContrastCopyLeaks(item, `${where}[${index}]`, errors));
+    return errors;
+  }
+  if (value && typeof value === 'object') {
+    for (const [key, child] of Object.entries(value)) {
+      findContrastCopyLeaks(child, `${where}.${key}`, errors);
+    }
+  }
+  return errors;
+}
+
+function truncate(text, max = 72) {
+  return text.length > max ? `${text.slice(0, max)}…` : text;
 }
 
 function findSourceCopyLeaks({ slug, template, siteDir, root }) {

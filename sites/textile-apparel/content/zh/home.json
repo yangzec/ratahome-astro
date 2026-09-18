@@ -20,8 +20,8 @@
     { "value": "100%", "label": "发货前清点箱数" }
   ],
   "audiences": {
-    "title": "服务成衣买家，而不是面料贸易商。",
-    "description": "品牌、零售与代理共用同一套工艺单、尺码表和验货标准。",
+    "title": "品牌、零售与代理，共用一套工艺单和验货标准。",
+    "description": "同一套工艺单、尺码表和验货标准，从试穿样跟到出货。",
     "items": [
       { "title": "品牌方", "description": "季节系列，基码锁定，工厂可复购。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "零售商", "description": "贴牌项目，尺码表与装箱标准齐套。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
