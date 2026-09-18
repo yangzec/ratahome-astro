@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "成衣开发 · 打样 · 大货出口",
+    "eyebrow": "工艺单 · 产前样 · 大货车缝",
     "title": "从工艺单到出货，做成一套成衣项目。",
-    "description": "为品牌与零售商开发针织、梭织款式——尺码表、产前样、大货车缝与出口单证，同一项目推进。",
+    "description": "品牌、零售与代理用同一份档案开发针织、梭织款式——尺码表、产前样、PP 样、大货车缝与出口包装。",
     "image": "/images/hero.jpg",
     "imageAlt": "成衣打样间与挂样衣",
     "ctaHref": "#sample"
@@ -10,7 +10,7 @@
   "assurances": [
     { "icon": "/icons/shield-check.svg", "title": "BSCI 工厂项目", "description": "可按需提供验厂资料" },
     { "icon": "/icons/box-seam.svg", "title": "大货前先做产前样", "description": "每款书面批复" },
-    { "icon": "/icons/shield-check.svg", "title": "出货前 AQL", "description": "尺寸与箱单报告" },
+    { "icon": "/icons/shield-check.svg", "title": "出货前 AQL 报告", "description": "尺寸与箱单清点" },
     { "icon": "/icons/clock.svg", "title": "48 小时样品回复", "description": "规格与 MOQ 同一联系人" }
   ],
   "metrics": [
@@ -21,7 +21,7 @@
   ],
   "audiences": {
     "title": "品牌、零售与代理，共用一套工艺单和验货标准。",
-    "description": "同一套工艺单、尺码表和验货标准，从试穿样跟到出货。",
+    "description": "同一套工艺单、尺码表和 AQL 报告，从试穿样跟到出货。",
     "items": [
       { "title": "品牌方", "description": "季节系列，基码锁定，工厂可复购。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "零售商", "description": "贴牌项目，尺码表与装箱标准齐套。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
@@ -31,7 +31,7 @@
   },
   "capabilities": {
     "title": "从工艺单到装柜纸箱，一份项目档案。",
-    "description": "不用分别追版房、车缝和货代，由同一成衣团队推进。",
+    "description": "版房、车缝和货代由同一成衣团队从首样跟到出口包装。",
     "items": [
       { "title": "工艺单与面料搭配", "description": "针织、梭织款式的结构、辅料与面料书面锁定。", "image": "/images/capabilities/composition.jpg" },
       { "title": "尺码表与放码", "description": "按目标市场放码——大货开裁前书面确认试穿。", "image": "/images/capabilities/color.jpg" },
@@ -49,17 +49,17 @@
       { "step": "02", "title": "匹配工厂", "description": "按结构与量体筛选车缝产线。" },
       { "step": "03", "title": "确认试穿", "description": "产前样与尺码表签字后再开裁。" },
       { "step": "04", "title": "大货车缝", "description": "按订单与颜色做过程质检和尺寸记录。" },
-      { "step": "05", "title": "出货", "description": "AQL、箱单与出口文件随箱走。" }
+      { "step": "05", "title": "出货", "description": "AQL 报告、箱单与出口文件随箱走。" }
     ]
   },
   "testimonials": [
     { "quote": "试穿意见在开裁前关闭。到货尺寸与批复规格一致。", "author": "Northline Retail · 德国" },
-    { "quote": "一份工艺单覆盖打样、PP 和出口装箱。不用再开多条工厂群。", "author": "Harbor Agency · 美国" }
+    { "quote": "一份工艺单覆盖打样、PP 和出口装箱。整条项目只保留一条工厂沟通线。", "author": "Harbor Agency · 美国" }
   ],
   "warranty": {
     "eyebrow": "生产节点",
     "title": "尺码或车缝不合格怎么办？",
-    "description": "批复绑定具体款式和订单——不是货离开工厂后再补承诺。",
+    "description": "批复绑定具体款式和订单——争议对照已签字档案处理。",
     "commitment": "尺寸争议对照已签字的尺码表和随箱 AQL 报告处理。",
     "cases": [
       { "question": "如果大货版型跑偏", "title": "按已批复样品返修或暂停该订单。", "description": "产前样通过后才开裁。超公差尺码在装箱前拦截。" },
@@ -84,8 +84,8 @@
     "items": []
   },
   "ecosystem": {
-    "title": "车缝网络，不是撮合平台。",
-    "description": "经过筛选的裁缝工厂——工艺单、产前样与出口装箱由同一团队负责。",
+    "title": "裁缝工厂网络，同一项目组对接。",
+    "description": "经过筛选的车缝工厂——工艺单、产前样与出口包装由同一联系人跟进。",
     "items": []
   },
   "cta": {

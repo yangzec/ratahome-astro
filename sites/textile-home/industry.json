@@ -1,0 +1,37 @@
+{
+  "visitors": [
+    "hotels",
+    "retailers",
+    "developers",
+    "product developers"
+  ],
+  "deliverables": [
+    "bedding sets",
+    "bath towels",
+    "curtains",
+    "embroidery proof",
+    "OEKO-TEX certificate",
+    "set packing"
+  ],
+  "catalogPrefix": "products",
+  "catalog": [
+    "bedding-sets",
+    "duvets-pillows",
+    "bath-towels",
+    "curtains",
+    "table-linen",
+    "custom-embroidered"
+  ],
+  "pages": [
+    "hotels",
+    "retailers",
+    "developers",
+    "sampling",
+    "certifications",
+    "moq",
+    "quality-control",
+    "how-it-works",
+    "faq",
+    "blog"
+  ]
+}

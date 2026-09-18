@@ -1,4 +1,4 @@
-export const styleSlugs = [
+export const catalogSlugs = [
   'knit-tops',
   'woven-shirts',
   'outerwear',
@@ -6,11 +6,6 @@ export const styleSlugs = [
   'uniforms',
   'private-label',
 ];
-
-export const collectionSlugs: string[] = [];
-export const joinerySlugs: string[] = [];
-export const projectSlugs: string[] = [];
-
 export const pageSlugs = [
   'brands',
   'retailers',

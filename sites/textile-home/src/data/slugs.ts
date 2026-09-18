@@ -1,4 +1,4 @@
-export const productSlugs = [
+export const catalogSlugs = [
   'bedding-sets',
   'duvets-pillows',
   'bath-towels',
@@ -6,11 +6,6 @@ export const productSlugs = [
   'table-linen',
   'custom-embroidered',
 ];
-
-export const collectionSlugs: string[] = [];
-export const joinerySlugs: string[] = [];
-export const projectSlugs: string[] = [];
-
 export const pageSlugs = [
   'hotels',
   'retailers',

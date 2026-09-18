@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "家纺 · 认证 · 定制绣花",
+    "eyebrow": "床品 · 卫浴 · 定制绣花",
     "title": "床品与卫浴项目，大货前先定认证。",
-    "description": "为零售商与酒店开发床品套装、毛巾与窗帘——可选 OEKO-TEX、绣花定制与出口包装，同一团队交付。",
+    "description": "酒店、零售与开发商一次指定床品套装、毛巾与窗帘——绣花确认样、OEKO-TEX 证书与套装包装留在同一份档案。",
     "image": "/images/hero.jpg",
     "imageAlt": "酒店床品与叠放巾类",
     "ctaHref": "#sample"
@@ -20,8 +20,8 @@
     { "value": "100%", "label": "发货前清点套数" }
   ],
   "audiences": {
-    "title": "服务酒店、零售与地产团队。",
-    "description": "酒店、零售与开发商一次定规格——认证与包装档案随每次补货沿用。",
+    "title": "酒店、零售与地产团队，共用一份房型档案。",
+    "description": "酒店、零售与开发商一次定规格——证书与包装档案随每次补货沿用。",
     "items": [
       { "title": "酒店", "description": "客房与卫浴项目，含绣花与补货。", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
       { "title": "零售商", "description": "季节床品与毛巾系列，批次可认证。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
@@ -31,7 +31,7 @@
   },
   "capabilities": {
     "title": "从房型规格到套装装箱，一份项目档案。",
-    "description": "不用把床单、绣花和包装拆给不同供应商，由同一家纺团队推进。",
+    "description": "床单、绣花和包装由同一家纺团队从套装样跟到出口。",
     "items": [
       { "title": "床品项目", "description": "套装、被芯与枕芯——支数与尺寸书面锁定。", "image": "/images/capabilities/composition.jpg" },
       { "title": "卫浴与色系", "description": "酒店与零售毛圈毛巾，按 SKU 确认克重。", "image": "/images/capabilities/color.jpg" },
@@ -59,7 +59,7 @@
   "warranty": {
     "eyebrow": "项目节点",
     "title": "套装或证书不对怎么办？",
-    "description": "批复绑定具体 SKU 与批次——不是货柜离开后再补承诺。",
+    "description": "批复绑定具体 SKU 与批次——争议对照已签字样品和范围文件。",
     "commitment": "争议对照已签字的套装样、证书和随箱箱单处理。",
     "cases": [
       { "question": "如果证书与批次不符", "title": "暂停订单直至范围文件齐套。", "description": "OEKO-TEX 等声明随订单档案出具。未认证批次不得按认证货装箱。" },
@@ -84,8 +84,8 @@
     "items": []
   },
   "ecosystem": {
-    "title": "家纺车间，不是撮合平台。",
-    "description": "经过筛选的床单、毛圈与窗帘产线——套装样、证书与出口包装由同一团队负责。",
+    "title": "家纺车间，同一项目组对接。",
+    "description": "经过筛选的床单、毛圈与窗帘产线——套装样、证书与出口包装由同一联系人跟进。",
     "items": []
   },
   "cta": {

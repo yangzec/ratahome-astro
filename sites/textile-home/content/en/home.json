@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "Home textile · Certifications · Custom embroidery",
+    "eyebrow": "Bedding · Bath · Custom embroidery",
     "title": "Bedding and bath programs, certified before bulk.",
-    "description": "We develop bedding sets, towels and curtain programs for retailers and hospitality — OEKO-TEX options, embroidery and export packing in one team.",
+    "description": "Hotels, retailers and developers specify bedding sets, bath towels and curtains once — embroidery proof, OEKO-TEX certificate and set packing stay on the same file.",
     "image": "/images/hero.jpg",
     "imageAlt": "Hotel bedding program with layered linen",
     "ctaHref": "#sample"
@@ -20,8 +20,8 @@
     { "value": "100%", "label": "Sets counted before ship" }
   ],
   "audiences": {
-    "title": "Built for hotels, retailers and property teams.",
-    "description": "Hospitality, retail and developers specify once — the same certification and packing file follows every replenishment.",
+    "title": "Hotels, retailers and property teams share one room file.",
+    "description": "Hospitality, retail and developers specify once — the same certificate and packing file follows every replenishment.",
     "items": [
       { "title": "Hotels", "description": "Guestroom and bath programs with embroidery and replenishment.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
       { "title": "Retailers", "description": "Seasonal bedding and towel collections with certified lots.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
@@ -31,7 +31,7 @@
   },
   "capabilities": {
     "title": "From room spec to packed set — one program file.",
-    "description": "Instead of splitting sheeting, embroidery and packing across vendors, you work with one home-textile team.",
+    "description": "Sheeting, embroidery and packing stay on the same home-textile team from sample set to export.",
     "items": [
       { "title": "Bedding programs", "description": "Sets, duvets and pillows with thread count and size locked in writing.", "image": "/images/capabilities/composition.jpg" },
       { "title": "Bath & color range", "description": "Terry towels in hospitality and retail palettes, GSM confirmed per SKU.", "image": "/images/capabilities/color.jpg" },
@@ -59,10 +59,10 @@
   "warranty": {
     "eyebrow": "Program gates",
     "title": "What if a set or certificate is wrong?",
-    "description": "Approvals are tied to a SKU and lot — not promised after the container leaves.",
+    "description": "Approvals are tied to a SKU and lot — claims follow the signed sample and scope file.",
     "commitment": "Every claim is checked against the signed sample set, certificate and packing list that travel with the goods.",
     "cases": [
-      { "question": "If a certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "OEKO-TEX or equivalent claims are issued with the order file. Uncertified lots are not packed as certified." },
+      { "question": "If a certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "OEKO-TEX or equivalent claims are issued with the order file. Uncertified lots stay off certified packing." },
       { "question": "If embroidery misses the artwork", "title": "Proof approval before bulk stitching.", "description": "Logo size, thread and placement are signed on the proof. Off-spec pieces are pulled before packing." },
       { "question": "If sets arrive incomplete", "title": "Packing list reconciles pieces vs. PO.", "description": "Each set is counted at final inspection. Shortage claims follow the signed packing list." }
     ]
@@ -84,8 +84,8 @@
     "items": []
   },
   "ecosystem": {
-    "title": "Home-textile workshops, not a marketplace.",
-    "description": "Vetted sheeting, terry and curtain lines — one team for sample sets, certificates and export packing.",
+    "title": "Home-textile workshops with one program team.",
+    "description": "Vetted sheeting, terry and curtain lines — sample sets, certificates and export packing stay with the same contact.",
     "items": []
   },
   "cta": {

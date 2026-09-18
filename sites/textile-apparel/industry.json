@@ -1,0 +1,38 @@
+{
+  "visitors": [
+    "brands",
+    "retailers",
+    "agents",
+    "product developers"
+  ],
+  "deliverables": [
+    "tech pack",
+    "size spec",
+    "fit sample",
+    "PP sample",
+    "bulk sewing",
+    "AQL report",
+    "export packing"
+  ],
+  "catalogPrefix": "styles",
+  "catalog": [
+    "knit-tops",
+    "woven-shirts",
+    "outerwear",
+    "activewear",
+    "uniforms",
+    "private-label"
+  ],
+  "pages": [
+    "brands",
+    "retailers",
+    "agents",
+    "sampling",
+    "size-specs",
+    "certifications",
+    "quality-control",
+    "how-it-works",
+    "faq",
+    "blog"
+  ]
+}
