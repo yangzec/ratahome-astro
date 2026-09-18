@@ -71,16 +71,25 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 3.75rem;
-    padding: 0.875rem 1.875rem;
+    min-height: 2.75rem;
+    padding: 0.75rem 2rem;
     border-radius: var(--radius-pill);
     background: var(--color-izza-accent);
     color: white;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     transition: background 0.2s, transform 0.2s;
+  }
+
+  @media (min-width: 640px) {
+    .btn-primary {
+      min-height: 3rem;
+      padding: 0.75rem 2.25rem;
+      font-size: 0.9375rem;
+    }
   }
 
   .btn-primary:hover {
@@ -92,17 +101,26 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 3.75rem;
-    padding: 0.875rem 1.875rem;
+    min-height: 2.75rem;
+    padding: 0.75rem 2rem;
     border-radius: var(--radius-pill);
     border: 1px solid rgba(255 255 255 / 0.4);
     color: white;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     backdrop-filter: blur(8px);
     transition: background 0.2s, border-color 0.2s;
+  }
+
+  @media (min-width: 640px) {
+    .btn-outline {
+      min-height: 3rem;
+      padding: 0.75rem 2.25rem;
+      font-size: 0.9375rem;
+    }
   }
 
   .btn-outline:hover {
@@ -115,16 +133,25 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 2.75rem;
-    padding: 0.875rem 1.5rem;
+    min-height: 2.5rem;
+    padding: 0.625rem 1.5rem;
     border-radius: var(--radius-pill);
     border: 1px solid var(--color-izza-border);
     color: var(--color-izza-ink);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     transition: border-color 0.2s, color 0.2s;
+  }
+
+  @media (min-width: 640px) {
+    .btn-secondary {
+      min-height: 2.75rem;
+      padding: 0.625rem 1.75rem;
+      font-size: 0.875rem;
+    }
   }
 
   .btn-secondary:hover {
