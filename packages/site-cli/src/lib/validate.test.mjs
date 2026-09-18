@@ -122,7 +122,7 @@ describe('validateSite', () => {
     assert.ok(result.errors.some((e) => e.includes('still matches source site textile-fabric')));
   });
 
-  it('errors when copy defines the site by negating another industry', () => {
+  it('errors when copy defines the site by negating another site or category', () => {
     const root = mkdtempSync(join(tmpdir(), 'site-cli-contrast-'));
     const siteDir = writeSite(root);
     writeFilledContent(siteDir, {
@@ -137,7 +137,7 @@ describe('validateSite', () => {
 
     const result = validateSite('demo-site', root);
     assert.equal(result.ok, false);
-    assert.ok(result.errors.some((e) => e.includes('negating another industry')));
+    assert.ok(result.errors.some((e) => e.includes('negating another site or category')));
   });
 });
 

@@ -236,17 +236,18 @@ function getPath(value, path) {
 }
 
 const CONTRAST_COPY = [
-  /而不是\s*(面料|家具|成衣|家纺)/,
-  /不是\s*(面料|家具)(贸易商|站|厂|商)?/,
-  /\bnot\s+(a\s+|the\s+)?(fabric|furniture|apparel|home[\s-]?textile)s?\b/i,
+  /而[不非]是\s*\S{1,16}(贸易商|出口商|工厂|站点|模板|行业)/,
+  /不是\s*\S{1,12}(贸易商|站点|模板)/,
+  /\bnot\s+(a\s+|the\s+)?\w+[\s-]+\w*\s*(traders?|mills?|exporters?|sites?|templates?)\b/i,
   /\bbuilt for\b[\s\S]{0,80}\bnot\b/i,
+  /\bunlike\s+(our\s+)?(other|sister|source|template)\b/i,
 ];
 
 function findContrastCopyLeaks(value, where, errors = []) {
   if (typeof value === 'string') {
     const text = value.trim();
     if (CONTRAST_COPY.some((re) => re.test(text))) {
-      errors.push(`${where}: visitor copy must not define this site by negating another industry — rewrite "${truncate(text)}"`);
+      errors.push(`${where}: visitor copy must not define this site by negating another site or category — rewrite "${truncate(text)}"`);
     }
     return errors;
   }
