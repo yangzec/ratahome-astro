@@ -5,6 +5,13 @@
   <url><loc>https://acme.example/shop</loc></url>
   <url><loc>https://acme.example/shop/oak-sofa</loc></url>
   <url><loc>https://acme.example/shop/linen-set</loc></url>
+  <url><loc>https://acme.example/shop/cotton-twill</loc></url>
+  <url><loc>https://acme.example/shop/silk-satin</loc></url>
+  <url><loc>https://acme.example/shop/denim-14oz</loc></url>
+  <url><loc>https://acme.example/shop/canvas-16oz</loc></url>
+  <url><loc>https://acme.example/shop/jersey-knit</loc></url>
+  <url><loc>https://acme.example/shop/voile-plain</loc></url>
+  <url><loc>https://acme.example/request-sample</loc></url>
   <url><loc>https://acme.example/enquire-now</loc></url>
   <url><loc>https://acme.example/works</loc></url>
   <url><loc>https://acme.example/catalog</loc></url>

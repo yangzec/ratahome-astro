@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "description": "Industry signals learned from homepage/nav. Used to weight characteristic pages. Not a page-count budget.",
+  "unknown": {
+    "template": null,
+    "signals": [],
+    "coreTypes": ["home", "about", "category", "product", "contact"],
+    "characteristicTypes": ["case", "download", "faq"],
+    "formIntentHint": "general"
+  },
+  "furniture": {
+    "template": "b2b-manufacturing",
+    "signals": [
+      "furniture", "sofa", "joinery", "wardrobe", "cabinetry", "furnishing",
+      "家具", "沙发", "橱柜", "定制家居"
+    ],
+    "coreTypes": ["home", "about", "category", "product", "contact", "case"],
+    "characteristicTypes": ["warranty", "process", "download"],
+    "formIntentHint": "floor-plan"
+  },
+  "textile": {
+    "template": "b2b-textile",
+    "signals": [
+      "textile", "fabric", "yarn", "gsm", "moq", "sample", "apparel", "garment",
+      "面料", "纺织", "服装", "家纺", "色卡", "打样"
+    ],
+    "coreTypes": ["home", "about", "category", "product", "contact"],
+    "characteristicTypes": ["sample", "spec", "cert", "download"],
+    "formIntentHint": "sample"
+  },
+  "packaging": {
+    "template": "b2b-packaging",
+    "signals": ["packaging", "carton", "corrugated", "包装", "纸箱", "彩盒"],
+    "coreTypes": ["home", "about", "category", "product", "contact"],
+    "characteristicTypes": ["spec", "download", "case"],
+    "formIntentHint": "quote"
+  },
+  "printing": {
+    "template": "b2b-printing",
+    "signals": ["printing", "print", "offset", "prepress", "印刷", "印前"],
+    "coreTypes": ["home", "about", "category", "product", "contact", "case"],
+    "characteristicTypes": ["process", "download", "spec"],
+    "formIntentHint": "quote"
+  },
+  "sports-outdoor": {
+    "template": "b2b-sports-outdoor",
+    "signals": ["sports", "outdoor", "camping", "hiking", "运动", "户外", "露营"],
+    "coreTypes": ["home", "about", "category", "product", "contact"],
+    "characteristicTypes": ["cert", "case", "download"],
+    "formIntentHint": "oem"
+  }
+}

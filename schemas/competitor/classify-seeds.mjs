@@ -12,6 +12,13 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const HERE = dirname(fileURLToPath(import.meta.url));
+const PROFILES = JSON.parse(readFileSync(joinProfiles(), 'utf8'));
+
+function joinProfiles() {
+  return resolve(HERE, 'industry-profiles.json');
+}
+
 const PAGE_HINTS = {
   about: [
     'about', 'about-us', 'aboutus', 'company', 'who-we-are', 'our-story', 'our-team',
@@ -31,7 +38,12 @@ const PAGE_HINTS = {
     '案例', '项目', '作品',
   ],
   faq: ['faq', 'faqs', 'help', '常见问题', '帮助'],
-  download: ['download', 'downloads', 'catalog', 'catalogs', 'resources', '下载', '样本', '图册'],
+  download: ['download', 'downloads', 'catalog', 'catalogs', 'resources', '下载', '图册'],
+  sample: ['sample', 'sampling', 'swatch', 'request-sample', '打样', '样品', '色卡'],
+  spec: ['spec', 'specification', 'datasheet', 'gsm', '规格', '克重'],
+  cert: ['cert', 'certificate', 'certification', 'oeko', 'gots', 'bsci', 'iso', '认证'],
+  warranty: ['warranty', 'guarantee', '质保', '保修'],
+  process: ['how-it-works', 'process', 'workflow', 'oem', 'odm', '流程'],
 };
 
 const EXCLUDE = [
@@ -46,30 +58,33 @@ export function classifySeeds({
   homeText = '',
   homeJson = null,
   sitemapXml = '',
-  maxPages = 12,
-  maxProducts = 4,
+  industryHint = '',
 }) {
   const base = normalizeOrigin(origin);
   const links = collectLinks({ base, homeText, homeJson, sitemapXml });
   const scored = links.map((link) => scoreLink(link, base));
+  const industry = inferIndustry({ homeText, scored, hint: industryHint });
   const urlPatterns = inferPatterns(scored, base);
-  const seeds = pickSeeds(scored, base, urlPatterns, { maxPages, maxProducts });
-  const required = ['home', 'about', 'category', 'product', 'contact'];
-  const hasCaseOrFaq = seeds.some((s) => s.pageType === 'case' || s.pageType === 'faq');
-  const unresolved = required.filter((type) => !seeds.some((s) => s.pageType === type));
-  if (!hasCaseOrFaq) unresolved.push('case|faq');
+  const seeds = pickSeeds(scored, base, urlPatterns, industry);
+  const coreTypes = industry.profile.coreTypes ?? [];
+  const unresolved = coreTypes.filter((type) => !seeds.some((s) => s.pageType === type));
 
   return {
     schemaVersion: 1,
     origin: base,
     pass: 2,
+    industry,
     urlPatterns,
     seeds,
     unresolved,
+    policy: {
+      pageBudget: false,
+      samplePerPattern: true,
+      skipNoise: true,
+    },
     candidates: scored
       .filter((row) => row.pageType !== 'skip')
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 40),
+      .sort((a, b) => b.score - a.score),
   };
 }
 
@@ -244,6 +259,33 @@ function depth(path) {
   return path.split('/').filter(Boolean).length;
 }
 
+function inferIndustry({ homeText, scored, hint = '' }) {
+  const profiles = Object.fromEntries(
+    Object.entries(PROFILES).filter(([key]) => key !== 'schemaVersion' && key !== 'description'),
+  );
+  if (hint && profiles[hint]) {
+    return { id: hint, confidence: 1, evidence: [`cli --industry ${hint}`], profile: profiles[hint] };
+  }
+  const hay = `${homeText} ${scored.flatMap((row) => [row.path, ...row.labels]).join(' ')}`;
+  const ranked = Object.entries(profiles)
+    .filter(([id]) => id !== 'unknown')
+    .map(([id, profile]) => {
+      const hits = (profile.signals ?? []).filter((signal) => containsToken(hay, signal) || hay.toLowerCase().includes(signal.toLowerCase()));
+      return { id, profile, hits, score: hits.length };
+    })
+    .sort((a, b) => b.score - a.score);
+  const best = ranked[0];
+  if (!best || best.score === 0) {
+    return { id: 'unknown', confidence: 0, evidence: [], profile: profiles.unknown };
+  }
+  return {
+    id: best.id,
+    confidence: Math.min(1, best.score / 3),
+    evidence: best.hits.slice(0, 6),
+    profile: best.profile,
+  };
+}
+
 function inferPatterns(scored, base) {
   const groups = new Map();
   for (const row of scored) {
@@ -279,59 +321,76 @@ function inferPatterns(scored, base) {
   return patterns;
 }
 
-function pickSeeds(scored, base, urlPatterns, { maxPages = 12, maxProducts = 4 } = {}) {
+function pickSeeds(scored, base, urlPatterns, industry) {
   const usable = scored.filter((row) => row.pageType !== 'skip');
-  const best = (type, predicate = () => true) =>
-    usable
-      .filter((row) => row.pageType === type && predicate(row))
-      .sort((a, b) => b.score - a.score || depth(a.path) - depth(b.path))[0];
-
   const seeds = [];
-  const take = (row, pageType) => {
-    if (!row) return;
+  const used = new Set();
+  const take = (row, pageType, reason) => {
+    if (!row || used.has(row.url)) return;
+    used.add(row.url);
     seeds.push({
       pageType,
       url: row.url,
       path: row.path,
-      confidence: Math.min(1, row.score / 8),
-      evidence: row.evidence,
+      confidence: Math.min(1, (row.score ?? 8) / 8),
+      evidence: [...(row.evidence ?? []), reason].filter(Boolean),
       labels: row.labels,
     });
   };
 
-  take({ url: `${base}/`, path: '/', score: 10, evidence: ['pass-1 homepage'], labels: ['Home'] }, 'home');
-  take(best('about'), 'about');
-  take(best('category', (row) => depth(row.path) <= 1) ?? best('category'), 'category');
+  take({ url: `${base}/`, path: '/', score: 10, evidence: ['pass-1 homepage'], labels: ['Home'] }, 'home', 'site root');
 
-  const category = seeds.find((row) => row.pageType === 'category');
-  const prefix = category ? category.path.replace(/\/$/, '') : '';
-  const productPattern = urlPatterns.find((row) => row.pageType === 'product');
-  const products = usable
-    .filter((row) => {
-      if (row.pageType === 'skip') return false;
-      if (prefix && row.path.startsWith(`${prefix}/`) && depth(row.path) >= 2) return true;
-      if (productPattern && row.path.startsWith(`${productPattern.pattern.split('/{')[0]}/`)) return true;
-      return row.pageType === 'product' && depth(row.path) >= 2;
-    })
-    .sort((a, b) => b.score - a.score)
-    .slice(0, maxProducts);
-  products.forEach((row) => take(row, 'product'));
-
-  take(best('contact'), 'contact');
-  take(best('case') ?? best('faq'), best('case') ? 'case' : 'faq');
-
-  const used = new Set(seeds.map((row) => row.url));
-  const extras = ['download', 'faq', 'category']
-    .flatMap((type) => usable.filter((row) => row.pageType === type && !used.has(row.url)))
-    .sort((a, b) => b.score - a.score);
-  for (const row of extras) {
-    if (seeds.length >= maxPages) break;
-    if (used.has(row.url)) continue;
-    take(row, row.pageType);
-    used.add(row.url);
+  const singletonTypes = [
+    'about',
+    'contact',
+    'case',
+    'faq',
+    'download',
+    'sample',
+    'spec',
+    'cert',
+    'warranty',
+    'process',
+  ];
+  const preferred = new Set([
+    ...(industry.profile.coreTypes ?? []),
+    ...(industry.profile.characteristicTypes ?? []),
+  ]);
+  for (const type of singletonTypes) {
+    const matches = usable
+      .filter((row) => row.pageType === type)
+      .sort((a, b) => b.score - a.score || depth(a.path) - depth(b.path));
+    if (!matches.length) continue;
+    take(matches[0], type, preferred.has(type) ? `industry:${industry.id}` : 'present-on-site');
+    if (type === 'download' || type === 'category') {
+      matches.slice(1).forEach((row) => take(row, type, 'additional-listing'));
+    }
   }
 
-  return dedupeSeeds(seeds).slice(0, maxPages);
+  const groups = new Map();
+  for (const row of usable) {
+    if (isHome(row.path) || used.has(row.url)) continue;
+    const first = row.path.split('/').filter(Boolean)[0];
+    if (!first) continue;
+    const list = groups.get(first) ?? [];
+    list.push(row);
+    groups.set(first, list);
+  }
+
+  for (const [, rows] of groups) {
+    const listing = rows.find((row) => depth(row.path) === 1);
+    const children = rows.filter((row) => depth(row.path) >= 2);
+    if (listing && (listing.pageType === 'category' || children.length >= 2)) {
+      take(listing, 'category', `pattern /${listing.path.split('/').filter(Boolean)[0]}`);
+    }
+    const sampleCount = children.length >= 8 ? 3 : children.length >= 2 ? 2 : children.length;
+    children
+      .sort((a, b) => b.score - a.score)
+      .slice(0, sampleCount)
+      .forEach((row) => take(row, 'product', `sample ${children.length} in cluster`));
+  }
+
+  return dedupeSeeds(seeds);
 }
 
 function dedupeSeeds(seeds) {
@@ -370,12 +429,18 @@ const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(pro
 if (isMain) {
   const args = parseArgs(process.argv.slice(2));
   if (!args.origin || !args.home) {
-    console.error('Need --origin and --home. Optional: --sitemap --out');
+    console.error('Need --origin and --home. Optional: --sitemap --out --industry');
     process.exit(1);
   }
   const { homeText, homeJson } = loadHome(resolve(args.home));
   const sitemapXml = args.sitemap ? readFileSync(resolve(args.sitemap), 'utf8') : '';
-  const result = classifySeeds({ origin: args.origin, homeText, homeJson, sitemapXml });
+  const result = classifySeeds({
+    origin: args.origin,
+    homeText,
+    homeJson,
+    sitemapXml,
+    industryHint: args.industry ?? '',
+  });
   const json = `${JSON.stringify(result, null, 2)}\n`;
   if (args.out) {
     const out = resolve(args.out);
@@ -384,7 +449,6 @@ if (isMain) {
   }
   process.stdout.write(json);
   if (result.unresolved.length) {
-    console.error(`unresolved pageTypes: ${result.unresolved.join(', ')}`);
-    process.exit(2);
+    console.error(`missing industry core types (not a hard fail): ${result.unresolved.join(', ')}`);
   }
 }

@@ -10,7 +10,7 @@
 
 1. 采集分两层：可读层（`pages/*.md` + 图片）和结构层（`ia.json`、`sections/*.json`、`forms/*.json`、`theme-tokens.json`）。缺结构层就无法喂 `site-cli`。
 2. 映射目标只对准现有 8 类站点文件，不先发明第二套 CMS。
-3. 第一期每个竞品只采 6 类页。竞品原文和图片默认 `reference-only`，改写后才能进 `sites/`。
+3. 按该站 IA 和行业特征采集，不设页数预算。竞品原文默认 `reference-only`，改写后才能进 `sites/`。
 4. 真实抓取结果写入 `.tmp/competitor-intel/{industry}/{domain}/` ，不进 Git。
 5. Agent 不实现爬虫。你按第 6 节抓公开页 Markdown 和图片 URL；结构层（sections / forms / theme）在落盘后再填。
 
@@ -181,9 +181,13 @@ images[reference-only]           →    不进站点
 2. 把 dump 交给 `classify-seeds.mjs`，按导航文案 + URL 形态标出第二轮 URL
 3. 再按 `raw/seeds.json` 点抓
 
-**6 是类型下限，不是页数上限。** 必采 6 类（`case` / `faq` 算一类）；详情可到 4 个；有目录、第二分类、FAQ 就加，总预算 **最多 12 页**。不要全站爬。
+**不设页数预算。** 分类器先从首页文案判断行业（家具 / 纺织 / 包装 / 印刷 / 运动户外），再按这个站真实有的页面来收：
 
-`/about` 这类字符串只是分类词，不是路径合同。`/our-story`、`/enquire-now`、`/shop` 这种非标准路径应能被标出来。样例：`/workspace/schemas/competitor/examples/classify-seeds/` 。
+- 行业核心页和特征页（如纺织的样品 / 规格 / 认证）**有就收**
+- 同一 URL 簇（如 `/shop/{slug}`）只抽样：2--7 条抽 2，8 条以上抽 3，不爬全量 SKU
+- 博客、法律正文、登录后内容仍然不抓
+
+`/about` 只是分类词。行业画像：`/workspace/schemas/competitor/industry-profiles.json` 。样例：`/workspace/schemas/competitor/examples/classify-seeds/` 。
 
 ```bash
 node schemas/competitor/classify-seeds.mjs \
@@ -193,18 +197,18 @@ node schemas/competitor/classify-seeds.mjs \
   --out raw/seeds.json
 ```
 
-### 6.1 第二轮要齐的页面类型（路径由分类器给出，页数按预算）
+### 6.1 第二轮采集什么（路径和数量都由这个站决定）
 
 | # | pageType | 分类依据（文案或路径片段） | 必须拿到 |
 |---|----------|---------------------------|----------|
 | 1 | `home` | `/` | Markdown、主导航链接、Hero、区块标题顺序、首屏图 URL |
 | 2 | `about` | Our Story / 关于 / company | Markdown、H1 |
 | 3 | `category` | Shop / Collections / 产品 | 分类名、href、分类图 URL |
-| 4 | `product` | 分类前缀下的详情 | 至少 1 条，最多 4 条；品名、可见规格、主图 URL |
+| 4 | `product` | 每个分类 URL 簇下的详情 | 按簇抽样，不设全局上限；品名、可见规格、主图 URL |
 | 5 | `contact` | Enquire / Quote / 询盘 | **表单字段**、CTA、公开联系方式 |
 | 6 | `case` 或 `faq` | Works / Projects / FAQ | 案例卡或问答 |
 
-分类器给不出某类时，写入 `seeds.json#/unresolved`，不要退回猜 `/about`。预算内可追加 `download`、第二分类、FAQ（即使已有 case）。
+站点上还有样品、认证、规格、质保、流程、目录，就一并收。行业核心类型缺失只记 `unresolved`，不凑页数，不猜 `/about`。
 
 ### 6.2 不要抓
 
@@ -284,7 +288,7 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
 | 阶段 | 内容 | 谁做 | 状态 |
 |------|------|------|------|
 | 0 | Schema、映射、自映射样例、抓取清单 | Agent | **完成** |
-| 1 | 先交首页 + sitemap；按 `seeds.json` 再抓必采类型，预算内最多 12 页 | **你（Jina / CF）** | 待你操作 |
+| 1 | 先交首页 + sitemap；按行业特征生成 `seeds.json` 后再抓 | **你（Jina / CF）** | 待你操作 |
 | 2 | raw → 规范化快照（pages / ia / manifest） | Agent，等你交 raw | 未开始 |
 | 3 | 补 sections / forms / theme-tokens | 人工 + Agent | 未开始 |
 | 4 | 改写成站点 content 草稿（不发布） | Agent | 未开始 |

@@ -2,22 +2,35 @@
   "schemaVersion": 1,
   "owner": "user-jina-or-cloudflare",
   "repoDoesNotCrawl": true,
-  "description": "Two-pass fetch. Pass 1 is only homepage + sitemap + robots. Pass 2 URLs are classified from that dump — do not assume /about or /products.",
+  "description": "Two-pass fetch. Learn this site's IA and industry from homepage + sitemap, then collect characteristic pages. No page-count budget.",
   "docs": {
     "jinaReader": "https://r.jina.ai/docs",
     "jinaProduct": "https://jina.ai/en-US/reader/",
     "cfCrawl": "https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
     "cfMarkdown": "https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/"
   },
-  "quota": {
+  "policy": {
+    "pageBudget": false,
     "competitorsPerIndustry": 3,
-    "requiredTypes": ["home", "about", "category", "product", "contact", "case|faq"],
-    "optionalTypes": ["download", "faq", "category"],
-    "minPages": 6,
-    "maxPages": 12,
-    "productSamples": { "min": 1, "max": 4 },
-    "blogPosts": 0,
-    "legalBody": false
+    "learnIndustryFromHome": true,
+    "industryProfiles": "schemas/competitor/industry-profiles.json",
+    "samplePerPattern": {
+      "clusterSize2to7": 2,
+      "clusterSize8plus": 3
+    },
+    "collectIfPresent": [
+      "about",
+      "contact",
+      "case",
+      "faq",
+      "download",
+      "sample",
+      "spec",
+      "cert",
+      "warranty",
+      "process"
+    ],
+    "skip": ["blog", "legal-body", "full-sku-list", "login"]
   },
   "pass1": {
     "fetch": ["/", "/sitemap.xml", "/robots.txt"],
@@ -27,17 +40,8 @@
   "pass2": {
     "classifier": "schemas/competitor/classify-seeds.mjs",
     "command": "node schemas/competitor/classify-seeds.mjs --origin {origin} --home raw/home.md --sitemap raw/sitemap.xml --out raw/seeds.json",
-    "select": [
-      { "pageType": "home", "required": true },
-      { "pageType": "about", "required": true },
-      { "pageType": "category", "required": true },
-      { "pageType": "product", "required": true, "min": 1, "max": 4 },
-      { "pageType": "contact", "required": true },
-      { "pageType": "case", "required": true, "alternateOf": ["faq"] },
-      { "pageType": "download", "required": false },
-      { "pageType": "faq", "required": false, "note": "If case already picked, FAQ can still be added within maxPages" }
-    ],
-    "ifUnresolved": "Fetch one more nav page that looks closest, or skip that type and record it in seeds.json#/unresolved"
+    "select": "All industry core/characteristic types that exist on this site, plus one listing and 2--3 samples per URL cluster",
+    "ifUnresolved": "Record missing industry core types. Do not invent /about or pad to a page count."
   },
   "pageTypeHints": {
     "about": ["about", "company", "our-story", "who-we-are", "关于", "公司"],
@@ -129,7 +133,7 @@
     "wideCrawlDiscouraged": {
       "reason": "Site IA varies. A wide /crawl with hardcoded includePatterns misses /our-story and /enquire-now.",
       "ifUsedAnyway": {
-        "limit": 12,
+        "limit": "Do not use a fixed page budget. If /crawl is unavoidable, generate includePatterns from seeds.json",
         "depth": 2,
         "formats": ["markdown"],
         "render": true,

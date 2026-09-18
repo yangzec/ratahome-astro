@@ -123,15 +123,12 @@ function listMarkdown(dir, acc = []) {
 }
 
 const crawlBrief = readJson(join(root, 'crawl-brief.json'));
-for (const key of ['quota', 'pass1', 'pass2', 'exclude', 'jina', 'cloudflare', 'drop']) {
+for (const key of ['policy', 'pass1', 'pass2', 'exclude', 'jina', 'cloudflare', 'drop']) {
   if (!(key in crawlBrief)) fail(`crawl-brief.json missing "${key}"`);
 }
 if (crawlBrief.repoDoesNotCrawl !== true) fail('crawl-brief.json must set repoDoesNotCrawl=true');
-if (crawlBrief.quota?.minPages !== 6) fail('crawl-brief.json quota.minPages must be 6 (coverage floor, not a cap)');
-if (crawlBrief.quota?.maxPages !== 12) fail('crawl-brief.json quota.maxPages must be 12');
-if (!Array.isArray(crawlBrief.quota?.requiredTypes) || crawlBrief.quota.requiredTypes.length < 6) {
-  fail('crawl-brief.json quota.requiredTypes must list the six coverage types');
-}
+if (crawlBrief.policy?.pageBudget !== false) fail('crawl-brief.json policy.pageBudget must be false');
+if (!existsSync(join(root, 'industry-profiles.json'))) fail('missing industry-profiles.json');
 ok('crawl-brief.json contract');
 
 const collection = readJson(join(exampleDir, 'collection.json'));
@@ -256,9 +253,15 @@ for (const [type, url] of Object.entries(expectedSeeds.seeds)) {
   const hit = classified.seeds.find((row) => row.pageType === type && row.url === url);
   if (!hit) fail(`classify-seeds missed ${type} → ${url}`);
 }
+if (classified.industry?.id !== expectedSeeds.industry) {
+  fail(`classify-seeds industry ${classified.industry?.id} != ${expectedSeeds.industry}`);
+}
 const products = classified.seeds.filter((row) => row.pageType === 'product');
 if (!products.length || products.some((row) => !row.url.startsWith(expectedSeeds.productPrefix))) {
   fail('classify-seeds did not pick product URLs under the shop prefix');
+}
+if (products.length !== expectedSeeds.productSampleCount) {
+  fail(`classify-seeds sampled ${products.length} products, expected ${expectedSeeds.productSampleCount}`);
 }
 const blob = JSON.stringify(classified);
 for (const banned of expectedSeeds.mustNotContain) {
@@ -269,8 +272,7 @@ for (const banned of expectedSeeds.mustNotContain) {
     fail(`classify-seeds leaked ${banned}`);
   }
 }
-if (classified.unresolved.length) fail(`classify-seeds unresolved: ${classified.unresolved.join(', ')}`);
-if (classified.seeds.length > 12) fail(`classify-seeds exceeded maxPages: ${classified.seeds.length}`);
+if (classified.policy?.pageBudget !== false) fail('classify-seeds must not apply a page budget');
 ok('classify-seeds maps non-standard paths');
 
 if (failures) {
