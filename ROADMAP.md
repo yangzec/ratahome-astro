@@ -50,7 +50,7 @@
 - [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（独立 wrangler）
 - [x] 成衣 / 家纺按骨架重建并重写行业文案；`validate` 通过
 - [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
-- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；D1 `site_id` 隔离已验证）
+- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；成衣 / 家纺已按重建文案重新部署）
 - [ ] 三站自定义域名绑定
 - [x] 纺织专属素材：三站独立 Hero / 受众 / 能力 / 流程图 + SVG 字标；成衣 / 家纺已去掉家具占位图
 - [ ] 阶段 2 复用率文档化
@@ -344,6 +344,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 20:01 | 成衣 / 家纺重建站重新部署到 `textile-apparel` / `textile-home.yangzec.workers.dev` |
 | 2026-09-18 19:58 | 删除并重建 `textile-apparel` / `textile-home`：骨架 create + 成衣/家纺独立文案与路由，去掉家具占位图 |
 | 2026-09-18 18:26 | `site-cli create` 只拷骨架不拷文案；`validate`/`deploy` 对空文案、源站复用、死链报 error |
 | 2026-09-18 15:50 | 纺织三站专属素材：各站独立 Hero / 受众 / 能力 / 流程图与 SVG 字标，替换家具图引用 |
@@ -374,6 +375,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 20:01 | 成衣/家纺生产 | 首页 en/zh HTTP 200；`/styles/*` `/products/*` 200；旧 `/fabrics/cotton` 404；hero JPEG `FFD8FF`；浏览器核对成衣/家纺文案 | 通过 |
 | 2026-09-18 19:58 | 成衣/家纺重建 | `validate textile-apparel` / `textile-home` 通过；文案与 `/styles` `/products` 路由不再复用面料站 | 通过 |
 | 2026-09-18 18:26 | site-cli | `pnpm site-cli:test`（8）；`validate ratahome-furniture` / `textile-fabric` 通过；`textile-apparel` / `textile-home` 死链与源站文案复用报 error | 符合预期 |
 | 2026-09-18 15:58 | 纺织专属素材上线 | 三站首页 HTML 仅引用 `/images/hero.jpg` 等新路径；hero JPEG magic `FFD8FF`；浏览器核对 Logo 与 Hero 非家具图 | 通过 |
