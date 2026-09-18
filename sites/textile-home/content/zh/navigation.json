@@ -1,16 +1,16 @@
 {
   "main": [
     {
-      "id": "fabrics",
-      "label": "面料",
-      "href": "/fabrics/cotton",
+      "id": "products",
+      "label": "产品",
+      "href": "/products/bedding-sets",
       "links": [
-        { "label": "棉", "href": "/fabrics/cotton" },
-        { "label": "麻", "href": "/fabrics/linen" },
-        { "label": "涤纶混纺", "href": "/fabrics/polyester-blends" },
-        { "label": "功能性面料", "href": "/fabrics/functional-fabrics" },
-        { "label": "可持续纤维", "href": "/fabrics/sustainable-fibers" },
-        { "label": "定制织造", "href": "/fabrics/custom-weave" }
+        { "label": "床品套装", "href": "/products/bedding-sets" },
+        { "label": "被芯枕芯", "href": "/products/duvets-pillows" },
+        { "label": "浴巾", "href": "/products/bath-towels" },
+        { "label": "窗帘", "href": "/products/curtains" },
+        { "label": "桌布餐巾", "href": "/products/table-linen" },
+        { "label": "定制绣花", "href": "/products/custom-embroidered" }
       ]
     },
     {
@@ -18,20 +18,20 @@
       "label": "项目服务",
       "href": "/sampling",
       "links": [
-        { "label": "打样", "href": "/sampling", "description": "色卡与 lab dip" },
-        { "label": "MOQ 与交期", "href": "/moq", "description": "开发量与大货起订" },
-        { "label": "认证", "href": "/certifications", "description": "OEKO-TEX、GOTS 等" },
-        { "label": "质量控制", "href": "/quality-control", "description": "验布标准" }
+        { "label": "打样", "href": "/sampling", "description": "客房套装与绣花确认样" },
+        { "label": "MOQ 与交期", "href": "/moq", "description": "套装起订与补货" },
+        { "label": "认证", "href": "/certifications", "description": "OEKO-TEX 与酒店标准" },
+        { "label": "质量控制", "href": "/quality-control", "description": "套数与成品检验" }
       ]
     },
     {
       "id": "buyers",
       "label": "买家类型",
-      "href": "/brands",
+      "href": "/hotels",
       "links": [
-        { "label": "品牌方", "href": "/brands" },
-        { "label": "工厂", "href": "/manufacturers" },
-        { "label": "贸易商", "href": "/traders" }
+        { "label": "酒店", "href": "/hotels" },
+        { "label": "零售商", "href": "/retailers" },
+        { "label": "开发商", "href": "/developers" }
       ]
     },
     { "id": "about", "label": "关于", "href": "/about" },

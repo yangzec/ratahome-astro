@@ -2,51 +2,51 @@
   "site": {
     "name": "成衣出口",
     "title": "成衣开发与出口",
-    "description": "针织与梭织成衣项目——尺寸表、打样、大货生产与出口一体化管理。",
+    "description": "针织与梭织成衣项目——工艺单、尺码表、产前样、大货与出口，同一团队交付。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
-    "email": "fabric@example.com",
-    "tagline": "成分、克重与颜色——大货生产前书面确认。",
+    "email": "apparel@example.com",
+    "tagline": "产前样与尺码表——大货裁剪前书面确认。",
     "ctaAnchor": "sample"
   },
   "buttons": {
     "startProject": "申请样品",
-    "uploadFloorPlan": "申请面料样品",
+    "uploadFloorPlan": "申请成衣样品",
     "factoryTour": "参观工厂",
     "sendFloorPlan": "提交样品申请",
     "sendMessage": "发送消息",
     "whatsappUs": "WhatsApp 联系",
     "viewAll": "查看全部",
-    "seeJourney": "了解打样流程",
+    "seeJourney": "查看打样流程",
     "readWarranty": "查看认证",
-    "exploreProjects": "了解合作模式",
-    "requestQuote": "申请该面料报价",
-    "discussJoinery": "讨论规格要求"
+    "exploreProjects": "查看项目",
+    "requestQuote": "询价该款式",
+    "discussJoinery": "讨论规格"
   },
   "form": {
     "name": "姓名",
     "email": "邮箱",
     "projectType": "项目类型",
     "message": "留言",
-    "projectDetails": "面料需求",
-    "floorPlan": "规格表或样布照片（可选）",
+    "projectDetails": "款式需求",
+    "floorPlan": "工艺单或参考图（可选）",
     "privacy": "信息保密 · 一个工作日内回复",
     "namePlaceholder": "您的姓名",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "请描述您的面料项目...",
-    "detailsPlaceholder": "成分、克重（GSM）、幅宽、颜色、数量、目标价...",
+    "messagePlaceholder": "请描述您的成衣项目……",
+    "detailsPlaceholder": "款式、面料、尺码范围、颜色、数量、船期……",
     "projectTypes": {
       "residence": "品牌 / 零售项目",
       "design": "系列开发",
       "development": "大货生产",
-      "hospitality": "贴牌定制",
+      "hospitality": "贴牌",
       "other": "其他"
     }
   },
   "footer": {
-    "description": "面料采购、打色、大货生产与出口——一个负责团队。",
+    "description": "工艺单、产前样、大货车缝与出口——同一成衣团队负责。",
     "copyright": "版权所有。"
   }
 }

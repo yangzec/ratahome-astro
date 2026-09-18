@@ -2,19 +2,19 @@
   "site": {
     "name": "Textile Home Co.",
     "title": "Home Textile Export",
-    "description": "Bedding, bath and curtain programs with certifications, custom embroidery and export delivery — one accountable team.",
+    "description": "Bedding, bath and curtain programs with certifications, custom embroidery and export packing — one accountable team.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
-    "email": "fabric@example.com",
-    "tagline": "Composition, weight and color — confirmed in writing before bulk production.",
+    "email": "hometextile@example.com",
+    "tagline": "Certification and embroidery — confirmed before bulk packing.",
     "ctaAnchor": "sample"
   },
   "buttons": {
     "startProject": "Request Samples",
-    "uploadFloorPlan": "Request Fabric Samples",
-    "factoryTour": "Mill Tour",
+    "uploadFloorPlan": "Request Home Textile Samples",
+    "factoryTour": "Factory Tour",
     "sendFloorPlan": "Submit sample request",
     "sendMessage": "Send message",
     "whatsappUs": "WhatsApp Us",
@@ -22,7 +22,7 @@
     "seeJourney": "See the sampling process",
     "readWarranty": "View certifications",
     "exploreProjects": "Explore programs",
-    "requestQuote": "Request quote for this fabric",
+    "requestQuote": "Request quote for this product",
     "discussJoinery": "Discuss specifications"
   },
   "form": {
@@ -30,23 +30,23 @@
     "email": "Email",
     "projectType": "Program type",
     "message": "Message",
-    "projectDetails": "Fabric requirements",
-    "floorPlan": "Spec sheet or swatch photo (optional)",
+    "projectDetails": "Product requirements",
+    "floorPlan": "Spec sheet or room photo (optional)",
     "privacy": "Private and confidential · Reply within one business day",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "Tell us about your fabric program...",
-    "detailsPlaceholder": "Composition, weight (GSM), width, colors, quantity, target price...",
+    "messagePlaceholder": "Tell us about your home-textile program...",
+    "detailsPlaceholder": "Product, size, GSM, color, embroidery, quantity, ship date...",
     "projectTypes": {
-      "residence": "Brand / retail program",
-      "design": "Collection development",
+      "residence": "Hotel / hospitality program",
+      "design": "Retail collection",
       "development": "Bulk production",
-      "hospitality": "Private label",
+      "hospitality": "Property fit-out",
       "other": "Other"
     }
   },
   "footer": {
-    "description": "Fabric sourcing, lab dips, bulk production and export — one accountable team.",
+    "description": "Bedding, bath and curtains — certifications, embroidery and export in one team.",
     "copyright": "All rights reserved."
   }
 }

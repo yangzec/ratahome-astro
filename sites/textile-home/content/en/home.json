@@ -8,63 +8,63 @@
     "ctaHref": "#sample"
   },
   "assurances": [
-    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX & GOTS programs", "description": "Certified mills on request" },
-    { "icon": "/icons/box-seam.svg", "title": "Lab dip before bulk", "description": "Written approval on every color" },
-    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment inspection", "description": "GSM, width and roll report" },
+    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX programs", "description": "Certified lots on request" },
+    { "icon": "/icons/box-seam.svg", "title": "Sample set before bulk", "description": "Written approval on every SKU" },
+    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment set count", "description": "Finish, stitch and carton report" },
     { "icon": "/icons/clock.svg", "title": "48-hour sample response", "description": "One contact for specs and MOQ" }
   ],
   "metrics": [
-    { "value": "300+", "label": "Active fabric SKUs" },
-    { "value": "50 GSM–380", "label": "Weight range" },
-    { "value": "15 days", "label": "Typical lab dip cycle" },
-    { "value": "100%", "label": "Rolls inspected before ship" }
+    { "value": "120+", "label": "Active home-textile SKUs" },
+    { "value": "200–800 GSM", "label": "Towel and sheeting range" },
+    { "value": "12 days", "label": "Typical sample-set cycle" },
+    { "value": "100%", "label": "Sets counted before ship" }
   ],
   "audiences": {
-    "title": "Built for every buyer in the chain.",
-    "description": "One platform for brands, contract manufacturers and trading houses — same documentation standards at every stage.",
+    "title": "Built for hotels, retailers and property teams.",
+    "description": "Hospitality, retail and developers specify once — the same certification and packing file follows every replenishment.",
     "items": [
-      { "title": "Brands", "description": "Seasonal collections with stable quality and traceable mills.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "Manufacturers", "description": "Bulk programs with locked specs and rolling deliveries.", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Traders", "description": "Consolidated sourcing with export documentation support.", "href": "/traders", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "Swatch libraries, lab dips and development yardage.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Hotels", "description": "Guestroom and bath programs with embroidery and replenishment.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Seasonal bedding and towel collections with certified lots.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Developers", "description": "Matched bedding, curtains and bath SKUs by room type.", "href": "/developers", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Sample sets, embroidery proofs and packing standards.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "From swatch to container — one spec sheet.",
-    "description": "Instead of chasing mills, labs and forwarders separately, you work with one team across development, production and export.",
+    "title": "From room spec to packed set — one program file.",
+    "description": "Instead of splitting sheeting, embroidery and packing across vendors, you work with one home-textile team.",
     "items": [
-      { "title": "Composition & weight", "description": "Cotton, linen, viscose, polyester and blends — GSM and width locked in writing.", "image": "/images/capabilities/composition.jpg" },
-      { "title": "Color development", "description": "Lab dips, strike-offs and bulk tolerance standards for every shade.", "image": "/images/capabilities/color.jpg" },
-      { "title": "MOQ & lead time", "description": "Development yardage, bulk MOQ and rolling schedules per program.", "image": "/images/capabilities/moq.jpg" },
-      { "title": "Export delivery", "description": "Roll packing, inspection reports and shipping documentation.", "image": "/images/capabilities/export.jpg" }
+      { "title": "Bedding programs", "description": "Sets, duvets and pillows with thread count and size locked in writing.", "image": "/images/capabilities/composition.jpg" },
+      { "title": "Bath & color range", "description": "Terry towels in hospitality and retail palettes, GSM confirmed per SKU.", "image": "/images/capabilities/color.jpg" },
+      { "title": "Embroidery & MOQ", "description": "Logo proofs, set MOQ and replenishment quantities per property.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Export packing", "description": "Set-packed cartons, packing lists and hotel-ready labelling.", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
-    "title": "One path from spec to shipment.",
-    "description": "Every milestone is documented — composition, lab dip approval and roll inspection before dispatch.",
+    "title": "One path from room spec to shipment.",
+    "description": "Every gate is documented — sample set, certificate and carton count before dispatch.",
     "image": "/images/process.jpg",
     "imageAlt": "Home textile folding and QC",
     "steps": [
-      { "step": "01", "title": "Share specs", "description": "Send composition, GSM, width, colors and target quantity." },
-      { "step": "02", "title": "Match mills", "description": "We shortlist vetted mills against your program requirements." },
-      { "step": "03", "title": "Lab dip", "description": "Approve colors in writing before bulk production begins." },
-      { "step": "04", "title": "Bulk run", "description": "Production with inline QC and roll-level traceability." },
-      { "step": "05", "title": "Ship", "description": "Final inspection, packing list and export documentation." }
+      { "step": "01", "title": "Share a room spec", "description": "Send product, size, GSM, color, embroidery and quantity." },
+      { "step": "02", "title": "Match a workshop", "description": "We shortlist sheeting, terry or curtain lines for the program." },
+      { "step": "03", "title": "Approve the set", "description": "Sample set and embroidery proof signed before bulk packing." },
+      { "step": "04", "title": "Bulk make", "description": "Inline QC on stitch, finish and set completeness." },
+      { "step": "05", "title": "Ship", "description": "Set count, packing list and certificates travel with the cartons." }
     ]
   },
   "testimonials": [
-    { "quote": "Lab dips arrived on schedule and bulk matched the approved standard — no surprises at receiving.", "author": "Meridian Apparel · UK" },
-    { "quote": "One spec sheet covered three mills and export docs. We stopped chasing separate WeChat threads.", "author": "Pacific Trading · Australia" }
+    { "quote": "Embroidery proofs were signed before packing. Guestroom sets arrived complete and labelled by room type.", "author": "Crest Hotels · Singapore" },
+    { "quote": "One spec covered bedding, towels and curtains for three room types. Replenishment used the same file.", "author": "Oak & Linen Retail · UK" }
   ],
   "warranty": {
-    "eyebrow": "Certifications",
-    "title": "What standards can we meet?",
-    "description": "Programs are matched to mill capabilities — certificates issued with your order file, not promised after the fact.",
-    "commitment": "Every certification claim is tied to a specific mill and lot — documentation travels with the goods.",
+    "eyebrow": "Program gates",
+    "title": "What if a set or certificate is wrong?",
+    "description": "Approvals are tied to a SKU and lot — not promised after the container leaves.",
+    "commitment": "Every claim is checked against the signed sample set, certificate and packing list that travel with the goods.",
     "cases": [
-      { "question": "If composition must be verified", "title": "Mill certificates + third-party test on request.", "description": "Composition reports and restricted-substance testing arranged before bulk approval when your program requires it." },
-      { "question": "If color shifts in bulk", "title": "Written tolerance and re-dip policy.", "description": "Lab dip approval defines acceptable delta. Out-of-tolerance rolls are flagged before shipment — not after arrival." },
-      { "question": "If rolls arrive short", "title": "Roll report reconciles meters vs. PO.", "description": "Every roll is measured at final inspection. Shortage claims are resolved against the signed inspection report." }
+      { "question": "If a certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "OEKO-TEX or equivalent claims are issued with the order file. Uncertified lots are not packed as certified." },
+      { "question": "If embroidery misses the artwork", "title": "Proof approval before bulk stitching.", "description": "Logo size, thread and placement are signed on the proof. Off-spec pieces are pulled before packing." },
+      { "question": "If sets arrive incomplete", "title": "Packing list reconciles pieces vs. PO.", "description": "Each set is counted at final inspection. Shortage claims follow the signed packing list." }
     ]
   },
   "rooms": {
@@ -84,26 +84,26 @@
     "items": []
   },
   "ecosystem": {
-    "title": "Mill network, not a marketplace.",
-    "description": "Vetted mills across Shaoxing and Guangzhou — one accountable team for specs, lab dips and export.",
+    "title": "Home-textile workshops, not a marketplace.",
+    "description": "Vetted sheeting, terry and curtain lines — one team for sample sets, certificates and export packing.",
     "items": []
   },
   "cta": {
     "anchorId": "sample",
-    "title": "Start with a spec sheet or reference swatch.",
-    "description": "Share composition, GSM, colors and quantity — you will receive mill options, MOQ and lab dip timeline within 48 hours.",
-    "formTitle": "Request fabric samples",
-    "formDescription": "Attach a spec sheet, target composition or photo of a reference swatch. Development yardage and bulk MOQ included in the reply.",
+    "title": "Start with a room spec or reference set.",
+    "description": "Share product, size, color and quantity — you will receive workshop options, MOQ and sample-set timing within 48 hours.",
+    "formTitle": "Request home textile samples",
+    "formDescription": "Attach a spec sheet, room photo or embroidery artwork. Sample-set and bulk MOQ included in the reply.",
     "steps": [
-      "Send specs or a reference swatch — one file is enough to begin.",
-      "Receive mill shortlist, MOQ and lab dip schedule.",
-      "Approve lab dips in writing before bulk production."
+      "Send a room spec or reference set — one file is enough to begin.",
+      "Receive workshop shortlist, MOQ and sample-set schedule.",
+      "Approve the set and embroidery proof before bulk packing."
     ]
   },
   "footerFeatures": [
-    { "title": "Vetted mill network", "description": "Shaoxing & Guangzhou woven and knit" },
-    { "title": "Lab dip first", "description": "Written color approval before bulk" },
-    { "title": "Export ready", "description": "Roll reports and shipping docs" },
+    { "title": "Home-textile workshops", "description": "Sheeting, terry and curtains" },
+    { "title": "Sample set first", "description": "Written SKU approval before packing" },
+    { "title": "Export ready", "description": "Certificates and set packing lists" },
     { "title": "One program team", "description": "Single contact from spec to ship" }
   ]
 }

@@ -1,16 +1,16 @@
 {
   "main": [
     {
-      "id": "fabrics",
-      "label": "Fabrics",
-      "href": "/fabrics/cotton",
+      "id": "products",
+      "label": "Products",
+      "href": "/products/bedding-sets",
       "links": [
-        { "label": "Cotton", "href": "/fabrics/cotton" },
-        { "label": "Linen", "href": "/fabrics/linen" },
-        { "label": "Polyester blends", "href": "/fabrics/polyester-blends" },
-        { "label": "Functional fabrics", "href": "/fabrics/functional-fabrics" },
-        { "label": "Sustainable fibers", "href": "/fabrics/sustainable-fibers" },
-        { "label": "Custom weave", "href": "/fabrics/custom-weave" }
+        { "label": "Bedding sets", "href": "/products/bedding-sets" },
+        { "label": "Duvets & pillows", "href": "/products/duvets-pillows" },
+        { "label": "Bath towels", "href": "/products/bath-towels" },
+        { "label": "Curtains", "href": "/products/curtains" },
+        { "label": "Table linen", "href": "/products/table-linen" },
+        { "label": "Custom embroidery", "href": "/products/custom-embroidered" }
       ]
     },
     {
@@ -18,19 +18,19 @@
       "label": "Programs",
       "href": "/sampling",
       "links": [
-        { "label": "Sampling", "href": "/sampling", "description": "Swatches and lab dips" },
-        { "label": "MOQ & lead time", "href": "/moq", "description": "Development and bulk quantities" },
-        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX, GOTS and more" },
-        { "label": "Quality control", "href": "/quality-control", "description": "Roll inspection standards" }
+        { "label": "Sampling", "href": "/sampling", "description": "Room sets and embroidery proofs" },
+        { "label": "MOQ & lead time", "href": "/moq", "description": "Set quantities and replenishment" },
+        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX and hotel standards" },
+        { "label": "Quality control", "href": "/quality-control", "description": "Set count and finish inspection" }
       ]
     },
     {
       "id": "buyers",
       "label": "Buyers",
-      "href": "/brands",
+      "href": "/hotels",
       "links": [
-        { "label": "Brands", "href": "/brands" },
         { "label": "Hotels", "href": "/hotels" },
+        { "label": "Retailers", "href": "/retailers" },
         { "label": "Developers", "href": "/developers" }
       ]
     },

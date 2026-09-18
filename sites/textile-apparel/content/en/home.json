@@ -2,69 +2,69 @@
   "hero": {
     "eyebrow": "Garment development · Sampling · Bulk export",
     "title": "Apparel programs built from tech pack to shipment.",
-    "description": "We develop knit and woven styles for brands and retailers — size specs, fit samples, bulk production and export documentation in one program.",
+    "description": "We develop knit and woven styles for brands and retailers — size specs, fit samples, bulk sewing and export documentation in one program.",
     "image": "/images/hero.jpg",
     "imageAlt": "Apparel sample studio with hanging garments",
     "ctaHref": "#sample"
   },
   "assurances": [
-    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX & GOTS programs", "description": "Certified mills on request" },
-    { "icon": "/icons/box-seam.svg", "title": "Lab dip before bulk", "description": "Written approval on every color" },
-    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment inspection", "description": "GSM, width and roll report" },
+    { "icon": "/icons/shield-check.svg", "title": "BSCI factory programs", "description": "Social audit on request" },
+    { "icon": "/icons/box-seam.svg", "title": "Fit sample before bulk", "description": "Written approval on every style" },
+    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment AQL", "description": "Measurement and carton report" },
     { "icon": "/icons/clock.svg", "title": "48-hour sample response", "description": "One contact for specs and MOQ" }
   ],
   "metrics": [
-    { "value": "300+", "label": "Active fabric SKUs" },
-    { "value": "50 GSM–380", "label": "Weight range" },
-    { "value": "15 days", "label": "Typical lab dip cycle" },
-    { "value": "100%", "label": "Rolls inspected before ship" }
+    { "value": "80+", "label": "Active style programs" },
+    { "value": "XS–4XL", "label": "Size range covered" },
+    { "value": "18 days", "label": "Typical fit-sample cycle" },
+    { "value": "100%", "label": "Cartons checked before ship" }
   ],
   "audiences": {
-    "title": "Built for every buyer in the chain.",
-    "description": "One platform for brands, contract manufacturers and trading houses — same documentation standards at every stage.",
+    "title": "Built for apparel buyers, not fabric traders.",
+    "description": "Brands, retailers and agents work from the same tech pack, size spec and inspection standard.",
     "items": [
-      { "title": "Brands", "description": "Seasonal collections with stable quality and traceable mills.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "Manufacturers", "description": "Bulk programs with locked specs and rolling deliveries.", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Traders", "description": "Consolidated sourcing with export documentation support.", "href": "/traders", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "Swatch libraries, lab dips and development yardage.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Brands", "description": "Seasonal collections with locked blocks and repeatable factories.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Private-label programs with size specs and carton packing.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Agents", "description": "Multi-brand sourcing with one QC and export file.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Tech packs, fit comments and PP sample gates.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "From swatch to container — one spec sheet.",
-    "description": "Instead of chasing mills, labs and forwarders separately, you work with one team across development, production and export.",
+    "title": "From tech pack to packed carton — one program file.",
+    "description": "Instead of chasing pattern, sewing and forwarder threads separately, you work with one apparel team.",
     "items": [
-      { "title": "Composition & weight", "description": "Cotton, linen, viscose, polyester and blends — GSM and width locked in writing.", "image": "/images/capabilities/composition.jpg" },
-      { "title": "Color development", "description": "Lab dips, strike-offs and bulk tolerance standards for every shade.", "image": "/images/capabilities/color.jpg" },
-      { "title": "MOQ & lead time", "description": "Development yardage, bulk MOQ and rolling schedules per program.", "image": "/images/capabilities/moq.jpg" },
-      { "title": "Export delivery", "description": "Roll packing, inspection reports and shipping documentation.", "image": "/images/capabilities/export.jpg" }
+      { "title": "Tech pack & fabric pairing", "description": "Knit and woven styles with construction, trims and fabric confirmed in writing.", "image": "/images/capabilities/composition.jpg" },
+      { "title": "Size specs & grading", "description": "Blocks graded to your target market — written fit approval before cutting.", "image": "/images/capabilities/color.jpg" },
+      { "title": "Sampling & MOQ", "description": "Fit sample, PP sample and bulk MOQ scheduled per style.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Export packing", "description": "Folded, polybagged and carton-packed with packing list and AQL report.", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
-    "title": "One path from spec to shipment.",
-    "description": "Every milestone is documented — composition, lab dip approval and roll inspection before dispatch.",
+    "title": "One path from style to shipment.",
+    "description": "Every gate is documented — tech pack, fit approval and carton inspection before dispatch.",
     "image": "/images/process.jpg",
     "imageAlt": "Garment size-spec quality inspection",
     "steps": [
-      { "step": "01", "title": "Share specs", "description": "Send composition, GSM, width, colors and target quantity." },
-      { "step": "02", "title": "Match mills", "description": "We shortlist vetted mills against your program requirements." },
-      { "step": "03", "title": "Lab dip", "description": "Approve colors in writing before bulk production begins." },
-      { "step": "04", "title": "Bulk run", "description": "Production with inline QC and roll-level traceability." },
-      { "step": "05", "title": "Ship", "description": "Final inspection, packing list and export documentation." }
+      { "step": "01", "title": "Share a tech pack", "description": "Send style, fabric, size range, colors and target quantity." },
+      { "step": "02", "title": "Match a factory", "description": "We shortlist sewing lines against construction and volume." },
+      { "step": "03", "title": "Approve fit", "description": "Fit sample and size spec signed before bulk cutting." },
+      { "step": "04", "title": "Bulk sew", "description": "Inline QC and measurement records by PO and color." },
+      { "step": "05", "title": "Ship", "description": "AQL, packing list and export documents with the cartons." }
     ]
   },
   "testimonials": [
-    { "quote": "Lab dips arrived on schedule and bulk matched the approved standard — no surprises at receiving.", "author": "Meridian Apparel · UK" },
-    { "quote": "One spec sheet covered three mills and export docs. We stopped chasing separate WeChat threads.", "author": "Pacific Trading · Australia" }
+    { "quote": "Fit comments were closed before cutting. Bulk measurements matched the approved spec at receiving.", "author": "Northline Retail · Germany" },
+    { "quote": "One tech pack covered sampling, PP and export cartons. We stopped running separate factory chats.", "author": "Harbor Agency · USA" }
   ],
   "warranty": {
-    "eyebrow": "Certifications",
-    "title": "What standards can we meet?",
-    "description": "Programs are matched to mill capabilities — certificates issued with your order file, not promised after the fact.",
-    "commitment": "Every certification claim is tied to a specific mill and lot — documentation travels with the goods.",
+    "eyebrow": "Production gates",
+    "title": "What happens when a size or stitch fails?",
+    "description": "Approvals are tied to a style and PO — not promised after the goods leave the factory.",
+    "commitment": "Every measurement claim is checked against the signed size spec and AQL report that travels with the cartons.",
     "cases": [
-      { "question": "If composition must be verified", "title": "Mill certificates + third-party test on request.", "description": "Composition reports and restricted-substance testing arranged before bulk approval when your program requires it." },
-      { "question": "If color shifts in bulk", "title": "Written tolerance and re-dip policy.", "description": "Lab dip approval defines acceptable delta. Out-of-tolerance rolls are flagged before shipment — not after arrival." },
-      { "question": "If rolls arrive short", "title": "Roll report reconciles meters vs. PO.", "description": "Every roll is measured at final inspection. Shortage claims are resolved against the signed inspection report." }
+      { "question": "If fit drifts in bulk", "title": "Rework or hold the PO against the signed sample.", "description": "Bulk cutting starts only after the fit sample is approved. Out-of-tolerance sizes are flagged before packing." },
+      { "question": "If shrinkage exceeds the spec", "title": "Wash test before PP approval.", "description": "Fabric and garment wash results are written into the tech pack. Failed lots do not move to bulk." },
+      { "question": "If cartons arrive short", "title": "Packing list reconciles pieces vs. PO.", "description": "Every carton is counted at final inspection. Shortage claims are resolved against the signed packing list." }
     ]
   },
   "rooms": {
@@ -84,26 +84,26 @@
     "items": []
   },
   "ecosystem": {
-    "title": "Mill network, not a marketplace.",
-    "description": "Vetted mills across Shaoxing and Guangzhou — one accountable team for specs, lab dips and export.",
+    "title": "Sewing network, not a marketplace.",
+    "description": "Vetted cut-and-sew factories — one team for tech packs, fit samples and export cartons.",
     "items": []
   },
   "cta": {
     "anchorId": "sample",
-    "title": "Start with a spec sheet or reference swatch.",
-    "description": "Share composition, GSM, colors and quantity — you will receive mill options, MOQ and lab dip timeline within 48 hours.",
-    "formTitle": "Request fabric samples",
-    "formDescription": "Attach a spec sheet, target composition or photo of a reference swatch. Development yardage and bulk MOQ included in the reply.",
+    "title": "Start with a tech pack or reference style.",
+    "description": "Share style, fabric, size range and quantity — you will receive factory options, MOQ and sampling timeline within 48 hours.",
+    "formTitle": "Request garment samples",
+    "formDescription": "Attach a tech pack, size chart or photo of a reference style. Fit-sample and bulk MOQ included in the reply.",
     "steps": [
-      "Send specs or a reference swatch — one file is enough to begin.",
-      "Receive mill shortlist, MOQ and lab dip schedule.",
-      "Approve lab dips in writing before bulk production."
+      "Send a tech pack or reference style — one file is enough to begin.",
+      "Receive factory shortlist, MOQ and sampling schedule.",
+      "Approve the fit sample in writing before bulk cutting."
     ]
   },
   "footerFeatures": [
-    { "title": "Vetted mill network", "description": "Shaoxing & Guangzhou woven and knit" },
-    { "title": "Lab dip first", "description": "Written color approval before bulk" },
-    { "title": "Export ready", "description": "Roll reports and shipping docs" },
-    { "title": "One program team", "description": "Single contact from spec to ship" }
+    { "title": "Cut-and-sew network", "description": "Knit and woven lines in South China" },
+    { "title": "Fit sample first", "description": "Written size approval before cutting" },
+    { "title": "Export ready", "description": "AQL reports and carton docs" },
+    { "title": "One program team", "description": "Single contact from style to ship" }
   ]
 }

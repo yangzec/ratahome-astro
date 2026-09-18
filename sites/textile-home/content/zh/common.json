@@ -2,51 +2,51 @@
   "site": {
     "name": "家纺出口",
     "title": "家纺产品出口",
-    "description": "床品、卫浴与窗帘项目——认证、定制绣花与出口交付，一个团队负责。",
+    "description": "床品、卫浴与窗帘项目——认证、定制绣花与出口包装，同一团队交付。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
-    "email": "fabric@example.com",
-    "tagline": "成分、克重与颜色——大货生产前书面确认。",
+    "email": "hometextile@example.com",
+    "tagline": "认证与绣花——大货装箱前书面确认。",
     "ctaAnchor": "sample"
   },
   "buttons": {
     "startProject": "申请样品",
-    "uploadFloorPlan": "申请面料样品",
+    "uploadFloorPlan": "申请家纺样品",
     "factoryTour": "参观工厂",
     "sendFloorPlan": "提交样品申请",
     "sendMessage": "发送消息",
     "whatsappUs": "WhatsApp 联系",
     "viewAll": "查看全部",
-    "seeJourney": "了解打样流程",
+    "seeJourney": "查看打样流程",
     "readWarranty": "查看认证",
-    "exploreProjects": "了解合作模式",
-    "requestQuote": "申请该面料报价",
-    "discussJoinery": "讨论规格要求"
+    "exploreProjects": "查看项目",
+    "requestQuote": "询价该产品",
+    "discussJoinery": "讨论规格"
   },
   "form": {
     "name": "姓名",
     "email": "邮箱",
     "projectType": "项目类型",
     "message": "留言",
-    "projectDetails": "面料需求",
-    "floorPlan": "规格表或样布照片（可选）",
+    "projectDetails": "产品需求",
+    "floorPlan": "规格表或房间照片（可选）",
     "privacy": "信息保密 · 一个工作日内回复",
     "namePlaceholder": "您的姓名",
     "emailPlaceholder": "you@company.com",
-    "messagePlaceholder": "请描述您的面料项目...",
-    "detailsPlaceholder": "成分、克重（GSM）、幅宽、颜色、数量、目标价...",
+    "messagePlaceholder": "请描述您的家纺项目……",
+    "detailsPlaceholder": "产品、尺寸、克重、颜色、绣花、数量、船期……",
     "projectTypes": {
-      "residence": "品牌 / 零售项目",
-      "design": "系列开发",
+      "residence": "酒店 / 酒店用品项目",
+      "design": "零售系列",
       "development": "大货生产",
-      "hospitality": "贴牌定制",
+      "hospitality": "地产软装",
       "other": "其他"
     }
   },
   "footer": {
-    "description": "面料采购、打色、大货生产与出口——一个负责团队。",
+    "description": "床品、卫浴与窗帘——认证、绣花与出口由同一团队负责。",
     "copyright": "版权所有。"
   }
 }

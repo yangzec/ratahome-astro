@@ -1,16 +1,16 @@
 {
   "main": [
     {
-      "id": "fabrics",
-      "label": "Fabrics",
-      "href": "/fabrics/cotton",
+      "id": "styles",
+      "label": "Styles",
+      "href": "/styles/knit-tops",
       "links": [
-        { "label": "Cotton", "href": "/fabrics/cotton" },
-        { "label": "Linen", "href": "/fabrics/linen" },
-        { "label": "Polyester blends", "href": "/fabrics/polyester-blends" },
-        { "label": "Functional fabrics", "href": "/fabrics/functional-fabrics" },
-        { "label": "Sustainable fibers", "href": "/fabrics/sustainable-fibers" },
-        { "label": "Custom weave", "href": "/fabrics/custom-weave" }
+        { "label": "Knit tops", "href": "/styles/knit-tops" },
+        { "label": "Woven shirts", "href": "/styles/woven-shirts" },
+        { "label": "Outerwear", "href": "/styles/outerwear" },
+        { "label": "Activewear", "href": "/styles/activewear" },
+        { "label": "Uniforms", "href": "/styles/uniforms" },
+        { "label": "Private label", "href": "/styles/private-label" }
       ]
     },
     {
@@ -18,10 +18,10 @@
       "label": "Programs",
       "href": "/sampling",
       "links": [
-        { "label": "Sampling", "href": "/sampling", "description": "Swatches and lab dips" },
-        { "label": "MOQ & lead time", "href": "/moq", "description": "Development and bulk quantities" },
-        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX, GOTS and more" },
-        { "label": "Quality control", "href": "/quality-control", "description": "Roll inspection standards" }
+        { "label": "Sampling", "href": "/sampling", "description": "Fit samples and PP samples" },
+        { "label": "Size specs", "href": "/size-specs", "description": "Blocks, grading and fit standards" },
+        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX, BSCI and more" },
+        { "label": "Quality control", "href": "/quality-control", "description": "AQL and measurement reports" }
       ]
     },
     {

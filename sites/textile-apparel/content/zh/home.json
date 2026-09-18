@@ -1,102 +1,109 @@
 {
   "hero": {
     "eyebrow": "成衣开发 · 打样 · 大货出口",
-    "title": "从工艺单到出货，一体化成衣项目。",
-    "description": "为品牌与零售商开发针织、梭织款式——尺寸表、 fit 样、大货生产与出口单证同一团队完成。",
+    "title": "从工艺单到出货，做成一套成衣项目。",
+    "description": "为品牌与零售商开发针织、梭织款式——尺码表、产前样、大货车缝与出口单证，同一项目推进。",
     "image": "/images/hero.jpg",
     "imageAlt": "成衣打样间与挂样衣",
     "ctaHref": "#sample"
   },
   "assurances": [
-    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX / GOTS", "description": "可按需提供认证工厂" },
-    { "icon": "/icons/box-seam.svg", "title": "大货前打色", "description": "每个颜色书面批复" },
-    { "icon": "/icons/shield-check.svg", "title": "出货前验布", "description": "克重、门幅与卷报告" },
+    { "icon": "/icons/shield-check.svg", "title": "BSCI 工厂项目", "description": "可按需提供验厂资料" },
+    { "icon": "/icons/box-seam.svg", "title": "大货前先做产前样", "description": "每款书面批复" },
+    { "icon": "/icons/shield-check.svg", "title": "出货前 AQL", "description": "尺寸与箱单报告" },
     { "icon": "/icons/clock.svg", "title": "48 小时样品回复", "description": "规格与 MOQ 同一联系人" }
   ],
   "metrics": [
-    { "value": "300+", "label": "在供面料 SKU" },
-    { "value": "50–380 GSM", "label": "克重区间" },
-    { "value": "15 天", "label": "典型打色周期" },
-    { "value": "100%", "label": "发货前卷检" }
+    { "value": "80+", "label": "在产款式项目" },
+    { "value": "XS–4XL", "label": "覆盖尺码" },
+    { "value": "18 天", "label": "典型产前样周期" },
+    { "value": "100%", "label": "发货前清点箱数" }
   ],
   "audiences": {
-    "title": "服务供应链上的每一类买家。",
-    "description": "品牌、代工工厂与贸易公司共用同一套文档标准。",
+    "title": "服务成衣买家，而不是面料贸易商。",
+    "description": "品牌、零售与代理共用同一套工艺单、尺码表和验货标准。",
     "items": [
-      { "title": "品牌方", "description": "季节系列，品质稳定，工厂可追溯。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "工厂", "description": "大货项目，锁定规格，滚动交货。", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "贸易商", "description": "集中采购，出口单证支持。", "href": "/traders", "image": "/images/audiences/traders.jpg" },
-      { "title": "产品开发", "description": "色卡库、打色与开发米样。", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "品牌方", "description": "季节系列，基码锁定，工厂可复购。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "零售商", "description": "贴牌项目，尺码表与装箱标准齐套。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "代理商", "description": "多品牌集中开发，验货与出口一套档案。", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "产品开发", "description": "工艺单、试穿意见与 PP 样节点。", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "从色样到集装箱——一份规格表。",
-    "description": "不必分别对接工厂、实验室与货代，一个团队覆盖开发、生产与出口。",
+    "title": "从工艺单到装柜纸箱，一份项目档案。",
+    "description": "不用分别追版房、车缝和货代，由同一成衣团队推进。",
     "items": [
-      { "title": "成分与克重", "description": "棉、麻、人棉、涤纶及混纺——GSM 与门幅书面锁定。", "image": "/images/capabilities/composition.jpg" },
-      { "title": "颜色开发", "description": "打色、批样与大货色差标准。", "image": "/images/capabilities/color.jpg" },
-      { "title": "MOQ 与交期", "description": "开发米样、大货 MOQ 与滚动排产。", "image": "/images/capabilities/moq.jpg" },
-      { "title": "出口交付", "description": "卷装、验布报告与出口单证。", "image": "/images/capabilities/export.jpg" }
+      { "title": "工艺单与面料搭配", "description": "针织、梭织款式的结构、辅料与面料书面锁定。", "image": "/images/capabilities/composition.jpg" },
+      { "title": "尺码表与放码", "description": "按目标市场放码——大货开裁前书面确认试穿。", "image": "/images/capabilities/color.jpg" },
+      { "title": "打样与 MOQ", "description": "产前样、PP 样与大货起订按款排期。", "image": "/images/capabilities/moq.jpg" },
+      { "title": "出口包装", "description": "折叠、胶袋、装箱，随附箱单与 AQL 报告。", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
-    "title": "从规格到出货，一条路径。",
-    "description": "每个节点有记录——成分、打色批复与卷检在发货前完成。",
+    "title": "从款式到出货，一条路径。",
+    "description": "每个节点留档——工艺单、试穿批复与装箱检验后再发运。",
     "image": "/images/process.jpg",
     "imageAlt": "成衣尺码规格质检",
     "steps": [
-      { "step": "01", "title": "提交规格", "description": "提供成分、克重、门幅、颜色与目标数量。" },
-      { "step": "02", "title": "匹配工厂", "description": "根据项目要求筛选认证工厂。" },
-      { "step": "03", "title": "打色", "description": "大货前书面批复颜色。" },
-      { "step": "04", "title": "大货生产", "description": "产中 QC 与卷级追溯。" },
-      { "step": "05", "title": "发货", "description": "终检、装箱单与出口文件。" }
+      { "step": "01", "title": "提交工艺单", "description": "发送款式、面料、尺码、颜色与目标数量。" },
+      { "step": "02", "title": "匹配工厂", "description": "按结构与量体筛选车缝产线。" },
+      { "step": "03", "title": "确认试穿", "description": "产前样与尺码表签字后再开裁。" },
+      { "step": "04", "title": "大货车缝", "description": "按订单与颜色做过程质检和尺寸记录。" },
+      { "step": "05", "title": "出货", "description": "AQL、箱单与出口文件随箱走。" }
     ]
   },
   "testimonials": [
-    { "quote": "打色按时到，大货与批复一致——收货没有意外。", "author": "Meridian Apparel · 英国" },
-    { "quote": "一份规格表覆盖三家工厂和出口文件，不用再追多个微信群。", "author": "Pacific Trading · 澳大利亚" }
+    { "quote": "试穿意见在开裁前关闭。到货尺寸与批复规格一致。", "author": "Northline Retail · 德国" },
+    { "quote": "一份工艺单覆盖打样、PP 和出口装箱。不用再开多条工厂群。", "author": "Harbor Agency · 美国" }
   ],
   "warranty": {
-    "eyebrow": "认证",
-    "title": "我们可以满足哪些标准？",
-    "description": "按项目匹配工厂能力——证书随订单文件出具，而非事后口头承诺。",
-    "commitment": "每项认证对应具体工厂与批次——文件随货同行。",
+    "eyebrow": "生产节点",
+    "title": "尺码或车缝不合格怎么办？",
+    "description": "批复绑定具体款式和订单——不是货离开工厂后再补承诺。",
+    "commitment": "尺寸争议对照已签字的尺码表和随箱 AQL 报告处理。",
     "cases": [
-      { "question": "若需验证成分", "title": "工厂证书 + 可按需第三方检测。", "description": "大货批复前可安排成分与限用物质检测。" },
-      { "question": "若大货色差", "title": "书面容差与复打政策。", "description": "打色批复定义可接受偏差，超标卷发货前拦截。" },
-      { "question": "若短码", "title": "卷报告与 PO 对账。", "description": "终检逐卷量米，短码按签字验布报告处理。" }
+      { "question": "如果大货版型跑偏", "title": "按已批复样品返修或暂停该订单。", "description": "产前样通过后才开裁。超公差尺码在装箱前拦截。" },
+      { "question": "如果缩水超出规格", "title": "PP 样前先做洗涤测试。", "description": "面料与成衣洗涤结果写入工艺单。不合格批次不进大货。" },
+      { "question": "如果到货箱数短缺", "title": "箱单核对件数与订单。", "description": "终检清点每箱。短缺按签字箱单处理。" }
     ]
   },
   "rooms": {
-    "title": "按款式品类浏览。",
+    "title": "按款式类别浏览。",
     "basePath": "/styles",
     "items": [
       { "label": "针织上衣", "slug": "knit-tops" },
       { "label": "梭织衬衫", "slug": "woven-shirts" },
       { "label": "外套", "slug": "outerwear" },
-      { "label": "运动服", "slug": "activewear" },
-      { "label": "工装制服", "slug": "uniforms" },
+      { "label": "运动装", "slug": "activewear" },
+      { "label": "制服", "slug": "uniforms" },
       { "label": "贴牌", "slug": "private-label" }
     ]
   },
-  "projects": { "title": "近期项目。", "items": [] },
-  "ecosystem": { "title": "工厂网络，而非 marketplace。", "description": "", "items": [] },
+  "projects": {
+    "title": "近期项目。",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "车缝网络，不是撮合平台。",
+    "description": "经过筛选的裁缝工厂——工艺单、产前样与出口装箱由同一团队负责。",
+    "items": []
+  },
   "cta": {
     "anchorId": "sample",
-    "title": "从规格表或参考样布开始。",
-    "description": "提供成分、克重、颜色与数量——48 小时内回复工厂选项、MOQ 与打色时间表。",
-    "formTitle": "申请面料样品",
-    "formDescription": "可附规格表、目标成分或参考样布照片。回复含开发米样与大货 MOQ。",
+    "title": "从工艺单或参考款开始。",
+    "description": "提供款式、面料、尺码与数量——48 小时内回复工厂选项、MOQ 与打样周期。",
+    "formTitle": "申请成衣样品",
+    "formDescription": "可附工艺单、尺码表或参考款照片。回复含产前样与大货起订。",
     "steps": [
-      "发送规格或参考样布——一份文件即可启动。",
-      "收到工厂短名单、MOQ 与打色计划。",
-      "大货前书面批复打色。"
+      "发送工艺单或参考款——一份文件即可开始。",
+      "收到工厂短名单、MOQ 与打样排期。",
+      "产前样书面确认后再开裁大货。"
     ]
   },
   "footerFeatures": [
-    { "title": "认证工厂网络", "description": "绍兴与广州梭织、针织" },
-    { "title": "先打色后大货", "description": "颜色书面批复" },
-    { "title": "出口就绪", "description": "卷报告与运输文件" },
-    { "title": "一个项目团队", "description": "从规格到发货同一联系人" }
+    { "title": "裁缝工厂网络", "description": "华南针织与梭织产线" },
+    { "title": "先做产前样", "description": "开裁前书面确认尺码" },
+    { "title": "出口就绪", "description": "AQL 报告与装箱文件" },
+    { "title": "单一项目组", "description": "从款式到出货同一联系人" }
   ]
 }

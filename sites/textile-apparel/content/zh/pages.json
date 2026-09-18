@@ -1,62 +1,62 @@
 {
   "about": {
     "title": "关于",
-    "eyebrow": "面料出口",
-    "heroTitle": "绍兴与广州工厂，一个负责团队。",
-    "heroDescription": "为品牌与工厂采购梭织、针织面料——打色、大货与出口单证一体化管理。",
-    "workflowTitle": "我们如何与工厂协作。",
-    "workflowDescription": "每个项目遵循同一路径——规格、打色批复、产中 QC 与发货前验布。",
-    "closingTitle": "准备启动下一个项目？",
-    "closingDescription": "提供成分、克重与颜色——48 小时内回复工厂选项与 MOQ。"
+    "eyebrow": "成衣出口",
+    "heroTitle": "裁缝工厂，同一责任团队。",
+    "heroDescription": "为品牌与零售商开发针织、梭织成衣——工艺单、产前样、大货车缝与出口文件，按一个项目推进。",
+    "workflowTitle": "我们如何对接车缝产线。",
+    "workflowDescription": "每款走同一路径——工艺单、试穿批复、过程质检与装箱检验后再出货。",
+    "closingTitle": "准备开发下一款？",
+    "closingDescription": "发送工艺单或参考成衣——48 小时内回复工厂选项与 MOQ。"
   },
   "contact": {
     "title": "联系",
-    "heroTitle": "联系面料团队。",
-    "heroDescription": "样品、MOQ 或出口项目——从规格到发货同一联系人。",
-    "getInTouch": "联系方式"
+    "heroTitle": "联系成衣团队。",
+    "heroDescription": "产前样、尺码表或大货项目——从款式到出货同一联系人。",
+    "getInTouch": "取得联系"
   },
   "collections": {
-    "title": "面料",
-    "heroTitle": "面料品类",
-    "heroDescription": "按成分与应用浏览。",
-    "packagesTitle": "面料项目",
-    "benefitsTitle": "为何通过同一团队采购？",
-    "benefitsDescription": "锁定规格、书面打色批复与卷级验布。",
-    "stylesTitle": "应用领域",
-    "stylesDescription": "服装、工装、家纺与工业用途。"
+    "title": "款式",
+    "heroTitle": "款式类别",
+    "heroDescription": "按成衣类型与项目浏览。",
+    "packagesTitle": "成衣项目",
+    "benefitsTitle": "为什么交给同一团队开发？",
+    "benefitsDescription": "工艺单锁定、试穿书面批复、按箱检验。",
+    "stylesTitle": "适用场景",
+    "stylesDescription": "零售、制服、运动装与贴牌项目。"
   },
   "slugs": {
-    "brands": { "title": "品牌方", "description": "季节系列，工厂可追溯。", "content": "为品牌团队提供色卡库、打色与大货项目——大货前锁定成分与颜色标准。" },
-    "manufacturers": { "title": "工厂", "description": "大货面料项目，滚动交货。", "content": "代工工厂获得锁定规格、产中 QC 报告与出口卷装，适用于 CMT 与 FOB 项目。" },
-    "traders": { "title": "贸易商", "description": "集中采购与单证。", "content": "贸易公司利用我们的工厂网络与验布报告，以一套文件发运混装柜项目。" },
-    "sampling": { "title": "打样", "description": "色卡、打色与开发米样。", "content": "提交规格表或参考样布。我们安排挂样、打色与开发米样，大货前有书面批复节点。" },
-    "moq": { "title": "MOQ 与交期", "description": "开发量与大货起订。", "content": "MOQ 因工厂与结构而异——开发米样通常 30 米起，大货单色 1000 米起。交期随报价书面确认。" },
-    "certifications": { "title": "认证", "description": "OEKO-TEX、GOTS、BSCI 等项目标准。", "content": "按项目匹配具备所需证书的工厂。检测报告与范围证书随订单文件出具。" },
-    "quality-control": { "title": "质量控制", "description": "每批出货前验布。", "content": "终检覆盖克重、门幅、色差、疵点与卷长。装柜前签字确认。" },
-    "how-it-works": { "title": "流程", "description": "从规格到出货。", "content": "提交规格 → 匹配工厂 → 打色 → 大货 → 验布 → 发货。一个团队，一条沟通线。" },
-    "faq": { "title": "常见问题", "description": "关于打样与 MOQ。", "content": "打色周期、MOQ 区间、付款与验布标准——大货承诺前书面答复。" },
-    "blog": { "title": "博客", "description": "面料采购洞察。", "content": "成分趋势、认证更新与出口实践文章。" }
+    "brands": { "title": "品牌方", "description": "季节系列，基码锁定。", "content": "品牌团队获得工艺单、产前样与可复购工厂——开裁前锁定尺码与结构。" },
+    "retailers": { "title": "零售商", "description": "贴牌与季节上新。", "content": "零售团队获得尺码表、PP 样与装箱标准，出货前设书面质检节点。" },
+    "agents": { "title": "代理商", "description": "多品牌共用一套档案。", "content": "代理可跨厂汇总款式，共用 AQL 标准与一份出口文件。" },
+    "size-specs": { "title": "尺码规格", "description": "放码、基码与试穿标准。", "content": "按目标市场做尺码表与产前样——大货开裁前书面确认。" },
+    "sampling": { "title": "打样", "description": "产前样、PP 样与意见闭环。", "content": "提交工艺单或参考款。安排产前样与 PP 样，大货前设书面节点。" },
+    "certifications": { "title": "认证", "description": "OEKO-TEX、BSCI 及项目审核。", "content": "按你要求的审核匹配工厂。证书随订单档案走。" },
+    "quality-control": { "title": "质量控制", "description": "每票货出货前做 AQL 与尺寸。", "content": "终检覆盖尺寸、车缝、外观与箱数。报告签字后再离厂。" },
+    "how-it-works": { "title": "如何合作", "description": "从工艺单到出货。", "content": "提交工艺单 → 匹配工厂 → 产前样 → 大货车缝 → 检验 → 出货。全程同一团队。" },
+    "faq": { "title": "常见问题", "description": "打样、尺码与起订。", "content": "产前样周期、按款 MOQ、付款与 AQL 水准——大货前书面答复。" },
+    "blog": { "title": "博客", "description": "成衣开发备忘。", "content": "关于尺码、工厂能力与出口装箱的笔记。" }
   },
   "workflow": [
-    { "step": "01", "title": "接收规格", "description": "成分、克重、门幅与颜色汇总于一张表。" },
-    { "step": "02", "title": "匹配工厂", "description": "从认证工厂网络中筛选。" },
-    { "step": "03", "title": "打色", "description": "大货前书面批复颜色。" },
-    { "step": "04", "title": "大货与 QC", "description": "生产并进行卷级检验。" }
+    { "step": "01", "title": "接收工艺单", "description": "款式、面料、尺码与颜色汇总进一份文件。" },
+    { "step": "02", "title": "匹配工厂", "description": "按结构筛选裁缝产线。" },
+    { "step": "03", "title": "产前样", "description": "开裁前书面确认尺码。" },
+    { "step": "04", "title": "大货与 AQL", "description": "车缝过程记录尺寸，出货前装箱检验。" }
   ],
   "aboutAudiences": [
-    { "title": "品牌方", "description": "系列开发，品质稳定。" },
-    { "title": "工厂", "description": "大货项目与滚动排产。" },
-    { "title": "贸易商", "description": "混装项目与出口文件。" }
+    { "title": "品牌方", "description": "系列开发，工厂稳定。" },
+    { "title": "零售商", "description": "贴牌上新与尺码表。" },
+    { "title": "代理商", "description": "多品牌档案与共用质检。" }
   ],
   "packageBenefits": [
-    { "title": "书面规格", "description": "大货前锁定成分与克重。" },
-    { "title": "打色节点", "description": "未批复不打大货。" },
-    { "title": "卷报告", "description": "每批出货前检验。" }
+    { "title": "书面工艺单", "description": "大货前锁定结构与辅料。" },
+    { "title": "产前样节点", "description": "未确认尺码不开裁。" },
+    { "title": "装箱报告", "description": "每票货出货前做 AQL。" }
   ],
   "collectionBenefits": [
-    { "title": "工厂网络", "description": "认证梭织、针织供应商。" },
-    { "title": "同一联系人", "description": "规格到发货。" },
-    { "title": "出口就绪", "description": "单证与包装标准。" }
+    { "title": "车缝网络", "description": "经过筛选的针织与梭织产线。" },
+    { "title": "单一联系人", "description": "从款式到出货同一团队。" },
+    { "title": "出口就绪", "description": "文件与装箱标准包含在内。" }
   ],
   "collectionPackages": []
 }

@@ -1,16 +1,16 @@
 {
   "main": [
     {
-      "id": "fabrics",
-      "label": "面料",
-      "href": "/fabrics/cotton",
+      "id": "styles",
+      "label": "款式",
+      "href": "/styles/knit-tops",
       "links": [
-        { "label": "棉", "href": "/fabrics/cotton" },
-        { "label": "麻", "href": "/fabrics/linen" },
-        { "label": "涤纶混纺", "href": "/fabrics/polyester-blends" },
-        { "label": "功能性面料", "href": "/fabrics/functional-fabrics" },
-        { "label": "可持续纤维", "href": "/fabrics/sustainable-fibers" },
-        { "label": "定制织造", "href": "/fabrics/custom-weave" }
+        { "label": "针织上衣", "href": "/styles/knit-tops" },
+        { "label": "梭织衬衫", "href": "/styles/woven-shirts" },
+        { "label": "外套", "href": "/styles/outerwear" },
+        { "label": "运动装", "href": "/styles/activewear" },
+        { "label": "制服", "href": "/styles/uniforms" },
+        { "label": "贴牌", "href": "/styles/private-label" }
       ]
     },
     {
@@ -18,10 +18,10 @@
       "label": "项目服务",
       "href": "/sampling",
       "links": [
-        { "label": "打样", "href": "/sampling", "description": "色卡与 lab dip" },
-        { "label": "MOQ 与交期", "href": "/moq", "description": "开发量与大货起订" },
-        { "label": "认证", "href": "/certifications", "description": "OEKO-TEX、GOTS 等" },
-        { "label": "质量控制", "href": "/quality-control", "description": "验布标准" }
+        { "label": "打样", "href": "/sampling", "description": "产前样与 PP 样" },
+        { "label": "尺码规格", "href": "/size-specs", "description": "基码、放码与试穿标准" },
+        { "label": "认证", "href": "/certifications", "description": "OEKO-TEX、BSCI 等" },
+        { "label": "质量控制", "href": "/quality-control", "description": "AQL 与尺寸报告" }
       ]
     },
     {
@@ -30,8 +30,8 @@
       "href": "/brands",
       "links": [
         { "label": "品牌方", "href": "/brands" },
-        { "label": "工厂", "href": "/manufacturers" },
-        { "label": "贸易商", "href": "/traders" }
+        { "label": "零售商", "href": "/retailers" },
+        { "label": "代理商", "href": "/agents" }
       ]
     },
     { "id": "about", "label": "关于", "href": "/about" },
