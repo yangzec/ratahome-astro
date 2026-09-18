@@ -129,6 +129,10 @@ for (const key of ['policy', 'pass1', 'pass2', 'exclude', 'jina', 'cloudflare', 
 if (crawlBrief.repoDoesNotCrawl !== true) fail('crawl-brief.json must set repoDoesNotCrawl=true');
 if (crawlBrief.policy?.pageBudget !== false) fail('crawl-brief.json policy.pageBudget must be false');
 if (!existsSync(join(root, 'industry-profiles.json'))) fail('missing industry-profiles.json');
+if (!existsSync(join(root, 'probe-theme.mjs'))) fail('missing probe-theme.mjs');
+if (!crawlBrief.cloudflare?.themeTokensComputed?.helper) {
+  fail('crawl-brief.json cloudflare.themeTokensComputed.helper is required');
+}
 ok('crawl-brief.json contract');
 
 const collection = readJson(join(exampleDir, 'collection.json'));

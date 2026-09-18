@@ -82,7 +82,7 @@
     "productAlso": ["visible specs", "1 main image + 1 lifestyle if present"]
   },
   "notExpectedFromCrawler": [
-    "theme-tokens.json (not in Markdown; fill from public theme CSS, or DevTools if styles are runtime-only)",
+    "theme-tokens.json (not in Markdown; fill from public theme CSS, then CF /content addScriptTag getComputedStyle; do not use /json AI)",
     "sections/*.json role mapping (fill after markdown lands)",
     "license judgements beyond default reference-only"
   ],
@@ -142,9 +142,24 @@
         "includePatterns": "Generate from seeds.json after pass 1, never from a fixed path list"
       }
     },
+    "themeTokensComputed": {
+      "method": "POST",
+      "url": "https://api.cloudflare.com/client/v4/accounts/{account_id}/browser-rendering/content?cacheTTL=0",
+      "helper": "schemas/competitor/probe-theme.mjs",
+      "command": "node schemas/competitor/probe-theme.mjs --url {pageUrl} --out raw/theme-computed.json",
+      "body": {
+        "url": "{pageUrl}",
+        "addScriptTag": [{ "id": "theme-probe", "content": "getComputedStyle probe; see probe-theme.mjs" }],
+        "waitForSelector": { "selector": "#__theme_probe" },
+        "gotoOptions": { "waitUntil": "networkidle2" }
+      },
+      "useWhen": "After public theme CSS is read. Probe homepage plus one product/inner page that has cards or panels. Do not use /json + Workers AI for colors.",
+      "docs": "https://developers.cloudflare.com/api/resources/browser_rendering/subresources/content/methods/create/"
+    },
     "notes": [
       "Official crawl: https://developers.cloudflare.com/browser-run/quick-actions/crawl-endpoint/",
       "Official markdown: https://developers.cloudflare.com/browser-run/quick-actions/markdown-endpoint/",
+      "Official content addScriptTag: https://developers.cloudflare.com/api/resources/browser_rendering/subresources/content/methods/create/",
       "Token needs Browser Rendering - Edit. Without it, /markdown /crawl /content return 401 Authentication error even if the token can list Workers and D1.",
       "If robots.txt Content-Signal rejects ai-input/reference, skip that host; do not bypass."
     ]

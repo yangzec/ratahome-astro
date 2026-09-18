@@ -322,7 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| 竞品采集阶段 1 | `balkrushnatextiles.com` 两轮 + theme-tokens 已落盘；待改写，不进 `sites/` |
+| 竞品采集阶段 1 | `balkrushnatextiles.com` 两轮已抓；theme-tokens 已 CSS + computed 核对；待改写，不进 `sites/` |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 00:59 | Balkrushna `theme-tokens.json` 按第 6.7 节用 CF `/content` `getComputedStyle` 核对；页底改为 `#F7F7F7`，按钮圆角改为 `10px`；新增 `probe-theme.mjs` |
 | 2026-09-19 00:37 | Balkrushna `theme-tokens.json` 从公开主题 CSS 抽出（主色 `#E4282D`、Poppins）；文档补第 6.7 节 |
 | 2026-09-18 20:48 | 用环境 CF Token 点抓 Balkrushna 第二轮 8 页；规格表已渲成 Markdown；联系表单仍靠 WP REST |
 | 2026-09-18 20:28 | 实站 Balkrushna 第一轮完成：纺织站、7 个 SKU 抽 2、收 `/certificate`；`pageType` 补齐 `cert` / `sample` / `spec` |
@@ -359,6 +360,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 00:59 | balkrushnatextiles.com theme-tokens | 公开 CSS + CF `/content` `addScriptTag` `getComputedStyle`（首页 + 聚酯产品页）；截图只校对 | 探针成功；computed 纠正页底 `#F7F7F7`、按钮半径 `10px`；主色 `#E4282D`、Poppins 与 CSS 一致；未进 `sites/` |
 | 2026-09-18 20:48 | balkrushnatextiles.com 第二轮 | CF `POST /browser-rendering/markdown` × 8 | 8/8 成功；`/product` 是 CPT 全量归档；聚酯页规格表可读；CF7 字段被 Markdown 丢掉 |
 | 2026-09-18 20:28 | balkrushnatextiles.com 第一轮 | 首页 HTML + Rank Math sitemap + WP REST + `classify-seeds.mjs` | 行业 textile；核心页齐；特征页收 certificate；`/product/{slug}` 7 抽 2；未选 blog / events / our-team |
 | 2026-09-18 20:22 | 竞品行业动态采集 | `node schemas/competitor/validate.mjs` | 通过（推断 textile；8 个 SKU 只抽 3 个；收 sample/catalog；无页数上限） |

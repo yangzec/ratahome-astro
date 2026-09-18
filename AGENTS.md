@@ -178,7 +178,7 @@ https://github.com/yangzec/ratahome-astro
 | `sites/*/content/{locale}/` | 文案 JSON |
 | `sites/*/src/` | Astro 页面、模板、组件 |
 | `migrations/` | 共享 D1 schema（`site_id` 隔离） |
-| `schemas/competitor/` | 竞品采集 schema 与映射（快照本身不进库） |
+| `schemas/competitor/` | 竞品采集 schema、映射与 theme 探针（快照本身不进库） |
 | `ROADMAP.md` | 进度与计划（进度源） |
 | `README.md` | 安装、运行、部署说明 |
 
@@ -191,6 +191,7 @@ https://github.com/yangzec/ratahome-astro
 5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+8. 补竞品 theme-tokens：公开 CSS + `node schemas/competitor/probe-theme.mjs`（CF `getComputedStyle`），写入 `.tmp/`，不进 `sites/`
 
 ### 文档指针
 
