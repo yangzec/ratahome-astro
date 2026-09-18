@@ -49,7 +49,8 @@
 - [x] `b2b-textile` 注册于 `packages/site-cli/templates.json`（source: `textile-fabric`）
 - [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（en/zh 文案、Blueprint、独立 wrangler）
 - [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
-- [ ] 三站独立 Cloudflare 部署与域名
+- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；D1 `site_id` 隔离已验证）
+- [ ] 三站自定义域名绑定
 - [ ] 纺织专属素材替换（当前复用家具占位图）
 - [ ] 阶段 2 复用率文档化
 
@@ -342,6 +343,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 15:43 | 阶段 2 三站生产部署：`textile-fabric` / `textile-apparel` / `textile-home` → `*.yangzec.workers.dev` |
 | 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
 | 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |
 | 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
@@ -368,6 +370,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 15:43 | 纺织三站生产 | `pnpm site-cli deploy textile-fabric/apparel/home`；首页 HTTP 200；`POST /api/contact` → D1 `site_id=textile-fabric` | 通过 |
 | 2026-09-18 15:26 | 四站 build | `pnpm build:all`（ratahome + textile-fabric/apparel/home） | 通过 |
 | 2026-09-18 15:26 | 四站 validate | `pnpm site:validate:all` | 通过 |
 | 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
