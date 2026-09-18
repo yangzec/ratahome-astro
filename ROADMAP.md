@@ -355,6 +355,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 20:15 | 竞品采集配额 | `node schemas/competitor/validate.mjs` | 通过（6 类必齐、最多 12 页；样例含 catalog 作为额外 download） |
 | 2026-09-18 19:59 | 竞品路径分类器 | `node schemas/competitor/validate.mjs` + classify-seeds 样例 | 通过（`/our-story` `/shop` `/enquire-now` `/works` 能标对，博客/隐私未入选） |
 | 2026-09-18 17:15 | 竞品采集模型 + crawl-brief | `node schemas/competitor/validate.mjs` | 通过（含 crawl-brief 合同、12 个 Section 映射） |
 | 2026-09-18 15:54 | 竞品采集模型 | `node schemas/competitor/validate.mjs` | 通过（schema、12 个 Section 映射、home.json 键、第一期页面类型） |
