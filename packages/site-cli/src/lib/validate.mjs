@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
+import { loadTemplates } from './templates.mjs';
+import { collectGeneratedRoutes, collectNavHrefs, normalizeHref, parseSlugArrays } from './routes.mjs';
 
 const REQUIRED_FILES = [
   'site.config.ts',
@@ -26,6 +28,33 @@ const THEME_COLOR_KEYS = [
   'creamDeep', 'stone', 'border', 'olive', 'oliveDark', 'chrome',
 ];
 
+const REQUIRED_STRINGS = [
+  ['common.json', 'site.name'],
+  ['common.json', 'site.title'],
+  ['common.json', 'site.description'],
+  ['common.json', 'site.tagline'],
+  ['common.json', 'buttons.startProject'],
+  ['home.json', 'hero.title'],
+  ['home.json', 'hero.description'],
+  ['home.json', 'cta.title'],
+  ['home.json', 'cta.formTitle'],
+  ['pages.json', 'about.heroTitle'],
+  ['pages.json', 'contact.heroTitle'],
+];
+
+const SOURCE_LEAK_FIELDS = [
+  ['content/en/home.json', 'hero.title'],
+  ['content/en/home.json', 'hero.description'],
+  ['content/en/home.json', 'cta.formTitle'],
+  ['content/en/home.json', 'metrics'],
+  ['content/en/common.json', 'site.tagline'],
+  ['content/en/common.json', 'buttons.uploadFloorPlan'],
+  ['content/en/common.json', 'form.messagePlaceholder'],
+  ['content/en/navigation.json', 'main'],
+  ['content/zh/home.json', 'hero.title'],
+  ['content/zh/common.json', 'site.tagline'],
+];
+
 export function validateSite(slug, root = getWorkspaceRoot()) {
   const siteDir = assertSiteExists(slug, root);
   const errors = [];
@@ -41,10 +70,8 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
   let template;
   try {
     const configRaw = readFileSync(join(siteDir, 'site.config.ts'), 'utf8');
-    const idMatch = configRaw.match(/siteId:\s*'([^']+)'/);
-    const templateMatch = configRaw.match(/template:\s*'([^']+)'/);
-    siteId = idMatch?.[1];
-    template = templateMatch?.[1];
+    siteId = configRaw.match(/siteId:\s*'([^']+)'/)?.[1];
+    template = configRaw.match(/template:\s*'([^']+)'/)?.[1];
     if (!siteId) errors.push('site.config.ts: siteId is required');
   } catch {
     errors.push('site.config.ts: unreadable');
@@ -87,6 +114,7 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     errors.push(`blueprints/home.json: ${e.message}`);
   }
 
+  const parsed = {};
   for (const locale of ['en', 'zh']) {
     const localeDir = join(siteDir, 'content', locale);
     if (!existsSync(localeDir)) {
@@ -96,25 +124,81 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     for (const file of readdirSync(localeDir)) {
       if (!file.endsWith('.json')) continue;
       try {
-        JSON.parse(readFileSync(join(localeDir, file), 'utf8'));
+        parsed[`${locale}/${file}`] = JSON.parse(readFileSync(join(localeDir, file), 'utf8'));
       } catch (e) {
         errors.push(`content/${locale}/${file}: invalid JSON — ${e.message}`);
       }
     }
   }
 
-  const slugSet = collectContentSlugs(siteDir);
-  try {
-    const nav = JSON.parse(readFileSync(join(siteDir, 'content/en/navigation.json'), 'utf8'));
-    collectNavHrefs(nav.main ?? []).forEach((href) => {
-      if (href.startsWith('http') || href.startsWith('#')) return;
-      const path = href.replace(/^\//, '').replace(/\/$/, '');
-      if (path && !slugSet.has(path) && !isKnownRoute(path)) {
-        warnings.push(`navigation link "${href}" has no matching page slug`);
+  for (const locale of ['en', 'zh']) {
+    for (const [file, path] of REQUIRED_STRINGS) {
+      const value = getPath(parsed[`${locale}/${file}`], path);
+      if (typeof value !== 'string' || !value.trim()) {
+        errors.push(`content/${locale}/${file}: ${path} is empty — write industry copy`);
       }
-    });
-  } catch {
-    /* navigation parse errors caught above */
+    }
+  }
+
+  const routes = collectGeneratedRoutes(siteDir);
+  for (const locale of ['en', 'zh']) {
+    const nav = parsed[`${locale}/navigation.json`];
+    if (!nav) continue;
+    for (const href of collectNavHrefs(nav.main ?? [])) {
+      assertResolvableHref(href, routes, errors, `content/${locale}/navigation.json`);
+    }
+    for (const item of nav.main ?? []) {
+      if (typeof item.label !== 'string' || !item.label.trim()) {
+        errors.push(`content/${locale}/navigation.json: nav item "${item.id ?? hrefOf(item)}" has an empty label`);
+      }
+    }
+  }
+
+  for (const locale of ['en', 'zh']) {
+    const home = parsed[`${locale}/home.json`];
+    if (!home) continue;
+
+    const rooms = home.rooms ?? {};
+    if (!Array.isArray(rooms.items) || rooms.items.length === 0) {
+      errors.push(`content/${locale}/home.json: rooms.items is empty — define this site's catalog`);
+    } else {
+      const basePath = normalizeHref(rooms.basePath ?? '/collections');
+      for (const room of rooms.items) {
+        if (!room?.slug) {
+          errors.push(`content/${locale}/home.json: rooms item missing slug`);
+          continue;
+        }
+        const href = basePath ? `/${basePath}/${room.slug}` : `/${room.slug}`;
+        assertResolvableHref(href, routes, errors, `content/${locale}/home.json rooms`);
+      }
+    }
+
+    for (const item of home.audiences?.items ?? []) {
+      if (item?.href) {
+        assertResolvableHref(item.href, routes, errors, `content/${locale}/home.json audiences`);
+      }
+    }
+  }
+
+  try {
+    const slugsTs = readFileSync(join(siteDir, 'src/data/slugs.ts'), 'utf8');
+    const pageSlugList = parseSlugArrays(slugsTs).pageSlugs ?? [];
+    const enSlugs = parsed['en/pages.json']?.slugs ?? {};
+    const zhSlugs = parsed['zh/pages.json']?.slugs ?? {};
+    for (const pageSlug of pageSlugList) {
+      if (!String(enSlugs[pageSlug]?.title ?? '').trim()) {
+        errors.push(`content/en/pages.json: slugs.${pageSlug}.title is empty`);
+      }
+      if (!String(zhSlugs[pageSlug]?.title ?? '').trim()) {
+        errors.push(`content/zh/pages.json: slugs.${pageSlug}.title is empty`);
+      }
+    }
+  } catch (e) {
+    errors.push(`src/data/slugs.ts: unreadable — ${e.message}`);
+  }
+
+  if (template) {
+    errors.push(...findSourceCopyLeaks({ slug, template, siteDir, root }));
   }
 
   return {
@@ -122,9 +206,74 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     siteId,
     template,
     ok: errors.length === 0,
-    errors,
+    errors: [...new Set(errors)],
     warnings,
   };
+}
+
+function assertResolvableHref(href, routes, errors, where) {
+  if (!href || href.startsWith('http') || href.startsWith('#')) return;
+  const path = normalizeHref(href);
+  if (!path) {
+    errors.push(`${where}: empty href`);
+    return;
+  }
+  if (!routes.has(path)) {
+    errors.push(`${where}: "${href}" has no generated route`);
+  }
+}
+
+function hrefOf(item) {
+  return item?.href ?? 'unknown';
+}
+
+function getPath(value, path) {
+  return path.split('.').reduce((acc, key) => acc?.[key], value);
+}
+
+function findSourceCopyLeaks({ slug, template, siteDir, root }) {
+  const errors = [];
+  let sourceSlug;
+  try {
+    sourceSlug = loadTemplates()[template]?.source;
+  } catch {
+    return errors;
+  }
+  if (!sourceSlug || sourceSlug === slug) return errors;
+
+  const sourceDir = join(root, 'sites', sourceSlug);
+  if (!existsSync(sourceDir)) return errors;
+
+  for (const [relPath, field] of SOURCE_LEAK_FIELDS) {
+    const siteValue = readField(join(siteDir, relPath), field);
+    const sourceValue = readField(join(sourceDir, relPath), field);
+    if (isEmptyValue(siteValue) || isEmptyValue(sourceValue)) continue;
+    if (stableEqual(siteValue, sourceValue)) {
+      errors.push(`${relPath}: ${field} still matches source site ${sourceSlug} — write this site's copy`);
+    }
+  }
+
+  return errors;
+}
+
+function readField(filePath, field) {
+  try {
+    return getPath(JSON.parse(readFileSync(filePath, 'utf8')), field);
+  } catch {
+    return undefined;
+  }
+}
+
+function isEmptyValue(value) {
+  if (value == null) return true;
+  if (typeof value === 'string') return !value.trim();
+  if (Array.isArray(value)) return value.length === 0;
+  if (typeof value === 'object') return Object.keys(value).length === 0;
+  return false;
+}
+
+function stableEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
 }
 
 function loadSectionRegistryIds(root) {
@@ -137,47 +286,4 @@ function loadSectionRegistryIds(root) {
     if (id && id !== 'export' && id !== 'const') ids.add(id);
   }
   return ids;
-}
-
-function collectContentSlugs(siteDir) {
-  const slugs = new Set(['', 'zh', 'about', 'contact', 'collections']);
-  try {
-    const pages = JSON.parse(readFileSync(join(siteDir, 'content/en/pages.json'), 'utf8'));
-    for (const key of Object.keys(pages.slugs ?? {})) {
-      slugs.add(key);
-    }
-  } catch { /* ignore */ }
-
-  const dataSlugs = join(siteDir, 'src/data/slugs.ts');
-  if (existsSync(dataSlugs)) {
-    const raw = readFileSync(dataSlugs, 'utf8');
-    for (const m of raw.matchAll(/'([a-z0-9-]+)'/g)) {
-      slugs.add(m[1]);
-      slugs.add(`collections/${m[1]}`);
-      slugs.add(`joinery/${m[1]}`);
-      slugs.add(`projects/${m[1]}`);
-    }
-  }
-  return slugs;
-}
-
-function collectNavHrefs(items) {
-  const hrefs = [];
-  for (const item of items) {
-    if (item.href) hrefs.push(item.href);
-    for (const group of item.groups ?? []) {
-      for (const link of group.links ?? []) {
-        if (link.href) hrefs.push(link.href);
-      }
-    }
-    for (const link of item.links ?? []) {
-      if (link.href) hrefs.push(link.href);
-    }
-  }
-  return hrefs;
-}
-
-function isKnownRoute(path) {
-  const top = path.split('/')[0];
-  return ['collections', 'fabrics', 'styles', 'products', 'joinery', 'projects', 'zh'].includes(top);
 }

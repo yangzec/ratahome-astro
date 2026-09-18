@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
+import { validateSite } from './validate.mjs';
 
 export function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } = {}) {
   const siteDir = assertSiteExists(slug, root);
@@ -10,6 +11,13 @@ export function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } =
 
   if (!packageName) {
     throw new Error(`sites/${slug}/package.json has no name field`);
+  }
+
+  const validation = validateSite(slug, root);
+  if (!validation.ok) {
+    throw new Error(
+      `validate failed for sites/${slug}:\n${validation.errors.map((e) => `  • ${e}`).join('\n')}`
+    );
   }
 
   const steps = [

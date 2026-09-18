@@ -44,9 +44,10 @@ pnpm build:all          # all sites/*
 pnpm site:validate:all  # validate all sites
 pnpm db:migrate # local shared D1
 pnpm cf:deploy  # deploy ratahome-furniture
-pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"
-pnpm site-cli validate <slug>
-pnpm site-cli deploy <slug>
+pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"  # structure only; write content after
+pnpm site-cli validate <slug>   # errors on empty / copied source copy and dead links
+pnpm site-cli:test
+pnpm site-cli deploy <slug>     # runs validate first
 ```
 
 ## Features

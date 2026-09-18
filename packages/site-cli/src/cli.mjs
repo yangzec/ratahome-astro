@@ -25,7 +25,9 @@ trade-site-cli — scaffold and manage trade independent sites
 
 Usage:
   site-cli create <slug> --from <template> [--site-id <id>] [--name <name>]
+      copies structure only; source copy is not copied. validate then fails until you write industry content.
   site-cli validate <slug>
+      errors on empty copy, leftover source-site copy, and dead nav / catalog links.
   site-cli deploy <slug> [--dry-run]
   site-cli templates
 
@@ -76,14 +78,15 @@ try {
         name: values.name,
         root,
       });
-      console.log(`\n✓ Created sites/${created.slug}`);
+      console.log(`\n✓ Scaffolded sites/${created.slug} (structure only — source copy was not copied)`);
       console.log(`  site_id: ${created.siteId}`);
       console.log(`  template: ${created.templateId}`);
       console.log(`  name: ${created.name}`);
-      console.log(`\nNext steps:`);
-      console.log(`  1. Edit content in sites/${created.slug}/content/`);
-      console.log(`  2. site-cli validate ${created.slug}`);
-      console.log(`  3. pnpm --filter ${created.slug} dev`);
+      const result = validateSite(slug, root);
+      printResult(result, 'Validation');
+      console.log(`\nWrite industry copy in sites/${created.slug}/content/{en,zh}/ then re-run:`);
+      console.log(`  site-cli validate ${created.slug}`);
+      if (!result.ok) process.exit(1);
       break;
     }
     case 'validate': {

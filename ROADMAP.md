@@ -47,7 +47,7 @@
 ### 阶段 2 — 纺织类试点
 
 - [x] `b2b-textile` 注册于 `packages/site-cli/templates.json`（source: `textile-fabric`）
-- [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（en/zh 文案、Blueprint、独立 wrangler）
+- [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（独立 wrangler）；成衣 / 家纺文案仍复用面料站，`validate` 现已报 error
 - [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
 - [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；D1 `site_id` 隔离已验证）
 - [ ] 三站自定义域名绑定
@@ -144,7 +144,7 @@ trade-site-platform/
 |---|------|----------|
 | 2.1 | 定义 `b2b-textile` JSON Schema | content / routes / blueprint / theme 有 schema；`templates.json` 注册模板 |
 | 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；阶段 2 执行面料 / 服装 / 家纺各 1 个 |
-| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint section、SITE_ID 一致性 |
+| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站复用文案 / 死链均为 error |
 | 2.4 | 完成 3 站 content + 素材 | 首页、导航、关于、联系可浏览（en + zh） |
 | 2.5 | 各站独立 wrangler 部署 | 3 个独立域名；**共享同一 D1**（`site_id` 隔离数据）；R2 用 `{site_id}/` 前缀 |
 | 2.6 | 记录复用率 | 列出复用 Section vs 新增 Section（目标新增 < 3 个） |
@@ -343,6 +343,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 18:26 | `site-cli create` 只拷骨架不拷文案；`validate`/`deploy` 对空文案、源站复用、死链报 error |
 | 2026-09-18 15:50 | 纺织三站专属素材：各站独立 Hero / 受众 / 能力 / 流程图与 SVG 字标，替换家具图引用 |
 | 2026-09-18 15:43 | 阶段 2 三站生产部署：`textile-fabric` / `textile-apparel` / `textile-home` → `*.yangzec.workers.dev` |
 | 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
@@ -371,6 +372,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 18:26 | site-cli | `pnpm site-cli:test`（8）；`validate ratahome-furniture` / `textile-fabric` 通过；`textile-apparel` / `textile-home` 死链与源站文案复用报 error | 符合预期 |
 | 2026-09-18 15:58 | 纺织专属素材上线 | 三站首页 HTML 仅引用 `/images/hero.jpg` 等新路径；hero JPEG magic `FFD8FF`；浏览器核对 Logo 与 Hero 非家具图 | 通过 |
 | 2026-09-18 15:43 | 纺织三站生产 | `pnpm site-cli deploy textile-fabric/apparel/home`；首页 HTTP 200；`POST /api/contact` → D1 `site_id=textile-fabric` | 通过 |
 | 2026-09-18 15:26 | 四站 build | `pnpm build:all`（ratahome + textile-fabric/apparel/home） | 通过 |

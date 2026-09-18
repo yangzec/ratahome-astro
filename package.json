@@ -16,6 +16,7 @@
     "db:migrate:remote": "pnpm --filter ratahome-furniture db:migrate:remote",
     "cf:deploy": "pnpm --filter ratahome-furniture cf:deploy",
     "site-cli": "node packages/site-cli/src/cli.mjs",
+    "site-cli:test": "node --test packages/site-cli/src/lib/*.test.mjs",
     "site:validate": "node packages/site-cli/src/cli.mjs validate ratahome-furniture"
   },
   "devDependencies": {

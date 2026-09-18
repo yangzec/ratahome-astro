@@ -190,6 +190,7 @@ https://github.com/yangzec/ratahome-astro
 5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+8. 新建站点：`pnpm site-cli create <slug> --from <template>` 只拷骨架，必须重写 `content/{en,zh}/` 与 `slugs.ts`；`validate` 对空文案、源站复用文案、死链报 error
 
 ### 文档指针
 
@@ -202,6 +203,7 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
+- `site-cli create` 不得拷贝源站文案或业务图；`validate` / `deploy` 遇空文案、源站复用文案或无效路由必须 error，不得降为 warning
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
 

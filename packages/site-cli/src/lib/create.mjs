@@ -2,6 +2,7 @@ import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { getSiteDir, getWorkspaceRoot } from './paths.mjs';
 import { resolveTemplate } from './templates.mjs';
+import { writeSkeletonContent } from './skeleton.mjs';
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.astro', '.wrangler']);
 
@@ -38,7 +39,10 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
     recursive: true,
     filter: (src) => {
       const base = src.split('/').pop() ?? '';
-      return !SKIP_DIRS.has(base);
+      if (SKIP_DIRS.has(base)) return false;
+      if (src.includes(`${join(template.sourceDir, 'content')}`)) return false;
+      if (src.includes(`${join(template.sourceDir, 'public/images')}`)) return false;
+      return true;
     },
   });
 
@@ -59,7 +63,29 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
     [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
   ]);
 
-  return { slug, siteId: id, name: displayName, templateId, path: targetDir };
+  writeSkeletonContent({
+    sourceDir: template.sourceDir,
+    targetDir,
+    displayName,
+  });
+  retargetLogo(targetDir);
+
+  return { slug, siteId: id, name: displayName, templateId, path: targetDir, skeleton: true };
+}
+
+function retargetLogo(targetDir) {
+  for (const file of [
+    'src/components/layout/Header.astro',
+    'src/components/layout/Footer.astro',
+    'src/layouts/BaseLayout.astro',
+  ]) {
+    const path = join(targetDir, file);
+    if (!existsSync(path)) continue;
+    replaceInFile(path, [
+      ['/images/logo.png', '/images/logo.svg'],
+      ['type="image/png"', 'type="image/svg+xml"'],
+    ]);
+  }
 }
 
 function readSiteIdFromConfig(siteDir) {

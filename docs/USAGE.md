@@ -227,10 +227,11 @@ pnpm site-cli templates
 # 从家具模板创建（b2b-manufacturing）
 pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
 
-# 从纺织模板创建（b2b-textile，source: sites/textile-fabric）
+# 从纺织模板创建骨架（b2b-textile，source: sites/textile-fabric）
+# 只拷结构：不拷源站 content、不拷 public/images。创建后 validate 会报错，直到写完本站文案。
 pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
 
-# 校验配置、JSON、Blueprint section、SITE_ID 一致性
+# 校验：必填文案、源站文案复用、导航/品类死链均为 error
 pnpm site-cli validate textile-fabric
 
 # 本地开发
@@ -241,7 +242,7 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后编辑 `sites/<slug>/content/`、`theme.json`、`blueprints/home.json`。可用模板见 `pnpm site-cli templates`（`b2b-manufacturing`、`b2b-textile`）。
+创建后必须重写 `sites/<slug>/content/{en,zh}/` 与 `src/data/slugs.ts`，再 `validate`。可用模板见 `pnpm site-cli templates`（`b2b-manufacturing`、`b2b-textile`）。`deploy` 会先跑 `validate`，未过不能发布。
 
 ---
 
