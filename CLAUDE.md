@@ -175,6 +175,7 @@
 | `sites/*/content/{locale}/` | 文案 JSON |
 | `sites/*/src/` | Astro 页面、模板、组件 |
 | `migrations/` | 共享 D1 schema（`site_id` 隔离） |
+| `schemas/competitor/` | 竞品采集 schema 与映射（快照本身不进库） |
 | `ROADMAP.md` | 进度与计划（进度源） |
 | `README.md` | 安装、运行、部署说明 |
 
@@ -191,6 +192,7 @@
 ### 文档指针
 
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **竞品采集方案**：`docs/COMPETITOR_INTEL.md`（模型与映射；爬虫未实现）
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "domain": "ratahome.local",
+  "items": [
+    {
+      "id": "img-hero-living",
+      "role": "hero",
+      "sourceUrl": "http://localhost:43123/images/hero-living-v2.webp",
+      "localPath": "images/hero/hero-living-v2.webp",
+      "alt": "Modern living room interior",
+      "format": "webp",
+      "usedBy": ["pages/home/index.md", "sections/home.json#hero"],
+      "license": "own",
+      "doNotPublish": false
+    },
+    {
+      "id": "img-collections-living",
+      "role": "lifestyle",
+      "sourceUrl": "http://localhost:43123/images/home-collections/living-room-v2.jpg",
+      "localPath": "images/lifestyle/living-room-v2.jpg",
+      "alt": "Living room collection",
+      "format": "jpg",
+      "usedBy": ["ia.json#nav.collections.feature"],
+      "license": "own",
+      "doNotPublish": false
+    },
+    {
+      "id": "img-project-california",
+      "role": "lifestyle",
+      "sourceUrl": "http://localhost:43123/images/home-projects/arcaya-contemporary-residence.webp",
+      "localPath": "images/lifestyle/arcaya-contemporary-residence.webp",
+      "alt": "California villa project",
+      "format": "webp",
+      "usedBy": ["sections/home.json#projects"],
+      "license": "own",
+      "doNotPublish": false
+    }
+  ]
+}

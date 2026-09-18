@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "industry": "furniture",
+  "domain": "ratahome.local",
+  "sourceUrl": "http://localhost:43123/",
+  "fetchedAt": "2026-09-18T07:54:00Z",
+  "scope": "manual",
+  "locales": ["en"],
+  "files": {
+    "meta": "meta.json",
+    "ia": "ia.json",
+    "themeTokens": "theme-tokens.json",
+    "pages": [
+      "pages/home/index.md",
+      "pages/about/about.md",
+      "pages/category/collections.md",
+      "pages/product/sofas.md",
+      "pages/contact/contact.md",
+      "pages/case/projects.md"
+    ],
+    "sections": ["sections/home.json"],
+    "forms": ["forms/contact.json"],
+    "imagesManifest": "images/manifest.json",
+    "products": "products.json"
+  },
+  "limits": {
+    "maxPages": 6,
+    "maxProductSamples": 8,
+    "blogPosts": 0
+  }
+}

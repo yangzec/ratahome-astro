@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/meta.schema.json",
+  "title": "Competitor site identity",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "industry",
+    "domain",
+    "sourceUrl",
+    "brandName",
+    "locales",
+    "defaultLocale",
+    "contacts",
+    "fetchedAt",
+    "scope"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "industry": {
+      "type": "string",
+      "description": "Industry slug, e.g. furniture, textile-fabric, packaging"
+    },
+    "domain": { "type": "string" },
+    "sourceUrl": { "type": "string", "format": "uri" },
+    "brandName": { "type": "string" },
+    "tagline": { "type": "string" },
+    "locales": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "defaultLocale": { "type": "string" },
+    "suggestedTemplate": {
+      "type": "string",
+      "description": "Best-guess platform template ID, e.g. b2b-manufacturing"
+    },
+    "contacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "whatsappUrl": { "type": "string" },
+        "address": { "type": "string" },
+        "hours": { "type": "string" },
+        "social": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["network", "url"],
+            "properties": {
+              "network": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "legalLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string" },
+          "pageType": { "type": "string", "const": "legal" }
+        }
+      }
+    },
+    "fetchedAt": { "type": "string", "format": "date-time" },
+    "scope": {
+      "type": "string",
+      "enum": ["phase-1", "phase-2", "manual"]
+    },
+    "notes": { "type": "string" }
+  }
+}

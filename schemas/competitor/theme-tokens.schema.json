@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/theme-tokens.schema.json",
+  "title": "Extracted visual tokens",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "domain", "colors", "fonts", "imageStyle"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "domain": { "type": "string" },
+    "sourceUrl": { "type": "string" },
+    "colors": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accent": { "$ref": "#/$defs/colorToken" },
+        "ink": { "$ref": "#/$defs/colorToken" },
+        "background": { "$ref": "#/$defs/colorToken" },
+        "muted": { "$ref": "#/$defs/colorToken" },
+        "border": { "$ref": "#/$defs/colorToken" },
+        "button": { "$ref": "#/$defs/colorToken" },
+        "extras": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/colorToken" }
+        }
+      }
+    },
+    "fonts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sans": { "type": "string" },
+        "display": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    },
+    "radius": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hero": { "type": "string" },
+        "image": { "type": "string" },
+        "button": { "type": "string" }
+      }
+    },
+    "imageStyle": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "white-bg-product",
+          "lifestyle",
+          "factory",
+          "render",
+          "mixed"
+        ]
+      }
+    },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "colorToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rgb"],
+      "properties": {
+        "hex": { "type": "string", "pattern": "^#?[0-9A-Fa-f]{3,8}$" },
+        "rgb": {
+          "type": "string",
+          "description": "Space-separated RGB, matching theme.json, e.g. 192 92 21",
+          "pattern": "^\\d{1,3} \\d{1,3} \\d{1,3}$"
+        },
+        "role": { "type": "string" }
+      }
+    }
+  }
+}

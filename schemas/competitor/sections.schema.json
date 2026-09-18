@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/sections.schema.json",
+  "title": "Page section extract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "sourceUrl", "pageType", "locale", "blocks"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "sourceUrl": { "type": "string" },
+    "pageType": {
+      "type": "string",
+      "enum": [
+        "home",
+        "about",
+        "category",
+        "product",
+        "contact",
+        "faq",
+        "case",
+        "download",
+        "legal",
+        "other"
+      ]
+    },
+    "locale": { "type": "string" },
+    "suggestedBlueprint": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Ordered platform section IDs inferred from blocks[].blueprintId"
+    },
+    "blocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "role", "fields"],
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "assurance",
+              "metrics",
+              "audience",
+              "capabilities",
+              "process",
+              "testimonials",
+              "warranty",
+              "category-grid",
+              "projects",
+              "ecosystem",
+              "cta",
+              "faq",
+              "product-grid",
+              "spec-table",
+              "cert-badges",
+              "logo-cloud",
+              "nav",
+              "footer",
+              "unmapped"
+            ]
+          },
+          "blueprintId": {
+            "type": "string",
+            "description": "Existing registry ID, or null when role is unmapped"
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "fields": {
+            "type": "object",
+            "description": "Role-specific fields. See mapping.json sectionRoles.*.fields"
+          },
+          "imageIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "unmappedReason": { "type": "string" }
+        }
+      }
+    }
+  }
+}

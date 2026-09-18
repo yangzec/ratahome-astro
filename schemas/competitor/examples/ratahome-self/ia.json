@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "domain": "ratahome.local",
+  "locale": "en",
+  "nav": [
+    {
+      "id": "collections",
+      "label": "Collections",
+      "href": "/collections",
+      "groups": [
+        {
+          "title": "Living Room",
+          "links": [
+            { "label": "Sofas", "href": "/collections/sofas" },
+            { "label": "Sectionals", "href": "/collections/sectionals" }
+          ]
+        },
+        {
+          "title": "Bedroom",
+          "links": [
+            { "label": "Beds", "href": "/collections/beds" },
+            { "label": "Wardrobes", "href": "/collections/wardrobes" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Collections",
+        "description": "Explore furniture by room and category",
+        "href": "/collections",
+        "imageRef": "img-collections-living"
+      }
+    },
+    {
+      "id": "solutions",
+      "label": "Solutions",
+      "links": [
+        { "label": "Homeowners", "href": "/homeowners" },
+        { "label": "Interior Designers", "href": "/designers" },
+        { "label": "Builders & Developers", "href": "/builders" }
+      ]
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "links": [
+        { "label": "Our Story", "href": "/about" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    }
+  ],
+  "footer": [
+    { "label": "Catalogs", "href": "/catalogs" },
+    { "label": "FAQ", "href": "/faq" },
+    { "label": "Warranty Policy", "href": "/warranty-policy" }
+  ],
+  "urlPatterns": [
+    { "pattern": "/", "pageType": "home" },
+    { "pattern": "/about", "pageType": "about" },
+    { "pattern": "/contact", "pageType": "contact" },
+    { "pattern": "/collections", "pageType": "category" },
+    { "pattern": "/collections/{slug}", "pageType": "category", "slugList": "collectionSlugs" },
+    { "pattern": "/joinery/{slug}", "pageType": "category", "slugList": "joinerySlugs" },
+    { "pattern": "/projects/{slug}", "pageType": "case", "slugList": "projectSlugs" },
+    { "pattern": "/{slug}", "pageType": "other", "slugList": "pageSlugs" }
+  ],
+  "pages": [
+    {
+      "url": "http://localhost:43123/",
+      "path": "/",
+      "pageType": "home",
+      "title": "Ratahome",
+      "inPhase1": true,
+      "markdown": "pages/home/index.md",
+      "sections": "sections/home.json"
+    },
+    {
+      "url": "http://localhost:43123/about",
+      "path": "/about",
+      "pageType": "about",
+      "title": "About",
+      "inPhase1": true,
+      "markdown": "pages/about/about.md"
+    },
+    {
+      "url": "http://localhost:43123/collections",
+      "path": "/collections",
+      "pageType": "category",
+      "title": "Collections",
+      "inPhase1": true,
+      "markdown": "pages/category/collections.md"
+    },
+    {
+      "url": "http://localhost:43123/collections/sofas",
+      "path": "/collections/sofas",
+      "pageType": "product",
+      "title": "Sofas",
+      "inPhase1": true,
+      "markdown": "pages/product/sofas.md"
+    },
+    {
+      "url": "http://localhost:43123/contact",
+      "path": "/contact",
+      "pageType": "contact",
+      "title": "Contact",
+      "inPhase1": true,
+      "markdown": "pages/contact/contact.md"
+    },
+    {
+      "url": "http://localhost:43123/projects",
+      "path": "/projects",
+      "pageType": "case",
+      "title": "Projects",
+      "inPhase1": true,
+      "markdown": "pages/case/projects.md"
+    }
+  ]
+}

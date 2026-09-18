@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/defs.schema.json",
+  "title": "Competitor collection shared definitions",
+  "$defs": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "isoDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "absoluteUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "relativePath": {
+      "type": "string",
+      "pattern": "^[^\\0]+$"
+    },
+    "pageType": {
+      "type": "string",
+      "enum": [
+        "home",
+        "about",
+        "category",
+        "product",
+        "contact",
+        "faq",
+        "case",
+        "download",
+        "legal",
+        "other"
+      ]
+    },
+    "sectionRole": {
+      "type": "string",
+      "enum": [
+        "hero",
+        "assurance",
+        "metrics",
+        "audience",
+        "capabilities",
+        "process",
+        "testimonials",
+        "warranty",
+        "category-grid",
+        "projects",
+        "ecosystem",
+        "cta",
+        "faq",
+        "product-grid",
+        "spec-table",
+        "cert-badges",
+        "logo-cloud",
+        "nav",
+        "footer",
+        "unmapped"
+      ]
+    },
+    "imageRole": {
+      "type": "string",
+      "enum": [
+        "logo",
+        "logo-dark",
+        "favicon",
+        "og",
+        "hero",
+        "product",
+        "lifestyle",
+        "factory",
+        "cert",
+        "client-logo",
+        "icon",
+        "other"
+      ]
+    },
+    "formIntent": {
+      "type": "string",
+      "enum": [
+        "quote",
+        "sample",
+        "prototype",
+        "floor-plan",
+        "oem",
+        "general"
+      ]
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "own",
+        "licensed",
+        "reference-only",
+        "unknown"
+      ]
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

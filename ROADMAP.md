@@ -19,6 +19,7 @@
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
+| 竞品采集 | **先模型后爬虫** | 结构化快照对齐 `content/` / Blueprint / `theme.json`；原文默认 reference-only |
 
 ---
 
@@ -321,6 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| 竞品采集阶段 1 | 模型已定；待按 schema 手工填 1 个外部竞品，验证字段是否够用 |
 
 ---
 
@@ -328,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 15:54 | 落地竞品采集模型与映射：`schemas/competitor/` + `docs/COMPETITOR_INTEL.md`；爬虫未实现 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -349,6 +352,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 15:54 | 竞品采集模型 | `node schemas/competitor/validate.mjs` | 通过（schema、12 个 Section 映射、home.json 键、第一期页面类型） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |

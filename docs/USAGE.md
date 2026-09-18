@@ -257,5 +257,6 @@ pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ## 15. 相关文档
 
 - 架构与进度：`ROADMAP.md`
+- 竞品采集方案（模型，未实现爬虫）：`docs/COMPETITOR_INTEL.md`
 - Agent 协作规范：`AGENTS.md`
 - 项目概览：`README.md`

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "http://localhost:43123/contact",
+  "locale": "en",
+  "intent": "floor-plan",
+  "formTitle": "Send your floor plan",
+  "formDescription": "Tell us about your rooms, preferred style, timing and budget.",
+  "privacy": "Private and confidential · Reply within one business day",
+  "fields": [
+    {
+      "name": "name",
+      "label": "Name",
+      "type": "text",
+      "required": true,
+      "placeholder": "Your name",
+      "mapsTo": "/form/name"
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "type": "email",
+      "required": true,
+      "placeholder": "you@example.com",
+      "mapsTo": "/form/email"
+    },
+    {
+      "name": "projectType",
+      "label": "Project type",
+      "type": "select",
+      "required": false,
+      "options": [
+        { "value": "residence", "label": "Private residence" },
+        { "value": "design", "label": "Interior design project" },
+        { "value": "development", "label": "Development / multi-unit" },
+        { "value": "hospitality", "label": "Hospitality" },
+        { "value": "other", "label": "Other" }
+      ],
+      "mapsTo": "/form/projectType"
+    },
+    {
+      "name": "message",
+      "label": "Project details",
+      "type": "textarea",
+      "required": false,
+      "placeholder": "Rooms, style, timeline, budget...",
+      "mapsTo": "/form/projectDetails"
+    },
+    {
+      "name": "file",
+      "label": "Floor plan (optional)",
+      "type": "file",
+      "required": false,
+      "accept": ".pdf,.jpg,.jpeg,.png,.webp,.dwg",
+      "mapsTo": "/form/floorPlan"
+    }
+  ],
+  "ctas": [
+    { "label": "Send your floor plan", "kind": "submit", "mapsTo": "/buttons/sendFloorPlan" },
+    { "label": "WhatsApp Us", "kind": "whatsapp", "href": "https://wa.me/8615192569580", "mapsTo": "/buttons/whatsappUs" }
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "description": "Competitor snapshot fields → platform site files. transform=rewrite means copy is reference-only and must be rewritten before publish.",
+  "pageTypes": {
+    "home": {
+      "priority": 1,
+      "required": true,
+      "extract": ["markdown", "sections", "images"],
+      "mapsTo": [
+        "sites/{slug}/blueprints/home.json",
+        "sites/{slug}/content/{locale}/home.json"
+      ]
+    },
+    "about": {
+      "priority": 2,
+      "required": true,
+      "extract": ["markdown", "sections"],
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/about"]
+    },
+    "category": {
+      "priority": 3,
+      "required": true,
+      "extract": ["markdown", "ia", "images"],
+      "mapsTo": [
+        "sites/{slug}/src/data/slugs.ts#collectionSlugs",
+        "sites/{slug}/content/{locale}/pages.json#/slugs",
+        "sites/{slug}/content/{locale}/navigation.json"
+      ]
+    },
+    "product": {
+      "priority": 4,
+      "required": true,
+      "extract": ["markdown", "images"],
+      "limit": "1-2 samples",
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
+    },
+    "contact": {
+      "priority": 5,
+      "required": true,
+      "extract": ["markdown", "form"],
+      "mapsTo": [
+        "sites/{slug}/content/{locale}/pages.json#/contact",
+        "sites/{slug}/content/{locale}/common.json#/form",
+        "sites/{slug}/content/{locale}/common.json#/buttons"
+      ]
+    },
+    "case": {
+      "priority": 6,
+      "required": true,
+      "alternateOf": ["faq"],
+      "extract": ["markdown", "images"],
+      "mapsTo": [
+        "sites/{slug}/content/{locale}/home.json#/projects",
+        "sites/{slug}/src/data/slugs.ts#projectSlugs"
+      ]
+    },
+    "faq": {
+      "priority": 6,
+      "required": false,
+      "extract": ["markdown", "sections"],
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
+    },
+    "download": {
+      "priority": 7,
+      "required": false,
+      "extract": ["markdown"],
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
+    },
+    "legal": {
+      "priority": 8,
+      "required": false,
+      "extract": ["url-only"],
+      "mapsTo": []
+    }
+  },
+  "sectionRoles": {
+    "hero": {
+      "blueprintId": "hero-fullbleed",
+      "contentPath": "content/{locale}/home.json#/hero",
+      "fields": ["eyebrow", "title", "description", "image", "imageAlt"],
+      "ctaMapsTo": "content/{locale}/common.json#/buttons"
+    },
+    "assurance": {
+      "blueprintId": "assurance-bar",
+      "contentPath": "content/{locale}/home.json#/assurances",
+      "itemFields": ["icon", "title", "description"]
+    },
+    "metrics": {
+      "blueprintId": "metrics-bar",
+      "contentPath": "content/{locale}/home.json#/metrics",
+      "itemFields": ["value", "label"]
+    },
+    "audience": {
+      "blueprintId": "audience-cards",
+      "contentPath": "content/{locale}/home.json#/audiences",
+      "fields": ["title", "description"],
+      "itemFields": ["title", "description", "href", "image"]
+    },
+    "capabilities": {
+      "blueprintId": "capabilities-grid",
+      "contentPath": "content/{locale}/home.json#/capabilities",
+      "fields": ["title", "description"],
+      "itemFields": ["title", "description", "image"]
+    },
+    "process": {
+      "blueprintId": "process-timeline",
+      "contentPath": "content/{locale}/home.json#/process",
+      "fields": ["title", "description", "image", "imageAlt"],
+      "itemFields": ["step", "title", "description"],
+      "alsoMapsTo": ["content/{locale}/pages.json#/workflow"]
+    },
+    "testimonials": {
+      "blueprintId": "testimonials",
+      "contentPath": "content/{locale}/home.json#/testimonials",
+      "itemFields": ["quote", "author"]
+    },
+    "warranty": {
+      "blueprintId": "warranty-cases",
+      "contentPath": "content/{locale}/home.json#/warranty",
+      "fields": ["eyebrow", "title", "description", "commitment"],
+      "itemFields": ["question", "title", "description"]
+    },
+    "category-grid": {
+      "blueprintId": "rooms-grid",
+      "contentPath": "content/{locale}/home.json#/rooms",
+      "fields": ["title"],
+      "itemFields": ["label", "slug"],
+      "alsoMapsTo": [
+        "content/{locale}/pages.json#/collectionPackages",
+        "src/data/slugs.ts#collectionSlugs"
+      ]
+    },
+    "projects": {
+      "blueprintId": "projects-showcase",
+      "contentPath": "content/{locale}/home.json#/projects",
+      "fields": ["title"],
+      "itemFields": ["location", "delivery", "type", "title", "scope", "solution", "image", "href"]
+    },
+    "ecosystem": {
+      "blueprintId": "ecosystem",
+      "contentPath": "content/{locale}/home.json#/ecosystem",
+      "fields": ["title", "description"],
+      "itemFields": ["step", "title", "description"]
+    },
+    "cta": {
+      "blueprintId": "contact-cta",
+      "contentPath": "content/{locale}/home.json#/cta",
+      "fields": ["title", "description", "formTitle", "formDescription"],
+      "itemFields": ["steps"]
+    },
+    "faq": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "suggestedSection": "FaqAccordion",
+      "contentPath": "content/{locale}/pages.json#/slugs"
+    },
+    "product-grid": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "suggestedSection": "ProductGrid",
+      "contentPath": "content/{locale}/pages.json#/collectionPackages"
+    },
+    "spec-table": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "suggestedSection": "SpecTable"
+    },
+    "cert-badges": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "suggestedSection": "CertBadges"
+    },
+    "logo-cloud": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "suggestedSection": "LogoCloud"
+    },
+    "nav": {
+      "blueprintId": null,
+      "contentPath": "content/{locale}/navigation.json#/main"
+    },
+    "footer": {
+      "blueprintId": null,
+      "contentPath": "content/{locale}/home.json#/footerFeatures",
+      "alsoMapsTo": ["content/{locale}/common.json#/footer"]
+    },
+    "unmapped": {
+      "blueprintId": null,
+      "status": "unmapped",
+      "action": "keep in sections JSON; do not invent a new Section until 2+ sites need it"
+    }
+  },
+  "targets": {
+    "site.config.ts": [
+      {
+        "from": "meta.json#/brandName",
+        "to": "name",
+        "transform": "rewrite"
+      },
+      {
+        "from": "meta.json#/locales",
+        "to": "locales",
+        "transform": "copy"
+      },
+      {
+        "from": "meta.json#/defaultLocale",
+        "to": "defaultLocale",
+        "transform": "copy"
+      },
+      {
+        "from": "meta.json#/suggestedTemplate",
+        "to": "template",
+        "transform": "enum",
+        "enumSource": "packages/site-cli/templates.json"
+      },
+      {
+        "from": "meta.json#/industry + domain",
+        "to": "siteId",
+        "transform": "derive-kebab"
+      }
+    ],
+    "theme.json": [
+      {
+        "from": "theme-tokens.json#/colors/accent/rgb",
+        "to": "/colors/accent",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/colors/ink/rgb",
+        "to": "/colors/ink",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/colors/background/rgb",
+        "to": "/colors/cream",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/colors/muted/rgb",
+        "to": "/colors/grayMuted",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/colors/border/rgb",
+        "to": "/colors/border",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/fonts/sans",
+        "to": "/fonts/sans",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/fonts/display",
+        "to": "/fonts/display",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/fonts/label",
+        "to": "/fonts/label",
+        "transform": "token"
+      },
+      {
+        "from": "theme-tokens.json#/radius",
+        "to": "/radius",
+        "transform": "token"
+      }
+    ],
+    "blueprints/home.json": [
+      {
+        "from": "sections/home.json#/suggestedBlueprint",
+        "to": "/sections",
+        "transform": "filter-registered",
+        "registry": "packages/sections/src/registry.ts"
+      }
+    ],
+    "content/{locale}/common.json": [
+      {
+        "from": "meta.json#/brandName",
+        "to": "/site/name",
+        "transform": "rewrite"
+      },
+      {
+        "from": "meta.json#/tagline",
+        "to": "/site/tagline",
+        "transform": "rewrite"
+      },
+      {
+        "from": "pages/home.md#/description",
+        "to": "/site/description",
+        "transform": "rewrite"
+      },
+      {
+        "from": "meta.json#/contacts/whatsapp",
+        "to": "/site/whatsapp",
+        "transform": "copy-if-own"
+      },
+      {
+        "from": "meta.json#/contacts/whatsappUrl",
+        "to": "/site/whatsappUrl",
+        "transform": "copy-if-own"
+      },
+      {
+        "from": "meta.json#/contacts/email",
+        "to": "/site/email",
+        "transform": "copy-if-own"
+      },
+      {
+        "from": "meta.json#/contacts/address",
+        "to": "/site/location",
+        "transform": "rewrite"
+      },
+      {
+        "from": "meta.json#/contacts/hours",
+        "to": "/site/hours",
+        "transform": "rewrite"
+      },
+      {
+        "from": "forms/contact.json#/ctas",
+        "to": "/buttons",
+        "transform": "rewrite-labels"
+      },
+      {
+        "from": "forms/contact.json#/fields",
+        "to": "/form",
+        "transform": "map-fields"
+      },
+      {
+        "from": "forms/contact.json#/privacy",
+        "to": "/form/privacy",
+        "transform": "rewrite"
+      },
+      {
+        "from": "ia.json#/footer",
+        "to": "/footer/description",
+        "transform": "rewrite"
+      }
+    ],
+    "content/{locale}/home.json": [
+      {
+        "from": "sections/home.json#/blocks[role=hero]/fields",
+        "to": "/hero",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=assurance]/fields/items",
+        "to": "/assurances",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=metrics]/fields/items",
+        "to": "/metrics",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=audience]",
+        "to": "/audiences",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=capabilities]",
+        "to": "/capabilities",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=process]",
+        "to": "/process",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=testimonials]/fields/items",
+        "to": "/testimonials",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=warranty]",
+        "to": "/warranty",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=category-grid]",
+        "to": "/rooms",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=projects]",
+        "to": "/projects",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=ecosystem]",
+        "to": "/ecosystem",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=cta]/fields",
+        "to": "/cta",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=footer]/fields/items",
+        "to": "/footerFeatures",
+        "transform": "rewrite"
+      }
+    ],
+    "content/{locale}/navigation.json": [
+      {
+        "from": "ia.json#/nav",
+        "to": "/main",
+        "transform": "rewrite-labels"
+      }
+    ],
+    "content/{locale}/pages.json": [
+      {
+        "from": "pages/about.md + sections/about.json",
+        "to": "/about",
+        "transform": "rewrite"
+      },
+      {
+        "from": "pages/contact.md + forms/contact.json",
+        "to": "/contact",
+        "transform": "rewrite"
+      },
+      {
+        "from": "ia.json#/pages[pageType=category|product|case|faq]",
+        "to": "/slugs",
+        "transform": "derive-slugs"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=category-grid]/fields/items",
+        "to": "/collectionPackages",
+        "transform": "rewrite"
+      },
+      {
+        "from": "sections/home.json#/blocks[role=process]/fields/steps",
+        "to": "/workflow",
+        "transform": "rewrite"
+      }
+    ],
+    "src/data/slugs.ts": [
+      {
+        "from": "ia.json#/urlPatterns[slugList=collectionSlugs]",
+        "to": "collectionSlugs",
+        "transform": "slug"
+      },
+      {
+        "from": "ia.json#/urlPatterns[slugList=joinerySlugs]",
+        "to": "joinerySlugs",
+        "transform": "slug"
+      },
+      {
+        "from": "ia.json#/urlPatterns[slugList=projectSlugs]",
+        "to": "projectSlugs",
+        "transform": "slug"
+      },
+      {
+        "from": "ia.json#/urlPatterns[slugList=pageSlugs]",
+        "to": "pageSlugs",
+        "transform": "slug"
+      }
+    ],
+    "public/": [
+      {
+        "from": "images/manifest.json#/items[license=own|licensed]",
+        "to": "public/images/{role}/",
+        "transform": "copy-file"
+      },
+      {
+        "from": "images/manifest.json#/items[license=reference-only]",
+        "to": null,
+        "transform": "reference-only"
+      }
+    ]
+  },
+  "transforms": {
+    "copy": "Use the value as-is when it is structurally safe (locale codes, template IDs).",
+    "copy-if-own": "Only copy contact details onto a site you own. Competitor contacts stay in meta.json.",
+    "copy-file": "Copy binary only when license is own or licensed.",
+    "rewrite": "Human or LLM rewrite. Competitor wording must not be published verbatim.",
+    "rewrite-labels": "Keep IA / field shape; rewrite visible labels.",
+    "map-fields": "Match competitor field types to common.form keys; extra fields stay as notes, do not add form inputs yet.",
+    "token": "Convert extracted CSS color/font/radius into theme.json tokens (RGB triples, font stacks).",
+    "filter-registered": "Drop blueprint IDs not in sectionRegistry. Unmapped roles stay in sections JSON.",
+    "derive-kebab": "Build siteId from industry + short brand slug.",
+    "derive-slugs": "Build pages.json slugs entries from IA titles and paths.",
+    "slug": "Normalize path segments to kebab-case arrays in slugs.ts.",
+    "enum": "Must match an existing template ID in site-cli templates.json.",
+    "reference-only": "Keep in the snapshot. Do not copy into sites/*/public."
+  },
+  "formIntentToCta": {
+    "floor-plan": {
+      "primaryButton": "uploadFloorPlan",
+      "submitButton": "sendFloorPlan",
+      "notes": "Current furniture default. Keep ContactForm file upload."
+    },
+    "quote": {
+      "primaryButton": "requestQuote",
+      "submitButton": "sendMessage",
+      "notes": "Hide floor-plan upload unless the industry needs drawings."
+    },
+    "sample": {
+      "primaryButton": "requestQuote",
+      "submitButton": "sendMessage",
+      "suggestedSection": "SampleRequestCTA",
+      "notes": "Textile phase-2 signal. Do not add a Section until 2+ textile sites need it."
+    },
+    "prototype": {
+      "primaryButton": "startProject",
+      "suggestedSection": "SampleRequestCTA"
+    },
+    "oem": {
+      "primaryButton": "startProject"
+    },
+    "general": {
+      "primaryButton": "startProject",
+      "submitButton": "sendMessage"
+    }
+  }
+}

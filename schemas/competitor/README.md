@@ -1,0 +1,10 @@
+# Competitor collection schemas
+
+Machine-readable model for industry competitor snapshots.
+
+- **方案正文**：[`docs/COMPETITOR_INTEL.md`](../../docs/COMPETITOR_INTEL.md)
+- **字段映射**：[`mapping.json`](mapping.json)
+- **自映射样例**：[`examples/ratahome-self/`](examples/ratahome-self/)
+- **校验**：`node schemas/competitor/validate.mjs`
+
+本目录只存放 schema、映射和最小样例。真实抓取结果写入 `.tmp/competitor-intel/{industry}/{domain}/`，不进 Git。

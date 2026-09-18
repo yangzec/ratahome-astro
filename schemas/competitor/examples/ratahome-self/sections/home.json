@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "http://localhost:43123/",
+  "pageType": "home",
+  "locale": "en",
+  "suggestedBlueprint": [
+    "hero-fullbleed",
+    "assurance-bar",
+    "metrics-bar",
+    "audience-cards",
+    "capabilities-grid",
+    "process-timeline",
+    "testimonials",
+    "warranty-cases",
+    "rooms-grid",
+    "projects-showcase",
+    "ecosystem",
+    "contact-cta"
+  ],
+  "blocks": [
+    {
+      "id": "hero",
+      "role": "hero",
+      "blueprintId": "hero-fullbleed",
+      "confidence": 1,
+      "fields": {
+        "eyebrow": "Design, Manufacture and Delivery — Managed as One Project",
+        "title": "One Partner for the Whole Home, Wherever You Build.",
+        "description": "We design, customize and deliver complete residential interiors through Foshan's manufacturing ecosystem.",
+        "image": "/images/hero-living-v2.webp",
+        "imageAlt": "Modern living room interior"
+      },
+      "imageIds": ["img-hero-living"]
+    },
+    {
+      "id": "assurance",
+      "role": "assurance",
+      "blueprintId": "assurance-bar",
+      "confidence": 1,
+      "fields": {
+        "items": [
+          { "title": "3-Year Structural Warranty", "description": "Frames, joinery and cabinetry carcasses" },
+          { "title": "100% Pre-Shipment Inspection", "description": "Photo-documented QC report per order" }
+        ]
+      }
+    },
+    {
+      "id": "metrics",
+      "role": "metrics",
+      "blueprintId": "metrics-bar",
+      "confidence": 1,
+      "fields": {
+        "items": [
+          { "value": "7 weeks", "label": "Typical package delivery" },
+          { "value": "1,200+", "label": "Homes furnished worldwide" }
+        ]
+      }
+    },
+    {
+      "id": "audience",
+      "role": "audience",
+      "blueprintId": "audience-cards",
+      "confidence": 1,
+      "fields": {
+        "title": "Solutions for every project.",
+        "description": "One platform, adapted to the people making decisions.",
+        "items": [
+          { "title": "Homeowners", "description": "A complete home, designed and furnished as one.", "href": "/homeowners" },
+          { "title": "Interior Designers", "description": "Sourcing and custom manufacturing support.", "href": "/designers" }
+        ]
+      }
+    },
+    {
+      "id": "capabilities",
+      "role": "capabilities",
+      "blueprintId": "capabilities-grid",
+      "confidence": 1,
+      "fields": {
+        "title": "Every layer of the home, managed as one project.",
+        "items": [
+          { "title": "Furniture", "description": "Living, dining, bedroom, office and outdoor packages." },
+          { "title": "Custom Cabinetry", "description": "Kitchens, wardrobes, storage and architectural joinery." }
+        ]
+      }
+    },
+    {
+      "id": "process",
+      "role": "process",
+      "blueprintId": "process-timeline",
+      "confidence": 1,
+      "fields": {
+        "title": "One journey, from floor plan to finished home.",
+        "steps": [
+          { "step": "01", "title": "Discover", "description": "Understand your space, lifestyle and project requirements." },
+          { "step": "02", "title": "Design", "description": "Develop furniture layouts and interior concepts." }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "role": "testimonials",
+      "blueprintId": "testimonials",
+      "confidence": 1,
+      "fields": {
+        "items": [
+          { "quote": "One team handled specification, factory control and shipping.", "author": "Studio Marren · Sydney" }
+        ]
+      }
+    },
+    {
+      "id": "warranty",
+      "role": "warranty",
+      "blueprintId": "warranty-cases",
+      "confidence": 1,
+      "fields": {
+        "eyebrow": "Peace of mind",
+        "title": "What happens if something goes wrong?",
+        "items": [
+          { "question": "If it arrives damaged", "title": "We repair or replace it — free." }
+        ]
+      }
+    },
+    {
+      "id": "rooms",
+      "role": "category-grid",
+      "blueprintId": "rooms-grid",
+      "confidence": 1,
+      "fields": {
+        "title": "Explore the home by room.",
+        "items": [
+          { "label": "Living Room", "slug": "living-room" },
+          { "label": "Bedroom", "slug": "bedroom" }
+        ]
+      }
+    },
+    {
+      "id": "projects",
+      "role": "projects",
+      "blueprintId": "projects-showcase",
+      "confidence": 1,
+      "fields": {
+        "title": "Complete spaces, shaped around each brief.",
+        "items": [
+          {
+            "location": "California, USA",
+            "type": "Villa",
+            "title": "Modern Contemporary Residence",
+            "href": "/projects/luxury-residence"
+          }
+        ]
+      },
+      "imageIds": ["img-project-california"]
+    },
+    {
+      "id": "ecosystem",
+      "role": "ecosystem",
+      "blueprintId": "ecosystem",
+      "confidence": 1,
+      "fields": {
+        "title": "A manufacturing ecosystem, not a marketplace.",
+        "items": [
+          { "step": "01", "title": "Foshan Manufacturing Ecosystem" }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "role": "cta",
+      "blueprintId": "contact-cta",
+      "confidence": 1,
+      "fields": {
+        "title": "Create your complete home with one trusted partner.",
+        "formTitle": "Send your floor plan"
+      }
+    }
+  ]
+}

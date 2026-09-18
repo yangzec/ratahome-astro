@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ratahome.local/schemas/competitor/page.schema.json",
+  "title": "Page markdown frontmatter",
+  "description": "YAML frontmatter for pages/{type}/{slug}.md. Body is readable Markdown; do not treat the body as a structured content source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "url",
+    "pageType",
+    "locale",
+    "title",
+    "fetchedAt",
+    "contentHash"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "url": { "type": "string" },
+    "pageType": {
+      "type": "string",
+      "enum": [
+        "home",
+        "about",
+        "category",
+        "product",
+        "contact",
+        "faq",
+        "case",
+        "download",
+        "legal",
+        "other"
+      ]
+    },
+    "locale": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "h1": { "type": "string" },
+    "canonical": { "type": "string" },
+    "status": { "type": "integer" },
+    "jsonLdTypes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sectionFile": { "type": "string" },
+    "imageIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "fetchedAt": { "type": "string", "format": "date-time" },
+    "contentHash": { "type": "string" },
+    "license": {
+      "type": "string",
+      "enum": ["own", "licensed", "reference-only", "unknown"],
+      "default": "reference-only"
+    }
+  }
+}

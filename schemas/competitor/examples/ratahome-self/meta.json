@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "industry": "furniture",
+  "domain": "ratahome.local",
+  "sourceUrl": "http://localhost:43123/",
+  "brandName": "Ratahome",
+  "tagline": "Each decision is documented before production begins — one clear path, one point of communication.",
+  "locales": ["en", "zh"],
+  "defaultLocale": "en",
+  "suggestedTemplate": "b2b-manufacturing",
+  "contacts": {
+    "email": "hello@ratahome.com",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "address": "Foshan, China",
+    "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
+    "social": []
+  },
+  "legalLinks": [],
+  "fetchedAt": "2026-09-18T07:54:00Z",
+  "scope": "manual",
+  "notes": "Self-map fixture from sites/ratahome-furniture. Not a live competitor crawl."
+}
