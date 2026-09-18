@@ -66,6 +66,27 @@
       "extract": ["markdown"],
       "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
     },
+    "sample": {
+      "priority": 7,
+      "required": false,
+      "extract": ["markdown", "form"],
+      "mapsTo": [
+        "sites/{slug}/content/{locale}/pages.json#/slugs",
+        "sites/{slug}/content/{locale}/common.json#/form"
+      ]
+    },
+    "spec": {
+      "priority": 7,
+      "required": false,
+      "extract": ["markdown"],
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
+    },
+    "cert": {
+      "priority": 7,
+      "required": false,
+      "extract": ["markdown", "images"],
+      "mapsTo": ["sites/{slug}/content/{locale}/pages.json#/slugs"]
+    },
     "legal": {
       "priority": 8,
       "required": false,

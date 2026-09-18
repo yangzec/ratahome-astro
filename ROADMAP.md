@@ -322,7 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| 竞品采集阶段 1 | 两轮 + 行业画像已定；待你先交首页 + sitemap |
+| 竞品采集阶段 1 | 模型已落地；`balkrushnatextiles.com` 第一轮完成，待按 `seeds.json` 点抓第二轮 |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 20:28 | 实站 Balkrushna 第一轮完成：纺织站、7 个 SKU 抽 2、收 `/certificate`；`pageType` 补齐 `cert` / `sample` / `spec` |
 | 2026-09-18 20:22 | 竞品采集取消页数预算，改为按行业画像 + URL 簇抽样 |
 | 2026-09-18 20:15 | 竞品采集配额改为 6 类必齐、最多 12 页，不再把 6 当页数上限 |
 | 2026-09-18 19:59 | 竞品路径改为两轮动态分类：`classify-seeds.mjs` 按导航文案 + sitemap 选 URL，不写死 `/about` |
@@ -356,6 +357,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 20:28 | balkrushnatextiles.com 第一轮 | 首页 HTML + Rank Math sitemap + WP REST + `classify-seeds.mjs` | 行业 textile；核心页齐；特征页收 certificate；`/product/{slug}` 7 抽 2；未选 blog / events / our-team |
 | 2026-09-18 20:22 | 竞品行业动态采集 | `node schemas/competitor/validate.mjs` | 通过（推断 textile；8 个 SKU 只抽 3 个；收 sample/catalog；无页数上限） |
 | 2026-09-18 20:15 | 竞品采集配额 | `node schemas/competitor/validate.mjs` | 通过（6 类必齐、最多 12 页；样例含 catalog 作为额外 download） |
 | 2026-09-18 19:59 | 竞品路径分类器 | `node schemas/competitor/validate.mjs` + classify-seeds 样例 | 通过（`/our-story` `/shop` `/enquire-now` `/works` 能标对，博客/隐私未入选） |
