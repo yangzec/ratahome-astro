@@ -52,6 +52,9 @@ export function emptyIndustryBrief() {
     catalogPrefix: '',
     catalog: [],
     pages: [],
+    pains: [],
+    phrases: [],
+    references: [],
   };
 }
 
@@ -64,7 +67,25 @@ export function normalizeIndustryBrief(brief) {
     catalogPrefix: slugifyPrefix(brief.catalogPrefix),
     catalog: asStringList(brief.catalog),
     pages: asStringList(brief.pages),
+    pains: asStringList(brief.pains),
+    phrases: asStringList(brief.phrases),
+    references: asStringList(brief.references),
   };
+}
+
+export function briefHasObjects(brief) {
+  const industry = normalizeIndustryBrief(brief);
+  return Boolean(
+    industry.visitors.length ||
+      industry.deliverables.length ||
+      industry.catalog.length ||
+      industry.pages.length
+  );
+}
+
+export function briefHasVoiceInputs(brief) {
+  const industry = normalizeIndustryBrief(brief);
+  return Boolean(industry.pains.length || industry.phrases.length || industry.references.length);
 }
 
 function asStringList(value) {
@@ -217,4 +238,5 @@ export function writeSkeletonContent({ sourceDir, targetDir, displayName, brief 
   const imagesDir = join(targetDir, 'public/images');
   mkdirSync(imagesDir, { recursive: true });
   writeFileSync(join(imagesDir, 'logo.svg'), skeletonLogoSvg(displayName));
+  return industry;
 }

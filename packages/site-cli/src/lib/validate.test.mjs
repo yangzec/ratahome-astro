@@ -210,6 +210,9 @@ describe('createSite', () => {
       assert.match(slugPage, /styles\/\$\{slug\}/);
       assert.deepEqual(industry.visitors, ['brands', 'retailers']);
       assert.equal(industry.catalogPrefix, 'styles');
+      assert.deepEqual(industry.pains, []);
+      assert.deepEqual(industry.phrases, []);
+      assert.deepEqual(industry.references, []);
     } finally {
       rmSync(created.path, { recursive: true, force: true });
     }

@@ -103,7 +103,7 @@ sites/ratahome-furniture/content/
 
 改完后保存，开发服务器会自动热更新；生产需重新 `pnpm build`。
 
-对外文案走项目规范「对外文案分通道」（`AGENTS.md`）：先有干净骨架和 `industry.json`。简报是对象清单，不是句模；各区块写不同的事，不要复述「共用一套」。不要用「不要写成某行业」当指令。`validate` 拦空文案、源站全等和对照式否定结构。
+对外文案走 `AGENTS.md`「对外文案分通道」和 `packages/site-cli/prompts/write-copy.md`。`industry.json` 要有对象、痛点、说法三层；竞品只作笔记。不要用「不要写成某行业」当指令。`validate` 拦空文案、源站全等和对照式否定结构。
 
 ---
 
@@ -231,7 +231,7 @@ pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
 
 # 从干净骨架创建（packages/site-cli/skeletons/b2b-textile），不是从已上线站拷
 pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
-# 或把该站简报拼进骨架：
+# 或写入该站简报（对象 + 痛点 + 说法）：
 # pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel" --brief ./apparel.brief.json
 
 # 校验：必填文案、源站字段全等、对照式否定结构、导航/品类死链均为 error
@@ -245,9 +245,9 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后先填 `sites/<slug>/industry.json`（访客、交付物、`catalogPrefix`、品类、页面），再按对象清单写 `content/{en,zh}/`：每个区块只做一件事，标题和描述不复述。不要加「不要写成某行业」。然后 `validate`。可用模板见 `pnpm site-cli templates`。`deploy` 会先跑 `validate`，未过不能发布。
+创建后先填 `sites/<slug>/industry.json` 三层：对象（访客、交付物、`catalogPrefix`、品类、页面）、痛点（`pains`）、说法（`phrases`、`references`）。再按 `packages/site-cli/prompts/write-copy.md` 写 `content/{en,zh}/`。对象齐而痛点 / 说法空时，`create` 会警告，先补简报再写。不要加「不要写成某行业」。然后 `validate`。可用模板见 `pnpm site-cli templates`。`deploy` 会先跑 `validate`，未过不能发布。
 
-`industry.json` 字段：`visitors`、`deliverables`、`catalogPrefix`、`catalog`、`pages`。`--brief` 会写入该文件并套到 `slugs.ts` 与品类路由前缀。
+`--brief` 写入 `industry.json`；对象层套到 `slugs.ts` 与品类路由前缀。痛点和说法不进路由，只给写文案用。
 
 ---
 

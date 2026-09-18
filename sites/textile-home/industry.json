@@ -33,5 +33,23 @@
     "how-it-works",
     "faq",
     "blog"
+  ],
+  "pains": [
+    "fitted sheet does not match mattress height after delivery",
+    "towels pill or go limp after industrial wash",
+    "replenishment lot does not match last season's white",
+    "embroidery size is wrong only after bulk heads run"
+  ],
+  "phrases": [
+    "confirm fitted-sheet drop and mattress height first",
+    "GSM and loop density after wash",
+    "spec by room grade",
+    "sample set before bulk",
+    "OEKO-TEX lot with the shipment"
+  ],
+  "references": [
+    "https://www.hotel-linen-supplier.com/ — confirm mattress thickness and fitted-sheet drop before production",
+    "https://youmianhotellinen.com/ — GSM bands, industrial wash, thread count / percale / sateen by hotel program",
+    "https://eliyahotellinen.com/ — hotel bed + bath as a property package, sample then quote lead time"
   ]
 }

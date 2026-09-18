@@ -61,7 +61,7 @@ export function createSite({ slug, templateId, siteId, name, brief, root = getWo
     [`"name": "${oldId}"`, `"name": "${slug}"`],
   ]);
 
-  writeSkeletonContent({
+  const industry = writeSkeletonContent({
     sourceDir: template.skeletonDir,
     targetDir,
     displayName,
@@ -69,7 +69,7 @@ export function createSite({ slug, templateId, siteId, name, brief, root = getWo
   });
   retargetLogo(targetDir);
 
-  return { slug, siteId: id, name: displayName, templateId, path: targetDir, skeleton: true };
+  return { slug, siteId: id, name: displayName, templateId, path: targetDir, skeleton: true, industry };
 }
 
 function retargetLogo(targetDir) {

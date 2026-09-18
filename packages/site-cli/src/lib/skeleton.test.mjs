@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanSlugPageSource, cleanSlugsSource, emptyIndustryBrief, emptySlugArrays, normalizeIndustryBrief, skeletonNavigation, wipeCopy } from './skeleton.mjs';
+import { briefHasObjects, briefHasVoiceInputs, cleanSlugPageSource, cleanSlugsSource, emptyIndustryBrief, emptySlugArrays, normalizeIndustryBrief, skeletonNavigation, wipeCopy } from './skeleton.mjs';
 import { collectGeneratedRoutes, parseSlugPathBindings, parseSlugArrays } from './routes.mjs';
 import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -68,8 +68,26 @@ describe('industry brief', () => {
         catalogPrefix: 'styles',
         catalog: ['knit-tops'],
         pages: [],
+        pains: [],
+        phrases: [],
+        references: [],
       }
     );
+  });
+
+  it('keeps pains, phrases and references as voice inputs', () => {
+    const industry = normalizeIndustryBrief({
+      visitors: ['brands'],
+      pains: [' bulk does not match the signed fit sample '],
+      phrases: ['MOQ per style/color', ''],
+      references: ['https://example.com — 7-day sample, sample fee deductible'],
+    });
+    assert.deepEqual(industry.pains, ['bulk does not match the signed fit sample']);
+    assert.deepEqual(industry.phrases, ['MOQ per style/color']);
+    assert.equal(industry.references.length, 1);
+    assert.equal(briefHasObjects(industry), true);
+    assert.equal(briefHasVoiceInputs(industry), true);
+    assert.equal(briefHasVoiceInputs({ visitors: ['brands'] }), false);
   });
 });
 

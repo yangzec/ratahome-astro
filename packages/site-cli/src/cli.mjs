@@ -6,6 +6,7 @@ import { deploySite } from './lib/deploy.mjs';
 import { validateSite } from './lib/validate.mjs';
 import { loadTemplates } from './lib/templates.mjs';
 import { getWorkspaceRoot } from './lib/paths.mjs';
+import { briefHasObjects, briefHasVoiceInputs } from './lib/skeleton.mjs';
 
 const { positionals, values } = parseArgs({
   allowPositionals: true,
@@ -28,7 +29,7 @@ trade-site-cli — scaffold and manage trade independent sites
 Usage:
   site-cli create <slug> --from <template> [--site-id <id>] [--name <name>] [--brief <file>]
       copies a clean skeleton (no source-site prose, slugs, or catalog copy).
-      optional --brief JSON is spliced into industry.json / slugs / catalog prefix.
+      optional --brief JSON writes industry.json (objects, pains, phrases, references) and catalog routes.
   site-cli validate <slug>
       errors on empty copy, leftover source-site copy, and dead nav / catalog links.
   site-cli deploy <slug> [--dry-run]
@@ -90,9 +91,14 @@ try {
       console.log(`  template: ${created.templateId}`);
       console.log(`  name: ${created.name}`);
       console.log(`  brief: sites/${created.slug}/industry.json`);
+      if (briefHasObjects(created.industry) && !briefHasVoiceInputs(created.industry)) {
+        console.warn('\n⚠ industry.json has objects but no pains / phrases / references.');
+        console.warn('  Fill those before writing copy. See packages/site-cli/prompts/write-copy.md');
+      }
       const result = validateSite(slug, root);
       printResult(result, 'Validation');
-      console.log(`\nSplice site copy from sites/${created.slug}/industry.json into content/{en,zh}/ then re-run:`);
+      console.log(`\nWrite content/{en,zh}/ with packages/site-cli/prompts/write-copy.md`);
+      console.log(`using sites/${created.slug}/industry.json then re-run:`);
       console.log(`  site-cli validate ${created.slug}`);
       if (!result.ok) process.exit(1);
       break;
