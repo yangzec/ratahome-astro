@@ -23,7 +23,7 @@ const PAGE_HINTS = {
   ],
   category: [
     'products', 'product', 'collections', 'collection', 'categories', 'category',
-    'solutions', 'catalog', 'shop', 'range', '产品', '系列', '分类', '解决方案', '商城',
+    'solutions', 'shop', 'range', '产品', '系列', '分类', '解决方案', '商城',
   ],
   product: ['item', 'sku', 'detail', 'p', '详情'],
   case: [
@@ -31,7 +31,7 @@ const PAGE_HINTS = {
     '案例', '项目', '作品',
   ],
   faq: ['faq', 'faqs', 'help', '常见问题', '帮助'],
-  download: ['download', 'downloads', 'catalogs', 'resources', '下载', '样本', '图册'],
+  download: ['download', 'downloads', 'catalog', 'catalogs', 'resources', '下载', '样本', '图册'],
 };
 
 const EXCLUDE = [
@@ -41,12 +41,19 @@ const EXCLUDE = [
   '新闻', '博客', '隐私', '条款',
 ];
 
-export function classifySeeds({ origin, homeText = '', homeJson = null, sitemapXml = '' }) {
+export function classifySeeds({
+  origin,
+  homeText = '',
+  homeJson = null,
+  sitemapXml = '',
+  maxPages = 12,
+  maxProducts = 4,
+}) {
   const base = normalizeOrigin(origin);
   const links = collectLinks({ base, homeText, homeJson, sitemapXml });
   const scored = links.map((link) => scoreLink(link, base));
   const urlPatterns = inferPatterns(scored, base);
-  const seeds = pickSeeds(scored, base, urlPatterns);
+  const seeds = pickSeeds(scored, base, urlPatterns, { maxPages, maxProducts });
   const required = ['home', 'about', 'category', 'product', 'contact'];
   const hasCaseOrFaq = seeds.some((s) => s.pageType === 'case' || s.pageType === 'faq');
   const unresolved = required.filter((type) => !seeds.some((s) => s.pageType === type));
@@ -201,10 +208,16 @@ function scoreLink(link, base) {
     if (link.sources.includes('nav') || link.sources.includes('jina')) score += 1;
     if (pageType === 'category' && depth(link.path) === 1 && score) score += 1;
     if (pageType === 'product' && depth(link.path) >= 2 && score) score += 1;
+    if (pageType === 'download' && /\/(catalogs?|downloads?)$/i.test(link.path) && score) score += 2;
     if (score) scores[pageType] = score;
   }
 
-  const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const ranked = Object.entries(scores).sort((a, b) => {
+    if (b[1] !== a[1]) return b[1] - a[1];
+    if (a[0] === 'download' && /\/(catalogs?|downloads?)$/i.test(link.path)) return -1;
+    if (b[0] === 'download' && /\/(catalogs?|downloads?)$/i.test(link.path)) return 1;
+    return 0;
+  });
   if (!ranked.length) {
     return { ...link, pageType: 'other', score: 0, evidence: ['no pageType hint'] };
   }
@@ -266,7 +279,7 @@ function inferPatterns(scored, base) {
   return patterns;
 }
 
-function pickSeeds(scored, base, urlPatterns) {
+function pickSeeds(scored, base, urlPatterns, { maxPages = 12, maxProducts = 4 } = {}) {
   const usable = scored.filter((row) => row.pageType !== 'skip');
   const best = (type, predicate = () => true) =>
     usable
@@ -301,12 +314,24 @@ function pickSeeds(scored, base, urlPatterns) {
       return row.pageType === 'product' && depth(row.path) >= 2;
     })
     .sort((a, b) => b.score - a.score)
-    .slice(0, 2);
+    .slice(0, maxProducts);
   products.forEach((row) => take(row, 'product'));
 
   take(best('contact'), 'contact');
   take(best('case') ?? best('faq'), best('case') ? 'case' : 'faq');
-  return dedupeSeeds(seeds);
+
+  const used = new Set(seeds.map((row) => row.url));
+  const extras = ['download', 'faq', 'category']
+    .flatMap((type) => usable.filter((row) => row.pageType === type && !used.has(row.url)))
+    .sort((a, b) => b.score - a.score);
+  for (const row of extras) {
+    if (seeds.length >= maxPages) break;
+    if (used.has(row.url)) continue;
+    take(row, row.pageType);
+    used.add(row.url);
+  }
+
+  return dedupeSeeds(seeds).slice(0, maxPages);
 }
 
 function dedupeSeeds(seeds) {

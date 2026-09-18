@@ -127,7 +127,11 @@ for (const key of ['quota', 'pass1', 'pass2', 'exclude', 'jina', 'cloudflare', '
   if (!(key in crawlBrief)) fail(`crawl-brief.json missing "${key}"`);
 }
 if (crawlBrief.repoDoesNotCrawl !== true) fail('crawl-brief.json must set repoDoesNotCrawl=true');
-if (crawlBrief.quota?.pagesPerCompetitor !== 6) fail('crawl-brief.json quota.pagesPerCompetitor must be 6');
+if (crawlBrief.quota?.minPages !== 6) fail('crawl-brief.json quota.minPages must be 6 (coverage floor, not a cap)');
+if (crawlBrief.quota?.maxPages !== 12) fail('crawl-brief.json quota.maxPages must be 12');
+if (!Array.isArray(crawlBrief.quota?.requiredTypes) || crawlBrief.quota.requiredTypes.length < 6) {
+  fail('crawl-brief.json quota.requiredTypes must list the six coverage types');
+}
 ok('crawl-brief.json contract');
 
 const collection = readJson(join(exampleDir, 'collection.json'));
@@ -266,6 +270,7 @@ for (const banned of expectedSeeds.mustNotContain) {
   }
 }
 if (classified.unresolved.length) fail(`classify-seeds unresolved: ${classified.unresolved.join(', ')}`);
+if (classified.seeds.length > 12) fail(`classify-seeds exceeded maxPages: ${classified.seeds.length}`);
 ok('classify-seeds maps non-standard paths');
 
 if (failures) {

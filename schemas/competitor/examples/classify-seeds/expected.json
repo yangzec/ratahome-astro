@@ -5,7 +5,8 @@
     "about": "https://acme.example/our-story",
     "category": "https://acme.example/shop",
     "contact": "https://acme.example/enquire-now",
-    "case": "https://acme.example/works"
+    "case": "https://acme.example/works",
+    "download": "https://acme.example/catalog"
   },
   "productPrefix": "https://acme.example/shop/",
   "mustNotContain": ["/blog/", "/privacy"]

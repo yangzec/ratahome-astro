@@ -7,6 +7,7 @@
   <url><loc>https://acme.example/shop/linen-set</loc></url>
   <url><loc>https://acme.example/enquire-now</loc></url>
   <url><loc>https://acme.example/works</loc></url>
+  <url><loc>https://acme.example/catalog</loc></url>
   <url><loc>https://acme.example/blog/hello</loc></url>
   <url><loc>https://acme.example/privacy</loc></url>
 </urlset>

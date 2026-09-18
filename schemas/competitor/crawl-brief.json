@@ -11,9 +11,11 @@
   },
   "quota": {
     "competitorsPerIndustry": 3,
-    "pagesPerCompetitor": 6,
-    "maxPagesHardCap": 12,
-    "productSamples": "1-2",
+    "requiredTypes": ["home", "about", "category", "product", "contact", "case|faq"],
+    "optionalTypes": ["download", "faq", "category"],
+    "minPages": 6,
+    "maxPages": 12,
+    "productSamples": { "min": 1, "max": 4 },
     "blogPosts": 0,
     "legalBody": false
   },
@@ -29,9 +31,11 @@
       { "pageType": "home", "required": true },
       { "pageType": "about", "required": true },
       { "pageType": "category", "required": true },
-      { "pageType": "product", "required": true, "limit": 2 },
+      { "pageType": "product", "required": true, "min": 1, "max": 4 },
       { "pageType": "contact", "required": true },
-      { "pageType": "case", "required": true, "alternateOf": ["faq"] }
+      { "pageType": "case", "required": true, "alternateOf": ["faq"] },
+      { "pageType": "download", "required": false },
+      { "pageType": "faq", "required": false, "note": "If case already picked, FAQ can still be added within maxPages" }
     ],
     "ifUnresolved": "Fetch one more nav page that looks closest, or skip that type and record it in seeds.json#/unresolved"
   },

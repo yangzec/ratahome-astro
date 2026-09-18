@@ -322,7 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| 竞品采集阶段 1 | 两轮清单已定；待你先交首页 + sitemap，再按 `seeds.json` 抓 6 页 |
+| 竞品采集阶段 1 | 两轮清单已定；6 类必齐、最多 12 页；待你先交首页 + sitemap |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 20:15 | 竞品采集配额改为 6 类必齐、最多 12 页，不再把 6 当页数上限 |
 | 2026-09-18 19:59 | 竞品路径改为两轮动态分类：`classify-seeds.mjs` 按导航文案 + sitemap 选 URL，不写死 `/about` |
 | 2026-09-18 17:15 | 确认抓取不在仓库实现；补 `crawl-brief.json`（Jina / CF 要爬的页、参数、落盘） |
 | 2026-09-18 15:54 | 落地竞品采集模型与映射：`schemas/competitor/` + `docs/COMPETITOR_INTEL.md`；爬虫未实现 |
