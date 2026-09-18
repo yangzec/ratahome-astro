@@ -81,9 +81,11 @@ try {
       console.log(`  template: ${created.templateId}`);
       console.log(`  name: ${created.name}`);
       console.log(`\nNext steps:`);
-      console.log(`  1. Edit content in sites/${created.slug}/content/`);
-      console.log(`  2. site-cli validate ${created.slug}`);
-      console.log(`  3. pnpm --filter ${created.slug} dev`);
+      console.log(`  1. Fill sites/${created.slug}/DESIGN.md (buyer, promise, CTA, visual)`);
+      console.log(`  2. Map visual to theme.json; homepage intent to blueprints/home.json`);
+      console.log(`  3. Edit content in sites/${created.slug}/content/`);
+      console.log(`  4. site-cli validate ${created.slug}`);
+      console.log(`  5. pnpm --filter ${created.slug} dev`);
       break;
     }
     case 'validate': {

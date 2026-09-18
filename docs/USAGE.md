@@ -51,6 +51,7 @@ trade-site-platform/
 │       └── i18n/                  # 多语言配置与路径工具
 ├── sites/ratahome-furniture/      # 站点实例
 │   ├── site.config.ts             # site_id、模板、语言
+│   ├── DESIGN.md                  # 该站视觉与转化锁稿
 │   ├── theme.json                 # 主题色、字体、圆角
 │   ├── blueprints/home.json       # 首页区块顺序
 │   ├── content/en|zh/           # 文案 JSON
@@ -79,7 +80,24 @@ trade-site-platform/
 
 ---
 
-## 5. 修改文案（不改代码）
+## 5. 站点视觉锁稿（DESIGN.md）
+
+新站或改承诺 / 主 CTA / 气质时，先填该站 `DESIGN.md`，再改 `theme.json`、Blueprint 和 content。
+
+| 文件 | 职责 |
+|------|------|
+| `docs/DESIGN.md` | 平台母版：锁什么、怎么填、怎么验收 |
+| `sites/{slug}/DESIGN.md` | 该站已填锁稿 |
+| `theme.json` | 可执行颜色、字体、圆角 |
+| `blueprints/home.json` | 可执行首页区块顺序 |
+
+`pnpm site-cli create` 会写入空白 `DESIGN.md`，不会复制源站已填内容。`site-cli validate` 要求该文件存在；仍有 `____` 时空槽会警告。
+
+未锁事实不上页。主 CTA 只锁一个。视觉 token 以 `theme.json` 为准，不要在 `DESIGN.md` 另写一套实现色值。
+
+---
+
+## 6. 修改文案（不改代码）
 
 所有可见文案在 JSON 中，按语言分目录：
 
@@ -105,7 +123,7 @@ sites/ratahome-furniture/content/
 
 ---
 
-## 6. 修改首页区块顺序（Blueprint）
+## 7. 修改首页区块顺序（Blueprint）
 
 编辑 `sites/ratahome-furniture/blueprints/home.json`：
 
@@ -132,9 +150,9 @@ sites/ratahome-furniture/content/
 
 ---
 
-## 7. 修改主题（颜色 / 字体）
+## 8. 修改主题（颜色 / 字体）
 
-编辑 `sites/ratahome-furniture/theme.json`：
+先对照该站 `DESIGN.md` 的视觉段，再编辑 `sites/ratahome-furniture/theme.json`：
 
 ```json
 {
@@ -154,7 +172,7 @@ sites/ratahome-furniture/content/
 
 ---
 
-## 8. 新增页面路由
+## 9. 新增页面路由
 
 1. 在 `src/data/slugs.ts` 的 `pageSlugs`（或 `collectionSlugs` 等）中加入 slug
 2. 在 `content/en/pages.json` → `slugs` 下添加对应条目（title、description、content）
@@ -165,7 +183,7 @@ sites/ratahome-furniture/content/
 
 ---
 
-## 9. 数据库（共享 D1 + site_id）
+## 10. 数据库（共享 D1 + site_id）
 
 **策略**：所有站点共用一个 D1 实例 `trade-platform`，用 `site_id` 列隔离数据。
 
@@ -187,7 +205,7 @@ pnpm db:migrate
 
 ---
 
-## 10. 文件存储（R2）
+## 11. 文件存储（R2）
 
 - 绑定名：`R2`，bucket：`trade-platform-assets`
 - 对象键格式：`{site_id}/{purpose}/{timestamp}-{random}-{filename}`
@@ -197,7 +215,7 @@ pnpm db:migrate
 
 ---
 
-## 11. API 端点
+## 12. API 端点
 
 | 方法 | 路径 | 说明 |
 |------|------|------|
@@ -209,7 +227,7 @@ pnpm db:migrate
 
 ---
 
-## 12. Cloudflare 部署
+## 13. Cloudflare 部署
 
 1. 在 Cloudflare 创建 D1 数据库 `trade-platform`，更新 `sites/ratahome-furniture/wrangler.jsonc` 中的 `database_id`
 2. 创建 R2 bucket `trade-platform-assets`
@@ -218,7 +236,7 @@ pnpm db:migrate
 
 ---
 
-## 13. 新增站点（site-cli）
+## 14. 新增站点（site-cli）
 
 ```bash
 # 查看可用行业模板
@@ -238,24 +256,26 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后编辑 `sites/<slug>/content/`、`theme.json`、`blueprints/home.json`。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
+创建后先填 `sites/<slug>/DESIGN.md`，再改 `theme.json`、`blueprints/home.json` 和 `content/`。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
 
 ---
 
-## 14. 故障排查
+## 15. 故障排查
 
 | 现象 | 处理 |
 |------|------|
 | 端口被占用 | 查看终端实际端口，或 `lsof -i :43123` 后结束占用进程 |
 | D1 表不存在 | 运行 `pnpm db:migrate` |
 | 首页某区块不显示 | 检查 `blueprints/home.json` 中的 ID 是否在 `sectionRegistry` 中 |
+| `validate` 提示 DESIGN.md 有 `____` | 先填该站锁稿，再改 theme / 文案 |
 | 中文页 404 | 确认 `content/zh/` 有对应 JSON，且 URL 为 `/zh/...` |
 | 表单提交失败 | 确认本地 wrangler platformProxy 已启用；生产环境检查 D1/R2 绑定 |
 
 ---
 
-## 15. 相关文档
+## 16. 相关文档
 
 - 架构与进度：`ROADMAP.md`
+- 站点视觉母版：`docs/DESIGN.md`
 - Agent 协作规范：`AGENTS.md`
 - 项目概览：`README.md`

@@ -1,7 +1,11 @@
 import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { getSiteDir, getWorkspaceRoot } from './paths.mjs';
 import { resolveTemplate } from './templates.mjs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const DESIGN_STUB = join(__dirname, '../../templates/DESIGN.md');
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.astro', '.wrangler']);
 
@@ -59,7 +63,21 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
     [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
   ]);
 
+  writeDesignStub(join(targetDir, 'DESIGN.md'), {
+    siteId: id,
+    templateId,
+    name: displayName,
+  });
+
   return { slug, siteId: id, name: displayName, templateId, path: targetDir };
+}
+
+function writeDesignStub(path, { siteId, templateId, name }) {
+  const stub = readFileSync(DESIGN_STUB, 'utf8')
+    .replaceAll('{{site_id}}', siteId)
+    .replaceAll('{{template}}', templateId)
+    .replaceAll('{{name}}', name);
+  writeFileSync(path, stub);
 }
 
 function readSiteIdFromConfig(siteDir) {

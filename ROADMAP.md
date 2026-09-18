@@ -19,6 +19,7 @@
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
+| 站点视觉锁稿 | **每站 `DESIGN.md`，母版 `docs/DESIGN.md`** | 只锁卖给谁、承诺、主 CTA、气质和验收；token 以 `theme.json` 为准，板块以 Blueprint 为准 |
 
 ---
 
@@ -245,7 +246,7 @@ trade-site-platform/
 
 ```bash
 pnpm site-cli create <slug> --from <industry-template>
-# 填充 content、上传 public、调整 routes
+# 先填 sites/<slug>/DESIGN.md，再改 theme.json / blueprint / content
 pnpm site-cli validate <slug>
 pnpm site-cli deploy <slug>          # 单站模式
 # 或
@@ -301,7 +302,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 |------|------|------|
 | L1 平台 | `packages/core`、`packages/sections` | HeroSection、ContactForm、API |
 | L2 行业 | `sites/{id}/content/`、`routes.json`、`blueprints/` | 导航、受众、产品分类、案例文案 |
-| L3 站点 | `site.config.ts`、`theme.json`、`public/` | 品牌名、WhatsApp、主色、Logo、域名 |
+| L3 站点 | `site.config.ts`、`DESIGN.md`、`theme.json`、`public/` | 视觉锁稿、品牌名、WhatsApp、主色、Logo、域名 |
 
 ---
 
@@ -328,6 +329,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 02:45 | 接入站点视觉锁稿：母版 `docs/DESIGN.md`，实例 `sites/*/DESIGN.md`；`site-cli create` 写入空白稿 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -349,6 +351,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 02:45 | 站点 DESIGN.md + site-cli | `pnpm site-cli validate ratahome-furniture`；stub 占位符替换 | 通过（Ratahome 无空槽警告；新站 stub 写入 `site_id` / template） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |

@@ -24,6 +24,7 @@ packages/sections/          Shared Section components + registry
 packages/site-cli/          create / validate / deploy CLI
 sites/ratahome-furniture/   First site instance
   site.config.ts            site_id, template, locales
+  DESIGN.md                 Visual and conversion lock for this site
   theme.json                Design tokens (colors, fonts)
   blueprints/home.json      Homepage section order
   content/{en,zh}/          Copy JSON
@@ -60,6 +61,7 @@ pnpm site-cli deploy <slug>
 ## Docs
 
 - **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
+- **站点视觉母版**：[`docs/DESIGN.md`](docs/DESIGN.md)（每站已填锁稿：`sites/*/DESIGN.md`）
 - **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
 - Agent 协作规范：`AGENTS.md`
 - 进度与计划：`ROADMAP.md`

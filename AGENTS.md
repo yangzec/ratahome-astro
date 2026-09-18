@@ -173,6 +173,7 @@ https://github.com/yangzec/ratahome-astro
 | `packages/core/` | 共享 db、r2、i18n（`@trade/core`） |
 | `sites/ratahome-furniture/` | 首个站点实例 |
 | `sites/*/site.config.ts` | site_id、模板、语言 |
+| `sites/*/DESIGN.md` | 该站视觉与转化锁稿 |
 | `sites/*/theme.json` | 设计 token |
 | `sites/*/blueprints/` | 页面区块组合 |
 | `sites/*/content/{locale}/` | 文案 JSON |
@@ -184,16 +185,18 @@ https://github.com/yangzec/ratahome-astro
 ### 工作流导航
 
 1. 进入任务：读 `CLAUDE.md` → `AGENTS.md` → `ROADMAP.md`
-2. 改文案：编辑 `sites/ratahome-furniture/content/{en,zh}/*.json`
-3. 改首页区块顺序：编辑 `sites/ratahome-furniture/blueprints/home.json`
-4. 改主题色：编辑 `sites/ratahome-furniture/theme.json`
-5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
-6. 本地开发：`pnpm dev`（端口 `43123`）
-7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+2. 新建站或改承诺 / 主 CTA / 气质：先填该站 `DESIGN.md`，母版见 `docs/DESIGN.md`
+3. 改文案：编辑 `sites/ratahome-furniture/content/{en,zh}/*.json`
+4. 改首页区块顺序：编辑 `sites/ratahome-furniture/blueprints/home.json`
+5. 改主题色：编辑 `sites/ratahome-furniture/theme.json`（与该站 `DESIGN.md` 视觉段对齐）
+6. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
+7. 本地开发：`pnpm dev`（端口 `43123`）
+8. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
 ### 文档指针
 
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **视觉母版**：`docs/DESIGN.md`；已填锁稿在 `sites/*/DESIGN.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件

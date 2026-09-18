@@ -4,6 +4,7 @@ import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
 
 const REQUIRED_FILES = [
   'site.config.ts',
+  'DESIGN.md',
   'theme.json',
   'blueprints/home.json',
   'content/en/common.json',
@@ -100,6 +101,17 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
       } catch (e) {
         errors.push(`content/${locale}/${file}: invalid JSON — ${e.message}`);
       }
+    }
+  }
+
+  const designPath = join(siteDir, 'DESIGN.md');
+  if (existsSync(designPath)) {
+    const design = readFileSync(designPath, 'utf8');
+    if (design.includes('{{site_id}}') || design.includes('{{template}}')) {
+      errors.push('DESIGN.md still has unreplaced create placeholders');
+    }
+    if (design.includes('____')) {
+      warnings.push('DESIGN.md still has unfilled slots (____); fill before rewriting theme or copy');
     }
   }
 
