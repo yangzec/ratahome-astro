@@ -1,14 +1,14 @@
 {
   "site": {
     "name": "家纺出口",
-    "title": "家纺产品出口",
-    "description": "床品、卫浴与窗帘项目——认证、定制绣花与出口包装，同一团队交付。",
+    "title": "酒店床品和卫浴",
+    "description": "套件、毛圈和窗帘。订单要绣花或 OEKO-TEX，按单做。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
     "email": "hometextile@example.com",
-    "tagline": "认证与绣花——大货装箱前书面确认。",
+    "tagline": "套装签字后，再装箱。",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "床品、卫浴与窗帘——认证、绣花与出口由同一团队负责。",
+    "description": "床单、毛圈和窗帘车间。",
     "copyright": "版权所有。"
   }
 }

@@ -1,14 +1,14 @@
 {
   "site": {
     "name": "Textile Apparel Co.",
-    "title": "Garment Development & Export",
-    "description": "Develop knit and woven apparel programs — tech packs, size specs, fit samples, bulk production and export in one team.",
+    "title": "Knit and woven garments",
+    "description": "Cut-and-sew in Shaoxing and Guangzhou — grading, fit samples and bulk by colour and size.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "apparel@example.com",
-    "tagline": "Fit sample and size spec — approved in writing before bulk cutting.",
+    "tagline": "Sign the fit sample. Then we cut.",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "Tech pack, fit sample, bulk sewing and export — one accountable apparel team.",
+    "description": "Knit and woven lines in Shaoxing and Guangzhou.",
     "copyright": "All rights reserved."
   }
 }

@@ -1,62 +1,62 @@
 {
   "about": {
     "title": "About",
-    "eyebrow": "Apparel export",
-    "heroTitle": "Cut-and-sew factories, one accountable team.",
-    "heroDescription": "We develop knit and woven garments for brands and retailers — tech packs, fit samples, bulk sewing and export documents managed as one program.",
-    "workflowTitle": "How we work with sewing lines.",
-    "workflowDescription": "Every style follows the same path — tech pack, fit approval, inline QC and carton inspection before shipment.",
-    "closingTitle": "Ready to develop the next style?",
-    "closingDescription": "Share a tech pack or reference garment — we reply with factory options and MOQ within 48 hours."
+    "eyebrow": "Cut-and-sew",
+    "heroTitle": "A sewing office in Shaoxing and Guangzhou.",
+    "heroDescription": "Knit jersey and fleece, woven shirts, outerwear and uniforms. We take a style from the first sample to packed cartons.",
+    "workflowTitle": "How a line gets chosen.",
+    "workflowDescription": "Construction and monthly volume decide the factory. Fit and PP decide when cutting starts.",
+    "closingTitle": "Have a style to place?",
+    "closingDescription": "Send a tech pack or a reference garment. We reply with a factory and an MOQ."
   },
   "contact": {
     "title": "Contact",
-    "heroTitle": "Talk to the apparel team.",
-    "heroDescription": "Fit samples, size specs or bulk programs — one contact from style to shipment.",
+    "heroTitle": "Talk to the merchandiser.",
+    "heroDescription": "Fit samples, size runs or a bulk PO — write to the person who will follow the style.",
     "getInTouch": "Get in touch"
   },
   "collections": {
     "title": "Styles",
-    "heroTitle": "Style categories",
-    "heroDescription": "Browse by garment type and program.",
-    "packagesTitle": "Apparel programs",
-    "benefitsTitle": "Why develop through one team?",
-    "benefitsDescription": "Locked tech packs, written fit approval and carton-level inspection.",
-    "stylesTitle": "Applications",
-    "stylesDescription": "Retail, uniforms, activewear and private-label programs."
+    "heroTitle": "Garment types we sew",
+    "heroDescription": "Knit tops, woven shirts, outerwear, activewear, uniforms and private label.",
+    "packagesTitle": "What we quote",
+    "benefitsTitle": "What you get on a quote",
+    "benefitsDescription": "Factory, MOQ, sampling date, and a size range.",
+    "stylesTitle": "Where the garments go",
+    "stylesDescription": "Retail floors, staff uniforms, gyms and brand drops."
   },
   "slugs": {
-    "brands": { "title": "For brands", "description": "Seasonal collections with locked blocks.", "content": "Brand teams receive tech packs, fit samples and repeatable factory assignments — size and construction locked before cutting." },
-    "retailers": { "title": "For retailers", "description": "Private label and seasonal drops.", "content": "Retail teams get size specs, PP samples and carton packing standards with written QC gates before shipment." },
-    "agents": { "title": "For agents", "description": "Multi-brand sourcing with one file.", "content": "Agents consolidate styles across factories with shared AQL standards and one export documentation set." },
-    "size-specs": { "title": "Size specifications", "description": "Grading, blocks and fit standards.", "content": "We develop size charts and fit samples for your target market — written approval before bulk cutting." },
-    "sampling": { "title": "Sampling", "description": "Fit samples, PP samples and comments.", "content": "Submit a tech pack or reference style. We arrange fit samples and PP samples with written gates before bulk." },
-    "certifications": { "title": "Certifications", "description": "OEKO-TEX, BSCI and program-specific audits.", "content": "We match styles to factories that hold the audits you require. Certificates travel with the order file." },
-    "quality-control": { "title": "Quality control", "description": "AQL and measurement before every shipment.", "content": "Final inspection covers measurements, stitching, appearance and carton count. Reports are signed before containers leave." },
-    "how-it-works": { "title": "How it works", "description": "From tech pack to shipment.", "content": "Share tech pack → factory match → fit sample → bulk sew → inspect → ship. One team throughout." },
-    "faq": { "title": "FAQ", "description": "Sampling, size specs and MOQ.", "content": "Fit-sample cycles, MOQ by style, payment terms and AQL levels — answered in writing before you commit to bulk." },
-    "blog": { "title": "Blog", "description": "Apparel development notes.", "content": "Notes on sizing, factory capability and export packing practice." }
+    "brands": { "title": "For brands", "description": "Keep the block. Change the colour.", "content": "Seasonal drops sew from a locked base size. We keep the factory assignment so a repeat order does not start from a new pattern." },
+    "retailers": { "title": "For retailers", "description": "Store sizes on the PO.", "content": "Private-label tops and uniforms. Size runs, hangtags and carton marks are written before cutting, so receiving does not relabel the floor." },
+    "agents": { "title": "For agents", "description": "Dated capacity and a measurement sheet.", "content": "We book a sewing slot you can show a principal, and we issue measurement records by colour and size." },
+    "size-specs": { "title": "Size specifications", "description": "Grade from a base size.", "content": "Send a chart or a fit sample. We grade XS–4XL for the market you sell into, and we do not cut bulk until the base is signed." },
+    "sampling": { "title": "Sampling", "description": "Proto, fit, then PP.", "content": "A reference garment or a tech pack is enough to start. Fit comments go on the sample. PP locks the marker." },
+    "certifications": { "title": "Certifications", "description": "BSCI, OEKO-TEX, and the audit you name.", "content": "We place the style in a factory that already holds the audit. Certificates travel with the order, not as a later email." },
+    "quality-control": { "title": "Quality control", "description": "Measure, then count the cartons.", "content": "Final audit covers measurements, stitch, appearance and carton count. The report is signed before the truck leaves." },
+    "how-it-works": { "title": "How it works", "description": "Style in, cartons out.", "content": "Send the style → pick the line → sign fit → sew the PO → count cartons. The merchandiser does not change in the middle." },
+    "faq": { "title": "FAQ", "description": "Sampling time, MOQ, payment.", "content": "Fit-sample cycles, MOQ by construction, deposit terms and AQL level — written before you open a bulk PO." },
+    "blog": { "title": "Blog", "description": "Notes from the sewing floor.", "content": "Grading, factory capability and how we pack a carton." }
   },
   "workflow": [
-    { "step": "01", "title": "Tech pack intake", "description": "Style, fabric, size range and colors captured in one file." },
-    { "step": "02", "title": "Factory match", "description": "Shortlist cut-and-sew lines for the construction." },
-    { "step": "03", "title": "Fit sample", "description": "Written size approval before cutting." },
-    { "step": "04", "title": "Bulk & AQL", "description": "Sewing with measurement records and carton inspection." }
+    { "step": "01", "title": "Read the style", "description": "Fabric, construction, size range and colours." },
+    { "step": "02", "title": "Pick the line", "description": "Knit or woven, by monthly volume." },
+    { "step": "03", "title": "Sign the fit", "description": "Comments on the sample." },
+    { "step": "04", "title": "Sew and audit", "description": "Measurements on the line, cartons at the door." }
   ],
   "aboutAudiences": [
-    { "title": "Brands", "description": "Collection development with stable factories." },
-    { "title": "Retailers", "description": "Private-label drops and size specs." },
-    { "title": "Agents", "description": "Multi-brand files and shared QC." }
+    { "title": "Brands", "description": "Repeat a locked block." },
+    { "title": "Retailers", "description": "Size runs for the floor." },
+    { "title": "Agents", "description": "Capacity you can date." }
   ],
   "packageBenefits": [
-    { "title": "Written tech pack", "description": "Construction and trims locked before bulk." },
-    { "title": "Fit-sample gate", "description": "No cutting without size approval." },
-    { "title": "Carton reports", "description": "AQL before every shipment." }
+    { "title": "Style sheet first", "description": "Seams and trims before the marker." },
+    { "title": "Fit gate", "description": "No cutting without a signed sample." },
+    { "title": "Carton count", "description": "AQL before the truck." }
   ],
   "collectionBenefits": [
-    { "title": "Sewing network", "description": "Vetted knit and woven lines." },
-    { "title": "One contact", "description": "Style to ship, same team." },
-    { "title": "Export ready", "description": "Docs and carton standards included." }
+    { "title": "Knit lines", "description": "Jersey and fleece." },
+    { "title": "Woven lines", "description": "Shirts, outerwear, uniforms." },
+    { "title": "Export bench", "description": "Marks and papers with the cartons." }
   ],
   "collectionPackages": []
 }

@@ -1,14 +1,14 @@
 {
   "site": {
     "name": "成衣出口",
-    "title": "成衣开发与出口",
-    "description": "针织与梭织成衣项目——工艺单、尺码表、产前样、大货与出口，同一团队交付。",
+    "title": "针织与梭织成衣",
+    "description": "绍兴、广州车缝——放码、试穿样，大货按颜色和尺码出。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
     "email": "apparel@example.com",
-    "tagline": "产前样与尺码表——大货裁剪前书面确认。",
+    "tagline": "试穿样签字后，再开裁。",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "工艺单、产前样、大货车缝与出口——同一成衣团队负责。",
+    "description": "绍兴、广州的针织和梭织产线。",
     "copyright": "版权所有。"
   }
 }

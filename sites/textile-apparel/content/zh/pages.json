@@ -1,62 +1,62 @@
 {
   "about": {
     "title": "关于",
-    "eyebrow": "成衣出口",
-    "heroTitle": "裁缝工厂，同一责任团队。",
-    "heroDescription": "为品牌与零售商开发针织、梭织成衣——工艺单、产前样、大货车缝与出口文件，按一个项目推进。",
-    "workflowTitle": "我们如何对接车缝产线。",
-    "workflowDescription": "每款走同一路径——工艺单、试穿批复、过程质检与装箱检验后再出货。",
-    "closingTitle": "准备开发下一款？",
-    "closingDescription": "发送工艺单或参考成衣——48 小时内回复工厂选项与 MOQ。"
+    "eyebrow": "车缝",
+    "heroTitle": "绍兴、广州的车缝办公室。",
+    "heroDescription": "针织卫衣和毛圈，梭织衬衫、外套和制服。从第一件样衣做到装好的纸箱。",
+    "workflowTitle": "产线怎么定。",
+    "workflowDescription": "结构和月产量决定工厂。试穿和 PP 决定什么时候开裁。",
+    "closingTitle": "手上有款要下？",
+    "closingDescription": "发工艺单或寄参考成衣。我们回复工厂和起订。"
   },
   "contact": {
     "title": "联系",
-    "heroTitle": "联系成衣团队。",
-    "heroDescription": "产前样、尺码表或大货项目——从款式到出货同一联系人。",
+    "heroTitle": "找跟单。",
+    "heroDescription": "试穿样、码段或大货订单——写给会跟这款的人。",
     "getInTouch": "取得联系"
   },
   "collections": {
     "title": "款式",
-    "heroTitle": "款式类别",
-    "heroDescription": "按成衣类型与项目浏览。",
-    "packagesTitle": "成衣项目",
-    "benefitsTitle": "为什么交给同一团队开发？",
-    "benefitsDescription": "工艺单锁定、试穿书面批复、按箱检验。",
-    "stylesTitle": "适用场景",
-    "stylesDescription": "零售、制服、运动装与贴牌项目。"
+    "heroTitle": "我们车的成衣品类",
+    "heroDescription": "针织上衣、梭织衬衫、外套、运动装、制服和贴牌。",
+    "packagesTitle": "报价里有什么",
+    "benefitsTitle": "报价单上能看到",
+    "benefitsDescription": "工厂、起订、打样日期、码段。",
+    "stylesTitle": "衣服去哪",
+    "stylesDescription": "零售店、员工制服、健身房和品牌上新。"
   },
   "slugs": {
-    "brands": { "title": "品牌方", "description": "季节系列，基码锁定。", "content": "品牌团队获得工艺单、产前样与可复购工厂——开裁前锁定尺码与结构。" },
-    "retailers": { "title": "零售商", "description": "贴牌与季节上新。", "content": "零售团队获得尺码表、PP 样与装箱标准，出货前设书面质检节点。" },
-    "agents": { "title": "代理商", "description": "多品牌共用一套档案。", "content": "代理可跨厂汇总款式，共用 AQL 标准与一份出口文件。" },
-    "size-specs": { "title": "尺码规格", "description": "放码、基码与试穿标准。", "content": "按目标市场做尺码表与产前样——大货开裁前书面确认。" },
-    "sampling": { "title": "打样", "description": "产前样、PP 样与意见闭环。", "content": "提交工艺单或参考款。安排产前样与 PP 样，大货前设书面节点。" },
-    "certifications": { "title": "认证", "description": "OEKO-TEX、BSCI 及项目审核。", "content": "按你要求的审核匹配工厂。证书随订单档案走。" },
-    "quality-control": { "title": "质量控制", "description": "每票货出货前做 AQL 与尺寸。", "content": "终检覆盖尺寸、车缝、外观与箱数。报告签字后再离厂。" },
-    "how-it-works": { "title": "如何合作", "description": "从工艺单到出货。", "content": "提交工艺单 → 匹配工厂 → 产前样 → 大货车缝 → 检验 → 出货。全程同一团队。" },
-    "faq": { "title": "常见问题", "description": "打样、尺码与起订。", "content": "产前样周期、按款 MOQ、付款与 AQL 水准——大货前书面答复。" },
-    "blog": { "title": "博客", "description": "成衣开发备忘。", "content": "关于尺码、工厂能力与出口装箱的笔记。" }
+    "brands": { "title": "品牌方", "description": "基码留下，颜色可以换。", "content": "季节款按锁定的基码车。工厂不换，返单不用重新打版。" },
+    "retailers": { "title": "零售商", "description": "店码写进订单。", "content": "贴牌上衣和制服。码段、吊牌、箱唛开裁前写好，收货不用再贴。" },
+    "agents": { "title": "代理商", "description": "能约日期的车位和尺寸表。", "content": "排期可以给委托方看。尺寸按颜色和尺码出记录。" },
+    "size-specs": { "title": "尺码规格", "description": "从基码放出去。", "content": "给尺码表或一件试穿样。按你卖的市场放到 XS–4XL。基码没签字，大货不开裁。" },
+    "sampling": { "title": "打样", "description": "初样、试穿、再 PP。", "content": "参考成衣或工艺单就能开始。试穿意见写在样衣上。PP 锁唛架。" },
+    "certifications": { "title": "认证", "description": "BSCI、OEKO-TEX，或你点名的验厂。", "content": "款式放到已经有这份审核的工厂。证书跟订单走，不当事后补件。" },
+    "quality-control": { "title": "质量控制", "description": "先量尺寸，再数箱子。", "content": "终检看尺寸、车缝、外观和箱数。报告签字后，车才走。" },
+    "how-it-works": { "title": "怎么合作", "description": "款式进来，纸箱出去。", "content": "把款式发来 → 选产线 → 试穿签字 → 按订单车 → 清点纸箱。中间不换跟单。" },
+    "faq": { "title": "常见问题", "description": "打样时间、起订、付款。", "content": "产前样周期、按结构的起订、定金和 AQL——开大货订单前写清楚。" },
+    "blog": { "title": "博客", "description": "车缝车间的笔记。", "content": "放码、工厂能力和纸箱怎么装。" }
   },
   "workflow": [
-    { "step": "01", "title": "接收工艺单", "description": "款式、面料、尺码与颜色汇总进一份文件。" },
-    { "step": "02", "title": "匹配工厂", "description": "按结构筛选裁缝产线。" },
-    { "step": "03", "title": "产前样", "description": "开裁前书面确认尺码。" },
-    { "step": "04", "title": "大货与 AQL", "description": "车缝过程记录尺寸，出货前装箱检验。" }
+    { "step": "01", "title": "看款", "description": "面料、结构、码段和颜色。" },
+    { "step": "02", "title": "选线", "description": "针织或梭织，看月产量。" },
+    { "step": "03", "title": "试穿签字", "description": "意见写在样衣上。" },
+    { "step": "04", "title": "车缝和终检", "description": "线上量尺寸，门口数箱子。" }
   ],
   "aboutAudiences": [
-    { "title": "品牌方", "description": "系列开发，工厂稳定。" },
-    { "title": "零售商", "description": "贴牌上新与尺码表。" },
-    { "title": "代理商", "description": "多品牌档案与共用质检。" }
+    { "title": "品牌方", "description": "重复已锁的基码。" },
+    { "title": "零售商", "description": "给店里铺码。" },
+    { "title": "代理商", "description": "产能能约到日期。" }
   ],
   "packageBenefits": [
-    { "title": "书面工艺单", "description": "大货前锁定结构与辅料。" },
-    { "title": "产前样节点", "description": "未确认尺码不开裁。" },
-    { "title": "装箱报告", "description": "每票货出货前做 AQL。" }
+    { "title": "先出工艺单", "description": "缝型和辅料先于唛架。" },
+    { "title": "试穿关", "description": "没签字样不开裁。" },
+    { "title": "清点纸箱", "description": "发车前做 AQL。" }
   ],
   "collectionBenefits": [
-    { "title": "车缝网络", "description": "经过筛选的针织与梭织产线。" },
-    { "title": "单一联系人", "description": "从款式到出货同一团队。" },
-    { "title": "出口就绪", "description": "文件与装箱标准包含在内。" }
+    { "title": "针织线", "description": "卫衣和毛圈。" },
+    { "title": "梭织线", "description": "衬衫、外套、制服。" },
+    { "title": "出口台", "description": "箱唛和文件跟箱走。" }
   ],
   "collectionPackages": []
 }

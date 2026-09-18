@@ -1,14 +1,14 @@
 {
   "site": {
     "name": "Textile Home Co.",
-    "title": "Home Textile Export",
-    "description": "Bedding, bath and curtain programs with certifications, custom embroidery and export packing — one accountable team.",
+    "title": "Hotel bedding and bath",
+    "description": "Sheet sets, terry and curtains — embroidery and OEKO-TEX lots when the order names them.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "hometextile@example.com",
-    "tagline": "Certification and embroidery — confirmed before bulk packing.",
+    "tagline": "Sign the set. Then we pack.",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "Bedding, bath and curtains — certifications, embroidery and export in one team.",
+    "description": "Sheeting, terry and curtain workshops.",
     "copyright": "All rights reserved."
   }
 }

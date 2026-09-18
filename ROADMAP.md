@@ -11,7 +11,7 @@
 | 部署顺序 | **先单站单部署，后多站单部署** | 先证明「站可复制」，再证明「部署可合并」 |
 | 代码组织 | Monorepo + `sites/{industry}/` | 共享 `packages/core`，每站独立配置 |
 | 行业语义 | **内容文案为主，组件为辅** | 80% 差异在 JSON / 路由 / 素材；仅 ~20% 需新 Section |
-| 对外文案 | **干净骨架 + 简报拼接** | `create` 只拷 `packages/site-cli/skeletons/{template}`；写文案只拼接 `industry.json` |
+| 对外文案 | **干净骨架 + 简报对象清单** | `create` 只拷骨架；`industry.json` 决定写谁、写什么，不决定每句怎么说 |
 | 页面多样化 | Section Registry + Page Blueprint | 首页等由 JSON 配置区块顺序，非写死模板 |
 | 多语言 | en 默认 + zh（`/zh/`） | 后续按需扩展 locale |
 | 技术栈 | Astro 7 + Tailwind 4 + Cloudflare D1/R2 | 不引入第二套 UI 框架 |
@@ -21,7 +21,7 @@
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
 
-对照句混入环节：当时拷贝源仍带着源站品类语义，写 `content/` 时又用否定约束补救，验收语言进了 `home.audiences.title`。应先落干净骨架和该站 `industry.json`，再用简报拼接文案。
+对照句混入环节：当时拷贝源仍带着源站品类语义，写 `content/` 时又用否定约束补救，验收语言进了 `home.audiences.title`。后来简报被当成句模，每个区块复述「共用一套、从样跟到货」。应先落干净骨架和该站 `industry.json`；写句子时简报只当对象清单，各区块换一件事。
 
 ---
 
@@ -347,6 +347,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 03:14 | 成衣 / 家纺首页按区块重写；简报改为对象清单，去掉「共用一套」句模 |
 | 2026-09-19 02:52 | 成衣 / 家纺按干净骨架 + 行业简报删除重建并重新部署；路由来自 `catalogSlugs`；文案去掉对照句 |
 | 2026-09-19 02:25 | `create` 改为只拷 `packages/site-cli/skeletons/{template}`，已上线站仅作泄漏对照 |
 | 2026-09-19 01:09 | 约束不得点名另一行业；`validate` 改为拦否定结构，去掉行业词黑名单 |
@@ -366,7 +367,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
 | 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
-| 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
 
 ---
 
@@ -374,6 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 03:14 | 成衣/家纺文案去句模 | 两站 `validate` 通过；首页 audiences 标题与描述不再复述；无「共用一套 / one program file」 | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
 | 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
 | 2026-09-19 01:09 | 去行业指向约束 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；规范与探测器均不列行业词 | 通过 |

@@ -1,74 +1,74 @@
 {
   "hero": {
-    "eyebrow": "Bedding · Bath · Custom embroidery",
-    "title": "Bedding and bath programs, certified before bulk.",
-    "description": "Hotels, retailers and developers specify bedding sets, bath towels and curtains once — embroidery proof, OEKO-TEX certificate and set packing stay on the same file.",
+    "eyebrow": "Sheeting · Terry · Window textiles",
+    "title": "Hotel bedding and bath, cut for the room.",
+    "description": "Sheet sets, towels and curtains for hotels and retail. Embroidery and OEKO-TEX lots when the order asks for them.",
     "image": "/images/hero.jpg",
     "imageAlt": "Hotel bedding program with layered linen",
     "ctaHref": "#sample"
   },
   "assurances": [
-    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX programs", "description": "Certified lots on request" },
-    { "icon": "/icons/box-seam.svg", "title": "Sample set before bulk", "description": "Written approval on every SKU" },
-    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment set count", "description": "Finish, stitch and carton report" },
-    { "icon": "/icons/clock.svg", "title": "48-hour sample response", "description": "One contact for specs and MOQ" }
+    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX lots", "description": "Scope file with the shipment" },
+    { "icon": "/icons/box-seam.svg", "title": "Sample set on a bed", "description": "SKU signed before packing" },
+    { "icon": "/icons/shield-check.svg", "title": "Sets counted at audit", "description": "Stitch, finish, piece count" },
+    { "icon": "/icons/clock.svg", "title": "Sample reply in 48 hours", "description": "Workshop, MOQ and a date" }
   ],
   "metrics": [
-    { "value": "120+", "label": "Active home-textile SKUs" },
-    { "value": "200–800 GSM", "label": "Towel and sheeting range" },
+    { "value": "120+", "label": "SKUs we keep in work" },
+    { "value": "200–800 GSM", "label": "Terry we run" },
     { "value": "12 days", "label": "Typical sample-set cycle" },
     { "value": "100%", "label": "Sets counted before ship" }
   ],
   "audiences": {
-    "title": "Hotels, retailers and property teams share one room file.",
-    "description": "Hospitality, retail and developers specify once — the same certificate and packing file follows every replenishment.",
+    "title": "Who buys these linens.",
+    "description": "A hotel reorders the same SKU for years. A retailer changes a colour each season. A developer needs the room to match.",
     "items": [
-      { "title": "Hotels", "description": "Guestroom and bath programs with embroidery and replenishment.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
-      { "title": "Retailers", "description": "Seasonal bedding and towel collections with certified lots.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Developers", "description": "Matched bedding, curtains and bath SKUs by room type.", "href": "/developers", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "Sample sets, embroidery proofs and packing standards.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Hotels", "description": "Guestroom sets and embroidered bath, with a call-off quantity for replenishment.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Bedding collections and terry in a colour story, packed for shelf or gift box.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Developers", "description": "One room type: matched sheeting, curtains and bath SKUs.", "href": "/developers", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "A set you can put on a bed, plus an embroidery proof on the actual terry.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "From room spec to packed set — one program file.",
-    "description": "Sheeting, embroidery and packing stay on the same home-textile team from sample set to export.",
+    "title": "Sheeting, terry, stitch, pack.",
+    "description": "Thread count, GSM and stitch density are set per SKU before the first bulk lot.",
     "items": [
-      { "title": "Bedding programs", "description": "Sets, duvets and pillows with thread count and size locked in writing.", "image": "/images/capabilities/composition.jpg" },
-      { "title": "Bath & color range", "description": "Terry towels in hospitality and retail palettes, GSM confirmed per SKU.", "image": "/images/capabilities/color.jpg" },
-      { "title": "Embroidery & MOQ", "description": "Logo proofs, set MOQ and replenishment quantities per property.", "image": "/images/capabilities/moq.jpg" },
-      { "title": "Export packing", "description": "Set-packed cartons, packing lists and hotel-ready labelling.", "image": "/images/capabilities/export.jpg" }
+      { "title": "Bedding", "description": "Sets, duvets and pillows — thread count and size written on the SKU card.", "image": "/images/capabilities/composition.jpg" },
+      { "title": "Bath terry", "description": "Hospitality and retail palettes. GSM confirmed on the towel, not the quote.", "image": "/images/capabilities/color.jpg" },
+      { "title": "Embroidery", "description": "Logo size, thread and placement signed on a proof before the heads run.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Set packing", "description": "Cartons labelled by room or colourway, with a piece count on the list.", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
-    "title": "One path from room spec to shipment.",
-    "description": "Every gate is documented — sample set, certificate and carton count before dispatch.",
+    "title": "From a room list to packed sets.",
+    "description": "The slow part is agreeing GSM, size and logo. Bulk starts when those three are signed.",
     "image": "/images/process.jpg",
     "imageAlt": "Home textile folding and QC",
     "steps": [
-      { "step": "01", "title": "Share a room spec", "description": "Send product, size, GSM, color, embroidery and quantity." },
-      { "step": "02", "title": "Match a workshop", "description": "We shortlist sheeting, terry or curtain lines for the program." },
-      { "step": "03", "title": "Approve the set", "description": "Sample set and embroidery proof signed before bulk packing." },
-      { "step": "04", "title": "Bulk make", "description": "Inline QC on stitch, finish and set completeness." },
-      { "step": "05", "title": "Ship", "description": "Set count, packing list and certificates travel with the cartons." }
+      { "step": "01", "title": "Send the room list", "description": "Product, size, GSM, colour, embroidery and quantity." },
+      { "step": "02", "title": "Pick the workshop", "description": "Sheeting, terry or curtain line, by finish and volume." },
+      { "step": "03", "title": "Approve the set", "description": "Sample on the bed, logo on the towel." },
+      { "step": "04", "title": "Make the lot", "description": "Stitch, finish and set completeness checked on the line." },
+      { "step": "05", "title": "Count and ship", "description": "Set count, packing list and certificates in the carton." }
     ]
   },
   "testimonials": [
-    { "quote": "Embroidery proofs were signed before packing. Guestroom sets arrived complete and labelled by room type.", "author": "Crest Hotels · Singapore" },
-    { "quote": "One spec covered bedding, towels and curtains for three room types. Replenishment used the same file.", "author": "Oak & Linen Retail · UK" }
+    { "quote": "Logo size on the terry matched the proof. Housekeeping could tell room types from the labels.", "author": "Crest Hotels · Singapore" },
+    { "quote": "200 GSM bath and 300TC sheeting arrived together for the soft opening.", "author": "Oak & Linen Retail · UK" }
   ],
   "warranty": {
-    "eyebrow": "Program gates",
-    "title": "What if a set or certificate is wrong?",
-    "description": "Approvals are tied to a SKU and lot — claims follow the signed sample and scope file.",
-    "commitment": "Every claim is checked against the signed sample set, certificate and packing list that travel with the goods.",
+    "eyebrow": "If the lot is wrong",
+    "title": "What we do when a set or certificate fails.",
+    "description": "The signed sample set and the lot number are the reference.",
+    "commitment": "Claims are checked against the signed set, the certificate and the packing list in the carton.",
     "cases": [
-      { "question": "If a certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "OEKO-TEX or equivalent claims are issued with the order file. Uncertified lots stay off certified packing." },
-      { "question": "If embroidery misses the artwork", "title": "Proof approval before bulk stitching.", "description": "Logo size, thread and placement are signed on the proof. Off-spec pieces are pulled before packing." },
-      { "question": "If sets arrive incomplete", "title": "Packing list reconciles pieces vs. PO.", "description": "Each set is counted at final inspection. Shortage claims follow the signed packing list." }
+      { "question": "If the certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "OEKO-TEX claims travel with the order. Uncertified pieces stay off certified cartons." },
+      { "question": "If embroidery misses the artwork", "title": "Proof first, then the heads.", "description": "Size, thread and placement are signed on the proof. Off-spec pieces are pulled before packing." },
+      { "question": "If a set is incomplete", "title": "The packing list is the count.", "description": "Each set is counted at final audit. Shortage claims follow that list." }
     ]
   },
   "rooms": {
-    "title": "Browse by product line.",
+    "title": "Browse by product.",
     "basePath": "/products",
     "items": [
       { "label": "Bedding sets", "slug": "bedding-sets" },
@@ -80,30 +80,30 @@
     ]
   },
   "projects": {
-    "title": "Recent programs.",
+    "title": "Recent orders.",
     "items": []
   },
   "ecosystem": {
-    "title": "Home-textile workshops with one program team.",
-    "description": "Vetted sheeting, terry and curtain lines — sample sets, certificates and export packing stay with the same contact.",
+    "title": "Sheeting, terry and curtain workshops.",
+    "description": "Mills we already run: hotel sheeting, bath terry, and made-to-measure curtains.",
     "items": []
   },
   "cta": {
     "anchorId": "sample",
-    "title": "Start with a room spec or reference set.",
-    "description": "Share product, size, color and quantity — you will receive workshop options, MOQ and sample-set timing within 48 hours.",
+    "title": "Send a room list or a reference set.",
+    "description": "Product, size, colour and quantity are enough. We reply with a workshop, an MOQ and a sample date.",
     "formTitle": "Request home textile samples",
-    "formDescription": "Attach a spec sheet, room photo or embroidery artwork. Sample-set and bulk MOQ included in the reply.",
+    "formDescription": "Attach a spec sheet, a room photo or embroidery artwork.",
     "steps": [
-      "Send a room spec or reference set — one file is enough to begin.",
-      "Receive workshop shortlist, MOQ and sample-set schedule.",
-      "Approve the set and embroidery proof before bulk packing."
+      "Send the room list or the set.",
+      "Get a workshop, MOQ and a sample date.",
+      "Sign the set and the logo proof before bulk packing."
     ]
   },
   "footerFeatures": [
-    { "title": "Home-textile workshops", "description": "Sheeting, terry and curtains" },
-    { "title": "Sample set first", "description": "Written SKU approval before packing" },
-    { "title": "Export ready", "description": "Certificates and set packing lists" },
-    { "title": "One program team", "description": "Single contact from spec to ship" }
+    { "title": "Sheeting and terry", "description": "Hotel and retail lots" },
+    { "title": "Sample on the bed", "description": "SKU signed first" },
+    { "title": "Certificates in the box", "description": "Scope file with the lot" },
+    { "title": "One merchandiser", "description": "Room list to the forwarder" }
   ]
 }

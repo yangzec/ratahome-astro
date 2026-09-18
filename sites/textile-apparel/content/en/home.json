@@ -1,74 +1,74 @@
 {
   "hero": {
-    "eyebrow": "Tech pack · Fit sample · Bulk sewing",
-    "title": "Apparel programs from tech pack to shipment.",
-    "description": "Brands, retailers and agents develop knit and woven styles with one file — size spec, fit sample, PP sample, bulk sewing and export packing.",
+    "eyebrow": "Cut-and-sew in Shaoxing & Guangzhou",
+    "title": "Knit and woven garments, sewn to your size spec.",
+    "description": "We grade, sample and cut seasonal styles. After the fit sample is signed, bulk goes out by colour and size on the purchase order.",
     "image": "/images/hero.jpg",
     "imageAlt": "Apparel sample studio with hanging garments",
     "ctaHref": "#sample"
   },
   "assurances": [
-    { "icon": "/icons/shield-check.svg", "title": "BSCI factory programs", "description": "Social audit on request" },
-    { "icon": "/icons/box-seam.svg", "title": "Fit sample before bulk", "description": "Written approval on every style" },
-    { "icon": "/icons/shield-check.svg", "title": "Pre-shipment AQL report", "description": "Measurement and carton count" },
-    { "icon": "/icons/clock.svg", "title": "48-hour sample response", "description": "One contact for specs and MOQ" }
+    { "icon": "/icons/shield-check.svg", "title": "BSCI factory programs", "description": "Social audit pack on request" },
+    { "icon": "/icons/box-seam.svg", "title": "Fit sample before cutting", "description": "Base size signed on the garment" },
+    { "icon": "/icons/shield-check.svg", "title": "AQL at final audit", "description": "Measurements and carton count" },
+    { "icon": "/icons/clock.svg", "title": "Sample reply in 48 hours", "description": "Factory option and MOQ dated" }
   ],
   "metrics": [
-    { "value": "80+", "label": "Active style programs" },
-    { "value": "XS–4XL", "label": "Size range covered" },
+    { "value": "80+", "label": "Styles in production" },
+    { "value": "XS–4XL", "label": "Grading range we run" },
     { "value": "18 days", "label": "Typical fit-sample cycle" },
-    { "value": "100%", "label": "Cartons checked before ship" }
+    { "value": "100%", "label": "Cartons counted at audit" }
   ],
   "audiences": {
-    "title": "Brands, retailers and agents share one program file.",
-    "description": "The same tech pack, size spec and AQL report follow every style from fit sample to shipment.",
+    "title": "Who sends us a style.",
+    "description": "A brand locking a block, a retailer filling a size run, and an agent booking capacity are buying three different jobs.",
     "items": [
-      { "title": "Brands", "description": "Seasonal collections with locked blocks and repeatable factories.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "Retailers", "description": "Private-label programs with size specs and carton packing.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Agents", "description": "Multi-brand sourcing with one QC and export file.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "Tech packs, fit comments and PP sample gates.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Brands", "description": "Keep next season on last season’s block and the same sewing line.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Private-label tops and uniforms with store sizes, hangtags and carton marks on the PO.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Agents", "description": "Sewing slots you can date, plus measurement reports your principals will accept.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Fit comments stay on the marked sample, not in a chat thread.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "From tech pack to packed carton — one program file.",
-    "description": "Pattern, sewing and forwarding stay on the same apparel team from first sample to export packing.",
+    "title": "Pattern room, sewing floor, packing bench.",
+    "description": "Construction and trims go on the style sheet before markers are cut. The bulk garment is cut from the block you approved.",
     "items": [
-      { "title": "Tech pack & fabric pairing", "description": "Knit and woven styles with construction, trims and fabric confirmed in writing.", "image": "/images/capabilities/composition.jpg" },
-      { "title": "Size specs & grading", "description": "Blocks graded to your target market — written fit approval before cutting.", "image": "/images/capabilities/color.jpg" },
-      { "title": "Sampling & MOQ", "description": "Fit sample, PP sample and bulk MOQ scheduled per style.", "image": "/images/capabilities/moq.jpg" },
-      { "title": "Export packing", "description": "Folded, polybagged and carton-packed with packing list and AQL report.", "image": "/images/capabilities/export.jpg" }
+      { "title": "Style sheet & fabric lot", "description": "Seam types, trim cards and fabric lots written before the marker is made.", "image": "/images/capabilities/composition.jpg" },
+      { "title": "Grading", "description": "XS–4XL from a base size. We ship the base fit sample, and a size set if you ask.", "image": "/images/capabilities/color.jpg" },
+      { "title": "Proto, fit, PP", "description": "Bulk markers stay locked until the PP sample is signed.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Carton packing", "description": "Polybag, inner pack, carton mark and a counted packing list at final audit.", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
-    "title": "One path from style to shipment.",
-    "description": "Every gate is documented — tech pack, fit approval and carton inspection before dispatch.",
+    "title": "How a style reaches bulk.",
+    "description": "Most delay sits between a reference photo and a signed PP. These steps close that gap.",
     "image": "/images/process.jpg",
     "imageAlt": "Garment size-spec quality inspection",
     "steps": [
-      { "step": "01", "title": "Share a tech pack", "description": "Send style, fabric, size range, colors and target quantity." },
-      { "step": "02", "title": "Match a factory", "description": "We shortlist sewing lines against construction and volume." },
-      { "step": "03", "title": "Approve fit", "description": "Fit sample and size spec signed before bulk cutting." },
-      { "step": "04", "title": "Bulk sew", "description": "Inline QC and measurement records by PO and color." },
-      { "step": "05", "title": "Ship", "description": "AQL report, packing list and export documents with the cartons." }
+      { "step": "01", "title": "Send the style", "description": "Tech pack, or a reference garment with fabric, size range and quantity." },
+      { "step": "02", "title": "Pick the line", "description": "Knit or woven, by construction and monthly volume." },
+      { "step": "03", "title": "Sign the fit", "description": "Comments on the sample. Cutting waits for that signature." },
+      { "step": "04", "title": "Sew the PO", "description": "Inline measurements by colour and size." },
+      { "step": "05", "title": "Count the cartons", "description": "AQL, packing list and export papers leave with the goods." }
     ]
   },
   "testimonials": [
-    { "quote": "Fit comments were closed before cutting. Bulk measurements matched the approved spec at receiving.", "author": "Northline Retail · Germany" },
-    { "quote": "One tech pack covered sampling, PP and export cartons. We kept one factory thread for the whole program.", "author": "Harbor Agency · USA" }
+    { "quote": "The size set matched our store chart. We did not regrade after the first drop.", "author": "Northline Retail · Germany" },
+    { "quote": "PP comments were written on the sample photos. Bulk came back on that block.", "author": "Harbor Agency · USA" }
   ],
   "warranty": {
-    "eyebrow": "Production gates",
-    "title": "What happens when a size or stitch fails?",
-    "description": "Approvals are tied to a style and PO — claims are checked against the signed file.",
-    "commitment": "Every measurement claim is checked against the signed size spec and AQL report that travels with the cartons.",
+    "eyebrow": "If the bulk is wrong",
+    "title": "What we do when a size or stitch fails.",
+    "description": "The signed fit sample and the PO are the reference — not a conversation after the container leaves.",
+    "commitment": "Measurement claims are checked against the signed size spec and the AQL sheet in the carton.",
     "cases": [
-      { "question": "If fit drifts in bulk", "title": "Rework or hold the PO against the signed sample.", "description": "Bulk cutting starts only after the fit sample is approved. Out-of-tolerance sizes are flagged before packing." },
-      { "question": "If shrinkage exceeds the spec", "title": "Wash test before PP approval.", "description": "Fabric and garment wash results are written into the tech pack. Failed lots stay out of bulk." },
-      { "question": "If cartons arrive short", "title": "Packing list reconciles pieces vs. PO.", "description": "Every carton is counted at final inspection. Shortage claims are resolved against the signed packing list." }
+      { "question": "If bulk fit drifts", "title": "Hold the PO or rework against the signed sample.", "description": "Cutting starts after fit approval. Out-of-tolerance sizes are pulled before packing." },
+      { "question": "If shrinkage exceeds the spec", "title": "Wash test before PP.", "description": "Fabric and garment wash results sit on the style sheet. Failed lots stay off the cutting ticket." },
+      { "question": "If a carton is short", "title": "The packing list is the count.", "description": "Every carton is counted at final audit. Shortage claims follow that list." }
     ]
   },
   "rooms": {
-    "title": "Browse by style category.",
+    "title": "Browse by garment type.",
     "basePath": "/styles",
     "items": [
       { "label": "Knit tops", "slug": "knit-tops" },
@@ -80,30 +80,30 @@
     ]
   },
   "projects": {
-    "title": "Recent programs.",
+    "title": "Recent orders.",
     "items": []
   },
   "ecosystem": {
-    "title": "A cut-and-sew network with one program team.",
-    "description": "Vetted sewing factories — tech packs, fit samples and export packing stay with the same contact.",
+    "title": "Sewing capacity in Shaoxing and Guangzhou.",
+    "description": "Jersey and fleece on knit lines. Shirts, outerwear and uniforms on woven lines.",
     "items": []
   },
   "cta": {
     "anchorId": "sample",
-    "title": "Start with a tech pack or reference style.",
-    "description": "Share style, fabric, size range and quantity — you will receive factory options, MOQ and sampling timeline within 48 hours.",
+    "title": "Send a tech pack or a reference garment.",
+    "description": "Style, fabric, size range and quantity are enough. We reply with a factory, an MOQ and a sampling date.",
     "formTitle": "Request garment samples",
-    "formDescription": "Attach a tech pack, size chart or photo of a reference style. Fit-sample and bulk MOQ included in the reply.",
+    "formDescription": "Attach a tech pack, a size chart or a photo of the reference style.",
     "steps": [
-      "Send a tech pack or reference style — one file is enough to begin.",
-      "Receive factory shortlist, MOQ and sampling schedule.",
-      "Approve the fit sample in writing before bulk cutting."
+      "Send the style file or the garment.",
+      "Get a factory, MOQ and a sampling date.",
+      "Sign the fit sample before we cut bulk."
     ]
   },
   "footerFeatures": [
-    { "title": "Cut-and-sew network", "description": "Knit and woven lines in South China" },
-    { "title": "Fit sample first", "description": "Written size approval before cutting" },
-    { "title": "Export ready", "description": "AQL reports and carton docs" },
-    { "title": "One program team", "description": "Single contact from style to ship" }
+    { "title": "Knit and woven lines", "description": "Shaoxing and Guangzhou" },
+    { "title": "Fit before cutting", "description": "Signature on the sample" },
+    { "title": "Counted cartons", "description": "AQL sheet in the box" },
+    { "title": "One merchandiser", "description": "Style to the forwarder" }
   ]
 }
