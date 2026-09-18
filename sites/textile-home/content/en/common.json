@@ -2,13 +2,13 @@
   "site": {
     "name": "Textile Home Co.",
     "title": "Hotel bedding and bath terry",
-    "description": "Send the room list. We confirm mattress height and GSM before sampling. Sample set typically 12 days. Bulk after you sign the set and the logo proof.",
+    "description": "Hotel bedding, bath terry and curtains for hospitality, retail and property programs — specified by room grade, GSM and mattress height.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "hometextile@example.com",
-    "tagline": "Room list first. Mattress height and GSM before sampling.",
+    "tagline": "Hotel bedding, bath terry and curtains for property and retail programs.",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "Hotel sheeting and terry. Fitted-sheet drop and GSM written before sampling.",
+    "description": "Hotel sheeting and terry in Nantong and Guangzhou.",
     "copyright": "All rights reserved."
   }
 }

@@ -2,13 +2,13 @@
   "site": {
     "name": "Textile Apparel Co.",
     "title": "Knit and woven cut-and-sew",
-    "description": "Send a tech pack or a reference garment. First sample in about 7 days. MOQ from 100 pcs per style and color. We cut after you sign the PP.",
+    "description": "OEM and ODM garment manufacturing in Shaoxing and Guangzhou — grading, fit samples and export bulk for brands, retail and agency programs.",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
     "location": "Shaoxing & Guangzhou, China",
     "email": "apparel@example.com",
-    "tagline": "Tech pack or a reference garment. First sample in about 7 days.",
+    "tagline": "Knit and woven garment manufacturing for brands, retail and agency programs.",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "Knit and woven cut-and-sew in Shaoxing and Guangzhou. MOQ per style and color.",
+    "description": "Knit and woven cut-and-sew in Shaoxing and Guangzhou.",
     "copyright": "All rights reserved."
   }
 }

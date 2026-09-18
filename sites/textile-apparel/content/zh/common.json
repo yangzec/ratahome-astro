@@ -2,13 +2,13 @@
   "site": {
     "name": "成衣出口",
     "title": "针织与梭织成衣",
-    "description": "发工艺单或寄一件参考成衣。首样大约 7 天。起订按款、按色，常从 100 件起。PP 签字后才开裁。",
+    "description": "绍兴、广州 OEM / ODM 成衣制造——放码、试穿样和大货出口，服务品牌、零售和代理项目。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
     "email": "apparel@example.com",
-    "tagline": "发工艺单或参考成衣。首样大约 7 天。",
+    "tagline": "为品牌、零售和代理项目提供针织与梭织成衣制造。",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "绍兴、广州针织和梭织车缝。起订按款、按色报。",
+    "description": "绍兴、广州针织和梭织车缝。",
     "copyright": "版权所有。"
   }
 }

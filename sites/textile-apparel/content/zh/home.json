@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "针织 / 梭织车缝 · 广州、绍兴",
-    "title": "发工艺单或寄一件参考成衣。首样大约 7 天。",
-    "description": "起订按款、按色报，常从 100 件起。打样费可抵大货。PP 签字后才开裁。",
+    "title": "为品牌、零售和代理项目提供针织与梭织成衣制造。",
+    "description": "绍兴、广州 OEM / ODM 车缝——放码、试穿样，大货按款、按色出口。",
     "image": "/images/hero.jpg",
     "imageAlt": "成衣打样间与挂样衣",
     "ctaHref": "#sample"
@@ -20,28 +20,28 @@
     { "value": "PP", "label": "签字后才下裁床" }
   ],
   "audiences": {
-    "title": "第一单最容易出的问题。",
-    "description": "下面四条，是收过定金之后最常见的投诉。",
+    "title": "按采购角色进入项目。",
+    "description": "选和你买法一致的路径——每张订单同一套技术标准。",
     "items": [
-      { "title": "品牌方", "description": "大货尺寸对不上已签字的试穿样。我们按那件样衣放码，返单不换基码。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "零售商", "description": "起订太高，这一季测不了新款。按款、按色报，可以先做一档短码。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "代理商", "description": "定金付了，工厂不回交期。一个跟单把打样日和大货机位写进邮件。", "href": "/agents", "image": "/images/audiences/traders.jpg" },
-      { "title": "产品开发", "description": "没有工艺单，工厂不开工。参考成衣加码段，就能先出报价。", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "品牌方", "description": "季节项目返单保持同一套版型基码。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "零售商", "description": "按款、按色报价，先测新款起订量。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "代理商", "description": "一个跟单把打样日和大货机位写进邮件。", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "产品开发", "description": "有工艺单或参考成衣即可先开报价。", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "厂里实际车什么。",
-    "description": "针织做卫衣和毛圈。梭织做衬衫、外套和制服。",
+    "title": "采购最先问的车缝能力。",
+    "description": "针织线做卫衣和毛圈。梭织线做衬衫、外套和制服。",
     "items": [
       { "title": "工艺单", "description": "缝型、辅料卡、面料缸号写清，再出唛架。", "image": "/images/capabilities/composition.jpg" },
       { "title": "放码", "description": "基码放到 XS–4XL。先寄基码试穿，需要再寄码套。", "image": "/images/capabilities/color.jpg" },
-      { "title": "初样 / 试穿 / PP", "description": "面料齐大约 7 天出首样。PP 签字后再开裁。", "image": "/images/capabilities/moq.jpg" },
-      { "title": "装箱", "description": "胶袋、箱唛、箱单，AQL 点数。", "image": "/images/capabilities/export.jpg" }
+      { "title": "初样 / 试穿 / PP", "description": "从开发样、试穿到 PP 签字关口。", "image": "/images/capabilities/moq.jpg" },
+      { "title": "出口装箱", "description": "胶袋、箱唛、箱单，AQL 点数。", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
     "title": "从你的文件到裁床。",
-    "description": "开裁等 PP 签字。这是关口。",
+    "description": "每个节点有日期——试穿通过并签 PP 后，才开大货。",
     "image": "/images/process.jpg",
     "imageAlt": "成衣尺码规格质检",
     "steps": [
@@ -53,13 +53,13 @@
     ]
   },
   "testimonials": [
-    { "quote": "大货回来还是签字那套纸样。第一季之后不用重新放码。", "author": "Northline Retail · 德国" },
-    { "quote": "PP 和大货开裁周写在同一封邮件里。机位没有往后漂。", "author": "Harbor Agency · 美国" }
+    { "quote": "返单还是第一季那套纸样，不用重新放码。", "author": "Northline Retail · 德国" },
+    { "quote": "打样日和大货机位在同一封邮件里，客户能看到真实档期。", "author": "Harbor Agency · 美国" }
   ],
   "warranty": {
     "eyebrow": "大货不对",
     "title": "尺寸或车缝对不上签字样时。",
-    "description": "对照已签字的试穿样和订单。",
+    "description": "对照已签字的试穿样和订单——不是口头确认。",
     "commitment": "尺寸争议看已签字的尺码表，和纸箱里的 AQL 表。",
     "cases": [
       { "question": "如果大货版型跑了", "title": "按签字样返修，或暂停这张订单。", "description": "PP 通过才开裁。超公差尺码装箱前拿掉。" },
@@ -68,7 +68,7 @@
     ]
   },
   "rooms": {
-    "title": "按成衣品类询价。",
+    "title": "按成衣品类浏览。",
     "basePath": "/styles",
     "items": [
       { "label": "针织上衣", "slug": "knit-tops" },

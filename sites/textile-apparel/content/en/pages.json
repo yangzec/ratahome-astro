@@ -26,7 +26,7 @@
     "stylesDescription": "Retail floors, staff uniforms, gyms, brand drops."
   },
   "slugs": {
-    "brands": { "title": "For brands", "description": "Keep the signed block on the repeat.", "content": "First bulk often misses the signed fit. We grade from that sample and keep the factory assignment so a repeat order does not start a new pattern." },
+    "brands": { "title": "For brands", "description": "Keep the signed block on the repeat.", "content": "Season programs need the same fit block on every repeat. We grade from your signed sample and keep the factory assignment so a repeat order does not restart pattern work." },
     "retailers": { "title": "For retailers", "description": "MOQ per style and color.", "content": "If 500 pcs / color is too high for a test, we quote from about 100 pcs per style/color and a short size set. Hangtags and carton marks go on the PO before cutting." },
     "agents": { "title": "For agents", "description": "Sample date and cutting week in writing.", "content": "Deposit without a dated slot is how orders slip. The merchandiser puts the PP date and the cutting week in the same mail." },
     "size-specs": { "title": "Size specifications", "description": "Grade from the signed base.", "content": "Send a chart or a fit sample. We grade XS–4XL. Bulk does not cut until the base is signed." },

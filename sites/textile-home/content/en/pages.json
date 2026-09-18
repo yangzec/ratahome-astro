@@ -26,7 +26,7 @@
     "stylesDescription": "Hotels, retail shelves, fitted-out rooms."
   },
   "slugs": {
-    "hotels": { "title": "For hospitality", "description": "GSM after the laundry, not before.", "content": "Towels that feel thick on the quote often go limp after industrial wash. We lock GSM and loop density on a washed sample and keep the SKU for call-off." },
+    "hotels": { "title": "For hospitality", "description": "Built for industrial laundry.", "content": "Guestroom and bath programs specified for hotel laundry cycles. GSM and loop density are locked on a washed sample, with SKUs held for call-off." },
     "retailers": { "title": "For retailers", "description": "Next lot matches the signed white.", "content": "Replenishment often shifts shade. The lot card stays with the signed set so the next dye is matched before packing." },
     "developers": { "title": "For property developers", "description": "Write the mattress height first.", "content": "Fitted sheets fail when drop is guessed. Mattress thickness and drop are on the room list before we cut. Sheeting, curtains and bath SKUs are specified together." },
     "sampling": { "title": "Sampling", "description": "A set on a bed. A logo on terry.", "content": "Send a room list or artwork. Sample set is typically 12 days. Embroidery proof is stitched on the real towel before bulk heads run." },

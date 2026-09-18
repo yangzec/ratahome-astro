@@ -26,7 +26,7 @@
     "stylesDescription": "零售店、员工制服、健身房、品牌上新。"
   },
   "slugs": {
-    "brands": { "title": "品牌方", "description": "返单还用签字那套基码。", "content": "第一批大货常对不上已签字的试穿样。我们按那件样衣放码，返单不换工厂、不换纸样。" },
+    "brands": { "title": "品牌方", "description": "返单还用签字那套基码。", "content": "季节项目返单要保持同一套版型。我们按已签字的试穿样放码，返单不换工厂、不换纸样。" },
     "retailers": { "title": "零售商", "description": "起订按款、按色。", "content": "每色 500 件测不了新款时，可从大约 100 件 / 款 / 色起，先做短码。吊牌和箱唛开裁前写进订单。" },
     "agents": { "title": "代理商", "description": "打样日和开裁周写在邮件里。", "content": "只收定金不定机位，交期就会漂。跟单把 PP 日和开裁周写在同一封邮件。" },
     "size-specs": { "title": "尺码规格", "description": "从已签字的基码放出去。", "content": "给尺码表或试穿样。放到 XS–4XL。基码没签字，大货不开裁。" },

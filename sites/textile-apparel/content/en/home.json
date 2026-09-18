@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Knit & woven cut-and-sew · Guangzhou / Shaoxing",
-    "title": "Send a tech pack or a reference garment. First sample in about 7 days.",
-    "description": "MOQ is quoted per style and color — usually from 100 pcs. Sample fee comes off the bulk invoice. We cut only after you sign the PP.",
+    "title": "Knit and woven garment manufacturing for brands, retail and agency programs.",
+    "description": "OEM and ODM cut-and-sew in Shaoxing and Guangzhou — grading, fit samples and export bulk by style and color.",
     "image": "/images/hero.jpg",
     "imageAlt": "Apparel sample studio with hanging garments",
     "ctaHref": "#sample"
@@ -20,28 +20,28 @@
     { "value": "PP", "label": "Signed before the cutting ticket" }
   ],
   "audiences": {
-    "title": "What usually goes wrong.",
-    "description": "These are the four messages we get after a bad first order.",
+    "title": "Programs for every buyer in the chain.",
+    "description": "Pick the path that matches how you buy — same technical standards on every PO.",
     "items": [
-      { "title": "Brands", "description": "First bulk misses the signed fit sample. We grade from that sample and hold the same block on the repeat.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
-      { "title": "Retailers", "description": "MOQ is too high to test one new style this season. We quote per style and color so you can run a short size set.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Agents", "description": "Deposit paid, factory goes quiet on the date. One merchandiser dates the sample and the bulk slot in writing.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "No tech pack, factory will not start. A reference garment plus size range is enough to open a quote.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Brands", "description": "Season programs with the same fit block on every repeat order.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Test new styles at a quoted MOQ per style and color.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Agents", "description": "One merchandiser who dates the sample and bulk slot in writing.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Open a quote from a tech pack or a reference garment.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "What we actually sew.",
-    "description": "Jersey and fleece on knit lines. Shirts, outerwear and uniforms on woven lines.",
+    "title": "Cut-and-sew capabilities buyers ask about first.",
+    "description": "Knit lines for jersey and fleece. Woven lines for shirts, outerwear and uniforms.",
     "items": [
       { "title": "Style sheet", "description": "Seam type, trim card and fabric lot written before the marker.", "image": "/images/capabilities/composition.jpg" },
       { "title": "Grading", "description": "Base size to XS–4XL. Fit sample in the base; size set if you ask.", "image": "/images/capabilities/color.jpg" },
-      { "title": "Proto / fit / PP", "description": "About 7 days to the first sample when fabric is here. PP signed, then we cut.", "image": "/images/capabilities/moq.jpg" },
-      { "title": "Packing", "description": "Polybag, carton mark, packing list counted at AQL.", "image": "/images/capabilities/export.jpg" }
+      { "title": "Proto / fit / PP", "description": "Development samples through fit approval to a signed PP gate.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Export packing", "description": "Polybag, carton mark, packing list counted at AQL.", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
     "title": "From your file to a cutting ticket.",
-    "description": "Cutting waits for a signed PP. That is the gate.",
+    "description": "Each milestone is dated — fit approval and a signed PP before bulk sewing starts.",
     "image": "/images/process.jpg",
     "imageAlt": "Garment size-spec quality inspection",
     "steps": [
@@ -53,22 +53,22 @@
     ]
   },
   "testimonials": [
-    { "quote": "Bulk came back on the signed block. We did not regrade after the first drop.", "author": "Northline Retail · Germany" },
-    { "quote": "They dated the PP and the cutting week in the same email. The slot did not slip.", "author": "Harbor Agency · USA" }
+    { "quote": "Repeat orders landed on the same block — we did not regrade after the first season.", "author": "Northline Retail · Germany" },
+    { "quote": "Sample and bulk dates arrived in one email. Our buyer could show the client a real slot.", "author": "Harbor Agency · USA" }
   ],
   "warranty": {
     "eyebrow": "If bulk is wrong",
     "title": "When a size or stitch misses the signed sample.",
-    "description": "The signed fit sample and the PO are the reference.",
+    "description": "The signed fit sample and the PO are the reference — not a verbal OK.",
     "commitment": "Measurement claims are checked against the signed size spec and the AQL sheet in the carton.",
     "cases": [
-      { "question": "If bulk fit drifts", "title": "Hold the PO or rework against the signed sample.", "description": "Cutting starts after PP. Out-of-tolerance sizes are pulled before packing." },
+      { "question": "If bulk fit drifts from the signed sample", "title": "Hold the PO or rework against the signed block.", "description": "Cutting starts after PP. Out-of-tolerance sizes are pulled before packing." },
       { "question": "If shrinkage exceeds the spec", "title": "Wash test before PP.", "description": "Wash results sit on the style sheet. Failed lots stay off the cutting ticket." },
       { "question": "If a carton is short", "title": "The packing list is the count.", "description": "Every carton is counted at final audit." }
     ]
   },
   "rooms": {
-    "title": "What we quote by garment.",
+    "title": "Browse by garment category.",
     "basePath": "/styles",
     "items": [
       { "label": "Knit tops", "slug": "knit-tops" },

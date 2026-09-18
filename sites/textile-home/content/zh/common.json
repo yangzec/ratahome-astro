@@ -2,13 +2,13 @@
   "site": {
     "name": "家纺出口",
     "title": "酒店床品和卫浴毛圈",
-    "description": "先发房型清单。打样前确认床垫高度和克重。套装样一般 12 天。套装和 Logo 确认样签字后再做大货。",
+    "description": "酒店床品、卫浴毛圈和窗帘——服务酒店、零售和地产项目，按房级、克重和床垫高度定规格。",
     "whatsapp": "+86 151 9256 9580",
     "whatsappUrl": "https://wa.me/8615192569580",
     "hours": "周一至周五 10:00–19:00（UTC+8）",
     "location": "中国·绍兴 / 广州",
     "email": "hometextile@example.com",
-    "tagline": "先发房型清单。打样前确认床垫高度和克重。",
+    "tagline": "为酒店、零售和地产项目提供床品、卫浴毛圈和窗帘。",
     "ctaAnchor": "sample"
   },
   "buttons": {
@@ -46,7 +46,7 @@
     }
   },
   "footer": {
-    "description": "酒店床单和毛圈。床笠垂边和克重打样前写进单。",
+    "description": "南通、广州酒店床单和毛圈车间。",
     "copyright": "版权所有。"
   }
 }

@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Hotel sheeting · Terry · Nantong / Guangzhou",
-    "title": "Send the room list. We confirm mattress height and GSM before sampling.",
-    "description": "A sample set goes on a bed first. Bulk starts after you sign the set and the logo proof. OEKO-TEX lots travel with the shipment when you ask for them.",
+    "title": "Hotel bedding, bath terry and curtains for property and retail programs.",
+    "description": "Sheeting, terry and embroidered sets from workshops in Nantong and Guangzhou — specified by room grade, GSM and mattress height.",
     "image": "/images/hero.jpg",
     "imageAlt": "Hotel bedding program with layered linen",
     "ctaHref": "#sample"
@@ -20,18 +20,18 @@
     { "value": "Proof", "label": "Logo signed before embroidery heads" }
   ],
   "audiences": {
-    "title": "What housekeeping actually complains about.",
-    "description": "These four show up after the first container, not on the quote.",
+    "title": "Solutions by buyer type.",
+    "description": "Hotel, retail, property and product teams — each with a documented path from sample set to bulk.",
     "items": [
-      { "title": "Hotels", "description": "Towels go limp after the laundry. We lock GSM and loop density on a washed sample, not the unwashed quote towel.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
-      { "title": "Retailers", "description": "Replenishment white does not match last season. We keep the lot card so the next dye matches the signed set.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
-      { "title": "Developers", "description": "Fitted sheets do not cover the mattress. Drop and mattress thickness are written before we cut.", "href": "/developers", "image": "/images/audiences/traders.jpg" },
-      { "title": "Product developers", "description": "Logo size is wrong only after bulk embroidery. Proof is stitched on the real terry first.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+      { "title": "Hotels", "description": "Guestroom and bath programs built for industrial laundry cycles.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Collections and replenishment with lot-matched whites.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Developers", "description": "Room-type lists turned into SKU sets and packing plans.", "href": "/developers", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Embroidery and terry proofs before bulk heads run.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
-    "title": "Sheeting, terry, stitch, pack.",
-    "description": "Percale or sateen, thread count, and hotel sizes are set per room grade.",
+    "title": "What we manufacture — and how buyers qualify us.",
+    "description": "Percale or sateen, thread count, terry GSM and hotel sizes are set per room grade.",
     "items": [
       { "title": "Bedding", "description": "Sets, duvets, pillows. Thread count and fitted-sheet drop on the SKU card.", "image": "/images/capabilities/composition.jpg" },
       { "title": "Bath terry", "description": "200–800 GSM. Feel is checked after wash, not only at finishing.", "image": "/images/capabilities/color.jpg" },
@@ -53,22 +53,23 @@
     ]
   },
   "testimonials": [
-    { "quote": "The fitted sheet covered a 32 cm mattress. We had written the drop before they cut.", "author": "Crest Hotels · Singapore" },
-    { "quote": "Replenishment white matched the opening lot. Housekeeping did not mix two shades.", "author": "Oak & Linen Retail · UK" }
+    { "quote": "Opening and replenishment lots matched — housekeeping did not mix two whites.", "author": "Oak & Linen Retail · UK" },
+    { "quote": "The property team signed the set on a bed before we released the PO.", "author": "Crest Hotels · Singapore" }
   ],
   "warranty": {
     "eyebrow": "If the lot is wrong",
     "title": "When a set, wash or logo misses the signed sample.",
-    "description": "The signed set and the lot number are the reference.",
+    "description": "The signed set and the lot number are the reference — not the quote towel.",
     "commitment": "Claims follow the signed set, the certificate and the packing list in the carton.",
     "cases": [
+      { "question": "If towels go limp after industrial wash", "title": "GSM and loop density checked on a washed sample first.", "description": "Feel is locked after wash, not on the unwashed quote piece." },
       { "question": "If the certificate does not match the lot", "title": "Hold the PO until the scope file is attached.", "description": "Certified cartons only take certified pieces." },
       { "question": "If embroidery misses the artwork", "title": "Proof first, then the heads.", "description": "Off-spec pieces are pulled before packing." },
       { "question": "If a set is incomplete", "title": "The packing list is the count.", "description": "Each set is counted at final audit." }
     ]
   },
   "rooms": {
-    "title": "What we quote by product.",
+    "title": "Browse by product category.",
     "basePath": "/products",
     "items": [
       { "label": "Bedding sets", "slug": "bedding-sets" },
