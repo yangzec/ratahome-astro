@@ -190,7 +190,7 @@ https://github.com/yangzec/ratahome-astro
 5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
-8. 新建站点：`pnpm site-cli create <slug> --from <template>` 只拷骨架，必须重写 `content/{en,zh}/` 与 `slugs.ts`；文案只写给该站访客，禁止用否定其他行业或兄弟站来证明定位；`validate` 对空文案、源站复用、对照式否定句、死链报 error
+8. 新建站点：`pnpm site-cli create <slug> --from <template>` 只拷骨架，必须重写 `content/{en,zh}/` 与 `slugs.ts`；写文案走「对外文案分通道」；`validate` / `deploy` 对空文案、源站全等、已知对照句、死链报 error
 
 ### 文档指针
 
@@ -203,10 +203,26 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
-- `site-cli create` 不得拷贝源站文案或业务图；`validate` / `deploy` 遇空文案、源站复用文案、对照式行业否定句或无效路由必须 error，不得降为 warning
-- 站点 JSON 文案只写给该站访客。禁止把「不得复用源站」「跟某行业站不同」写成页面句子（如「而不是面料贸易商」「not fabric traders」）。行业差异写在对象、交付物、流程、路由和品类上
+- `site-cli create` 不得拷贝源站文案或业务图；`validate` / `deploy` 遇空文案、源站全等、已知对照句或无效路由必须 error，不得降为 warning
+- 对外文案必须分通道，见下节；不得把验收语言写进页面
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
+
+### 对外文案分通道
+
+`sites/*/content/` 是访客读物，不是验收说明书。约束被遵守，应该看不见；看得见的，只该是访客用得上的话。写任何可见字符串前先分类，禁止把三类文本写进同一句。
+
+| 通道 | 进入哪里 | 只允许 | 禁止写进页面 |
+|------|----------|--------|--------------|
+| 生成 | `content/{en,zh}/`、可见 UI 字符串 | 该站访客、交付物、流程、品类、证据 | 源站对照、兄弟站名、`validate` 条文、脚手架说明、上一轮纠正 |
+| 约束 | 设计（路由、对象、品类、省略） | 「不要复用面料」变成 `/styles`、尺码表、车缝流程 | 「而不是面料贸易商」这类声明 |
+| 验收 | `validate` / `deploy`、人读 | 空字段、与源站全等、死链、已知对照句 | 把验收标准复述进 hero / audiences |
+
+**陌生人可读**：没见过本仓库、对话和源站的人，这句是否仍成立？不成立就是 instruction-to-artifact leakage，不论有没有踩中禁用词。
+
+`validate` 拦截「而不是面料/家具」「not fabric traders」等已知形态，是探测器，不是这一类问题的定义。不得靠扩黑名单充当主防线。
+
+**混入点**：泄漏发生在写 `content/` 的生成环节，不在 `create` 骨架，也不在 `validate` 判定。`create` 之后若把「证明和源站不同」与起草同屏，验收语言会进标题。起草时生成上下文只留访客材料；源站 diff 和 validate 条文留在验收步骤。
 
 ### 验证入口
 

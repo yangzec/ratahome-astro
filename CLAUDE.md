@@ -199,6 +199,7 @@
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
+- 对外文案分通道见项目规范正文 `AGENTS.md`；本文件不重复条文
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 
 ### 验证入口
