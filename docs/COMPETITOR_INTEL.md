@@ -279,7 +279,27 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
   raw/pages/{pageType}-{slug}.md
 ```
 
-你交来 raw 之后，再规范化成 `pages/*.md`、`ia.json`、`images/manifest.json`。`sections/home.json`、`forms/contact.json`、`theme-tokens.json` 爬虫出不来，后补。
+你交来 raw 之后，再规范化成 `pages/*.md`、`ia.json`、`images/manifest.json`。`sections/home.json`、`forms/contact.json` 后补。`theme-tokens.json` 不从 Markdown 抽，按第 6.7 节从公开主题 CSS（或 DevTools）填。
+
+### 6.7 `theme-tokens.json` 怎么补
+
+CF `/markdown` 和 Jina 都没有计算样式。按这个顺序填，写入快照根目录，不进 `sites/`：
+
+1. **优先公开 CSS**：首页 HTML 里的主题 `style.css`、Google Fonts、`body` / `.o-button` / 卡片圆角。Balkrushna 已用 `/wp-content/themes/balkrushna/assets/css/style.css` 。
+2. **CSS-in-JS / Tailwind 运行时再上 DevTools**：Elements 看 computed `color`、`background-color`、`font-family`、`border-radius`。
+3. **截图只作校对**，不凭观感猜 hex。
+
+必填并对齐 `theme.json`：
+
+| token | 取哪 | 写入 |
+|-------|------|------|
+| `colors.*.rgb` | 主色 / 正文 / 页底 / 次要字 / 边线 / 按钮 | 空格三元组，如 `228 40 45` |
+| `colors.*.hex` | 同上，便于核对 | `#E4282D` |
+| `fonts.sans` / `display` / `label` | `body` 与标题 / 按钮 | 完整 font-stack |
+| `radius.hero` / `image` / `button` | 首屏块、图、CTA | 带单位，如 `4px` |
+| `imageStyle` | 图库与产品图观感 | `white-bg-product` `lifestyle` `factory` `render` `mixed` |
+
+`rgb` 是映射到 `theme.json` 的字段。按钮若是描边、hover 才填色，`button` 仍记品牌色，在 `notes` 写清默认态。
 
 ---
 
@@ -290,7 +310,7 @@ Authorization: Bearer {token}    # 权限：Browser Rendering - Edit
 | 0 | Schema、映射、自映射样例、抓取清单 | Agent | **完成** |
 | 1 | 先交首页 + sitemap；按行业特征生成 `seeds.json` 后再抓 | **你（Jina / CF）** | 待你操作 |
 | 2 | raw → 规范化快照（pages / ia / manifest） | Agent，等你交 raw | 未开始 |
-| 3 | 补 sections / forms / theme-tokens | 人工 + Agent | 未开始 |
+| 3 | 补 sections / forms / theme-tokens | 人工 + Agent | Balkrushna 三件已补；下站仍按 6.7 |
 | 4 | 改写成站点 content 草稿（不发布） | Agent | 未开始 |
 
 缺字段先改 schema，再扩抓取范围。
@@ -324,7 +344,7 @@ node schemas/competitor/validate.mjs
 - 第一期必采 `pageType` 出现在样例里
 - `classify-seeds` 能把 `/our-story`、`/shop`、`/enquire-now` 标成正确类型
 
-已用 `balkrushnatextiles.com` 跑通两轮：第一轮首页 + sitemap + WP JSON → `classify-seeds`；第二轮环境内 CF `/markdown` 8/8。未验证：theme-tokens、自动改写质量、灌进 `sites/`。
+已用 `balkrushnatextiles.com` 跑通两轮：第一轮首页 + sitemap + WP JSON → `classify-seeds`；第二轮环境内 CF `/markdown` 8/8；`theme-tokens.json` 从公开主题 CSS 抽出。未验证：自动改写质量、灌进 `sites/`。
 
 ---
 

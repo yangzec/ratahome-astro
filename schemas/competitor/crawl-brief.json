@@ -82,7 +82,7 @@
     "productAlso": ["visible specs", "1 main image + 1 lifestyle if present"]
   },
   "notExpectedFromCrawler": [
-    "theme-tokens.json (needs computed CSS; fill later from screenshot or DevTools)",
+    "theme-tokens.json (not in Markdown; fill from public theme CSS, or DevTools if styles are runtime-only)",
     "sections/*.json role mapping (fill after markdown lands)",
     "license judgements beyond default reference-only"
   ],

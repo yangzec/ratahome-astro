@@ -322,7 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| 竞品采集阶段 1 | `balkrushnatextiles.com` 两轮已落盘（CF `/markdown` 8/8）；待 theme-tokens 与改写，不进 `sites/` |
+| 竞品采集阶段 1 | `balkrushnatextiles.com` 两轮 + theme-tokens 已落盘；待改写，不进 `sites/` |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 00:37 | Balkrushna `theme-tokens.json` 从公开主题 CSS 抽出（主色 `#E4282D`、Poppins）；文档补第 6.7 节 |
 | 2026-09-18 20:48 | 用环境 CF Token 点抓 Balkrushna 第二轮 8 页；规格表已渲成 Markdown；联系表单仍靠 WP REST |
 | 2026-09-18 20:28 | 实站 Balkrushna 第一轮完成：纺织站、7 个 SKU 抽 2、收 `/certificate`；`pageType` 补齐 `cert` / `sample` / `spec` |
 | 2026-09-18 20:22 | 竞品采集取消页数预算，改为按行业画像 + URL 簇抽样 |
