@@ -374,7 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
-| 2026-09-19 03:14 | 成衣/家纺文案去句模 | 两站 `validate` 通过；首页 audiences 标题与描述不再复述；无「共用一套 / one program file」 | 通过 |
+| 2026-09-19 03:15 | 成衣/家纺文案去句模 | 两站 `validate` 通过；生产 zh 首页新标题上线，旧「共用一套 / 从试穿样跟到出货」已不在 HTML | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
 | 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
 | 2026-09-19 01:09 | 去行业指向约束 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；规范与探测器均不列行业词 | 通过 |
