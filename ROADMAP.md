@@ -374,7 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
-| 2026-09-19 03:47 | 成衣 / 家纺按提示词重写 | 两站 `validate` 通过；扫一眼能读出发什么 / 起订打样 / 下一步；无「共用一套」或对照句 | 文案层通过，待生产核对 |
+| 2026-09-19 03:49 | 成衣 / 家纺按提示词重写上线 | 两站 `validate` 通过后 `deploy`；en/zh 首页 200；H1 分别为工艺单 7 天 / 房型清单床垫克重；无「共用一套」或对照句 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
 | 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
