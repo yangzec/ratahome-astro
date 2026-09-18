@@ -144,7 +144,9 @@ const { site, buttons } = common;
         </div>
       </div>
     ))}
-    <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary w-full mt-6">{buttons.startProject}</a>
+    <div class="mt-6 flex justify-center">
+      <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary">{buttons.startProject}</a>
+    </div>
   </nav>
 </div>
 
