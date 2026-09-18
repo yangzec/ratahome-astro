@@ -371,6 +371,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-18 15:58 | 纺织专属素材上线 | 三站首页 HTML 仅引用 `/images/hero.jpg` 等新路径；hero JPEG magic `FFD8FF`；浏览器核对 Logo 与 Hero 非家具图 | 通过 |
 | 2026-09-18 15:43 | 纺织三站生产 | `pnpm site-cli deploy textile-fabric/apparel/home`；首页 HTTP 200；`POST /api/contact` → D1 `site_id=textile-fabric` | 通过 |
 | 2026-09-18 15:26 | 四站 build | `pnpm build:all`（ratahome + textile-fabric/apparel/home） | 通过 |
 | 2026-09-18 15:26 | 四站 validate | `pnpm site:validate:all` | 通过 |
