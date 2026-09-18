@@ -122,7 +122,7 @@ try {
     case 'templates': {
       const templates = loadTemplates();
       for (const [id, t] of Object.entries(templates)) {
-        console.log(`${id}\n  leak-check: sites/${t.source}\n  ${t.description}\n`);
+        console.log(`${id}\n  skeleton: packages/site-cli/skeletons/${t.skeleton ?? id}\n  leak-check: sites/${t.source}\n  ${t.description}\n`);
       }
       break;
     }

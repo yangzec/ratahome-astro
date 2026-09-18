@@ -1,0 +1,46 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import ContactForm from '@trade/sections/forms/ContactForm.astro';
+import { getContent } from '../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { pages, common } = getContent(locale);
+const contact = pages.contact;
+const { site } = common;
+---
+
+<BaseLayout locale={locale} title={contact.title} description={contact.heroDescription}>
+  <PageHero title={contact.heroTitle} description={contact.heroDescription} dark />
+
+  <section class="container-site section-y">
+    <div class="grid lg:grid-cols-2 stack-gap">
+      <div>
+        <h2 class="section-title mb-6">{contact.getInTouch}</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-semibold text-izza-ink mb-1">WhatsApp</h3>
+            <a href={site.whatsappUrl} class="text-izza-accent hover:underline">{site.whatsapp}</a>
+            <p class="text-sm text-izza-gray-muted">{site.hours}</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-izza-ink mb-1">{locale === 'zh' ? '地址' : 'Location'}</h3>
+            <p class="text-izza-gray-text">{site.location}</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-izza-ink mb-1">{locale === 'zh' ? '邮箱' : 'Email'}</h3>
+            <a href={`mailto:${site.email}`} class="text-izza-accent hover:underline">{site.email}</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-izza-cream rounded-lg card-pad">
+        <ContactForm locale={locale} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

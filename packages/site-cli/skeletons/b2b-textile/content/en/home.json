@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "eyebrow": "",
+    "title": "",
+    "description": "",
+    "image": "",
+    "imageAlt": "",
+    "ctaHref": "#sample"
+  },
+  "assurances": [
+    {
+      "icon": "/icons/shield-check.svg",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "/icons/box-seam.svg",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "/icons/shield-check.svg",
+      "title": "",
+      "description": ""
+    },
+    {
+      "icon": "/icons/clock.svg",
+      "title": "",
+      "description": ""
+    }
+  ],
+  "metrics": [
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    },
+    {
+      "value": "",
+      "label": ""
+    }
+  ],
+  "audiences": {
+    "title": "",
+    "description": "",
+    "items": []
+  },
+  "capabilities": {
+    "title": "",
+    "description": "",
+    "items": []
+  },
+  "process": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "imageAlt": "",
+    "steps": []
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "",
+    "title": "",
+    "description": "",
+    "commitment": "",
+    "cases": []
+  },
+  "rooms": {
+    "title": "",
+    "basePath": "",
+    "items": []
+  },
+  "projects": {
+    "title": "",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "",
+    "description": "",
+    "items": []
+  },
+  "cta": {
+    "anchorId": "sample",
+    "title": "",
+    "description": "",
+    "formTitle": "",
+    "formDescription": "",
+    "steps": []
+  },
+  "footerFeatures": []
+}

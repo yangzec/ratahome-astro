@@ -35,36 +35,34 @@ export function createSite({ slug, templateId, siteId, name, brief, root = getWo
   const id = siteId ?? slug;
   const displayName = name ?? titleFromSlug(slug);
 
-  cpSync(template.sourceDir, targetDir, {
+  cpSync(template.skeletonDir, targetDir, {
     recursive: true,
     filter: (src) => {
       const base = src.split('/').pop() ?? '';
       if (SKIP_DIRS.has(base)) return false;
-      if (src.includes(`${join(template.sourceDir, 'content')}`)) return false;
-      if (src.includes(`${join(template.sourceDir, 'public/images')}`)) return false;
       return true;
     },
   });
 
-  const oldId = readSiteIdFromConfig(template.sourceDir);
+  const oldId = readSiteIdFromConfig(template.skeletonDir);
 
   replaceInFile(join(targetDir, 'site.config.ts'), [
     [`siteId: '${oldId}'`, `siteId: '${id}'`],
-    [`name: '${readSiteName(template.sourceDir)}'`, `name: '${displayName}'`],
-    [`template: '${readSiteTemplate(template.sourceDir)}'`, `template: '${templateId}'`],
+    [`name: '${readSiteName(template.skeletonDir)}'`, `name: '${displayName}'`],
+    [`template: '${readSiteTemplate(template.skeletonDir)}'`, `template: '${templateId}'`],
   ]);
 
   replaceInFile(join(targetDir, 'wrangler.jsonc'), [
-    [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
+    [`"name": "${oldId}"`, `"name": "${slug}"`],
     [`"SITE_ID": "${oldId}"`, `"SITE_ID": "${id}"`],
   ]);
 
   replaceInFile(join(targetDir, 'package.json'), [
-    [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
+    [`"name": "${oldId}"`, `"name": "${slug}"`],
   ]);
 
   writeSkeletonContent({
-    sourceDir: template.sourceDir,
+    sourceDir: template.skeletonDir,
     targetDir,
     displayName,
     brief,

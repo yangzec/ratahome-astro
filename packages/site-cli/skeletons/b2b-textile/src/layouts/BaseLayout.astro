@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '../lib/content';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import theme from '@site/theme';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+}
+
+const { locale, title, description } = Astro.props;
+const { common } = getContent(locale);
+const { site } = common;
+
+const pageTitle = title
+  ? `${title} — ${site.name}`
+  : `${site.name} — ${site.title}`;
+const pageDescription = description ?? site.description;
+const currentPath = Astro.url.pathname;
+
+const c = theme.colors;
+const f = theme.fonts;
+const r = theme.radius;
+
+const themeVars = `:root {
+  --color-izza-accent: rgb(${c.accent});
+  --color-izza-ink: rgb(${c.ink});
+  --color-izza-charcoal: rgb(${c.charcoal});
+  --color-izza-gray-text: rgb(${c.grayText});
+  --color-izza-gray-muted: rgb(${c.grayMuted});
+  --color-izza-cream: rgb(${c.cream});
+  --color-izza-cream-deep: rgb(${c.creamDeep});
+  --color-izza-stone: rgb(${c.stone});
+  --color-izza-border: rgb(${c.border});
+  --color-izza-olive: rgb(${c.olive});
+  --color-izza-olive-dark: rgb(${c.oliveDark});
+  --color-izza-chrome: rgb(${c.chrome});
+  --font-sans: ${f.sans};
+  --font-label: ${f.label};
+  --font-display: ${f.display};
+  --radius-hero: ${r.hero};
+  --radius-image: ${r.image};
+  --radius-step: ${r.step};
+  --radius-pill: ${r.pill};
+}`;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={pageDescription} />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <title>{pageTitle}</title>
+    <style is:global set:html={themeVars}></style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header locale={locale} currentPath={currentPath} />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <script>
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const closeBtn = document.getElementById('mobile-menu-close');
+
+      const setMenuOpen = (open: boolean) => {
+        mobileMenu?.classList.toggle('hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        menuBtn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
+
+      menuBtn?.addEventListener('click', () => setMenuOpen(true));
+      closeBtn?.addEventListener('click', () => setMenuOpen(false));
+
+      document.querySelectorAll('[data-accordion]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const panel = btn.nextElementSibling;
+          const icon = btn.querySelector('[data-chevron]');
+          panel?.classList.toggle('hidden');
+          icon?.classList.toggle('rotate-180');
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -229,7 +229,7 @@ pnpm site-cli templates
 # 从家具模板创建（b2b-manufacturing）
 pnpm site-cli create my-furniture --from b2b-manufacturing --name "My Furniture"
 
-# 从纺织模板创建干净骨架（不带源站散文 / 品类 / 品类页文案）
+# 从干净骨架创建（packages/site-cli/skeletons/b2b-textile），不是从已上线站拷
 pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
 # 或把该站简报拼进骨架：
 # pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel" --brief ./apparel.brief.json

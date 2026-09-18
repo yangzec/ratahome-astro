@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { existsSync } from 'node:fs';
-import { getSiteDir } from './paths.mjs';
+import { getSiteDir, getSkeletonDir } from './paths.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -18,9 +18,13 @@ export function resolveTemplate(templateId, root) {
     const available = Object.keys(templates).join(', ');
     throw new Error(`Unknown template "${templateId}". Available: ${available}`);
   }
-  const sourceDir = getSiteDir(template.source, root);
-  if (!existsSync(sourceDir)) {
-    throw new Error(`Template source site missing: sites/${template.source}`);
+  const skeletonId = template.skeleton ?? templateId;
+  const skeletonDir = getSkeletonDir(skeletonId, root);
+  if (!existsSync(skeletonDir)) {
+    throw new Error(`Template skeleton missing: packages/site-cli/skeletons/${skeletonId}`);
   }
-  return { ...template, sourceDir, sourceSlug: template.source };
+
+  const sourceSlug = template.source;
+  const sourceDir = sourceSlug ? getSiteDir(sourceSlug, root) : '';
+  return { ...template, skeletonId, skeletonDir, sourceDir, sourceSlug };
 }

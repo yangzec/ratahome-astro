@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Site",
+    "title": "",
+    "description": "",
+    "whatsapp": "",
+    "whatsappUrl": "",
+    "hours": "",
+    "location": "",
+    "email": "",
+    "tagline": "",
+    "ctaAnchor": ""
+  },
+  "buttons": {
+    "startProject": "",
+    "uploadFloorPlan": "",
+    "factoryTour": "",
+    "sendFloorPlan": "",
+    "sendMessage": "",
+    "whatsappUs": "",
+    "viewAll": "",
+    "seeJourney": "",
+    "readWarranty": "",
+    "exploreProjects": "",
+    "requestQuote": "",
+    "discussJoinery": ""
+  },
+  "form": {
+    "name": "",
+    "email": "",
+    "projectType": "",
+    "message": "",
+    "projectDetails": "",
+    "floorPlan": "",
+    "privacy": "",
+    "namePlaceholder": "",
+    "emailPlaceholder": "",
+    "messagePlaceholder": "",
+    "detailsPlaceholder": "",
+    "projectTypes": {
+      "residence": "",
+      "design": "",
+      "development": "",
+      "hospitality": "",
+      "other": ""
+    }
+  },
+  "footer": {
+    "description": "",
+    "copyright": ""
+  }
+}

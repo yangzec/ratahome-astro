@@ -203,7 +203,7 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
-- `site-cli create` 产出干净骨架：无源站散文、无源站品类 slug、无源站品类页文案；已上线站只作结构参考和泄漏对照，不是拷贝载荷
+- `site-cli create` 只拷 `packages/site-cli/skeletons/{template}`；已上线站只作 `validate` 泄漏对照，不是拷贝源
 - 写文案的指令 = 干净骨架 + 该站 `industry.json`（访客、交付物、品类、路由前缀）正向拼接，不要加「不要写成…」
 - `validate` / `deploy` 遇空文案、源站全等、对照式否定句或无效路由必须 error，不得降为 warning
 - 对外文案必须分通道，见下节；规范、任务指令和 `validate` 都不得写「不要写成某行业」「本站不是某行业」这类指向性约束

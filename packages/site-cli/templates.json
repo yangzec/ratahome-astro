@@ -1,10 +1,12 @@
 {
   "b2b-manufacturing": {
+    "skeleton": "b2b-manufacturing",
     "source": "ratahome-furniture",
-    "description": "Clean B2B manufacturing shell. create writes a skeleton; splice site copy from industry.json."
+    "description": "Clean manufacturing skeleton. create copies packages/site-cli/skeletons/b2b-manufacturing; live site is leak-check only."
   },
   "b2b-textile": {
+    "skeleton": "b2b-textile",
     "source": "textile-fabric",
-    "description": "Clean B2B textile shell. create writes a skeleton; splice site copy from industry.json."
+    "description": "Clean textile skeleton. create copies packages/site-cli/skeletons/b2b-textile; live site is leak-check only."
   }
 }

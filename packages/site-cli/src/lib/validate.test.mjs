@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { validateSite } from './validate.mjs';
 import { createSite } from './create.mjs';
 import { getWorkspaceRoot } from './paths.mjs';
+import { resolveTemplate } from './templates.mjs';
 
 const REQUIRED_THEME = {
   colors: {
@@ -142,6 +143,13 @@ describe('validateSite', () => {
 });
 
 describe('createSite', () => {
+  it('resolves copy source to the clean skeleton directory', () => {
+    const tpl = resolveTemplate('b2b-textile', getWorkspaceRoot());
+    assert.match(tpl.skeletonDir, /skeletons\/b2b-textile$/);
+    assert.match(tpl.sourceDir, /sites\/textile-fabric$/);
+    assert.notEqual(tpl.skeletonDir, tpl.sourceDir);
+  });
+
   it('does not copy source-site prose into the new site', () => {
     const root = getWorkspaceRoot();
     const slug = `tmp-cli-${Date.now()}`;
