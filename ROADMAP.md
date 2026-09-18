@@ -51,7 +51,7 @@
 - [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
 - [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；D1 `site_id` 隔离已验证）
 - [ ] 三站自定义域名绑定
-- [ ] 纺织专属素材替换（当前复用家具占位图）
+- [x] 纺织专属素材：三站独立 Hero / 受众 / 能力 / 流程图 + SVG 字标（家具占位图仍留在 public，已不再引用）
 - [ ] 阶段 2 复用率文档化
 
 ### 后续阶段
@@ -343,6 +343,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-18 15:50 | 纺织三站专属素材：各站独立 Hero / 受众 / 能力 / 流程图与 SVG 字标，替换家具图引用 |
 | 2026-09-18 15:43 | 阶段 2 三站生产部署：`textile-fabric` / `textile-apparel` / `textile-home` → `*.yangzec.workers.dev` |
 | 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
 | 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |

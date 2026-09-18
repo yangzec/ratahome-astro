@@ -35,7 +35,7 @@ const ctaHash = `#${site.ctaAnchor ?? 'upload'}`;
   <nav class="container-site hidden lg:block relative" aria-label="Main navigation">
     <div class="flex items-center justify-between py-5">
       <a href={localizedPath('/', locale)} class="flex items-center shrink-0">
-        <img src="/images/logo.png" alt={site.name} class="site-logo site-logo--on-dark" />
+        <img src="/images/logo.svg" alt={site.name} class="site-logo site-logo--on-dark" />
       </a>
 
       <div class="flex items-center gap-1">
@@ -107,7 +107,7 @@ const ctaHash = `#${site.ctaAnchor ?? 'upload'}`;
 
   <div class="container-site mobile-header-bar flex lg:hidden items-center justify-between gap-3 border-b border-white/10">
     <a href={localizedPath('/', locale)} class="flex items-center shrink-0 min-w-0">
-      <img src="/images/logo.png" alt={site.name} class="site-logo site-logo--on-dark" />
+      <img src="/images/logo.svg" alt={site.name} class="site-logo site-logo--on-dark" />
     </a>
     <button id="mobile-menu-btn" type="button" class="p-2 -mr-2 text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -120,7 +120,7 @@ const ctaHash = `#${site.ctaAnchor ?? 'upload'}`;
 <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white flex flex-col pt-[env(safe-area-inset-top,0px)]">
   <div class="container-site mobile-header-bar flex items-center justify-between gap-3 border-b border-izza-border/30 shrink-0">
     <a href={localizedPath('/', locale)} class="flex items-center shrink-0 min-w-0">
-      <img src="/images/logo.png" alt={site.name} class="site-logo" />
+      <img src="/images/logo.svg" alt={site.name} class="site-logo" />
     </a>
     <button id="mobile-menu-close" type="button" class="p-2 -mr-2 text-izza-ink" aria-label="Close menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

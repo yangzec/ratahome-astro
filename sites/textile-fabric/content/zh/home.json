@@ -3,8 +3,8 @@
     "eyebrow": "面料采购 · 打色 · 大货出口",
     "title": "梭织与针织面料，大货前先定规格。",
     "description": "我们为品牌与工厂对接绍兴、广州认证工厂——成分、克重、色卡与 MOQ 书面确认。",
-    "image": "/images/hero-living-v2.webp",
-    "imageAlt": "面料色卡与纺织工厂",
+    "image": "/images/hero.jpg",
+    "imageAlt": "纺织厂内成排面料卷",
     "ctaHref": "#sample"
   },
   "assurances": [
@@ -23,26 +23,26 @@
     "title": "服务供应链上的每一类买家。",
     "description": "品牌、代工工厂与贸易公司共用同一套文档标准。",
     "items": [
-      { "title": "品牌方", "description": "季节系列，品质稳定，工厂可追溯。", "href": "/brands", "image": "/images/home-audiences/homeowner-v2.jpg" },
-      { "title": "工厂", "description": "大货项目，锁定规格，滚动交货。", "href": "/manufacturers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
-      { "title": "贸易商", "description": "集中采购，出口单证支持。", "href": "/traders", "image": "/images/home-audiences/builders-contractors-v4.webp" },
-      { "title": "产品开发", "description": "色卡库、打色与开发米样。", "href": "/sampling", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" }
+      { "title": "品牌方", "description": "季节系列，品质稳定，工厂可追溯。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "工厂", "description": "大货项目，锁定规格，滚动交货。", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "贸易商", "description": "集中采购，出口单证支持。", "href": "/traders", "image": "/images/audiences/traders.jpg" },
+      { "title": "产品开发", "description": "色卡库、打色与开发米样。", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
     ]
   },
   "capabilities": {
     "title": "从色样到集装箱——一份规格表。",
     "description": "不必分别对接工厂、实验室与货代，一个团队覆盖开发、生产与出口。",
     "items": [
-      { "title": "成分与克重", "description": "棉、麻、人棉、涤纶及混纺——GSM 与门幅书面锁定。", "image": "/images/home-complete-solution/living-room-v3.jpg" },
-      { "title": "颜色开发", "description": "打色、批样与大货色差标准。", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
-      { "title": "MOQ 与交期", "description": "开发米样、大货 MOQ 与滚动排产。", "image": "/images/package-living-california.webp" },
-      { "title": "出口交付", "description": "卷装、验布报告与出口单证。", "image": "/images/delivery-container.webp" }
+      { "title": "成分与克重", "description": "棉、麻、人棉、涤纶及混纺——GSM 与门幅书面锁定。", "image": "/images/capabilities/composition.jpg" },
+      { "title": "颜色开发", "description": "打色、批样与大货色差标准。", "image": "/images/capabilities/color.jpg" },
+      { "title": "MOQ 与交期", "description": "开发米样、大货 MOQ 与滚动排产。", "image": "/images/capabilities/moq.jpg" },
+      { "title": "出口交付", "description": "卷装、验布报告与出口单证。", "image": "/images/capabilities/export.jpg" }
     ]
   },
   "process": {
     "title": "从规格到出货，一条路径。",
     "description": "每个节点有记录——成分、打色批复与卷检在发货前完成。",
-    "image": "/images/home-process/completed-residence-v2.jpg",
+    "image": "/images/process.jpg",
     "imageAlt": "面料质检",
     "steps": [
       { "step": "01", "title": "提交规格", "description": "提供成分、克重、门幅、颜色与目标数量。" },
