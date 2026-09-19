@@ -12,30 +12,30 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 const { common, navigation } = getContent(locale);
 const { site, buttons } = common;
+const ctaHash = `#${site.ctaAnchor ?? 'upload'}`;
 ---
 
-<header class="sticky top-0 z-50 bg-izza-olive-dark text-white">
-  <div class="border-b border-white/10">
-    <div class="container-site flex items-center justify-between py-2.5 text-sm gap-4">
-      <p class="hidden lg:block text-white/70 flex-1">{site.tagline}</p>
+<header class="sticky top-0 z-50 bg-izza-olive-dark text-white pt-[env(safe-area-inset-top,0px)]">
+  <div class="hidden lg:block border-b border-white/10">
+    <div class="container-site flex items-center justify-between py-2.5 text-sm gap-3 sm:gap-4">
+      <p class="text-white/70 flex-1 min-w-0">{site.tagline}</p>
       <LanguageSwitcher locale={locale} currentPath={currentPath} />
       <a
         href={site.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 text-white/90 hover:text-white transition-colors shrink-0"
+        class="flex items-center gap-2 text-white/90 hover:text-white transition-colors shrink-0 min-w-0"
       >
         <span class="font-medium">WhatsApp {site.whatsapp}</span>
-        <span class="hidden md:inline text-white/50">{site.hours}</span>
+        <span class="text-white/50">{site.hours}</span>
       </a>
     </div>
   </div>
 
   <nav class="container-site hidden lg:block relative" aria-label="Main navigation">
     <div class="flex items-center justify-between py-5">
-      <a href={localizedPath('/', locale)} class="flex items-center gap-3">
-        <img src="/images/logo.png" alt={site.name} class="h-8 w-auto brightness-0 invert" />
-        <span class="font-display text-xl tracking-widest text-white">{site.name}</span>
+      <a href={localizedPath('/', locale)} class="flex items-center shrink-0">
+        <img src="/images/logo.png" alt={site.name} class="site-logo site-logo--on-dark" />
       </a>
 
       <div class="flex items-center gap-1">
@@ -51,7 +51,7 @@ const { site, buttons } = common;
         ))}
       </div>
 
-      <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary !min-h-11 !text-sm !px-6">
+      <a href={`${localizedPath('/', locale)}${ctaHash}`} class="btn-primary">
         {buttons.startProject}
       </a>
     </div>
@@ -105,37 +105,35 @@ const { site, buttons } = common;
     ))}
   </nav>
 
-  <div class="container-site flex lg:hidden items-center justify-between py-4">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
-      <img src="/images/logo.png" alt={site.name} class="h-7 w-auto brightness-0 invert" />
-      <span class="font-display text-lg tracking-widest text-white">{site.name}</span>
+  <div class="container-site mobile-header-bar flex lg:hidden items-center justify-between gap-3 border-b border-white/10">
+    <a href={localizedPath('/', locale)} class="flex items-center shrink-0 min-w-0">
+      <img src="/images/logo.png" alt={site.name} class="site-logo site-logo--on-dark" />
     </a>
-    <button id="mobile-menu-btn" class="p-2 text-white" aria-label="Open menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="mobile-menu-btn" type="button" class="p-2 -mr-2 text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
 </header>
 
-<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
-  <div class="flex items-center justify-between p-5 border-b border-izza-border/30">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
-      <img src="/images/logo.png" alt={site.name} class="h-7 w-auto" />
-      <span class="font-display text-lg tracking-widest text-izza-ink">{site.name}</span>
+<div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white flex flex-col pt-[env(safe-area-inset-top,0px)]">
+  <div class="container-site mobile-header-bar flex items-center justify-between gap-3 border-b border-izza-border/30 shrink-0">
+    <a href={localizedPath('/', locale)} class="flex items-center shrink-0 min-w-0">
+      <img src="/images/logo.png" alt={site.name} class="site-logo" />
     </a>
-    <button id="mobile-menu-close" class="p-2" aria-label="Close menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="mobile-menu-close" type="button" class="p-2 -mr-2 text-izza-ink" aria-label="Close menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </div>
-  <nav class="overflow-y-auto max-h-[calc(100vh-80px)] p-5">
+  <nav class="flex-1 overflow-y-auto container-site py-4" aria-label="Mobile navigation">
     {navigation.main.map((item) => (
       <div class="border-b border-izza-border/20">
-        <button data-accordion class="w-full flex items-center justify-between py-4 text-left font-semibold text-izza-ink">
+        <button type="button" data-accordion class="w-full flex items-center justify-between py-4 text-left font-semibold text-izza-ink">
           {item.label}
-          <svg data-chevron class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg data-chevron class="w-5 h-5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
@@ -147,7 +145,21 @@ const { site, buttons } = common;
         </div>
       </div>
     ))}
-    <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary w-full mt-6">{buttons.startProject}</a>
+
+    <div class="mt-6 pt-6 border-t border-izza-border/20 space-y-4">
+      <div class="flex items-center justify-between gap-4">
+        <LanguageSwitcher locale={locale} currentPath={currentPath} variant="on-light" />
+        <a
+          href={site.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium text-izza-accent hover:underline shrink-0"
+        >
+          WhatsApp
+        </a>
+      </div>
+      <a href={`${localizedPath('/', locale)}#upload`} class="btn-primary btn-block">{buttons.startProject}</a>
+    </div>
   </nav>
 </div>
 

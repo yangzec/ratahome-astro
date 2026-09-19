@@ -1,0 +1,28 @@
+{
+  "name": "b2b-manufacturing",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "db:migrate": "wrangler d1 migrations apply trade-platform --local",
+    "db:migrate:remote": "wrangler d1 migrations apply trade-platform --remote",
+    "cf:deploy": "astro build && wrangler deploy"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@trade/core": "workspace:*",
+    "@trade/sections": "workspace:*",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.132.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260915.1"
+  }
+}

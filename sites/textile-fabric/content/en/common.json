@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Textile Fabric Co.",
+    "title": "Woven & Knit Fabric Export",
+    "description": "Source cotton, linen, blends and functional fabrics from vetted mills — lab dips, MOQ and export delivery managed as one program.",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
+    "location": "Shaoxing & Guangzhou, China",
+    "email": "fabric@example.com",
+    "tagline": "Composition, weight and color — confirmed in writing before bulk production.",
+    "ctaAnchor": "sample"
+  },
+  "buttons": {
+    "startProject": "Request Samples",
+    "uploadFloorPlan": "Request Fabric Samples",
+    "factoryTour": "Mill Tour",
+    "sendFloorPlan": "Submit sample request",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp Us",
+    "viewAll": "View all",
+    "seeJourney": "See the sampling process",
+    "readWarranty": "View certifications",
+    "exploreProjects": "Explore programs",
+    "requestQuote": "Request quote for this fabric",
+    "discussJoinery": "Discuss specifications"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "projectType": "Program type",
+    "message": "Message",
+    "projectDetails": "Fabric requirements",
+    "floorPlan": "Spec sheet or swatch photo (optional)",
+    "privacy": "Private and confidential · Reply within one business day",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "Tell us about your fabric program...",
+    "detailsPlaceholder": "Composition, weight (GSM), width, colors, quantity, target price...",
+    "projectTypes": {
+      "residence": "Brand / retail program",
+      "design": "Collection development",
+      "development": "Bulk production",
+      "hospitality": "Private label",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "Fabric sourcing, lab dips, bulk production and export — one accountable team.",
+    "copyright": "All rights reserved."
+  }
+}

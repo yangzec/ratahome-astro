@@ -190,10 +190,12 @@ https://github.com/yangzec/ratahome-astro
 5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+8. 新建站点：`pnpm site-cli create <slug> --from <template> [--brief <file>]` 产出干净骨架与 `industry.json`；写文案用 `packages/site-cli/prompts/write-copy.md`（对象 + 痛点 + 说法）；`validate` / `deploy` 对空文案、源站全等、对照式否定结构、死链报 error
 
 ### 文档指针
 
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **写文案提示词**：`packages/site-cli/prompts/write-copy.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件
@@ -202,8 +204,36 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
+- `site-cli create` 只拷 `packages/site-cli/skeletons/{template}`；已上线站只作 `validate` 泄漏对照，不是拷贝源
+- 写文案的指令 = `packages/site-cli/prompts/write-copy.md` + 该站 `industry.json` 三层（对象 / 痛点 / 说法）；不要加「不要写成…」
+- `validate` / `deploy` 遇空文案、源站全等、对照式否定句或无效路由必须 error，不得降为 warning
+- 对外文案必须分通道，见下节；规范、任务指令和 `validate` 都不得写「不要写成某行业」「本站不是某行业」这类指向性约束
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
+
+### 对外文案分通道
+
+`sites/*/content/` 是访客读物，不是验收说明书。约束被遵守，应该看不见；看得见的，只该是访客用得上的话。写任何可见字符串前先分类，禁止把三类文本写进同一句。
+
+约束只谈**本站**。禁止点名另一行业来规定本站。行业词只出现在该站 `industry.json` 与由其写出的访客材料里。
+
+写 `content/` 只读：干净骨架 + `industry.json` 三层 + `packages/site-cli/prompts/write-copy.md`。不要把泄漏对照、validate 条文或否定句写进生成指令。
+
+`industry.json` 三层缺一不可再写句子：对象（访客、交付物、品类、路由）管导航；痛点管为什么在乎；说法（`phrases` / `references`）管行业怎么报数字和材料。对象层单独用会拼名单；痛点说法空会过度提炼。竞品页只进 `references` 笔记，不进页面原文。
+
+| 通道 | 进入哪里 | 只允许 | 禁止写进页面 |
+|------|----------|--------|--------------|
+| 生成 | `content/{en,zh}/`、可见 UI 字符串 | 该站对象、痛点、行业说法 | 源站对照、竞品原文、`validate` 条文、脚手架说明、上一轮纠正 |
+| 约束 | 设计（路由、对象、品类、省略） | 「不要拷贝源站」变成本站路由与对象 | 用否定其他站点或品类来定义本站 |
+| 验收 | `validate` / `deploy`、人读 | 空字段、与源站全等、死链、对照式否定结构 | 把验收标准复述进 hero / audiences；用正则定义「够不够行业」 |
+
+**陌生人可读**：没见过本仓库、对话和源站的人，这句是否仍成立？不成立就是 instruction-to-artifact leakage。
+
+**区块职责**：首页各 Section 只回答买家路径上的一问（定位 / 信任 / 分流 / 能力 / 流程 / 证明 / 风险 / 转化），见 `packages/site-cli/prompts/write-copy.md` 区块表。痛点按类型进对应区块；禁止把打样须知堆进 hero、把下单后投诉写进 audiences。人读验收用提示词里的五问（三秒定位、角色分流、能力筛选、启动清晰、风险有底），不是让每块都像跟单备忘录。
+
+`validate` 拦对照式否定结构（「而不是…贸易商 / 站」「built for … not …」），不维护行业词黑名单，也不判断文案好不好。这是探测器，不是定义。
+
+**混入点**：都在写 `content/`。拷贝源脏 + 否定约束 → 对照句；只拼接对象 →「共用一套」；只下令换区块、禁复述 → 过度提炼；把 RFQ / 投诉 / 跟单术语铺满每个区块 → hero 像询价单、audiences 像客诉区。正确做法：干净骨架 + 三层简报 + 按区块职责写 `write-copy.md`。
 
 ### 验证入口
 

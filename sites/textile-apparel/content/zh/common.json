@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "成衣出口",
+    "title": "针织与梭织成衣",
+    "description": "绍兴、广州 OEM / ODM 成衣制造——放码、试穿样和大货出口，服务品牌、零售和代理项目。",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "周一至周五 10:00–19:00（UTC+8）",
+    "location": "中国·绍兴 / 广州",
+    "email": "apparel@example.com",
+    "tagline": "为品牌、零售和代理项目提供针织与梭织成衣制造。",
+    "ctaAnchor": "sample"
+  },
+  "buttons": {
+    "startProject": "要打样报价",
+    "uploadFloorPlan": "发工艺单",
+    "factoryTour": "参观工厂",
+    "sendFloorPlan": "提交打样申请",
+    "sendMessage": "发送消息",
+    "whatsappUs": "WhatsApp 联系",
+    "viewAll": "查看全部",
+    "seeJourney": "看打样和 PP",
+    "readWarranty": "查看认证",
+    "exploreProjects": "看近期订单",
+    "requestQuote": "询价该款",
+    "discussJoinery": "发尺码表"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "projectType": "这次要报什么",
+    "message": "留言",
+    "projectDetails": "款式、面料、码段",
+    "floorPlan": "工艺单或参考成衣照片",
+    "privacy": "信息保密 · 一个工作日内回复",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "工艺单、参考成衣、码段、颜色、数量、目的港国家……",
+    "detailsPlaceholder": "款式、面料、码段、颜色、数量、船期……",
+    "projectTypes": {
+      "residence": "试穿样 / 初样",
+      "design": "码套",
+      "development": "大货订单",
+      "hospitality": "贴牌",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "绍兴、广州针织和梭织车缝。",
+    "copyright": "版权所有。"
+  }
+}

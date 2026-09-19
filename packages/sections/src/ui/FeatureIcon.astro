@@ -1,0 +1,12 @@
+---
+interface Props {
+  src: string;
+  class?: string;
+}
+
+const { src, class: className = '' } = Astro.props;
+---
+
+<span class={`icon-chip ${className}`} aria-hidden="true">
+  <img src={src} alt="" class="icon-chip__img" loading="lazy" decoding="async" />
+</span>

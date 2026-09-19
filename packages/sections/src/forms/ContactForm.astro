@@ -18,30 +18,30 @@ const { form, buttons } = common;
   <input type="hidden" name="locale" value={locale} />
 
   <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.name}</label>
+    <label class="field-label">{form.name}</label>
     <input
       type="text"
       name="name"
       required
-      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+      class="field-control"
       placeholder={form.namePlaceholder}
     />
   </div>
 
   <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.email}</label>
+    <label class="field-label">{form.email}</label>
     <input
       type="email"
       name="email"
       required
-      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+      class="field-control"
       placeholder={form.emailPlaceholder}
     />
   </div>
 
   <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectType}</label>
-    <select name="projectType" class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm">
+    <label class="field-label">{form.projectType}</label>
+    <select name="projectType" class="field-control">
       <option value="residence">{form.projectTypes.residence}</option>
       <option value="design">{form.projectTypes.design}</option>
       <option value="development">{form.projectTypes.development}</option>
@@ -51,18 +51,18 @@ const { form, buttons } = common;
   </div>
 
   <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectDetails}</label>
+    <label class="field-label">{form.projectDetails}</label>
     <textarea
       name="message"
       rows="4"
-      class="w-full px-5 py-4 rounded-[5px] border border-izza-border bg-white text-sm resize-none"
+      class="field-control"
       placeholder={form.detailsPlaceholder}
     ></textarea>
   </div>
 
   {showFileUpload && (
     <div>
-      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.floorPlan}</label>
+      <label class="field-label">{form.floorPlan}</label>
       <input
         type="file"
         name="file"
@@ -72,7 +72,7 @@ const { form, buttons } = common;
     </div>
   )}
 
-  <Button type="submit" variant="primary" class="w-full">{buttons.sendFloorPlan}</Button>
+  <Button type="submit" variant="primary" class="btn-block">{buttons.sendFloorPlan}</Button>
 </form>
 
 <p class="text-xs text-izza-gray-muted mt-4 text-center">{form.privacy}</p>

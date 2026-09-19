@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products/bedding-sets",
+      "links": [
+        { "label": "Bedding sets", "href": "/products/bedding-sets" },
+        { "label": "Duvets & pillows", "href": "/products/duvets-pillows" },
+        { "label": "Bath towels", "href": "/products/bath-towels" },
+        { "label": "Curtains", "href": "/products/curtains" },
+        { "label": "Table linen", "href": "/products/table-linen" },
+        { "label": "Custom embroidery", "href": "/products/custom-embroidered" }
+      ]
+    },
+    {
+      "id": "programs",
+      "label": "Programs",
+      "href": "/sampling",
+      "links": [
+        { "label": "Sampling", "href": "/sampling", "description": "Room sets and embroidery proofs" },
+        { "label": "MOQ & lead time", "href": "/moq", "description": "Set quantities and replenishment" },
+        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX and hotel standards" },
+        { "label": "Quality control", "href": "/quality-control", "description": "Set count and finish inspection" }
+      ]
+    },
+    {
+      "id": "buyers",
+      "label": "Buyers",
+      "href": "/hotels",
+      "links": [
+        { "label": "Hotels", "href": "/hotels" },
+        { "label": "Retailers", "href": "/retailers" },
+        { "label": "Developers", "href": "/developers" }
+      ]
+    },
+    { "id": "about", "label": "About", "href": "/about" },
+    { "id": "contact", "label": "Contact", "href": "/contact" }
+  ]
+}

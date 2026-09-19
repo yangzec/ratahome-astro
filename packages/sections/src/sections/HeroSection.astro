@@ -14,17 +14,17 @@ const { hero } = home;
 const { buttons } = common;
 ---
 
-<section class="relative min-h-[85vh] flex items-end overflow-hidden">
-  <img src={hero.image} alt={hero.imageAlt} class="absolute inset-0 w-full h-full object-cover" />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
-  <div class="relative container-site pb-16 pt-32 w-full">
-    <p class="eyebrow text-white/90 mb-6">{hero.eyebrow}</p>
-    <h1 class="text-white text-4xl md:text-5xl lg:text-[52px] font-semibold max-w-4xl leading-tight mb-6">
+<section class="relative min-h-[72vh] sm:min-h-[80vh] lg:min-h-[88svh] flex items-end overflow-hidden">
+  <img src={hero.image} alt={hero.imageAlt} class="absolute inset-0 w-full h-full object-cover object-[center_35%]" />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/25"></div>
+  <div class="relative container-site hero-panel w-full">
+    <p class="eyebrow text-white/90 mb-3 text-sm sm:text-[0.8125rem]">{hero.eyebrow}</p>
+    <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold max-w-4xl leading-tight mb-4">
       {hero.title}
     </h1>
-    <p class="text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">{hero.description}</p>
-    <div class="flex flex-wrap gap-4">
-      <Button href="#upload" variant="primary">{buttons.uploadFloorPlan}</Button>
+    <p class="text-white/85 text-base sm:text-lg max-w-2xl mb-5 sm:mb-6 leading-relaxed">{hero.description}</p>
+    <div class="flex flex-wrap items-center gap-3">
+      <Button href={hero.ctaHref ?? '#upload'} variant="primary">{buttons.uploadFloorPlan}</Button>
       <Button href={localizedPath('/foshan-sourcing-tour', locale)} variant="outline">{buttons.factoryTour}</Button>
     </div>
   </div>

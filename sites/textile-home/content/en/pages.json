@@ -1,0 +1,62 @@
+{
+  "about": {
+    "title": "About",
+    "eyebrow": "Home textiles",
+    "heroTitle": "Sheeting and terry that wait for a signed set.",
+    "heroDescription": "Hotel bedding and bath. Send a room list. We confirm mattress height and GSM, then put a set on a bed.",
+    "workflowTitle": "How a workshop is picked.",
+    "workflowDescription": "Finish and volume pick the line. The signed set picks the packing week.",
+    "closingTitle": "Have a property list?",
+    "closingDescription": "Send the room list or a mattress photo. Sample date and set MOQ in 48 hours."
+  },
+  "contact": {
+    "title": "Contact",
+    "heroTitle": "Write to the merchandiser on the SKU.",
+    "heroDescription": "Sample set, logo proof or a hotel PO — one person dates it.",
+    "getInTouch": "Get in touch"
+  },
+  "collections": {
+    "title": "Products",
+    "heroTitle": "What we quote",
+    "heroDescription": "Bedding, terry, curtains, table linen, embroidered pieces.",
+    "packagesTitle": "What is on the quote",
+    "benefitsTitle": "What the quote names",
+    "benefitsDescription": "Workshop, sample date, set MOQ, GSM or thread count, fitted-sheet drop.",
+    "stylesTitle": "Where they go",
+    "stylesDescription": "Hotels, retail shelves, fitted-out rooms."
+  },
+  "slugs": {
+    "hotels": { "title": "For hospitality", "description": "Built for industrial laundry.", "content": "Guestroom and bath programs specified for hotel laundry cycles. GSM and loop density are locked on a washed sample, with SKUs held for call-off." },
+    "retailers": { "title": "For retailers", "description": "Next lot matches the signed white.", "content": "Replenishment often shifts shade. The lot card stays with the signed set so the next dye is matched before packing." },
+    "developers": { "title": "For property developers", "description": "Write the mattress height first.", "content": "Fitted sheets fail when drop is guessed. Mattress thickness and drop are on the room list before we cut. Sheeting, curtains and bath SKUs are specified together." },
+    "sampling": { "title": "Sampling", "description": "A set on a bed. A logo on terry.", "content": "Send a room list or artwork. Sample set is typically 12 days. Embroidery proof is stitched on the real towel before bulk heads run." },
+    "moq": { "title": "MOQ & lead time", "description": "Quoted per SKU, after the sample.", "content": "A sample set can be a few units. Bulk MOQ is by property or colorway and is dated on the quote after you sign the set." },
+    "certifications": { "title": "Certifications", "description": "OEKO-TEX on the lot you ship.", "content": "When you ask for a certified lot, the scope file travels with those cartons. Uncertified pieces stay off certified packing." },
+    "quality-control": { "title": "Quality control", "description": "Finish, then the count.", "content": "Final audit: stitch, finish, embroidery against the proof, set completeness, carton count." },
+    "how-it-works": { "title": "How it works", "description": "Room list in, signed set, then bulk.", "content": "Send the list → lock drop and GSM → sample the set → sign logo → make → count. Same merchandiser." },
+    "faq": { "title": "FAQ", "description": "Sample days, drop, certificates.", "content": "Sample set about 12 days. Fitted-sheet drop and mattress height are required before cutting. OEKO-TEX is quoted per lot." },
+    "blog": { "title": "Blog", "description": "Notes from finishing.", "content": "Industrial wash, hotel sizes and how a set is packed." }
+  },
+  "workflow": [
+    { "step": "01", "title": "Read the room list", "description": "Size, GSM, mattress height, logo." },
+    { "step": "02", "title": "Lock the spec", "description": "Drop and wash GSM." },
+    { "step": "03", "title": "Sign the set", "description": "On a bed, logo on terry." },
+    { "step": "04", "title": "Make and count", "description": "Finish on the line, sets at the door." }
+  ],
+  "aboutAudiences": [
+    { "title": "Hotels", "description": "Towels that survive laundry." },
+    { "title": "Retailers", "description": "A white you can replenish." },
+    { "title": "Developers", "description": "Sheets that fit the bed." }
+  ],
+  "packageBenefits": [
+    { "title": "12-day sample set", "description": "On a bed." },
+    { "title": "Drop written first", "description": "Before we cut sheets." },
+    { "title": "Proof on terry", "description": "Before embroidery heads." }
+  ],
+  "collectionBenefits": [
+    { "title": "Sheeting", "description": "Hotel sizes and drop." },
+    { "title": "Terry", "description": "200–800 GSM after wash." },
+    { "title": "Curtains", "description": "Cut to the window list." }
+  ],
+  "collectionPackages": []
+}

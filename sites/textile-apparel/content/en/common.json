@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Textile Apparel Co.",
+    "title": "Knit and woven cut-and-sew",
+    "description": "OEM and ODM garment manufacturing in Shaoxing and Guangzhou — grading, fit samples and export bulk for brands, retail and agency programs.",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
+    "location": "Shaoxing & Guangzhou, China",
+    "email": "apparel@example.com",
+    "tagline": "Knit and woven garment manufacturing for brands, retail and agency programs.",
+    "ctaAnchor": "sample"
+  },
+  "buttons": {
+    "startProject": "Request a sample quote",
+    "uploadFloorPlan": "Send tech pack",
+    "factoryTour": "Factory Tour",
+    "sendFloorPlan": "Submit sample request",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp Us",
+    "viewAll": "View all",
+    "seeJourney": "See sampling and PP",
+    "readWarranty": "View certifications",
+    "exploreProjects": "See recent POs",
+    "requestQuote": "Quote this style",
+    "discussJoinery": "Send size spec"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "projectType": "What you need priced",
+    "message": "Message",
+    "projectDetails": "Style, fabric, size range",
+    "floorPlan": "Tech pack or reference garment photo",
+    "privacy": "Private · Reply within one business day",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "Tech pack, reference garment, size range, colors, quantity, ship-to country...",
+    "detailsPlaceholder": "Style, fabric, size range, colors, target quantity, ship date...",
+    "projectTypes": {
+      "residence": "Fit sample / proto",
+      "design": "Size set",
+      "development": "Bulk PO",
+      "hospitality": "Private label",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "Knit and woven cut-and-sew in Shaoxing and Guangzhou.",
+    "copyright": "All rights reserved."
+  }
+}

@@ -53,7 +53,7 @@ const themeVars = `:root {
 <html lang={locale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={pageDescription} />
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <title>{pageTitle}</title>
@@ -70,15 +70,14 @@ const themeVars = `:root {
       const mobileMenu = document.getElementById('mobile-menu');
       const closeBtn = document.getElementById('mobile-menu-close');
 
-      menuBtn?.addEventListener('click', () => {
-        mobileMenu?.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      });
+      const setMenuOpen = (open: boolean) => {
+        mobileMenu?.classList.toggle('hidden', !open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        menuBtn?.setAttribute('aria-expanded', open ? 'true' : 'false');
+      };
 
-      closeBtn?.addEventListener('click', () => {
-        mobileMenu?.classList.add('hidden');
-        document.body.style.overflow = '';
-      });
+      menuBtn?.addEventListener('click', () => setMenuOpen(true));
+      closeBtn?.addEventListener('click', () => setMenuOpen(false));
 
       document.querySelectorAll('[data-accordion]').forEach((btn) => {
         btn.addEventListener('click', () => {

@@ -11,6 +11,7 @@
 | 部署顺序 | **先单站单部署，后多站单部署** | 先证明「站可复制」，再证明「部署可合并」 |
 | 代码组织 | Monorepo + `sites/{industry}/` | 共享 `packages/core`，每站独立配置 |
 | 行业语义 | **内容文案为主，组件为辅** | 80% 差异在 JSON / 路由 / 素材；仅 ~20% 需新 Section |
+| 对外文案 | **干净骨架 + 三层简报 + 按区块职责写** | 对象管路由；痛点 / 说法进对应区块（非每块重复）；`write-copy.md` 定义 hero→cta 各块买家问题与行业信息 |
 | 页面多样化 | Section Registry + Page Blueprint | 首页等由 JSON 配置区块顺序，非写死模板 |
 | 多语言 | en 默认 + zh（`/zh/`） | 后续按需扩展 locale |
 | 技术栈 | Astro 7 + Tailwind 4 + Cloudflare D1/R2 | 不引入第二套 UI 框架 |
@@ -20,9 +21,13 @@
 | D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
 
+对照句混入环节：写 `content/` 时生成通道输入不全。否定约束 → 对照句；只拼对象 →「共用一套」；只禁复述 → 过度提炼。应先落干净骨架和三层 `industry.json`，再用 `write-copy.md` 写。
+
 ---
 
-## 当前状态（阶段 1 收尾中）
+## 当前状态（阶段 2 进行中）
+
+### 阶段 1 — 已完成
 
 - [x] Ratahome 家具站 Astro 复刻（组件化、JSON 文案、en/zh）
 - [x] Cloudflare D1 + R2 集成（联系表单、上传、资源 API）
@@ -36,11 +41,25 @@
 - [x] API 路由适配 Astro 7 `cloudflare:workers` env
 - [x] 部署文档 `docs/DEPLOY.md`
 - [x] Monorepo 完整提交；canonical 远程为 GitHub `yangzec/ratahome-astro`
-- [ ] Cloudflare 生产部署（需 `wrangler login` + D1/R2 创建）
+- [x] Cloudflare 生产部署（D1 `trade-platform` + R2 `trade-platform-assets`；`ratahome-furniture.yangzec.workers.dev`）
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
-- [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
+- [x] 阶段 1 关账：四站 `site-cli validate` + `build` 通过；根目录遗留说明见 `docs/LEGACY.md`
+
+### 阶段 2 — 纺织类试点
+
+- [x] `b2b-textile` 注册于 `packages/site-cli/templates.json`（source: `textile-fabric`）
+- [x] 三站骨架：`sites/textile-fabric`、`textile-apparel`、`textile-home`（独立 wrangler）
+- [x] 成衣 / 家纺用干净骨架 + `--brief` 重建；简报补齐痛点 / 说法；写文案走 `write-copy.md`
+- [x] 共享 Section 复用（无新增 Section；`rooms.basePath` + 样品 CTA 配置化）
+- [x] 三站 Cloudflare 生产部署（`textile-fabric/apparel/home.yangzec.workers.dev`；成衣 / 家纺已按简报重建重新部署）
+- [ ] 三站自定义域名绑定
+- [x] 纺织专属素材：三站独立 Hero / 受众 / 能力 / 流程图 + SVG 字标；成衣 / 家纺已去掉家具占位图
+- [ ] 阶段 2 复用率文档化
+
+### 后续阶段
+
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
 
@@ -128,8 +147,8 @@ trade-site-platform/
 | # | 任务 | 验收标准 |
 |---|------|----------|
 | 2.1 | 定义 `b2b-textile` JSON Schema | content / routes / blueprint / theme 有 schema；`templates.json` 注册模板 |
-| 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；阶段 2 执行面料 / 服装 / 家纺各 1 个 |
-| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint section、SITE_ID 一致性 |
+| 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；create 写干净骨架 + `industry.json`；可用 `--brief` 拼接 |
+| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站全等 / 对照式否定结构 / 死链均为 error |
 | 2.4 | 完成 3 站 content + 素材 | 首页、导航、关于、联系可浏览（en + zh） |
 | 2.5 | 各站独立 wrangler 部署 | 3 个独立域名；**共享同一 D1**（`site_id` 隔离数据）；R2 用 `{site_id}/` 前缀 |
 | 2.6 | 记录复用率 | 列出复用 Section vs 新增 Section（目标新增 < 3 个） |
@@ -320,7 +339,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| 自定义域名绑定 | 待将 `ratahome.com` 指向 Worker |
 
 ---
 
@@ -328,20 +347,27 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 04:05 | 成衣 / 家纺按区块职责二轮重写并部署：hero 定位、audiences 分流、客诉进 warranty、RFQ 留 cta |
+| 2026-09-19 03:55 | 修正文案方向：`write-copy.md` 增加区块职责表、痛点分区、四行业各块信息；禁止 hero=RFQ、audiences=客诉 |
+| 2026-09-19 03:28 | 文案打法改为三层简报 + `write-copy.md`；`create` 不再说 splice，缺痛点 / 说法会警告 |
+| 2026-09-19 03:14 | 成衣 / 家纺首页按区块重写；简报改为对象清单，去掉「共用一套」句模 |
+| 2026-09-19 02:52 | 成衣 / 家纺按干净骨架 + 行业简报删除重建并重新部署；路由来自 `catalogSlugs`；文案去掉对照句 |
+| 2026-09-19 02:25 | `create` 改为只拷 `packages/site-cli/skeletons/{template}`，已上线站仅作泄漏对照 |
+| 2026-09-19 01:09 | 约束不得点名另一行业；`validate` 改为拦否定结构，去掉行业词黑名单 |
+| 2026-09-19 00:55 | 项目规范改为对外文案分通道（生成 / 约束 / 验收）；对照句正则降为探测器；写明成衣对照句混入在重写 `content/` |
+| 2026-09-18 20:52 | 对外文案只写给访客；`validate` 拦截对照式行业否定句；去掉成衣站「而不是面料贸易商」 |
+| 2026-09-18 20:01 | 成衣 / 家纺重建站重新部署到 `textile-apparel` / `textile-home.yangzec.workers.dev` |
+| 2026-09-18 19:58 | 删除并重建 `textile-apparel` / `textile-home`：骨架 create + 成衣/家纺独立文案与路由，去掉家具占位图 |
+| 2026-09-18 18:26 | `site-cli create` 只拷骨架不拷文案；`validate`/`deploy` 对空文案、源站复用、死链报 error |
+| 2026-09-18 15:50 | 纺织三站专属素材：各站独立 Hero / 受众 / 能力 / 流程图与 SVG 字标，替换家具图引用 |
+| 2026-09-18 15:43 | 阶段 2 三站生产部署：`textile-fabric` / `textile-apparel` / `textile-home` → `*.yangzec.workers.dev` |
+| 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
+| 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |
+| 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
+| 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
+| 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
-| 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
-| 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
-| 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
-| 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
-| 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
-| 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
-| 2026-09-17 08:58 | 阶段 1 启动：Monorepo + site_id D1 + Blueprint + theme 外置，build 通过 |
-| 2026-09-17 08:54 | 确认 D1：共享实例 + `site_id`；阶段 4 运动/户外部署模式待阶段 3 跑通后再定 |
-| 2026-09-17 08:51 | 确认各阶段试点行业：阶段 2 面料/服装/家纺，阶段 3 包装/印刷，阶段 4 运动/户外 |
-| 2026-09-17 08:37 | 决策：先单站单部署，后多站单部署试点 |
-| 2026-09-17 08:37 | 100 行业方案总结（部署模型、语义分层、Blueprint、阶段路线） |
-| 2026-09-16 | Ratahome 模板 v1：组件化 + i18n JSON + D1/R2 |
 
 ---
 
@@ -349,9 +375,23 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
+| 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
+| 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
+| 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
+| 2026-09-19 01:09 | 去行业指向约束 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；规范与探测器均不列行业词 | 通过 |
+| 2026-09-19 00:55 | 文案分通道入规范 | 项目级 `AGENTS.md` 写入生成/约束/验收分通道与陌生人可读；USAGE 改为指针 | 已写入 |
+| 2026-09-18 20:52 | 对照句校验 | `pnpm site-cli:test` 9 通过；四站 `validate` 通过；成衣 audiences 不再含「而不是面料」 | 通过 |
+| 2026-09-18 20:01 | 成衣/家纺生产 | 首页 en/zh HTTP 200；`/styles/*` `/products/*` 200；旧 `/fabrics/cotton` 404；hero JPEG `FFD8FF`；浏览器核对成衣/家纺文案 | 通过 |
+| 2026-09-18 19:58 | 成衣/家纺重建 | `validate textile-apparel` / `textile-home` 通过；文案与 `/styles` `/products` 路由不再复用面料站 | 通过 |
+| 2026-09-18 18:26 | site-cli | `pnpm site-cli:test`（8）；`validate ratahome-furniture` / `textile-fabric` 通过；`textile-apparel` / `textile-home` 死链与源站文案复用报 error | 符合预期 |
+| 2026-09-18 15:58 | 纺织专属素材上线 | 三站首页 HTML 仅引用 `/images/hero.jpg` 等新路径；hero JPEG magic `FFD8FF`；浏览器核对 Logo 与 Hero 非家具图 | 通过 |
+| 2026-09-18 15:43 | 纺织三站生产 | `pnpm site-cli deploy textile-fabric/apparel/home`；首页 HTTP 200；`POST /api/contact` → D1 `site_id=textile-fabric` | 通过 |
+| 2026-09-18 15:26 | 四站 build | `pnpm build:all`（ratahome + textile-fabric/apparel/home） | 通过 |
+| 2026-09-18 15:26 | 四站 validate | `pnpm site:validate:all` | 通过 |
+| 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
+| 2026-09-18 07:34 | 生产联系表单 | `POST /api/contact` + D1 远程查询 `site_id=ratahome-furniture` | 通过 |
+| 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |
+| 2026-09-18 07:37 | 生产静态图片 | curl 检查 logo/hero/dining-room magic bytes | 通过（二进制 PNG/WebP/JPEG） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
-| 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
-| 2026-09-17 10:45 | 预览测试 en/zh | 浏览器访问 43124，首页/关于/联系/系列 | 通过 |
-| 2026-09-17 08:58 | 本地 build | `pnpm build` | 通过（152 页 prerender） |
-| 待确认 | Cloudflare 生产部署 | `pnpm cf:deploy` | 环境无 `wrangler login`，未执行 |

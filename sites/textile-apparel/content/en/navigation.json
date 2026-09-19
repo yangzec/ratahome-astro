@@ -1,0 +1,40 @@
+{
+  "main": [
+    {
+      "id": "styles",
+      "label": "Styles",
+      "href": "/styles/knit-tops",
+      "links": [
+        { "label": "Knit tops", "href": "/styles/knit-tops" },
+        { "label": "Woven shirts", "href": "/styles/woven-shirts" },
+        { "label": "Outerwear", "href": "/styles/outerwear" },
+        { "label": "Activewear", "href": "/styles/activewear" },
+        { "label": "Uniforms", "href": "/styles/uniforms" },
+        { "label": "Private label", "href": "/styles/private-label" }
+      ]
+    },
+    {
+      "id": "programs",
+      "label": "Programs",
+      "href": "/sampling",
+      "links": [
+        { "label": "Sampling", "href": "/sampling", "description": "Fit samples and PP samples" },
+        { "label": "Size specs", "href": "/size-specs", "description": "Blocks, grading and fit standards" },
+        { "label": "Certifications", "href": "/certifications", "description": "OEKO-TEX, BSCI and more" },
+        { "label": "Quality control", "href": "/quality-control", "description": "AQL and measurement reports" }
+      ]
+    },
+    {
+      "id": "buyers",
+      "label": "Buyers",
+      "href": "/brands",
+      "links": [
+        { "label": "Brands", "href": "/brands" },
+        { "label": "Retailers", "href": "/retailers" },
+        { "label": "Agents", "href": "/agents" }
+      ]
+    },
+    { "id": "about", "label": "About", "href": "/about" },
+    { "id": "contact", "label": "Contact", "href": "/contact" }
+  ]
+}

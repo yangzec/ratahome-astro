@@ -14,18 +14,18 @@ const { home, common } = getContent(locale);
 const { warranty } = home;
 ---
 
-<section class="container-site py-20">
+<section class="container-site section-y">
   <SectionHeader title={warranty.title} description={warranty.description} eyebrow={warranty.eyebrow} />
-  <div class="grid md:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-3 gap-5 md:gap-6">
     {warranty.cases.map((case_) => (
-      <div class="p-8 rounded-[20px] bg-izza-cream">
+      <div class="card-pad rounded-[20px] bg-izza-cream">
         <p class="eyebrow text-xs mb-4">{case_.question}</p>
         <h3 class="text-xl font-semibold text-izza-ink mb-3">{case_.title}</h3>
         <p class="text-sm text-izza-gray-muted leading-relaxed">{case_.description}</p>
       </div>
     ))}
   </div>
-  <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-8 rounded-[20px] border border-izza-border/50">
+  <div class="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 card-pad rounded-[20px] border border-izza-border/50">
     <p class="text-izza-gray-text max-w-xl">{warranty.commitment}</p>
     <Button href={localizedPath('/warranty-policy', locale)} variant="secondary" class="shrink-0">{common.buttons.readWarranty}</Button>
   </div>

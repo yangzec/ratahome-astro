@@ -10,11 +10,11 @@ interface Props {
 const { title, description, eyebrow, dark = false, class: className = '' } = Astro.props;
 ---
 
-<div class={`max-w-2xl mb-12 ${className}`}>
-  {eyebrow && <p class={`eyebrow mb-3 ${dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
-  <h2 class={`section-title mb-4 ${dark ? 'text-white' : ''}`}>{title}</h2>
+<div class={`max-w-2xl section-header ${className}`}>
+  {eyebrow && <p class={`eyebrow mb-2 ${dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
+  <h2 class={`section-title mb-3 ${dark ? 'text-white' : ''}`}>{title}</h2>
   {description && (
-    <p class={`text-lg leading-relaxed ${dark ? 'text-white/70' : 'text-izza-gray-text'}`}>
+    <p class={`text-base sm:text-lg leading-relaxed ${dark ? 'text-white/70' : 'text-izza-gray-text'}`}>
       {description}
     </p>
   )}

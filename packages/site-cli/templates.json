@@ -1,6 +1,12 @@
 {
   "b2b-manufacturing": {
+    "skeleton": "b2b-manufacturing",
     "source": "ratahome-furniture",
-    "description": "B2B manufacturing — Hero, capabilities grid, process, case studies"
+    "description": "Clean manufacturing skeleton. create copies packages/site-cli/skeletons/b2b-manufacturing; live site is leak-check only."
+  },
+  "b2b-textile": {
+    "skeleton": "b2b-textile",
+    "source": "textile-fabric",
+    "description": "Clean textile skeleton. create copies packages/site-cli/skeletons/b2b-textile; live site is leak-check only."
   }
 }

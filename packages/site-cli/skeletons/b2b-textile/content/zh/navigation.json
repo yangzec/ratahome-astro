@@ -1,0 +1,14 @@
+{
+  "main": [
+    {
+      "id": "about",
+      "label": "",
+      "href": "/about"
+    },
+    {
+      "id": "contact",
+      "label": "",
+      "href": "/contact"
+    }
+  ]
+}

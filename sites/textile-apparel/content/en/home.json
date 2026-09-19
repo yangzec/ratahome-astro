@@ -1,0 +1,109 @@
+{
+  "hero": {
+    "eyebrow": "Knit & woven cut-and-sew · Guangzhou / Shaoxing",
+    "title": "Knit and woven garment manufacturing for brands, retail and agency programs.",
+    "description": "OEM and ODM cut-and-sew in Shaoxing and Guangzhou — grading, fit samples and export bulk by style and color.",
+    "image": "/images/hero.jpg",
+    "imageAlt": "Apparel sample studio with hanging garments",
+    "ctaHref": "#sample"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "BSCI pack on request", "description": "Factory audit file with the quote" },
+    { "icon": "/icons/box-seam.svg", "title": "PP before cutting", "description": "Markers stay locked until you sign" },
+    { "icon": "/icons/shield-check.svg", "title": "AQL at the door", "description": "Measure, then count cartons" },
+    { "icon": "/icons/clock.svg", "title": "Quote in 48 hours", "description": "Factory, MOQ and a sample date" }
+  ],
+  "metrics": [
+    { "value": "100 pcs", "label": "Typical MOQ per style / color" },
+    { "value": "7 days", "label": "First sample, if the fabric is in hand" },
+    { "value": "XS–4XL", "label": "Grading we run from a base size" },
+    { "value": "PP", "label": "Signed before the cutting ticket" }
+  ],
+  "audiences": {
+    "title": "Programs for every buyer in the chain.",
+    "description": "Pick the path that matches how you buy — same technical standards on every PO.",
+    "items": [
+      { "title": "Brands", "description": "Season programs with the same fit block on every repeat order.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
+      { "title": "Retailers", "description": "Test new styles at a quoted MOQ per style and color.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
+      { "title": "Agents", "description": "One merchandiser who dates the sample and bulk slot in writing.", "href": "/agents", "image": "/images/audiences/traders.jpg" },
+      { "title": "Product developers", "description": "Open a quote from a tech pack or a reference garment.", "href": "/sampling", "image": "/images/audiences/developers.jpg" }
+    ]
+  },
+  "capabilities": {
+    "title": "Cut-and-sew capabilities buyers ask about first.",
+    "description": "Knit lines for jersey and fleece. Woven lines for shirts, outerwear and uniforms.",
+    "items": [
+      { "title": "Style sheet", "description": "Seam type, trim card and fabric lot written before the marker.", "image": "/images/capabilities/composition.jpg" },
+      { "title": "Grading", "description": "Base size to XS–4XL. Fit sample in the base; size set if you ask.", "image": "/images/capabilities/color.jpg" },
+      { "title": "Proto / fit / PP", "description": "Development samples through fit approval to a signed PP gate.", "image": "/images/capabilities/moq.jpg" },
+      { "title": "Export packing", "description": "Polybag, carton mark, packing list counted at AQL.", "image": "/images/capabilities/export.jpg" }
+    ]
+  },
+  "process": {
+    "title": "From your file to a cutting ticket.",
+    "description": "Each milestone is dated — fit approval and a signed PP before bulk sewing starts.",
+    "image": "/images/process.jpg",
+    "imageAlt": "Garment size-spec quality inspection",
+    "steps": [
+      { "step": "01", "title": "Send the file", "description": "Tech pack, or a reference garment with fabric, size range and quantity." },
+      { "step": "02", "title": "Get the quote", "description": "Factory, MOQ per style/color, sample date — within 48 hours." },
+      { "step": "03", "title": "Approve fit", "description": "Comments on the sample. We do not cut on a chat message." },
+      { "step": "04", "title": "Sign PP", "description": "Markers lock. Sample fee comes off the bulk invoice." },
+      { "step": "05", "title": "Sew and count", "description": "Inline measurements by color and size. AQL, then the truck." }
+    ]
+  },
+  "testimonials": [
+    { "quote": "Repeat orders landed on the same block — we did not regrade after the first season.", "author": "Northline Retail · Germany" },
+    { "quote": "Sample and bulk dates arrived in one email. Our buyer could show the client a real slot.", "author": "Harbor Agency · USA" }
+  ],
+  "warranty": {
+    "eyebrow": "If bulk is wrong",
+    "title": "When a size or stitch misses the signed sample.",
+    "description": "The signed fit sample and the PO are the reference — not a verbal OK.",
+    "commitment": "Measurement claims are checked against the signed size spec and the AQL sheet in the carton.",
+    "cases": [
+      { "question": "If bulk fit drifts from the signed sample", "title": "Hold the PO or rework against the signed block.", "description": "Cutting starts after PP. Out-of-tolerance sizes are pulled before packing." },
+      { "question": "If shrinkage exceeds the spec", "title": "Wash test before PP.", "description": "Wash results sit on the style sheet. Failed lots stay off the cutting ticket." },
+      { "question": "If a carton is short", "title": "The packing list is the count.", "description": "Every carton is counted at final audit." }
+    ]
+  },
+  "rooms": {
+    "title": "Browse by garment category.",
+    "basePath": "/styles",
+    "items": [
+      { "label": "Knit tops", "slug": "knit-tops" },
+      { "label": "Woven shirts", "slug": "woven-shirts" },
+      { "label": "Outerwear", "slug": "outerwear" },
+      { "label": "Activewear", "slug": "activewear" },
+      { "label": "Uniforms", "slug": "uniforms" },
+      { "label": "Private label", "slug": "private-label" }
+    ]
+  },
+  "projects": {
+    "title": "Recent POs.",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "Knit lines and woven lines.",
+    "description": "Shaoxing for jersey and fleece. Guangzhou for shirts, jackets and uniforms.",
+    "items": []
+  },
+  "cta": {
+    "anchorId": "sample",
+    "title": "Send the tech pack or photograph the reference garment.",
+    "description": "We reply within 48 hours with MOQ per style/color and a sample date. First sample is about 7 days if the fabric is in hand.",
+    "formTitle": "Request a sample quote",
+    "formDescription": "Attach a tech pack, a size chart, or a photo of the garment. Write quantity and ship-to country.",
+    "steps": [
+      "Send the pack or the garment photo.",
+      "Get MOQ, sample date and whether the sample fee is deductible.",
+      "Sign the PP. Then we cut."
+    ]
+  },
+  "footerFeatures": [
+    { "title": "100 pcs / style / color", "description": "Typical starting MOQ" },
+    { "title": "7-day first sample", "description": "When fabric is in hand" },
+    { "title": "Sample fee off bulk", "description": "On the first PO" },
+    { "title": "PP then cutting", "description": "No ticket without a signature" }
+  ]
+}

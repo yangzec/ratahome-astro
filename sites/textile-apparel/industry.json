@@ -1,0 +1,56 @@
+{
+  "visitors": [
+    "brands",
+    "retailers",
+    "agents",
+    "product developers"
+  ],
+  "deliverables": [
+    "tech pack",
+    "size spec",
+    "fit sample",
+    "PP sample",
+    "bulk sewing",
+    "AQL report",
+    "export packing"
+  ],
+  "catalogPrefix": "styles",
+  "catalog": [
+    "knit-tops",
+    "woven-shirts",
+    "outerwear",
+    "activewear",
+    "uniforms",
+    "private-label"
+  ],
+  "pages": [
+    "brands",
+    "retailers",
+    "agents",
+    "sampling",
+    "size-specs",
+    "certifications",
+    "quality-control",
+    "how-it-works",
+    "faq",
+    "blog"
+  ],
+  "pains": [
+    "first bulk measurements miss the signed fit sample",
+    "MOQ is too high to test one new style this season",
+    "no tech pack and the factory will not start",
+    "deposit paid and the factory goes quiet on the date"
+  ],
+  "phrases": [
+    "MOQ per style / color",
+    "7-day sample",
+    "sample fee deductible from bulk",
+    "tech pack or a reference garment",
+    "PP signed before cutting"
+  ],
+  "references": [
+    "https://www.laike66.com/zh — 200-piece MOQ, about 7 days to sample, produce after fit/fabric/construction sign-off",
+    "https://lesstellclothing.com/pages/oem-odm-clothing-manufacturer — MOQ 50/style, sample fee deductible, tech pack or reference",
+    "https://alambystyle.com/zh-Hans/odm-clothing-manufacturer-2 — 100 pcs per style/color, PP sample in about two weeks"
+  ]
+}

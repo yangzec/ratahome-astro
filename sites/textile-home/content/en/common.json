@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "Textile Home Co.",
+    "title": "Hotel bedding and bath terry",
+    "description": "Hotel bedding, bath terry and curtains for hospitality, retail and property programs — specified by room grade, GSM and mattress height.",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "Mon–Fri, 10:00–19:00 (UTC+8)",
+    "location": "Shaoxing & Guangzhou, China",
+    "email": "hometextile@example.com",
+    "tagline": "Hotel bedding, bath terry and curtains for property and retail programs.",
+    "ctaAnchor": "sample"
+  },
+  "buttons": {
+    "startProject": "Request a sample set",
+    "uploadFloorPlan": "Send room list",
+    "factoryTour": "Factory Tour",
+    "sendFloorPlan": "Submit sample request",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp Us",
+    "viewAll": "View all",
+    "seeJourney": "See the sample-set path",
+    "readWarranty": "View certifications",
+    "exploreProjects": "See recent POs",
+    "requestQuote": "Quote this SKU",
+    "discussJoinery": "Send mattress height"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "projectType": "What you need priced",
+    "message": "Message",
+    "projectDetails": "Product, size, GSM",
+    "floorPlan": "Room list, mattress photo or embroidery artwork",
+    "privacy": "Private · Reply within one business day",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "Room list, mattress height, GSM, embroidery, quantity, ship-to country...",
+    "detailsPlaceholder": "Product, size, GSM, color, embroidery, quantity, ship date...",
+    "projectTypes": {
+      "residence": "Hotel / property set",
+      "design": "Retail collection",
+      "development": "Bulk replenishment",
+      "hospitality": "Embroidery proof",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "Hotel sheeting and terry in Nantong and Guangzhou.",
+    "copyright": "All rights reserved."
+  }
+}

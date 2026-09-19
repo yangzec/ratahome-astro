@@ -2,6 +2,7 @@ import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { getSiteDir, getWorkspaceRoot } from './paths.mjs';
 import { resolveTemplate } from './templates.mjs';
+import { writeSkeletonContent } from './skeleton.mjs';
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.astro', '.wrangler']);
 
@@ -20,7 +21,7 @@ function replaceInFile(path, replacements) {
   writeFileSync(path, content);
 }
 
-export function createSite({ slug, templateId, siteId, name, root = getWorkspaceRoot() }) {
+export function createSite({ slug, templateId, siteId, name, brief, root = getWorkspaceRoot() }) {
   if (!/^[a-z][a-z0-9-]*$/.test(slug)) {
     throw new Error('Slug must be kebab-case (lowercase letters, numbers, hyphens)');
   }
@@ -34,32 +35,56 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
   const id = siteId ?? slug;
   const displayName = name ?? titleFromSlug(slug);
 
-  cpSync(template.sourceDir, targetDir, {
+  cpSync(template.skeletonDir, targetDir, {
     recursive: true,
     filter: (src) => {
       const base = src.split('/').pop() ?? '';
-      return !SKIP_DIRS.has(base);
+      if (SKIP_DIRS.has(base)) return false;
+      return true;
     },
   });
 
-  const oldId = readSiteIdFromConfig(template.sourceDir);
+  const oldId = readSiteIdFromConfig(template.skeletonDir);
 
   replaceInFile(join(targetDir, 'site.config.ts'), [
     [`siteId: '${oldId}'`, `siteId: '${id}'`],
-    [`name: '${readSiteName(template.sourceDir)}'`, `name: '${displayName}'`],
-    [`template: '${readSiteTemplate(template.sourceDir)}'`, `template: '${templateId}'`],
+    [`name: '${readSiteName(template.skeletonDir)}'`, `name: '${displayName}'`],
+    [`template: '${readSiteTemplate(template.skeletonDir)}'`, `template: '${templateId}'`],
   ]);
 
   replaceInFile(join(targetDir, 'wrangler.jsonc'), [
-    [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
+    [`"name": "${oldId}"`, `"name": "${slug}"`],
     [`"SITE_ID": "${oldId}"`, `"SITE_ID": "${id}"`],
   ]);
 
   replaceInFile(join(targetDir, 'package.json'), [
-    [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
+    [`"name": "${oldId}"`, `"name": "${slug}"`],
   ]);
 
-  return { slug, siteId: id, name: displayName, templateId, path: targetDir };
+  const industry = writeSkeletonContent({
+    sourceDir: template.skeletonDir,
+    targetDir,
+    displayName,
+    brief,
+  });
+  retargetLogo(targetDir);
+
+  return { slug, siteId: id, name: displayName, templateId, path: targetDir, skeleton: true, industry };
+}
+
+function retargetLogo(targetDir) {
+  for (const file of [
+    'src/components/layout/Header.astro',
+    'src/components/layout/Footer.astro',
+    'src/layouts/BaseLayout.astro',
+  ]) {
+    const path = join(targetDir, file);
+    if (!existsSync(path)) continue;
+    replaceInFile(path, [
+      ['/images/logo.png', '/images/logo.svg'],
+      ['type="image/png"', 'type="image/svg+xml"'],
+    ]);
+  }
 }
 
 function readSiteIdFromConfig(siteDir) {

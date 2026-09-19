@@ -1,0 +1,34 @@
+{
+  "about": {
+    "title": "",
+    "eyebrow": "",
+    "heroTitle": "",
+    "heroDescription": "",
+    "workflowTitle": "",
+    "workflowDescription": "",
+    "closingTitle": "",
+    "closingDescription": ""
+  },
+  "contact": {
+    "title": "",
+    "heroTitle": "",
+    "heroDescription": "",
+    "getInTouch": ""
+  },
+  "collections": {
+    "title": "",
+    "heroTitle": "",
+    "heroDescription": "",
+    "packagesTitle": "",
+    "benefitsTitle": "",
+    "benefitsDescription": "",
+    "stylesTitle": "",
+    "stylesDescription": ""
+  },
+  "slugs": {},
+  "workflow": [],
+  "aboutAudiences": [],
+  "packageBenefits": [],
+  "collectionBenefits": [],
+  "collectionPackages": []
+}

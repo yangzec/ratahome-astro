@@ -1,0 +1,32 @@
+{
+	"$schema": "../../node_modules/wrangler/config-schema.json",
+	"name": "textile-home",
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"compatibility_date": "2026-09-15",
+	"compatibility_flags": ["global_fetch_strictly_public"],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "trade-platform",
+			"database_id": "58956d48-3510-434d-93f1-5956aa0c47b5",
+			"migrations_dir": "../../migrations"
+		}
+	],
+	"r2_buckets": [
+		{
+			"binding": "R2",
+			"bucket_name": "trade-platform-assets"
+		}
+	],
+	"vars": {
+		"SITE_ID": "textile-home",
+		"R2_PUBLIC_URL": "https://assets.ratahome.com"
+	}
+}

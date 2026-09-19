@@ -10,10 +10,10 @@ const { locale } = Astro.props;
 const { home } = getContent(locale);
 ---
 
-<section class="bg-izza-olive-dark py-20">
-  <div class="container-site grid md:grid-cols-2 gap-8">
+<section class="bg-izza-olive-dark section-y">
+  <div class="container-site grid md:grid-cols-2 gap-6 md:gap-8">
     {home.testimonials.map((t) => (
-      <blockquote class="p-8 rounded-[20px] bg-white/5 border border-white/10">
+      <blockquote class="card-pad rounded-[20px] bg-white/5 border border-white/10">
         <p class="text-white text-lg leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
         <cite class="text-white/60 text-sm not-italic">{t.author}</cite>
       </blockquote>

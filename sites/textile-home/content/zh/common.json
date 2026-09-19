@@ -1,0 +1,52 @@
+{
+  "site": {
+    "name": "家纺出口",
+    "title": "酒店床品和卫浴毛圈",
+    "description": "酒店床品、卫浴毛圈和窗帘——服务酒店、零售和地产项目，按房级、克重和床垫高度定规格。",
+    "whatsapp": "+86 151 9256 9580",
+    "whatsappUrl": "https://wa.me/8615192569580",
+    "hours": "周一至周五 10:00–19:00（UTC+8）",
+    "location": "中国·绍兴 / 广州",
+    "email": "hometextile@example.com",
+    "tagline": "为酒店、零售和地产项目提供床品、卫浴毛圈和窗帘。",
+    "ctaAnchor": "sample"
+  },
+  "buttons": {
+    "startProject": "要套装样",
+    "uploadFloorPlan": "发房型清单",
+    "factoryTour": "参观工厂",
+    "sendFloorPlan": "提交打样申请",
+    "sendMessage": "发送消息",
+    "whatsappUs": "WhatsApp 联系",
+    "viewAll": "查看全部",
+    "seeJourney": "看套装打样",
+    "readWarranty": "查看认证",
+    "exploreProjects": "看近期订单",
+    "requestQuote": "询价该货号",
+    "discussJoinery": "发床垫高度"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "projectType": "这次要报什么",
+    "message": "留言",
+    "projectDetails": "产品、尺寸、克重",
+    "floorPlan": "房型清单、床垫照片或绣花稿",
+    "privacy": "信息保密 · 一个工作日内回复",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "房型清单、床垫高度、克重、绣花、数量、目的港国家……",
+    "detailsPlaceholder": "产品、尺寸、克重、颜色、绣花、数量、船期……",
+    "projectTypes": {
+      "residence": "酒店 / 地产套装",
+      "design": "零售系列",
+      "development": "大货补货",
+      "hospitality": "绣花确认样",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "南通、广州酒店床单和毛圈车间。",
+    "copyright": "版权所有。"
+  }
+}

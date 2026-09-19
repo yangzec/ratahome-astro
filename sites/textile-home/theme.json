@@ -1,0 +1,27 @@
+{
+  "colors": {
+    "accent": "28 100 120",
+    "ink": "43 44 39",
+    "charcoal": "26 26 26",
+    "grayText": "69 69 69",
+    "grayMuted": "125 125 125",
+    "cream": "252 247 243",
+    "creamDeep": "249 241 229",
+    "stone": "194 195 189",
+    "border": "221 221 221",
+    "olive": "79 83 69",
+    "oliveDark": "30 32 21",
+    "chrome": "27 28 23"
+  },
+  "fonts": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "label": "'Poppins', -apple-system, sans-serif",
+    "display": "'Cinzel', Georgia, serif"
+  },
+  "radius": {
+    "hero": "25px",
+    "image": "20px",
+    "step": "17px",
+    "pill": "100px"
+  }
+}

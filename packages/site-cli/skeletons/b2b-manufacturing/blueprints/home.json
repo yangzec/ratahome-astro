@@ -1,0 +1,16 @@
+{
+  "sections": [
+    "hero-fullbleed",
+    "assurance-bar",
+    "metrics-bar",
+    "audience-cards",
+    "capabilities-grid",
+    "process-timeline",
+    "testimonials",
+    "warranty-cases",
+    "rooms-grid",
+    "projects-showcase",
+    "ecosystem",
+    "contact-cta"
+  ]
+}

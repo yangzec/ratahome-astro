@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '@trade/core/i18n/config';
 import { getContent } from '@site/content';
+import FeatureIcon from '../ui/FeatureIcon.astro';
 
 interface Props {
   locale: Locale;
@@ -10,14 +11,14 @@ const { locale } = Astro.props;
 const { home } = getContent(locale);
 ---
 
-<section class="bg-izza-cream border-y border-izza-border/30">
-  <div class="container-site py-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<section class="assurance-bar bg-izza-cream border-y border-izza-border/30">
+  <div class="container-site assurance-bar__inner grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-4">
     {home.assurances.map((item) => (
-      <div class="flex gap-4 items-start">
-        <img src={item.icon} alt="" class="w-6 h-6 mt-1 opacity-70" />
-        <div>
-          <strong class="block text-izza-ink font-semibold text-sm mb-1">{item.title}</strong>
-          <span class="text-sm text-izza-gray-muted">{item.description}</span>
+      <div class="flex gap-3 items-start min-w-0">
+        <FeatureIcon src={item.icon} class="mt-0.5 shrink-0" />
+        <div class="min-w-0 flex-1">
+          <strong class="assurance-item__title block">{item.title}</strong>
+          <span class="assurance-item__desc block">{item.description}</span>
         </div>
       </div>
     ))}

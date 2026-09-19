@@ -24,6 +24,10 @@ export function getSiteDir(slug, root = getWorkspaceRoot()) {
   return join(getSitesDir(root), slug);
 }
 
+export function getSkeletonDir(templateId, root = getWorkspaceRoot()) {
+  return join(root, 'packages/site-cli/skeletons', templateId);
+}
+
 export function assertSiteExists(slug, root = getWorkspaceRoot()) {
   const dir = getSiteDir(slug, root);
   if (!existsSync(dir)) {
