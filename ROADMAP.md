@@ -374,7 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
-| 2026-09-19 13:52 | 纺织三站 audiences / capabilities 模板腔 | 对照 FIX_BRIEF 核对 6 个 home.json；JSON parse；残留句 grep 为空；OEKO-TEX / MOQ / PP / lab dip / GSM / BSCI 仍在 | 通过 |
+| 2026-09-19 13:52 | 纺织三站 audiences / capabilities 模板腔 | 对照 FIX_BRIEF 核对 6 个 home.json；JSON parse；残留句 grep 为空；OEKO-TEX / MOQ / PP / lab dip / GSM / BSCI 仍在；`site-cli validate` 三站通过 | 通过 |
 | 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
