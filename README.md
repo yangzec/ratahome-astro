@@ -41,11 +41,11 @@ pnpm install
 pnpm dev          # http://localhost:43123
 pnpm build
 pnpm build:all          # all sites/*
-pnpm site:validate:all  # validate all sites
+pnpm site:validate:all  # validate all sites (Layer A always; Layer B if TYPESAFE_API_KEY)
 pnpm db:migrate # local shared D1
 pnpm cf:deploy  # deploy ratahome-furniture
 pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"  # structure only; write content after
-pnpm site-cli validate <slug>   # errors on empty / copied source copy and dead links
+pnpm site-cli validate <slug>   # empty / source / dead-link errors + copy Layer A; Layer B if TYPESAFE_API_KEY
 pnpm site-cli:test
 pnpm site-cli deploy <slug>     # runs validate first
 ```
@@ -66,6 +66,7 @@ pnpm site-cli deploy <slug>     # runs validate first
 ## Docs
 
 - **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
+- **首页文案标准 / 护栏**：[`docs/COPY_SECTION_STANDARD.md`](docs/COPY_SECTION_STANDARD.md)
 - **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
 - Agent 协作规范：`AGENTS.md`
 - 进度与计划：`ROADMAP.md`

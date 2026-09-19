@@ -1,0 +1,38 @@
+name: Copy validate
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    name: site-cli copy validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.12.1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: site-cli unit tests
+        run: pnpm site-cli:test
+
+      - name: Validate changed sites
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          COPY_VALIDATE_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          COPY_VALIDATE_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node packages/site-cli/src/lib/ci-validate.mjs

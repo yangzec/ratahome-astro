@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -18,6 +18,16 @@ export function getWorkspaceRoot() {
 
 export function getSitesDir(root = getWorkspaceRoot()) {
   return join(root, 'sites');
+}
+
+/** Site directory names under sites/, excluding dotfiles. */
+export function listSiteSlugs(root = getWorkspaceRoot()) {
+  const dir = getSitesDir(root);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith('.'))
+    .map((entry) => entry.name)
+    .sort();
 }
 
 export function getSiteDir(slug, root = getWorkspaceRoot()) {
