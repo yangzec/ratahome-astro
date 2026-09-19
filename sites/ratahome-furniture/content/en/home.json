@@ -19,8 +19,8 @@
     { "value": "100%", "label": "Inspected before shipment" }
   ],
   "audiences": {
-    "title": "Solutions for every project.",
-    "description": "One platform, adapted to the people making decisions — from a single private home to a repeatable development programme.",
+    "title": "Homeowners, designers, builders and hospitality.",
+    "description": "We offer a different plan for each.",
     "items": [
       { "title": "Homeowners", "description": "A complete home, designed and furnished as one.", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
       { "title": "Interior Designers", "description": "Sourcing and custom manufacturing support.", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
@@ -39,7 +39,7 @@
     ]
   },
   "process": {
-    "title": "One journey, from floor plan to finished home.",
+    "title": "From floor plan to finished home.",
     "description": "Each decision is documented before production begins, giving the project a clear path and one point of communication.",
     "image": "/images/home-process/completed-residence-v2.jpg",
     "imageAlt": "Completed residence interior",
@@ -97,8 +97,8 @@
     ]
   },
   "cta": {
-    "title": "Create your complete home with one trusted partner.",
-    "description": "Share your floor plan and project requirements — you will receive a structured next step and an indicative package scope from the Ratahome team.",
+    "title": "Send a floor plan or project requirements.",
+    "description": "List rooms, timing and must-haves — we reply with the next step and an indicative package scope.",
     "formTitle": "Send your floor plan",
     "formDescription": "Tell us about your rooms, preferred style, timing and budget. A floor plan or reference image is helpful, but not required.",
     "steps": [

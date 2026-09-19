@@ -148,7 +148,7 @@ trade-site-platform/
 |---|------|----------|
 | 2.1 | 定义 `b2b-textile` JSON Schema | content / routes / blueprint / theme 有 schema；`templates.json` 注册模板 |
 | 2.2 | `site-cli create` 生成 3 个骨架站 | CLI 已就绪；create 写干净骨架 + `industry.json`；可用 `--brief` 拼接 |
-| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站全等 / 对照式否定结构 / 死链均为 error |
+| 2.3 | `site-cli validate` | ✅ 必填文件、JSON、Blueprint、SITE_ID；空文案 / 源站全等 / 对照式否定结构 / 死链均为 error；另含 Copy Section Standard Layer A（硬拦）与可选 Layer B（`TYPESAFE_API_KEY`） |
 | 2.4 | 完成 3 站 content + 素材 | 首页、导航、关于、联系可浏览（en + zh） |
 | 2.5 | 各站独立 wrangler 部署 | 3 个独立域名；**共享同一 D1**（`site_id` 隔离数据）；R2 用 `{site_id}/` 前缀 |
 | 2.6 | 记录复用率 | 列出复用 Section vs 新增 Section（目标新增 < 3 个） |
@@ -273,6 +273,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 ### 4.3 CI / 运维
 
+- GitHub Actions：PR 跑 `copy-validate`（变更站或共享包则 `site-cli validate`；`TYPESAFE_API_KEY` 有则 Layer A+B）
 - GitHub Actions matrix：仅变更的 `sites/*` 触发对应部署
 - D1：**全平台共享一个实例**，按 `site_id` 隔离；各站 `wrangler.jsonc` 绑定同一 `database_id`
 - R2：共享 bucket + `{site_id}/` 路径前缀（或按站独立 bucket，待实现时统一）
@@ -347,6 +348,10 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 20:43 | 家具 audiences 中文改为「业主、设计师、开发商或酒店，我们提供不同的方案」语感；英文改为角色列举 + 各给不同方案 |
+| 2026-09-19 16:15 | 部署面料与家具站：`pnpm site-cli deploy textile-fabric` / `ratahome-furniture` → `*.yangzec.workers.dev`，首页 en/zh 已带新 warranty / CTA / process 文案 |
+| 2026-09-19 15:29 | 清掉 Jev 重跑三项 Layer B block：面料 warranty 改为批差 / 克重 / 短码 / 破损问答；家具 CTA 改为要户型图；家具 process 角色与纺织询盘出货拆分 |
+| 2026-09-19 14:39 | `site-cli validate` 接入 Copy Section Standard：Layer A 硬拦 + 可选 TypeSafe Jev Layer B；PR workflow `.github/workflows/copy-validate.yml`；标准入 `docs/COPY_SECTION_STANDARD.md` |
 | 2026-09-19 04:05 | 成衣 / 家纺按区块职责二轮重写并部署：hero 定位、audiences 分流、客诉进 warranty、RFQ 留 cta |
 | 2026-09-19 03:55 | 修正文案方向：`write-copy.md` 增加区块职责表、痛点分区、四行业各块信息；禁止 hero=RFQ、audiences=客诉 |
 | 2026-09-19 03:28 | 文案打法改为三层简报 + `write-copy.md`；`create` 不再说 splice，缺痛点 / 说法会警告 |
@@ -363,11 +368,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 15:43 | 阶段 2 三站生产部署：`textile-fabric` / `textile-apparel` / `textile-home` → `*.yangzec.workers.dev` |
 | 2026-09-18 15:26 | 阶段 2 启动：`b2b-textile` 模板 + textile-fabric/apparel/home 三站骨架；`build:all` / `site:validate:all` 通过 |
 | 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |
-| 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
-| 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
-| 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
-| 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
-| 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 
 ---
 
@@ -375,6 +375,10 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 20:43 | 家具 audiences 语感改写上线 | `pnpm site-cli deploy ratahome-furniture`；`/zh/` HTTP 200，标题为「业主、设计师、开发商或酒店」，副题「我们提供不同的方案」 | 通过 |
+| 2026-09-19 16:15 | 面料 / 家具生产首页文案 | curl 四页 HTTP 200；HTML 含新 warranty / CTA / process / audiences；浏览器核对 en/zh 对应区块 | 通过 |
+| 2026-09-19 15:29 | 面料 warranty + 家具 CTA / process Layer B | `pnpm site-cli:test` 33 通过；`pnpm site-cli validate textile-fabric` 与 `ratahome-furniture`（有 `TYPESAFE_API_KEY`）均退出 0。原三项 block 已清：fabric `warranty-cases` pass；furniture `process-timeline` pass、`contact-cta` review。家具其余为 review，无新 block | 通过 |
+| 2026-09-19 14:39 | Copy 护栏接入 validate | `pnpm site-cli:test` 29 通过；`pnpm site-cli validate textile-fabric` 与 `validate --all` 四站 Layer A 通过，无 key 时警告跳过 Layer B | 通过 |
 | 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
@@ -391,7 +395,3 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 15:26 | 四站 validate | `pnpm site:validate:all` | 通过 |
 | 2026-09-18 07:34 | 生产部署 | `wrangler deploy` → `ratahome-furniture.yangzec.workers.dev` | 通过 |
 | 2026-09-18 07:34 | 生产联系表单 | `POST /api/contact` + D1 远程查询 `site_id=ratahome-furniture` | 通过 |
-| 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |
-| 2026-09-18 07:37 | 生产静态图片 | curl 检查 logo/hero/dining-room magic bytes | 通过（二进制 PNG/WebP/JPEG） |
-| 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
-| 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |

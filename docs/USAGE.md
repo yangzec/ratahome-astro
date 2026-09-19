@@ -103,7 +103,7 @@ sites/ratahome-furniture/content/
 
 改完后保存，开发服务器会自动热更新；生产需重新 `pnpm build`。
 
-对外文案走 `AGENTS.md`「对外文案分通道」和 `packages/site-cli/prompts/write-copy.md`。`industry.json` 要有对象、痛点、说法三层；竞品只作笔记。不要用「不要写成某行业」当指令。`validate` 拦空文案、源站全等和对照式否定结构。
+对外文案走 `AGENTS.md`「对外文案分通道」和 `packages/site-cli/prompts/write-copy.md`。`industry.json` 要有对象、痛点、说法三层；竞品只作笔记。不要用「不要写成某行业」当指令。`validate` 拦空文案、源站全等、对照式否定结构，以及首页文案护栏（见 §13 与 `docs/COPY_SECTION_STANDARD.md` ）。
 
 ---
 
@@ -234,8 +234,11 @@ pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel"
 # 或写入该站简报（对象 + 痛点 + 说法）：
 # pnpm site-cli create textile-apparel --from b2b-textile --name "Textile Apparel" --brief ./apparel.brief.json
 
-# 校验：必填文案、源站字段全等、对照式否定结构、导航/品类死链均为 error
+# 校验：必填文案、源站字段全等、对照式否定结构、导航/品类死链、Copy Layer A；
+# 有 TYPESAFE_API_KEY 时再跑 Layer B（Jev）
 pnpm site-cli validate textile-fabric
+pnpm site-cli validate --all
+# 或：pnpm site:validate:all
 
 # 本地开发
 pnpm --filter textile-fabric dev
@@ -246,6 +249,24 @@ pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
 创建后先填 `sites/<slug>/industry.json` 三层：对象（访客、交付物、`catalogPrefix`、品类、页面）、痛点（`pains`）、说法（`phrases`、`references`）。再按 `packages/site-cli/prompts/write-copy.md` 写 `content/{en,zh}/`。对象齐而痛点 / 说法空时，`create` 会警告，先补简报再写。不要加「不要写成某行业」。然后 `validate`。可用模板见 `pnpm site-cli templates`。`deploy` 会先跑 `validate`，未过不能发布。
+
+### 文案护栏（Copy Section Standard）
+
+标准正文：`docs/COPY_SECTION_STANDARD.md`。`validate` 始终跑 **Layer A**（无 API）：
+
+- `content/en/**/*.json` 字符串含 CJK → **block**
+- 内部 / 占位词（TODO、FIXME、TBD、待确认、内部备注、复刻站、`site_id`、老杨、AGENTS.md、NOT SENT、lorem ipsum）→ **block**
+- Blueprint section id 不在 `SECTION_MAP`，或对应 `home.json` 键缺失 → **block**
+
+**Layer B**（TypeSafe Jev System One）仅在设置了 `TYPESAFE_API_KEY` 时运行，按首页区块问 `section_mismatch` / `generic_boilerplate` / `over_explaining` / `industry_fit` / `severity`。不把 `internal_voice` 当主问题；OEKO-TEX、MOQ、PP、lab dip、GSM、BSCI 等行业词不自动失败。
+
+| 结果 | 含义 | 退出码 |
+|------|------|--------|
+| `block` | Layer A 命中，或 Layer B 任一 hazard ≥ 0.70（severity ≥ 2.0 也可把 review 提升为 block） | 非 0，validate 失败 |
+| `review` | Layer B 仅有 0.35–0.70 的 hazard | 打印 warnings，退出 0，不拦合并 |
+| `pass` | 无上述问题 | 0 |
+
+本地未设 key：只跑 Layer A，并警告 Layer B 已跳过。CI 见 `.github/workflows/copy-validate.yml`，使用仓库 secret `TYPESAFE_API_KEY`（有则 A+B，无则 A + 警告）。变更 `sites/<slug>/` 时只校验对应站；改 `packages/site-cli` / `packages/sections` / `packages/core` 或本标准时校验全部 `sites/`。
 
 `--brief` 写入 `industry.json`；对象层套到 `slugs.ts` 与品类路由前缀。痛点和说法不进路由，只给写文案用。
 
@@ -268,3 +289,4 @@ pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 - 架构与进度：`ROADMAP.md`
 - Agent 协作规范：`AGENTS.md`
 - 项目概览：`README.md`
+- 首页文案标准：`docs/COPY_SECTION_STANDARD.md`

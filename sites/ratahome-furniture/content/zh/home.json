@@ -19,8 +19,8 @@
     { "value": "100%", "label": "出货前检验" }
   ],
   "audiences": {
-    "title": "为每个项目提供解决方案。",
-    "description": "一个平台，适配不同决策者——从单栋私宅到可复制的开发项目。",
+    "title": "业主、设计师、开发商或酒店。",
+    "description": "我们提供不同的方案。",
     "items": [
       { "title": "业主", "description": "一个完整的家，一体化设计与配置。", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
       { "title": "室内设计师", "description": "采购与定制制造支持。", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
@@ -39,7 +39,7 @@
     ]
   },
   "process": {
-    "title": "一条路径，从平面图到完工之家。",
+    "title": "从户型图到完工交付。",
     "description": "每项决策在生产前均已记录，项目有清晰路径和唯一沟通窗口。",
     "image": "/images/home-process/completed-residence-v2.jpg",
     "imageAlt": "完工住宅室内",
@@ -97,8 +97,8 @@
     ]
   },
   "cta": {
-    "title": "与一个可信伙伴共创完整之家。",
-    "description": "分享平面图与项目需求——您将收到结构化下一步与套餐范围概算。",
+    "title": "发送户型图或项目需求。",
+    "description": "列出房间、时间和必选项——我们回复下一步和套餐范围概算。",
     "formTitle": "发送平面图",
     "formDescription": "告诉我们房间、偏好风格、时间与预算。平面图或参考图有帮助，但非必需。",
     "steps": [

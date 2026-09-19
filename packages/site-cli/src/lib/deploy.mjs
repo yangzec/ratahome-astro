@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
 import { validateSite } from './validate.mjs';
 
-export function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } = {}) {
+export async function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } = {}) {
   const siteDir = assertSiteExists(slug, root);
   const pkg = JSON.parse(readFileSync(join(siteDir, 'package.json'), 'utf8'));
   const packageName = pkg.name;
@@ -13,7 +13,7 @@ export function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } =
     throw new Error(`sites/${slug}/package.json has no name field`);
   }
 
-  const validation = validateSite(slug, root);
+  const validation = await validateSite(slug, root);
   if (!validation.ok) {
     throw new Error(
       `validate failed for sites/${slug}:\n${validation.errors.map((e) => `  • ${e}`).join('\n')}`

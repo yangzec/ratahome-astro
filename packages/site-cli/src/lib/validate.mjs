@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { checkCopy } from './copy-check.mjs';
 import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
 import { loadTemplates } from './templates.mjs';
 import { collectGeneratedRoutes, collectNavHrefs, normalizeHref, parseSlugArrays } from './routes.mjs';
@@ -55,7 +56,7 @@ const SOURCE_LEAK_FIELDS = [
   ['content/zh/common.json', 'site.tagline'],
 ];
 
-export function validateSite(slug, root = getWorkspaceRoot()) {
+export async function validateSite(slug, root = getWorkspaceRoot(), options = {}) {
   const siteDir = assertSiteExists(slug, root);
   const errors = [];
   const warnings = [];
@@ -205,13 +206,22 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     errors.push(...findContrastCopyLeaks(data, `content/${fileKey}`));
   }
 
+  const copy = await checkCopy(slug, { root, ...options });
+  errors.push(...copy.errors);
+  warnings.push(...copy.warnings);
+
   return {
     slug,
     siteId,
     template,
     ok: errors.length === 0,
     errors: [...new Set(errors)],
-    warnings,
+    warnings: [...new Set(warnings)],
+    copy: {
+      layerB: copy.layerB,
+      findings: copy.findings,
+      profileId: copy.profileId,
+    },
   };
 }
 

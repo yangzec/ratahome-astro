@@ -5,7 +5,7 @@ import { createSite } from './lib/create.mjs';
 import { deploySite } from './lib/deploy.mjs';
 import { validateSite } from './lib/validate.mjs';
 import { loadTemplates } from './lib/templates.mjs';
-import { getWorkspaceRoot } from './lib/paths.mjs';
+import { getWorkspaceRoot, listSiteSlugs } from './lib/paths.mjs';
 import { briefHasObjects, briefHasVoiceInputs } from './lib/skeleton.mjs';
 
 const { positionals, values } = parseArgs({
@@ -16,6 +16,7 @@ const { positionals, values } = parseArgs({
     name: { type: 'string' },
     brief: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
+    all: { type: 'boolean', default: false },
     help: { type: 'boolean', short: 'h', default: false },
   },
 });
@@ -31,7 +32,11 @@ Usage:
       copies a clean skeleton (no source-site prose, slugs, or catalog copy).
       optional --brief JSON writes industry.json (objects, pains, phrases, references) and catalog routes.
   site-cli validate <slug>
-      errors on empty copy, leftover source-site copy, and dead nav / catalog links.
+  site-cli validate --all
+      errors on empty copy, leftover source-site copy, dead nav / catalog links,
+      and Layer A copy guards (CJK in en, internal tokens, unknown SECTION_MAP ids,
+      missing home.json keys). Layer B (TypeSafe Jev) runs when TYPESAFE_API_KEY is set:
+      block fails validate; review prints warnings and still exits 0.
   site-cli deploy <slug> [--dry-run]
   site-cli templates
 
@@ -42,7 +47,8 @@ ${Object.entries(loadTemplates())
 
 Examples:
   site-cli create textile-fabric --from b2b-manufacturing --name "Textile Fabric"
-  site-cli validate ratahome-furniture
+  site-cli validate textile-fabric
+  site-cli validate --all
   site-cli deploy ratahome-furniture --dry-run
 `);
 }
@@ -60,10 +66,17 @@ function printResult(result, label) {
     console.log(`\n✓ ${label} passed for sites/${result.slug}`);
     if (result.siteId) console.log(`  site_id: ${result.siteId}`);
     if (result.template) console.log(`  template: ${result.template}`);
+    if (result.copy?.layerB) console.log(`  copy Layer B: ${result.copy.layerB}`);
   }
 }
 
-try {
+async function runValidate(target, root) {
+  const result = await validateSite(target, root);
+  printResult(result, 'Validation');
+  return result;
+}
+
+async function main() {
   if (values.help || !command) {
     printHelp();
     process.exit(command ? 0 : 1);
@@ -95,8 +108,7 @@ try {
         console.warn('\n⚠ industry.json has objects but no pains / phrases / references.');
         console.warn('  Fill those before writing copy. See packages/site-cli/prompts/write-copy.md');
       }
-      const result = validateSite(slug, root);
-      printResult(result, 'Validation');
+      const result = await runValidate(slug, root);
       console.log(`\nWrite content/{en,zh}/ with packages/site-cli/prompts/write-copy.md`);
       console.log(`using sites/${created.slug}/industry.json then re-run:`);
       console.log(`  site-cli validate ${created.slug}`);
@@ -104,23 +116,28 @@ try {
       break;
     }
     case 'validate': {
-      if (!slug) throw new Error('validate requires <slug>');
-      const result = validateSite(slug, root);
-      printResult({ ...result, ok: result.ok }, 'Validation');
-      if (!result.ok) process.exit(1);
+      const slugs = values.all ? listSiteSlugs(root) : slug ? [slug] : [];
+      if (!slugs.length) throw new Error('validate requires <slug> or --all');
+      let failed = 0;
+      for (const target of slugs) {
+        if (values.all) console.log(`\n── sites/${target} ──`);
+        const result = await runValidate(target, root);
+        if (!result.ok) failed += 1;
+      }
+      if (failed) process.exit(1);
       break;
     }
     case 'deploy': {
       if (!slug) throw new Error('deploy requires <slug>');
       if (values['dry-run']) {
-        const plan = deploySite(slug, { dryRun: true, root });
+        const plan = await deploySite(slug, { dryRun: true, root });
         console.log(`\nDeploy plan for sites/${plan.slug} (package: ${plan.packageName}):`);
         for (const step of plan.steps) {
           console.log(`  ${step.cmd} ${step.args.join(' ')}`);
         }
       } else {
         console.log(`Deploying sites/${slug}...`);
-        deploySite(slug, { root });
+        await deploySite(slug, { root });
         console.log(`\n✓ Deploy complete for sites/${slug}`);
       }
       break;
@@ -135,7 +152,9 @@ try {
     default:
       throw new Error(`Unknown command: ${command}`);
   }
-} catch (err) {
+}
+
+main().catch((err) => {
   console.error(`\n✗ ${err.message}`);
   process.exit(1);
-}
+});

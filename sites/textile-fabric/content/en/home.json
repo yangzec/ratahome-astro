@@ -57,14 +57,15 @@
     { "quote": "One spec sheet covered three mills and export docs. We stopped chasing separate WeChat threads.", "author": "Pacific Trading · Australia" }
   ],
   "warranty": {
-    "eyebrow": "Certifications",
-    "title": "What standards can we meet?",
-    "description": "Programs are matched to mill capabilities — certificates issued with your order file, not promised after the fact.",
-    "commitment": "Every certification claim is tied to a specific mill and lot — documentation travels with the goods.",
+    "eyebrow": "If the lot is wrong",
+    "title": "When shade, GSM or roll length misses the signed spec.",
+    "description": "The approved lab dip and the PO spec are the reference — not a verbal OK.",
+    "commitment": "Claims follow the signed lab dip, the roll report and the meters on the packing list.",
     "cases": [
-      { "question": "If composition must be verified", "title": "Mill certificates + third-party test on request.", "description": "Composition reports and restricted-substance testing arranged before bulk approval when your program requires it." },
-      { "question": "If color shifts in bulk", "title": "Written tolerance and re-dip policy.", "description": "Lab dip approval defines acceptable delta. Out-of-tolerance rolls are flagged before shipment — not after arrival." },
-      { "question": "If rolls arrive short", "title": "Roll report reconciles meters vs. PO.", "description": "Every roll is measured at final inspection. Shortage claims are resolved against the signed inspection report." }
+      { "question": "If shade shifts lot to lot", "title": "Hold the lot or re-dip against the approved standard.", "description": "Bulk is checked against the signed lab dip. Out-of-tolerance rolls are pulled before shipment." },
+      { "question": "If GSM or width misses the spec", "title": "The spec sheet is the measure.", "description": "Weight and width are checked at final inspection. Off-spec rolls stay off the packing list." },
+      { "question": "If rolls arrive short", "title": "The roll report is the count.", "description": "Every roll is measured at final inspection. Shortage is settled against the signed report." },
+      { "question": "If goods arrive damaged", "title": "Photo the roll and we replace or credit.", "description": "Transit claims need photos within 14 days. We replace, recut or credit against the inspection file." }
     ]
   },
   "rooms": {
