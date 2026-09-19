@@ -19,8 +19,8 @@
     { "value": "100%", "label": "出货前检验" }
   ],
   "audiences": {
-    "title": "为每个项目提供解决方案。",
-    "description": "一个平台，适配不同决策者——从单栋私宅到可复制的开发项目。",
+    "title": "四种买家，四种开工简报。",
+    "description": "业主、设计师、开发商或酒店——第一份需求各不相同。",
     "items": [
       { "title": "业主", "description": "一个完整的家，一体化设计与配置。", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
       { "title": "室内设计师", "description": "采购与定制制造支持。", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },

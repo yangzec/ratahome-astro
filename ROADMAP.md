@@ -341,7 +341,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | 自定义域名绑定 | 待将 `ratahome.com` 指向 Worker |
-| Layer B 三项 block 修复 | 面料 warranty 改问答承诺；家具 CTA 去套话；家具 process 角色与纺织拆分。待 `validate` 复核 |
 
 ---
 
@@ -349,6 +348,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 15:29 | 清掉 Jev 重跑三项 Layer B block：面料 warranty 改为批差 / 克重 / 短码 / 破损问答；家具 CTA 改为要户型图；家具 process 角色与纺织询盘出货拆分 |
 | 2026-09-19 14:39 | `site-cli validate` 接入 Copy Section Standard：Layer A 硬拦 + 可选 TypeSafe Jev Layer B；PR workflow `.github/workflows/copy-validate.yml`；标准入 `docs/COPY_SECTION_STANDARD.md` |
 | 2026-09-19 04:05 | 成衣 / 家纺按区块职责二轮重写并部署：hero 定位、audiences 分流、客诉进 warranty、RFQ 留 cta |
 | 2026-09-19 03:55 | 修正文案方向：`write-copy.md` 增加区块职责表、痛点分区、四行业各块信息；禁止 hero=RFQ、audiences=客诉 |
@@ -368,7 +368,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 15:26 | 阶段 1 关账：平台底座验收完成，遗留根目录 `/src/` 说明写入 `docs/LEGACY.md` |
 | 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
 | 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
-| 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
 
 ---
 
@@ -376,6 +375,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 15:29 | 面料 warranty + 家具 CTA / process Layer B | `pnpm site-cli:test` 33 通过；`pnpm site-cli validate textile-fabric` 与 `ratahome-furniture`（有 `TYPESAFE_API_KEY`）均退出 0。原三项 block 已清：fabric `warranty-cases` pass；furniture `process-timeline` pass、`contact-cta` review。家具其余为 review，无新 block | 通过 |
 | 2026-09-19 14:39 | Copy 护栏接入 validate | `pnpm site-cli:test` 29 通过；`pnpm site-cli validate textile-fabric` 与 `validate --all` 四站 Layer A 通过，无 key 时警告跳过 Layer B | 通过 |
 | 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |

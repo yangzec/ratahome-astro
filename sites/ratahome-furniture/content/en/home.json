@@ -19,8 +19,8 @@
     { "value": "100%", "label": "Inspected before shipment" }
   ],
   "audiences": {
-    "title": "Solutions for every project.",
-    "description": "One platform, adapted to the people making decisions — from a single private home to a repeatable development programme.",
+    "title": "A different brief for each buyer.",
+    "description": "Homeowner, designer, builder or hospitality — the first ask is not the same.",
     "items": [
       { "title": "Homeowners", "description": "A complete home, designed and furnished as one.", "href": "/homeowners", "image": "/images/home-audiences/homeowner-v2.jpg" },
       { "title": "Interior Designers", "description": "Sourcing and custom manufacturing support.", "href": "/designers", "image": "/images/home-audiences/interior-designer-v2.jpg" },
