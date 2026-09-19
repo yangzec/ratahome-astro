@@ -341,6 +341,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 事项 | 状态 |
 |------|------|
 | 自定义域名绑定 | 待将 `ratahome.com` 指向 Worker |
+| Layer B 三项 block 修复 | 面料 warranty 改问答承诺；家具 CTA 去套话；家具 process 角色与纺织拆分。待 `validate` 复核 |
 
 ---
 

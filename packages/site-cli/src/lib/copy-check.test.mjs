@@ -10,6 +10,7 @@ import {
   checkCopy,
   checkCopyLayerA,
   layerBQuestions,
+  resolveSectionRole,
   resolveValidateTargets,
   routeLayerBAnswers,
   routeNoul,
@@ -180,6 +181,47 @@ describe('checkCopy Layer B', () => {
     assert.equal('internal_voice' in calls[0].questions, false);
   });
 
+  it('sends furniture process role, not textile inquiry-to-shipment', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'copy-furn-role-'));
+    const slug = writeCopySite(root, {
+      slug: 'ratahome-furniture',
+      siteId: 'ratahome-furniture',
+      sections: ['process-timeline'],
+      home: {
+        process: {
+          title: 'From floor plan to finished home.',
+          steps: [
+            { title: 'Discover', description: 'Brief and floor plan.' },
+            { title: 'Design', description: 'Layouts and concepts.' },
+          ],
+        },
+      },
+    });
+    const calls = [];
+    const fetchFn = async (_url, init) => {
+      calls.push(JSON.parse(init.body));
+      return {
+        ok: true,
+        status: 200,
+        json: async () => ({
+          answers: {
+            section_mismatch: { noul: 0.08 },
+            generic_boilerplate: { noul: 0.1 },
+            over_explaining: { noul: 0.05 },
+            industry_fit: { noul: 0.04 },
+            severity: { score: 0.4 },
+          },
+        }),
+      };
+    };
+
+    const result = await checkCopy(slug, { root, apiKey: 'ts_test', fetchFn });
+    assert.equal(result.ok, true);
+    assert.equal(calls.length, 1);
+    assert.match(calls[0].state.section.job, /discover\/brief/i);
+    assert.doesNotMatch(calls[0].state.section.job, /Inquiry to shipment/);
+  });
+
   it('prints review warnings and still exits ok', async () => {
     const root = mkdtempSync(join(tmpdir(), 'copy-review-'));
     const slug = writeCopySite(root);
@@ -217,6 +259,21 @@ describe('checkCopy Layer B', () => {
   });
 });
 
+describe('resolveSectionRole', () => {
+  it('keeps textile process as inquiry-to-shipment', () => {
+    const role = resolveSectionRole('process-timeline', 'textile-fabric');
+    assert.match(role.job, /Inquiry to shipment/i);
+    assert.doesNotMatch(role.job, /Discover\/Design\/Curate/);
+  });
+
+  it('uses furniture project journey for ratahome-furniture process-timeline', () => {
+    const role = resolveSectionRole('process-timeline', 'ratahome-furniture');
+    assert.match(role.job, /discover\/brief/i);
+    assert.match(role.should, /Discover, Design, Curate/);
+    assert.match(role.shouldNot, /Textile inquiry/);
+  });
+});
+
 describe('layerBQuestions', () => {
   it('does not ask internal_voice and keeps industry terms out of auto-fail language', () => {
     const questions = layerBQuestions({
@@ -228,6 +285,17 @@ describe('layerBQuestions', () => {
     assert.equal(questions.internal_voice, undefined);
     assert.match(JSON.stringify(questions), /OEKO-TEX/);
     assert.match(JSON.stringify(questions), /lab dip/);
+  });
+
+  it('tells Jev furniture process is a project journey, not textile shipment', () => {
+    const questions = layerBQuestions({
+      sectionId: 'process-timeline',
+      contentKey: 'process',
+      role: resolveSectionRole('process-timeline', 'ratahome-furniture'),
+      profile: { sells: 'Residential interiors', buyers: 'Homeowners' },
+    });
+    assert.match(questions.section_mismatch.instructions, /discover\/brief/);
+    assert.match(questions.section_mismatch.instructions, /Discover\/Design\/Curate is valid furniture copy/);
   });
 });
 

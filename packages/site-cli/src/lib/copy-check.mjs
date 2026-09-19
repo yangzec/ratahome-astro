@@ -73,7 +73,7 @@ export const SECTION_ROLES = {
   },
   'process-timeline': {
     job: 'Inquiry to shipment, one action per step.',
-    should: 'Industry step names (quote → sample → approval → bulk → inspect/ship), tuned per site.',
+    should: 'Industry step names (quote → sample → approval → bulk → inspect/ship), tuned per textile site.',
     shouldNot: 'Furniture Discover/Design/Curate copied onto textile with no textile meaning; essays per step.',
   },
   'rooms-grid': {
@@ -107,6 +107,26 @@ export const SECTION_ROLES = {
     shouldNot: 'A second capabilities grid.',
   },
 };
+
+/** Furniture-only role text. Textile sites keep SECTION_ROLES. */
+export const FURNITURE_SECTION_ROLES = {
+  'process-timeline': {
+    job: 'Furniture project journey, one action per step: discover/brief → design → curate/spec → manufacture → deliver.',
+    should: 'Furniture step names (Discover, Design, Curate, Manufacture, Deliver) tied to brief, floor plan, spec, factory and delivery.',
+    shouldNot: 'Textile inquiry → lab dip → bulk shipment as the main path; essays per step.',
+  },
+};
+
+export function resolveSectionRole(sectionId, profileId) {
+  if (profileId === 'ratahome-furniture' && FURNITURE_SECTION_ROLES[sectionId]) {
+    return FURNITURE_SECTION_ROLES[sectionId];
+  }
+  return SECTION_ROLES[sectionId] ?? {
+    job: 'Serve this homepage section only.',
+    should: 'Stay on-role and industry-specific.',
+    shouldNot: 'Generic boilerplate or another section\'s job.',
+  };
+}
 
 export const REVIEW_THRESHOLD = 0.35;
 export const ACTION_THRESHOLD = 0.7;
@@ -267,12 +287,15 @@ export function layerBQuestions({ sectionId, contentKey, role, profile }) {
   const roomsNote = sectionId === 'rooms-grid'
     ? ' On furniture sites, room navigation is valid. On textile-apparel / textile-fabric / textile-home, rooms-grid is product or procurement-scene navigation, not residential rooms.'
     : '';
+  const processNote = sectionId === 'process-timeline'
+    ? ' On furniture sites, process-timeline is the project journey (discover/brief → design → curate/spec → manufacture → deliver). Discover/Design/Curate is valid furniture copy. On textile sites it is inquiry → sample → approval → bulk → inspect/ship.'
+    : '';
 
   return {
     section_mismatch: {
       type: 'noul',
       instructions:
-        `The visitor copy in \`copy\` does not do the job of homepage section \`${sectionId}\` (content key \`${contentKey}\`). Required job: ${role.job} Should include: ${role.should} Must not: ${role.shouldNot}${roomsNote} True only if the copy is doing another section's job.`,
+        `The visitor copy in \`copy\` does not do the job of homepage section \`${sectionId}\` (content key \`${contentKey}\`). Required job: ${role.job} Should include: ${role.should} Must not: ${role.shouldNot}${roomsNote}${processNote} True only if the copy is doing another section's job.`,
       criteria: {
         true: 'Copy is assigned to the wrong section job.',
         false: 'Copy matches this section. Industry terms such as OEKO-TEX, GOTS, BSCI, MOQ, PP, lab dip, GSM and AQL are valid and are not a mismatch.',
@@ -366,11 +389,7 @@ export async function checkCopy(slug, {
       sectionId,
       run: async () => {
         const contentKey = SECTION_MAP[sectionId];
-        const role = SECTION_ROLES[sectionId] ?? {
-          job: 'Serve this homepage section only.',
-          should: 'Stay on-role and industry-specific.',
-          shouldNot: 'Generic boilerplate or another section\'s job.',
-        };
+        const role = resolveSectionRole(sectionId, layerA.profileId);
         const state = {
           site_id: ctx.siteId,
           locale: 'en',
