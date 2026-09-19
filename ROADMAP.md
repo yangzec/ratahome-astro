@@ -347,8 +347,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 04:05 | 成衣 / 家纺按区块职责二轮重写并部署：hero 定位、audiences 分流、客诉进 warranty、RFQ 留 cta |
 | 2026-09-19 03:55 | 修正文案方向：`write-copy.md` 增加区块职责表、痛点分区、四行业各块信息；禁止 hero=RFQ、audiences=客诉 |
-| 2026-09-19 03:47 | 按旧提示词重写成衣 / 家纺 `content/{en,zh}/`（方向有误：打样须知铺满各块，待按新区块职责二轮重写） |
 | 2026-09-19 03:28 | 文案打法改为三层简报 + `write-copy.md`；`create` 不再说 splice，缺痛点 / 说法会警告 |
 | 2026-09-19 03:14 | 成衣 / 家纺首页按区块重写；简报改为对象清单，去掉「共用一套」句模 |
 | 2026-09-19 02:52 | 成衣 / 家纺按干净骨架 + 行业简报删除重建并重新部署；路由来自 `catalogSlugs`；文案去掉对照句 |
@@ -375,7 +375,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
-| 2026-09-19 03:49 | 成衣 / 家纺按提示词重写上线 | 两站 `validate` 通过后 `deploy`；en/zh 首页 200；H1 分别为工艺单 7 天 / 房型清单床垫克重；无「共用一套」或对照句 | 通过 |
+| 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
 | 2026-09-19 02:25 | 拷贝源改为骨架目录 | `pnpm site-cli:test`；四站 `validate`；`create` 拷 `packages/site-cli/skeletons/*` | 通过 |
