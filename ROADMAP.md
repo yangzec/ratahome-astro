@@ -347,6 +347,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 13:52 | 纺织三站 audiences / capabilities 去掉共用模板腔：buyer in the chain、Solutions by buyer type、Instead of… one team、how buyers qualify us；仅改 content JSON |
 | 2026-09-19 04:05 | 成衣 / 家纺按区块职责二轮重写并部署：hero 定位、audiences 分流、客诉进 warranty、RFQ 留 cta |
 | 2026-09-19 03:55 | 修正文案方向：`write-copy.md` 增加区块职责表、痛点分区、四行业各块信息；禁止 hero=RFQ、audiences=客诉 |
 | 2026-09-19 03:28 | 文案打法改为三层简报 + `write-copy.md`；`create` 不再说 splice，缺痛点 / 说法会警告 |
@@ -366,8 +367,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 07:44 | 移动端响应式优化：Header 去重 Logo、Hero 字号/CTA/高度阶梯、AssuranceBar 与 section 间距 |
 | 2026-09-18 07:37 | 修复 public/images base64 文本裂图：13 张位图解码为二进制并重新 deploy |
 | 2026-09-18 07:34 | Cloudflare 生产部署：`trade-platform` D1 + `trade-platform-assets` R2；`session: false` 规避 KV 权限；线上表单/上传验证通过 |
-| 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
-| 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 
 ---
 
@@ -375,6 +374,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-19 13:52 | 纺织三站 audiences / capabilities 模板腔 | 对照 FIX_BRIEF 核对 6 个 home.json；JSON parse；残留句 grep 为空；OEKO-TEX / MOQ / PP / lab dip / GSM / BSCI 仍在；`site-cli validate` 三站通过 | 通过 |
 | 2026-09-19 04:05 | 成衣 / 家纺区块职责二轮 | hero H1 为品类定位；audiences 为角色分流；warranty 含洗后软塌等交付痛；线上 200 | 通过 |
 | 2026-09-19 03:28 | 三层简报 + 写作提示词 | `pnpm site-cli:test` 14 通过；两站 `validate` 通过；`create` 提示指向 `write-copy.md` | 通过 |
 | 2026-09-19 02:52 | 成衣/家纺简报重建上线 | `create --brief` 先报空文案 error；拼接后 `validate` 通过；生产首页 200，`/styles/knit-tops` `/products/bedding-sets` 为 titleize 品类页，`/fabrics/cotton` 404，无对照句；hero JPEG `FFD8FF` | 通过 |
@@ -394,4 +394,3 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-18 07:34 | 生产文件上传 | `POST /api/upload` → R2 `ratahome-furniture/` 前缀 | 通过 |
 | 2026-09-18 07:37 | 生产静态图片 | curl 检查 logo/hero/dining-room magic bytes | 通过（二进制 PNG/WebP/JPEG） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
-| 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |

@@ -20,8 +20,8 @@
     { "value": "PP", "label": "Signed before the cutting ticket" }
   ],
   "audiences": {
-    "title": "Programs for every buyer in the chain.",
-    "description": "Pick the path that matches how you buy — same technical standards on every PO.",
+    "title": "Programs for brands, retail and agency buyers.",
+    "description": "Same grading and PP rules on every style — whether you buy as a brand, retailer or agency.",
     "items": [
       { "title": "Brands", "description": "Season programs with the same fit block on every repeat order.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "Retailers", "description": "Test new styles at a quoted MOQ per style and color.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },

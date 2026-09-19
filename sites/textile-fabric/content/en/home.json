@@ -20,8 +20,8 @@
     { "value": "100%", "label": "Rolls inspected before ship" }
   ],
   "audiences": {
-    "title": "Built for every buyer in the chain.",
-    "description": "One platform for brands, contract manufacturers and trading houses — same documentation standards at every stage.",
+    "title": "Specs for brands, mills' customers and traders.",
+    "description": "Brands, CMs and traders get the same composition, lab-dip and roll docs.",
     "items": [
       { "title": "Brands", "description": "Seasonal collections with stable quality and traceable mills.", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "Manufacturers", "description": "Bulk programs with locked specs and rolling deliveries.", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
@@ -30,8 +30,8 @@
     ]
   },
   "capabilities": {
-    "title": "From swatch to container — one spec sheet.",
-    "description": "Instead of chasing mills, labs and forwarders separately, you work with one team across development, production and export.",
+    "title": "Composition, color, MOQ and export — on one sheet.",
+    "description": "Swatch and lab dip first; then bulk rolls with width, GSM and inspection report.",
     "items": [
       { "title": "Composition & weight", "description": "Cotton, linen, viscose, polyester and blends — GSM and width locked in writing.", "image": "/images/capabilities/composition.jpg" },
       { "title": "Color development", "description": "Lab dips, strike-offs and bulk tolerance standards for every shade.", "image": "/images/capabilities/color.jpg" },
