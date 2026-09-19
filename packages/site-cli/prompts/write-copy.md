@@ -143,4 +143,4 @@
 3. 只下令「各区块换一件事、禁止复述」→ 过度提炼，没有行业说法。
 4. **把跟单术语和打样须知铺满每个区块** → hero 像 RFQ，audiences 像投诉区，capabilities 像车间日报；买家还没建立信任就被要求「发工艺单」。
 
-本文件是生成提示词。对象层管路由；痛点和说法管**该进哪个区块的句子**。`validate` 只拦空字段、源站全等、对照式否定和死链，不定义好文案。
+本文件是生成提示词。对象层管路由；痛点和说法管**该进哪个区块的句子**。`validate` 拦空字段、源站全等、对照式否定、死链，以及 `docs/COPY_SECTION_STANDARD.md` 的 Layer A；有 `TYPESAFE_API_KEY` 时再跑 Layer B。行业词（OEKO-TEX / MOQ / PP / lab dip / GSM / BSCI）不因「内部腔」自动失败。

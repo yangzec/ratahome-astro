@@ -24,12 +24,12 @@ function writeSite(dir, { slug = 'demo-site', template = 'b2b-textile' } = {}) {
   mkdirSync(join(dir, 'packages/sections/src'), { recursive: true });
   writeFileSync(
     join(dir, 'packages/sections/src/registry.ts'),
-    `export const sectionRegistry = {\n  hero: {},\n};\n`
+    `export const sectionRegistry = {\n  'hero-fullbleed': {},\n};\n`
   );
   writeFileSync(join(dir, 'sites', slug, 'site.config.ts'), `export const siteConfig = { siteId: '${slug}', name: 'Demo', template: '${template}' };`);
   writeFileSync(join(dir, 'sites', slug, 'wrangler.jsonc'), `{ "name": "${slug}", "vars": { "SITE_ID": "${slug}" } }`);
   writeFileSync(join(dir, 'sites', slug, 'theme.json'), JSON.stringify(REQUIRED_THEME));
-  writeFileSync(join(dir, 'sites', slug, 'blueprints/home.json'), JSON.stringify({ sections: ['hero'] }));
+  writeFileSync(join(dir, 'sites', slug, 'blueprints/home.json'), JSON.stringify({ sections: ['hero-fullbleed'] }));
   writeFileSync(join(dir, 'sites', slug, 'package.json'), JSON.stringify({ name: slug }));
   writeFileSync(join(dir, 'sites', slug, 'astro.config.mjs'), 'export default {};');
   writeFileSync(join(dir, 'sites', slug, 'src/lib/content.ts'), 'export {}');
@@ -86,20 +86,20 @@ for (const slug of styleSlugs) {
 }
 
 describe('validateSite', () => {
-  it('errors on dead navigation links instead of warning', () => {
+  it('errors on dead navigation links instead of warning', async () => {
     const root = mkdtempSync(join(tmpdir(), 'site-cli-validate-'));
     const siteDir = writeSite(root);
     writeFilledContent(siteDir, {
       nav: { main: [{ id: 'fabrics', label: 'Fabrics', href: '/fabrics/cotton' }] },
     });
 
-    const result = validateSite('demo-site', root);
+    const result = await validateSite('demo-site', root, { apiKey: '' });
     assert.equal(result.ok, false);
     assert.ok(result.errors.some((e) => e.includes('/fabrics/cotton') && e.includes('no generated route')));
-    assert.equal(result.warnings.length, 0);
+    assert.ok(result.warnings.every((w) => w.includes('TYPESAFE_API_KEY')));
   });
 
-  it('errors when copy still matches the template source site', () => {
+  it('errors when copy still matches the template source site', async () => {
     const root = mkdtempSync(join(tmpdir(), 'site-cli-leak-'));
     writeSite(root, { slug: 'textile-fabric', template: 'b2b-textile' });
     writeFilledContent(join(root, 'sites/textile-fabric'), {
@@ -118,12 +118,12 @@ describe('validateSite', () => {
       home: { ...filledHome, hero: { title: 'Woven fabrics', description: 'Lab dips first' } },
     });
 
-    const result = validateSite('textile-apparel', root);
+    const result = await validateSite('textile-apparel', root, { apiKey: '' });
     assert.equal(result.ok, false);
     assert.ok(result.errors.some((e) => e.includes('still matches source site textile-fabric')));
   });
 
-  it('errors when copy defines the site by negating another site or category', () => {
+  it('errors when copy defines the site by negating another site or category', async () => {
     const root = mkdtempSync(join(tmpdir(), 'site-cli-contrast-'));
     const siteDir = writeSite(root);
     writeFilledContent(siteDir, {
@@ -136,7 +136,7 @@ describe('validateSite', () => {
       },
     });
 
-    const result = validateSite('demo-site', root);
+    const result = await validateSite('demo-site', root, { apiKey: '' });
     assert.equal(result.ok, false);
     assert.ok(result.errors.some((e) => e.includes('negating another site or category')));
   });

@@ -190,7 +190,8 @@
 
 ### 文档指针
 
-- **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署、文案护栏）
+- **首页文案标准**：`docs/COPY_SECTION_STANDARD.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件
@@ -209,6 +210,7 @@ pnpm install
 pnpm db:migrate       # 本地共享 D1
 pnpm dev              # http://localhost:43123
 pnpm build            # 构建检查
+pnpm site-cli validate <slug>   # 含 Copy Layer A；TYPESAFE_API_KEY 时加 Layer B
 ```
 
 英文站 `/`，中文站 `/zh/`；联系表单走 `POST /api/contact`。
