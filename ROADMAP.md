@@ -348,6 +348,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-19 20:43 | 家具 audiences 中文改为「业主、设计师、开发商或酒店，我们提供不同的方案」语感；英文改为角色列举 + 各给不同方案 |
 | 2026-09-19 16:15 | 部署面料与家具站：`pnpm site-cli deploy textile-fabric` / `ratahome-furniture` → `*.yangzec.workers.dev`，首页 en/zh 已带新 warranty / CTA / process 文案 |
 | 2026-09-19 15:29 | 清掉 Jev 重跑三项 Layer B block：面料 warranty 改为批差 / 克重 / 短码 / 破损问答；家具 CTA 改为要户型图；家具 process 角色与纺织询盘出货拆分 |
 | 2026-09-19 14:39 | `site-cli validate` 接入 Copy Section Standard：Layer A 硬拦 + 可选 TypeSafe Jev Layer B；PR workflow `.github/workflows/copy-validate.yml`；标准入 `docs/COPY_SECTION_STANDARD.md` |
