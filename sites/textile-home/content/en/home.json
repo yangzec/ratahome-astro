@@ -20,8 +20,8 @@
     { "value": "Proof", "label": "Logo signed before embroidery heads" }
   ],
   "audiences": {
-    "title": "Solutions by buyer type.",
-    "description": "Hotel, retail, property and product teams — each with a documented path from sample set to bulk.",
+    "title": "For hotels, retail programs and property fit-outs.",
+    "description": "Sample set signed on a bed; then opening and replenishment lots to the same white.",
     "items": [
       { "title": "Hotels", "description": "Guestroom and bath programs built for industrial laundry cycles.", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
       { "title": "Retailers", "description": "Collections and replenishment with lot-matched whites.", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
@@ -30,8 +30,8 @@
     ]
   },
   "capabilities": {
-    "title": "What we manufacture — and how buyers qualify us.",
-    "description": "Percale or sateen, thread count, terry GSM and hotel sizes are set per room grade.",
+    "title": "Bedding, terry, embroidery and set packing.",
+    "description": "Percale or sateen, terry GSM and hotel sizes — by room grade.",
     "items": [
       { "title": "Bedding", "description": "Sets, duvets, pillows. Thread count and fitted-sheet drop on the SKU card.", "image": "/images/capabilities/composition.jpg" },
       { "title": "Bath terry", "description": "200–800 GSM. Feel is checked after wash, not only at finishing.", "image": "/images/capabilities/color.jpg" },

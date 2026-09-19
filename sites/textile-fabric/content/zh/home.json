@@ -20,8 +20,8 @@
     { "value": "100%", "label": "发货前卷检" }
   ],
   "audiences": {
-    "title": "服务供应链上的每一类买家。",
-    "description": "品牌、代工工厂与贸易公司共用同一套文档标准。",
+    "title": "给品牌、织厂客户和贸易商的规格。",
+    "description": "品牌、代工厂和贸易商拿到同一套成分、打色和卷检文件。",
     "items": [
       { "title": "品牌方", "description": "季节系列，品质稳定，工厂可追溯。", "href": "/brands", "image": "/images/audiences/brands.jpg" },
       { "title": "工厂", "description": "大货项目，锁定规格，滚动交货。", "href": "/manufacturers", "image": "/images/audiences/manufacturers.jpg" },
@@ -30,8 +30,8 @@
     ]
   },
   "capabilities": {
-    "title": "从色样到集装箱——一份规格表。",
-    "description": "不必分别对接工厂、实验室与货代，一个团队覆盖开发、生产与出口。",
+    "title": "成分、颜色、MOQ 和出口——写在一张表上。",
+    "description": "先色样和打色；再出大货卷，带门幅、GSM 和验布报告。",
     "items": [
       { "title": "成分与克重", "description": "棉、麻、人棉、涤纶及混纺——GSM 与门幅书面锁定。", "image": "/images/capabilities/composition.jpg" },
       { "title": "颜色开发", "description": "打色、批样与大货色差标准。", "image": "/images/capabilities/color.jpg" },

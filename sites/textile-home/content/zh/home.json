@@ -20,8 +20,8 @@
     { "value": "确认样", "label": "绣花头上机前签字" }
   ],
   "audiences": {
-    "title": "按采购角色进入项目。",
-    "description": "酒店、零售、地产和产品团队——各有从套装样到大货的书面路径。",
+    "title": "面向酒店、零售项目和地产交付。",
+    "description": "套装样在床上签字；开单和补货同一白度。",
     "items": [
       { "title": "酒店", "description": "客房和卫浴项目，按工业洗涤周期定规格。", "href": "/hotels", "image": "/images/audiences/brands.jpg" },
       { "title": "零售商", "description": "系列和补货，白度按缸号对齐。", "href": "/retailers", "image": "/images/audiences/manufacturers.jpg" },
@@ -30,8 +30,8 @@
     ]
   },
   "capabilities": {
-    "title": "我们生产什么——采购用来筛厂的信息。",
-    "description": "平纹或缎纹、支数、毛圈克重和酒店尺码，按房级定。",
+    "title": "床品、毛圈、绣花和套装装箱。",
+    "description": "平纹或缎纹、毛圈克重和酒店尺码——按房级定。",
     "items": [
       { "title": "床品", "description": "套件、被芯、枕芯。支数和床笠垂边写在货号卡上。", "image": "/images/capabilities/composition.jpg" },
       { "title": "毛圈巾", "description": "200–800 GSM。手感看水洗后，不只看出机。", "image": "/images/capabilities/color.jpg" },
