@@ -1,0 +1,226 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import Button from '@trade/sections/ui/Button.astro';
+import { getContent } from '../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+import type { PageRelated, PageSection, PageSpec } from '../lib/slug-page';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  content: string;
+  showCollectionBenefits?: boolean;
+  ctaKey?: 'requestQuote' | 'discussJoinery' | 'startProject';
+  bullets?: string[];
+  specs?: PageSpec[];
+  applicationsTitle?: string;
+  applicationsIntro?: string;
+  applications?: string[];
+  applicationsNote?: string;
+  qcTitle?: string;
+  qc?: string;
+  moqTitle?: string;
+  moq?: string;
+  ctaTitle?: string;
+  ctaBody?: string;
+  related?: PageRelated[];
+  sections?: PageSection[];
+}
+
+const {
+  locale,
+  title,
+  description,
+  content,
+  showCollectionBenefits = false,
+  ctaKey = 'startProject',
+  bullets,
+  specs,
+  applicationsTitle,
+  applicationsIntro,
+  applications,
+  applicationsNote,
+  qcTitle,
+  qc,
+  moqTitle,
+  moq,
+  ctaTitle,
+  ctaBody,
+  related,
+  sections,
+} = Astro.props;
+const { common, pages } = getContent(locale);
+const paragraphs = content.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
+const isProduct = Boolean(bullets?.length || specs?.length);
+const sampleHref = `${localizedPath('/contact-us', locale)}?intent=sample`;
+const quoteHref = `${localizedPath('/contact-us', locale)}?intent=quote`;
+---
+
+<BaseLayout locale={locale} title={title} description={description}>
+  <PageHero title={title} description={description} dark />
+
+  {isProduct && (
+    <nav class="container-site pt-8 text-sm text-izza-gray-muted">
+      <a href={localizedPath('/', locale)} class="hover:text-izza-accent">{locale === 'zh' ? '首页' : 'Home'}</a>
+      <span class="mx-2">/</span>
+      <a href={localizedPath('/products', locale)} class="hover:text-izza-accent">{locale === 'zh' ? '产品' : 'Products'}</a>
+      <span class="mx-2">/</span>
+      <span class="text-izza-ink">{title}</span>
+    </nav>
+  )}
+
+  <section class="container-site py-16">
+    <div class="max-w-3xl">
+      {paragraphs.map((p) => (
+        <p class="text-izza-gray-text text-lg leading-relaxed mb-6">{p}</p>
+      ))}
+
+      {bullets && bullets.length > 0 && (
+        <ul class="space-y-3 mb-10">
+          {bullets.map((item) => (
+            <li class="flex gap-3 text-izza-gray-text">
+              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-izza-accent shrink-0"></span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {!isProduct && (
+        <div class="flex flex-wrap gap-3">
+          <Button href={quoteHref} variant="primary">{common.buttons[ctaKey]}</Button>
+          <Button href={sampleHref} variant="secondary">{common.buttons.discussJoinery}</Button>
+        </div>
+      )}
+    </div>
+  </section>
+
+  {specs && specs.length > 0 && (
+    <section class="bg-izza-cream py-16">
+      <div class="container-site max-w-4xl">
+        <h2 class="section-title mb-8">{locale === 'zh' ? '技术规格' : 'Technical Specs'}</h2>
+        <div class="overflow-x-auto bg-white rounded-[12px] border border-izza-border/50">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-izza-border/60 text-left">
+                <th class="px-5 py-3 font-semibold text-izza-ink">{locale === 'zh' ? '参数' : 'Parameter'}</th>
+                <th class="px-5 py-3 font-semibold text-izza-ink">{locale === 'zh' ? '典型范围 / 说明' : 'Typical range / note'}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {specs.map((row) => (
+                <tr class="border-b border-izza-border/40 last:border-0">
+                  <td class="px-5 py-3 font-medium text-izza-ink whitespace-nowrap">{row.parameter}</td>
+                  <td class="px-5 py-3 text-izza-gray-text">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {applications && applications.length > 0 && (
+    <section class="container-site py-16">
+      <h2 class="section-title mb-4">{applicationsTitle ?? (locale === 'zh' ? '应用场景' : 'Applications')}</h2>
+      {applicationsIntro && <p class="text-izza-gray-text text-lg mb-6 max-w-3xl">{applicationsIntro}</p>}
+      <ul class="grid sm:grid-cols-2 gap-3 max-w-3xl mb-6">
+        {applications.map((item) => (
+          <li class="flex gap-3 text-izza-gray-text">
+            <span class="mt-2 h-1.5 w-1.5 rounded-full bg-izza-accent shrink-0"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      {applicationsNote && <p class="text-izza-gray-muted max-w-3xl">{applicationsNote}</p>}
+    </section>
+  )}
+
+  {sections && sections.length > 0 && (
+    <section class="container-site py-8 space-y-12">
+      {sections.map((block) => (
+        <div class="max-w-3xl">
+          <h2 class="section-title mb-4">{block.title}</h2>
+          <p class="text-izza-gray-text text-lg leading-relaxed mb-4">{block.body}</p>
+          {block.items && (
+            <ol class="space-y-3">
+              {block.items.map((item, i) => (
+                <li class="flex gap-3 text-izza-gray-text">
+                  <span class="eyebrow text-xs shrink-0">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+      ))}
+    </section>
+  )}
+
+  {qc && (
+    <section class="bg-izza-cream py-16">
+      <div class="container-site max-w-3xl">
+        <h2 class="section-title mb-4">{qcTitle ?? (locale === 'zh' ? '质量控制' : 'Quality Control')}</h2>
+        <p class="text-izza-gray-text text-lg leading-relaxed">{qc}</p>
+      </div>
+    </section>
+  )}
+
+  {moq && (
+    <section class="container-site py-16">
+      <div class="max-w-3xl">
+        <h2 class="section-title mb-4">{moqTitle ?? (locale === 'zh' ? '起订量与交期' : 'MOQ & Lead Time')}</h2>
+        <p class="text-izza-gray-text text-lg leading-relaxed">{moq}</p>
+      </div>
+    </section>
+  )}
+
+  {isProduct && (
+    <section class="bg-izza-olive-dark text-white py-16">
+      <div class="container-site max-w-3xl">
+        <h2 class="text-3xl font-semibold mb-4">{ctaTitle ?? (locale === 'zh' ? `咨询 ${title}` : `Interested in ${title}?`)}</h2>
+        {ctaBody && <p class="text-white/70 text-lg mb-8">{ctaBody}</p>}
+        <div class="flex flex-wrap gap-3 mb-6">
+          <Button href={sampleHref} variant="primary">{common.buttons.discussJoinery}</Button>
+          <Button href={quoteHref} variant="outline">{common.buttons.requestQuote}</Button>
+        </div>
+        <p class="text-sm text-white/60">
+          WhatsApp: {common.site.whatsapp} · Email: {common.site.email}
+        </p>
+      </div>
+    </section>
+  )}
+
+  {related && related.length > 0 && (
+    <section class="container-site py-16">
+      <h2 class="section-title mb-8">{locale === 'zh' ? '相关产品' : 'Related products'}</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        {related.map((item) => (
+          <a href={localizedPath(item.href, locale)} class="p-6 rounded-[12px] border border-izza-border/50 hover:border-izza-accent/40 transition-colors">
+            <strong class="text-izza-ink">{item.label}</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {showCollectionBenefits && (
+    <section class="bg-izza-cream py-20">
+      <div class="container-site">
+        <h2 class="section-title mb-8">{locale === 'zh' ? '询样与报价' : 'Samples and quotes'}</h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          {pages.collectionBenefits.map((b) => (
+            <div class="p-6 bg-white rounded-[12px]">
+              <h3 class="font-semibold text-izza-ink mb-2">{b.title}</h3>
+              <p class="text-sm text-izza-gray-muted">{b.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

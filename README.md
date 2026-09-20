@@ -1,6 +1,6 @@
 # Trade Site Platform
 
-Monorepo for multilingual B2B trade independent sites. First site: **Ratahome Furniture** (Astro 7 + Cloudflare D1/R2).
+Monorepo for multilingual B2B trade independent sites. Sites: **Ratahome Furniture** and **Chromora Yarns** (Astro 7 + Cloudflare D1/R2).
 
 ## Repository
 
@@ -22,7 +22,8 @@ pnpm dev
 packages/core/              Shared lib: db, r2, i18n
 packages/sections/          Shared Section components + registry
 packages/site-cli/          create / validate / deploy CLI
-sites/ratahome-furniture/   First site instance
+sites/ratahome-furniture/   First site instance (furniture)
+sites/chromora-yarns/       Dyed-yarn B2B instance (b2b-manufacturing)
   site.config.ts            site_id, template, locales
   theme.json                Design tokens (colors, fonts)
   blueprints/home.json      Homepage section order
@@ -35,7 +36,8 @@ migrations/                 Shared D1 schema (site_id isolation)
 
 ```bash
 pnpm install
-pnpm dev          # http://localhost:43123
+pnpm dev          # ratahome-furniture, http://localhost:43123
+pnpm --filter chromora-yarns dev   # Chromora Yarns, http://localhost:43125
 pnpm build
 pnpm db:migrate # local shared D1
 pnpm cf:deploy  # deploy ratahome-furniture

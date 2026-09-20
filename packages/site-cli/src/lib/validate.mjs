@@ -140,7 +140,7 @@ function loadSectionRegistryIds(root) {
 }
 
 function collectContentSlugs(siteDir) {
-  const slugs = new Set(['', 'zh', 'about', 'contact', 'collections']);
+  const slugs = new Set(['', 'zh', 'about', 'about-us', 'contact', 'contact-us', 'collections', 'products']);
   try {
     const pages = JSON.parse(readFileSync(join(siteDir, 'content/en/pages.json'), 'utf8'));
     for (const key of Object.keys(pages.slugs ?? {})) {
@@ -179,5 +179,5 @@ function collectNavHrefs(items) {
 
 function isKnownRoute(path) {
   const top = path.split('/')[0];
-  return ['collections', 'joinery', 'projects', 'zh'].includes(top);
+  return ['collections', 'joinery', 'projects', 'products', 'zh'].includes(top);
 }

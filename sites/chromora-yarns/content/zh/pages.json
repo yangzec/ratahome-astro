@@ -1,0 +1,301 @@
+{
+  "about": {
+    "title": "关于 Chromora Yarns | 染色纱制造商",
+    "eyebrow": "关于 Chromora Yarns",
+    "heroTitle": "关于 Chromora Yarns",
+    "heroDescription": "染色纱制造与出口立足中国绍兴柯桥，专注对色精度与长期供应合作。",
+    "workflowTitle": "我们的故事",
+    "workflowDescription": "自 2009 年起，Chromora Yarns 以纱厂能稳定上机的染色纱建立口碑。我们将染色能力、络筒与包装纪律，以及理解出口节奏的商务团队结合在一起。\n\n产品覆盖涤纶膨体与全拉伸染色纱、段染与加捻结构、锦纶 DTY 与棉染色纱，服务服装、家纺与特种纺织客户。",
+    "story": "自 2009 年起，Chromora Yarns 以纱厂能稳定上机的染色纱建立口碑。我们将染色能力、络筒与包装纪律，以及理解出口节奏的商务团队结合在一起。\n\n产品覆盖涤纶膨体与全拉伸染色纱、段染与加捻结构、锦纶 DTY 与棉染色纱，服务服装、家纺与特种纺织客户。",
+    "approachTitle": "我们如何与采购方合作",
+    "approach": "每一笔询盘，我们都先当作规格问题来处理：纤维、旦数、光泽、色号、起订量与船期。规格清楚，才能减少返工，并守住您的面料排期。\n\n对持续项目，我们保留色标与批次记录，让补货与已确认样品对齐。",
+    "glanceTitle": "一览",
+    "closingTitle": "与我们的团队合作",
+    "closingDescription": "下一季需要稳定的染色纱来源？请告知需求，我们将建议合适的结构与打样步骤。"
+  },
+  "collections": {
+    "title": "染色纱产品 | 涤纶、锦纶、棉",
+    "heroTitle": "染色纱产品",
+    "heroDescription": "按纤维与结构浏览 Chromora Yarns 的染色纱组合。每个产品页列出常见旦数、后整理、用途，以及如何申请样品或报价。",
+    "packagesTitle": "浏览核心染色纱品类",
+    "benefitsTitle": "不确定该选哪种结构？",
+    "benefitsDescription": "请告知面料类型、机号或筘号，以及对色标准。我们将建议旦数/光泽方案，并给出打样计划。",
+    "stylesTitle": "按品类筛选",
+    "stylesDescription": "打开产品页查看旦数范围、后整理与典型用途，或申请色卡与样品套装。",
+    "styles": ["全部产品", "涤纶染色纱", "涤纶 DTY", "涤纶 FDY", "段染", "加捻纱", "锦纶 DTY", "棉染色纱"]
+  },
+  "contact": {
+    "title": "联系我们 | 获取报价或申请样品",
+    "heroTitle": "联系我们",
+    "heroDescription": "请说明您需要报价、样品还是对色开发，我们会在工作日回复并给出下一步。",
+    "getInTouch": "直接联系",
+    "helper": "如有色卡或工艺包请一并附上。为加快回复，请注明旦数、月用量与目的地。",
+    "whatsappLine": "更习惯即时通讯？请通过 WhatsApp +8613800126688 联系我们，便于安排样品与商务沟通。",
+    "visitNote": "中国绍兴柯桥的工厂或办公室可预约参观——请提前来信，以便我们准备色卡库与样品。"
+  },
+  "slugs": {
+    "quality": {
+      "title": "品质与认证 | Chromora Yarns",
+      "description": "支持稳定染色纱批次的质量流程与 OEKO-TEX Standard 100 文件。",
+      "content": "以流程与文件支持内销及出口客户获得稳定的染色纱批次。",
+      "sections": [
+        {
+          "title": "围绕可复现批次建立",
+          "body": "颜色与筒纱质量只有在能够复现时才有意义。Chromora Yarns 把染色、检验与标识对齐，让已确认色号在后续季节补货时少出现意外。"
+        },
+        {
+          "title": "质量重点",
+          "body": "过程检验与批次号，让已确认色号可以补货。",
+          "items": [
+            "进料与过程控制——对照工单监控关键染色与络筒参数。",
+            "对色纪律——需要时先做色样并封存标准，再安排大货。",
+            "色牢度与物性检测——按采购订单指定的方法检测。",
+            "可追溯——纱筒与单证标注批次，便于纱厂收货。"
+          ]
+        },
+        {
+          "title": "认证与合规",
+          "body": "我们维持 OEKO-TEX Standard 100，并可向合格采购方提供最新证书副本。客户专项审核或限用物质声明，可在导入阶段沟通。证书范围与有效期以下单时确认为准——询价时请索取最新 PDF。"
+        },
+        {
+          "title": "索取最新证书",
+          "body": "请发送邮件至 sales@chromora-yarns.com，或在联系表单中填写公司名称与目标市场。"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "description": "Chromora Yarns 如何处理询盘与联系信息。",
+      "content": "Chromora Yarns 将您在本网站提交的联系信息用于回复报价、样品与商务问题。我们不出售询盘数据。如需更正或删除您已提交的信息，请发送邮件至 sales@chromora-yarns.com。"
+    },
+    "terms": {
+      "title": "使用条款",
+      "description": "使用 Chromora Yarns 网站的条款。",
+      "content": "本网站内容仅供产品说明与询盘使用。规格、起订量与交期均以每笔订单的书面确认为准。网站信息不构成有约束力的要约。商务条款以 Chromora Yarns 出具的报价与合同为准。"
+    },
+    "how-it-works": {
+      "title": "从染批到发运",
+      "description": "需求、色样、大货染色与质检，再从柯桥安排出口包装。",
+      "content": "请提供旦数、光泽、对色依据与面料最终用途。大货前先确认颜色。我们监控色光、色牢度与筒纱质量，再以纸箱或托盘包装，并附批次标签与单证。质量体系支持 OEKO-TEX Standard 100；询价时可索取最新证书。",
+      "sections": [
+        {
+          "title": "四个步骤",
+          "body": "从需求到发运的简短路径。",
+          "items": [
+            "需求与对色——提供旦数、光泽、对色依据与面料最终用途。",
+            "色样 / 手样——大货前先确认颜色。",
+            "大货染色与质检——监控色光、色牢度与筒纱质量。",
+            "包装发运——出口纸箱或托盘，附批次标签与单证。"
+          ]
+        }
+      ]
+    },
+    "foshan-sourcing-tour": {
+      "title": "申请样品",
+      "description": "向 Chromora Yarns 申请染色纱样品或对色开发。",
+      "content": "可申请样品套装或对色开发，也可发送旦数与颜色需求以获取商务报价。WhatsApp：+8613800126688 · 邮箱：sales@chromora-yarns.com"
+    },
+    "polyester-dyed-yarn": {
+      "title": "涤纶染色纱",
+      "description": "Chromora Yarns 的涤纶 DTY、FDY、段染与加捻染色纱。",
+      "content": "本页汇总 Chromora Yarns 的涤纶染色纱品类：DTY、FDY、段染与加捻结构。打开对应产品页查看旦数范围、后整理与典型用途，或申请色卡与样品套装。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "涤纶 FDY", "href": "/products/polyester-fdy" },
+        { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "polyester-dty": {
+      "title": "涤纶 DTY",
+      "description": "染色涤纶拉伸变形纱，手感柔软、带舒适弹性，颜色稳定，适用于圆机针织及相关面料。",
+      "content": "涤纶 DTY 是染色长丝项目中的主力品种。变形加工增加膨松与手感，筒子染色则让针织及部分机织用途在各筒之间保持颜色一致。\n\nChromora Yarns 供应常用旦数与光泽的染色 DTY。请告知机号、面料类型与对色标准，我们将建议合适的孔数与打样步骤。\n\n出口包装与批次标识，便于需要清晰收货记录的多国成衣项目。",
+      "specs": [
+        { "parameter": "纤维", "value": "100% 涤纶" },
+        { "parameter": "工艺", "value": "DTY（拉伸变形），染色" },
+        { "parameter": "旦数 / 孔数", "value": "例如 75D–300D 范围——以询价确认为准" },
+        { "parameter": "光泽", "value": "半消光 / 全消光 / 有光" },
+        { "parameter": "网络", "value": "IM / NIM——按指定" },
+        { "parameter": "颜色", "value": "现货色卡 / 客制手样" },
+        { "parameter": "包装", "value": "纸管纱——出口纸箱" },
+        { "parameter": "起订量", "value": "与销售确认" },
+        { "parameter": "交期", "value": "对色确认后确定" }
+      ],
+      "ctaTitle": "需要涤纶 DTY？",
+      "ctaBody": "可申请样品套装，或发送旦数与颜色需求以获取商务报价。",
+      "related": [
+        { "label": "涤纶 FDY", "href": "/products/polyester-fdy" },
+        { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn" },
+        { "label": "锦纶 DTY", "href": "/products/nylon-dty" }
+      ]
+    },
+    "polyester-fdy": {
+      "title": "涤纶 FDY",
+      "description": "全拉伸染色涤纶长丝，布面平整、尺寸更稳定、外观干净。",
+      "content": "当面对平整度与稳定性的要求高于膨体纱时，会选择 FDY。染色 FDY 适用于机织、绣花底纱，以及光泽与均匀度要求较高的结构。\n\nChromora Yarns 提供实用旦数段的染色 FDY。请告知最终面料与偏好光泽，以便对齐长丝选型与对色开发。\n\n我们同时支持现货色与季节项目客制对色，大货前可先安排样品。",
+      "specs": [
+        { "parameter": "纤维", "value": "100% 涤纶" },
+        { "parameter": "工艺", "value": "FDY（全拉伸），染色" },
+        { "parameter": "旦数 / 孔数", "value": "例如复丝方案——以询价确认为准" },
+        { "parameter": "光泽", "value": "半消光 / 有光 / 按约定" },
+        { "parameter": "加捻（如有）", "value": "可选——请注明" },
+        { "parameter": "颜色", "value": "现货色卡 / 客制" },
+        { "parameter": "包装", "value": "纸管 / 筒管——出口包装" },
+        { "parameter": "起订量", "value": "与销售确认" },
+        { "parameter": "交期", "value": "对色确认后确定" }
+      ],
+      "ctaTitle": "需要涤纶 FDY？",
+      "ctaBody": "可申请样品套装，或发送旦数与颜色需求以获取商务报价。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "加捻纱", "href": "/products/twisted-yarn" },
+        { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "polyester-space-dyed-yarn": {
+      "title": "涤纶段染纱",
+      "description": "沿纱线长度分段着色，在地毯、地垫、时装针织与装饰面料上形成多色效果。",
+      "content": "沿纱线长度分段着色，在地毯、地垫、时装针织与装饰面料上形成多色效果。",
+      "bullets": [
+        "间隔染色在每只长丝筒上形成受控色块或柔和过渡",
+        "基纱通常可选 DTY、合股或高膨体涤纶结构",
+        "可按地毯与针织设计要求定制段数与循环长度",
+        "现货色与客制色；大货确认前可做手样",
+        "出口纸管/饼纱带批次标识，便于纱厂收货",
+        "适合需要视觉层次、又不想完全依赖匹染的项目"
+      ],
+      "specs": [
+        { "parameter": "染色方式", "value": "段染（分段 / 间隔着色）" },
+        { "parameter": "颜色段数", "value": "每循环 2–4 色（可客制）" },
+        { "parameter": "循环长度", "value": "短循环或长循环——按设计稿确认" },
+        { "parameter": "基纱", "value": "涤纶 DTY / 合股 / 高膨体" },
+        { "parameter": "旦数范围", "value": "以询价确认为准（支持常见长丝范围）" },
+        { "parameter": "光泽", "value": "半消光 / 有光 / 按约定" },
+        { "parameter": "色牢度", "value": "按约定标准控制水洗 / 日晒 / 摩擦" },
+        { "parameter": "收缩", "value": "随基纱与后整理而定——以实验室报告确认为准" },
+        { "parameter": "包装形式", "value": "纸管 / 饼纱——出口包装" },
+        { "parameter": "起订量", "value": "客制多色项目请向销售确认公斤起订量；现货色可能不同" },
+        { "parameter": "交期", "value": "样品：与销售确认 · 大货：对色确认后确定" }
+      ],
+      "applicationsTitle": "应用场景",
+      "applicationsIntro": "涤纶段染纱常用于：",
+      "applications": [
+        "地毯与块毯",
+        "礼拜垫与床旗",
+        "需要多色层次的时装针织",
+        "沙发布与装饰机织效果",
+        "围巾、披肩与配饰针织",
+        "设计师袜类与花式面料"
+      ],
+      "applicationsNote": "设计师用段染纱在面料中建立深度与动感，而不必完全依赖匹染——当花型与颜色位置本身就是产品故事的一部分时，这一做法尤为有用。",
+      "qcTitle": "质量控制",
+      "qc": "每个生产批次都对照已确认色标检查分段清晰度与整体色调。我们按订单约定监控色牢度目标、络筒质量与标识，便于收货纱厂追溯批次。如采购订单有要求，可随货提供证书与检测摘要。",
+      "moqTitle": "起订量与交期",
+      "moq": "起订量取决于您选择现货色还是客制多色方案。请告知月用量与目的地，我们将书面确认起订量、打样周期与大货交期。优先项目可能安排加急打样——请在提交需求时说明。",
+      "ctaTitle": "需要涤纶段染纱？",
+      "ctaBody": "可申请样品套装或对色开发，也可发送旦数与颜色需求以获取商务报价。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "加捻纱", "href": "/products/twisted-yarn" },
+        { "label": "涤纶 FDY", "href": "/products/polyester-fdy" }
+      ]
+    },
+    "twisted-yarn": {
+      "title": "加捻纱",
+      "description": "染色加捻涤纶纱，用于提升强力、面料风格，以及绣花或绉类项目。",
+      "content": "加捻会改变纱线行为——增加抱合、强力与表面效果，这是许多机织与绣花用途所需要的。与染色结合后，加捻纱同时服务功能与外观目标。\n\nChromora Yarns 按买方约定生产单股与多股染色加捻纱。询盘时请注明 TPM/TPI 目标、基纱旦数与对色依据。\n\n质检重点是捻度均匀、色光对齐，以及适合高速退绕的筒纱成形。",
+      "specs": [
+        { "parameter": "纤维", "value": "涤纶（基纱按指定）" },
+        { "parameter": "结构", "value": "单捻 / 双股 / 多股加捻" },
+        { "parameter": "捻度", "value": "TPM/TPI——按订单" },
+        { "parameter": "基纱", "value": "DTY / FDY / 按约定" },
+        { "parameter": "旦数", "value": "以询价确认为准" },
+        { "parameter": "颜色", "value": "现货色卡 / 客制" },
+        { "parameter": "包装", "value": "纸管纱——出口包装" },
+        { "parameter": "起订量", "value": "与销售确认" },
+        { "parameter": "交期", "value": "对色与捻度确认后确定" }
+      ],
+      "ctaTitle": "需要加捻纱？",
+      "ctaBody": "可申请样品，或发送 TPM/TPI、基纱旦数与对色依据以获取报价。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "涤纶 FDY", "href": "/products/polyester-fdy" },
+        { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "nylon-dty": {
+      "title": "锦纶 DTY",
+      "description": "染色锦纶变形纱，强调强力、回弹顺滑，适用于细针距服装。",
+      "content": "锦纶 DTY 因强韧与染色后外观顺滑，常用于运动装、内衣、袜类与细针距针织。批次之间的颜色一致，有助于品牌把辅料与大身面对齐。\n\nChromora Yarns 为需要明确旦数选项与及时打样的采购方供应染色锦纶 DTY。询价时请说明弹性、遮盖与对色要求。\n\n我们协调出口目的地的包装与单证，并可按您的质检清单对齐检测预期。",
+      "specs": [
+        { "parameter": "纤维", "value": "锦纶" },
+        { "parameter": "工艺", "value": "DTY，染色" },
+        { "parameter": "旦数 / 孔数", "value": "例如常见细旦——以询价确认为准" },
+        { "parameter": "光泽", "value": "半消光 / 有光" },
+        { "parameter": "颜色", "value": "现货色卡 / 客制" },
+        { "parameter": "包装", "value": "纸管纱——出口包装" },
+        { "parameter": "起订量", "value": "与销售确认" },
+        { "parameter": "交期", "value": "对色确认后确定" }
+      ],
+      "ctaTitle": "需要锦纶 DTY？",
+      "ctaBody": "可申请样品套装，或发送弹性、遮盖与对色要求以获取报价。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "棉染色纱", "href": "/products/cotton-dyed-yarn" },
+        { "label": "加捻纱", "href": "/products/twisted-yarn" }
+      ]
+    },
+    "cotton-dyed-yarn": {
+      "title": "棉染色纱",
+      "description": "手感柔软、透气的染色棉纱，适用于服装、毛巾与生活纺织项目。",
+      "content": "棉染色纱为针织与机织产品带来天然手感与舒适性。稳定的染色与均匀络筒，有助于纱厂在长车台上减少因批色引起的停机。\n\nChromora Yarns 为服装与家纺提供实用支数范围的棉染色纱。申请样品时请提供支数、捻度与对色标准（Pantone 或实物色样）。\n\n请按最终用途提出水洗、摩擦与日晒色牢度目标，以便实验室验证与买方预期一致。",
+      "specs": [
+        { "parameter": "纤维", "value": "100% 棉（混纺可议）" },
+        { "parameter": "支数范围", "value": "例如英制支数——以询价确认为准" },
+        { "parameter": "捻度", "value": "按指定" },
+        { "parameter": "颜色", "value": "现货色卡 / 客制手样" },
+        { "parameter": "色牢度", "value": "按约定标准" },
+        { "parameter": "包装", "value": "纸管 / 绞纱——请确认" },
+        { "parameter": "起订量", "value": "与销售确认" },
+        { "parameter": "交期", "value": "对色确认后确定" }
+      ],
+      "ctaTitle": "需要棉染色纱？",
+      "ctaBody": "可申请样品套装，或发送支数、捻度与对色标准以获取报价。",
+      "related": [
+        { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+        { "label": "锦纶 DTY", "href": "/products/nylon-dty" },
+        { "label": "加捻纱", "href": "/products/twisted-yarn" }
+      ]
+    }
+  },
+  "packageBenefits": [
+    { "title": "规格先行", "description": "打样前先明确纤维、旦数、光泽、色号与最终用途。" },
+    { "title": "先打色样", "description": "大货投染前先确认颜色。" },
+    { "title": "出口文件", "description": "批次标签与装箱单按纱厂收货准备。" },
+    { "title": "单一商务窗口", "description": "报价与样品通过邮件或 WhatsApp 处理。" }
+  ],
+  "collectionPackages": [
+    { "title": "涤纶 DTY", "description": "柔软膨体的染色涤纶，适用于圆机针织、袜类与弹性面料。", "image": "/images/home-complete-solution/living-room-v3.jpg", "href": "/products/polyester-dty" },
+    { "title": "涤纶 FDY", "description": "平整的全拉伸染色长丝，适用于机织、绣花与稳定底布。", "image": "/images/home-complete-solution/dining-room-v2.jpg", "href": "/products/polyester-fdy" },
+    { "title": "涤纶段染纱", "description": "间隔多色纱，适用于地毯、时装针织与装饰纺织。", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/products/polyester-space-dyed-yarn" },
+    { "title": "加捻纱", "description": "加捻染色纱，强调强力、表面效果与绣花项目。", "image": "/images/finished-chair.webp", "href": "/products/twisted-yarn" },
+    { "title": "锦纶 DTY", "description": "染色锦纶变形纱，适用于运动装、内衣与细针距针织。", "image": "/images/package-living-california.webp", "href": "/products/nylon-dty" },
+    { "title": "棉染色纱", "description": "手感柔软的染色棉纱，适用于服装、毛巾布与生活面料。", "image": "/images/home-audiences/homeowner-v2.jpg", "href": "/products/cotton-dyed-yarn" }
+  ],
+  "workflow": [
+    { "step": "01", "title": "地点", "description": "中国绍兴柯桥" },
+    { "step": "02", "title": "成立年份", "description": "2009" },
+    { "step": "03", "title": "产能", "description": "4,800 吨 / 年" },
+    { "step": "04", "title": "色卡库", "description": "2,400+" },
+    { "step": "05", "title": "认证重点", "description": "OEKO-TEX Standard 100" }
+  ],
+  "aboutAudiences": [
+    { "title": "规格优先", "description": "每笔询盘先对齐纤维、旦数、光泽、色号、起订量与船期。" },
+    { "title": "保留色标", "description": "持续项目保留封样与批次记录，便于补货。" },
+    { "title": "出口排期", "description": "商务回复包含打样步骤与参考出运窗口。" }
+  ],
+  "collectionBenefits": [
+    { "title": "先看规格", "description": "在长篇介绍之前，先核对旦数、光泽与用途。" },
+    { "title": "申请样品", "description": "大货确认前先做色样与样品套装。" },
+    { "title": "获取报价", "description": "告知目的港与月用量，以便确认可供货情况。" }
+  ]
+}

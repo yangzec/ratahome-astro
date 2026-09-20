@@ -1,0 +1,48 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "关于我们",
+      "href": "/about-us"
+    },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "涤纶染色纱",
+          "links": [
+            { "label": "涤纶 DTY", "href": "/products/polyester-dty", "description": "膨体染色涤纶，适用于针织与袜类" },
+            { "label": "涤纶 FDY", "href": "/products/polyester-fdy", "description": "全拉伸染色长丝，布面更平整" },
+            { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn", "description": "沿纱线分段着色，适用于地毯与针织" },
+            { "label": "加捻纱", "href": "/products/twisted-yarn", "description": "高捻结构，强调强力与绣花效果" }
+          ]
+        },
+        {
+          "title": "锦纶与棉",
+          "links": [
+            { "label": "锦纶 DTY", "href": "/products/nylon-dty", "description": "强力顺滑的染色锦纶，适用于运动装" },
+            { "label": "棉染色纱", "href": "/products/cotton-dyed-yarn", "description": "手感柔软的染色棉纱，适用于服装与毛巾" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部产品",
+        "description": "按纤维与结构浏览规格、用途与打样说明",
+        "href": "/products",
+        "image": "/images/home-collections/living-room-v2.jpg"
+      }
+    },
+    {
+      "id": "quality",
+      "label": "品质认证",
+      "href": "/quality"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "site": {
+    "name": "Chromora Yarns",
+    "title": "染色纱制造商与出口商",
+    "description": "Chromora Yarns 位于中国绍兴柯桥，制造并出口涤纶、锦纶与棉染色纱。欢迎索样或询价。",
+    "whatsapp": "+8613800126688",
+    "whatsappUrl": "https://wa.me/8613800126688",
+    "hours": "周一至周六，09:00–18:00（当地时间）",
+    "location": "中国绍兴柯桥",
+    "address": "中国浙江省绍兴市柯桥区纺织大道 18 号",
+    "phone": "+86 575 8888 2610",
+    "email": "sales@chromora-yarns.com",
+    "tagline": "OEKO-TEX Standard 100 · 2,400+ 色号 · 可提供出口包装"
+  },
+  "buttons": {
+    "startProject": "联系我们",
+    "uploadFloorPlan": "获取报价",
+    "factoryTour": "申请样品",
+    "sendFloorPlan": "提交询盘",
+    "sendMessage": "提交询盘",
+    "whatsappUs": "WhatsApp 咨询",
+    "viewAll": "查看全部产品",
+    "seeJourney": "申请样品",
+    "readWarranty": "索取证书",
+    "exploreProjects": "查看全部产品",
+    "requestQuote": "获取报价",
+    "discussJoinery": "申请样品"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "projectType": "询盘类型",
+    "message": "留言",
+    "projectDetails": "留言",
+    "floorPlan": "色卡或工艺包（可选）",
+    "privacy": "如有色卡或工艺包请一并附上。为加快回复，请注明旦数、月用量与目的港。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "规格、用量、交期……",
+    "detailsPlaceholder": "旦数或支数、对色依据、月用量、目的港……",
+    "projectTypes": {
+      "residence": "报价",
+      "design": "打样",
+      "development": "对色",
+      "hospitality": "其他",
+      "other": "尚未确定"
+    }
+  },
+  "footer": {
+    "description": "Chromora Yarns 是位于中国绍兴柯桥的染色纱制造商与出口商。自 2009 年起，我们为全球针织、机织与家纺客户供应涤纶、锦纶与棉染色纱，并以稳定对色与出口包装作为交付基础。",
+    "copyright": "保留所有权利。",
+    "foundedYear": "2009",
+    "columns": [
+      {
+        "title": "关于 Chromora Yarns",
+        "body": "Chromora Yarns 是位于中国绍兴柯桥的染色纱制造商与出口商。自 2009 年起，我们为全球针织、机织与家纺客户供应涤纶、锦纶与棉染色纱，并以稳定对色与出口包装作为交付基础。",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "快速链接",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "首页", "href": "/" },
+          { "label": "关于我们", "href": "/about-us" },
+          { "label": "产品", "href": "/products" },
+          { "label": "品质与认证", "href": "/quality" },
+          { "label": "联系我们", "href": "/contact-us" },
+          { "label": "申请样品", "href": "/contact-us?intent=sample" },
+          { "label": "获取报价", "href": "/contact-us?intent=quote" }
+        ]
+      },
+      {
+        "title": "产品",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "涤纶 DTY", "href": "/products/polyester-dty" },
+          { "label": "涤纶 FDY", "href": "/products/polyester-fdy" },
+          { "label": "涤纶段染纱", "href": "/products/polyester-space-dyed-yarn" },
+          { "label": "加捻纱", "href": "/products/twisted-yarn" },
+          { "label": "锦纶 DTY", "href": "/products/nylon-dty" },
+          { "label": "棉染色纱", "href": "/products/cotton-dyed-yarn" }
+        ]
+      },
+      {
+        "title": "联系方式",
+        "body": "",
+        "links": [
+          { "label": "地址：中国浙江省绍兴市柯桥区纺织大道 18 号", "href": "/contact-us" },
+          { "label": "电话：+86 575 8888 2610", "href": "tel:+8657588882610" },
+          { "label": "邮箱：sales@chromora-yarns.com", "href": "mailto:sales@chromora-yarns.com" },
+          { "label": "WhatsApp：+8613800126688", "href": "https://wa.me/8613800126688" },
+          { "label": "营业时间：周一至周六，09:00–18:00（当地时间）", "href": "/contact-us" }
+        ],
+        "note": "需要更快沟通？通过 WhatsApp 联系我们，便于安排样品与报价。"
+      }
+    ]
+  }
+}

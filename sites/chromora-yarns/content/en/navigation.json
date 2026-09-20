@@ -1,0 +1,48 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about-us"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Polyester Dyed Yarn",
+          "links": [
+            { "label": "Polyester DTY", "href": "/products/polyester-dty", "description": "Textured dyed polyester for knits and socks" },
+            { "label": "Polyester FDY", "href": "/products/polyester-fdy", "description": "Fully drawn dyed filament for smooth fabrics" },
+            { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn", "description": "Multi-segment colour for carpets and knits" },
+            { "label": "Twisted Yarn", "href": "/products/twisted-yarn", "description": "High-twist constructions for strength and embroidery" }
+          ]
+        },
+        {
+          "title": "Nylon & Cotton",
+          "links": [
+            { "label": "Nylon DTY", "href": "/products/nylon-dty", "description": "Strong, smooth dyed nylon for activewear" },
+            { "label": "Cotton Dyed Yarn", "href": "/products/cotton-dyed-yarn", "description": "Soft dyed cotton for apparel and towels" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse dyed yarn families, specs, and sampling options",
+        "href": "/products",
+        "image": "/images/home-collections/living-room-v2.jpg"
+      }
+    },
+    {
+      "id": "quality",
+      "label": "Quality",
+      "href": "/quality"
+    }
+  ]
+}

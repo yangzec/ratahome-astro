@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "eyebrow": "OEKO-TEX Standard 100 · 2,400+ 色号 · 可提供出口包装",
+    "title": "面向全球纺织品牌的染色纱制造商与出口商",
+    "description": "涤纶、锦纶与棉染色纱，强调对色精度、批次一致与可预期的出口交期——从中国绍兴柯桥发往各地纱厂与品牌。",
+    "image": "/images/hero-living-v2.webp",
+    "imageAlt": "已完成染色并待出口的纱筒"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX Standard 100", "description": "询价时可索取最新证书" },
+    { "icon": "/icons/box-seam.svg", "title": "2,400+ 色号", "description": "现货色卡与客制定样" },
+    { "icon": "/icons/shield-check.svg", "title": "出口包装", "description": "纱筒、纸箱与托盘均带批次标识" },
+    { "icon": "/icons/clock.svg", "title": "2009 年起扎根柯桥", "description": "染色、络筒与出口均在绍兴完成" }
+  ],
+  "metrics": [
+    { "value": "始于 2009", "label": "染色纱从业年限" },
+    { "value": "4,800 吨 / 年", "label": "年产能" },
+    { "value": "2,400+", "label": "色号数量" },
+    { "value": "全球市场", "label": "服务范围" }
+  ],
+  "audiences": {
+    "title": "纱线应用场景",
+    "description": "从成衣服装到家纺与产业用纺织品，Chromora Yarns 的染色纱服务于常见的纱厂与品牌项目。",
+    "items": [
+      { "title": "圆机与横机针织", "description": "批色稳定，适用于服装与细针距产品。", "href": "/contact-us", "image": "/images/home-audiences/homeowner-v2.jpg" },
+      { "title": "机织与套装面料", "description": "长丝均匀、色泽稳定，适用于机织结构。", "href": "/contact-us", "image": "/images/home-audiences/interior-designer-v2.jpg" },
+      { "title": "袜类与连裤袜", "description": "DTY 方案兼顾弹性手感与复色一致性。", "href": "/contact-us", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" },
+      { "title": "家纺与家具面料", "description": "适用于床单、沙发布与装饰织造。", "href": "/contact-us", "image": "/images/home-audiences/builders-contractors-v4.webp" },
+      { "title": "地毯、地垫与地面铺装", "description": "段染与加捻结构，用于层次与花型表现。", "href": "/products/polyester-space-dyed-yarn", "image": "/images/home-projects/arcaya-contemporary-residence.webp" },
+      { "title": "绣花与装饰面料", "description": "加捻纱与 FDY 底纱，便于干净的装饰加工。", "href": "/products/twisted-yarn", "image": "/images/finished-chair.webp" }
+    ]
+  },
+  "capabilities": {
+    "title": "采购方选择 Chromora Yarns 的原因",
+    "description": "客户与我们合作，看重可复现的批色、完整的染色纱品类，以及支持国际出运的文件与包装。",
+    "items": [
+      { "title": "批色稳定", "description": "通过受控染色与批次追溯，帮助返单落在约定色差范围内——这对多工厂成衣项目尤为关键。", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "品类覆盖广", "description": "涤纶 DTY 与 FDY、段染与加捻结构、锦纶 DTY 与棉染色纱，便于采购团队向一家供应商整合 SKU。", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "品质纪律", "description": "对色牢度、强力与络筒质量做过程检验，并与 OEKO-TEX Standard 100 及客户检测协议对齐。", "image": "/images/package-living-california.webp" },
+      { "title": "出口服务", "description": "在可行范围内给出有竞争力的起订量，交期说明清楚，并通过邮件或 WhatsApp 回应报价与打样。", "image": "/images/delivery-container.webp" }
+    ]
+  },
+  "process": {
+    "title": "从染批到发运",
+    "description": "质量体系支持 OEKO-TEX Standard 100；询价时可索取最新证书。产能与色号数据为 Chromora Yarns 对外说明的生产能力与色卡范围；具体交期请按旦数与颜色向销售确认。",
+    "image": "/images/home-process/completed-residence-v2.jpg",
+    "imageAlt": "完成染色、络筒并贴好批次标签的纱筒",
+    "steps": [
+      { "step": "01", "title": "需求与对色", "description": "提供旦数、光泽、对色依据与面料最终用途。" },
+      { "step": "02", "title": "色样 / 手样", "description": "大货前先确认颜色。" },
+      { "step": "03", "title": "大货染色与质检", "description": "监控色光、色牢度与筒纱质量。" },
+      { "step": "04", "title": "包装发运", "description": "出口纸箱或托盘，附批次标签与单证。" }
+    ]
+  },
+  "testimonials": [
+    { "quote": "两个成衣工厂的返单都落在约定色差带内。", "author": "服装项目采购负责人" },
+    { "quote": "打样、大货确认与包装文件都在同一条商务沟通里完成。", "author": "家纺纱厂采购" }
+  ],
+  "warranty": {
+    "eyebrow": "质量体系",
+    "title": "围绕可复现批次建立",
+    "description": "颜色与筒纱质量只有在能够复现时才有意义。Chromora Yarns 把染色、检验与标识对齐，让已确认色号在后续季节补货时少出现意外。",
+    "commitment": "质量体系支持 OEKO-TEX Standard 100；证书范围与有效期以下单时确认为准。",
+    "cases": [
+      { "question": "进料与过程控制", "title": "按工单执行", "description": "对照工单监控关键染色与络筒参数。" },
+      { "question": "对色确认", "title": "大货前先打色样", "description": "需要时先做色样并封存标准，再安排大货。" },
+      { "question": "可追溯", "title": "包装带批次号", "description": "纱筒与单证标注批次，便于纱厂收货核对。" }
+    ]
+  },
+  "rooms": {
+    "title": "产品系列",
+    "items": [
+      { "label": "涤纶 DTY", "slug": "polyester-dty" },
+      { "label": "涤纶 FDY", "slug": "polyester-fdy" },
+      { "label": "涤纶段染纱", "slug": "polyester-space-dyed-yarn" },
+      { "label": "加捻纱", "slug": "twisted-yarn" },
+      { "label": "锦纶 DTY", "slug": "nylon-dty" },
+      { "label": "棉染色纱", "slug": "cotton-dyed-yarn" }
+    ]
+  },
+  "projects": {
+    "title": "浏览核心染色纱品类",
+    "items": [
+      { "location": "中国柯桥", "delivery": "现货色与客制色", "type": "段染", "title": "涤纶段染纱", "scope": "地毯、针织、装饰纺织", "solution": "沿纱线间隔着色", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/products/polyester-space-dyed-yarn" },
+      { "location": "出口包装", "delivery": "先打样后大货", "type": "常规 DTY", "title": "涤纶 DTY", "scope": "圆机针织、袜类、弹性面料", "solution": "膨体染色涤纶", "image": "/images/package-living-california.webp", "href": "/products/polyester-dty" }
+    ]
+  },
+  "ecosystem": {
+    "title": "稳定的染色纱供应来源",
+    "description": "Chromora Yarns 制造并出口染色纱，服务于针织、机织、袜类、家纺与产业用纺织。采购方与我们合作，是为了可复现的批色、清晰的规格，以及支持国际出运的文件。无论是现货色卡还是按 Pantone 或手样对色，我们的团队会把旦数、光泽与后整理对齐到您的面料项目，再从中国绍兴柯桥安排海运或空运包装。",
+    "items": [
+      { "step": "01", "title": "针织与机织", "description": "按圆机、横机与机织项目指定染色纱。" },
+      { "step": "02", "title": "可复现批色", "description": "批次追溯与封样，便于补货对齐。" },
+      { "step": "03", "title": "现货或客制", "description": "大货确认前完成 Pantone 或手样对色。" },
+      { "step": "04", "title": "柯桥出口", "description": "海运或空运包装，附批次标签与出运文件。" }
+    ]
+  },
+  "cta": {
+    "title": "准备询价或打样？",
+    "description": "请发送旦数清单、对色依据与目的港。商务团队将回复可供货情况、参考价格与打样方案。也可通过 WhatsApp 联系：+8613800126688",
+    "formTitle": "获取报价",
+    "formDescription": "请告知纤维、旦数或支数、对色标准、月用量与目的地。色卡或工艺包有助于加快回复，但并非必须。",
+    "steps": [
+      "提供旦数、光泽、对色依据与面料最终用途。",
+      "大货前确认色样或手样。",
+      "书面确认起订量、交期与出口包装。"
+    ]
+  },
+  "footerFeatures": [
+    { "title": "OEKO-TEX Standard 100", "description": "合格采购方可索取最新副本" },
+    { "title": "年产 4,800 吨", "description": "对外说明的染色纱年产能" },
+    { "title": "2,400+ 色号", "description": "现货色卡加客制开发" },
+    { "title": "柯桥出口包装", "description": "批次标签、纸箱与单证" }
+  ]
+}

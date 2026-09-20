@@ -1,0 +1,54 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { common } = getContent(locale);
+const { site, footer } = common;
+const columns = footer.columns ?? [];
+---
+
+<footer class="bg-izza-olive-dark text-white">
+  <div class="container-site py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      {columns.map((column) => (
+        <div>
+          <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">{column.title}</h4>
+          {column.body && <p class="text-sm text-white/60 leading-relaxed">{column.body}</p>}
+          {column.links && column.links.length > 0 && (
+            <ul class="space-y-2">
+              {column.links.map((link) => (
+                <li>
+                  <a href={link.href.startsWith('http') || link.href.startsWith('mailto:') || link.href.startsWith('tel:') ? link.href : localizedPath(link.href, locale)} class="text-sm text-white/60 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          {column.note && <p class="text-sm text-white/50 mt-4">{column.note}</p>}
+        </div>
+      ))}
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+      <p>
+        &copy; {footer.foundedYear ?? '2009'}–{new Date().getFullYear()} {site.name}. {footer.copyright}
+        <span class="mx-2">|</span>
+        <a href={localizedPath('/privacy', locale)} class="hover:text-white">{locale === 'zh' ? '隐私政策' : 'Privacy Policy'}</a>
+        <span class="mx-2">|</span>
+        <a href={localizedPath('/terms', locale)} class="hover:text-white">{locale === 'zh' ? '使用条款' : 'Terms of Use'}</a>
+      </p>
+      <div class="flex items-center gap-6">
+        <span>{site.location}</span>
+        <span>{site.hours}</span>
+        <a href={site.whatsappUrl} class="hover:text-white transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</footer>

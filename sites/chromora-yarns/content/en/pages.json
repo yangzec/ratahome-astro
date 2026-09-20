@@ -1,0 +1,301 @@
+{
+  "about": {
+    "title": "About Chromora Yarns | Dyed Yarn Manufacturer",
+    "eyebrow": "About Chromora Yarns",
+    "heroTitle": "About Chromora Yarns",
+    "heroDescription": "Dyed yarn manufacturing and export from Keqiao, Shaoxing, China, focused on colour accuracy and long-term supply partnerships.",
+    "workflowTitle": "Our Story",
+    "workflowDescription": "Since 2009, Chromora Yarns has built its reputation around dyed yarns that mills can run with confidence. We combine dyeing capability, winding and packaging discipline, and a commercial team that understands export timelines.\n\nOur catalogue covers polyester textured and fully drawn dyed yarns, space-dyed and twisted constructions, nylon DTY, and cotton dyed yarn—serving apparel, home, and specialty textile customers.",
+    "story": "Since 2009, Chromora Yarns has built its reputation around dyed yarns that mills can run with confidence. We combine dyeing capability, winding and packaging discipline, and a commercial team that understands export timelines.\n\nOur catalogue covers polyester textured and fully drawn dyed yarns, space-dyed and twisted constructions, nylon DTY, and cotton dyed yarn—serving apparel, home, and specialty textile customers.",
+    "approachTitle": "How We Work With Buyers",
+    "approach": "We treat every enquiry as a specification problem first: fibre, denier, lustre, shade, MOQ, and ship date. Clear specs reduce remakes and keep your fabric calendar on track.\n\nFor recurring programs, we retain shade standards and lot history so replenishment orders stay aligned with approved references.",
+    "glanceTitle": "At a Glance",
+    "closingTitle": "Partner With Our Team",
+    "closingDescription": "Looking for a stable dyed yarn source for your next season? Share your requirements and we will propose suitable constructions and sampling steps."
+  },
+  "collections": {
+    "title": "Dyed Yarn Products | Polyester, Nylon, Cotton",
+    "heroTitle": "Dyed Yarn Products",
+    "heroDescription": "Browse Chromora Yarns’ dyed yarn portfolio by fibre and construction. Each product page lists typical deniers, finishes, applications, and how to request samples or quotes.",
+    "packagesTitle": "Explore our core dyed yarn families",
+    "benefitsTitle": "Need Help Choosing a Construction?",
+    "benefitsDescription": "Tell us your fabric type, gauge or reed, and colour standard. We will recommend denier/lustre options and send a sampling plan.",
+    "stylesTitle": "Filter by family",
+    "stylesDescription": "Open a product for denier ranges, finishes, and typical end uses—or request a shade card and sample set.",
+    "styles": ["All Products", "Polyester Dyed Yarn", "Polyester DTY", "Polyester FDY", "Space Dyed", "Twisted Yarn", "Nylon DTY", "Cotton Dyed Yarn"]
+  },
+  "contact": {
+    "title": "Contact Us | Get Quote or Request Sample",
+    "heroTitle": "Contact Us",
+    "heroDescription": "Tell us what you need—quotes, samples, or shade development—and our team will respond on business days with clear next steps.",
+    "getInTouch": "Direct Contacts",
+    "helper": "Attach shade cards or tech packs if available. For the fastest reply, include denier, monthly volume, and destination.",
+    "whatsappLine": "Prefer messaging? Reach us on WhatsApp at +8613800126688 for sample requests and quick commercial questions.",
+    "visitNote": "Factory or office visits in Keqiao, Shaoxing, China can be arranged by appointment—please write ahead so we can prepare shade libraries and sample sets."
+  },
+  "slugs": {
+    "quality": {
+      "title": "Quality & Certifications | Chromora Yarns",
+      "description": "Quality processes and OEKO-TEX Standard 100 documentation for consistent dyed yarn lots.",
+      "content": "Processes and documentation that support consistent dyed yarn lots for domestic and export customers.",
+      "sections": [
+        {
+          "title": "Built Around Repeatable Lots",
+          "body": "Colour and package quality only matter if they repeat. Chromora Yarns aligns dyeing, inspection, and labelling so approved shades can be replenished with fewer surprises across seasons."
+        },
+        {
+          "title": "Our Quality Focus",
+          "body": "In-process checks and lot IDs keep approved shades replenishable.",
+          "items": [
+            "Incoming & process control — Monitor key dyeing and winding parameters against work orders.",
+            "Shade approval discipline — Lab dips and sealed standards before bulk where required.",
+            "Fastness & physical checks — Test to the protocol named in the purchase order.",
+            "Traceability — Lot IDs on packages and documents for mill receiving."
+          ]
+        },
+        {
+          "title": "Certifications & Compliance",
+          "body": "We maintain OEKO-TEX Standard 100 and can share current certificate copies with qualified buyers. Additional customer-specific audits or restricted-substance declarations can be discussed during onboarding. Certificate scope and validity dates are confirmed at order time—request the latest PDF with your RFQ."
+        },
+        {
+          "title": "Ask for Our Latest Certificates",
+          "body": "Email sales@chromora-yarns.com or submit the contact form with your company name and target markets."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How Chromora Yarns handles enquiry and contact information.",
+      "content": "Chromora Yarns uses contact details you submit on this website to respond to quotes, sample requests, and commercial questions. We do not sell enquiry data. To update or delete information you have sent us, email sales@chromora-yarns.com."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the Chromora Yarns website.",
+      "content": "Content on this website is provided for product information and enquiry only. Specifications, MOQs, and lead times are confirmed in writing on each order. Nothing on this site constitutes a binding offer. Governing commercial terms are stated on quotations and contracts issued by Chromora Yarns."
+    },
+    "how-it-works": {
+      "title": "From Dye Lot to Dispatch",
+      "description": "Brief, lab dip, bulk dye and QC, then export packing from Keqiao.",
+      "content": "Share denier, lustre, shade reference, and fabric end use. Approve colour before bulk. We monitor shade, fastness, and package quality, then pack cartons or pallets with lot labels and documents. Quality systems support OEKO-TEX Standard 100; ask for current certificates with your RFQ.",
+      "sections": [
+        {
+          "title": "Four steps",
+          "body": "A short path from brief to dispatch.",
+          "items": [
+            "Brief & match — Share denier, lustre, shade reference, and fabric end use.",
+            "Lab dip / sample — Approve colour before bulk.",
+            "Bulk dye & QC — Monitor shade, fastness, and package quality.",
+            "Pack & ship — Export cartons/pallets with lot labels and documents."
+          ]
+        }
+      ]
+    },
+    "foshan-sourcing-tour": {
+      "title": "Request Sample",
+      "description": "Request a dyed yarn sample or shade development from Chromora Yarns.",
+      "content": "Request a sample set or shade development, or send your denier and colour brief for a commercial quote. WhatsApp: +8613800126688 · Email: sales@chromora-yarns.com"
+    },
+    "polyester-dyed-yarn": {
+      "title": "Polyester Dyed Yarn",
+      "description": "Polyester DTY, FDY, space-dyed, and twisted dyed yarns from Chromora Yarns.",
+      "content": "This hub covers Chromora Yarns’ polyester dyed yarn families: DTY, FDY, space dyed, and twisted constructions. Open a product page for denier ranges, finishes, and typical end uses—or request a shade card and sample set.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Polyester FDY", "href": "/products/polyester-fdy" },
+        { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "polyester-dty": {
+      "title": "Polyester DTY",
+      "description": "Dyed polyester draw textured yarn for soft hand, comfort stretch, and reliable colour in circular knits and related fabrics.",
+      "content": "Polyester DTY is a core workhorse for dyed filament programs. Texturing adds bulk and a pleasant hand, while package dyeing delivers consistent colour across cones for knitting and selected weaving uses.\n\nChromora Yarns supplies dyed DTY across commonly requested deniers and lustres. Share your gauge, fabric type, and shade standard—we will propose suitable filament counts and sampling steps.\n\nExport packing and lot labelling support mills that need clear intake records for multi-country garment programs.",
+      "specs": [
+        { "parameter": "Fibre", "value": "100% Polyester" },
+        { "parameter": "Process", "value": "DTY (draw textured), dyed" },
+        { "parameter": "Denier / filament", "value": "e.g. 75D–300D ranges — confirm RFQ" },
+        { "parameter": "Lustre", "value": "Semi dull / full dull / bright" },
+        { "parameter": "Intermingling", "value": "IM / NIM — as specified" },
+        { "parameter": "Colour", "value": "Catalogue / custom lab dip" },
+        { "parameter": "Package", "value": "Cone — export carton" },
+        { "parameter": "MOQ", "value": "Confirm with sales" },
+        { "parameter": "Lead time", "value": "Confirm after shade approval" }
+      ],
+      "ctaTitle": "Interested in Polyester DTY?",
+      "ctaBody": "Request a sample set or send your denier and colour brief for a commercial quote.",
+      "related": [
+        { "label": "Polyester FDY", "href": "/products/polyester-fdy" },
+        { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn" },
+        { "label": "Nylon DTY", "href": "/products/nylon-dty" }
+      ]
+    },
+    "polyester-fdy": {
+      "title": "Polyester FDY",
+      "description": "Fully drawn dyed polyester filament for smooth surfaces, dimensional stability, and clean fabric appearance.",
+      "content": "FDY is chosen when fabrics need a smoother, more stable filament character than textured yarn. Dyed FDY supports weaving, embroidery bases, and constructions where lustre and evenness matter.\n\nChromora Yarns offers dyed FDY options across practical denier bands. Tell us your end fabric and preferred lustre so we can align filament selection and colour development.\n\nWe support both catalogue colours and custom matching for seasonal programs, with samples before bulk commitment.",
+      "specs": [
+        { "parameter": "Fibre", "value": "100% Polyester" },
+        { "parameter": "Process", "value": "FDY (fully drawn), dyed" },
+        { "parameter": "Denier / filament", "value": "e.g. multi-ply options — confirm RFQ" },
+        { "parameter": "Lustre", "value": "Semi dull / bright / as agreed" },
+        { "parameter": "Twist (if any)", "value": "Optional — specify" },
+        { "parameter": "Colour", "value": "Catalogue / custom" },
+        { "parameter": "Package", "value": "Cone / bobbin — export packing" },
+        { "parameter": "MOQ", "value": "Confirm with sales" },
+        { "parameter": "Lead time", "value": "Confirm after shade approval" }
+      ],
+      "ctaTitle": "Interested in Polyester FDY?",
+      "ctaBody": "Request a sample set or send your denier and colour brief for a commercial quote.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Twisted Yarn", "href": "/products/twisted-yarn" },
+        { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "polyester-space-dyed-yarn": {
+      "title": "Polyester Space Dyed Yarn",
+      "description": "Multi-colour segments dyed along the yarn length for distinctive multi-tone effects in carpets, rugs, fashion knits, and decorative fabrics.",
+      "content": "Multi-colour segments dyed along the yarn length for distinctive multi-tone effects in carpets, rugs, fashion knits, and decorative fabrics.",
+      "bullets": [
+        "Interval dyeing creates controlled colour blocks or soft transitions along each filament package",
+        "Base options typically include DTY, doubled, or high-bulk polyester constructions",
+        "Custom segment counts and repeat lengths to match carpet and knit design briefs",
+        "Catalogue and custom shades; lab dips available before bulk confirmation",
+        "Export-ready cones/cheeses with lot identification for mill intake",
+        "Suitable for programs that need visual depth without piece-dye complexity"
+      ],
+      "specs": [
+        { "parameter": "Dye method", "value": "Space dyeing (segment / interval colour)" },
+        { "parameter": "Colour segments", "value": "2–4 colours per repeat (custom on request)" },
+        { "parameter": "Repeat length", "value": "Short or long repeat — confirm with design brief" },
+        { "parameter": "Base yarn", "value": "Polyester DTY / doubled / high bulk" },
+        { "parameter": "Denier range", "value": "Confirm with RFQ (common filament ranges supported)" },
+        { "parameter": "Lustre", "value": "Semi dull / bright / as agreed" },
+        { "parameter": "Colourfastness", "value": "Target wash / light / rub per agreed standard" },
+        { "parameter": "Shrinkage", "value": "As per base yarn and finish — confirm in lab report" },
+        { "parameter": "Package form", "value": "Cones / cheeses — export packing" },
+        { "parameter": "MOQ", "value": "Custom colour programs: confirm kilogram MOQ with sales; catalogue shades may differ" },
+        { "parameter": "Lead time", "value": "Sample: confirm with sales · Bulk: confirm after shade approval" }
+      ],
+      "applicationsTitle": "Applications",
+      "applicationsIntro": "Space dyed polyester yarn is commonly selected for:",
+      "applications": [
+        "Carpets and area rugs",
+        "Prayer mats and runners",
+        "Fashion knitwear with multi-tone surface interest",
+        "Upholstery and decorative woven looks",
+        "Scarves, stoles, and accessory knits",
+        "Designer socks and novelty fabrics"
+      ],
+      "applicationsNote": "Designers use space dyed yarn to build depth and movement in the fabric without relying solely on piece dyeing—helpful when pattern and colour placement are part of the product story.",
+      "qcTitle": "Quality Control",
+      "qc": "Each production lot is checked against the approved shade reference for segment clarity and overall tone. We monitor colourfastness targets agreed in the order, package winding quality, and labelling so receiving mills can trace lots. Certificates and test summaries can be provided with shipments when specified in the PO.",
+      "moqTitle": "MOQ & Lead Time",
+      "moq": "Minimum order quantities depend on whether you select catalogue shades or a custom multi-colour program. Share your monthly volume and destination; we will confirm MOQ, sampling timeline, and bulk lead time in writing. Rush sampling may be available for priority programs—ask when you submit the brief.",
+      "ctaTitle": "Interested in Polyester Space Dyed Yarn?",
+      "ctaBody": "Request a sample set or shade development, or send your denier and colour brief for a commercial quote.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Twisted Yarn", "href": "/products/twisted-yarn" },
+        { "label": "Polyester FDY", "href": "/products/polyester-fdy" }
+      ]
+    },
+    "twisted-yarn": {
+      "title": "Twisted Yarn",
+      "description": "Dyed twisted polyester yarn for enhanced strength, fabric character, and embroidery or crepe-oriented programs.",
+      "content": "Twisting changes yarn behaviour—adding cohesion, strength, and surface interest that many woven and embroidery applications require. Combined with dyeing, twisted yarn supports both functional and aesthetic goals.\n\nChromora Yarns produces twisted dyed yarns in single and multi-ply constructions as agreed with the buyer. Specify TPM/TPI targets, base denier, and shade references in your enquiry.\n\nQC focuses on twist regularity, shade alignment, and package build suitable for high-speed take-up.",
+      "specs": [
+        { "parameter": "Fibre", "value": "Polyester (base as specified)" },
+        { "parameter": "Construction", "value": "Single / double / multi-ply twist" },
+        { "parameter": "Twist level", "value": "TPM/TPI — per order" },
+        { "parameter": "Base yarn", "value": "DTY / FDY / as agreed" },
+        { "parameter": "Denier", "value": "Confirm RFQ" },
+        { "parameter": "Colour", "value": "Catalogue / custom" },
+        { "parameter": "Package", "value": "Cone — export packing" },
+        { "parameter": "MOQ", "value": "Confirm with sales" },
+        { "parameter": "Lead time", "value": "Confirm after shade & twist approval" }
+      ],
+      "ctaTitle": "Interested in Twisted Yarn?",
+      "ctaBody": "Request a sample set or send TPM/TPI, base denier, and shade references for a quote.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Polyester FDY", "href": "/products/polyester-fdy" },
+        { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn" }
+      ]
+    },
+    "nylon-dty": {
+      "title": "Nylon DTY",
+      "description": "Dyed nylon textured yarn for strength, smooth recovery, and fine-gauge apparel applications.",
+      "content": "Nylon DTY is valued for toughness and a smooth dyed appearance in activewear, intimates, hosiery, and fine knits. Colour consistency across lots helps brands keep trim and body fabrics aligned.\n\nChromora Yarns supplies dyed nylon DTY for buyers who need clear denier options and responsive sampling. Share stretch, opacity, and shade requirements with your RFQ.\n\nWe coordinate packaging and documents for export destinations and can align test expectations with your QA checklist.",
+      "specs": [
+        { "parameter": "Fibre", "value": "Nylon" },
+        { "parameter": "Process", "value": "DTY, dyed" },
+        { "parameter": "Denier / filament", "value": "e.g. common fine deniers — confirm RFQ" },
+        { "parameter": "Lustre", "value": "Semi dull / bright" },
+        { "parameter": "Colour", "value": "Catalogue / custom" },
+        { "parameter": "Package", "value": "Cone — export packing" },
+        { "parameter": "MOQ", "value": "Confirm with sales" },
+        { "parameter": "Lead time", "value": "Confirm after shade approval" }
+      ],
+      "ctaTitle": "Interested in Nylon DTY?",
+      "ctaBody": "Request a sample set or send stretch, opacity, and shade requirements for a quote.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Cotton Dyed Yarn", "href": "/products/cotton-dyed-yarn" },
+        { "label": "Twisted Yarn", "href": "/products/twisted-yarn" }
+      ]
+    },
+    "cotton-dyed-yarn": {
+      "title": "Cotton Dyed Yarn",
+      "description": "Soft, breathable dyed cotton yarn for apparel, terry, and lifestyle textile programs.",
+      "content": "Cotton dyed yarn brings natural hand and comfort to knitted and woven goods. Reliable dyeing and even winding help mills reduce shade-related downtime on long runs.\n\nChromora Yarns offers cotton dyed yarn across practical count ranges for apparel and home textiles. Provide count, twist, and colour standard (Pantone or physical swatch) when requesting samples.\n\nAsk for fastness targets appropriate to your end use—wash, rub, and light—so lab validation matches buyer expectations.",
+      "specs": [
+        { "parameter": "Fibre", "value": "100% Cotton (blends on request)" },
+        { "parameter": "Count range", "value": "e.g. Ne ranges — confirm RFQ" },
+        { "parameter": "Twist", "value": "As specified" },
+        { "parameter": "Colour", "value": "Catalogue / custom lab dip" },
+        { "parameter": "Fastness", "value": "Per agreed standard" },
+        { "parameter": "Package", "value": "Cone / hank — confirm" },
+        { "parameter": "MOQ", "value": "Confirm with sales" },
+        { "parameter": "Lead time", "value": "Confirm after shade approval" }
+      ],
+      "ctaTitle": "Interested in Cotton Dyed Yarn?",
+      "ctaBody": "Request a sample set or send count, twist, and colour standard for a quote.",
+      "related": [
+        { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+        { "label": "Nylon DTY", "href": "/products/nylon-dty" },
+        { "label": "Twisted Yarn", "href": "/products/twisted-yarn" }
+      ]
+    }
+  },
+  "packageBenefits": [
+    { "title": "Clear specifications", "description": "Fibre, denier, lustre, shade, and end use stated before sampling." },
+    { "title": "Lab dip first", "description": "Approve colour before bulk dye lots are committed." },
+    { "title": "Export documents", "description": "Lot labels and packing lists prepared for mill intake." },
+    { "title": "One commercial contact", "description": "Quotes and samples handled by email or WhatsApp." }
+  ],
+  "collectionPackages": [
+    { "title": "Polyester DTY", "description": "Soft, textured dyed polyester for circular knits, socks, and stretch fabrics.", "image": "/images/home-complete-solution/living-room-v3.jpg", "href": "/products/polyester-dty" },
+    { "title": "Polyester FDY", "description": "Smooth fully drawn dyed filament for weaving, embroidery, and stable fabric bases.", "image": "/images/home-complete-solution/dining-room-v2.jpg", "href": "/products/polyester-fdy" },
+    { "title": "Polyester Space Dyed Yarn", "description": "Interval-dyed multi-colour yarn for carpets, fashion knits, and decorative textiles.", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/products/polyester-space-dyed-yarn" },
+    { "title": "Twisted Yarn", "description": "Twisted dyed yarn for strength, surface interest, and embroidery programs.", "image": "/images/finished-chair.webp", "href": "/products/twisted-yarn" },
+    { "title": "Nylon DTY", "description": "Dyed nylon textured yarn for activewear, lingerie, and fine-gauge knits.", "image": "/images/package-living-california.webp", "href": "/products/nylon-dty" },
+    { "title": "Cotton Dyed Yarn", "description": "Dyed cotton yarn with a soft hand for apparel, terry, and lifestyle fabrics.", "image": "/images/home-audiences/homeowner-v2.jpg", "href": "/products/cotton-dyed-yarn" }
+  ],
+  "workflow": [
+    { "step": "01", "title": "Location", "description": "Keqiao, Shaoxing, China" },
+    { "step": "02", "title": "Established", "description": "2009" },
+    { "step": "03", "title": "Capacity", "description": "4,800 MT / year" },
+    { "step": "04", "title": "Shade library", "description": "2400+" },
+    { "step": "05", "title": "Certification focus", "description": "OEKO-TEX Standard 100" }
+  ],
+  "aboutAudiences": [
+    { "title": "Specification first", "description": "Every enquiry starts with fibre, denier, lustre, shade, MOQ, and ship date." },
+    { "title": "Shade standards retained", "description": "Recurring programs keep sealed references and lot history for replenishment." },
+    { "title": "Export calendar", "description": "Commercial replies include sampling steps and indicative ship windows." }
+  ],
+  "collectionBenefits": [
+    { "title": "View specs first", "description": "Denier, lustre, and end use before a long marketing brief." },
+    { "title": "Request a sample", "description": "Lab dips and sample sets before bulk confirmation." },
+    { "title": "Get a quote", "description": "Share destination port and monthly volume for availability." }
+  ]
+}

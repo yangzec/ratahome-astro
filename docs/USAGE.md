@@ -1,6 +1,6 @@
 # 使用文档 -- Trade Site Platform
 
-面向开发者与内容编辑。当前首个站点为 **Ratahome 家具站**（`sites/ratahome-furniture`）。
+面向开发者与内容编辑。当前站点实例：**Ratahome 家具站**（`sites/ratahome-furniture`）与 **Chromora Yarns 染色纱站**（`sites/chromora-yarns`）。
 
 ---
 
@@ -69,6 +69,7 @@ trade-site-platform/
 | 命令 | 说明 |
 |------|------|
 | `pnpm dev` | 启动 Ratahome 开发服务器 |
+| `pnpm --filter chromora-yarns dev` | 启动 Chromora Yarns（端口 `43125`） |
 | `pnpm build` | 生产构建 |
 | `pnpm preview` | 预览构建结果 |
 | `pnpm db:migrate` | 本地 D1 迁移 |

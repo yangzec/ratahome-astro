@@ -1,0 +1,13 @@
+{
+  "sections": [
+    "hero-fullbleed",
+    "assurance-bar",
+    "metrics-bar",
+    "ecosystem",
+    "capabilities-grid",
+    "rooms-grid",
+    "audience-cards",
+    "process-timeline",
+    "contact-cta"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "eyebrow": "OEKO-TEX Standard 100 · 2400+ shades · Export packing available",
+    "title": "Dyed Yarn Manufacturer & Exporter for Global Textile Brands",
+    "description": "Polyester, nylon, and cotton dyed yarns engineered for shade accuracy, batch consistency, and reliable export lead times—from Keqiao, Shaoxing, China to mills and brands worldwide.",
+    "image": "/images/hero-living-v2.webp",
+    "imageAlt": "Dyed yarn packages prepared for mill intake and export"
+  },
+  "assurances": [
+    { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX Standard 100", "description": "Ask for current certificates with your RFQ" },
+    { "icon": "/icons/box-seam.svg", "title": "2400+ colour shades", "description": "Catalogue colours and custom lab dips" },
+    { "icon": "/icons/shield-check.svg", "title": "Export packing available", "description": "Lot-labelled cones, cartons, and pallets" },
+    { "icon": "/icons/clock.svg", "title": "Since 2009 in Keqiao", "description": "Dyeing, winding, and export from Shaoxing" }
+  ],
+  "metrics": [
+    { "value": "Since 2009", "label": "Years in yarn dyeing" },
+    { "value": "4,800 MT / year", "label": "Annual capacity" },
+    { "value": "2400+", "label": "Colour shades" },
+    { "value": "Worldwide", "label": "Markets served" }
+  ],
+  "audiences": {
+    "title": "Where Our Yarns Are Used",
+    "description": "From fashion floors to home and industrial textiles, Chromora Yarns yarns support common mill and brand programs.",
+    "items": [
+      { "title": "Circular & flat knitting", "description": "Stable dyed lots for apparel and fine-gauge programs.", "href": "/contact-us", "image": "/images/home-audiences/homeowner-v2.jpg" },
+      { "title": "Weaving & suiting programs", "description": "Even filament and colour for woven constructions.", "href": "/contact-us", "image": "/images/home-audiences/interior-designer-v2.jpg" },
+      { "title": "Socks & hosiery", "description": "DTY options selected for comfort stretch and shade repeat.", "href": "/contact-us", "image": "/images/home-audiences/hospitality-restaurant-v3.jpg" },
+      { "title": "Home textiles & upholstery", "description": "Dyed yarns for sheeting, upholstery, and decorative weaves.", "href": "/contact-us", "image": "/images/home-audiences/builders-contractors-v4.webp" },
+      { "title": "Carpets, rugs & floor coverings", "description": "Space-dyed and twisted constructions for visual depth.", "href": "/products/polyester-space-dyed-yarn", "image": "/images/home-projects/arcaya-contemporary-residence.webp" },
+      { "title": "Embroidery & decorative fabrics", "description": "Twisted and FDY bases for clean decorative work.", "href": "/products/twisted-yarn", "image": "/images/finished-chair.webp" }
+    ]
+  },
+  "capabilities": {
+    "title": "Why Buyers Choose Chromora Yarns",
+    "description": "Buyers work with us for repeatable shade lots, a broad dyed-yarn range, and documentation that supports international shipments.",
+    "items": [
+      { "title": "Shade Consistency", "description": "Controlled dyeing and lot tracking help keep repeat orders within agreed tolerance—critical for multi-factory garment programs.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "Broad Product Range", "description": "Polyester DTY and FDY, space-dyed and twisted constructions, nylon DTY, and cotton dyed yarn—so sourcing teams can consolidate SKUs with one supplier.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "Quality Discipline", "description": "In-process checks on colourfastness, strength, and winding quality, aligned with OEKO-TEX Standard 100 and customer test protocols.", "image": "/images/package-living-california.webp" },
+      { "title": "Export-Ready Service", "description": "Competitive MOQs where feasible, transparent lead times, and responsive quote/sample handling via email or WhatsApp.", "image": "/images/delivery-container.webp" }
+    ]
+  },
+  "process": {
+    "title": "From Dye Lot to Dispatch",
+    "description": "Quality systems support OEKO-TEX Standard 100; ask for current certificates with your RFQ. Figures reflect Chromora Yarns’ stated production and catalogue range; ask our sales team for current lead times by denier and colour.",
+    "image": "/images/home-process/completed-residence-v2.jpg",
+    "imageAlt": "Yarn packages after dyeing, winding, and lot labelling",
+    "steps": [
+      { "step": "01", "title": "Brief & match", "description": "Share denier, lustre, shade reference, and fabric end use." },
+      { "step": "02", "title": "Lab dip / sample", "description": "Approve colour before bulk." },
+      { "step": "03", "title": "Bulk dye & QC", "description": "Monitor shade, fastness, and package quality." },
+      { "step": "04", "title": "Pack & ship", "description": "Export cartons/pallets with lot labels and documents." }
+    ]
+  },
+  "testimonials": [
+    { "quote": "Repeat lots stayed within the agreed shade band across two garment factories.", "author": "Sourcing lead · apparel program" },
+    { "quote": "Sample, bulk confirmation, and packing documents arrived in one commercial thread.", "author": "Mill buyer · home textiles" }
+  ],
+  "warranty": {
+    "eyebrow": "Quality systems",
+    "title": "Built Around Repeatable Lots",
+    "description": "Colour and package quality only matter if they repeat. Chromora Yarns aligns dyeing, inspection, and labelling so approved shades can be replenished with fewer surprises across seasons.",
+    "commitment": "Quality systems support OEKO-TEX Standard 100; certificate scope and validity dates are confirmed at order time.",
+    "cases": [
+      { "question": "Incoming & process control", "title": "Work-order discipline", "description": "Monitor key dyeing and winding parameters against work orders." },
+      { "question": "Shade approval", "title": "Lab dips before bulk", "description": "Lab dips and sealed standards before bulk where required." },
+      { "question": "Traceability", "title": "Lot IDs on packages", "description": "Lot IDs on packages and documents for mill receiving." }
+    ]
+  },
+  "rooms": {
+    "title": "Product Range",
+    "items": [
+      { "label": "Polyester DTY", "slug": "polyester-dty" },
+      { "label": "Polyester FDY", "slug": "polyester-fdy" },
+      { "label": "Polyester Space Dyed Yarn", "slug": "polyester-space-dyed-yarn" },
+      { "label": "Twisted Yarn", "slug": "twisted-yarn" },
+      { "label": "Nylon DTY", "slug": "nylon-dty" },
+      { "label": "Cotton Dyed Yarn", "slug": "cotton-dyed-yarn" }
+    ]
+  },
+  "projects": {
+    "title": "Explore our core dyed yarn families",
+    "items": [
+      { "location": "Keqiao, China", "delivery": "Catalogue & custom shades", "type": "Space dyed", "title": "Polyester Space Dyed Yarn", "scope": "carpets, knits, decorative textiles", "solution": "interval colour along the yarn", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/products/polyester-space-dyed-yarn" },
+      { "location": "Export packing", "delivery": "Sample then bulk", "type": "Workhorse DTY", "title": "Polyester DTY", "scope": "circular knits, socks, stretch fabrics", "solution": "textured dyed polyester", "image": "/images/package-living-california.webp", "href": "/products/polyester-dty" }
+    ]
+  },
+  "ecosystem": {
+    "title": "A Dependable Source for Dyed Yarn Supply",
+    "description": "Chromora Yarns manufactures and exports dyed yarns for knitting, weaving, socks, home textiles, and technical fabrics. Buyers work with us for repeatable shade lots, clear specifications, and documentation that supports international shipments. Whether you need standard catalogue colours or custom matching to Pantone or lab dips, our team aligns denier, lustre, and finish to your fabric program—then packs for sea or air freight from Keqiao, Shaoxing, China.",
+    "items": [
+      { "step": "01", "title": "Knitting & weaving", "description": "Dyed yarns specified for circular knits, flat knits, and woven programs." },
+      { "step": "02", "title": "Repeatable shade lots", "description": "Lot tracking and sealed references for replenishment orders." },
+      { "step": "03", "title": "Catalogue or custom", "description": "Pantone and lab-dip matching before bulk confirmation." },
+      { "step": "04", "title": "Export from Keqiao", "description": "Sea or air packing with lot labels and shipping documents." }
+    ]
+  },
+  "cta": {
+    "title": "Ready for a Quote or Sample?",
+    "description": "Send your denier list, shade references, and destination port. Our commercial team will reply with availability, indicative pricing, and sampling options. Or chat on WhatsApp: +8613800126688",
+    "formTitle": "Get Quote",
+    "formDescription": "Tell us the fibre, denier or count, shade standard, monthly volume, and destination. A shade card or tech pack helps, but is not required.",
+    "steps": [
+      "Share denier, lustre, shade reference, and fabric end use.",
+      "Approve a lab dip or sample before bulk.",
+      "Confirm MOQ, lead time, and export packing in writing."
+    ]
+  },
+  "footerFeatures": [
+    { "title": "OEKO-TEX Standard 100", "description": "Current copies available to qualified buyers" },
+    { "title": "4,800 MT / year", "description": "Stated annual dyed-yarn capacity" },
+    { "title": "2400+ shades", "description": "Catalogue range plus custom development" },
+    { "title": "Keqiao export packing", "description": "Lot labels, cartons, and documents" }
+  ]
+}

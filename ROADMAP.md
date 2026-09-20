@@ -40,6 +40,7 @@
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
+- [x] 第二站实例 `sites/chromora-yarns`（染色纱 B2B，模板 `b2b-manufacturing`）
 - [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
@@ -328,6 +329,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-20 23:29 | 新增 `sites/chromora-yarns`：染色纱 B2B 站，从 `b2b-manufacturing` 复制并填入 Chromora Yarns 文案 / 导航 / 产品详情 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -349,6 +351,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-20 23:29 | chromora-yarns 配置 | `pnpm site-cli validate chromora-yarns` | 通过 |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |

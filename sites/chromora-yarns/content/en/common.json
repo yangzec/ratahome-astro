@@ -1,0 +1,101 @@
+{
+  "site": {
+    "name": "Chromora Yarns",
+    "title": "Dyed Yarn Manufacturer & Exporter",
+    "description": "Chromora Yarns manufactures and exports polyester, nylon, and cotton dyed yarns from Keqiao, Shaoxing, China. Request samples or get a quote.",
+    "whatsapp": "+8613800126688",
+    "whatsappUrl": "https://wa.me/8613800126688",
+    "hours": "Mon–Sat, 09:00–18:00 (local time)",
+    "location": "Keqiao, Shaoxing, China",
+    "address": "No. 18 Textile Avenue, Keqiao District, Shaoxing, Zhejiang, China",
+    "phone": "+86 575 8888 2610",
+    "email": "sales@chromora-yarns.com",
+    "tagline": "OEKO-TEX Standard 100 · 2400+ shades · Export packing available"
+  },
+  "buttons": {
+    "startProject": "Contact Us",
+    "uploadFloorPlan": "Get Quote",
+    "factoryTour": "Request Sample",
+    "sendFloorPlan": "Send Enquiry",
+    "sendMessage": "Send Enquiry",
+    "whatsappUs": "Chat on WhatsApp",
+    "viewAll": "View All Products",
+    "seeJourney": "Request Sample",
+    "readWarranty": "Ask for Certificates",
+    "exploreProjects": "View All Products",
+    "requestQuote": "Get Quote",
+    "discussJoinery": "Request Sample"
+  },
+  "form": {
+    "name": "Full Name",
+    "email": "Email",
+    "projectType": "Enquiry Type",
+    "message": "Message",
+    "projectDetails": "Message",
+    "floorPlan": "Shade reference or tech pack (optional)",
+    "privacy": "Attach shade cards or tech packs if available. For the fastest reply, include denier, monthly volume, and destination.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "messagePlaceholder": "Specs, volume, timeline...",
+    "detailsPlaceholder": "Denier or count, shade reference, monthly volume, destination port...",
+    "projectTypes": {
+      "residence": "Quote",
+      "design": "Sample",
+      "development": "Shade Matching",
+      "hospitality": "Other",
+      "other": "Not sure"
+    }
+  },
+  "footer": {
+    "description": "Chromora Yarns is a dyed yarn manufacturer and exporter based in Keqiao, Shaoxing, China. Since 2009, we supply polyester, nylon, and cotton dyed yarns for knitting, weaving, and home textiles worldwide—backed by consistent shade matching and export-ready packaging.",
+    "copyright": "All rights reserved.",
+    "foundedYear": "2009",
+    "columns": [
+      {
+        "title": "About Chromora Yarns",
+        "body": "Chromora Yarns is a dyed yarn manufacturer and exporter based in Keqiao, Shaoxing, China. Since 2009, we supply polyester, nylon, and cotton dyed yarns for knitting, weaving, and home textiles worldwide—backed by consistent shade matching and export-ready packaging.",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "Quick Links",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "Home", "href": "/" },
+          { "label": "About Us", "href": "/about-us" },
+          { "label": "Products", "href": "/products" },
+          { "label": "Quality & Certifications", "href": "/quality" },
+          { "label": "Contact Us", "href": "/contact-us" },
+          { "label": "Request Sample", "href": "/contact-us?intent=sample" },
+          { "label": "Get Quote", "href": "/contact-us?intent=quote" }
+        ]
+      },
+      {
+        "title": "Products",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "Polyester DTY", "href": "/products/polyester-dty" },
+          { "label": "Polyester FDY", "href": "/products/polyester-fdy" },
+          { "label": "Polyester Space Dyed Yarn", "href": "/products/polyester-space-dyed-yarn" },
+          { "label": "Twisted Yarn", "href": "/products/twisted-yarn" },
+          { "label": "Nylon DTY", "href": "/products/nylon-dty" },
+          { "label": "Cotton Dyed Yarn", "href": "/products/cotton-dyed-yarn" }
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": "",
+        "links": [
+          { "label": "Address: No. 18 Textile Avenue, Keqiao District, Shaoxing, Zhejiang, China", "href": "/contact-us" },
+          { "label": "Phone: +86 575 8888 2610", "href": "tel:+8657588882610" },
+          { "label": "Email: sales@chromora-yarns.com", "href": "mailto:sales@chromora-yarns.com" },
+          { "label": "WhatsApp: +8613800126688", "href": "https://wa.me/8613800126688" },
+          { "label": "Business hours: Mon–Sat, 09:00–18:00 (local time)", "href": "/contact-us" }
+        ],
+        "note": "Prefer chat? Message us on WhatsApp for faster sample and quote support."
+      }
+    ]
+  }
+}
