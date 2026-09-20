@@ -331,6 +331,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 00:45 | 新增 `docs/design.md`；Chromora `@theme` 对齐青绿三色 + Inter，首页删 assurance / ecosystem / audience，主 CTA 大于次按钮 |
 | 2026-09-21 00:40 | 按首页槽位文案重配 `sites/chromora-yarns` 图片：织机、袜机、段染特写、绣花、对色墙、QC、出口纸箱托盘、DTY 膨体筒；QC/FDY/棉纱拆出独立路径以免共用图错位 |
 | 2026-09-21 00:11 | 覆盖 `sites/chromora-yarns/public/images/` 家具占位图为染色纱筒、针织/织造、出口包装与 `CHROMORA YARNS` logo（路径不变） |
 | 2026-09-21 00:00 | 部署 `chromora-yarns` Worker 预览：D1 绑定共享 `trade-platform`（`58956d48-3510-434d-93f1-5956aa0c47b5`），公开 URL `https://chromora-yarns.yangzec.workers.dev/` |
@@ -356,6 +357,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 00:45 | chromora-yarns 设计收敛 | `pnpm site-cli validate chromora-yarns` + `pnpm --filter chromora-yarns build` + `pnpm --filter ratahome-furniture build` + `cf:deploy` + `curl` `/` `/zh/` `/products/` `/about-us/` | validate/build 通过；家具站回归构建通过；Worker 预览 200；HTML 含青绿 `14 92 99`，无 Cinzel/Poppins/受众墙 |
 | 2026-09-21 00:16 | chromora-yarns 图片替换后预览 | `pnpm --filter chromora-yarns cf:deploy` + `curl` `/` `/zh/` + 浏览器截图 | 14 张新图已上传；EN/ZH 200；hero/卡片为纱筒与纺织图，无家具客厅 |
 | 2026-09-21 00:00 | chromora-yarns 预览 EN/ZH | `curl` + 浏览器访问 workers.dev `/`、`/zh/`、关于/产品/联系 | 200；英文标题 Dyed Yarn Manufacturer，中文标题含「染色纱」 |
 | 2026-09-21 00:00 | chromora-yarns 远程部署 | `pnpm --filter chromora-yarns cf:deploy` | 通过；Worker `chromora-yarns`，R2 绑定 `trade-platform-assets` |
