@@ -356,6 +356,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 01:02 | chromora-yarns 图文对齐后预览 | `pnpm --filter chromora-yarns cf:deploy` + `curl` `/` `/zh/` `/products/` + 浏览器截 EN 分区 | Worker `b2de05a3-70aa-4107-8de5-73a1084f6ff1`；EN/ZH/产品 200；hero=色号货架、受众=圆机/织机/袜机/布卷/段染/绣花、能力=对色墙/多 SKU/QC/纸箱托盘、流程=带批次标签络筒；产品卡 DTY/FDY/段染/棉纱各自对应 |
 | 2026-09-21 00:16 | chromora-yarns 图片替换后预览 | `pnpm --filter chromora-yarns cf:deploy` + `curl` `/` `/zh/` + 浏览器截图 | 14 张新图已上传；EN/ZH 200；hero/卡片为纱筒与纺织图，无家具客厅 |
 | 2026-09-21 00:00 | chromora-yarns 预览 EN/ZH | `curl` + 浏览器访问 workers.dev `/`、`/zh/`、关于/产品/联系 | 200；英文标题 Dyed Yarn Manufacturer，中文标题含「染色纱」 |
 | 2026-09-21 00:00 | chromora-yarns 远程部署 | `pnpm --filter chromora-yarns cf:deploy` | 通过；Worker `chromora-yarns`，R2 绑定 `trade-platform-assets` |
