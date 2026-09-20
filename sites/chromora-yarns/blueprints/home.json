@@ -1,12 +1,9 @@
 {
   "sections": [
     "hero-fullbleed",
-    "assurance-bar",
     "metrics-bar",
-    "ecosystem",
-    "capabilities-grid",
     "rooms-grid",
-    "audience-cards",
+    "capabilities-grid",
     "process-timeline",
     "contact-cta"
   ]

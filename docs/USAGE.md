@@ -135,23 +135,26 @@ sites/ratahome-furniture/content/
 
 ## 7. 修改主题（颜色 / 字体）
 
-编辑 `sites/ratahome-furniture/theme.json`：
+设计规则以 [`docs/design.md`](design.md) 为准（60-30-10、字族上限、4 / 8 间距、首页删冗余）。
+
+编辑对应站点的 `theme.json`（家具站示例为暖橙 + Cinzel；Chromora 必须用青绿三色 + Inter，见设计文档第 2--3 节）：
 
 ```json
 {
   "colors": {
-    "accent": "192 92 21",
-    "ink": "43 44 39",
-    ...
+    "accent": "14 92 99",
+    "ink": "28 34 36",
+    "cream": "244 245 243"
   },
   "fonts": {
     "sans": "'Inter', ...",
-    "display": "'Cinzel', ..."
+    "label": "'Inter', ...",
+    "display": "'Inter', ..."
   }
 }
 ```
 
-颜色值为 **RGB 空格分隔**（无 `rgb()` 包裹），由 `BaseLayout.astro` 注入为 CSS 变量。
+颜色值为 **RGB 空格分隔**（无 `rgb()` 包裹），由 `BaseLayout.astro` 注入为 CSS 变量。站点 `src/styles/global.css` 的 `@theme` 必须与 `theme.json` 一致，禁止在 Chromora 留下家具橙 / Cinzel / Poppins 作为回退。
 
 ---
 

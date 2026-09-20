@@ -61,6 +61,7 @@ pnpm site-cli deploy <slug>
 
 ## Docs
 
+- **设计系统（全站标准）**：[`docs/design.md`](docs/design.md)
 - **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
 - **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
 - Agent 协作规范：`AGENTS.md`

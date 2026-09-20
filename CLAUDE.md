@@ -180,16 +180,17 @@
 
 ### 工作流导航
 
-1. 进入任务：读 `CLAUDE.md` → `AGENTS.md` → `ROADMAP.md`
-2. 改文案：编辑 `sites/ratahome-furniture/content/{en,zh}/*.json`
-3. 改首页区块顺序：编辑 `sites/ratahome-furniture/blueprints/home.json`
-4. 改主题色：编辑 `sites/ratahome-furniture/theme.json`
-5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
-6. 本地开发：`pnpm dev`（端口 `43123`）
+1. 进入任务：读 `CLAUDE.md` → `AGENTS.md` → `ROADMAP.md` → `docs/design.md`
+2. 改文案：编辑 `sites/{slug}/content/{en,zh}/*.json`
+3. 改首页区块顺序：编辑 `sites/{slug}/blueprints/home.json`（先对照 `docs/design.md` 删冗余）
+4. 改主题：编辑 `sites/{slug}/theme.json`，并同步该站 `src/styles/global.css` 的 `@theme`
+5. 加页面路由：更新 `sites/{slug}/src/data/slugs.ts` + `pages.json`
+6. 本地开发：`pnpm dev`（家具 `43123`）或 `pnpm --filter chromora-yarns dev`（`43125`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
 ### 文档指针
 
+- **设计系统**：`docs/design.md`（全站配色 / 字体 / 布局 / CTA 可执行标准）
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`

@@ -32,17 +32,17 @@
   },
   "capabilities": {
     "title": "Why Buyers Choose Chromora Yarns",
-    "description": "Buyers work with us for repeatable shade lots, a broad dyed-yarn range, and documentation that supports international shipments.",
+    "description": "Repeatable lots, a usable dyed-yarn range, and documents that travel with the shipment.",
     "items": [
-      { "title": "Shade Consistency", "description": "Controlled dyeing and lot tracking help keep repeat orders within agreed tolerance—critical for multi-factory garment programs.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
-      { "title": "Broad Product Range", "description": "Polyester DTY and FDY, space-dyed and twisted constructions, nylon DTY, and cotton dyed yarn—so sourcing teams can consolidate SKUs with one supplier.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
-      { "title": "Quality Discipline", "description": "In-process checks on colourfastness, strength, and winding quality, aligned with OEKO-TEX Standard 100 and customer test protocols.", "image": "/images/home-complete-solution/qc-inspection.jpg" },
-      { "title": "Export-Ready Service", "description": "Competitive MOQs where feasible, transparent lead times, and responsive quote/sample handling via email or WhatsApp.", "image": "/images/delivery-container.webp" }
+      { "title": "Shade Consistency", "description": "Lot tracking keeps repeat orders inside the agreed shade band.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
+      { "title": "Broad Product Range", "description": "Polyester, nylon, and cotton dyed yarns so sourcing can consolidate SKUs.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
+      { "title": "Quality Discipline", "description": "In-process checks aligned with OEKO-TEX Standard 100 and your test protocol.", "image": "/images/home-complete-solution/qc-inspection.jpg" },
+      { "title": "Export-Ready Packing", "description": "Lot labels, cartons, and documents prepared for sea or air from Keqiao.", "image": "/images/delivery-container.webp" }
     ]
   },
   "process": {
     "title": "From Dye Lot to Dispatch",
-    "description": "Quality systems support OEKO-TEX Standard 100; ask for current certificates with your RFQ. Figures reflect Chromora Yarns’ stated production and catalogue range; ask our sales team for current lead times by denier and colour.",
+    "description": "One commercial thread from shade approval to labelled export packing. Ask for current OEKO-TEX copies and lead times with your RFQ.",
     "image": "/images/home-process/completed-residence-v2.jpg",
     "imageAlt": "Winding workshop with lot-labelled dyed yarn cones ready for dispatch",
     "steps": [
