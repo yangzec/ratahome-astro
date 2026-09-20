@@ -4,7 +4,7 @@
     "title": "Dyed Yarn Manufacturer & Exporter for Global Textile Brands",
     "description": "Polyester, nylon, and cotton dyed yarns engineered for shade accuracy, batch consistency, and reliable export lead times—from Keqiao, Shaoxing, China to mills and brands worldwide.",
     "image": "/images/hero-living-v2.webp",
-    "imageAlt": "Dyed yarn packages prepared for mill intake and export"
+    "imageAlt": "Colour-sorted dyed yarn cones on mill racks, ready for intake and export"
   },
   "assurances": [
     { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX Standard 100", "description": "Ask for current certificates with your RFQ" },
@@ -36,7 +36,7 @@
     "items": [
       { "title": "Shade Consistency", "description": "Controlled dyeing and lot tracking help keep repeat orders within agreed tolerance—critical for multi-factory garment programs.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
       { "title": "Broad Product Range", "description": "Polyester DTY and FDY, space-dyed and twisted constructions, nylon DTY, and cotton dyed yarn—so sourcing teams can consolidate SKUs with one supplier.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
-      { "title": "Quality Discipline", "description": "In-process checks on colourfastness, strength, and winding quality, aligned with OEKO-TEX Standard 100 and customer test protocols.", "image": "/images/package-living-california.webp" },
+      { "title": "Quality Discipline", "description": "In-process checks on colourfastness, strength, and winding quality, aligned with OEKO-TEX Standard 100 and customer test protocols.", "image": "/images/home-complete-solution/qc-inspection.jpg" },
       { "title": "Export-Ready Service", "description": "Competitive MOQs where feasible, transparent lead times, and responsive quote/sample handling via email or WhatsApp.", "image": "/images/delivery-container.webp" }
     ]
   },
@@ -44,7 +44,7 @@
     "title": "From Dye Lot to Dispatch",
     "description": "Quality systems support OEKO-TEX Standard 100; ask for current certificates with your RFQ. Figures reflect Chromora Yarns’ stated production and catalogue range; ask our sales team for current lead times by denier and colour.",
     "image": "/images/home-process/completed-residence-v2.jpg",
-    "imageAlt": "Yarn packages after dyeing, winding, and lot labelling",
+    "imageAlt": "Winding workshop with lot-labelled dyed yarn cones ready for dispatch",
     "steps": [
       { "step": "01", "title": "Brief & match", "description": "Share denier, lustre, shade reference, and fabric end use." },
       { "step": "02", "title": "Lab dip / sample", "description": "Approve colour before bulk." },

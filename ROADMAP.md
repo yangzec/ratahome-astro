@@ -42,7 +42,7 @@
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
 - [x] 第二站实例 `sites/chromora-yarns`（染色纱 B2B，模板 `b2b-manufacturing`）
 - [x] Chromora Yarns workers.dev 预览：https://chromora-yarns.yangzec.workers.dev/ 与 `/zh/`
-- [x] Chromora Yarns 公共图片改为染色纱 / 纺织制造视觉（原路径覆盖，JSON 不改路径）
+- [x] Chromora Yarns 公共图片按首页槽位文案对齐（针织/织机/袜类/家纺/段染/绣花、对色墙、QC、出口包装、DTY）
 - [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
@@ -331,6 +331,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 00:40 | 按首页槽位文案重配 `sites/chromora-yarns` 图片：织机、袜机、段染特写、绣花、对色墙、QC、出口纸箱托盘、DTY 膨体筒；QC/FDY/棉纱拆出独立路径以免共用图错位 |
 | 2026-09-21 00:11 | 覆盖 `sites/chromora-yarns/public/images/` 家具占位图为染色纱筒、针织/织造、出口包装与 `CHROMORA YARNS` logo（路径不变） |
 | 2026-09-21 00:00 | 部署 `chromora-yarns` Worker 预览：D1 绑定共享 `trade-platform`（`58956d48-3510-434d-93f1-5956aa0c47b5`），公开 URL `https://chromora-yarns.yangzec.workers.dev/` |
 | 2026-09-20 23:29 | 新增 `sites/chromora-yarns`：染色纱 B2B 站，从 `b2b-manufacturing` 复制并填入 Chromora Yarns 文案 / 导航 / 产品详情 |
