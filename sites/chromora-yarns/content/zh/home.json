@@ -44,7 +44,7 @@
     "title": "从染批到发运",
     "description": "质量体系支持 OEKO-TEX Standard 100；询价时可索取最新证书。产能与色号数据为 Chromora Yarns 对外说明的生产能力与色卡范围；具体交期请按旦数与颜色向销售确认。",
     "image": "/images/home-process/completed-residence-v2.jpg",
-    "imageAlt": "络筒车间中贴有批次标签的染色纱筒"
+    "imageAlt": "络筒车间中贴有批次标签的染色纱筒",
     "steps": [
       { "step": "01", "title": "需求与对色", "description": "提供旦数、光泽、对色依据与面料最终用途。" },
       { "step": "02", "title": "色样 / 手样", "description": "大货前先确认颜色。" },
