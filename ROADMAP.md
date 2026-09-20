@@ -36,11 +36,12 @@
 - [x] API 路由适配 Astro 7 `cloudflare:workers` env
 - [x] 部署文档 `docs/DEPLOY.md`
 - [x] Monorepo 完整提交；canonical 远程为 GitHub `yangzec/ratahome-astro`
-- [ ] Cloudflare 生产部署（需 `wrangler login` + D1/R2 创建）
+- [ ] Cloudflare 生产部署（Ratahome 自定义域名仍待绑定）
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
 - [x] `site-cli` 建站脚手架（create / validate / deploy）
 - [x] 第二站实例 `sites/chromora-yarns`（染色纱 B2B，模板 `b2b-manufacturing`）
+- [x] Chromora Yarns workers.dev 预览：https://chromora-yarns.yangzec.workers.dev/ 与 `/zh/`
 - [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
@@ -321,8 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| Cloudflare 生产部署（Ratahome） | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
-| Chromora Yarns workers.dev 预览 | `wrangler.jsonc` 已写入共享 D1 `trade-platform` 真实 `database_id`；Worker 名 `chromora-yarns`；部署进行中 |
+| Cloudflare 生产部署（Ratahome） | 本地 dry-run 通过；待按 `docs/DEPLOY.md` 执行并绑定自定义域名 |
 
 ---
 
@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 00:00 | 部署 `chromora-yarns` Worker 预览：D1 绑定共享 `trade-platform`（`58956d48-3510-434d-93f1-5956aa0c47b5`），公开 URL `https://chromora-yarns.yangzec.workers.dev/` |
 | 2026-09-20 23:29 | 新增 `sites/chromora-yarns`：染色纱 B2B 站，从 `b2b-manufacturing` 复制并填入 Chromora Yarns 文案 / 导航 / 产品详情 |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
@@ -352,6 +353,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 00:00 | chromora-yarns 预览 EN/ZH | `curl` + 浏览器访问 workers.dev `/`、`/zh/`、关于/产品/联系 | 200；英文标题 Dyed Yarn Manufacturer，中文标题含「染色纱」 |
+| 2026-09-21 00:00 | chromora-yarns 远程部署 | `pnpm --filter chromora-yarns cf:deploy` | 通过；Worker `chromora-yarns`，R2 绑定 `trade-platform-assets` |
 | 2026-09-20 23:29 | chromora-yarns 配置 | `pnpm site-cli validate chromora-yarns` | 通过 |
 | 2026-09-20 23:29 | chromora-yarns 构建 | `pnpm --filter chromora-yarns build` | 通过（en/zh 首页、产品、关于、品质、联系均 prerender） |
 | 2026-09-20 23:29 | ratahome-furniture 回归构建 | `pnpm --filter ratahome-furniture build` | 通过（原有页面未受影响） |
@@ -360,4 +363,4 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
 | 2026-09-17 10:45 | 预览测试 en/zh | 浏览器访问 43124，首页/关于/联系/系列 | 通过 |
 | 2026-09-17 08:58 | 本地 build | `pnpm build` | 通过（152 页 prerender） |
-| 待确认 | Cloudflare 生产部署 | `pnpm cf:deploy` | 环境无 `wrangler login`，未执行 |
+| 待确认 | Ratahome Cloudflare 生产部署 | `pnpm --filter ratahome-furniture cf:deploy` | 本次仅部署 chromora-yarns 预览 |
