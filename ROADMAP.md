@@ -321,7 +321,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| Cloudflare 生产部署（Ratahome） | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| Chromora Yarns workers.dev 预览 | `wrangler.jsonc` 已写入共享 D1 `trade-platform` 真实 `database_id`；Worker 名 `chromora-yarns`；部署进行中 |
 
 ---
 
