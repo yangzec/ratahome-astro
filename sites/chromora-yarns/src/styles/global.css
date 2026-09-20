@@ -1,28 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+/* Chromora @theme 必须与 theme.json 三色一致，禁止家具橙 / 暖奶油 / Cinzel / Poppins 回退。 */
 @theme {
-  --color-izza-accent: rgb(192 92 21);
-  --color-izza-ink: rgb(43 44 39);
-  --color-izza-charcoal: rgb(26 26 26);
-  --color-izza-gray-text: rgb(69 69 69);
-  --color-izza-gray-muted: rgb(125 125 125);
-  --color-izza-cream: rgb(252 247 243);
-  --color-izza-cream-deep: rgb(249 241 229);
-  --color-izza-stone: rgb(194 195 189);
-  --color-izza-border: rgb(221 221 221);
-  --color-izza-olive: rgb(79 83 69);
-  --color-izza-olive-dark: rgb(30 32 21);
-  --color-chrome: rgb(27 28 23);
+  --color-izza-accent: rgb(14 92 99);
+  --color-izza-ink: rgb(28 34 36);
+  --color-izza-charcoal: rgb(20 24 26);
+  --color-izza-gray-text: rgb(62 68 70);
+  --color-izza-gray-muted: rgb(108 114 116);
+  --color-izza-cream: rgb(244 245 243);
+  --color-izza-cream-deep: rgb(230 233 230);
+  --color-izza-stone: rgb(172 178 174);
+  --color-izza-border: rgb(210 214 210);
+  --color-izza-olive: rgb(48 62 60);
+  --color-izza-olive-dark: rgb(18 28 30);
+  --color-chrome: rgb(16 22 24);
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-label: 'Poppins', -apple-system, sans-serif;
-  --font-display: 'Cinzel', Georgia, serif;
+  --font-label: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  --radius-hero: 25px;
-  --radius-image: 20px;
-  --radius-step: 17px;
+  --radius-hero: 16px;
+  --radius-image: 12px;
+  --radius-step: 12px;
   --radius-pill: 100px;
+
+  --text-label: 0.75rem;
+  --text-body: 1rem;
+  --text-title: 2rem;
+  --text-display: 3rem;
 }
 
 @layer base {
@@ -32,6 +38,7 @@
 
   body {
     font-family: var(--font-sans);
+    font-size: var(--text-body);
     color: var(--color-izza-gray-text);
     background: white;
     -webkit-font-smoothing: antialiased;
@@ -39,13 +46,39 @@
 
   h1, h2, h3, h4 {
     color: var(--color-izza-ink);
+    font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  /* 英文 45--75 字符；中文 25--40 字。卡片内短句不强制。 */
+  html[lang="en"] .text-measure,
+  html[lang="en"] .section-title + p,
+  html[lang="en"] section > .container-site > p {
+    max-width: 65ch;
+  }
+
+  html[lang="zh"] .text-measure,
+  html[lang="zh"] .section-title + p,
+  html[lang="zh"] section > .container-site > p {
+    max-width: 36em;
   }
 }
 
@@ -54,14 +87,14 @@
     width: 100%;
     max-width: 1440px;
     margin-inline: auto;
-    padding-inline: clamp(1.25rem, 4vw, 3.875rem);
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
   }
 
   .eyebrow {
     font-family: var(--font-label);
-    font-size: 0.8125rem;
+    font-size: var(--text-label);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color-izza-accent);
   }
@@ -71,14 +104,14 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 3.75rem;
-    padding: 0.875rem 1.875rem;
+    min-height: 3.5rem;
+    padding: 1rem 2rem;
     border-radius: var(--radius-pill);
     background: var(--color-izza-accent);
     color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+    font-size: var(--text-body);
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     transition: background 0.2s, transform 0.2s;
   }
@@ -92,14 +125,14 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 3.75rem;
-    padding: 0.875rem 1.875rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1.25rem;
     border-radius: var(--radius-pill);
-    border: 1px solid rgba(255 255 255 / 0.4);
+    border: 1px solid rgba(255 255 255 / 0.45);
     color: white;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     backdrop-filter: blur(8px);
     transition: background 0.2s, border-color 0.2s;
@@ -115,14 +148,14 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 2.75rem;
-    padding: 0.875rem 1.5rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1.25rem;
     border-radius: var(--radius-pill);
     border: 1px solid var(--color-izza-border);
     color: var(--color-izza-ink);
     font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     transition: border-color 0.2s, color 0.2s;
   }
@@ -133,7 +166,7 @@
   }
 
   .section-title {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 600;
     line-height: 1.2;
     color: var(--color-izza-ink);
@@ -146,8 +179,31 @@
   }
 
   .glass-nav {
-    background: rgba(30 32 21 / 0.4);
-    backdrop-filter: blur(100px);
-    border-radius: 7px;
+    background: rgba(18 28 30 / 0.4);
+    backdrop-filter: blur(24px);
+    border-radius: 8px;
+  }
+}
+
+/* 覆盖共享 Section 里家具站一次性圆角 / Hero 52px，不改 packages/sections。 */
+.rounded-\[17px\],
+.rounded-\[20px\],
+.rounded-\[25px\] {
+  border-radius: 16px;
+}
+
+section.relative.min-h-\[85vh\] h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* 相邻两个 cream 区块拆开，避免产品 + Why us 糊成一块。 */
+main > section.bg-izza-cream + section.bg-izza-cream {
+  background: #fff;
+}
+
+/* 首页流程 4 步，覆盖家具模板的 5 列网格（关于页 5 项不含 mt-12）。 */
+.grid.lg\:grid-cols-5.mt-12 {
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

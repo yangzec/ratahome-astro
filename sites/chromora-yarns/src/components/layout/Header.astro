@@ -16,7 +16,7 @@ const { site, buttons } = common;
 
 <header class="sticky top-0 z-50 bg-izza-olive-dark text-white">
   <div class="border-b border-white/10">
-    <div class="container-site flex items-center justify-between py-2.5 text-sm gap-4">
+    <div class="container-site flex items-center justify-between py-2 text-sm gap-4">
       <p class="hidden lg:block text-white/70 flex-1">{site.phone} · {site.location}</p>
       <LanguageSwitcher locale={locale} currentPath={currentPath} />
       <a
@@ -35,7 +35,7 @@ const { site, buttons } = common;
     <div class="flex items-center justify-between py-5">
       <a href={localizedPath('/', locale)} class="flex items-center gap-3">
         <img src="/images/logo.png" alt={site.name} class="h-8 w-auto brightness-0 invert" />
-        <span class="font-display text-xl tracking-widest text-white">{site.name}</span>
+        <span class="font-display text-xl tracking-wide text-white">{site.name}</span>
       </a>
 
       <div class="flex items-center gap-1">
@@ -43,7 +43,7 @@ const { site, buttons } = common;
           <div class="group relative">
             <a
               href={item.href ? localizedPath(item.href, locale) : '#'}
-              class="px-3 py-2 text-[15px] font-medium text-white/85 hover:text-white transition-colors"
+              class="px-3 py-2 text-base font-medium text-white/85 hover:text-white transition-colors"
             >
               {item.label}
             </a>
@@ -71,7 +71,7 @@ const { site, buttons } = common;
                     {group.links.map((link) => (
                       <li>
                         <a href={localizedPath(link.href, locale)} class="block py-2.5 px-3 -mx-3 rounded-xl hover:bg-izza-cream transition-colors group/link">
-                          <strong class="block text-[16px] font-semibold text-izza-ink group-hover/link:text-izza-accent">{link.label}</strong>
+                          <strong class="block text-base font-semibold text-izza-ink group-hover/link:text-izza-accent">{link.label}</strong>
                           {link.description && <span class="text-sm text-izza-gray-muted">{link.description}</span>}
                         </a>
                       </li>
@@ -108,7 +108,7 @@ const { site, buttons } = common;
   <div class="container-site flex lg:hidden items-center justify-between py-4">
     <a href={localizedPath('/', locale)} class="flex items-center gap-2">
       <img src="/images/logo.png" alt={site.name} class="h-7 w-auto brightness-0 invert" />
-      <span class="font-display text-lg tracking-widest text-white">{site.name}</span>
+      <span class="font-display text-lg tracking-wide text-white">{site.name}</span>
     </a>
     <button id="mobile-menu-btn" class="p-2 text-white" aria-label="Open menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ const { site, buttons } = common;
   <div class="flex items-center justify-between p-5 border-b border-izza-border/30">
     <a href={localizedPath('/', locale)} class="flex items-center gap-2">
       <img src="/images/logo.png" alt={site.name} class="h-7 w-auto" />
-      <span class="font-display text-lg tracking-widest text-izza-ink">{site.name}</span>
+      <span class="font-display text-lg tracking-wide text-izza-ink">{site.name}</span>
     </a>
     <button id="mobile-menu-close" class="p-2" aria-label="Close menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
