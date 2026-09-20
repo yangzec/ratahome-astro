@@ -352,6 +352,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
 | 2026-09-20 23:29 | chromora-yarns 配置 | `pnpm site-cli validate chromora-yarns` | 通过 |
+| 2026-09-20 23:29 | chromora-yarns 构建 | `pnpm --filter chromora-yarns build` | 通过（en/zh 首页、产品、关于、品质、联系均 prerender） |
+| 2026-09-20 23:29 | ratahome-furniture 回归构建 | `pnpm --filter ratahome-furniture build` | 通过（原有页面未受影响） |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
