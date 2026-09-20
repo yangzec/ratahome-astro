@@ -4,7 +4,7 @@
     "title": "Dyed Yarn Manufacturer & Exporter for Global Textile Brands",
     "description": "Polyester, nylon, and cotton dyed yarns engineered for shade accuracy, batch consistency, and reliable export lead times—from Keqiao, Shaoxing, China to mills and brands worldwide.",
     "image": "/images/hero-living-v2.webp",
-    "imageAlt": "Dyed yarn packages prepared for mill intake and export"
+    "imageAlt": "Colour-sorted dyed yarn cones on mill racks, ready for intake and export"
   },
   "assurances": [
     { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX Standard 100", "description": "Ask for current certificates with your RFQ" },
@@ -36,7 +36,7 @@
     "items": [
       { "title": "Shade Consistency", "description": "Lot tracking keeps repeat orders inside the agreed shade band.", "image": "/images/home-complete-solution/living-room-v3.jpg" },
       { "title": "Broad Product Range", "description": "Polyester, nylon, and cotton dyed yarns so sourcing can consolidate SKUs.", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
-      { "title": "Quality Discipline", "description": "In-process checks aligned with OEKO-TEX Standard 100 and your test protocol.", "image": "/images/package-living-california.webp" },
+      { "title": "Quality Discipline", "description": "In-process checks aligned with OEKO-TEX Standard 100 and your test protocol.", "image": "/images/home-complete-solution/qc-inspection.jpg" },
       { "title": "Export-Ready Packing", "description": "Lot labels, cartons, and documents prepared for sea or air from Keqiao.", "image": "/images/delivery-container.webp" }
     ]
   },
@@ -44,7 +44,7 @@
     "title": "From Dye Lot to Dispatch",
     "description": "One commercial thread from shade approval to labelled export packing. Ask for current OEKO-TEX copies and lead times with your RFQ.",
     "image": "/images/home-process/completed-residence-v2.jpg",
-    "imageAlt": "Yarn packages after dyeing, winding, and lot labelling",
+    "imageAlt": "Winding workshop with lot-labelled dyed yarn cones ready for dispatch",
     "steps": [
       { "step": "01", "title": "Brief & match", "description": "Share denier, lustre, shade reference, and fabric end use." },
       { "step": "02", "title": "Lab dip / sample", "description": "Approve colour before bulk." },

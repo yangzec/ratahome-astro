@@ -274,12 +274,12 @@
     { "title": "One commercial contact", "description": "Quotes and samples handled by email or WhatsApp." }
   ],
   "collectionPackages": [
-    { "title": "Polyester DTY", "description": "Soft, textured dyed polyester for circular knits, socks, and stretch fabrics.", "image": "/images/home-complete-solution/living-room-v3.jpg", "href": "/products/polyester-dty" },
-    { "title": "Polyester FDY", "description": "Smooth fully drawn dyed filament for weaving, embroidery, and stable fabric bases.", "image": "/images/home-complete-solution/dining-room-v2.jpg", "href": "/products/polyester-fdy" },
+    { "title": "Polyester DTY", "description": "Soft, textured dyed polyester for circular knits, socks, and stretch fabrics.", "image": "/images/package-living-california.webp", "href": "/products/polyester-dty" },
+    { "title": "Polyester FDY", "description": "Smooth fully drawn dyed filament for weaving, embroidery, and stable fabric bases.", "image": "/images/home-complete-solution/fdy-filament.jpg", "href": "/products/polyester-fdy" },
     { "title": "Polyester Space Dyed Yarn", "description": "Interval-dyed multi-colour yarn for carpets, fashion knits, and decorative textiles.", "image": "/images/home-projects/arcaya-contemporary-residence.webp", "href": "/products/polyester-space-dyed-yarn" },
     { "title": "Twisted Yarn", "description": "Twisted dyed yarn for strength, surface interest, and embroidery programs.", "image": "/images/finished-chair.webp", "href": "/products/twisted-yarn" },
     { "title": "Nylon DTY", "description": "Dyed nylon textured yarn for activewear, lingerie, and fine-gauge knits.", "image": "/images/package-living-california.webp", "href": "/products/nylon-dty" },
-    { "title": "Cotton Dyed Yarn", "description": "Dyed cotton yarn with a soft hand for apparel, terry, and lifestyle fabrics.", "image": "/images/home-audiences/homeowner-v2.jpg", "href": "/products/cotton-dyed-yarn" }
+    { "title": "Cotton Dyed Yarn", "description": "Dyed cotton yarn with a soft hand for apparel, terry, and lifestyle fabrics.", "image": "/images/home-audiences/cotton-dyed.jpg", "href": "/products/cotton-dyed-yarn" }
   ],
   "workflow": [
     { "step": "01", "title": "Location", "description": "Keqiao, Shaoxing, China" },

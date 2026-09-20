@@ -4,7 +4,7 @@
     "title": "面向全球纺织品牌的染色纱制造商与出口商",
     "description": "涤纶、锦纶与棉染色纱，强调对色精度、批次一致与可预期的出口交期——从中国绍兴柯桥发往各地纱厂与品牌。",
     "image": "/images/hero-living-v2.webp",
-    "imageAlt": "已完成染色并待出口的纱筒"
+    "imageAlt": "货架上按色号摆放、待出库出口的染色纱筒"
   },
   "assurances": [
     { "icon": "/icons/shield-check.svg", "title": "OEKO-TEX Standard 100", "description": "询价时可索取最新证书" },
@@ -36,7 +36,7 @@
     "items": [
       { "title": "批色稳定", "description": "批次追溯，帮助返单落在约定色差带内。", "image": "/images/home-complete-solution/living-room-v3.jpg" },
       { "title": "品类覆盖广", "description": "涤纶、锦纶与棉染色纱，便于向一家供应商整合 SKU。", "image": "/images/home-complete-solution/dining-room-v2.jpg" },
-      { "title": "品质纪律", "description": "过程检验对齐 OEKO-TEX Standard 100 与客户检测协议。", "image": "/images/package-living-california.webp" },
+      { "title": "品质纪律", "description": "过程检验对齐 OEKO-TEX Standard 100 与客户检测协议。", "image": "/images/home-complete-solution/qc-inspection.jpg" },
       { "title": "出口包装", "description": "从柯桥安排海运或空运，纱筒与纸箱带批次标识。", "image": "/images/delivery-container.webp" }
     ]
   },
@@ -44,7 +44,7 @@
     "title": "从染批到发运",
     "description": "从对色确认到贴标出口包装走同一条商务路径。询价时可索取最新 OEKO-TEX 副本与交期。",
     "image": "/images/home-process/completed-residence-v2.jpg",
-    "imageAlt": "完成染色、络筒并贴好批次标签的纱筒",
+    "imageAlt": "络筒车间中贴有批次标签的染色纱筒",
     "steps": [
       { "step": "01", "title": "需求与对色", "description": "提供旦数、光泽、对色依据与面料最终用途。" },
       { "step": "02", "title": "色样 / 手样", "description": "大货前先确认颜色。" },
