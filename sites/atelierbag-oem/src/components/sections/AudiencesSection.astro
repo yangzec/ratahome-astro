@@ -1,0 +1,47 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+const { audiences } = home;
+---
+
+<section class="container-site py-20" data-section="about-intro">
+  <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <div>
+      <h2 class="section-title mb-6">{audiences.title}</h2>
+      <p class="text-lg leading-relaxed text-izza-gray-text mb-8">{audiences.description}</p>
+      <div class="flex flex-wrap gap-x-8 gap-y-3">
+        {audiences.items.map((item) => (
+          <a
+            href={localizedPath(item.href, locale)}
+            class="inline-flex items-center gap-2 text-sm font-semibold text-izza-accent hover:text-izza-ink transition-colors"
+          >
+            {item.title}
+            <span aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6">
+      {audiences.items.map((item) => (
+        <a href={localizedPath(item.href, locale)} class="group block">
+          <div class="relative overflow-hidden rounded-xl aspect-[4/3]">
+            <img
+              src={item.image}
+              alt={item.title}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

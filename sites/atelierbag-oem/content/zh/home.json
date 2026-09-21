@@ -34,7 +34,7 @@
     "items": [
       { "title": "生产自己控", "description": "项目留在我们车间——从裁断、车缝到包装，品质与交期对齐。", "image": "/images/factory-sewing.jpg" },
       { "title": "从工艺包到样品", "description": "我们评审规格、调整纸样，做出你可签字的样品，再开大货。", "image": "/images/factory-pattern.jpg" },
-      { "title": "材料对得上简报", "description": "真皮、素皮与纺织按手感、颜色与合规需求采购。", "image": "/images/factory-leather.jpg" },
+      { "title": "真皮、素皮与纺织可选", "description": "我们按手感、颜色和你的合规要求采购真皮、素皮与纺织。", "image": "/images/factory-leather.jpg" },
       { "title": "打样与大货交期清楚", "description": "每个阶段都有可执行的交期与更新：打样、确认、生产、出运。", "image": "/images/factory-qc.jpg" }
     ]
   },

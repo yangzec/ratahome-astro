@@ -34,7 +34,7 @@
     "items": [
       { "title": "Direct manufacturing control", "description": "Your program stays on our floor—from cutting and stitching to packing—so quality and schedule stay aligned.", "image": "/images/factory-sewing.jpg" },
       { "title": "Development from tech pack to prototype", "description": "We review specs, refine patterns, and build samples you can approve before bulk.", "image": "/images/factory-pattern.jpg" },
-      { "title": "Material options that fit the brief", "description": "Leather, vegan alternatives, and textiles sourced to match hand-feel, color, and compliance needs.", "image": "/images/factory-leather.jpg" },
+      { "title": "Leather, vegan, and textile options", "description": "We source leather, vegan alternatives, and textiles to match hand-feel, color, and your compliance needs.", "image": "/images/factory-leather.jpg" },
       { "title": "Clear sampling and bulk timelines", "description": "You get realistic lead times and updates at each stage—sample, confirmation, production, ship.", "image": "/images/factory-qc.jpg" }
     ]
   },
