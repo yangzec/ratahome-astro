@@ -52,7 +52,7 @@ trade-site-platform/
 ├── sites/ratahome-furniture/      # 站点实例
 │   ├── site.config.ts             # site_id、模板、语言
 │   ├── theme.json                 # 主题色、字体、圆角
-│   ├── blueprints/home.json       # 首页区块顺序
+│   ├── blueprints/home.json       # 首页 composition（区块顺序，不是文案蓝图）
 │   ├── content/en|zh/           # 文案 JSON
 │   ├── public/                    # 图片、图标
 │   ├── src/                       # Astro 页面与组件
@@ -105,7 +105,7 @@ sites/ratahome-furniture/content/
 
 ---
 
-## 6. 修改首页区块顺序（Blueprint）
+## 6. 修改首页区块顺序（composition）
 
 编辑 `sites/ratahome-furniture/blueprints/home.json`：
 

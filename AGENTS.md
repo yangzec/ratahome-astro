@@ -174,7 +174,7 @@ https://github.com/yangzec/ratahome-astro
 | `sites/ratahome-furniture/` | 首个站点实例 |
 | `sites/*/site.config.ts` | site_id、模板、语言 |
 | `sites/*/theme.json` | 设计 token |
-| `sites/*/blueprints/` | 页面区块组合 |
+| `sites/*/blueprints/` | 首页 composition（section 顺序，不是文案蓝图） |
 | `sites/*/content/{locale}/` | 文案 JSON |
 | `sites/*/src/` | Astro 页面、模板、组件 |
 | `migrations/` | 共享 D1 schema（`site_id` 隔离） |
@@ -191,17 +191,19 @@ https://github.com/yangzec/ratahome-astro
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
-### 蓝图硬规则
+### 文案 / 模板分层（硬规则）
 
-- 行业定稿蓝图是前台文案唯一来源；只把 blueprint 写入 `sites/*/content/`。
-- 禁止把 brief / compare 的「学谁」、草稿备注或指令腔写进前台。
-- 禁止：Share / 请发 / Please provide / as drawn / Those three notes / slogan wall / quotation-path（内部词）/ 未核实产能与客户名。
-- 规则全文：`docs/blueprint-rules.md` ；拆站顺序（先单站后行业）：`docs/teardown-workflow.md` 。
+- **copy-final 蓝图**（`industry-*-blueprint.md`）：只写买家可见文案；禁止指令、布局 / CSS、行话（如 fit the brief）。只把该蓝图写入 `sites/*/content/`。
+- **站点 composition**（`sites/*/blueprints/*.json`）：section 列表与顺序，属模板侧配置，勿称文案蓝图。
+- **Section + design token**：高度 / 栅格 / 比例 / 断点。列表按 `items.length` 自适应；禁止写死 N 列 / N 步；禁止为凑版生造或截断文案；0 条隐藏整段。
+- brief / cross-compare / closure-status 不上站。禁止 Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 未核实产能与客户名。
+- 规则全文：`docs/blueprint-rules.md`；栅格：`docs/design.md`；拆站：`docs/teardown-workflow.md`。
 
 ### 文档指针
 
-- **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **使用文档**：`docs/USAGE.md`（安装、改文案、composition、主题、部署）
 - **蓝图规则**：`docs/blueprint-rules.md`
+- **设计 / 列表栅格**：`docs/design.md`
 - **拆站流程**：`docs/teardown-workflow.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
@@ -210,7 +212,7 @@ https://github.com/yangzec/ratahome-astro
 ### 工程边界
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
-- 行业差异优先用 JSON 与 Blueprint 配置解决，避免为每个行业 fork 组件
+- 行业差异优先用 content JSON 与 composition 解决，避免为每个行业 fork 组件；列表栅格按 `docs/design.md` 自适应
 - D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
 

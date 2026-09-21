@@ -216,13 +216,6 @@ main > section.bg-izza-cream + section.bg-izza-cream {
   background: #fff;
 }
 
-/* 首页流程 6 步：3 列，覆盖家具模板 5 列。 */
-.grid.lg\:grid-cols-5.mt-12 {
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 /* 精选 4 卡：两列网格保持，间距走 8 刻度。 */
 .grid.md\:grid-cols-2.gap-8 {
   gap: 2rem;

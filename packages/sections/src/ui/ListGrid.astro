@@ -1,0 +1,25 @@
+---
+interface Props {
+  min?: number;
+  class?: string;
+  count?: number;
+}
+
+const { min = 240, class: className = '', count } = Astro.props;
+---
+
+<div
+  class:list={['list-grid', className]}
+  style={`--list-min: ${min}px`}
+  data-list-count={count}
+>
+  <slot />
+</div>
+
+<style>
+  .list-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--list-min, 240px)), 1fr));
+  }
+</style>

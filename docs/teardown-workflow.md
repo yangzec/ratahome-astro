@@ -1,6 +1,6 @@
 # 拆站流程
 
-先拆单站，再收成行业定稿。前台只吃 blueprint，不吃 brief / compare。
+先拆单站，再收成行业定稿。前台只吃 copy-final 蓝图文案，不吃 brief / compare。`sites/*/blueprints/*.json` 是 composition（区块顺序），不是文案蓝图。
 
 ## 1. 单站
 
