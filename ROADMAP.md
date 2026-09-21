@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 18:17 | 写入 copy-final / composition / Section 分层；共享 `ListGrid` 按 `items.length` 自适应；Capabilities / Audiences / Process 步骤不再写死 4/5 列；Worker Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
 | 2026-09-21 18:05 | AtelierBag OEM 桌面 Hero 改为 `calc(100vh - var(--header-h))`；企业介绍改为左文右图且两图 `4/3` 同高；Why 材料卡改为买家向（去掉 fit the brief / 简报）；Worker Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
 | 2026-09-21 17:52 | 修 AtelierBag OEM 顶栏叠字、导航折行与 WhatsApp 浮钮挡内容；联系页去掉重复副文，产品 Hero 补 Get Factory Quote；`html` 增加 `scroll-padding-top`；Worker Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
 | 2026-09-21 16:29 | 按手袋 OEM 定稿蓝图整站重写 `sites/atelierbag-oem` EN/ZH content；补 `/case-studies`、`docs/blueprint-rules.md`、`docs/teardown-workflow.md` 与 `AGENTS.md` 硬规则；Worker Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
@@ -347,7 +348,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 08:54 | 确认 D1：共享实例 + `site_id`；阶段 4 运动/户外部署模式待阶段 3 跑通后再定 |
 | 2026-09-17 08:51 | 确认各阶段试点行业：阶段 2 面料/服装/家纺，阶段 3 包装/印刷，阶段 4 运动/户外 |
 | 2026-09-17 08:37 | 决策：先单站单部署，后多站单部署试点 |
-| 2026-09-17 08:37 | 100 行业方案总结（部署模型、语义分层、Blueprint、阶段路线） |
 
 ---
 
@@ -355,6 +355,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
 | 2026-09-21 18:05 | AtelierBag OEM Hero / About / Why | curl EN/ZH 首页 200；CDP 测 Hero `996px`（`1100vh - header`）；About 双列等宽、两图 `623×467`；Why 新文案在线 | 通过；无右空、两图同高；Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
 | 2026-09-21 17:52 | AtelierBag OEM 视觉 P0/P1 | 线上 curl EN/ZH 首页、`/products/`、`/contact/` 200；桌面截图首页/产品/联系；HTML 断言主项 Home/Products/Factory/Case Studies/Contact + More、无 `text-xl` 字标、`#wa-fab` 为 56px 圆标 | 通过；叠字消失、头栏单行、浮钮不挡 Message；联系页可见 helper 1 处；产品 Hero 有 Get Factory Quote；Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
 | 2026-09-21 16:29 | AtelierBag OEM 定稿蓝图落地 | `pnpm site-cli validate` + build + `cf:deploy`；curl EN/ZH 首页、托特、联系、案例、流程、FAQ；8 份 content JSON 禁词扫描 | 通过；线上 200；Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 学谁 / 可选备注 未出现；Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
