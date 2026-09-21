@@ -347,8 +347,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
 | 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
 | 2026-09-17 08:58 | 阶段 1 启动：Monorepo + site_id D1 + Blueprint + theme 外置，build 通过 |
-| 2026-09-17 08:54 | 确认 D1：共享实例 + `site_id`；阶段 4 运动/户外部署模式待阶段 3 跑通后再定 |
-| 2026-09-17 08:51 | 确认各阶段试点行业：阶段 2 面料/服装/家纺，阶段 3 包装/印刷，阶段 4 运动/户外 |
 
 ---
 
