@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
 | 2026-09-21 20:43 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；Worker Version `e688b63e-234a-40b0-be12-1052fe84c5f9`；不合 main |
 | 2026-09-21 20:01 | 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色；不合 main） |
 | 2026-09-21 18:54 | 确认硬规则：不为迁就模板而改蓝图；排版只改模板 / composition / token；写入 `AGENTS.md` 与 `docs/blueprint-rules.md` |
