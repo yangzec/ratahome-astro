@@ -331,6 +331,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 21:00 | 同步「同一 section 单一主题」与「不为迁就模板而改蓝图」：`docs/blueprint-rules.md` + `AGENTS.md` 短摘要；只改规则文档，未改 Chromora 站点 content；不合 main |
 | 2026-09-21 00:45 | 新增 `docs/design.md`；Chromora `@theme` 对齐青绿三色 + Inter，首页删 assurance / ecosystem / audience，主 CTA 大于次按钮 |
 | 2026-09-21 00:40 | 按首页槽位文案重配 `sites/chromora-yarns` 图片：织机、袜机、段染特写、绣花、对色墙、QC、出口纸箱托盘、DTY 膨体筒；QC/FDY/棉纱拆出独立路径以免共用图错位 |
 | 2026-09-21 00:11 | 覆盖 `sites/chromora-yarns/public/images/` 家具占位图为染色纱筒、针织/织造、出口包装与 `CHROMORA YARNS` logo（路径不变） |
