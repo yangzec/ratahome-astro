@@ -12,12 +12,22 @@ interface Props {
 const { locale, currentPath } = Astro.props;
 const { common, navigation } = getContent(locale);
 const { site, buttons } = common;
+
+const primaryOrder = ['home', 'products', 'factory', 'case-studies', 'contact'] as const;
+const primaryNav = primaryOrder
+  .map((id) => navigation.main.find((item) => item.id === id))
+  .filter((item): item is (typeof navigation.main)[number] => Boolean(item));
+const moreNav = navigation.main.filter((item) => !primaryOrder.includes(item.id as (typeof primaryOrder)[number]));
+const moreLabel = locale === 'zh' ? '更多' : 'More';
+const shortLabel: Record<string, string> = locale === 'zh'
+  ? { factory: '工厂', contact: '联系' }
+  : { factory: 'Factory', contact: 'Contact' };
 ---
 
 <header class="sticky top-0 z-50 bg-izza-olive-dark text-white">
   <div class="border-b border-white/10">
     <div class="container-site flex items-center justify-between py-2 text-sm gap-4">
-      <p class="hidden lg:block text-white/70 flex-1">{site.phone} · {site.location}</p>
+      <p class="hidden lg:block text-white/70 flex-1 min-w-0 truncate">{site.phone} · {site.location}</p>
       <LanguageSwitcher locale={locale} currentPath={currentPath} />
       <a
         href={site.whatsappUrl}
@@ -32,26 +42,49 @@ const { site, buttons } = common;
   </div>
 
   <nav class="container-site hidden lg:block relative" aria-label="Main navigation">
-    <div class="flex items-center justify-between py-5">
-      <a href={localizedPath('/', locale)} class="flex items-center gap-3">
-        <img src="/images/logo.svg" alt={site.name} class="h-8 w-auto brightness-0 invert" />
-        <span class="font-display text-xl tracking-wide text-white">{site.name}</span>
+    <div class="flex h-16 items-center gap-6 flex-nowrap">
+      <a href={localizedPath('/', locale)} class="shrink-0 w-[10.5rem] flex items-center" aria-label={site.name}>
+        <img src="/images/logo.svg" alt={site.name} class="h-7 w-auto max-w-[10.5rem] brightness-0 invert" width="168" height="28" />
       </a>
 
-      <div class="flex items-center gap-1">
-        {navigation.main.map((item) => (
-          <div class="group relative" data-nav={item.id}>
+      <div class="flex flex-1 min-w-0 items-center justify-end gap-0.5 flex-nowrap">
+        {primaryNav.map((item) => (
+          <div class="group relative shrink-0" data-nav={item.id}>
             <a
               href={item.href ? localizedPath(item.href, locale) : '#'}
-              class="px-3 py-2 text-base font-medium text-white/85 hover:text-white transition-colors"
+              class="block px-2.5 py-2 text-sm font-medium whitespace-nowrap text-white/85 hover:text-white transition-colors"
             >
-              {item.label}
+              {shortLabel[item.id] ?? item.label}
             </a>
           </div>
         ))}
+
+        {moreNav.length > 0 && (
+          <div class="group relative shrink-0" data-nav="more">
+            <button
+              type="button"
+              class="px-2.5 py-2 text-sm font-medium whitespace-nowrap text-white/85 hover:text-white transition-colors"
+              aria-haspopup="true"
+            >
+              {moreLabel}
+            </button>
+            <div class="absolute right-0 top-full pt-2 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition-all duration-150">
+              <div class="min-w-[13rem] rounded-xl bg-white py-2 text-izza-ink shadow-2xl">
+                {moreNav.map((item) => (
+                  <a
+                    href={item.href ? localizedPath(item.href, locale) : '#'}
+                    class="block px-4 py-2.5 text-sm font-medium hover:bg-izza-cream hover:text-izza-accent"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
-      <a href={`${localizedPath('/contact-us', locale)}?intent=quote`} class="btn-primary !min-h-11 !text-sm !px-6">
+      <a href={`${localizedPath('/contact', locale)}?intent=quote`} class="btn-primary !min-h-10 !text-sm !px-5 shrink-0 whitespace-nowrap">
         {buttons.startProject}
       </a>
     </div>
@@ -105,10 +138,9 @@ const { site, buttons } = common;
     ))}
   </nav>
 
-  <div class="container-site flex lg:hidden items-center justify-between py-4">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
-      <img src="/images/logo.svg" alt={site.name} class="h-7 w-auto brightness-0 invert" />
-      <span class="font-display text-lg tracking-wide text-white">{site.name}</span>
+  <div class="container-site flex lg:hidden items-center justify-between h-14">
+    <a href={localizedPath('/', locale)} class="w-[9.5rem] shrink-0" aria-label={site.name}>
+      <img src="/images/logo.svg" alt={site.name} class="h-6 w-auto max-w-[9.5rem] brightness-0 invert" width="152" height="24" />
     </a>
     <button id="mobile-menu-btn" class="p-2 text-white" aria-label="Open menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,9 +152,8 @@ const { site, buttons } = common;
 
 <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
   <div class="flex items-center justify-between p-5 border-b border-izza-border/30">
-    <a href={localizedPath('/', locale)} class="flex items-center gap-2">
-      <img src="/images/logo.svg" alt={site.name} class="h-7 w-auto" />
-      <span class="font-display text-lg tracking-wide text-izza-ink">{site.name}</span>
+    <a href={localizedPath('/', locale)} class="w-[10.5rem] shrink-0" aria-label={site.name}>
+      <img src="/images/logo.svg" alt={site.name} class="h-7 w-auto max-w-[10.5rem]" width="168" height="28" />
     </a>
     <button id="mobile-menu-close" class="p-2" aria-label="Close menu">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +184,7 @@ const { site, buttons } = common;
         )}
       </div>
     ))}
-    <a href={`${localizedPath('/contact-us', locale)}?intent=quote`} class="btn-primary w-full mt-6">{buttons.startProject}</a>
+    <a href={`${localizedPath('/contact', locale)}?intent=quote`} class="btn-primary w-full mt-6">{buttons.startProject}</a>
   </nav>
 </div>
 

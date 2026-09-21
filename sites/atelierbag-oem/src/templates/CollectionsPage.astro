@@ -16,7 +16,12 @@ const collections = pages.collections;
 ---
 
 <BaseLayout locale={locale} title={collections.title} description={collections.heroDescription}>
-  <PageHero title={collections.heroTitle} description={collections.heroDescription} dark />
+  <section class="bg-izza-olive-dark">
+    <PageHero title={collections.heroTitle} description={collections.heroDescription} dark />
+    <div class="container-site pb-12 -mt-8 md:-mt-12 relative">
+      <Button href={`${localizedPath('/contact', locale)}?intent=quote`} variant="primary">{common.buttons.requestQuote}</Button>
+    </div>
+  </section>
 
   <section class="container-site py-12">
     <div class="flex flex-wrap gap-3 mb-12">
