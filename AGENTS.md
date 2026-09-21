@@ -196,7 +196,8 @@ https://github.com/yangzec/ratahome-astro
 - **copy-final 蓝图**（`industry-*-blueprint.md`）：只写买家可见文案；禁止指令、布局 / CSS、行话（如 fit the brief）。只把该蓝图写入 `sites/*/content/`。
 - **站点 composition**（`sites/*/blueprints/*.json`）：section 列表与顺序，属模板侧配置，勿称文案蓝图。
 - **Section + design token**：高度 / 栅格 / 比例 / 断点。列表按 `items.length` 自适应；禁止写死 N 列 / N 步；禁止为凑版生造或截断文案；0 条隐藏整段。
-- **不为迁就模板而改蓝图。** 仅当文案本身很差（行话、指令腔、事实错误、不知所云）才改蓝图。排版 / 列数 / Hero 高度 / 图比例只改模板或 composition / token。禁止为凑 N 列删补卡片、为 Hero 砍标题、把排版问题包装成「文案优化」。
+- **不为迁就模板而改蓝图。** 仅当文案本身很差（行话、指令腔、事实错误、不知所云、同 section 主题拼盘 / 硬凑细项）才改蓝图。排版 / 列数 / Hero 高度 / 图比例只改模板或 composition / token。禁止为凑 N 列删补卡片、为 Hero 砍标题、把排版问题包装成「文案优化」。
+- **同一 section 单一主题。** 一 H2 = 一买家问题；细项须同语义轴并列。同主题则如实条数；好拆则拆段；难拆则上调 H2；仍罩不住则删假点或不上首页。宁少勿凑，禁止生造细项。主题拼盘属文案结构，生成或检查时改蓝图；空一列 / Hero / 图比例仍只改模板。套站前扫每段，不合格回生成重写该段。全文：`docs/blueprint-rules.md`。
 - 默认顺序：先让模板吃下现有文案（自适应 / 换 section / 调 token）→ 缺一类站通用能力再改共享模板 → 品牌皮肤只动 theme。微调模板只沉淀通用能力，禁止为单版蓝图开小灶。
 - brief / cross-compare / closure-status 不上站。禁止 Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 未核实产能与客户名。
 - 规则全文：`docs/blueprint-rules.md`；栅格：`docs/design.md`；拆站：`docs/teardown-workflow.md`。
