@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 18:05 | AtelierBag OEM 桌面 Hero 改为 `calc(100vh - var(--header-h))`；企业介绍改为左文右图且两图 `4/3` 同高；Why 材料卡改为买家向（去掉 fit the brief / 简报）；Worker Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
 | 2026-09-21 17:52 | 修 AtelierBag OEM 顶栏叠字、导航折行与 WhatsApp 浮钮挡内容；联系页去掉重复副文，产品 Hero 补 Get Factory Quote；`html` 增加 `scroll-padding-top`；Worker Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
 | 2026-09-21 16:29 | 按手袋 OEM 定稿蓝图整站重写 `sites/atelierbag-oem` EN/ZH content；补 `/case-studies`、`docs/blueprint-rules.md`、`docs/teardown-workflow.md` 与 `AGENTS.md` 硬规则；Worker Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
 | 2026-09-21 16:24 | 重写 `sites/atelierbag-oem` EN/ZH 全部 content JSON 为买家可见定稿；去掉 Share / 请发 / as drawn / slogan wall 等指令腔；表单提示压成一行；导航 IA 不变 |
@@ -354,6 +355,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 18:05 | AtelierBag OEM Hero / About / Why | curl EN/ZH 首页 200；CDP 测 Hero `996px`（`1100vh - header`）；About 双列等宽、两图 `623×467`；Why 新文案在线 | 通过；无右空、两图同高；Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
 | 2026-09-21 17:52 | AtelierBag OEM 视觉 P0/P1 | 线上 curl EN/ZH 首页、`/products/`、`/contact/` 200；桌面截图首页/产品/联系；HTML 断言主项 Home/Products/Factory/Case Studies/Contact + More、无 `text-xl` 字标、`#wa-fab` 为 56px 圆标 | 通过；叠字消失、头栏单行、浮钮不挡 Message；联系页可见 helper 1 处；产品 Hero 有 Get Factory Quote；Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
 | 2026-09-21 16:29 | AtelierBag OEM 定稿蓝图落地 | `pnpm site-cli validate` + build + `cf:deploy`；curl EN/ZH 首页、托特、联系、案例、流程、FAQ；8 份 content JSON 禁词扫描 | 通过；线上 200；Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 学谁 / 可选备注 未出现；Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
 | 2026-09-21 16:24 | AtelierBag OEM 买家定稿文案 | curl EN/ZH 首页、产品、托特详情、联系、工厂、FAQ | 全部 200；新文案在线；Share / 请发 / Those three notes / slogan wall / 选填说明书未出现 |
