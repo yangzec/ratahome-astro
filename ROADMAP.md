@@ -328,7 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
-| 2026-09-21 20:41 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；不合 main |
+| 2026-09-21 20:43 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；Worker Version `e688b63e-234a-40b0-be12-1052fe84c5f9`；不合 main |
 | 2026-09-21 20:01 | 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色；不合 main） |
 | 2026-09-21 18:54 | 确认硬规则：不为迁就模板而改蓝图；排版只改模板 / composition / token；写入 `AGENTS.md` 与 `docs/blueprint-rules.md` |
 | 2026-09-21 18:17 | 写入 copy-final / composition / Section 分层；共享 `ListGrid` 按 `items.length` 自适应；Capabilities / Audiences / Process 步骤不再写死 4/5 列；Worker Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
@@ -355,6 +355,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
 | 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
 | 2026-09-21 18:05 | AtelierBag OEM Hero / About / Why | curl EN/ZH 首页 200；CDP 测 Hero `996px`（`1100vh - header`）；About 双列等宽、两图 `623×467`；Why 新文案在线 | 通过；无右空、两图同高；Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
 | 2026-09-21 17:52 | AtelierBag OEM 视觉 P0/P1 | 线上 curl EN/ZH 首页、`/products/`、`/contact/` 200；桌面截图首页/产品/联系；HTML 断言主项 Home/Products/Factory/Case Studies/Contact + More、无 `text-xl` 字标、`#wa-fab` 为 56px 圆标 | 通过；叠字消失、头栏单行、浮钮不挡 Message；联系页可见 helper 1 处；产品 Hero 有 Get Factory Quote；Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
