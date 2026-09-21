@@ -328,6 +328,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 16:24 | 重写 `sites/atelierbag-oem` EN/ZH 全部 content JSON 为买家可见定稿；去掉 Share / 请发 / as drawn / slogan wall 等指令腔；表单提示压成一行；导航 IA 不变 |
+| 2026-09-21 16:23 | 再部署 AtelierBag OEM Worker `atelierbag-oem`（Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
 | 2026-09-21 15:17 | 部署 AtelierBag OEM Worker `atelierbag-oem`（Version `c23f1263-321b-4ba3-b39f-a0cbaadd4260`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
 | 2026-09-21 15:13 | 新增手袋 OEM 站 `sites/atelierbag-oem`（从 Chromora 制造模板复制，未改 ratahome / chromora 内容） |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
@@ -351,6 +353,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 16:24 | AtelierBag OEM 买家定稿文案 | curl EN/ZH 首页、产品、托特详情、联系、工厂、FAQ | 全部 200；新文案在线；Share / 请发 / Those three notes / slogan wall / 选填说明书未出现 |
+| 2026-09-21 16:23 | `atelierbag-oem` validate + build + deploy | `pnpm site-cli validate` + `pnpm --filter atelierbag-oem build` + `cf:deploy` | 通过；Worker Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0` |
 | 2026-09-21 15:17 | AtelierBag OEM 预览 | curl EN/ZH 首页、产品、详情、联系、工厂、FAQ | 全部 200；Hero/CTA/表单字段齐全 |
 | 2026-09-21 15:14 | `atelierbag-oem` validate + build | `pnpm site-cli validate` + `pnpm --filter atelierbag-oem build` | 通过 |
 | 2026-09-21 15:14 | `ratahome-furniture` validate | `pnpm site-cli validate ratahome-furniture` | 通过 |
