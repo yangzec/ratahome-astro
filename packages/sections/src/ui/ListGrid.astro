@@ -1,0 +1,32 @@
+---
+interface Props {
+  min?: number;
+  class?: string;
+  count?: number;
+}
+
+const { min = 240, class: className = '', count } = Astro.props;
+---
+
+<div
+  class:list={['list-grid', className]}
+  style={`--list-min: ${min}px`}
+  data-list-count={count}
+>
+  <slot />
+</div>
+
+<style>
+  /* flex + grow：按 length 换行，末行均分，不留空轨道。 */
+  .list-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .list-grid > :global(*) {
+    box-sizing: border-box;
+    flex: 1 1 var(--list-min, 240px);
+    min-width: min(100%, var(--list-min, 240px));
+  }
+</style>

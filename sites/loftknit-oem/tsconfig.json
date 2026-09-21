@@ -1,0 +1,15 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@trade/core": ["../../packages/core/src/index.ts"],
+      "@trade/core/*": ["../../packages/core/src/*"],
+      "@site/config": ["./site.config.ts"],
+      "@site/theme": ["./theme.json"],
+      "@site/blueprints/*": ["./blueprints/*"]
+    }
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
+}

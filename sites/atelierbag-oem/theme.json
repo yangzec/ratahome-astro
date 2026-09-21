@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "accentName": "leather-brown",
+    "notes": "Manufacturing B2B neutrals with one deep leather-brown accent (not Chromora teal, not furniture orange). 60% cream/white surface, 30% ink/charcoal structure, 10% accent on CTA, links, eyebrows, and outline icons."
+  },
+  "colors": {
+    "accent": "92 48 32",
+    "ink": "28 26 24",
+    "charcoal": "22 20 18",
+    "grayText": "68 64 60",
+    "grayMuted": "112 108 104",
+    "cream": "245 243 240",
+    "creamDeep": "232 228 223",
+    "stone": "176 170 164",
+    "border": "214 210 204",
+    "olive": "62 52 46",
+    "oliveDark": "28 22 20",
+    "chrome": "20 16 14"
+  },
+  "fonts": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "label": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "display": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  },
+  "radius": {
+    "hero": "16px",
+    "image": "12px",
+    "step": "12px",
+    "pill": "100px"
+  }
+}

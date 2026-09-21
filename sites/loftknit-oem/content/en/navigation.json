@@ -1,0 +1,107 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "id": "oem-odm",
+      "label": "OEM & ODM",
+      "href": "/oem-odm"
+    },
+    {
+      "id": "customization",
+      "label": "Customization",
+      "href": "/customization"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Performance",
+          "links": [
+            {
+              "label": "Sports Socks",
+              "href": "/products/sports-socks",
+              "description": "Running, training, basketball, and team programs"
+            },
+            {
+              "label": "Compression Socks",
+              "href": "/products/compression-socks",
+              "description": "Graduated and sport compression options"
+            },
+            {
+              "label": "Outdoor Socks",
+              "href": "/products/outdoor-socks",
+              "description": "Hiking and outdoor constructions"
+            },
+            {
+              "label": "Anti-Slip Socks",
+              "href": "/products/anti-slip-socks",
+              "description": "Grip soles for studio and home"
+            }
+          ]
+        },
+        {
+          "title": "Everyday",
+          "links": [
+            {
+              "label": "Crew Socks",
+              "href": "/products/crew-socks",
+              "description": "Everyday and athletic crew heights"
+            },
+            {
+              "label": "Ankle & Low-Cut Socks",
+              "href": "/products/ankle-low-cut-socks",
+              "description": "Low-profile liners and ankle socks"
+            },
+            {
+              "label": "Casual & Dress Socks",
+              "href": "/products/casual-dress-socks",
+              "description": "Business and lifestyle socks"
+            },
+            {
+              "label": "Kids Socks",
+              "href": "/products/kids-socks",
+              "description": "Children’s sizes with soft yarns"
+            }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse series and request a factory quote",
+        "href": "/products",
+        "image": "/images/series-sports.webp"
+      }
+    },
+    {
+      "id": "cases",
+      "label": "Cases",
+      "href": "/cases"
+    },
+    {
+      "id": "catalog",
+      "label": "Catalog",
+      "href": "/catalog"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact"
+    }
+  ]
+}

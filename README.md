@@ -22,7 +22,8 @@ pnpm dev
 packages/core/              Shared lib: db, r2, i18n
 packages/sections/          Shared Section components + registry
 packages/site-cli/          create / validate / deploy CLI
-sites/ratahome-furniture/   First site instance
+sites/ratahome-furniture/   First site instance (furniture)
+sites/atelierbag-oem/       Handbag OEM instance (Guangzhou / Shiling)
   site.config.ts            site_id, template, locales
   theme.json                Design tokens (colors, fonts)
   blueprints/home.json      Homepage section order
@@ -42,6 +43,7 @@ pnpm cf:deploy  # deploy ratahome-furniture
 pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"
 pnpm site-cli validate <slug>
 pnpm site-cli deploy <slug>
+# AtelierBag OEM local: pnpm --filter atelierbag-oem dev  → http://localhost:43126
 ```
 
 ## Features

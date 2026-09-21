@@ -1,0 +1,170 @@
+{
+  "site": {
+    "name": "LoftKnit",
+    "title": "面向品牌的袜子 OEM / ODM 工厂",
+    "description": "LoftKnit 是中国诸暨的袜子 OEM / ODM 伙伴。为品牌、零售商与分销商开发并生产运动、压缩、中筒、休闲与特种袜——从打样与贴牌到大货包装与出口。",
+    "whatsapp": "+86 139 0575 8800",
+    "whatsappUrl": "https://wa.me/8613905758800",
+    "hours": "周一至周六，09:00–18:00（中国时间）",
+    "location": "中国诸暨",
+    "address": "中国浙江省诸暨市大唐袜业路 128 号",
+    "phone": "+86 575 8700 8800",
+    "email": "sales@loftknit-oem.com",
+    "tagline": "袜子 OEM / ODM · 面向品牌、零售商与分销商的贴牌"
+  },
+  "buttons": {
+    "startProject": "获取报价",
+    "uploadFloorPlan": "获取报价",
+    "factoryTour": "浏览产品",
+    "sendFloorPlan": "发送留言",
+    "sendMessage": "发送留言",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "查看全部",
+    "seeJourney": "OEM / ODM 流程",
+    "readWarranty": "查看案例",
+    "exploreProjects": "浏览目录",
+    "requestQuote": "获取报价",
+    "discussJoinery": "联系我们"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "company": "公司",
+    "whatsapp": "WhatsApp",
+    "projectType": "询盘类型",
+    "message": "留言",
+    "projectDetails": "留言",
+    "floorPlan": "附件（PDF / JPG）",
+    "privacy": "款式、材料、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "+1 555 000 0000",
+    "companyPlaceholder": "品牌或采购办公室",
+    "whatsappPlaceholder": "WhatsApp number",
+    "messagePlaceholder": "款式、材料、数量与目的市场",
+    "detailsPlaceholder": "款式、材料、数量与目的市场",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "获取报价",
+      "design": "联系我们",
+      "development": "打样需求",
+      "hospitality": "目录索取",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "LoftKnit 是中国诸暨的袜子 OEM / ODM 伙伴。为品牌、零售商与分销商开发并生产运动、压缩、中筒、休闲与特种袜——从打样与贴牌到大货包装与出口。",
+    "copyright": "All rights reserved.",
+    "foundedYear": "2012",
+    "columns": [
+      {
+        "title": "LoftKnit",
+        "body": "LoftKnit 是中国诸暨的袜子 OEM / ODM 伙伴。为品牌、零售商与分销商开发并生产运动、压缩、中筒、休闲与特种袜——从打样与贴牌到大货包装与出口。",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "产品",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "运动袜",
+            "href": "/products/sports-socks"
+          },
+          {
+            "label": "压缩袜",
+            "href": "/products/compression-socks"
+          },
+          {
+            "label": "中筒袜",
+            "href": "/products/crew-socks"
+          },
+          {
+            "label": "船袜 / 低帮袜",
+            "href": "/products/ankle-low-cut-socks"
+          },
+          {
+            "label": "户外袜",
+            "href": "/products/outdoor-socks"
+          },
+          {
+            "label": "休闲 / 正装袜",
+            "href": "/products/casual-dress-socks"
+          },
+          {
+            "label": "儿童袜",
+            "href": "/products/kids-socks"
+          },
+          {
+            "label": "防滑袜",
+            "href": "/products/anti-slip-socks"
+          },
+          {
+            "label": "全部产品",
+            "href": "/products"
+          }
+        ]
+      },
+      {
+        "title": "服务",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "关于我们",
+            "href": "/about"
+          },
+          {
+            "label": "OEM / ODM",
+            "href": "/oem-odm"
+          },
+          {
+            "label": "定制服务",
+            "href": "/customization"
+          },
+          {
+            "label": "案例",
+            "href": "/cases"
+          },
+          {
+            "label": "产品目录",
+            "href": "/catalog"
+          },
+          {
+            "label": "常见问题",
+            "href": "/faq"
+          }
+        ]
+      },
+      {
+        "title": "联系",
+        "body": "",
+        "links": [
+          {
+            "label": "地址：中国浙江省诸暨市大唐袜业路 128 号",
+            "href": "/contact"
+          },
+          {
+            "label": "电话：+86 575 8700 8800",
+            "href": "tel:+8657587008800"
+          },
+          {
+            "label": "邮箱：sales@loftknit-oem.com",
+            "href": "mailto:sales@loftknit-oem.com"
+          },
+          {
+            "label": "WhatsApp：+86 139 0575 8800",
+            "href": "https://wa.me/8613905758800"
+          },
+          {
+            "label": "获取报价",
+            "href": "/contact/?intent=quote"
+          }
+        ],
+        "note": "营业时间：周一至周六，09:00–18:00（中国时间）"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "关于我们",
+      "href": "/about"
+    },
+    {
+      "id": "factory",
+      "label": "工厂与能力",
+      "href": "/factory",
+      "groups": [
+        {
+          "title": "车间",
+          "links": [
+            { "label": "材料采购", "href": "/factory/materials-sourcing", "description": "真皮、素皮与纺织" },
+            { "label": "产品开发", "href": "/factory/product-development", "description": "从工艺包到样品" },
+            { "label": "OEM / ODM 生产", "href": "/factory/oem-odm", "description": "按你的设计，或与打样团队一起开发" }
+          ]
+        },
+        {
+          "title": "生产",
+          "links": [
+            { "label": "过程控制与质检", "href": "/factory/process-control", "description": "出货前线中与终检" },
+            { "label": "包装与品牌", "href": "/factory/packaging-branding", "description": "Logo、品牌物料与包装" },
+            { "label": "全球物流", "href": "/factory/logistics", "description": "出口包装与出货文件" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "虚拟工厂参观",
+        "description": "看我们怎么做——从裁断到包装",
+        "href": "/factory",
+        "image": "/images/factory-sewing.jpg"
+      }
+    },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "主力款",
+          "links": [
+            { "label": "托特包", "href": "/products/tote-bags", "description": "真皮与替代材料的日常与时装托特" },
+            { "label": "肩包", "href": "/products/shoulder-bags", "description": "零售线的结构与软身肩包" },
+            { "label": "斜挎包", "href": "/products/crossbody-bags", "description": "五金与肩带可选的紧凑斜挎" }
+          ]
+        },
+        {
+          "title": "更多款型",
+          "links": [
+            { "label": "背包", "href": "/products/backpacks", "description": "带品牌后整的生活方式与轻出行背包" },
+            { "label": "钱包与皮小件", "href": "/products/wallets-slg", "description": "卡包、钱包与配套皮小件" },
+            { "label": "素皮 / 替代材料", "href": "/products/vegan-materials", "description": "不含真皮的 PU、再生与功能性材料" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部产品",
+        "description": "浏览款式并获取工厂报价",
+        "href": "/products",
+        "image": "/images/product-tote.jpg"
+      }
+    },
+    {
+      "id": "custom-process",
+      "label": "定制流程",
+      "href": "/custom-process"
+    },
+    {
+      "id": "case-studies",
+      "label": "案例",
+      "href": "/case-studies"
+    },
+    {
+      "id": "faq",
+      "label": "常见问题",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "联系我们",
+      "href": "/contact"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "site": {
+    "name": "AtelierBag OEM",
+    "title": "品牌手袋全包 OEM 工厂",
+    "description": "AtelierBag OEM 是广州手袋全包 OEM / ODM 伙伴。真皮、素皮与功能性面料，从打样到大货出运。",
+    "whatsapp": "+86 138 0020 8800",
+    "whatsappUrl": "https://wa.me/8613800208800",
+    "hours": "周一至周六，09:00–18:00（中国时间）",
+    "location": "中国广州",
+    "address": "中国广东省广州市花都区狮岭皮革路 88 号",
+    "phone": "+86 20 3888 6200",
+    "email": "sales@atelierbag-oem.com",
+    "tagline": "面向全球品牌的手袋全包 OEM 与 ODM"
+  },
+  "buttons": {
+    "startProject": "获取工厂报价",
+    "uploadFloorPlan": "获取工厂报价",
+    "factoryTour": "查看产品",
+    "sendFloorPlan": "发送留言",
+    "sendMessage": "发送留言",
+    "whatsappUs": "WhatsApp 咨询",
+    "viewAll": "查看全部",
+    "seeJourney": "完整定制流程",
+    "readWarranty": "虚拟工厂参观",
+    "exploreProjects": "查看全部产品",
+    "requestQuote": "获取工厂报价",
+    "discussJoinery": "开始您的项目"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "company": "公司",
+    "whatsapp": "WhatsApp",
+    "projectType": "询盘类型",
+    "message": "留言",
+    "projectDetails": "留言",
+    "floorPlan": "附件（PDF / JPG）",
+    "privacy": "材料、数量与交期的简短说明，有助于我们更快回复。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "+1 555 000 0000",
+    "companyPlaceholder": "品牌或采购办公室",
+    "whatsappPlaceholder": "WhatsApp 号码",
+    "messagePlaceholder": "材料、数量与交期的简短说明",
+    "detailsPlaceholder": "材料、数量与交期的简短说明",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "工厂报价",
+      "design": "启动项目",
+      "development": "打样 / 样品",
+      "hospitality": "材料咨询",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "AtelierBag OEM 是广州手袋全包 OEM / ODM 伙伴。我们帮助品牌从概念和打样走到稳定的大货品质——真皮、素皮与功能性面料。",
+    "copyright": "版权所有。",
+    "foundedYear": "2008",
+    "columns": [
+      {
+        "title": "AtelierBag OEM",
+        "body": "AtelierBag OEM 是广州手袋全包 OEM / ODM 伙伴。我们帮助品牌从概念和打样走到稳定的大货品质——真皮、素皮与功能性面料。",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "产品",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "托特包", "href": "/products/tote-bags" },
+          { "label": "肩包", "href": "/products/shoulder-bags" },
+          { "label": "斜挎包", "href": "/products/crossbody-bags" },
+          { "label": "背包", "href": "/products/backpacks" },
+          { "label": "钱包与皮小件", "href": "/products/wallets-slg" },
+          { "label": "素皮 / 替代材料", "href": "/products/vegan-materials" },
+          { "label": "全部产品", "href": "/products" }
+        ]
+      },
+      {
+        "title": "工厂",
+        "body": "",
+        "note": "",
+        "links": [
+          { "label": "工厂与能力", "href": "/factory" },
+          { "label": "材料采购", "href": "/factory/materials-sourcing" },
+          { "label": "产品开发", "href": "/factory/product-development" },
+          { "label": "OEM / ODM 生产", "href": "/factory/oem-odm" },
+          { "label": "过程控制与质检", "href": "/factory/process-control" },
+          { "label": "包装与品牌", "href": "/factory/packaging-branding" },
+          { "label": "全球物流", "href": "/factory/logistics" },
+          { "label": "定制流程", "href": "/custom-process" }
+        ]
+      },
+      {
+        "title": "联系",
+        "body": "",
+        "links": [
+          { "label": "地址：中国广东省广州市花都区狮岭皮革路 88 号", "href": "/contact" },
+          { "label": "电话：+86 20 3888 6200", "href": "tel:+862038886200" },
+          { "label": "邮箱：sales@atelierbag-oem.com", "href": "mailto:sales@atelierbag-oem.com" },
+          { "label": "WhatsApp：+86 138 0020 8800", "href": "https://wa.me/8613800208800" },
+          { "label": "获取工厂报价", "href": "/contact/?intent=quote" }
+        ],
+        "note": "工作时间：周一至周六，09:00–18:00（中国时间）"
+      }
+    ]
+  }
+}

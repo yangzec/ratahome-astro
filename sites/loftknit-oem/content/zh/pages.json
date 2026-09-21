@@ -1,0 +1,796 @@
+{
+  "about": {
+    "title": "关于 LoftKnit | 诸暨袜厂",
+    "eyebrow": "关于 LoftKnit",
+    "heroTitle": "关于 LoftKnit",
+    "heroDescription": "中国诸暨的袜子制造商。",
+    "workflowTitle": "我们的故事",
+    "workflowDescription": "LoftKnit Manufacturing Co., Ltd. 是位于中国诸暨的袜子制造商。我们与品牌与批发团队合作 OEM / ODM 项目——材料、打样、生产、质检、包装与出口——让袜线以稳定质量出运。",
+    "story": "LoftKnit Manufacturing Co., Ltd. 是位于中国诸暨的袜子制造商。我们与品牌与批发团队合作 OEM / ODM 项目——材料、打样、生产、质检、包装与出口——让袜线以稳定质量出运。",
+    "approachTitle": "OEM & ODM · Get Quote",
+    "approach": "Open the OEM process, or start a quote for your next sock program.",
+    "glanceTitle": "At a glance",
+    "closingTitle": "OEM / ODM · 获取报价",
+    "closingDescription": "查看 OEM 流程，或为下一个袜子项目获取报价。"
+  },
+  "collections": {
+    "title": "袜子产品中心",
+    "heroTitle": "袜子产品中心",
+    "heroDescription": "浏览运动、压缩、中筒、户外、休闲、儿童与特种系列。打开品类查看款式，再对适合产品线的结构获取报价。",
+    "packagesTitle": "袜子系列",
+    "benefitsTitle": "获取报价 · 下载目录",
+    "benefitsDescription": "索取工厂报价或打开系列目录。",
+    "stylesTitle": "Filter by series",
+    "stylesDescription": "Series · Construction · End use",
+    "styles": [
+      "全部产品",
+      "运动袜",
+      "压缩袜",
+      "中筒袜",
+      "船袜 / 低帮袜",
+      "户外袜",
+      "休闲 / 正装袜",
+      "儿童袜",
+      "防滑袜"
+    ]
+  },
+  "contact": {
+    "title": "联系我们 | 获取报价",
+    "heroTitle": "联系我们",
+    "heroDescription": "款式、材料、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "getInTouch": "工厂联系方式",
+    "helper": "款式、材料、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "whatsappLine": "WhatsApp +86 139 0575 8800",
+    "visitNote": "诸暨大唐工厂参观需预约。"
+  },
+  "slugs": {
+    "oem-odm": {
+      "title": "OEM / ODM 袜子制造",
+      "description": "从确认样到出口纸箱，我们为品牌与批发买家运行贴牌与全定制袜子项目。",
+      "content": "从确认样到出口纸箱，我们为品牌与批发买家运行贴牌与全定制袜子项目。",
+      "sections": [
+        {
+          "title": "How an OEM program runs",
+          "body": "Sample timing depends on construction complexity; bulk starts after sample approval and material confirmation.",
+          "items": [
+            "Brief & feasibility — Send style photos, a tech pack, or a reference sample—we confirm construction and material options.",
+            "Sampling — You receive samples for fit, hand-feel, and logo review before bulk.",
+            "Bulk production — Confirmed specs go to knitting and finishing with in-process checks.",
+            "QC & packing — Pre-shipment inspection, branded packing, and export-ready cartons.",
+            "Shipping — Documents and logistics prepared for your destination market."
+          ]
+        }
+      ]
+    },
+    "customization": {
+      "title": "贴牌袜定制服务",
+      "description": "Logo、纱线、颜色、高度与包装选择，对齐你的品牌手册——无需每季重写货盘。",
+      "content": "Logo, yarn, color, height, and packaging choices that match your brand book—without rewriting your assortment every season.",
+      "sections": [
+        {
+          "title": "Customization topics",
+          "body": "Choices agreed at sampling stay on the bulk order.",
+          "items": [
+            "Logo & branding — Embroidery, jacquard, printed logos, hangtags, and woven labels to your artwork.",
+            "Materials & color — Cotton, bamboo, wool blends, synthetics, and custom dye lots agreed at sampling.",
+            "Construction — Height, cushion zones, rib, toe closure, and grip options tuned to the end use.",
+            "Packaging — Polybags, header cards, retail boxes, and master cartons labeled for your channel."
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "title": "案例",
+      "description": "精选 OEM 与贴牌项目，展示从需求到大货的路径。故事仅在客户授权后展示。",
+      "content": "Selected OEM and private-label programs that show how we move from brief to bulk. Stories appear with client authorization.\n\nAudience tags: Brand retailers · Wholesalers & distributors · Designer brands · Sports brands"
+    },
+    "catalog": {
+      "title": "产品目录",
+      "description": "下载当前系列概览，或索取面向你市场的精选清单。我们将在一个工作日内跟进。",
+      "content": "Download our current series overview, or request a curated selection for your market. We will follow up within one business day.\n\nPrimary CTA: Download Catalog · Secondary: Get Quote · Contact Us"
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "报价材料、OEM/ODM、贴牌包装、打样与回复时效。",
+      "content": "Short answers for brand and wholesale buyers looking at a socks OEM.",
+      "sections": [
+        {
+          "title": "Buying FAQ",
+          "body": "We aim to respond to inquiries within one business day.",
+          "items": [
+            "What do you need for a first quote? — Style photos or tech pack, target materials, estimated quantity, destination market, and any logo or packing notes.",
+            "Do you support OEM and ODM? — Yes—produce from your design, or develop styles with our sampling team.",
+            "Can I order private label packaging? — Yes—hangtags, polybags, labels, and cartons can follow your brand standards.",
+            "How do sampling and bulk timing work? — Sample timing depends on construction complexity; bulk starts after sample approval and material confirmation.",
+            "How fast do you reply? — We aim to respond to inquiries within one business day."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How LoftKnit handles enquiry data.",
+      "content": "LoftKnit uses the contact details you submit to reply to quotes and project briefs. We do not sell enquiry data. To update or delete information, write to sales@loftknit-oem.com."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the LoftKnit website.",
+      "content": "Content on this website is for product information and enquiry. Specifications and lead times are confirmed in writing on each quotation. Nothing here is a binding offer. Commercial terms sit on documents issued by LoftKnit Manufacturing Co., Ltd."
+    },
+    "sports-socks": {
+      "title": "运动袜 — OEM 与批发",
+      "description": "跑步、训练、篮球与团队项目的性能袜。",
+      "content": "探索面向品牌与批发项目的运动袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n跑步、训练、篮球与团队项目的性能袜。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "compression-socks": {
+      "title": "压缩袜 — OEM 与批发",
+      "description": "面向零售与专业线的梯度与运动压缩选项。",
+      "content": "探索面向品牌与批发项目的压缩袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n面向零售与专业线的梯度与运动压缩选项。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "crew-socks": {
+      "title": "中筒袜 — OEM 与批发",
+      "description": "日常与运动中筒高度，可配加厚与 logo。",
+      "content": "探索面向品牌与批发项目的中筒袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n日常与运动中筒高度，可配加厚与 logo。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "ankle-low-cut-socks": {
+      "title": "船袜 / 低帮袜 — OEM 与批发",
+      "description": "活动与生活方式系列用的低帮与船袜。",
+      "content": "探索面向品牌与批发项目的船袜 / 低帮袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n活动与生活方式系列用的低帮与船袜。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "outdoor-socks": {
+      "title": "户外袜 — OEM 与批发",
+      "description": "棉、羊毛混纺与性能纱线的徒步与户外结构。",
+      "content": "探索面向品牌与批发项目的户外袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n棉、羊毛混纺与性能纱线的徒步与户外结构。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "casual-dress-socks": {
+      "title": "休闲 / 正装袜 — OEM 与批发",
+      "description": "商务与生活方式袜，素色、花型与品牌整理。",
+      "content": "探索面向品牌与批发项目的休闲 / 正装袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n商务与生活方式袜，素色、花型与品牌整理。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "kids-socks": {
+      "title": "儿童袜 — OEM 与批发",
+      "description": "柔软纱线与耐用组织结构的儿童尺码。",
+      "content": "探索面向品牌与批发项目的儿童袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n柔软纱线与耐用组织结构的儿童尺码。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "anti-slip-socks": {
+      "title": "防滑袜 — OEM 与批发",
+      "description": "瑜伽、工作室与居家用的防滑底。",
+      "content": "探索面向品牌与批发项目的防滑袜款式。可调整纱线、高度、加厚、logo 方式与包装——再对入选结构获取工厂报价。\n\n瑜伽、工作室与居家用的防滑底。",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入选款式获取工厂报价。",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "Get Quote",
+      "description": "Reply within one business day with next steps."
+    },
+    {
+      "title": "Download Catalog",
+      "description": "Series overview for your market."
+    },
+    {
+      "title": "Private label",
+      "description": "Logo, hangtags, and packing to your brand book."
+    },
+    {
+      "title": "OEM & ODM",
+      "description": "From your tech pack or our sampling team."
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "运动袜",
+      "description": "跑步、训练、篮球与团队项目的性能袜。",
+      "image": "/images/series-sports.webp",
+      "href": "/products/sports-socks"
+    },
+    {
+      "title": "压缩袜",
+      "description": "面向零售与专业线的梯度与运动压缩选项。",
+      "image": "/images/series-compression.webp",
+      "href": "/products/compression-socks"
+    },
+    {
+      "title": "中筒袜",
+      "description": "日常与运动中筒高度，可配加厚与 logo。",
+      "image": "/images/series-crew.webp",
+      "href": "/products/crew-socks"
+    },
+    {
+      "title": "船袜 / 低帮袜",
+      "description": "活动与生活方式系列用的低帮与船袜。",
+      "image": "/images/series-ankle.webp",
+      "href": "/products/ankle-low-cut-socks"
+    },
+    {
+      "title": "户外袜",
+      "description": "棉、羊毛混纺与性能纱线的徒步与户外结构。",
+      "image": "/images/series-outdoor.webp",
+      "href": "/products/outdoor-socks"
+    },
+    {
+      "title": "休闲 / 正装袜",
+      "description": "商务与生活方式袜，素色、花型与品牌整理。",
+      "image": "/images/series-casual.webp",
+      "href": "/products/casual-dress-socks"
+    },
+    {
+      "title": "儿童袜",
+      "description": "柔软纱线与耐用组织结构的儿童尺码。",
+      "image": "/images/series-kids.webp",
+      "href": "/products/kids-socks"
+    },
+    {
+      "title": "防滑袜",
+      "description": "瑜伽、工作室与居家用的防滑底。",
+      "image": "/images/series-antislip.webp",
+      "href": "/products/anti-slip-socks"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Base",
+      "description": "Zhuji, China"
+    },
+    {
+      "step": "02",
+      "title": "Role",
+      "description": "Socks OEM & ODM"
+    },
+    {
+      "step": "03",
+      "title": "Legal name",
+      "description": "LoftKnit Manufacturing Co., Ltd."
+    },
+    {
+      "step": "04",
+      "title": "Programs",
+      "description": "Private label for brands, retailers, distributors"
+    },
+    {
+      "step": "05",
+      "title": "Primary CTA",
+      "description": "Get Quote"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "OEM & ODM",
+      "description": "Produce from your design, or develop with our sampling team."
+    },
+    {
+      "title": "Private label",
+      "description": "Logo, hangtags, polybags, and cartons to your standards."
+    },
+    {
+      "title": "One business day",
+      "description": "We aim to respond to inquiries within one business day."
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "View series",
+      "description": "Open a category for yarn, height, and packing options."
+    },
+    {
+      "title": "Get Quote",
+      "description": "Request factory pricing on the styles you shortlist."
+    },
+    {
+      "title": "Customization",
+      "description": "Logo, yarn, color, height, and packaging choices."
+    }
+  ]
+}

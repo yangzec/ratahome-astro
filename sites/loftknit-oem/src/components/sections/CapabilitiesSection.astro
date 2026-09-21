@@ -1,0 +1,49 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '../../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+import SectionHeader from '@trade/sections/ui/SectionHeader.astro';
+import ListGrid from '@trade/sections/ui/ListGrid.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { home } = getContent(locale);
+const { capabilities } = home;
+const items = Array.isArray(capabilities?.items) ? capabilities.items : [];
+---
+
+{items.length > 0 && (
+<section class="bg-izza-cream py-20">
+  <div class="container-site">
+    <SectionHeader title={capabilities.title} description={capabilities.description} />
+    <ListGrid min={240} count={items.length}>
+      {items.map((item) => {
+        const href = 'href' in item && typeof item.href === 'string' ? item.href : null;
+        const inner = (
+          <>
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src={item.image} alt={item.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-izza-ink mb-2 group-hover:text-izza-accent transition-colors">{item.title}</h3>
+              <p class="text-sm text-izza-gray-muted">{item.description}</p>
+            </div>
+          </>
+        );
+        return href ? (
+          <a href={localizedPath(href, locale)} class="group block bg-white rounded-[20px] overflow-hidden hover:shadow-lg transition-shadow">
+            {inner}
+          </a>
+        ) : (
+          <div class="group bg-white rounded-[20px] overflow-hidden hover:shadow-lg transition-shadow">
+            {inner}
+          </div>
+        );
+      })}
+    </ListGrid>
+  </div>
+</section>
+)}

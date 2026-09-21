@@ -12,6 +12,8 @@ const { locale } = Astro.props;
 const { home, common } = getContent(locale);
 const { hero } = home;
 const { buttons } = common;
+const primaryHref = 'primaryHref' in hero && typeof hero.primaryHref === 'string' ? hero.primaryHref : '#upload';
+const secondaryHref = 'secondaryHref' in hero && typeof hero.secondaryHref === 'string' ? hero.secondaryHref : '/foshan-sourcing-tour';
 ---
 
 <section class="relative min-h-[85vh] flex items-end overflow-hidden">
@@ -24,8 +26,8 @@ const { buttons } = common;
     </h1>
     <p class="text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">{hero.description}</p>
     <div class="flex flex-wrap gap-4">
-      <Button href="#upload" variant="primary">{buttons.uploadFloorPlan}</Button>
-      <Button href={localizedPath('/foshan-sourcing-tour', locale)} variant="outline">{buttons.factoryTour}</Button>
+      <Button href={primaryHref} variant="primary">{buttons.uploadFloorPlan}</Button>
+      <Button href={localizedPath(secondaryHref, locale)} variant="outline">{buttons.factoryTour}</Button>
     </div>
   </div>
 </section>

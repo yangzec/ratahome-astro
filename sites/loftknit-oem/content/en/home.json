@@ -1,0 +1,256 @@
+{
+  "hero": {
+    "eyebrow": "Zhuji · Socks OEM & ODM",
+    "title": "OEM & ODM Socks Factory for Your Brand",
+    "description": "Full-range custom and private-label socks—sports, compression, crew, casual, and specialty styles—from sampling to bulk shipment.",
+    "image": "/images/hero-socks.webp",
+    "imageAlt": "Indigo and navy OEM sock samples stacked on a studio table",
+    "primaryHref": "/contact/?intent=quote",
+    "secondaryHref": "/products"
+  },
+  "assurances": [],
+  "metrics": [],
+  "audiences": {
+    "title": "A Zhuji socks factory built for OEM partners",
+    "description": "LoftKnit develops and manufactures socks for international brands and wholesale buyers. Our team supports private label, logo, and packaging programs—taking styles from sample confirmation through consistent bulk quality and export packing.",
+    "items": [
+      {
+        "title": "About Us",
+        "description": "The factory behind the program.",
+        "href": "/about",
+        "image": "/images/factory-knit.webp"
+      },
+      {
+        "title": "OEM & ODM",
+        "description": "From approved sample to export cartons.",
+        "href": "/oem-odm",
+        "image": "/images/factory-pack.webp"
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Sock series for brand and wholesale programs",
+    "description": "Open a series to review styles, then request a quote on the constructions that fit your line.",
+    "items": [
+      {
+        "title": "Sports Socks",
+        "description": "Performance socks for running, training, basketball, and team programs.",
+        "image": "/images/series-sports.webp",
+        "href": "/products/sports-socks"
+      },
+      {
+        "title": "Compression Socks",
+        "description": "Graduated and sport compression options for retail and medical-adjacent lines.",
+        "image": "/images/series-compression.webp",
+        "href": "/products/compression-socks"
+      },
+      {
+        "title": "Crew Socks",
+        "description": "Everyday and athletic crew heights with cushion and logo options.",
+        "image": "/images/series-crew.webp",
+        "href": "/products/crew-socks"
+      },
+      {
+        "title": "Ankle & Low-Cut Socks",
+        "description": "Low-profile liners and ankle socks for active and lifestyle assortments.",
+        "image": "/images/series-ankle.webp",
+        "href": "/products/ankle-low-cut-socks"
+      },
+      {
+        "title": "Outdoor Socks",
+        "description": "Hiking and outdoor constructions in cotton, wool blends, and performance yarns.",
+        "image": "/images/series-outdoor.webp",
+        "href": "/products/outdoor-socks"
+      },
+      {
+        "title": "Casual & Dress Socks",
+        "description": "Business and lifestyle socks with solid, pattern, and branded finishes.",
+        "image": "/images/series-casual.webp",
+        "href": "/products/casual-dress-socks"
+      },
+      {
+        "title": "Kids Socks",
+        "description": "Children’s sizes with soft yarns and durable knit constructions.",
+        "image": "/images/series-kids.webp",
+        "href": "/products/kids-socks"
+      },
+      {
+        "title": "Anti-Slip Socks",
+        "description": "Grip soles for yoga, studio, and home use.",
+        "image": "/images/series-antislip.webp",
+        "href": "/products/anti-slip-socks"
+      }
+    ]
+  },
+  "process": {
+    "title": "OEM & ODM sock manufacturing",
+    "description": "From approved sample to export cartons, we run private-label and full custom sock programs for brand and wholesale buyers.",
+    "image": "/images/process-sampling.webp",
+    "imageAlt": "Sock prototypes on a sampling table for fit and logo review",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Brief & feasibility",
+        "description": "Send style photos, a tech pack, or a reference sample—we confirm construction and material options."
+      },
+      {
+        "step": "02",
+        "title": "Sampling",
+        "description": "You receive samples for fit, hand-feel, and logo review before bulk."
+      },
+      {
+        "step": "03",
+        "title": "Bulk production",
+        "description": "Confirmed specs go to knitting and finishing with in-process checks."
+      },
+      {
+        "step": "04",
+        "title": "QC & packing",
+        "description": "Pre-shipment inspection, branded packing, and export-ready cartons."
+      },
+      {
+        "step": "05",
+        "title": "Shipping",
+        "description": "Documents and logistics prepared for your destination market."
+      }
+    ]
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "OEM service",
+    "title": "OEM service, production range, and packaging",
+    "description": "Build private-label sock programs with clear construction and packing choices.",
+    "commitment": "We work with brand retailers, wholesalers, designer labels, and sports brands on private-label and OEM sock lines. Named case studies appear only with client authorization.",
+    "cases": [
+      {
+        "question": "01",
+        "title": "OEM & ODM service",
+        "description": "Build from your tech pack or develop with our sampling team—private label, custom colors, and construction tweaks included."
+      },
+      {
+        "question": "02",
+        "title": "Production range",
+        "description": "Sport, compression, crew, liner, kids, and specialty socks across common needle and yarn options used in brand assortments."
+      },
+      {
+        "question": "03",
+        "title": "Custom packaging",
+        "description": "Brand packs, hangtags, barcode labels, and export cartons prepared to your retail or wholesale brief."
+      }
+    ]
+  },
+  "rooms": {
+    "title": "Sock series for brand and wholesale programs",
+    "items": [
+      {
+        "label": "Sports Socks",
+        "slug": "sports-socks",
+        "href": "/products/sports-socks"
+      },
+      {
+        "label": "Compression Socks",
+        "slug": "compression-socks",
+        "href": "/products/compression-socks"
+      },
+      {
+        "label": "Crew Socks",
+        "slug": "crew-socks",
+        "href": "/products/crew-socks"
+      },
+      {
+        "label": "Ankle & Low-Cut Socks",
+        "slug": "ankle-low-cut-socks",
+        "href": "/products/ankle-low-cut-socks"
+      },
+      {
+        "label": "Outdoor Socks",
+        "slug": "outdoor-socks",
+        "href": "/products/outdoor-socks"
+      },
+      {
+        "label": "Casual & Dress Socks",
+        "slug": "casual-dress-socks",
+        "href": "/products/casual-dress-socks"
+      },
+      {
+        "label": "Kids Socks",
+        "slug": "kids-socks",
+        "href": "/products/kids-socks"
+      },
+      {
+        "label": "Anti-Slip Socks",
+        "slug": "anti-slip-socks",
+        "href": "/products/anti-slip-socks"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured styles",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "Why buyers work with LoftKnit",
+    "description": "Direct factory partnership for private-label and OEM sock programs.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Direct factory partnership",
+        "description": "Work with the manufacturing team on materials, construction, and packing—not a trading desk between you and the floor."
+      },
+      {
+        "step": "02",
+        "title": "One-stop sock programs",
+        "description": "Style development, sampling, bulk production, branding, and export documents under one project owner."
+      },
+      {
+        "step": "03",
+        "title": "Quality you can inspect",
+        "description": "In-line and pre-shipment checks against the approved sample before cartons leave the factory."
+      },
+      {
+        "step": "04",
+        "title": "On-time delivery focus",
+        "description": "Clear sample and bulk schedules, with updates when materials or capacity change."
+      },
+      {
+        "step": "05",
+        "title": "Private label ready",
+        "description": "Logo, hangtags, polybags, and inner packing set to your brand standards."
+      },
+      {
+        "step": "06",
+        "title": "Flexible order planning",
+        "description": "Trial runs and ongoing replenishment discussed against your assortment plan—not a one-size pitch."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to start your sock program?",
+    "description": "Send style references, target materials, estimated quantity, and destination market. We reply within one business day with next steps.",
+    "formTitle": "Get Quote",
+    "formDescription": "A short note on styles, materials, quantity, and timing helps us reply within one business day.",
+    "steps": [
+      "Brief & feasibility",
+      "Sampling",
+      "Bulk production"
+    ]
+  },
+  "footerFeatures": [
+    {
+      "title": "Socks OEM & ODM",
+      "description": "Private label for brands and distributors"
+    },
+    {
+      "title": "Zhuji, China",
+      "description": "Knitting, finishing, and packing"
+    },
+    {
+      "title": "Sports · compression · crew",
+      "description": "Full series for brand assortments"
+    },
+    {
+      "title": "Get Quote",
+      "description": "sales@loftknit-oem.com"
+    }
+  ]
+}

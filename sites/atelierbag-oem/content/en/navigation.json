@@ -1,0 +1,92 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "id": "factory",
+      "label": "Factory & Capabilities",
+      "href": "/factory",
+      "groups": [
+        {
+          "title": "Workshop",
+          "links": [
+            { "label": "Materials Sourcing", "href": "/factory/materials-sourcing", "description": "Leather, vegan alternatives, and textiles" },
+            { "label": "Product Development", "href": "/factory/product-development", "description": "From tech pack to prototype" },
+            { "label": "OEM & ODM Production", "href": "/factory/oem-odm", "description": "Your design, or develop with our sampling team" }
+          ]
+        },
+        {
+          "title": "Production",
+          "links": [
+            { "label": "Process Control & QC", "href": "/factory/process-control", "description": "In-line and final checks before shipment" },
+            { "label": "Packaging & Branding", "href": "/factory/packaging-branding", "description": "Logo, inserts, and brand packing" },
+            { "label": "Global Logistics", "href": "/factory/logistics", "description": "Export packing and shipping documents" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "Virtual factory tour",
+        "description": "See how we build—from cutting to packing",
+        "href": "/factory",
+        "image": "/images/factory-sewing.jpg"
+      }
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Carry",
+          "links": [
+            { "label": "Tote Bags", "href": "/products/tote-bags", "description": "Everyday and fashion totes in leather and alternatives" },
+            { "label": "Shoulder Bags", "href": "/products/shoulder-bags", "description": "Structured and soft shoulder shapes for retail lines" },
+            { "label": "Crossbody Bags", "href": "/products/crossbody-bags", "description": "Compact crossbodies with hardware and strap options" }
+          ]
+        },
+        {
+          "title": "More styles",
+          "links": [
+            { "label": "Backpacks", "href": "/products/backpacks", "description": "Lifestyle and light travel packs with branded finishes" },
+            { "label": "Wallets & Small Leather Goods", "href": "/products/wallets-slg", "description": "Cards, wallets, and coordinated leather accessories" },
+            { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials", "description": "PU, recycled, and performance materials without leather" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse styles and request a factory quote",
+        "href": "/products",
+        "image": "/images/product-tote.jpg"
+      }
+    },
+    {
+      "id": "custom-process",
+      "label": "Custom Process",
+      "href": "/custom-process"
+    },
+    {
+      "id": "case-studies",
+      "label": "Case Studies",
+      "href": "/case-studies"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact"
+    }
+  ]
+}

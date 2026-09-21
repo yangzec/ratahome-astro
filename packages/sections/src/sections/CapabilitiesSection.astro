@@ -2,6 +2,7 @@
 import type { Locale } from '@trade/core/i18n/config';
 import { getContent } from '@site/content';
 import SectionHeader from '../ui/SectionHeader.astro';
+import ListGrid from '../ui/ListGrid.astro';
 
 interface Props {
   locale: Locale;
@@ -10,13 +11,15 @@ interface Props {
 const { locale } = Astro.props;
 const { home } = getContent(locale);
 const { capabilities } = home;
+const items = Array.isArray(capabilities?.items) ? capabilities.items : [];
 ---
 
+{items.length > 0 && (
 <section class="bg-izza-cream py-20">
   <div class="container-site">
     <SectionHeader title={capabilities.title} description={capabilities.description} />
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {capabilities.items.map((item) => (
+    <ListGrid min={240} count={items.length}>
+      {items.map((item) => (
         <div class="group bg-white rounded-[20px] overflow-hidden hover:shadow-lg transition-shadow">
           <div class="aspect-[4/3] overflow-hidden">
             <img src={item.image} alt={item.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -27,6 +30,7 @@ const { capabilities } = home;
           </div>
         </div>
       ))}
-    </div>
+    </ListGrid>
   </div>
 </section>
+)}

@@ -1,0 +1,29 @@
+---
+export const prerender = true;
+
+import type { Locale } from '@trade/core/i18n/config';
+import AboutPage from '../templates/AboutPage.astro';
+import ContactPage from '../templates/ContactPage.astro';
+import CollectionsPage from '../templates/CollectionsPage.astro';
+import GenericPage from '../templates/GenericPage.astro';
+import { getSiteStaticPaths } from '../lib/site-paths';
+import { resolveSlugPage } from '../lib/slug-page';
+
+export function getStaticPaths() {
+  return getSiteStaticPaths();
+}
+
+const { locale, kind, type, slug } = Astro.props as {
+  locale: Locale;
+  kind: 'about' | 'contact' | 'collections' | 'slug';
+  type?: string;
+  slug?: string;
+};
+---
+
+{kind === 'about' && <AboutPage locale={locale} />}
+{kind === 'contact' && <ContactPage locale={locale} />}
+{kind === 'collections' && <CollectionsPage locale={locale} />}
+{kind === 'slug' && type && slug && (
+  <GenericPage locale={locale} {...resolveSlugPage(locale, type, slug)} />
+)}

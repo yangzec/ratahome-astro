@@ -320,7 +320,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| Cloudflare 生产部署 | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
+| Cloudflare 生产部署（家具站） | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
 
 ---
 
@@ -328,6 +328,18 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
+| 2026-09-21 20:43 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；Worker Version `e688b63e-234a-40b0-be12-1052fe84c5f9`；不合 main |
+| 2026-09-21 20:01 | 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色；不合 main） |
+| 2026-09-21 18:54 | 确认硬规则：不为迁就模板而改蓝图；排版只改模板 / composition / token；写入 `AGENTS.md` 与 `docs/blueprint-rules.md` |
+| 2026-09-21 18:17 | 写入 copy-final / composition / Section 分层；共享 `ListGrid` 按 `items.length` 自适应；Capabilities / Audiences / Process 步骤不再写死 4/5 列；Worker Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
+| 2026-09-21 18:05 | AtelierBag OEM 桌面 Hero 改为 `calc(100vh - var(--header-h))`；企业介绍改为左文右图且两图 `4/3` 同高；Why 材料卡改为买家向（去掉 fit the brief / 简报）；Worker Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
+| 2026-09-21 17:52 | 修 AtelierBag OEM 顶栏叠字、导航折行与 WhatsApp 浮钮挡内容；联系页去掉重复副文，产品 Hero 补 Get Factory Quote；`html` 增加 `scroll-padding-top`；Worker Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
+| 2026-09-21 16:29 | 按手袋 OEM 定稿蓝图整站重写 `sites/atelierbag-oem` EN/ZH content；补 `/case-studies`、`docs/blueprint-rules.md`、`docs/teardown-workflow.md` 与 `AGENTS.md` 硬规则；Worker Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
+| 2026-09-21 16:24 | 重写 `sites/atelierbag-oem` EN/ZH 全部 content JSON 为买家可见定稿；去掉 Share / 请发 / as drawn / slogan wall 等指令腔；表单提示压成一行；导航 IA 不变 |
+| 2026-09-21 16:23 | 再部署 AtelierBag OEM Worker `atelierbag-oem`（Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
+| 2026-09-21 15:17 | 部署 AtelierBag OEM Worker `atelierbag-oem`（Version `c23f1263-321b-4ba3-b39f-a0cbaadd4260`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
+| 2026-09-21 15:13 | 新增手袋 OEM 站 `sites/atelierbag-oem`（从 Chromora 制造模板复制，未改 ratahome / chromora 内容） |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
@@ -336,12 +348,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
 | 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
 | 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
-| 2026-09-17 08:58 | 阶段 1 启动：Monorepo + site_id D1 + Blueprint + theme 外置，build 通过 |
-| 2026-09-17 08:54 | 确认 D1：共享实例 + `site_id`；阶段 4 运动/户外部署模式待阶段 3 跑通后再定 |
-| 2026-09-17 08:51 | 确认各阶段试点行业：阶段 2 面料/服装/家纺，阶段 3 包装/印刷，阶段 4 运动/户外 |
-| 2026-09-17 08:37 | 决策：先单站单部署，后多站单部署试点 |
-| 2026-09-17 08:37 | 100 行业方案总结（部署模型、语义分层、Blueprint、阶段路线） |
-| 2026-09-16 | Ratahome 模板 v1：组件化 + i18n JSON + D1/R2 |
 
 ---
 
@@ -349,6 +355,16 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
+| 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
+| 2026-09-21 18:05 | AtelierBag OEM Hero / About / Why | curl EN/ZH 首页 200；CDP 测 Hero `996px`（`1100vh - header`）；About 双列等宽、两图 `623×467`；Why 新文案在线 | 通过；无右空、两图同高；Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
+| 2026-09-21 17:52 | AtelierBag OEM 视觉 P0/P1 | 线上 curl EN/ZH 首页、`/products/`、`/contact/` 200；桌面截图首页/产品/联系；HTML 断言主项 Home/Products/Factory/Case Studies/Contact + More、无 `text-xl` 字标、`#wa-fab` 为 56px 圆标 | 通过；叠字消失、头栏单行、浮钮不挡 Message；联系页可见 helper 1 处；产品 Hero 有 Get Factory Quote；Version `5950a725-65a3-4a45-8e2a-d7d4f403b940` |
+| 2026-09-21 16:29 | AtelierBag OEM 定稿蓝图落地 | `pnpm site-cli validate` + build + `cf:deploy`；curl EN/ZH 首页、托特、联系、案例、流程、FAQ；8 份 content JSON 禁词扫描 | 通过；线上 200；Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 学谁 / 可选备注 未出现；Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
+| 2026-09-21 16:24 | AtelierBag OEM 买家定稿文案 | curl EN/ZH 首页、产品、托特详情、联系、工厂、FAQ | 全部 200；新文案在线；Share / 请发 / Those three notes / slogan wall / 选填说明书未出现 |
+| 2026-09-21 16:23 | `atelierbag-oem` validate + build + deploy | `pnpm site-cli validate` + `pnpm --filter atelierbag-oem build` + `cf:deploy` | 通过；Worker Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0` |
+| 2026-09-21 15:17 | AtelierBag OEM 预览 | curl EN/ZH 首页、产品、详情、联系、工厂、FAQ | 全部 200；Hero/CTA/表单字段齐全 |
+| 2026-09-21 15:14 | `atelierbag-oem` validate + build | `pnpm site-cli validate` + `pnpm --filter atelierbag-oem build` | 通过 |
+| 2026-09-21 15:14 | `ratahome-furniture` validate | `pnpm site-cli validate ratahome-furniture` | 通过 |
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |

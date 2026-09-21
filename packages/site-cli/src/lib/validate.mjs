@@ -140,7 +140,7 @@ function loadSectionRegistryIds(root) {
 }
 
 function collectContentSlugs(siteDir) {
-  const slugs = new Set(['', 'zh', 'about', 'contact', 'collections']);
+  const slugs = new Set(['', 'zh', 'about', 'about-us', 'contact', 'contact-us', 'collections', 'products']);
   try {
     const pages = JSON.parse(readFileSync(join(siteDir, 'content/en/pages.json'), 'utf8'));
     for (const key of Object.keys(pages.slugs ?? {})) {
@@ -154,8 +154,10 @@ function collectContentSlugs(siteDir) {
     for (const m of raw.matchAll(/'([a-z0-9-]+)'/g)) {
       slugs.add(m[1]);
       slugs.add(`collections/${m[1]}`);
+      slugs.add(`products/${m[1]}`);
       slugs.add(`joinery/${m[1]}`);
       slugs.add(`projects/${m[1]}`);
+      slugs.add(`factory/${m[1]}`);
     }
   }
   return slugs;
@@ -179,5 +181,5 @@ function collectNavHrefs(items) {
 
 function isKnownRoute(path) {
   const top = path.split('/')[0];
-  return ['collections', 'joinery', 'projects', 'zh'].includes(top);
+  return ['collections', 'products', 'factory', 'joinery', 'projects', 'zh'].includes(top);
 }

@@ -1,0 +1,107 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "关于我们",
+      "href": "/about"
+    },
+    {
+      "id": "oem-odm",
+      "label": "OEM / ODM",
+      "href": "/oem-odm"
+    },
+    {
+      "id": "customization",
+      "label": "定制服务",
+      "href": "/customization"
+    },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "性能",
+          "links": [
+            {
+              "label": "运动袜",
+              "href": "/products/sports-socks",
+              "description": "跑步、训练、篮球与团队项目"
+            },
+            {
+              "label": "压缩袜",
+              "href": "/products/compression-socks",
+              "description": "梯度与运动压缩选项"
+            },
+            {
+              "label": "户外袜",
+              "href": "/products/outdoor-socks",
+              "description": "徒步与户外结构"
+            },
+            {
+              "label": "防滑袜",
+              "href": "/products/anti-slip-socks",
+              "description": "工作室与居家防滑底"
+            }
+          ]
+        },
+        {
+          "title": "日常",
+          "links": [
+            {
+              "label": "中筒袜",
+              "href": "/products/crew-socks",
+              "description": "日常与运动中筒"
+            },
+            {
+              "label": "船袜 / 低帮袜",
+              "href": "/products/ankle-low-cut-socks",
+              "description": "低帮与船袜"
+            },
+            {
+              "label": "休闲 / 正装袜",
+              "href": "/products/casual-dress-socks",
+              "description": "商务与生活方式"
+            },
+            {
+              "label": "儿童袜",
+              "href": "/products/kids-socks",
+              "description": "儿童尺码"
+            }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部产品",
+        "description": "浏览系列并获取工厂报价",
+        "href": "/products",
+        "image": "/images/series-sports.webp"
+      }
+    },
+    {
+      "id": "cases",
+      "label": "案例",
+      "href": "/cases"
+    },
+    {
+      "id": "catalog",
+      "label": "产品目录",
+      "href": "/catalog"
+    },
+    {
+      "id": "faq",
+      "label": "常见问题",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "联系我们",
+      "href": "/contact"
+    }
+  ]
+}

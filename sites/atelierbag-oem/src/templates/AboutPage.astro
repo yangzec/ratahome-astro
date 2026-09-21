@@ -1,0 +1,68 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import Button from '@trade/sections/ui/Button.astro';
+import { getContent } from '../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { pages, common } = getContent(locale);
+const about = pages.about;
+const story = (about.story ?? about.workflowDescription ?? '').split(/\n\n+/).filter(Boolean);
+const approach = (about.approach ?? '').split(/\n\n+/).filter(Boolean);
+---
+
+<BaseLayout locale={locale} title={about.title} description={about.heroDescription}>
+  <PageHero eyebrow={about.eyebrow} title={about.heroTitle} description={about.heroDescription} image="/images/hero-workshop.jpg" />
+
+  <section class="container-site py-20">
+    <h2 class="section-title mb-4">{about.workflowTitle}</h2>
+    {story.map((p) => (
+      <p class="text-izza-gray-text text-lg mb-6 max-w-3xl leading-relaxed">{p}</p>
+    ))}
+  </section>
+
+  <section class="bg-izza-cream py-20">
+    <div class="container-site">
+      <h2 class="section-title mb-4">{about.approachTitle ?? (locale === 'zh' ? '我们如何与采购方合作' : 'How We Work With Buyers')}</h2>
+      {approach.map((p) => (
+        <p class="text-izza-gray-text text-lg mb-6 max-w-3xl leading-relaxed">{p}</p>
+      ))}
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        {pages.aboutAudiences.map((item) => (
+          <div class="p-8 bg-white rounded-[12px]">
+            <h3 class="text-xl font-semibold text-izza-ink mb-3">{item.title}</h3>
+            <p class="text-izza-gray-muted">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container-site py-20">
+    <h2 class="section-title mb-10">{about.glanceTitle ?? (locale === 'zh' ? '一览' : 'At a Glance')}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      {pages.workflow.map((item) => (
+        <div class="p-6 rounded-[12px] border border-izza-border/50">
+          <span class="eyebrow text-xs mb-3 block">{item.step}</span>
+          <h3 class="font-semibold text-izza-ink mb-2">{item.title}</h3>
+          <p class="text-sm text-izza-gray-muted">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="container-site pb-20 text-center">
+    <h2 class="section-title mb-4 max-w-3xl mx-auto">{about.closingTitle}</h2>
+    <p class="text-izza-gray-text text-lg max-w-2xl mx-auto mb-8">{about.closingDescription}</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <Button href={`${localizedPath('/contact-us', locale)}?intent=quote`} variant="primary">{common.buttons.requestQuote}</Button>
+      <Button href={localizedPath('/contact-us', locale)} variant="secondary">{common.buttons.startProject}</Button>
+    </div>
+  </section>
+</BaseLayout>
