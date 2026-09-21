@@ -1,0 +1,55 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '@trade/sections/ui/PageHero.astro';
+import Button from '@trade/sections/ui/Button.astro';
+import { getContent } from '../lib/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const { pages, common } = getContent(locale);
+const collections = pages.collections;
+---
+
+<BaseLayout locale={locale} title={collections.title} description={collections.heroDescription}>
+  <PageHero title={collections.heroTitle} description={collections.heroDescription} dark />
+
+  <section class="container-site py-12">
+    <div class="flex flex-wrap gap-3 mb-12">
+      {collections.styles.map((style) => (
+        <span class="px-5 py-2.5 rounded-full border border-izza-border text-sm font-medium text-izza-ink">{style}</span>
+      ))}
+    </div>
+
+    <h2 class="section-title mb-12">{collections.packagesTitle}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pages.collectionPackages.map((pkg) => (
+        <a href={localizedPath(pkg.href, locale)} class="group block bg-izza-cream rounded-[12px] overflow-hidden hover:shadow-lg transition-shadow">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src={pkg.image} alt={pkg.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-izza-ink mb-2 group-hover:text-izza-accent transition-colors">{pkg.title}</h3>
+            <p class="text-sm text-izza-gray-muted mb-4">{pkg.description}</p>
+            <span class="text-sm font-medium text-izza-accent">{locale === 'zh' ? '查看款式 · 立即询价' : 'View style · Quote Now'}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-izza-olive-dark text-white py-20">
+    <div class="container-site">
+      <h2 class="text-3xl font-semibold text-white mb-4">{collections.benefitsTitle}</h2>
+      <p class="text-white/70 text-lg mb-10 max-w-2xl">{collections.benefitsDescription}</p>
+      <div class="flex flex-wrap gap-3">
+        <Button href={`${localizedPath('/contact-us', locale)}?intent=quote`} variant="primary">{common.buttons.requestQuote}</Button>
+        <Button href={`${localizedPath('/contact-us', locale)}?intent=sample`} variant="outline">{common.buttons.discussJoinery}</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

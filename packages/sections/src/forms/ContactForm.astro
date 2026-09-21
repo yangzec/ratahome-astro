@@ -12,6 +12,13 @@ interface Props {
 const { locale, showFileUpload = true, action = '/api/contact' } = Astro.props;
 const { common } = getContent(locale);
 const { form, buttons } = common;
+const phoneLabel = 'phone' in form && typeof form.phone === 'string' ? form.phone : '';
+const phonePlaceholder = 'phonePlaceholder' in form && typeof form.phonePlaceholder === 'string' ? form.phonePlaceholder : '';
+const companyLabel = 'company' in form && typeof form.company === 'string' ? form.company : '';
+const companyPlaceholder = 'companyPlaceholder' in form && typeof form.companyPlaceholder === 'string' ? form.companyPlaceholder : '';
+const whatsappLabel = 'whatsapp' in form && typeof form.whatsapp === 'string' ? form.whatsapp : '';
+const whatsappPlaceholder = 'whatsappPlaceholder' in form && typeof form.whatsappPlaceholder === 'string' ? form.whatsappPlaceholder : '';
+const messageRequired = 'messageRequired' in form && Boolean(form.messageRequired);
 ---
 
 <form class="space-y-4 contact-form" data-action={action} enctype="multipart/form-data">
@@ -39,6 +46,42 @@ const { form, buttons } = common;
     />
   </div>
 
+  {phoneLabel && (
+    <div>
+      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{phoneLabel}</label>
+      <input
+        type="tel"
+        name="phone"
+        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+        placeholder={phonePlaceholder}
+      />
+    </div>
+  )}
+
+  {companyLabel && (
+    <div>
+      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{companyLabel}</label>
+      <input
+        type="text"
+        name="company"
+        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+        placeholder={companyPlaceholder}
+      />
+    </div>
+  )}
+
+  {whatsappLabel && (
+    <div>
+      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{whatsappLabel}</label>
+      <input
+        type="tel"
+        name="whatsapp"
+        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
+        placeholder={whatsappPlaceholder}
+      />
+    </div>
+  )}
+
   <div>
     <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectType}</label>
     <select name="projectType" class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm">
@@ -55,6 +98,7 @@ const { form, buttons } = common;
     <textarea
       name="message"
       rows="4"
+      required={messageRequired}
       class="w-full px-5 py-4 rounded-[5px] border border-izza-border bg-white text-sm resize-none"
       placeholder={form.detailsPlaceholder}
     ></textarea>

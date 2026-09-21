@@ -1,0 +1,345 @@
+{
+  "about": {
+    "title": "About AtelierBag OEM | Guangzhou Handbag Factory",
+    "eyebrow": "About AtelierBag OEM",
+    "heroTitle": "About AtelierBag OEM",
+    "heroDescription": "A Shiling, Guangzhou handbag OEM and ODM partner for brands that need a factory conversation—not only a catalogue.",
+    "workflowTitle": "Our Story",
+    "workflowDescription": "AtelierBag Manufacturing Co., Ltd. has built handbag OEM programs from Shiling, Huadu, Guangzhou since 2008. We work with leather, vegan alternatives, and textile constructions for tote, shoulder, crossbody, backpack, and small-leather-goods lines.\n\nBuyers come to us when a tech pack, sketch, or reference sample needs a workshop that can answer on materials, pattern, and packing in the same thread.",
+    "story": "AtelierBag Manufacturing Co., Ltd. has built handbag OEM programs from Shiling, Huadu, Guangzhou since 2008. We work with leather, vegan alternatives, and textile constructions for tote, shoulder, crossbody, backpack, and small-leather-goods lines.\n\nBuyers come to us when a tech pack, sketch, or reference sample needs a workshop that can answer on materials, pattern, and packing in the same thread.",
+    "approachTitle": "How we work with buyers",
+    "approach": "Every enquiry starts as a specification: silhouette, measurements, BOM, hardware, logo method, target quantity, and ship window. Missing fields are listed before we quote a path.\n\nFor repeat styles we keep the approved sample comments and material lots so replenishment does not restart the story.",
+    "glanceTitle": "At a glance",
+    "closingTitle": "Start with a factory quote",
+    "closingDescription": "Send a tech pack or a clear reference. We will tell you what we can make, what we need next, and how to sample."
+  },
+  "collections": {
+    "title": "Handbag Products | Tote, Shoulder, Crossbody, Backpack",
+    "heroTitle": "Handbag products",
+    "heroDescription": "Browse OEM and ODM silhouettes. Each page leads with a spec table—material, size, hardware, MOQ talk, and lead-time notes—then a quote path.",
+    "packagesTitle": "Explore styles",
+    "benefitsTitle": "Need a factory quote?",
+    "benefitsDescription": "Share the silhouette, materials, and target quantity. We will reply with feasibility notes and a sampling step.",
+    "stylesTitle": "Filter by category",
+    "stylesDescription": "Open a style for specs, or add a note and ask for a quote.",
+    "styles": ["All products", "Tote", "Shoulder", "Crossbody", "Backpack", "Wallets & SLG", "Vegan"]
+  },
+  "contact": {
+    "title": "Contact Us | Get Factory Quote",
+    "heroTitle": "Contact Us",
+    "heroDescription": "Tell us as much as you can about materials, target quantity, and timeline so we can route you to the right project owner.",
+    "getInTouch": "Factory contacts",
+    "helper": "Name, email, and a short message are required. Phone, company, WhatsApp, and attachments are optional and help us reply faster.",
+    "whatsappLine": "Prefer messaging? WhatsApp +8613800208800 for a first brief.",
+    "visitNote": "Workshop visits in Shiling, Huadu, Guangzhou can be arranged by appointment. Write first so we can prepare samples and material boards."
+  },
+  "slugs": {
+    "factory": {
+      "title": "Factory & Capabilities | AtelierBag OEM",
+      "description": "Handbag OEM capabilities in Shiling, Guangzhou: materials, development, production, QC, packing, and logistics.",
+      "content": "AtelierBag OEM runs full-package handbag programs from Shiling, Huadu. Use the pages below for the part of the workshop you need to brief—or send a tech pack and we will route it.",
+      "sections": [
+        {
+          "title": "What this factory owns",
+          "body": "Development, cutting, stitching, finishing, QC, and packing stay in one commercial thread. We do not publish unverified floor area or daily piece counts.",
+          "items": [
+            "Materials Sourcing — leather, vegan, and textile options named on the BOM.",
+            "Product Development — tech pack review, pattern, and prototype.",
+            "OEM & ODM Production — your design or a workshop-led development.",
+            "Process Control & QC — in-line checks and a pre-shipment review.",
+            "Packaging & Branding — logo, packing, and carton marks.",
+            "Global Logistics — export packing and shipping documents."
+          ]
+        }
+      ]
+    },
+    "factory/materials-sourcing": {
+      "title": "Materials Sourcing",
+      "description": "Leather, vegan alternatives, and textiles for handbag OEM programs.",
+      "content": "We source and confirm materials against the BOM before a sample is cut. Genuine leather, coated alternatives, recycled or textile faces, linings, and hardware are specified in writing—not left as a generic “PU mix.”\n\nShare restricted-substance or animal-origin rules with the first brief so we do not sample the wrong face."
+    },
+    "factory/product-development": {
+      "title": "Product Development",
+      "description": "Tech pack review, pattern, and prototype for OEM and ODM handbags.",
+      "content": "Development starts with what you already have: a tech pack, a sketch, or a physical reference. We check measurements, construction, and hardware feasibility, then cut a prototype for handle drop, pocket logic, and finishing.\n\nComments stay on the same sheet so bulk does not invent a second style."
+    },
+    "factory/oem-odm": {
+      "title": "OEM & ODM Production",
+      "description": "OEM from your pack or ODM from a workshop-led silhouette.",
+      "content": "OEM programs follow your approved pack. ODM programs start from a workshop silhouette you can mark up. Either path locks materials and measurements before the line opens.\n\nOpening quantities depend on construction and hardware. We discuss them after the brief—not as a one-number promise on this page."
+    },
+    "factory/process-control": {
+      "title": "Process Control & QC",
+      "description": "In-line checks and pre-shipment review for handbag bulk orders.",
+      "content": "QC is written as checkpoints: incoming materials, in-line stitch and edge work, and a final review before packing. We can follow your AQL or a factory checklist you accept in the PO.\n\nPhoto notes can travel with the shipment when the order asks for them."
+    },
+    "factory/packaging-branding": {
+      "title": "Packaging & Branding",
+      "description": "Logo methods, packing, and carton marks for brand programs.",
+      "content": "Logo options include deboss, foil, metal plate, and printed labels—confirmed against the material. Packing follows the brand sheet: dust bags, cards, polybags, and carton marks.\n\nSend artwork early so branding does not sit on the critical path after sample sign-off."
+    },
+    "factory/logistics": {
+      "title": "Global Logistics",
+      "description": "Export packing and shipping documents from Guangzhou.",
+      "content": "We pack for sea or air from South China and prepare the documents your forwarder names on the order. Carton size and weight are confirmed after the packing method is locked.\n\nWe do not quote freight as a factory service on this page; we coordinate packing so your forwarder can."
+    },
+    "custom-process": {
+      "title": "Custom Process | Tech Pack to Shipment",
+      "description": "How AtelierBag OEM moves a handbag from brief to bulk shipment.",
+      "content": "A custom program is a sequence, not a slogan. We review the pack, confirm pattern and materials, sample, then open bulk after written sign-off. QC and packing sit before documents go to the forwarder.",
+      "sections": [
+        {
+          "title": "Six steps",
+          "body": "Days are confirmed after we see the construction. This page does not copy another factory’s calendar.",
+          "items": [
+            "Receive & review tech pack — measurements, BOM, stitch notes.",
+            "Pattern & material confirmation — leather or alternative, lining, hardware.",
+            "Prototype / sample — fit, handle drop, finishing.",
+            "Bulk production — after sample and material lock.",
+            "QC & packing — in-line and final, then brand packing.",
+            "Shipping & documents — export cartons and papers."
+          ]
+        }
+      ]
+    },
+    "how-it-works": {
+      "title": "Custom Process | Tech Pack to Shipment",
+      "description": "How AtelierBag OEM moves a handbag from brief to bulk shipment.",
+      "content": "A custom program is a sequence, not a slogan. We review the pack, confirm pattern and materials, sample, then open bulk after written sign-off. QC and packing sit before documents go to the forwarder.",
+      "sections": [
+        {
+          "title": "Six steps",
+          "body": "Days are confirmed after we see the construction.",
+          "items": [
+            "Receive & review tech pack — measurements, BOM, stitch notes.",
+            "Pattern & material confirmation — leather or alternative, lining, hardware.",
+            "Prototype / sample — fit, handle drop, finishing.",
+            "Bulk production — after sample and material lock.",
+            "QC & packing — in-line and final, then brand packing.",
+            "Shipping & documents — export cartons and papers."
+          ]
+        }
+      ]
+    },
+    "warranty-policy": {
+      "title": "Factory tour | AtelierBag OEM",
+      "description": "Ask for a virtual walk-through of the Shiling handbag workshop.",
+      "content": "A virtual factory tour is a scheduled call or photo set covering cutting, stitching, finishing, and packing. Write to sales@atelierbag-oem.com or use the quote form so we can prepare the right line—not a generic showroom reel.\n\nOn-site visits in Shiling are by appointment only."
+    },
+    "faq": {
+      "title": "FAQ | AtelierBag OEM",
+      "description": "Common questions on MOQ, sampling, materials, and quotes.",
+      "content": "Short answers for buyers briefing a handbag OEM. If your question is a spec, send the pack—we will answer on the sheet.",
+      "sections": [
+        {
+          "title": "Ordering",
+          "body": "Quotes start from a brief, not from a published price list.",
+          "items": [
+            "What is your MOQ? — Discussed per construction and hardware after we see the style. We do not post a single opening number.",
+            "How do I get a factory quote? — Use Get Factory Quote or email sales@atelierbag-oem.com with silhouette, materials, and target quantity.",
+            "Do you keep a quote list? — This site uses a single enquiry form. List SKUs and quantities in the message if you are briefing more than one style."
+          ]
+        },
+        {
+          "title": "Sampling & materials",
+          "body": "Samples lock the style before bulk.",
+          "items": [
+            "What should I send? — Tech pack, sketch, or reference sample. Photos of hardware and a size chart help.",
+            "Leather or vegan? — Both, plus textile faces. Tell us animal-origin or restricted-substance rules in the first brief.",
+            "How long does sampling take? — We confirm after pattern and material review. Homepage copy does not invent a day count."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How AtelierBag OEM handles enquiry data.",
+      "content": "AtelierBag OEM uses the contact details you submit to reply to quotes and project briefs. We do not sell enquiry data. To update or delete information you have sent, email sales@atelierbag-oem.com."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the AtelierBag OEM website.",
+      "content": "Content on this website is for product information and enquiry only. Specifications, opening quantities, and lead times are confirmed in writing on each quotation. Nothing here is a binding offer. Commercial terms sit on documents issued by AtelierBag Manufacturing Co., Ltd."
+    },
+    "shipping": {
+      "title": "Shipping",
+      "description": "How AtelierBag OEM packs and hands over export shipments.",
+      "content": "We pack finished goods to the method named on the order and prepare the documents your forwarder lists. Freight itself is arranged by you or a named forwarder unless a quotation says otherwise.\n\nCarton marks, weights, and photo notes are confirmed after packing is locked—not guessed from this page."
+    },
+    "tote-bags": {
+      "title": "Tote Bags",
+      "description": "OEM shopper and structured totes in leather, vegan, or textile faces.",
+      "content": "Totes carry the line when a brand needs an open, readable silhouette. We build shoppers and structured totes with a firm or soft base, optional zip, and interior pockets as drawn.\n\nShare handle drop, base size, and whether the tote must stand empty. Those three notes prevent most sample returns.",
+      "specs": [
+        { "parameter": "Material", "value": "Leather / vegan alternative / textile — per BOM" },
+        { "parameter": "Size (L×W×H)", "value": "Confirm with tech pack; common shopper and structured ranges" },
+        { "parameter": "Color", "value": "Seasonal or custom — confirm hide or coating lot" },
+        { "parameter": "Hardware", "value": "Zip, feet, rings — finish as specified" },
+        { "parameter": "Logo options", "value": "Deboss, foil, plate, or label" },
+        { "parameter": "MOQ", "value": "Discussed per construction after review" },
+        { "parameter": "Sample lead time", "value": "Confirm after pattern and material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off" },
+        { "parameter": "Packing", "value": "Dust bag / carton marks as specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask for a tote quote",
+      "ctaBody": "Send handle drop, base size, and face material. We will reply with feasibility and a sampling step.",
+      "related": [
+        { "label": "Shoulder Bags", "href": "/products/shoulder-bags" },
+        { "label": "Crossbody Bags", "href": "/products/crossbody-bags" },
+        { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials" }
+      ]
+    },
+    "shoulder-bags": {
+      "title": "Shoulder Bags",
+      "description": "Flap, hobo, and everyday shoulder bags for brand OEM programs.",
+      "content": "Shoulder bags sit between a tote and a crossbody: enough volume for a day, a strap that can sit on the shoulder. Flap, zip-top, and hobo bodies are common starting points.\n\nTell us strap adjustability, lining, and whether a detachable strap is required.",
+      "specs": [
+        { "parameter": "Material", "value": "Leather / vegan alternative / textile — per BOM" },
+        { "parameter": "Size (L×W×H)", "value": "Confirm with tech pack" },
+        { "parameter": "Color", "value": "Seasonal or custom" },
+        { "parameter": "Hardware", "value": "Turn-lock, magnet, zip — finish as specified" },
+        { "parameter": "Logo options", "value": "Deboss, foil, plate, or label" },
+        { "parameter": "MOQ", "value": "Discussed per construction after review" },
+        { "parameter": "Sample lead time", "value": "Confirm after pattern and material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off" },
+        { "parameter": "Packing", "value": "Dust bag / carton marks as specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask for a shoulder-bag quote",
+      "ctaBody": "Send strap length, closure type, and face material for a quotation path.",
+      "related": [
+        { "label": "Tote Bags", "href": "/products/tote-bags" },
+        { "label": "Crossbody Bags", "href": "/products/crossbody-bags" },
+        { "label": "Wallets & Small Leather Goods", "href": "/products/wallets-slg" }
+      ]
+    },
+    "crossbody-bags": {
+      "title": "Crossbody Bags",
+      "description": "Compact crossbody and sling styles for hands-free programs.",
+      "content": "Crossbodies are specified by security and wear: closure type, strap width, and how the bag sits on the body. We sample compact day bags and slings with slim profiles when the pack asks for them.\n\nIf the style must pass a walk test with a phone and wallet only, say so in the brief.",
+      "specs": [
+        { "parameter": "Material", "value": "Leather / vegan alternative / textile — per BOM" },
+        { "parameter": "Size (L×W×H)", "value": "Confirm with tech pack; compact ranges common" },
+        { "parameter": "Color", "value": "Seasonal or custom" },
+        { "parameter": "Hardware", "value": "Zip, buckle, magnet — finish as specified" },
+        { "parameter": "Logo options", "value": "Deboss, foil, plate, or label" },
+        { "parameter": "MOQ", "value": "Discussed per construction after review" },
+        { "parameter": "Sample lead time", "value": "Confirm after pattern and material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off" },
+        { "parameter": "Packing", "value": "Dust bag / carton marks as specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask for a crossbody quote",
+      "ctaBody": "Send strap width, closure, and intended contents so we can check the pattern.",
+      "related": [
+        { "label": "Shoulder Bags", "href": "/products/shoulder-bags" },
+        { "label": "Backpacks", "href": "/products/backpacks" },
+        { "label": "Wallets & Small Leather Goods", "href": "/products/wallets-slg" }
+      ]
+    },
+    "backpacks": {
+      "title": "Backpacks",
+      "description": "Daypacks and city backpacks with optional laptop sleeves.",
+      "content": "Backpacks need strap comfort and panel order as much as a pretty face. We build city daypacks with optional padded sleeves and organiser pockets as drawn.\n\nShare laptop size, if any, and whether the pack must stand on a desk.",
+      "specs": [
+        { "parameter": "Material", "value": "Leather / vegan alternative / textile — per BOM" },
+        { "parameter": "Size (L×W×H)", "value": "Confirm with tech pack; daypack ranges common" },
+        { "parameter": "Color", "value": "Seasonal or custom" },
+        { "parameter": "Hardware", "value": "Zips, adjusters, feet — finish as specified" },
+        { "parameter": "Logo options", "value": "Deboss, foil, plate, or label" },
+        { "parameter": "MOQ", "value": "Discussed per construction after review" },
+        { "parameter": "Sample lead time", "value": "Confirm after pattern and material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off" },
+        { "parameter": "Packing", "value": "Polybag / carton marks as specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask for a backpack quote",
+      "ctaBody": "Send laptop size, strap notes, and face material for a quotation path.",
+      "related": [
+        { "label": "Tote Bags", "href": "/products/tote-bags" },
+        { "label": "Crossbody Bags", "href": "/products/crossbody-bags" },
+        { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials" }
+      ]
+    },
+    "wallets-slg": {
+      "title": "Wallets & Small Leather Goods",
+      "description": "Wallets, card cases, and pouches that sit next to a bag line.",
+      "content": "Small leather goods are where edge paint and skiving show. We make bi-folds, card cases, and pouches that can share hardware finish with the bag line.\n\nSend card count, coin pocket yes/no, and the edge-paint colour standard.",
+      "specs": [
+        { "parameter": "Material", "value": "Leather / vegan alternative — per BOM" },
+        { "parameter": "Size (L×W×H)", "value": "Confirm with tech pack; slim card and bi-fold ranges" },
+        { "parameter": "Color", "value": "Match bag line or standalone" },
+        { "parameter": "Hardware", "value": "Snaps, zip, plates — finish as specified" },
+        { "parameter": "Logo options", "value": "Deboss, foil, or plate" },
+        { "parameter": "MOQ", "value": "Discussed per construction after review" },
+        { "parameter": "Sample lead time", "value": "Confirm after pattern and material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off" },
+        { "parameter": "Packing", "value": "Box or pouch as specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask for an SLG quote",
+      "ctaBody": "Send card count, edge-paint notes, and whether the SLG must match a bag finish.",
+      "related": [
+        { "label": "Shoulder Bags", "href": "/products/shoulder-bags" },
+        { "label": "Crossbody Bags", "href": "/products/crossbody-bags" },
+        { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials" }
+      ]
+    },
+    "vegan-materials": {
+      "title": "Vegan / Alternative Materials",
+      "description": "PU, recycled, and textile handbag programs without animal-origin faces.",
+      "content": "Alternative-material programs need the coating, backing, and low-temperature flex named before we sample. We run PU, recycled, and textile faces when the brief asks for no animal-origin leather.\n\nSend any restricted-substance list with the first email so lab notes match the market.",
+      "specs": [
+        { "parameter": "Material", "value": "PU / recycled / textile — confirm backing and flex" },
+        { "parameter": "Size (L×W×H)", "value": "Applies across tote, shoulder, crossbody, backpack" },
+        { "parameter": "Color", "value": "Coating lot — confirm before bulk" },
+        { "parameter": "Hardware", "value": "As specified; finish against the face" },
+        { "parameter": "Logo options", "value": "Foil, plate, or printed label — test on the face" },
+        { "parameter": "MOQ", "value": "Discussed per construction and coating mill" },
+        { "parameter": "Sample lead time", "value": "Confirm after material lock" },
+        { "parameter": "Bulk lead time", "value": "Confirm after sample sign-off and mill window" },
+        { "parameter": "Packing", "value": "As specified" },
+        { "parameter": "Shipping options", "value": "Sea or air from Guangzhou — forwarder as named" }
+      ],
+      "ctaTitle": "Ask about vegan or textile programs",
+      "ctaBody": "Send the face type, restricted-substance list, and target silhouettes.",
+      "related": [
+        { "label": "Tote Bags", "href": "/products/tote-bags" },
+        { "label": "Shoulder Bags", "href": "/products/shoulder-bags" },
+        { "label": "Backpacks", "href": "/products/backpacks" }
+      ]
+    }
+  },
+  "packageBenefits": [
+    { "title": "Specs first", "description": "Material, size, hardware, and packing on one table." },
+    { "title": "Sample before bulk", "description": "Sign the prototype before the line opens." },
+    { "title": "One project owner", "description": "Quote and sampling in the same thread." },
+    { "title": "Export packing", "description": "Carton marks and documents as named." }
+  ],
+  "collectionPackages": [
+    { "title": "Tote Bags", "description": "Shoppers and structured totes. Quote now.", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
+    { "title": "Shoulder Bags", "description": "Flap and everyday shoulder. Quote now.", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
+    { "title": "Crossbody Bags", "description": "Compact day bags and slings. Quote now.", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
+    { "title": "Backpacks", "description": "City daypacks with optional sleeves. Quote now.", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" },
+    { "title": "Wallets & SLG", "description": "Wallets, card cases, pouches. Quote now.", "image": "/images/product-wallet.jpg", "href": "/products/wallets-slg" },
+    { "title": "Vegan / Alternatives", "description": "PU, recycled, and textile programs. Quote now.", "image": "/images/product-vegan.jpg", "href": "/products/vegan-materials" }
+  ],
+  "workflow": [
+    { "step": "01", "title": "Location", "description": "Shiling, Huadu, Guangzhou, China" },
+    { "step": "02", "title": "Established", "description": "2008" },
+    { "step": "03", "title": "Legal name", "description": "AtelierBag Manufacturing Co., Ltd." },
+    { "step": "04", "title": "Work", "description": "Full-package handbag OEM / ODM" },
+    { "step": "05", "title": "Materials", "description": "Leather, vegan, textile" }
+  ],
+  "aboutAudiences": [
+    { "title": "Specification first", "description": "Silhouette, BOM, hardware, quantity, and ship window before a price path." },
+    { "title": "Sample comments retained", "description": "Approved notes stay on the same sheet for replenishment." },
+    { "title": "One commercial thread", "description": "Development, production, and packing answers from the same owner." }
+  ],
+  "collectionBenefits": [
+    { "title": "Read the spec table", "description": "Material, size, hardware, packing—before a long story." },
+    { "title": "Ask for a quote", "description": "Get Factory Quote with the SKU and target quantity." },
+    { "title": "Start a project", "description": "Tech pack or sketch if the style is not on the shelf." }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "hero": {
+    "eyebrow": "广州 · 狮岭手袋 OEM",
+    "title": "品牌手袋全包制造商",
+    "description": "真皮、素革与功能性面料的 OEM / ODM 手袋，从打样到大货出运。",
+    "image": "/images/hero-workshop.jpg",
+    "imageAlt": "棕色真皮马鞍包样品，翻盖手缝——品牌签样后再开大货的那种",
+    "primaryHref": "#upload",
+    "secondaryHref": "/custom-process"
+  },
+  "assurances": [
+    { "icon": "/icons/box-seam.svg", "title": "全包服务", "description": "开发、生产、品控与包装同一条线" },
+    { "icon": "/icons/clock.svg", "title": "起订灵活", "description": "开单量按结构当面谈，不写死一个数" },
+    { "icon": "/icons/shield-check.svg", "title": "可归档品控", "description": "线中检查与出货前复核，方便你存档" },
+    { "icon": "/icons/search.svg", "title": "2008 年起在狮岭", "description": "广州花都手袋 OEM" }
+  ],
+  "metrics": [
+    { "value": "2008 年起", "label": "狮岭手袋 OEM" },
+    { "value": "全包", "label": "打样到大货出运" },
+    { "value": "真皮 · 素革 · 纺织", "label": "材料选项" },
+    { "value": "广州", "label": "华南出口" }
+  ],
+  "audiences": {
+    "title": "我们承接的项目",
+    "description": "需要工厂负责人、而不只是贸易窗口的品牌与采购办公室。",
+    "items": [
+      { "title": "品牌 OEM", "description": "你的工艺包，我们的车间。", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
+      { "title": "ODM 开发", "description": "从草图或参考样到可卖的款。", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
+    ]
+  },
+  "capabilities": {
+    "title": "品牌选择 AtelierBag OEM 的原因",
+    "description": "只写我们真正控得住的事，不当口号墙。",
+    "items": [
+      { "title": "生产自己控", "description": "裁断、车缝、后整在同一车间对话里完成。", "image": "/images/factory-sewing.jpg" },
+      { "title": "从工艺包到样品", "description": "先核尺寸、材料与五金，再裁第一只样。", "image": "/images/factory-pattern.jpg" },
+      { "title": "真皮、素革、纺织", "description": "一条货号可以混用真皮与替代材料。", "image": "/images/factory-leather.jpg" },
+      { "title": "交期说清楚", "description": "打样与大货窗口看结构后再写，不在首页猜天数。", "image": "/images/factory-qc.jpg" }
+    ]
+  },
+  "process": {
+    "title": "从工艺包到出运",
+    "description": "OEM 与 ODM 项目常用的六步。天数取决于结构、材料与五金，评审后再由项目负责人确认。",
+    "image": "/images/process-workshop.jpg",
+    "imageAlt": "样品确认后用于组装手袋裁片的工业缝纫机",
+    "steps": [
+      { "step": "01", "title": "接收并评审工艺包", "description": "读尺寸、物料清单与车缝说明，标出缺口。" },
+      { "step": "02", "title": "确认纸样与材料", "description": "确认纸样、真皮或替代面、里料与五金。" },
+      { "step": "03", "title": "样品 / 初样", "description": "试做一只，看容量、肩带落差与后整。" },
+      { "step": "04", "title": "大货生产", "description": "样品签字且材料锁定后再开线。" },
+      { "step": "05", "title": "品控与包装", "description": "线中与最终检查，再按品牌要求包装。" },
+      { "step": "06", "title": "出运与文件", "description": "出口纸箱与货代需要的单据。" }
+    ]
+  },
+  "testimonials": [
+    { "quote": "样品意见回在我们发出的同一张规格表上，没有另写一套故事。", "author": "产品开发 · 配件品牌" },
+    { "quote": "五金与皮料批次有标，补单时对得上。", "author": "采购经理 · 零售项目" }
+  ],
+  "warranty": {
+    "eyebrow": "工厂",
+    "title": "可以当面讲清楚的车间",
+    "description": "AtelierBag OEM 在花都狮岭做手袋项目。若不只是看款卡，请先读工厂页，或预约线上参观。",
+    "commitment": "请提供工艺包、草图或参考样，我们会回复可行性说明与报价路径。",
+    "cases": [
+      { "question": "材料", "title": "写得进物料清单", "description": "真皮、素革与纺织按 BOM 点名，不是一句「PU 混合」。" },
+      { "question": "开发", "title": "先纸样再大货", "description": "样品意见留在同一张尺寸表上。" },
+      { "question": "出货", "title": "包装对得上品牌", "description": "Logo、胶袋与箱唛按订单写明。" }
+    ]
+  },
+  "rooms": {
+    "title": "产品品类",
+    "items": [
+      { "label": "托特包", "slug": "tote-bags", "href": "/products/tote-bags" },
+      { "label": "肩包", "slug": "shoulder-bags", "href": "/products/shoulder-bags" },
+      { "label": "斜挎包", "slug": "crossbody-bags", "href": "/products/crossbody-bags" },
+      { "label": "背包", "slug": "backpacks", "href": "/products/backpacks" },
+      { "label": "钱包与小皮具", "slug": "wallets-slg", "href": "/products/wallets-slg" },
+      { "label": "素革 / 替代材料", "slug": "vegan-materials", "href": "/products/vegan-materials" }
+    ]
+  },
+  "projects": {
+    "title": "精选款式",
+    "items": [
+      { "location": "托特", "delivery": "立即询价", "type": "购物袋", "title": "结构购物袋托特", "scope": "零售与出行", "solution": "硬底，敞口或拉链", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
+      { "location": "肩包", "delivery": "立即询价", "type": "日常", "title": "软身翻盖肩包", "scope": "通勤到周末", "solution": "可调肩带，全里", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
+      { "location": "斜挎", "delivery": "立即询价", "type": "紧凑", "title": "紧凑斜挎包", "scope": "城市免持", "solution": "可靠开合，薄身", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
+      { "location": "背包", "delivery": "立即询价", "type": "日用", "title": "城市日用背包", "scope": "通勤与短途", "solution": "减压肩带，可选电脑隔层", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" }
+    ]
+  },
+  "ecosystem": {
+    "title": "手袋全包 OEM",
+    "description": "AtelierBag OEM 帮助品牌在广州狮岭从概念走到稳定大货。",
+    "items": [
+      { "step": "01", "title": "简报", "description": "工艺包、草图或参考样。" },
+      { "step": "02", "title": "打样", "description": "纸样、材料与样品。" },
+      { "step": "03", "title": "大货", "description": "书面确认后再开线。" },
+      { "step": "04", "title": "出运", "description": "品控、包装与出口文件。" }
+    ]
+  },
+  "cta": {
+    "title": "开始下一季手袋线",
+    "description": "请提供工艺包、草图或参考样。我们会回复可行性说明与报价路径。WhatsApp：+8613800208800",
+    "formTitle": "获取工厂报价",
+    "formDescription": "姓名、邮箱与一段简报即可开始。如有 PDF 或照片请附上。",
+    "steps": [
+      "说明款型、材料与目标数量。",
+      "我们评审可行性，并标出缺项。",
+      "你将收到报价路径与打样下一步。"
+    ]
+  },
+  "footerFeatures": [
+    { "title": "全包 OEM", "description": "开发到包装" },
+    { "title": "广州狮岭", "description": "2008 年起做手袋" },
+    { "title": "真皮 · 素革 · 纺织", "description": "一张物料清单里的选项" },
+    { "title": "获取工厂报价", "description": "sales@atelierbag-oem.com" }
+  ]
+}

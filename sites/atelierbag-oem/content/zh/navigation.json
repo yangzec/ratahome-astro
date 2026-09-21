@@ -1,0 +1,88 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "关于我们",
+      "href": "/about-us"
+    },
+    {
+      "id": "factory",
+      "label": "工厂与能力",
+      "href": "/factory",
+      "groups": [
+        {
+          "title": "车间",
+          "links": [
+            { "label": "工厂概览", "href": "/factory", "description": "狮岭车间与 OEM 项目怎么跑" },
+            { "label": "材料采购", "href": "/factory/materials-sourcing", "description": "真皮、素革与纺织选项" },
+            { "label": "产品开发", "href": "/factory/product-development", "description": "工艺包评审、纸样与样品" }
+          ]
+        },
+        {
+          "title": "生产",
+          "links": [
+            { "label": "OEM 与 ODM 生产", "href": "/factory/oem-odm", "description": "裁断、车缝、后整在同一车间对话" },
+            { "label": "过程控制与品控", "href": "/factory/process-control", "description": "线中检查与出货前复核" },
+            { "label": "包装与品牌", "href": "/factory/packaging-branding", "description": "Logo、包装与品牌呈现" },
+            { "label": "全球物流", "href": "/factory/logistics", "description": "出口包装与出货文件" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "线上参观工厂",
+        "description": "看工艺包如何变成大货出运",
+        "href": "/factory",
+        "image": "/images/factory-sewing.jpg"
+      }
+    },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "主力款",
+          "links": [
+            { "label": "托特包", "href": "/products/tote-bags", "description": "购物袋与结构托特" },
+            { "label": "肩包", "href": "/products/shoulder-bags", "description": "翻盖、流浪包与日常肩包" },
+            { "label": "斜挎包", "href": "/products/crossbody-bags", "description": "紧凑日用包与胸包" }
+          ]
+        },
+        {
+          "title": "更多款型",
+          "links": [
+            { "label": "背包", "href": "/products/backpacks", "description": "日用包与城市背包" },
+            { "label": "钱包与小皮具", "href": "/products/wallets-slg", "description": "钱包、卡包、收纳袋" },
+            { "label": "素革 / 替代材料", "href": "/products/vegan-materials", "description": "PU、再生与纺织方案" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部产品",
+        "description": "浏览款型、规格与报价路径",
+        "href": "/products",
+        "image": "/images/product-tote.jpg"
+      }
+    },
+    {
+      "id": "custom-process",
+      "label": "定制流程",
+      "href": "/custom-process"
+    },
+    {
+      "id": "faq",
+      "label": "常见问题",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "联系我们",
+      "href": "/contact-us"
+    }
+  ]
+}

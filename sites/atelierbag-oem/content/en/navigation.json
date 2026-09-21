@@ -1,0 +1,88 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about-us"
+    },
+    {
+      "id": "factory",
+      "label": "Factory & Capabilities",
+      "href": "/factory",
+      "groups": [
+        {
+          "title": "Workshop",
+          "links": [
+            { "label": "Factory Overview", "href": "/factory", "description": "Shiling workshop and how we run OEM programs" },
+            { "label": "Materials Sourcing", "href": "/factory/materials-sourcing", "description": "Leather, vegan, and textile options" },
+            { "label": "Product Development", "href": "/factory/product-development", "description": "Tech pack review, pattern, and prototype" }
+          ]
+        },
+        {
+          "title": "Production",
+          "links": [
+            { "label": "OEM & ODM Production", "href": "/factory/oem-odm", "description": "Cutting, stitching, and finishing under one roof" },
+            { "label": "Process Control & QC", "href": "/factory/process-control", "description": "In-line checks and pre-shipment review" },
+            { "label": "Packaging & Branding", "href": "/factory/packaging-branding", "description": "Logo, packing, and brand presentation" },
+            { "label": "Global Logistics", "href": "/factory/logistics", "description": "Export packing and shipping documents" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "Virtual factory tour",
+        "description": "See how a tech pack becomes a bulk shipment",
+        "href": "/factory",
+        "image": "/images/factory-sewing.jpg"
+      }
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Carry",
+          "links": [
+            { "label": "Tote Bags", "href": "/products/tote-bags", "description": "Shoppers and structured totes" },
+            { "label": "Shoulder Bags", "href": "/products/shoulder-bags", "description": "Flap, hobo, and everyday shoulder" },
+            { "label": "Crossbody Bags", "href": "/products/crossbody-bags", "description": "Compact day bags and slings" }
+          ]
+        },
+        {
+          "title": "More styles",
+          "links": [
+            { "label": "Backpacks", "href": "/products/backpacks", "description": "Daypacks and city backpacks" },
+            { "label": "Wallets & Small Leather Goods", "href": "/products/wallets-slg", "description": "Wallets, card cases, pouches" },
+            { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials", "description": "PU, recycled, and textile programs" }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse silhouettes, specs, and quote paths",
+        "href": "/products",
+        "image": "/images/product-tote.jpg"
+      }
+    },
+    {
+      "id": "custom-process",
+      "label": "Custom Process",
+      "href": "/custom-process"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact-us"
+    }
+  ]
+}
