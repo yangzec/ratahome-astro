@@ -1,55 +1,55 @@
 {
   "hero": {
-    "eyebrow": "Guangzhou · Shiling handbag OEM",
+    "eyebrow": "Guangzhou · Est. 2008",
     "title": "Full-Package Handbag Manufacturer for Your Brand",
     "description": "OEM and ODM handbags in leather, vegan alternatives, and performance materials—from sampling to bulk shipment.",
     "image": "/images/hero-workshop.jpg",
-    "imageAlt": "Tan leather satchel with a hand-stitched flap—the kind of OEM sample a brand signs before bulk",
+    "imageAlt": "Tan leather satchel with a hand-stitched flap, an OEM sample before bulk",
     "primaryHref": "#upload",
-    "secondaryHref": "/custom-process"
+    "secondaryHref": "/products"
   },
   "assurances": [
-    { "icon": "/icons/box-seam.svg", "title": "Full Package Service", "description": "Development, production, QC, and packing in one thread" },
-    { "icon": "/icons/clock.svg", "title": "Flexible MOQ", "description": "Opening quantities confirmed per construction" },
-    { "icon": "/icons/shield-check.svg", "title": "Documented QC", "description": "In-line checks and a pre-shipment review you can file" },
-    { "icon": "/icons/search.svg", "title": "Since 2008 in Shiling", "description": "Handbag OEM from Huadu, Guangzhou" }
+    { "icon": "/icons/box-seam.svg", "title": "Full Package Service", "description": "Development, materials, production, packing, and export documents under one roof." },
+    { "icon": "/icons/clock.svg", "title": "Flexible MOQ", "description": "Start with workable trial runs, then scale when your line is ready." },
+    { "icon": "/icons/shield-check.svg", "title": "Documented QC", "description": "In-line and final checks with clear acceptance criteria before shipment." },
+    { "icon": "/icons/search.svg", "title": "Guangzhou factory", "description": "AtelierBag Manufacturing Co., Ltd. · Est. 2008" }
   ],
   "metrics": [
-    { "value": "Since 2008", "label": "Handbag OEM in Shiling" },
+    { "value": "Since 2008", "label": "Guangzhou handbag OEM" },
     { "value": "Full package", "label": "Sample to bulk shipment" },
     { "value": "Leather · vegan · textile", "label": "Material options" },
-    { "value": "Guangzhou", "label": "Export from South China" }
+    { "value": "OEM & ODM", "label": "Your design or ours" }
   ],
   "audiences": {
-    "title": "Programs we support",
-    "description": "Brand and buying-office programs that want a factory conversation, not only a trading desk.",
+    "title": "A Guangzhou handbag factory built for brand partners",
+    "description": "Since 2008, AtelierBag OEM has supported international brands with OEM and ODM programs—from tech-pack review and material confirmation through bulk production and export packing. We focus on repeatable quality, clear timelines, and packaging that matches your brand standards.",
     "items": [
-      { "title": "Brand OEM", "description": "Your approved design, built in our workshop.", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
-      { "title": "ODM development", "description": "From a sketch or reference to a sellable style.", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
+      { "title": "About Us", "description": "The factory behind the program.", "href": "/about", "image": "/images/factory-sewing.jpg" },
+      { "title": "Factory & Capabilities", "description": "Materials, development, production, and packing.", "href": "/factory", "image": "/images/factory-pattern.jpg" }
     ]
   },
   "capabilities": {
     "title": "Why brands work with AtelierBag OEM",
-    "description": "What the workshop owns from first sample to shipment.",
+    "description": "Direct control on the floor—from first sample to export packing.",
     "items": [
-      { "title": "Direct manufacturing control", "description": "Cutting, stitching, and finishing stay in the same workshop conversation.", "image": "/images/factory-sewing.jpg" },
-      { "title": "Sample before bulk", "description": "Measurements, materials, and hardware are reviewed before a prototype is cut.", "image": "/images/factory-pattern.jpg" },
-      { "title": "Leather, vegan, textile", "description": "A line can mix genuine leather with alternative materials on one BOM.", "image": "/images/factory-leather.jpg" },
-      { "title": "Clear timeline talk", "description": "Sample and bulk windows are written after we see the construction.", "image": "/images/factory-qc.jpg" }
+      { "title": "Direct manufacturing control", "description": "Your program stays on our floor—from cutting and stitching to packing—so quality and schedule stay aligned.", "image": "/images/factory-sewing.jpg" },
+      { "title": "Development from tech pack to prototype", "description": "We review specs, refine patterns, and build samples you can approve before bulk.", "image": "/images/factory-pattern.jpg" },
+      { "title": "Material options that fit the brief", "description": "Leather, vegan alternatives, and textiles sourced to match hand-feel, color, and compliance needs.", "image": "/images/factory-leather.jpg" },
+      { "title": "Clear sampling and bulk timelines", "description": "You get realistic lead times and updates at each stage—sample, confirmation, production, ship.", "image": "/images/factory-qc.jpg" }
     ]
   },
   "process": {
-    "title": "From first sample to shipment",
-    "description": "Six steps we use on OEM and ODM programs. Sample and bulk windows are confirmed after we review the construction.",
+    "title": "How a custom program runs",
+    "description": "A clear path from your files to approved samples and export-ready bulk.",
     "image": "/images/process-workshop.jpg",
     "imageAlt": "Industrial sewing machine used to assemble handbag panels after the sample is signed",
     "steps": [
-      { "step": "01", "title": "Review the style", "description": "We read the design, measurements, and materials, then flag what still needs a decision." },
-      { "step": "02", "title": "Pattern & material confirmation", "description": "Confirm pattern, leather or alternative, lining, and hardware." },
-      { "step": "03", "title": "Prototype / sample", "description": "Cut a sample for fit, handle drop, and finishing." },
-      { "step": "04", "title": "Bulk production", "description": "Open the line after sample sign-off and material lock." },
-      { "step": "05", "title": "QC & packing", "description": "In-line and final checks, then branded packing as specified." },
-      { "step": "06", "title": "Shipping & documents", "description": "Export cartons and the papers your forwarder needs." }
+      { "step": "01", "title": "Receive & review tech pack", "description": "We check drawings, BOM, and construction notes for feasibility and cost drivers." },
+      { "step": "02", "title": "Pattern & material confirmation", "description": "Patterns are refined; materials and hardware are locked with your approval." },
+      { "step": "03", "title": "Prototype / sample", "description": "You receive wearable or sales samples for fit, look, and function sign-off." },
+      { "step": "04", "title": "Bulk production", "description": "Confirmed specs go to the line with in-process checks." },
+      { "step": "05", "title": "QC & packing", "description": "Final inspection, branding inserts, and export-ready packing." },
+      { "step": "06", "title": "Shipping & documents", "description": "Cartons, labels, and commercial documents prepared for your destination." }
     ]
   },
   "testimonials": [
@@ -58,60 +58,64 @@
   ],
   "warranty": {
     "eyebrow": "Factory",
-    "title": "A workshop you can visit",
-    "description": "AtelierBag OEM runs handbag programs from Shiling, Huadu. The factory pages cover materials, development, and production. A virtual walk-through can be arranged.",
-    "commitment": "Ask for a factory quote and we will reply with feasibility and next steps.",
+    "title": "See how we build",
+    "description": "Tour cutting, stitching, finishing, and packing areas—on site or via a guided virtual walkthrough.",
+    "commitment": "A virtual factory tour covers the line you need to see.",
     "cases": [
-      { "question": "Materials", "title": "Sourcing you can specify", "description": "Leather, vegan alternatives, and textiles named on the BOM." },
-      { "question": "Development", "title": "Pattern before bulk", "description": "Prototype comments stay on the same measurement sheet." },
-      { "question": "Dispatch", "title": "Packing that matches the brand", "description": "Logo, polybags, and carton marks as written on the order." }
+      { "question": "Cutting", "title": "Pattern on the floor", "description": "Panels are cut after materials and measurements are locked." },
+      { "question": "Stitching", "title": "Construction on one line", "description": "Stitching and finishing stay in the same workshop conversation." },
+      { "question": "Packing", "title": "Brand-ready cartons", "description": "Branding inserts and export packing follow the confirmed sheet." }
     ]
   },
   "rooms": {
-    "title": "Product categories",
+    "title": "Shop by category",
     "items": [
       { "label": "Tote Bags", "slug": "tote-bags", "href": "/products/tote-bags" },
       { "label": "Shoulder Bags", "slug": "shoulder-bags", "href": "/products/shoulder-bags" },
       { "label": "Crossbody Bags", "slug": "crossbody-bags", "href": "/products/crossbody-bags" },
       { "label": "Backpacks", "slug": "backpacks", "href": "/products/backpacks" },
-      { "label": "Wallets & SLG", "slug": "wallets-slg", "href": "/products/wallets-slg" },
-      { "label": "Vegan / Alternatives", "slug": "vegan-materials", "href": "/products/vegan-materials" }
+      { "label": "Wallets & Small Leather Goods", "slug": "wallets-slg", "href": "/products/wallets-slg" },
+      { "label": "Vegan / Alternative Materials", "slug": "vegan-materials", "href": "/products/vegan-materials" }
     ]
   },
   "projects": {
     "title": "Featured styles",
     "items": [
-      { "location": "Tote", "delivery": "Quote Now", "type": "Shopper", "title": "Structured shopper tote", "scope": "retail and travel carry", "solution": "firm base, open top or zip", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
-      { "location": "Shoulder", "delivery": "Quote Now", "type": "Everyday", "title": "Soft flap shoulder", "scope": "work-to-weekend", "solution": "adjustable strap, lined body", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
-      { "location": "Crossbody", "delivery": "Quote Now", "type": "Compact", "title": "Compact crossbody", "scope": "hands-free city use", "solution": "secure closure, slim profile", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
-      { "location": "Backpack", "delivery": "Quote Now", "type": "Daypack", "title": "City day backpack", "scope": "commute and short trip", "solution": "padded straps, laptop sleeve option", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" }
+      { "location": "Tote Bags", "delivery": "Quote Now", "type": "TB-01", "title": "Everyday leather tote", "scope": "daily carry and retail", "solution": "open or structured shell", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
+      { "location": "Tote Bags", "delivery": "Quote Now", "type": "TB-02", "title": "Fashion shopper tote", "scope": "retail collections", "solution": "branded handles and hardware", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
+      { "location": "Shoulder Bags", "delivery": "Quote Now", "type": "SB-01", "title": "Structured shoulder bag", "scope": "fashion and lifestyle lines", "solution": "strap and closure options", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
+      { "location": "Shoulder Bags", "delivery": "Quote Now", "type": "SB-02", "title": "Soft shoulder bag", "scope": "everyday retail", "solution": "soft body, lined interior", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
+      { "location": "Crossbody Bags", "delivery": "Quote Now", "type": "CB-01", "title": "Compact crossbody", "scope": "hands-free carry", "solution": "adjustable strap, secure closure", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
+      { "location": "Backpacks", "delivery": "Quote Now", "type": "BP-01", "title": "Lifestyle backpack", "scope": "light travel and city use", "solution": "durable shell, logo-ready panels", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" },
+      { "location": "Wallets & SLG", "delivery": "Quote Now", "type": "SLG-01", "title": "Coordinated wallet", "scope": "match the bag program", "solution": "cards, wallets, leather accessories", "image": "/images/product-wallet.jpg", "href": "/products/wallets-slg" },
+      { "location": "Vegan", "delivery": "Quote Now", "type": "VG-01", "title": "Alternative-material tote", "scope": "leather-free programs", "solution": "PU and performance shells", "image": "/images/product-vegan.jpg", "href": "/products/vegan-materials" }
     ]
   },
   "ecosystem": {
-    "title": "Full-package handbag OEM",
-    "description": "AtelierBag OEM helps brands move from concept to consistent bulk quality in Shiling, Guangzhou.",
+    "title": "Quick answers",
+    "description": "First questions brand teams ask before a factory quote.",
     "items": [
-      { "step": "01", "title": "Enquiry", "description": "A short brief to open the conversation." },
-      { "step": "02", "title": "Sample", "description": "Pattern, materials, and prototype." },
-      { "step": "03", "title": "Bulk", "description": "Production after written sign-off." },
-      { "step": "04", "title": "Ship", "description": "QC, packing, and export documents." }
+      { "step": "01", "title": "What information do you need for a first quote?", "description": "Style photos or tech pack, target materials, approximate MOQ, and destination market." },
+      { "step": "02", "title": "Do you support OEM and ODM?", "description": "Yes—build from your design, or develop with our sampling team." },
+      { "step": "03", "title": "Can you work with vegan materials?", "description": "Yes—PU and other alternatives alongside leather programs." },
+      { "step": "04", "title": "How do sampling and bulk lead times work?", "description": "Sample timing depends on complexity; bulk starts after sample approval and material lock." }
     ]
   },
   "cta": {
     "title": "Let’s build your next handbag line",
-    "description": "A factory quote starts with a short enquiry. We review the style and reply with sampling next steps. WhatsApp: +8613800208800",
+    "description": "Send a tech pack, sketch, or reference sample. We’ll confirm feasibility and outline next steps with pricing.",
     "formTitle": "Get Factory Quote",
-    "formDescription": "A short note is enough to start.",
+    "formDescription": "A short note on materials, quantity, and timing helps us reply faster.",
     "steps": [
-      "Enquiry received by a named project owner.",
-      "Style, materials, and construction reviewed.",
-      "Sampling plan and factory quote returned."
+      "Receive & review tech pack",
+      "Pattern & material confirmation",
+      "Prototype / sample"
     ]
   },
   "footerFeatures": [
     { "title": "Full package OEM", "description": "Development through packing" },
-    { "title": "Shiling, Guangzhou", "description": "Handbag workshop since 2008" },
-    { "title": "Leather · vegan · textile", "description": "Material options on one BOM" },
+    { "title": "Guangzhou, China", "description": "Handbag workshop since 2008" },
+    { "title": "Leather · vegan · textile", "description": "Material options that fit the brief" },
     { "title": "Get Factory Quote", "description": "sales@atelierbag-oem.com" }
   ]
 }

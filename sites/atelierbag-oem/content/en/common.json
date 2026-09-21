@@ -2,11 +2,11 @@
   "site": {
     "name": "AtelierBag OEM",
     "title": "Full-Package Handbag Manufacturer for Your Brand",
-    "description": "AtelierBag OEM is a Guangzhou Shiling handbag OEM and ODM partner. Leather, vegan, and textile programs from sampling to bulk shipment. Get a factory quote.",
-    "whatsapp": "+8613800208800",
+    "description": "AtelierBag OEM is a full-package handbag OEM and ODM partner in Guangzhou. Leather, vegan alternatives, and performance materials—from sampling to bulk shipment.",
+    "whatsapp": "+86 138 0020 8800",
     "whatsappUrl": "https://wa.me/8613800208800",
-    "hours": "Mon–Sat, 09:00–18:00 (China time)",
-    "location": "Shiling, Huadu, Guangzhou, China",
+    "hours": "Mon–Sat, 09:00–18:00 (CST)",
+    "location": "Guangzhou, China",
     "address": "No. 88 Leather Road, Shiling, Huadu, Guangzhou, Guangdong, China",
     "phone": "+86 20 3888 6200",
     "email": "sales@atelierbag-oem.com",
@@ -15,12 +15,12 @@
   "buttons": {
     "startProject": "Get Factory Quote",
     "uploadFloorPlan": "Get Factory Quote",
-    "factoryTour": "Start Your Project",
-    "sendFloorPlan": "Send Enquiry",
-    "sendMessage": "Send Enquiry",
+    "factoryTour": "View Products",
+    "sendFloorPlan": "Send message",
+    "sendMessage": "Send message",
     "whatsappUs": "Chat on WhatsApp",
     "viewAll": "View All",
-    "seeJourney": "See Custom Process",
+    "seeJourney": "Full custom process",
     "readWarranty": "Virtual factory tour",
     "exploreProjects": "View All Products",
     "requestQuote": "Get Factory Quote",
@@ -36,14 +36,14 @@
     "message": "Message",
     "projectDetails": "Message",
     "floorPlan": "Attachments (PDF / JPG)",
-    "privacy": "Your enquiry stays with our sales team.",
+    "privacy": "A short note on materials, quantity, and timing helps us reply faster.",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@company.com",
     "phonePlaceholder": "+1 555 000 0000",
     "companyPlaceholder": "Brand or buying office",
     "whatsappPlaceholder": "WhatsApp number",
-    "messagePlaceholder": "A short note is enough to start",
-    "detailsPlaceholder": "A short note is enough to start",
+    "messagePlaceholder": "A short note on materials, quantity, and timing",
+    "detailsPlaceholder": "A short note on materials, quantity, and timing",
     "messageRequired": true,
     "projectTypes": {
       "residence": "Factory quote",
@@ -54,13 +54,13 @@
     }
   },
   "footer": {
-    "description": "AtelierBag OEM is a handbag OEM/ODM partner helping brands move from concept to consistent bulk quality.",
+    "description": "AtelierBag OEM is a full-package handbag OEM and ODM partner in Guangzhou. We help brands move from concept and sampling to consistent bulk quality—in leather, vegan alternatives, and performance materials.",
     "copyright": "All rights reserved.",
     "foundedYear": "2008",
     "columns": [
       {
         "title": "AtelierBag OEM",
-        "body": "Full-package handbag OEM/ODM for global brands. Leather, vegan alternatives, and performance materials—from sampling to bulk shipment.",
+        "body": "AtelierBag OEM is a full-package handbag OEM and ODM partner in Guangzhou. We help brands move from concept and sampling to consistent bulk quality—in leather, vegan alternatives, and performance materials.",
         "links": [],
         "note": ""
       },
@@ -74,7 +74,8 @@
           { "label": "Crossbody Bags", "href": "/products/crossbody-bags" },
           { "label": "Backpacks", "href": "/products/backpacks" },
           { "label": "Wallets & Small Leather Goods", "href": "/products/wallets-slg" },
-          { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials" }
+          { "label": "Vegan / Alternative Materials", "href": "/products/vegan-materials" },
+          { "label": "All Products", "href": "/products" }
         ]
       },
       {
@@ -87,6 +88,8 @@
           { "label": "Product Development", "href": "/factory/product-development" },
           { "label": "OEM & ODM Production", "href": "/factory/oem-odm" },
           { "label": "Process Control & QC", "href": "/factory/process-control" },
+          { "label": "Packaging & Branding", "href": "/factory/packaging-branding" },
+          { "label": "Global Logistics", "href": "/factory/logistics" },
           { "label": "Custom Process", "href": "/custom-process" }
         ]
       },
@@ -94,13 +97,13 @@
         "title": "Contact",
         "body": "",
         "links": [
-          { "label": "Address: No. 88 Leather Road, Shiling, Huadu, Guangzhou, Guangdong, China", "href": "/contact-us" },
+          { "label": "Address: No. 88 Leather Road, Shiling, Huadu, Guangzhou, Guangdong, China", "href": "/contact" },
           { "label": "Phone: +86 20 3888 6200", "href": "tel:+862038886200" },
           { "label": "Email: sales@atelierbag-oem.com", "href": "mailto:sales@atelierbag-oem.com" },
-          { "label": "WhatsApp: +8613800208800", "href": "https://wa.me/8613800208800" },
-          { "label": "Get Factory Quote", "href": "/contact-us?intent=quote" }
+          { "label": "WhatsApp: +86 138 0020 8800", "href": "https://wa.me/8613800208800" },
+          { "label": "Get Factory Quote", "href": "/contact/?intent=quote" }
         ],
-        "note": "Business hours: Mon–Sat, 09:00–18:00 (China time)."
+        "note": "Hours: Mon–Sat, 09:00–18:00 (CST)"
       }
     ]
   }

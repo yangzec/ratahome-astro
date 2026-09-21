@@ -21,6 +21,7 @@ export const pageSlugs = [
   'factory/logistics',
   'custom-process',
   'how-it-works',
+  'case-studies',
   'faq',
   'privacy',
   'terms',

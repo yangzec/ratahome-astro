@@ -191,9 +191,18 @@ https://github.com/yangzec/ratahome-astro
 6. 本地开发：`pnpm dev`（端口 `43123`）
 7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
+### 蓝图硬规则
+
+- 行业定稿蓝图是前台文案唯一来源；只把 blueprint 写入 `sites/*/content/`。
+- 禁止把 brief / compare 的「学谁」、草稿备注或指令腔写进前台。
+- 禁止：Share / 请发 / Please provide / as drawn / Those three notes / slogan wall / quotation-path（内部词）/ 未核实产能与客户名。
+- 规则全文：`docs/blueprint-rules.md` ；拆站顺序（先单站后行业）：`docs/teardown-workflow.md` 。
+
 ### 文档指针
 
 - **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **蓝图规则**：`docs/blueprint-rules.md`
+- **拆站流程**：`docs/teardown-workflow.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
 - Agent 协作规范：本文件

@@ -3,150 +3,157 @@
     "title": "关于 AtelierBag OEM | 广州手袋工厂",
     "eyebrow": "关于 AtelierBag OEM",
     "heroTitle": "关于 AtelierBag OEM",
-    "heroDescription": "广州狮岭手袋 OEM / ODM 伙伴，给需要工厂对话、而不只是目录的品牌。",
+    "heroDescription": "广州手袋 OEM / ODM 工厂，成立于 2008 年。",
     "workflowTitle": "我们的故事",
-    "workflowDescription": "AtelierBag Manufacturing Co., Ltd. 自 2008 年起在广州花都狮岭承接手袋 OEM。我们做真皮、素革与纺织结构，覆盖托特、肩包、斜挎、背包与小皮具。\n\n采购方找我们，是因为材料、纸样与包装需要走同一条对话。",
-    "story": "AtelierBag Manufacturing Co., Ltd. 自 2008 年起在广州花都狮岭承接手袋 OEM。我们做真皮、素革与纺织结构，覆盖托特、肩包、斜挎、背包与小皮具。\n\n采购方找我们，是因为材料、纸样与包装需要走同一条对话。",
-    "approachTitle": "我们如何与采购方合作",
-    "approach": "每个项目走同一条商务线：材料、纸样、生产与包装。打样前先把细节谈清楚，报价才站得住。\n\n已确认的样品意见与材料批次会留档，方便补单。",
+    "workflowDescription": "AtelierBag Manufacturing Co., Ltd. 是广州手袋 OEM / ODM 工厂，成立于 2008 年。我们与品牌和零售团队做全包项目——材料、开发、生产、品控、包装与物流——让产线以稳定品质出货。",
+    "story": "AtelierBag Manufacturing Co., Ltd. 是广州手袋 OEM / ODM 工厂，成立于 2008 年。我们与品牌和零售团队做全包项目——材料、开发、生产、品控、包装与物流——让产线以稳定品质出货。",
+    "approachTitle": "工厂与能力",
+    "approach": "从材料采购到出口包装，每一项能力都在车间里支撑品牌项目。",
     "glanceTitle": "一览",
-    "closingTitle": "从工厂报价开始",
-    "closingDescription": "准备谈一款时，欢迎获取工厂报价。"
+    "closingTitle": "工厂与能力 · 获取工厂报价",
+    "closingDescription": "打开工厂页，或为下一季手袋线获取工厂报价。"
   },
   "collections": {
-    "title": "手袋产品 | 托特、肩包、斜挎、背包",
-    "heroTitle": "手袋产品",
-    "heroDescription": "按款型浏览 OEM 与 ODM 手袋。打开款式可看材料、结构，并获取工厂报价。",
-    "packagesTitle": "浏览款式",
-    "benefitsTitle": "需要工厂报价？",
-    "benefitsDescription": "一段简报即可开始。我们会回复可行性与打样安排。",
+    "title": "OEM 与 ODM 手袋款式",
+    "heroTitle": "OEM 与 ODM 手袋款式",
+    "heroDescription": "浏览托特、肩包、斜挎、背包、皮小件与素皮选项。可按品类、材料与颜色筛选，再对符合产线的款式询价。",
+    "packagesTitle": "按品类选款",
+    "benefitsTitle": "获取工厂报价",
+    "benefitsDescription": "对你列入短名单的货号询工厂价。",
     "stylesTitle": "按品类筛选",
-    "stylesDescription": "打开款式，或直接获取工厂报价。",
-    "styles": ["全部产品", "托特", "肩包", "斜挎", "背包", "钱包与小皮具", "素革"]
+    "stylesDescription": "品类 · 材料 · 颜色",
+    "styles": ["全部产品", "托特", "肩包", "斜挎", "背包", "钱包与皮小件", "素皮"]
   },
   "contact": {
     "title": "联系我们 | 获取工厂报价",
     "heroTitle": "联系我们",
-    "heroDescription": "写信给花都狮岭工厂，将由专人回复。",
+    "heroDescription": "材料、数量与交期的简短说明，有助于我们更快回复。",
     "getInTouch": "工厂联系方式",
-    "helper": "每个询盘由专人回复。",
-    "whatsappLine": "WhatsApp +8613800208800 可用于第一次沟通。",
-    "visitNote": "花都狮岭车间参观需预约。"
+    "helper": "材料、数量与交期的简短说明，有助于我们更快回复。",
+    "whatsappLine": "WhatsApp +86 138 0020 8800",
+    "visitNote": "广州花都狮岭车间参观需预约。"
   },
   "slugs": {
     "factory": {
-      "title": "工厂与能力 | AtelierBag OEM",
-      "description": "广州狮岭手袋 OEM 能力：材料、开发、生产、品控、包装与物流。",
-      "content": "AtelierBag OEM 在花都狮岭做手袋全包项目。下面各页覆盖材料、开发、生产、品控、包装与物流。",
+      "title": "工厂与能力",
+      "description": "从材料采购到出口包装，每一项能力页说明我们如何在车间支撑品牌项目。",
+      "content": "从材料采购到出口包装，每一项能力页说明我们如何在车间支撑品牌项目。",
       "sections": [
         {
-          "title": "这家工厂管什么",
-          "body": "开发、裁断、车缝、后整、品控与包装走同一条商务线。",
+          "title": "能力",
+          "body": "打开能力页，或预约线上工厂参观。",
           "items": [
-            "材料采购 — 真皮、素革与纺织按物料清单点名。",
-            "产品开发 — 纸样、样品与款式开发。",
-            "OEM 与 ODM 生产 — 你的设计，或车间主导开发。",
-            "过程控制与品控 — 线中检查与出货前复核。",
-            "包装与品牌 — Logo、包装与箱唛。",
-            "全球物流 — 出口包装与出货文件。"
+            "材料采购 — 真皮、素皮与纺织按简报采购。",
+            "产品开发 — 从工艺包到样品。",
+            "OEM / ODM 生产 — 按你的设计生产，或与打样团队一起开发。",
+            "过程控制与质检 — 线中与终检按明确验收标准。",
+            "包装与品牌 — 品牌物料与出口包装。",
+            "全球物流 — 纸箱、标签与目的地所需商业文件。"
           ]
         }
       ]
     },
     "factory/materials-sourcing": {
       "title": "材料采购",
-      "description": "手袋 OEM 用的真皮、素革与纺织。",
-      "content": "打样前先把材料写进物料清单：真皮、涂层替代、再生或纺织面、里料与五金。\n\n限用物质与动物源规则可在裁第一片面料前确认。"
+      "description": "真皮、素皮与纺织按手感、颜色与合规需求采购。",
+      "content": "真皮、素皮与纺织按手感、颜色与合规需求采购。\n\n材料与开发、包装走同一项目，你确认的面料就是出货的面料。"
     },
     "factory/product-development": {
       "title": "产品开发",
-      "description": "OEM / ODM 手袋的纸样、样品与款式开发。",
-      "content": "开发从已确认的设计、草图或实物参考开始。我们先核尺寸、结构与五金，再做样品看肩带落差、袋位与后整。\n\n意见留在同一张表上，大货跟签样走。"
+      "description": "我们评审规格、调整纸样，做出你可签字的样品，再开大货。",
+      "content": "我们评审规格、调整纸样，做出你可签字的样品，再开大货。\n\n开发从你的文件开始：工艺包、草图或参考样。纸样与材料经你确认后锁定，再开线。"
     },
     "factory/oem-odm": {
-      "title": "OEM 与 ODM 生产",
-      "description": "按你的设计做 OEM，或由车间主导 ODM 款型。",
-      "content": "OEM 跟你已确认的设计走。ODM 从可批注的车间款型起步。两条路径都会在开线前锁定材料与尺寸。\n\n开单量取决于结构与五金，看过款式后再确认。"
+      "title": "OEM / ODM 生产",
+      "description": "按你的设计生产，或与打样团队一起开发。",
+      "content": "我们做 OEM 和 ODM。可按你的设计生产，也可与打样团队一起开发。\n\n确认规格上线，并做过程检查。开单量从可行的试单开始，产线就绪后再放量。"
     },
     "factory/process-control": {
-      "title": "过程控制与品控",
-      "description": "手袋大货的线中检查与出货前复核。",
-      "content": "品控写成检查点：进料、线中车缝与沿口、包装前终检。我们可以按你的 AQL，或按订单接受的工厂清单执行。\n\n如订单要求，出货可附照片记录。"
+      "title": "过程控制与质检",
+      "description": "线中与终检按明确验收标准，再出货。",
+      "content": "线中与终检按明确验收标准，再出货。\n\n确认规格在大货过程中留在车间。终检之后再做品牌物料与出口包装。"
     },
     "factory/packaging-branding": {
       "title": "包装与品牌",
-      "description": "品牌项目的 Logo 工艺、包装与箱唛。",
-      "content": "Logo 可选压印、烫金、金属牌或印刷标，按材料确认。包装跟品牌单：防尘袋、卡片、胶袋与箱唛。\n\n打样阶段即可确认稿件，品牌工艺不必拖到最后。"
+      "description": "包装符合品牌标准。",
+      "content": "我们盯可重复的品质、清楚的交期，以及符合品牌标准的包装。\n\n终检、品牌物料与出口包装跟确认单走。"
     },
     "factory/logistics": {
       "title": "全球物流",
-      "description": "从广州出发的出口包装与出货文件。",
-      "content": "我们按海运或空运从华南包装，并准备货代在订单上点名的文件。箱规与重量在包装方式锁定后再确认。\n\n运费由你或指定货代安排；我们配合包装，方便对方报价。"
+      "description": "纸箱、标签与目的地所需商业文件。",
+      "content": "纸箱、标签与目的地所需商业文件。\n\n包装配合货代出运。运费若在项目内，会写进报价。"
     },
     "custom-process": {
-      "title": "定制流程 | 从样品到出运",
-      "description": "AtelierBag OEM 如何把手袋从询盘做到大货出运。",
-      "content": "定制走一套书面步骤：评审、打样，确认后再开大货。品控与包装完成后，文件再交给货代。",
+      "title": "从简报到出运的定制流程",
+      "description": "从你的文件到确认样品、再到可出口大货，路径清楚——品牌、产品和运营对齐。",
+      "content": "从你的文件到确认样品、再到可出口大货，路径清楚——品牌、产品和运营对齐。",
       "sections": [
         {
-          "title": "六步",
-          "body": "打样与大货窗口看过结构后再确认。",
+          "title": "定制项目怎么跑",
+          "body": "打样时间看复杂度；大货在样品确认且材料锁定后开始。",
           "items": [
-            "评审款式 — 设计、尺寸与材料。",
-            "确认纸样与材料 — 真皮或替代面、里料、五金。",
-            "样品 / 初样 — 容量、肩带落差、后整。",
-            "大货生产 — 样品与材料锁定之后。",
-            "品控与包装 — 线中与终检，再按品牌包装。",
-            "出运与文件 — 出口纸箱与单据。"
+            "接收并评审工艺包 — 核对图纸、物料清单与结构说明，看可行性与成本点。",
+            "确认纸样与材料 — 调整纸样；材料与五金经你确认后锁定。",
+            "样品 / 初样 — 你收到可穿戴或销售样品，确认版型、外观与功能。",
+            "大货生产 — 确认规格上线，并做过程检查。",
+            "品控与包装 — 终检、品牌物料与出口包装。",
+            "出运与文件 — 纸箱、标签与目的地所需商业文件。"
           ]
         }
       ]
     },
     "how-it-works": {
-      "title": "定制流程 | 从样品到出运",
-      "description": "AtelierBag OEM 如何把手袋从询盘做到大货出运。",
-      "content": "定制走一套书面步骤：评审、打样，确认后再开大货。品控与包装完成后，文件再交给货代。",
+      "title": "从简报到出运的定制流程",
+      "description": "从你的文件到确认样品、再到可出口大货，路径清楚——品牌、产品和运营对齐。",
+      "content": "从你的文件到确认样品、再到可出口大货，路径清楚——品牌、产品和运营对齐。",
       "sections": [
         {
-          "title": "六步",
-          "body": "打样与大货窗口看过结构后再确认。",
+          "title": "定制项目怎么跑",
+          "body": "打样时间看复杂度；大货在样品确认且材料锁定后开始。",
           "items": [
-            "评审款式 — 设计、尺寸与材料。",
-            "确认纸样与材料 — 真皮或替代面、里料、五金。",
-            "样品 / 初样 — 容量、肩带落差、后整。",
-            "大货生产 — 样品与材料锁定之后。",
-            "品控与包装 — 线中与终检，再按品牌包装。",
-            "出运与文件 — 出口纸箱与单据。"
+            "接收并评审工艺包 — 核对图纸、物料清单与结构说明，看可行性与成本点。",
+            "确认纸样与材料 — 调整纸样；材料与五金经你确认后锁定。",
+            "样品 / 初样 — 你收到可穿戴或销售样品，确认版型、外观与功能。",
+            "大货生产 — 确认规格上线，并做过程检查。",
+            "品控与包装 — 终检、品牌物料与出口包装。",
+            "出运与文件 — 纸箱、标签与目的地所需商业文件。"
           ]
         }
       ]
     },
+    "case-studies": {
+      "title": "案例",
+      "description": "精选项目，看我们如何从简报到大货——材料、开发选择与包装结果。",
+      "content": "精选项目，看我们如何从简报到大货——材料、开发选择与包装结果。故事经客户授权后发布。"
+    },
     "warranty-policy": {
-      "title": "工厂参观 | AtelierBag OEM",
-      "description": "预约狮岭手袋车间的线上参观。",
-      "content": "线上参观是一次预约通话或一组照片，覆盖裁断、车缝、后整与包装。可写信至 sales@atelierbag-oem.com，或使用报价表，以便我们准备对应产线。\n\n狮岭实地参观仅接受预约。"
+      "title": "虚拟工厂参观",
+      "description": "参观裁断、车缝、后整与包装——实地或预约线上导览。",
+      "content": "参观裁断、车缝、后整与包装——实地或预约线上导览。\n\n可写信至 sales@atelierbag-oem.com，或使用「获取工厂报价」，以便我们准备对应产线。"
     },
     "faq": {
-      "title": "常见问题 | AtelierBag OEM",
-      "description": "关于起订、打样、材料与报价的常见问题。",
-      "content": "给正在看手袋 OEM 的采购方的短答。",
+      "title": "常见问题",
+      "description": "起订、打样、材料、Logo 工艺与出运目的地。",
+      "content": "给正在看手袋 OEM 的品牌团队的短答。",
       "sections": [
         {
-          "title": "下单",
-          "body": "报价按项目出具，没有公开价目表。",
+          "title": "第一次报价",
+          "body": "工厂报价从眼前的款式开始。",
           "items": [
-            "起订量是多少？ — 开单量取决于结构与五金，看过款式后再确认。",
-            "如何获取工厂报价？ — 点击「获取工厂报价」，或写信至 sales@atelierbag-oem.com。",
-            "有没有公开价目表？ — 报价按项目出具。多款可以放在同一份询盘里。"
+            "第一次报价需要哪些信息？ — 款式照片或工艺包、目标材料、大约起订量与目的地市场。",
+            "做不做 OEM 和 ODM？ — 做。可按你的设计生产，也可与打样团队一起开发。",
+            "能不能做素皮材料？ — 能。PU 与其他替代材料可与真皮项目并行。",
+            "打样和大货交期怎么算？ — 打样时间看复杂度；大货在样品确认且材料锁定后开始。"
           ]
         },
         {
-          "title": "打样与材料",
-          "body": "样品锁定款式后再开大货。",
+          "title": "起订、条款、Logo、运输",
+          "body": "开单量与商务条款按项目书面确认。",
           "items": [
-            "打样怎么开始？ — 一段简报即可。若已有款式参考，可一并附上。",
-            "真皮还是素革？ — 两者都可以，也可做纺织面。动物源与限用物质规则可在打样前确认。",
-            "打样要多久？ — 纸样与材料评审后再确认窗口。"
+            "起订量是多少？ — 先从可行的试单开始，产线就绪后再放量。",
+            "付款条款怎么谈？ — 商务条款写在每份书面报价上。",
+            "能做哪些 Logo 工艺？ — Logo 工艺在打样阶段按款、对照面料确认。",
+            "运到哪里？ — 纸箱、标签与商业文件按你的目的地准备。"
           ]
         }
       ]
@@ -163,147 +170,183 @@
     },
     "shipping": {
       "title": "运输说明",
-      "description": "AtelierBag OEM 如何包装并交接出口货物。",
-      "content": "我们按订单写明的方式包装成品，并准备货代列出的文件。运费由你或指定货代安排，除非报价另有约定。\n\n箱唛、重量与照片记录在包装方式锁定后再确认。"
+      "description": "纸箱、标签与目的地所需商业文件。",
+      "content": "纸箱、标签与目的地所需商业文件。\n\n运费由你或指定货代安排，除非报价另有约定。"
     },
     "tote-bags": {
-      "title": "托特包",
-      "description": "真皮、素革或纺织面的 OEM 购物袋与结构托特。",
-      "content": "托特是品牌需要开口清晰、隔空可认时的主力款。我们做购物袋与结构托特：硬底或软底、敞口或拉链、能装下一天行程的内袋。\n\n准备打样时，欢迎获取工厂报价。",
-      "specs": [
-        { "parameter": "材料", "value": "真皮 / 素革 / 纺织 — 按物料清单" },
-        { "parameter": "尺寸（长×宽×高）", "value": "按款确认；常见购物袋与结构托特范围" },
-        { "parameter": "颜色", "value": "季节色或定制 — 确认皮料或涂层批次" },
-        { "parameter": "五金", "value": "拉链、包脚、圆环 — 按指定表面处理" },
-        { "parameter": "Logo 工艺", "value": "压印、烫金、金属牌或标" },
-        { "parameter": "起订量", "value": "评审结构后确认" },
-        { "parameter": "打样周期", "value": "纸样与材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认后确认" },
-        { "parameter": "包装", "value": "防尘袋 / 箱唛按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+      "title": "托特包 — OEM 与 ODM",
+      "description": "日常与零售系列的敞口与结构托特——真皮或替代包身，配品牌提手与五金。",
+      "content": "浏览品牌项目用的托特款。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\n日常与零售系列的敞口与结构托特——真皮或替代包身，配品牌提手与五金。",
+      "bullets": [
+        "真皮与替代材料的日常与时装托特",
+        "敞口或结构包身",
+        "品牌提手与五金",
+        "Logo 工艺与包装按项目确认"
       ],
-      "ctaTitle": "询托特报价",
-      "ctaBody": "准备打样托特？欢迎获取工厂报价。",
+      "specs": [
+        { "parameter": "材料", "value": "真皮 / 素皮 / 功能性纺织" },
+        { "parameter": "尺寸（长×宽×高）", "value": "按款确认" },
+        { "parameter": "颜色", "value": "季节色或定制" },
+        { "parameter": "五金", "value": "品牌提手与五金" },
+        { "parameter": "Logo 工艺", "value": "打样阶段按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
+      ],
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的托特货号询工厂价。",
       "related": [
         { "label": "肩包", "href": "/products/shoulder-bags" },
         { "label": "斜挎包", "href": "/products/crossbody-bags" },
-        { "label": "素革 / 替代材料", "href": "/products/vegan-materials" }
+        { "label": "素皮 / 替代材料", "href": "/products/vegan-materials" }
       ]
     },
     "shoulder-bags": {
-      "title": "肩包",
-      "description": "翻盖、流浪包与日常肩包的品牌 OEM。",
-      "content": "肩包介于托特与斜挎之间：够装一天的东西，带子能挂在肩上。我们做翻盖、拉链顶与流浪包，服务日常品牌线。\n\n准备打样时，欢迎获取工厂报价。",
+      "title": "肩包 — OEM 与 ODM",
+      "description": "时装与生活方式线的软身与结构肩包，肩带与开合可选。",
+      "content": "浏览品牌项目用的肩包款。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\n时装与生活方式线的软身与结构肩包，肩带与开合可选。",
+      "bullets": [
+        "零售线的结构与软身肩包",
+        "肩带与开合可选",
+        "时装与生活方式尺寸",
+        "Logo 工艺与包装按项目确认"
+      ],
       "specs": [
-        { "parameter": "材料", "value": "真皮 / 素革 / 纺织 — 按物料清单" },
+        { "parameter": "材料", "value": "真皮 / 素皮 / 功能性纺织" },
         { "parameter": "尺寸（长×宽×高）", "value": "按款确认" },
         { "parameter": "颜色", "value": "季节色或定制" },
-        { "parameter": "五金", "value": "转锁、磁扣、拉链 — 按指定表面处理" },
-        { "parameter": "Logo 工艺", "value": "压印、烫金、金属牌或标" },
-        { "parameter": "起订量", "value": "评审结构后确认" },
-        { "parameter": "打样周期", "value": "纸样与材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认后确认" },
-        { "parameter": "包装", "value": "防尘袋 / 箱唛按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+        { "parameter": "五金", "value": "肩带与开合五金" },
+        { "parameter": "Logo 工艺", "value": "打样阶段按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
       ],
-      "ctaTitle": "询肩包报价",
-      "ctaBody": "准备打样肩包？欢迎获取工厂报价。",
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的肩包货号询工厂价。",
       "related": [
         { "label": "托特包", "href": "/products/tote-bags" },
         { "label": "斜挎包", "href": "/products/crossbody-bags" },
-        { "label": "钱包与小皮具", "href": "/products/wallets-slg" }
+        { "label": "钱包与皮小件", "href": "/products/wallets-slg" }
       ]
     },
     "crossbody-bags": {
-      "title": "斜挎包",
-      "description": "免持使用的紧凑斜挎与胸包。",
-      "content": "斜挎让双手空出来，同时保住款型。我们做紧凑日用包与胸包，开合可靠、身形薄，贴身干净。\n\n准备打样时，欢迎获取工厂报价。",
-      "specs": [
-        { "parameter": "材料", "value": "真皮 / 素革 / 纺织 — 按物料清单" },
-        { "parameter": "尺寸（长×宽×高）", "value": "按款确认；常见紧凑尺寸" },
-        { "parameter": "颜色", "value": "季节色或定制" },
-        { "parameter": "五金", "value": "拉链、扣具、磁扣 — 按指定表面处理" },
-        { "parameter": "Logo 工艺", "value": "压印、烫金、金属牌或标" },
-        { "parameter": "起订量", "value": "评审结构后确认" },
-        { "parameter": "打样周期", "value": "纸样与材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认后确认" },
-        { "parameter": "包装", "value": "防尘袋 / 箱唛按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+      "title": "斜挎包 — OEM 与 ODM",
+      "description": "免持斜挎：可调肩带、可靠开合、紧凑收纳。",
+      "content": "浏览品牌项目用的斜挎款。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\n免持斜挎：可调肩带、可靠开合、紧凑收纳。",
+      "bullets": [
+        "五金与肩带可选的紧凑斜挎",
+        "可调肩带",
+        "可靠开合",
+        "紧凑收纳"
       ],
-      "ctaTitle": "询斜挎报价",
-      "ctaBody": "准备打样斜挎？欢迎获取工厂报价。",
+      "specs": [
+        { "parameter": "材料", "value": "真皮 / 素皮 / 功能性纺织" },
+        { "parameter": "尺寸（长×宽×高）", "value": "按款确认" },
+        { "parameter": "颜色", "value": "季节色或定制" },
+        { "parameter": "五金", "value": "五金与肩带选项" },
+        { "parameter": "Logo 工艺", "value": "打样阶段按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
+      ],
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的斜挎货号询工厂价。",
       "related": [
         { "label": "肩包", "href": "/products/shoulder-bags" },
         { "label": "背包", "href": "/products/backpacks" },
-        { "label": "钱包与小皮具", "href": "/products/wallets-slg" }
+        { "label": "钱包与皮小件", "href": "/products/wallets-slg" }
       ]
     },
     "backpacks": {
-      "title": "背包",
-      "description": "需要时可加电脑隔层的日用包与城市背包。",
-      "content": "城市日用背包既要肩带舒服，也要片料顺序经得起用。我们做减压肩带、整理袋，以及项目需要时的电脑隔层。\n\n准备打样时，欢迎获取工厂报价。",
-      "specs": [
-        { "parameter": "材料", "value": "真皮 / 素革 / 纺织 — 按物料清单" },
-        { "parameter": "尺寸（长×宽×高）", "value": "按款确认；常见日用包范围" },
-        { "parameter": "颜色", "value": "季节色或定制" },
-        { "parameter": "五金", "value": "拉链、调节扣、包脚 — 按指定表面处理" },
-        { "parameter": "Logo 工艺", "value": "压印、烫金、金属牌或标" },
-        { "parameter": "起订量", "value": "评审结构后确认" },
-        { "parameter": "打样周期", "value": "纸样与材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认后确认" },
-        { "parameter": "包装", "value": "胶袋 / 箱唛按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+      "title": "背包 — OEM 与 ODM",
+      "description": "轻生活方式与出行背包：耐用包身、全里、可做 Logo 的片位。",
+      "content": "浏览品牌项目用的背包款。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\n轻生活方式与出行背包：耐用包身、全里、可做 Logo 的片位。",
+      "bullets": [
+        "带品牌后整的生活方式与轻出行背包",
+        "耐用包身",
+        "全里",
+        "可做 Logo 的片位"
       ],
-      "ctaTitle": "询背包报价",
-      "ctaBody": "准备打样背包？欢迎获取工厂报价。",
+      "specs": [
+        { "parameter": "材料", "value": "真皮 / 素皮 / 功能性纺织" },
+        { "parameter": "尺寸（长×宽×高）", "value": "按款确认" },
+        { "parameter": "颜色", "value": "季节色或定制" },
+        { "parameter": "五金", "value": "品牌后整与五金" },
+        { "parameter": "Logo 工艺", "value": "可做 Logo 的片位，按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
+      ],
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的背包货号询工厂价。",
       "related": [
         { "label": "托特包", "href": "/products/tote-bags" },
         { "label": "斜挎包", "href": "/products/crossbody-bags" },
-        { "label": "素革 / 替代材料", "href": "/products/vegan-materials" }
+        { "label": "素皮 / 替代材料", "href": "/products/vegan-materials" }
       ]
     },
     "wallets-slg": {
-      "title": "钱包与小皮具",
-      "description": "配合手袋线的钱包、卡包与收纳袋。",
-      "content": "小皮具近看最能见沿油与削薄。我们做对折钱包、卡包与收纳袋，可与手袋线共用五金表面。\n\n准备打样时，欢迎获取工厂报价。",
-      "specs": [
-        { "parameter": "材料", "value": "真皮 / 素革 — 按物料清单" },
-        { "parameter": "尺寸（长×宽×高）", "value": "按款确认；常见薄卡包与对折范围" },
-        { "parameter": "颜色", "value": "配套手袋线或独立色" },
-        { "parameter": "五金", "value": "四合扣、拉链、标牌 — 按指定表面处理" },
-        { "parameter": "Logo 工艺", "value": "压印、烫金或金属牌" },
-        { "parameter": "起订量", "value": "评审结构后确认" },
-        { "parameter": "打样周期", "value": "纸样与材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认后确认" },
-        { "parameter": "包装", "value": "盒或袋按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+      "title": "钱包与皮小件 — OEM 与 ODM",
+      "description": "与手袋线配套的钱包、卡包与皮小件。",
+      "content": "浏览品牌项目用的钱包与皮小件。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\n与手袋线配套的钱包、卡包与皮小件。",
+      "bullets": [
+        "卡包、钱包与配套皮小件",
+        "对齐手袋线",
+        "真皮或替代面",
+        "Logo 工艺与包装按项目确认"
       ],
-      "ctaTitle": "询小皮具报价",
-      "ctaBody": "准备打样钱包或小皮具？欢迎获取工厂报价。",
+      "specs": [
+        { "parameter": "材料", "value": "真皮 / 素皮" },
+        { "parameter": "尺寸（长×宽×高）", "value": "按款确认" },
+        { "parameter": "颜色", "value": "配套手袋线或独立色" },
+        { "parameter": "五金", "value": "按款确认" },
+        { "parameter": "Logo 工艺", "value": "打样阶段按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
+      ],
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的皮小件货号询工厂价。",
       "related": [
         { "label": "肩包", "href": "/products/shoulder-bags" },
         { "label": "斜挎包", "href": "/products/crossbody-bags" },
-        { "label": "素革 / 替代材料", "href": "/products/vegan-materials" }
+        { "label": "素皮 / 替代材料", "href": "/products/vegan-materials" }
       ]
     },
     "vegan-materials": {
-      "title": "素革 / 替代材料",
-      "description": "不含动物源面料的 PU、再生与纺织手袋方案。",
-      "content": "替代材料方案保住同一套款型，面料不含动物源。我们做 PU、再生与纺织结构，涂层与底布在打样前确认。\n\n准备启动素革或纺织方案时，欢迎获取工厂报价。",
-      "specs": [
-        { "parameter": "材料", "value": "PU / 再生 / 纺织 — 确认底布与弯折" },
-        { "parameter": "尺寸（长×宽×高）", "value": "适用于托特、肩包、斜挎、背包" },
-        { "parameter": "颜色", "value": "涂层批次 — 大货前确认" },
-        { "parameter": "五金", "value": "按指定；表面对照面料" },
-        { "parameter": "Logo 工艺", "value": "烫金、金属牌或印刷标 — 需在面料上试" },
-        { "parameter": "起订量", "value": "按结构与涂层厂窗口确认" },
-        { "parameter": "打样周期", "value": "材料锁定后确认" },
-        { "parameter": "大货周期", "value": "样品确认且材料窗口确定后确认" },
-        { "parameter": "包装", "value": "按指定" },
-        { "parameter": "运输方式", "value": "广州海运或空运 — 货代按订单" }
+      "title": "素皮 / 替代材料 — OEM 与 ODM",
+      "description": "PU 与功能性材料的无真皮结构，沿用同一套 OEM 纪律。",
+      "content": "浏览品牌项目用的素皮与替代材料款。材料、五金、Logo 工艺与包装可按市场调整，再对短名单货号询工厂价。\n\nPU 与功能性材料的无真皮结构，沿用同一套 OEM 纪律。",
+      "bullets": [
+        "不含真皮的 PU、再生与功能性材料",
+        "与真皮项目同一套 OEM 流程",
+        "手感、颜色与合规按简报采购",
+        "覆盖托特、肩包、斜挎与背包"
       ],
-      "ctaTitle": "咨询素革或纺织方案",
-      "ctaBody": "准备启动素革或纺织方案？欢迎获取工厂报价。",
+      "specs": [
+        { "parameter": "材料", "value": "PU / 再生 / 功能性纺织" },
+        { "parameter": "尺寸（长×宽×高）", "value": "适用于托特、肩包、斜挎、背包" },
+        { "parameter": "颜色", "value": "按涂层批次确认" },
+        { "parameter": "五金", "value": "对照面料确认" },
+        { "parameter": "Logo 工艺", "value": "打样阶段按款确认" },
+        { "parameter": "起订量", "value": "可行试单，再放量" },
+        { "parameter": "打样周期", "value": "看复杂度" },
+        { "parameter": "大货周期", "value": "样品确认且材料锁定之后" },
+        { "parameter": "包装", "value": "品牌物料与出口包装" },
+        { "parameter": "运输方式", "value": "按目的地准备" }
+      ],
+      "ctaTitle": "询价",
+      "ctaBody": "对列入短名单的素皮或纺织货号询工厂价。",
       "related": [
         { "label": "托特包", "href": "/products/tote-bags" },
         { "label": "肩包", "href": "/products/shoulder-bags" },
@@ -312,34 +355,34 @@
     }
   },
   "packageBenefits": [
-    { "title": "先看规格", "description": "材料、尺寸、五金与包装放在一张表。" },
-    { "title": "先打样再大货", "description": "样品签字后再开线。" },
-    { "title": "同一项目负责人", "description": "报价与打样走同一条线。" },
-    { "title": "出口包装", "description": "箱唛与文件按订单点名。" }
+    { "title": "全包", "description": "开发、材料、生产、包装与出口文件。" },
+    { "title": "先打样再大货", "description": "样品确认后再开线。" },
+    { "title": "起订灵活", "description": "先试单，再放量。" },
+    { "title": "出口包装", "description": "纸箱、标签与目的地文件。" }
   ],
   "collectionPackages": [
-    { "title": "托特包", "description": "购物袋与结构托特。立即询价。", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
-    { "title": "肩包", "description": "翻盖与日常肩包。立即询价。", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
-    { "title": "斜挎包", "description": "紧凑日用包与胸包。立即询价。", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
-    { "title": "背包", "description": "需要时可加电脑隔层。立即询价。", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" },
-    { "title": "钱包与小皮具", "description": "钱包、卡包、收纳袋。立即询价。", "image": "/images/product-wallet.jpg", "href": "/products/wallets-slg" },
-    { "title": "素革 / 替代材料", "description": "PU、再生与纺织方案。立即询价。", "image": "/images/product-vegan.jpg", "href": "/products/vegan-materials" }
+    { "title": "托特包", "description": "真皮与替代材料的日常与时装托特。", "image": "/images/product-tote.jpg", "href": "/products/tote-bags" },
+    { "title": "肩包", "description": "零售线的结构与软身肩包。", "image": "/images/product-shoulder.jpg", "href": "/products/shoulder-bags" },
+    { "title": "斜挎包", "description": "五金与肩带可选的紧凑斜挎。", "image": "/images/product-crossbody.jpg", "href": "/products/crossbody-bags" },
+    { "title": "背包", "description": "带品牌后整的生活方式与轻出行背包。", "image": "/images/product-backpack.jpg", "href": "/products/backpacks" },
+    { "title": "钱包与皮小件", "description": "卡包、钱包与配套皮小件。", "image": "/images/product-wallet.jpg", "href": "/products/wallets-slg" },
+    { "title": "素皮 / 替代材料", "description": "不含真皮的 PU、再生与功能性材料。", "image": "/images/product-vegan.jpg", "href": "/products/vegan-materials" }
   ],
   "workflow": [
-    { "step": "01", "title": "地点", "description": "中国广州花都狮岭" },
+    { "step": "01", "title": "基地", "description": "中国广州" },
     { "step": "02", "title": "成立", "description": "2008" },
     { "step": "03", "title": "法定名称", "description": "AtelierBag Manufacturing Co., Ltd." },
-    { "step": "04", "title": "业务", "description": "手袋全包 OEM / ODM" },
-    { "step": "05", "title": "材料", "description": "真皮、素革、纺织" }
+    { "step": "04", "title": "定位", "description": "手袋全包 OEM 与 ODM" },
+    { "step": "05", "title": "材料", "description": "真皮、素皮、功能性面料" }
   ],
   "aboutAudiences": [
-    { "title": "同一条对话", "description": "材料、纸样、生产与包装由同一负责人回答。" },
-    { "title": "样品意见可追溯", "description": "已确认备注留档，方便补单。" },
-    { "title": "开单量说清楚", "description": "起订量看过结构后再确认。" }
+    { "title": "全包服务", "description": "开发、材料、生产、包装与出口文件在同一屋檐下。" },
+    { "title": "起订灵活", "description": "先从可行的试单开始，产线就绪后再放量。" },
+    { "title": "可归档品控", "description": "线中与终检按明确验收标准，再出货。" }
   ],
   "collectionBenefits": [
-    { "title": "结构清楚", "description": "材料、尺寸、五金与包装放在一张表。" },
-    { "title": "工厂报价", "description": "一段简报即可打开打样与定价。" },
-    { "title": "定制款式", "description": "架上没有的款，可从参考起步。" }
+    { "title": "查看款式", "description": "打开品类，看材料、五金与包装。" },
+    { "title": "立即询价", "description": "对短名单货号询工厂价。" },
+    { "title": "定制流程", "description": "从你的文件到可出口大货，路径清楚。" }
   ]
 }

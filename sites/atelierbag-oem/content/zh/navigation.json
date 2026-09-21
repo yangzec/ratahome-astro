@@ -8,7 +8,7 @@
     {
       "id": "about",
       "label": "关于我们",
-      "href": "/about-us"
+      "href": "/about"
     },
     {
       "id": "factory",
@@ -18,24 +18,23 @@
         {
           "title": "车间",
           "links": [
-            { "label": "工厂概览", "href": "/factory", "description": "狮岭车间与 OEM 项目怎么跑" },
-            { "label": "材料采购", "href": "/factory/materials-sourcing", "description": "真皮、素革与纺织选项" },
-            { "label": "产品开发", "href": "/factory/product-development", "description": "纸样、样品与款式开发" }
+            { "label": "材料采购", "href": "/factory/materials-sourcing", "description": "真皮、素皮与纺织" },
+            { "label": "产品开发", "href": "/factory/product-development", "description": "从工艺包到样品" },
+            { "label": "OEM / ODM 生产", "href": "/factory/oem-odm", "description": "按你的设计，或与打样团队一起开发" }
           ]
         },
         {
           "title": "生产",
           "links": [
-            { "label": "OEM 与 ODM 生产", "href": "/factory/oem-odm", "description": "裁断、车缝、后整在同一车间" },
-            { "label": "过程控制与品控", "href": "/factory/process-control", "description": "线中检查与出货前复核" },
-            { "label": "包装与品牌", "href": "/factory/packaging-branding", "description": "Logo、包装与品牌呈现" },
+            { "label": "过程控制与质检", "href": "/factory/process-control", "description": "出货前线中与终检" },
+            { "label": "包装与品牌", "href": "/factory/packaging-branding", "description": "Logo、品牌物料与包装" },
             { "label": "全球物流", "href": "/factory/logistics", "description": "出口包装与出货文件" }
           ]
         }
       ],
       "feature": {
-        "title": "线上参观工厂",
-        "description": "从第一只样品到大货出运",
+        "title": "虚拟工厂参观",
+        "description": "看我们怎么做——从裁断到包装",
         "href": "/factory",
         "image": "/images/factory-sewing.jpg"
       }
@@ -48,17 +47,17 @@
         {
           "title": "主力款",
           "links": [
-            { "label": "托特包", "href": "/products/tote-bags", "description": "购物袋与结构托特" },
-            { "label": "肩包", "href": "/products/shoulder-bags", "description": "翻盖、流浪包与日常肩包" },
-            { "label": "斜挎包", "href": "/products/crossbody-bags", "description": "紧凑日用包与胸包" }
+            { "label": "托特包", "href": "/products/tote-bags", "description": "真皮与替代材料的日常与时装托特" },
+            { "label": "肩包", "href": "/products/shoulder-bags", "description": "零售线的结构与软身肩包" },
+            { "label": "斜挎包", "href": "/products/crossbody-bags", "description": "五金与肩带可选的紧凑斜挎" }
           ]
         },
         {
           "title": "更多款型",
           "links": [
-            { "label": "背包", "href": "/products/backpacks", "description": "日用包与城市背包" },
-            { "label": "钱包与小皮具", "href": "/products/wallets-slg", "description": "钱包、卡包、收纳袋" },
-            { "label": "素革 / 替代材料", "href": "/products/vegan-materials", "description": "PU、再生与纺织方案" }
+            { "label": "背包", "href": "/products/backpacks", "description": "带品牌后整的生活方式与轻出行背包" },
+            { "label": "钱包与皮小件", "href": "/products/wallets-slg", "description": "卡包、钱包与配套皮小件" },
+            { "label": "素皮 / 替代材料", "href": "/products/vegan-materials", "description": "不含真皮的 PU、再生与功能性材料" }
           ]
         }
       ],
@@ -75,6 +74,11 @@
       "href": "/custom-process"
     },
     {
+      "id": "case-studies",
+      "label": "案例",
+      "href": "/case-studies"
+    },
+    {
       "id": "faq",
       "label": "常见问题",
       "href": "/faq"
@@ -82,7 +86,7 @@
     {
       "id": "contact",
       "label": "联系我们",
-      "href": "/contact-us"
+      "href": "/contact"
     }
   ]
 }

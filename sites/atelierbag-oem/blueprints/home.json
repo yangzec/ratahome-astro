@@ -2,11 +2,14 @@
   "sections": [
     "hero-fullbleed",
     "assurance-bar",
+    "audience-cards",
     "rooms-grid",
     "capabilities-grid",
     "process-timeline",
     "projects-showcase",
     "warranty-cases",
+    "testimonials",
+    "ecosystem",
     "contact-cta"
   ]
 }
