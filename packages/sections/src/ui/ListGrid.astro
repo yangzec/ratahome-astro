@@ -17,9 +17,16 @@ const { min = 240, class: className = '', count } = Astro.props;
 </div>
 
 <style>
+  /* flex + grow：按 length 换行，末行均分，不留空轨道。 */
   .list-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--list-min, 240px)), 1fr));
+  }
+
+  .list-grid > :global(*) {
+    box-sizing: border-box;
+    flex: 1 1 var(--list-min, 240px);
+    min-width: min(100%, var(--list-min, 240px));
   }
 </style>
