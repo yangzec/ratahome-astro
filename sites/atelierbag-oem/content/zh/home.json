@@ -10,7 +10,7 @@
   },
   "assurances": [
     { "icon": "/icons/box-seam.svg", "title": "全包服务", "description": "开发、生产、品控与包装同一条线" },
-    { "icon": "/icons/clock.svg", "title": "起订灵活", "description": "开单量按结构当面谈，不写死一个数" },
+    { "icon": "/icons/clock.svg", "title": "起订灵活", "description": "开单量按结构确认，不写死一个数" },
     { "icon": "/icons/shield-check.svg", "title": "可归档品控", "description": "线中检查与出货前复核，方便你存档" },
     { "icon": "/icons/search.svg", "title": "2008 年起在狮岭", "description": "广州花都手袋 OEM" }
   ],
@@ -22,29 +22,29 @@
   ],
   "audiences": {
     "title": "我们承接的项目",
-    "description": "需要工厂负责人、而不只是贸易窗口的品牌与采购办公室。",
+    "description": "需要工厂对话、而不只是贸易窗口的品牌与采购办公室。",
     "items": [
-      { "title": "品牌 OEM", "description": "你的工艺包，我们的车间。", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
-      { "title": "ODM 开发", "description": "从草图或参考样到可卖的款。", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
+      { "title": "品牌 OEM", "description": "你确认的设计，由我们的车间落地。", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
+      { "title": "ODM 开发", "description": "从草图或参考做到可卖的款。", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
     ]
   },
   "capabilities": {
     "title": "品牌选择 AtelierBag OEM 的原因",
-    "description": "只写我们真正控得住的事，不当口号墙。",
+    "description": "从第一只样品到出运，车间真正管得住的事。",
     "items": [
       { "title": "生产自己控", "description": "裁断、车缝、后整在同一车间对话里完成。", "image": "/images/factory-sewing.jpg" },
-      { "title": "从工艺包到样品", "description": "先核尺寸、材料与五金，再裁第一只样。", "image": "/images/factory-pattern.jpg" },
+      { "title": "先打样再大货", "description": "先核尺寸、材料与五金，再裁第一只样。", "image": "/images/factory-pattern.jpg" },
       { "title": "真皮、素革、纺织", "description": "一条货号可以混用真皮与替代材料。", "image": "/images/factory-leather.jpg" },
-      { "title": "交期说清楚", "description": "打样与大货窗口看结构后再写，不在首页猜天数。", "image": "/images/factory-qc.jpg" }
+      { "title": "交期说清楚", "description": "打样与大货窗口看结构后再写。", "image": "/images/factory-qc.jpg" }
     ]
   },
   "process": {
-    "title": "从工艺包到出运",
-    "description": "OEM 与 ODM 项目常用的六步。天数取决于结构、材料与五金，评审后再由项目负责人确认。",
+    "title": "从第一只样品到出运",
+    "description": "OEM 与 ODM 项目常用的六步。打样与大货窗口看过结构后再确认。",
     "image": "/images/process-workshop.jpg",
     "imageAlt": "样品确认后用于组装手袋裁片的工业缝纫机",
     "steps": [
-      { "step": "01", "title": "接收并评审工艺包", "description": "读尺寸、物料清单与车缝说明，标出缺口。" },
+      { "step": "01", "title": "评审款式", "description": "读设计、尺寸与材料，标出仍需决定的事项。" },
       { "step": "02", "title": "确认纸样与材料", "description": "确认纸样、真皮或替代面、里料与五金。" },
       { "step": "03", "title": "样品 / 初样", "description": "试做一只，看容量、肩带落差与后整。" },
       { "step": "04", "title": "大货生产", "description": "样品签字且材料锁定后再开线。" },
@@ -58,11 +58,11 @@
   ],
   "warranty": {
     "eyebrow": "工厂",
-    "title": "可以当面讲清楚的车间",
-    "description": "AtelierBag OEM 在花都狮岭做手袋项目。若不只是看款卡，请先读工厂页，或预约线上参观。",
-    "commitment": "请提供工艺包、草图或参考样，我们会回复可行性说明与报价路径。",
+    "title": "可以预约参观的车间",
+    "description": "AtelierBag OEM 在花都狮岭做手袋项目。工厂页覆盖材料、开发与生产。也可预约线上参观。",
+    "commitment": "欢迎获取工厂报价，我们会回复可行性与下一步。",
     "cases": [
-      { "question": "材料", "title": "写得进物料清单", "description": "真皮、素革与纺织按 BOM 点名，不是一句「PU 混合」。" },
+      { "question": "材料", "title": "写得进物料清单", "description": "真皮、素革与纺织按 BOM 点名。" },
       { "question": "开发", "title": "先纸样再大货", "description": "样品意见留在同一张尺寸表上。" },
       { "question": "出货", "title": "包装对得上品牌", "description": "Logo、胶袋与箱唛按订单写明。" }
     ]
@@ -91,7 +91,7 @@
     "title": "手袋全包 OEM",
     "description": "AtelierBag OEM 帮助品牌在广州狮岭从概念走到稳定大货。",
     "items": [
-      { "step": "01", "title": "简报", "description": "工艺包、草图或参考样。" },
+      { "step": "01", "title": "询盘", "description": "一段简报即可开始对话。" },
       { "step": "02", "title": "打样", "description": "纸样、材料与样品。" },
       { "step": "03", "title": "大货", "description": "书面确认后再开线。" },
       { "step": "04", "title": "出运", "description": "品控、包装与出口文件。" }
@@ -99,13 +99,13 @@
   },
   "cta": {
     "title": "开始下一季手袋线",
-    "description": "请提供工艺包、草图或参考样。我们会回复可行性说明与报价路径。WhatsApp：+8613800208800",
+    "description": "工厂报价从一段简报开始。我们评审款式后回复打样安排。WhatsApp：+8613800208800",
     "formTitle": "获取工厂报价",
-    "formDescription": "姓名、邮箱与一段简报即可开始。如有 PDF 或照片请附上。",
+    "formDescription": "一段留言即可开始。",
     "steps": [
-      "说明款型、材料与目标数量。",
-      "我们评审可行性，并标出缺项。",
-      "你将收到报价路径与打样下一步。"
+      "专人接收询盘。",
+      "评审款型、材料与结构。",
+      "回复打样安排与工厂报价。"
     ]
   },
   "footerFeatures": [

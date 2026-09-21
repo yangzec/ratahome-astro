@@ -10,7 +10,7 @@
   },
   "assurances": [
     { "icon": "/icons/box-seam.svg", "title": "Full Package Service", "description": "Development, production, QC, and packing in one thread" },
-    { "icon": "/icons/clock.svg", "title": "Flexible MOQ", "description": "Opening quantities discussed per construction" },
+    { "icon": "/icons/clock.svg", "title": "Flexible MOQ", "description": "Opening quantities confirmed per construction" },
     { "icon": "/icons/shield-check.svg", "title": "Documented QC", "description": "In-line checks and a pre-shipment review you can file" },
     { "icon": "/icons/search.svg", "title": "Since 2008 in Shiling", "description": "Handbag OEM from Huadu, Guangzhou" }
   ],
@@ -22,29 +22,29 @@
   ],
   "audiences": {
     "title": "Programs we support",
-    "description": "Brand and buying-office programs that need a factory owner, not a trading desk only.",
+    "description": "Brand and buying-office programs that want a factory conversation, not only a trading desk.",
     "items": [
-      { "title": "Brand OEM", "description": "Your tech pack, our workshop.", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
-      { "title": "ODM development", "description": "Sketch or reference sample to a sellable style.", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
+      { "title": "Brand OEM", "description": "Your approved design, built in our workshop.", "href": "/contact-us?intent=quote", "image": "/images/product-tote.jpg" },
+      { "title": "ODM development", "description": "From a sketch or reference to a sellable style.", "href": "/factory/product-development", "image": "/images/factory-pattern.jpg" }
     ]
   },
   "capabilities": {
     "title": "Why brands work with AtelierBag OEM",
-    "description": "A short list of what we actually control—not a slogan wall.",
+    "description": "What the workshop owns from first sample to shipment.",
     "items": [
       { "title": "Direct manufacturing control", "description": "Cutting, stitching, and finishing stay in the same workshop conversation.", "image": "/images/factory-sewing.jpg" },
-      { "title": "Tech pack to prototype", "description": "We review measurements, materials, and hardware before a sample is cut.", "image": "/images/factory-pattern.jpg" },
-      { "title": "Leather, vegan, textile", "description": "Sourcing options so a line can mix genuine leather with alternative materials.", "image": "/images/factory-leather.jpg" },
-      { "title": "Clear timeline talk", "description": "Sample and bulk windows are written after we see the construction—not guessed on the homepage.", "image": "/images/factory-qc.jpg" }
+      { "title": "Sample before bulk", "description": "Measurements, materials, and hardware are reviewed before a prototype is cut.", "image": "/images/factory-pattern.jpg" },
+      { "title": "Leather, vegan, textile", "description": "A line can mix genuine leather with alternative materials on one BOM.", "image": "/images/factory-leather.jpg" },
+      { "title": "Clear timeline talk", "description": "Sample and bulk windows are written after we see the construction.", "image": "/images/factory-qc.jpg" }
     ]
   },
   "process": {
-    "title": "From tech pack to shipment",
-    "description": "Six steps we use on OEM and ODM programs. Days depend on construction, materials, and hardware—confirm with your project owner after review.",
+    "title": "From first sample to shipment",
+    "description": "Six steps we use on OEM and ODM programs. Sample and bulk windows are confirmed after we review the construction.",
     "image": "/images/process-workshop.jpg",
     "imageAlt": "Industrial sewing machine used to assemble handbag panels after the sample is signed",
     "steps": [
-      { "step": "01", "title": "Receive & review tech pack", "description": "We read measurements, BOM, and stitch notes, then flag gaps." },
+      { "step": "01", "title": "Review the style", "description": "We read the design, measurements, and materials, then flag what still needs a decision." },
       { "step": "02", "title": "Pattern & material confirmation", "description": "Confirm pattern, leather or alternative, lining, and hardware." },
       { "step": "03", "title": "Prototype / sample", "description": "Cut a sample for fit, handle drop, and finishing." },
       { "step": "04", "title": "Bulk production", "description": "Open the line after sample sign-off and material lock." },
@@ -58,11 +58,11 @@
   ],
   "warranty": {
     "eyebrow": "Factory",
-    "title": "A workshop you can brief",
-    "description": "AtelierBag OEM runs handbag programs from Shiling, Huadu. If you need more than a style card, start with the factory pages or ask for a virtual walk-through.",
-    "commitment": "Share a tech pack, sketch, or reference sample and we will reply with feasibility notes and a quotation path.",
+    "title": "A workshop you can visit",
+    "description": "AtelierBag OEM runs handbag programs from Shiling, Huadu. The factory pages cover materials, development, and production. A virtual walk-through can be arranged.",
+    "commitment": "Ask for a factory quote and we will reply with feasibility and next steps.",
     "cases": [
-      { "question": "Materials", "title": "Sourcing you can specify", "description": "Leather, vegan alternatives, and textiles named on the BOM—not a mystery hide." },
+      { "question": "Materials", "title": "Sourcing you can specify", "description": "Leather, vegan alternatives, and textiles named on the BOM." },
       { "question": "Development", "title": "Pattern before bulk", "description": "Prototype comments stay on the same measurement sheet." },
       { "question": "Dispatch", "title": "Packing that matches the brand", "description": "Logo, polybags, and carton marks as written on the order." }
     ]
@@ -91,7 +91,7 @@
     "title": "Full-package handbag OEM",
     "description": "AtelierBag OEM helps brands move from concept to consistent bulk quality in Shiling, Guangzhou.",
     "items": [
-      { "step": "01", "title": "Brief", "description": "Tech pack, sketch, or reference sample." },
+      { "step": "01", "title": "Enquiry", "description": "A short brief to open the conversation." },
       { "step": "02", "title": "Sample", "description": "Pattern, materials, and prototype." },
       { "step": "03", "title": "Bulk", "description": "Production after written sign-off." },
       { "step": "04", "title": "Ship", "description": "QC, packing, and export documents." }
@@ -99,13 +99,13 @@
   },
   "cta": {
     "title": "Let’s build your next handbag line",
-    "description": "Share your tech pack, sketch, or reference sample. Our team will respond with feasibility notes and a quotation path. WhatsApp: +8613800208800",
+    "description": "A factory quote starts with a short enquiry. We review the style and reply with sampling next steps. WhatsApp: +8613800208800",
     "formTitle": "Get Factory Quote",
-    "formDescription": "Name, email, and a short brief are enough to start. Attach a PDF or photo if you have one.",
+    "formDescription": "A short note is enough to start.",
     "steps": [
-      "Tell us silhouette, materials, and target quantity.",
-      "We review feasibility and flag missing spec fields.",
-      "You receive a quotation path and sampling next step."
+      "Enquiry received by a named project owner.",
+      "Style, materials, and construction reviewed.",
+      "Sampling plan and factory quote returned."
     ]
   },
   "footerFeatures": [
