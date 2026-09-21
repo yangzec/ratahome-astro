@@ -325,6 +325,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 ---
 
 ## 最近完成
+- 2026-09-21 20:01 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色，workers.dev 预览待部署；不合 main）
+
 
 | 时间 | 事项 |
 |------|------|

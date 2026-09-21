@@ -1,0 +1,796 @@
+{
+  "about": {
+    "title": "About LoftKnit | Zhuji Socks Factory",
+    "eyebrow": "About LoftKnit",
+    "heroTitle": "About LoftKnit",
+    "heroDescription": "A socks manufacturer based in Zhuji, China.",
+    "workflowTitle": "Our Story",
+    "workflowDescription": "LoftKnit Manufacturing Co., Ltd. is a socks manufacturer based in Zhuji, China. We partner with brand and wholesale teams on OEM and ODM programs—materials, sampling, production, QC, packing, and export—so your sock line ships with consistent quality.",
+    "story": "LoftKnit Manufacturing Co., Ltd. is a socks manufacturer based in Zhuji, China. We partner with brand and wholesale teams on OEM and ODM programs—materials, sampling, production, QC, packing, and export—so your sock line ships with consistent quality.",
+    "approachTitle": "OEM & ODM · Get Quote",
+    "approach": "Open the OEM process, or start a quote for your next sock program.",
+    "glanceTitle": "At a glance",
+    "closingTitle": "OEM & ODM · Get Quote",
+    "closingDescription": "Open the OEM process, or start a quote for your next sock program."
+  },
+  "collections": {
+    "title": "Sock product center",
+    "heroTitle": "Sock product center",
+    "heroDescription": "Browse sports, compression, crew, outdoor, casual, kids, and specialty series. Open a category to review styles, then request a quote on the constructions that fit your line.",
+    "packagesTitle": "Sock series",
+    "benefitsTitle": "Get Quote · Download Catalog",
+    "benefitsDescription": "Request factory pricing or open the catalog overview.",
+    "stylesTitle": "Filter by series",
+    "stylesDescription": "Series · Construction · End use",
+    "styles": [
+      "All products",
+      "Sports Socks",
+      "Compression Socks",
+      "Crew Socks",
+      "Ankle & Low-Cut Socks",
+      "Outdoor Socks",
+      "Casual & Dress Socks",
+      "Kids Socks",
+      "Anti-Slip Socks"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us | Get Quote",
+    "heroTitle": "Contact Us",
+    "heroDescription": "A short note on styles, materials, quantity, and timing helps us reply within one business day.",
+    "getInTouch": "Factory contacts",
+    "helper": "A short note on styles, materials, quantity, and timing helps us reply within one business day.",
+    "whatsappLine": "WhatsApp +86 139 0575 8800",
+    "visitNote": "Factory visits in Datang, Zhuji are by appointment."
+  },
+  "slugs": {
+    "oem-odm": {
+      "title": "OEM & ODM sock manufacturing",
+      "description": "From approved sample to export cartons, we run private-label and full custom sock programs for brand and wholesale buyers.",
+      "content": "From approved sample to export cartons, we run private-label and full custom sock programs for brand and wholesale buyers.",
+      "sections": [
+        {
+          "title": "How an OEM program runs",
+          "body": "Sample timing depends on construction complexity; bulk starts after sample approval and material confirmation.",
+          "items": [
+            "Brief & feasibility — Send style photos, a tech pack, or a reference sample—we confirm construction and material options.",
+            "Sampling — You receive samples for fit, hand-feel, and logo review before bulk.",
+            "Bulk production — Confirmed specs go to knitting and finishing with in-process checks.",
+            "QC & packing — Pre-shipment inspection, branded packing, and export-ready cartons.",
+            "Shipping — Documents and logistics prepared for your destination market."
+          ]
+        }
+      ]
+    },
+    "customization": {
+      "title": "Customization for private label socks",
+      "description": "Logo, yarn, color, height, and packaging choices that match your brand book—without rewriting your assortment every season.",
+      "content": "Logo, yarn, color, height, and packaging choices that match your brand book—without rewriting your assortment every season.",
+      "sections": [
+        {
+          "title": "Customization topics",
+          "body": "Choices agreed at sampling stay on the bulk order.",
+          "items": [
+            "Logo & branding — Embroidery, jacquard, printed logos, hangtags, and woven labels to your artwork.",
+            "Materials & color — Cotton, bamboo, wool blends, synthetics, and custom dye lots agreed at sampling.",
+            "Construction — Height, cushion zones, rib, toe closure, and grip options tuned to the end use.",
+            "Packaging — Polybags, header cards, retail boxes, and master cartons labeled for your channel."
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "title": "Case studies",
+      "description": "Selected OEM and private-label programs that show how we move from brief to bulk. Stories appear with client authorization.",
+      "content": "Selected OEM and private-label programs that show how we move from brief to bulk. Stories appear with client authorization.\n\nAudience tags: Brand retailers · Wholesalers & distributors · Designer brands · Sports brands"
+    },
+    "catalog": {
+      "title": "Product catalog",
+      "description": "Download our current series overview, or request a curated selection for your market. We will follow up within one business day.",
+      "content": "Download our current series overview, or request a curated selection for your market. We will follow up within one business day.\n\nPrimary CTA: Download Catalog · Secondary: Get Quote · Contact Us"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Quote inputs, OEM/ODM, private label packing, sampling, and reply timing.",
+      "content": "Short answers for brand and wholesale buyers looking at a socks OEM.",
+      "sections": [
+        {
+          "title": "Buying FAQ",
+          "body": "We aim to respond to inquiries within one business day.",
+          "items": [
+            "What do you need for a first quote? — Style photos or tech pack, target materials, estimated quantity, destination market, and any logo or packing notes.",
+            "Do you support OEM and ODM? — Yes—produce from your design, or develop styles with our sampling team.",
+            "Can I order private label packaging? — Yes—hangtags, polybags, labels, and cartons can follow your brand standards.",
+            "How do sampling and bulk timing work? — Sample timing depends on construction complexity; bulk starts after sample approval and material confirmation.",
+            "How fast do you reply? — We aim to respond to inquiries within one business day."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How LoftKnit handles enquiry data.",
+      "content": "LoftKnit uses the contact details you submit to reply to quotes and project briefs. We do not sell enquiry data. To update or delete information, write to sales@loftknit-oem.com."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the LoftKnit website.",
+      "content": "Content on this website is for product information and enquiry. Specifications and lead times are confirmed in writing on each quotation. Nothing here is a binding offer. Commercial terms sit on documents issued by LoftKnit Manufacturing Co., Ltd."
+    },
+    "sports-socks": {
+      "title": "Sports Socks — OEM & wholesale",
+      "description": "Running, training, basketball, and team socks with grip, cushion, and support options for performance assortments.",
+      "content": "Explore sports socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nRunning, training, basketball, and team socks with grip, cushion, and support options for performance assortments.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "compression-socks": {
+      "title": "Compression Socks — OEM & wholesale",
+      "description": "Sport and graduated compression constructions for retail and specialty buyers who need consistent pressure profiles.",
+      "content": "Explore compression socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nSport and graduated compression constructions for retail and specialty buyers who need consistent pressure profiles.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "crew-socks": {
+      "title": "Crew Socks — OEM & wholesale",
+      "description": "Mid-calf athletic and lifestyle crews with solid, patterned, and logo-ready panels.",
+      "content": "Explore crew socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nMid-calf athletic and lifestyle crews with solid, patterned, and logo-ready panels.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Ankle & Low-Cut Socks",
+          "href": "/products/ankle-low-cut-socks"
+        }
+      ]
+    },
+    "ankle-low-cut-socks": {
+      "title": "Ankle & Low-Cut Socks — OEM & wholesale",
+      "description": "Liners and ankle heights for activewear and everyday lines that need a low profile.",
+      "content": "Explore ankle & low-cut socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nLiners and ankle heights for activewear and everyday lines that need a low profile.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "outdoor-socks": {
+      "title": "Outdoor Socks — OEM & wholesale",
+      "description": "Hiking and outdoor socks in cotton, wool blends, and durable performance yarns.",
+      "content": "Explore outdoor socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nHiking and outdoor socks in cotton, wool blends, and durable performance yarns.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "casual-dress-socks": {
+      "title": "Casual & Dress Socks — OEM & wholesale",
+      "description": "Business and lifestyle socks with clean finishes for retail and corporate programs.",
+      "content": "Explore casual & dress socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nBusiness and lifestyle socks with clean finishes for retail and corporate programs.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "kids-socks": {
+      "title": "Kids Socks — OEM & wholesale",
+      "description": "Soft, durable children’s socks sized for growing retail assortments.",
+      "content": "Explore kids socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nSoft, durable children’s socks sized for growing retail assortments.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    },
+    "anti-slip-socks": {
+      "title": "Anti-Slip Socks — OEM & wholesale",
+      "description": "Studio and home socks with grip soles for yoga, pilates, and indoor use.",
+      "content": "Explore anti-slip socks styles for brand and wholesale programs. Adjust yarn, height, cushion, logo method, and packing—then request factory pricing on the styles you shortlist.\n\nStudio and home socks with grip soles for yoga, pilates, and indoor use.",
+      "bullets": [
+        "Yarn, height, and cushion options confirmed at sampling",
+        "Logo methods: embroidery, jacquard, print",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Cotton, bamboo, wool blends, synthetics — confirmed at sampling"
+        },
+        {
+          "parameter": "Height / length",
+          "value": "Confirmed per style"
+        },
+        {
+          "parameter": "Needle / construction notes",
+          "value": "Common needle and yarn options for brand assortments"
+        },
+        {
+          "parameter": "Size range",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Color / pattern",
+          "value": "Custom dye lots agreed at sampling"
+        },
+        {
+          "parameter": "Logo options",
+          "value": "Embroidery, jacquard, printed logos"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on construction complexity"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and material confirmation"
+        },
+        {
+          "parameter": "Package",
+          "value": "Polybags, hangtags, retail boxes, master cartons"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the styles you shortlist.",
+      "related": [
+        {
+          "label": "Sports Socks",
+          "href": "/products/sports-socks"
+        },
+        {
+          "label": "Compression Socks",
+          "href": "/products/compression-socks"
+        },
+        {
+          "label": "Crew Socks",
+          "href": "/products/crew-socks"
+        }
+      ]
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "Get Quote",
+      "description": "Reply within one business day with next steps."
+    },
+    {
+      "title": "Download Catalog",
+      "description": "Series overview for your market."
+    },
+    {
+      "title": "Private label",
+      "description": "Logo, hangtags, and packing to your brand book."
+    },
+    {
+      "title": "OEM & ODM",
+      "description": "From your tech pack or our sampling team."
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "Sports Socks",
+      "description": "Performance socks for running, training, basketball, and team programs.",
+      "image": "/images/series-sports.svg",
+      "href": "/products/sports-socks"
+    },
+    {
+      "title": "Compression Socks",
+      "description": "Graduated and sport compression options for retail and medical-adjacent lines.",
+      "image": "/images/series-compression.svg",
+      "href": "/products/compression-socks"
+    },
+    {
+      "title": "Crew Socks",
+      "description": "Everyday and athletic crew heights with cushion and logo options.",
+      "image": "/images/series-crew.svg",
+      "href": "/products/crew-socks"
+    },
+    {
+      "title": "Ankle & Low-Cut Socks",
+      "description": "Low-profile liners and ankle socks for active and lifestyle assortments.",
+      "image": "/images/series-ankle.svg",
+      "href": "/products/ankle-low-cut-socks"
+    },
+    {
+      "title": "Outdoor Socks",
+      "description": "Hiking and outdoor constructions in cotton, wool blends, and performance yarns.",
+      "image": "/images/series-outdoor.svg",
+      "href": "/products/outdoor-socks"
+    },
+    {
+      "title": "Casual & Dress Socks",
+      "description": "Business and lifestyle socks with solid, pattern, and branded finishes.",
+      "image": "/images/series-casual.svg",
+      "href": "/products/casual-dress-socks"
+    },
+    {
+      "title": "Kids Socks",
+      "description": "Children’s sizes with soft yarns and durable knit constructions.",
+      "image": "/images/series-kids.svg",
+      "href": "/products/kids-socks"
+    },
+    {
+      "title": "Anti-Slip Socks",
+      "description": "Grip soles for yoga, studio, and home use.",
+      "image": "/images/series-antislip.svg",
+      "href": "/products/anti-slip-socks"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Base",
+      "description": "Zhuji, China"
+    },
+    {
+      "step": "02",
+      "title": "Role",
+      "description": "Socks OEM & ODM"
+    },
+    {
+      "step": "03",
+      "title": "Legal name",
+      "description": "LoftKnit Manufacturing Co., Ltd."
+    },
+    {
+      "step": "04",
+      "title": "Programs",
+      "description": "Private label for brands, retailers, distributors"
+    },
+    {
+      "step": "05",
+      "title": "Primary CTA",
+      "description": "Get Quote"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "OEM & ODM",
+      "description": "Produce from your design, or develop with our sampling team."
+    },
+    {
+      "title": "Private label",
+      "description": "Logo, hangtags, polybags, and cartons to your standards."
+    },
+    {
+      "title": "One business day",
+      "description": "We aim to respond to inquiries within one business day."
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "View series",
+      "description": "Open a category for yarn, height, and packing options."
+    },
+    {
+      "title": "Get Quote",
+      "description": "Request factory pricing on the styles you shortlist."
+    },
+    {
+      "title": "Customization",
+      "description": "Logo, yarn, color, height, and packaging choices."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "site": {
+    "name": "LoftKnit",
+    "title": "OEM & ODM Socks Factory for Your Brand",
+    "description": "LoftKnit is a socks OEM and ODM partner in Zhuji, China. We develop and produce sports, compression, crew, casual, and specialty socks for brands, retailers, and distributors—from sampling and private label through bulk packing and export.",
+    "whatsapp": "+86 139 0575 8800",
+    "whatsappUrl": "https://wa.me/8613905758800",
+    "hours": "Mon–Sat, 09:00–18:00 (CST)",
+    "location": "Zhuji, China",
+    "address": "No. 128 Sock Industry Road, Datang, Zhuji, Zhejiang, China",
+    "phone": "+86 575 8700 8800",
+    "email": "sales@loftknit-oem.com",
+    "tagline": "Socks OEM & ODM · private label for brands, retailers, and distributors"
+  },
+  "buttons": {
+    "startProject": "Get Quote",
+    "uploadFloorPlan": "Get Quote",
+    "factoryTour": "Browse Products",
+    "sendFloorPlan": "Send message",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "View All",
+    "seeJourney": "OEM & ODM process",
+    "readWarranty": "View cases",
+    "exploreProjects": "Browse Catalog",
+    "requestQuote": "Get Quote",
+    "discussJoinery": "Contact Us"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "whatsapp": "WhatsApp",
+    "projectType": "Enquiry type",
+    "message": "Message",
+    "projectDetails": "Message",
+    "floorPlan": "Attachments (PDF / JPG)",
+    "privacy": "A short note on styles, materials, quantity, and timing helps us reply within one business day.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "+1 555 000 0000",
+    "companyPlaceholder": "Brand or buying office",
+    "whatsappPlaceholder": "WhatsApp number",
+    "messagePlaceholder": "Styles, materials, quantity, and destination market",
+    "detailsPlaceholder": "Styles, materials, quantity, and destination market",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "Get Quote",
+      "design": "Contact Us",
+      "development": "Sample request",
+      "hospitality": "Catalog request",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "LoftKnit is a socks OEM and ODM partner in Zhuji, China. We develop and produce sports, compression, crew, casual, and specialty socks for brands, retailers, and distributors—from sampling and private label through bulk packing and export.",
+    "copyright": "All rights reserved.",
+    "foundedYear": "2012",
+    "columns": [
+      {
+        "title": "LoftKnit",
+        "body": "LoftKnit is a socks OEM and ODM partner in Zhuji, China. We develop and produce sports, compression, crew, casual, and specialty socks for brands, retailers, and distributors—from sampling and private label through bulk packing and export.",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "Products",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "Sports Socks",
+            "href": "/products/sports-socks"
+          },
+          {
+            "label": "Compression Socks",
+            "href": "/products/compression-socks"
+          },
+          {
+            "label": "Crew Socks",
+            "href": "/products/crew-socks"
+          },
+          {
+            "label": "Ankle & Low-Cut Socks",
+            "href": "/products/ankle-low-cut-socks"
+          },
+          {
+            "label": "Outdoor Socks",
+            "href": "/products/outdoor-socks"
+          },
+          {
+            "label": "Casual & Dress Socks",
+            "href": "/products/casual-dress-socks"
+          },
+          {
+            "label": "Kids Socks",
+            "href": "/products/kids-socks"
+          },
+          {
+            "label": "Anti-Slip Socks",
+            "href": "/products/anti-slip-socks"
+          },
+          {
+            "label": "All Products",
+            "href": "/products"
+          }
+        ]
+      },
+      {
+        "title": "Services",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "OEM & ODM",
+            "href": "/oem-odm"
+          },
+          {
+            "label": "Customization",
+            "href": "/customization"
+          },
+          {
+            "label": "Cases",
+            "href": "/cases"
+          },
+          {
+            "label": "Catalog",
+            "href": "/catalog"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": "",
+        "links": [
+          {
+            "label": "Address: No. 128 Sock Industry Road, Datang, Zhuji, Zhejiang, China",
+            "href": "/contact"
+          },
+          {
+            "label": "Phone: +86 575 8700 8800",
+            "href": "tel:+8657587008800"
+          },
+          {
+            "label": "Email: sales@loftknit-oem.com",
+            "href": "mailto:sales@loftknit-oem.com"
+          },
+          {
+            "label": "WhatsApp: +86 139 0575 8800",
+            "href": "https://wa.me/8613905758800"
+          },
+          {
+            "label": "Get Quote",
+            "href": "/contact/?intent=quote"
+          }
+        ],
+        "note": "Hours: Mon–Sat, 09:00–18:00 (CST)"
+      }
+    ]
+  }
+}

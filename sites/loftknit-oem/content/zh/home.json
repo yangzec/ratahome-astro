@@ -1,0 +1,256 @@
+{
+  "hero": {
+    "eyebrow": "诸暨 · 袜子 OEM / ODM",
+    "title": "面向品牌的袜子 OEM / ODM 工厂",
+    "description": "全系列定制与贴牌袜——运动、压缩、中筒、休闲与特种款式——从打样到大货出运。",
+    "image": "/images/hero-socks.svg",
+    "imageAlt": "LoftKnit 袜子 OEM 首页占位图 —— 非竞品商用图",
+    "primaryHref": "/contact/?intent=quote",
+    "secondaryHref": "/products"
+  },
+  "assurances": [],
+  "metrics": [],
+  "audiences": {
+    "title": "服务 OEM 伙伴的诸暨袜厂",
+    "description": "LoftKnit 为国际品牌与批发买家开发并生产袜子。团队支持贴牌、logo 与包装方案——从样品确认到稳定大货质量与出口包装。",
+    "items": [
+      {
+        "title": "关于我们",
+        "description": "项目背后的工厂。",
+        "href": "/about",
+        "image": "/images/factory-knit.svg"
+      },
+      {
+        "title": "OEM / ODM",
+        "description": "从确认样到出口纸箱。",
+        "href": "/oem-odm",
+        "image": "/images/factory-pack.svg"
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "面向品牌与批发项目的袜子系列",
+    "description": "打开系列查看款式，再对适合产品线的结构获取报价。",
+    "items": [
+      {
+        "title": "运动袜",
+        "description": "跑步、训练、篮球与团队项目的性能袜。",
+        "image": "/images/series-sports.svg",
+        "href": "/products/sports-socks"
+      },
+      {
+        "title": "压缩袜",
+        "description": "面向零售与专业线的梯度与运动压缩选项。",
+        "image": "/images/series-compression.svg",
+        "href": "/products/compression-socks"
+      },
+      {
+        "title": "中筒袜",
+        "description": "日常与运动中筒高度，可配加厚与 logo。",
+        "image": "/images/series-crew.svg",
+        "href": "/products/crew-socks"
+      },
+      {
+        "title": "船袜 / 低帮袜",
+        "description": "活动与生活方式系列用的低帮与船袜。",
+        "image": "/images/series-ankle.svg",
+        "href": "/products/ankle-low-cut-socks"
+      },
+      {
+        "title": "户外袜",
+        "description": "棉、羊毛混纺与性能纱线的徒步与户外结构。",
+        "image": "/images/series-outdoor.svg",
+        "href": "/products/outdoor-socks"
+      },
+      {
+        "title": "休闲 / 正装袜",
+        "description": "商务与生活方式袜，素色、花型与品牌整理。",
+        "image": "/images/series-casual.svg",
+        "href": "/products/casual-dress-socks"
+      },
+      {
+        "title": "儿童袜",
+        "description": "柔软纱线与耐用组织结构的儿童尺码。",
+        "image": "/images/series-kids.svg",
+        "href": "/products/kids-socks"
+      },
+      {
+        "title": "防滑袜",
+        "description": "瑜伽、工作室与居家用的防滑底。",
+        "image": "/images/series-antislip.svg",
+        "href": "/products/anti-slip-socks"
+      }
+    ]
+  },
+  "process": {
+    "title": "OEM & ODM sock manufacturing",
+    "description": "From approved sample to export cartons, we run private-label and full custom sock programs for brand and wholesale buyers.",
+    "image": "/images/process-sampling.svg",
+    "imageAlt": "Placeholder for sampling and logo review step",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Brief & feasibility",
+        "description": "Send style photos, a tech pack, or a reference sample—we confirm construction and material options."
+      },
+      {
+        "step": "02",
+        "title": "Sampling",
+        "description": "You receive samples for fit, hand-feel, and logo review before bulk."
+      },
+      {
+        "step": "03",
+        "title": "Bulk production",
+        "description": "Confirmed specs go to knitting and finishing with in-process checks."
+      },
+      {
+        "step": "04",
+        "title": "QC & packing",
+        "description": "Pre-shipment inspection, branded packing, and export-ready cartons."
+      },
+      {
+        "step": "05",
+        "title": "Shipping",
+        "description": "Documents and logistics prepared for your destination market."
+      }
+    ]
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "OEM 服务",
+    "title": "OEM 服务、生产范围与包装",
+    "description": "用清晰的结构与包装选择，搭建贴牌袜子项目。",
+    "commitment": "我们与品牌零售商、批发商、设计师品牌与运动品牌合作贴牌与 OEM 袜线。具名案例仅在客户授权后展示。",
+    "cases": [
+      {
+        "question": "01",
+        "title": "OEM / ODM 服务",
+        "description": "按你的工艺单生产，或与打样团队共同开发——含贴牌、定制颜色与结构微调。"
+      },
+      {
+        "question": "02",
+        "title": "生产范围",
+        "description": "运动、压缩、中筒、船袜、儿童与特种袜，覆盖品牌货盘常用针数与纱线选项。"
+      },
+      {
+        "question": "03",
+        "title": "定制包装",
+        "description": "品牌包装、吊牌、条码标签与出口纸箱，按零售或批发要求准备。"
+      }
+    ]
+  },
+  "rooms": {
+    "title": "面向品牌与批发项目的袜子系列",
+    "items": [
+      {
+        "label": "运动袜",
+        "slug": "sports-socks",
+        "href": "/products/sports-socks"
+      },
+      {
+        "label": "压缩袜",
+        "slug": "compression-socks",
+        "href": "/products/compression-socks"
+      },
+      {
+        "label": "中筒袜",
+        "slug": "crew-socks",
+        "href": "/products/crew-socks"
+      },
+      {
+        "label": "船袜 / 低帮袜",
+        "slug": "ankle-low-cut-socks",
+        "href": "/products/ankle-low-cut-socks"
+      },
+      {
+        "label": "户外袜",
+        "slug": "outdoor-socks",
+        "href": "/products/outdoor-socks"
+      },
+      {
+        "label": "休闲 / 正装袜",
+        "slug": "casual-dress-socks",
+        "href": "/products/casual-dress-socks"
+      },
+      {
+        "label": "儿童袜",
+        "slug": "kids-socks",
+        "href": "/products/kids-socks"
+      },
+      {
+        "label": "防滑袜",
+        "slug": "anti-slip-socks",
+        "href": "/products/anti-slip-socks"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured styles",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "买家选择 LoftKnit 的原因",
+    "description": "面向贴牌与 OEM 袜子项目的直连工厂合作。",
+    "items": [
+      {
+        "step": "01",
+        "title": "直连工厂合作",
+        "description": "与制造团队直接确认材料、结构与包装——中间不是贸易台。"
+      },
+      {
+        "step": "02",
+        "title": "一站式袜子项目",
+        "description": "款式开发、打样、大货、品牌与出口文件由同一项目负责人统筹。"
+      },
+      {
+        "step": "03",
+        "title": "可检验的质量",
+        "description": "对照确认样做在线与出货前检查，纸箱离厂前完成。"
+      },
+      {
+        "step": "04",
+        "title": "关注准时交付",
+        "description": "打样与大货节点清晰，材料或产能变化时及时更新。"
+      },
+      {
+        "step": "05",
+        "title": "贴牌就绪",
+        "description": "Logo、吊牌、袋装与内包装按品牌标准设置。"
+      },
+      {
+        "step": "06",
+        "title": "灵活订单规划",
+        "description": "试单与持续补货按你的货盘计划讨论——不是单一套话。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备启动你的袜子项目？",
+    "description": "发送款式参考、目标材料、预估数量与目的市场。我们在一个工作日内回复下一步。",
+    "formTitle": "获取报价",
+    "formDescription": "款式、材料、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "steps": [
+      "Brief & feasibility",
+      "Sampling",
+      "Bulk production"
+    ]
+  },
+  "footerFeatures": [
+    {
+      "title": "袜子 OEM / ODM",
+      "description": "面向品牌与分销商的贴牌"
+    },
+    {
+      "title": "中国诸暨",
+      "description": "织造、后整与包装"
+    },
+    {
+      "title": "运动 · 压缩 · 中筒",
+      "description": "覆盖品牌货盘系列"
+    },
+    {
+      "title": "获取报价",
+      "description": "sales@loftknit-oem.com"
+    }
+  ]
+}
