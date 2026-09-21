@@ -328,6 +328,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 16:29 | 按手袋 OEM 定稿蓝图整站重写 `sites/atelierbag-oem` EN/ZH content；补 `/case-studies`、`docs/blueprint-rules.md`、`docs/teardown-workflow.md` 与 `AGENTS.md` 硬规则；Worker Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
 | 2026-09-21 16:24 | 重写 `sites/atelierbag-oem` EN/ZH 全部 content JSON 为买家可见定稿；去掉 Share / 请发 / as drawn / slogan wall 等指令腔；表单提示压成一行；导航 IA 不变 |
 | 2026-09-21 16:23 | 再部署 AtelierBag OEM Worker `atelierbag-oem`（Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
 | 2026-09-21 15:17 | 部署 AtelierBag OEM Worker `atelierbag-oem`（Version `c23f1263-321b-4ba3-b39f-a0cbaadd4260`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
@@ -353,6 +354,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-21 16:29 | AtelierBag OEM 定稿蓝图落地 | `pnpm site-cli validate` + build + `cf:deploy`；curl EN/ZH 首页、托特、联系、案例、流程、FAQ；8 份 content JSON 禁词扫描 | 通过；线上 200；Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 学谁 / 可选备注 未出现；Version `a5310537-9c3d-4ec9-8535-81b1dea159fb` |
 | 2026-09-21 16:24 | AtelierBag OEM 买家定稿文案 | curl EN/ZH 首页、产品、托特详情、联系、工厂、FAQ | 全部 200；新文案在线；Share / 请发 / Those three notes / slogan wall / 选填说明书未出现 |
 | 2026-09-21 16:23 | `atelierbag-oem` validate + build + deploy | `pnpm site-cli validate` + `pnpm --filter atelierbag-oem build` + `cf:deploy` | 通过；Worker Version `6252fb69-8bf8-461c-a1e0-0eebcac9ace0` |
 | 2026-09-21 15:17 | AtelierBag OEM 预览 | curl EN/ZH 首页、产品、详情、联系、工厂、FAQ | 全部 200；Hero/CTA/表单字段齐全 |
