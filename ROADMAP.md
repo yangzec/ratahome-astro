@@ -348,7 +348,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
 | 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
 | 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
-| 2026-09-17 08:58 | 阶段 1 启动：Monorepo + site_id D1 + Blueprint + theme 外置，build 通过 |
 
 ---
 
