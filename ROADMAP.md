@@ -325,11 +325,11 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 ---
 
 ## 最近完成
-- 2026-09-21 20:01 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色，workers.dev 预览待部署；不合 main）
-
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-21 20:41 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；不合 main |
+| 2026-09-21 20:01 | 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色；不合 main） |
 | 2026-09-21 18:54 | 确认硬规则：不为迁就模板而改蓝图；排版只改模板 / composition / token；写入 `AGENTS.md` 与 `docs/blueprint-rules.md` |
 | 2026-09-21 18:17 | 写入 copy-final / composition / Section 分层；共享 `ListGrid` 按 `items.length` 自适应；Capabilities / Audiences / Process 步骤不再写死 4/5 列；Worker Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
 | 2026-09-21 18:05 | AtelierBag OEM 桌面 Hero 改为 `calc(100vh - var(--header-h))`；企业介绍改为左文右图且两图 `4/3` 同高；Why 材料卡改为买家向（去掉 fit the brief / 简报）；Worker Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |
@@ -348,8 +348,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
 | 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
 | 2026-09-17 08:58 | 阶段 1 启动：Monorepo + site_id D1 + Blueprint + theme 外置，build 通过 |
-| 2026-09-17 08:54 | 确认 D1：共享实例 + `site_id`；阶段 4 运动/户外部署模式待阶段 3 跑通后再定 |
-| 2026-09-17 08:51 | 确认各阶段试点行业：阶段 2 面料/服装/家纺，阶段 3 包装/印刷，阶段 4 运动/户外 |
 
 ---
 

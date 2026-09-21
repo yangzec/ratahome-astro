@@ -692,49 +692,49 @@
     {
       "title": "Sports Socks",
       "description": "Performance socks for running, training, basketball, and team programs.",
-      "image": "/images/series-sports.svg",
+      "image": "/images/series-sports.webp",
       "href": "/products/sports-socks"
     },
     {
       "title": "Compression Socks",
       "description": "Graduated and sport compression options for retail and medical-adjacent lines.",
-      "image": "/images/series-compression.svg",
+      "image": "/images/series-compression.webp",
       "href": "/products/compression-socks"
     },
     {
       "title": "Crew Socks",
       "description": "Everyday and athletic crew heights with cushion and logo options.",
-      "image": "/images/series-crew.svg",
+      "image": "/images/series-crew.webp",
       "href": "/products/crew-socks"
     },
     {
       "title": "Ankle & Low-Cut Socks",
       "description": "Low-profile liners and ankle socks for active and lifestyle assortments.",
-      "image": "/images/series-ankle.svg",
+      "image": "/images/series-ankle.webp",
       "href": "/products/ankle-low-cut-socks"
     },
     {
       "title": "Outdoor Socks",
       "description": "Hiking and outdoor constructions in cotton, wool blends, and performance yarns.",
-      "image": "/images/series-outdoor.svg",
+      "image": "/images/series-outdoor.webp",
       "href": "/products/outdoor-socks"
     },
     {
       "title": "Casual & Dress Socks",
       "description": "Business and lifestyle socks with solid, pattern, and branded finishes.",
-      "image": "/images/series-casual.svg",
+      "image": "/images/series-casual.webp",
       "href": "/products/casual-dress-socks"
     },
     {
       "title": "Kids Socks",
       "description": "Children’s sizes with soft yarns and durable knit constructions.",
-      "image": "/images/series-kids.svg",
+      "image": "/images/series-kids.webp",
       "href": "/products/kids-socks"
     },
     {
       "title": "Anti-Slip Socks",
       "description": "Grip soles for yoga, studio, and home use.",
-      "image": "/images/series-antislip.svg",
+      "image": "/images/series-antislip.webp",
       "href": "/products/anti-slip-socks"
     }
   ],

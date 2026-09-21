@@ -3,8 +3,8 @@
     "eyebrow": "诸暨 · 袜子 OEM / ODM",
     "title": "面向品牌的袜子 OEM / ODM 工厂",
     "description": "全系列定制与贴牌袜——运动、压缩、中筒、休闲与特种款式——从打样到大货出运。",
-    "image": "/images/hero-socks.svg",
-    "imageAlt": "LoftKnit 袜子 OEM 首页占位图 —— 非竞品商用图",
+    "image": "/images/hero-socks.webp",
+    "imageAlt": "靛蓝与海军蓝 OEM 袜样叠放在工作台上",
     "primaryHref": "/contact/?intent=quote",
     "secondaryHref": "/products"
   },
@@ -18,13 +18,13 @@
         "title": "关于我们",
         "description": "项目背后的工厂。",
         "href": "/about",
-        "image": "/images/factory-knit.svg"
+        "image": "/images/factory-knit.webp"
       },
       {
         "title": "OEM / ODM",
         "description": "从确认样到出口纸箱。",
         "href": "/oem-odm",
-        "image": "/images/factory-pack.svg"
+        "image": "/images/factory-pack.webp"
       }
     ]
   },
@@ -35,49 +35,49 @@
       {
         "title": "运动袜",
         "description": "跑步、训练、篮球与团队项目的性能袜。",
-        "image": "/images/series-sports.svg",
+        "image": "/images/series-sports.webp",
         "href": "/products/sports-socks"
       },
       {
         "title": "压缩袜",
         "description": "面向零售与专业线的梯度与运动压缩选项。",
-        "image": "/images/series-compression.svg",
+        "image": "/images/series-compression.webp",
         "href": "/products/compression-socks"
       },
       {
         "title": "中筒袜",
         "description": "日常与运动中筒高度，可配加厚与 logo。",
-        "image": "/images/series-crew.svg",
+        "image": "/images/series-crew.webp",
         "href": "/products/crew-socks"
       },
       {
         "title": "船袜 / 低帮袜",
         "description": "活动与生活方式系列用的低帮与船袜。",
-        "image": "/images/series-ankle.svg",
+        "image": "/images/series-ankle.webp",
         "href": "/products/ankle-low-cut-socks"
       },
       {
         "title": "户外袜",
         "description": "棉、羊毛混纺与性能纱线的徒步与户外结构。",
-        "image": "/images/series-outdoor.svg",
+        "image": "/images/series-outdoor.webp",
         "href": "/products/outdoor-socks"
       },
       {
         "title": "休闲 / 正装袜",
         "description": "商务与生活方式袜，素色、花型与品牌整理。",
-        "image": "/images/series-casual.svg",
+        "image": "/images/series-casual.webp",
         "href": "/products/casual-dress-socks"
       },
       {
         "title": "儿童袜",
         "description": "柔软纱线与耐用组织结构的儿童尺码。",
-        "image": "/images/series-kids.svg",
+        "image": "/images/series-kids.webp",
         "href": "/products/kids-socks"
       },
       {
         "title": "防滑袜",
         "description": "瑜伽、工作室与居家用的防滑底。",
-        "image": "/images/series-antislip.svg",
+        "image": "/images/series-antislip.webp",
         "href": "/products/anti-slip-socks"
       }
     ]
@@ -85,8 +85,8 @@
   "process": {
     "title": "OEM & ODM sock manufacturing",
     "description": "From approved sample to export cartons, we run private-label and full custom sock programs for brand and wholesale buyers.",
-    "image": "/images/process-sampling.svg",
-    "imageAlt": "Placeholder for sampling and logo review step",
+    "image": "/images/process-sampling.webp",
+    "imageAlt": "打样台上的袜样，用于确认版型和 logo",
     "steps": [
       {
         "step": "01",
