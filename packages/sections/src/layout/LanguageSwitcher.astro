@@ -1,0 +1,52 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { switchLocalePath } from '@trade/core/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+---
+
+<div class="site-lang">
+  <a
+    href={switchLocalePath(currentPath, 'en')}
+    class:list={['site-lang-link', locale === 'en' && 'is-active']}
+    hreflang="en"
+  >
+    EN
+  </a>
+  <a
+    href={switchLocalePath(currentPath, 'zh')}
+    class:list={['site-lang-link', locale === 'zh' && 'is-active']}
+    hreflang="zh"
+  >
+    中文
+  </a>
+</div>
+
+<style>
+  .site-lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+  }
+
+  .site-lang-link {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .site-lang-link:hover {
+    color: #fff;
+  }
+
+  .site-lang-link.is-active {
+    color: var(--color-izza-accent);
+    font-weight: 600;
+  }
+</style>
