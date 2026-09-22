@@ -81,3 +81,15 @@
 | `sites/*/blueprints/*.json` | composition（区块顺序） | 是（模板配置，不是文案） |
 
 套站时：只把 copy-final 蓝图写入 content JSON；不要把 brief/compare 里的「学谁」或布局说明写进前台。
+
+## 多语言（蓝图阶段，灌站前）
+
+本节补充分层规则，不推翻上文「不为迁就模板改蓝图」「copy-final 只写买家可见文案」「composition ≠ 文案蓝图」。仓库落点见 `docs/site-repo-and-i18n.md` 。
+
+- 同站内：一套槽位 / 路由结构，按 locale 分文案（`content/en/`、`content/zh/`），**不是**每语种一个仓库，也不是互不相干的行业蓝图。
+- 顺序：Google Suggest 收各语种真实说法 → 人工确认本地化表达 → EN 先出 copy-final 母版 → 其他语种同槽位本地化 copy-final（禁止机翻当定稿）→ 再灌 `content/<locale>/`。
+- 有 locale 文件 ≠ 做过关键词 / 本地化验收。
+- Ads 关键词规划师可选、用于后期排量级 / 竞争；早期不必上 Ads。
+- 行业横比蓝图按产品线一份结构参考；落到品牌站再拆各语种 copy-final。
+
+**禁止**：用机翻顶替某语种 copy-final；先灌 `content/<locale>/` 再补关键词 / 本地化验收；为不同语种另起一套互不相干的行业蓝图或另开一仓。
