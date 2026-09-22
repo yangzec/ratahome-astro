@@ -1,0 +1,275 @@
+{
+  "about": {
+    "title": "About [Brand] | Manufacturer",
+    "eyebrow": "About [Brand]",
+    "heroTitle": "About [Brand]",
+    "heroDescription": "A manufacturer based in [City].",
+    "workflowTitle": "Our Story",
+    "workflowDescription": "[Legal Name] is a manufacturer based in [City]. We partner with mills, brands, and export buyers on OEM programs—development, sampling, bulk, packing, and documents.",
+    "story": "[Legal Name] is a manufacturer based in [City]. We partner with mills, brands, and export buyers on OEM programs—development, sampling, bulk, packing, and documents.",
+    "approachTitle": "OEM · Get Quote",
+    "approach": "Open the factory process, or start a quote for your next program.",
+    "glanceTitle": "At a glance",
+    "closingTitle": "OEM · Get Quote",
+    "closingDescription": "Open the factory process, or start a quote for your next program."
+  },
+  "collections": {
+    "title": "Product center",
+    "heroTitle": "Product center",
+    "heroDescription": "Browse product lines. Open a category to review specs, then request a quote on the constructions that fit your program.",
+    "packagesTitle": "Product lines",
+    "benefitsTitle": "Get Quote",
+    "benefitsDescription": "Request factory pricing or open a product line.",
+    "stylesTitle": "Filter by line",
+    "stylesDescription": "Line · Construction · End use",
+    "styles": [
+      "All products",
+      "Product line A",
+      "Product line B",
+      "Product line C"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us | Get Quote",
+    "heroTitle": "Contact Us",
+    "heroDescription": "A short note on product, quantity, and timing helps us reply within one business day.",
+    "getInTouch": "Factory contacts",
+    "helper": "A short note on product, quantity, and timing helps us reply within one business day.",
+    "whatsappLine": "WhatsApp [Phone]",
+    "visitNote": "Factory visits in [City] are by appointment."
+  },
+  "slugs": {
+    "factory": {
+      "title": "Factory",
+      "description": "Production, QC, and packing in [City].",
+      "content": "Production, QC, and packing in [City]. Visit by appointment.",
+      "sections": [
+        {
+          "title": "Factory notes",
+          "body": "Production, QC, and packing at [Address].",
+          "items": [
+            "Base — [City]",
+            "Legal name — [Legal Name]",
+            "Role — OEM manufacturer and exporter"
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "title": "Capabilities",
+      "description": "Development, sampling, bulk production, QC, packing, and export documents.",
+      "content": "Development, sampling, bulk production, QC, packing, and export documents.",
+      "sections": [
+        {
+          "title": "What we run",
+          "body": "One project owner from brief to packed shipment.",
+          "items": [
+            "Development — Confirm construction and material options from your spec or a reference sample.",
+            "Sampling — You review samples before bulk.",
+            "Bulk — Confirmed specs go to production with in-process checks.",
+            "Packing — Labels, inner packs, and export cartons to your brief."
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Quote inputs, OEM, sampling, and reply timing.",
+      "content": "Short answers for brand and wholesale buyers.",
+      "sections": [
+        {
+          "title": "Buying FAQ",
+          "body": "We aim to respond to inquiries within one business day.",
+          "items": [
+            "What do you need for a first quote? — Product references, estimated quantity, destination market, and any logo or packing notes.",
+            "Do you support OEM programs? — Yes—produce from your spec, or develop with our sampling team.",
+            "How do sampling and bulk timing work? — Sample timing depends on construction; bulk starts after sample approval and material confirmation.",
+            "How fast do you reply? — We aim to respond to inquiries within one business day."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How [Brand] handles enquiry data.",
+      "content": "[Brand] uses the contact details you submit to reply to quotes and project briefs. We do not sell enquiry data. To update or delete information, write to [Email]."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the [Brand] website.",
+      "content": "Content on this website is for product information and enquiry. Specifications and lead times are confirmed in writing on each quotation. Nothing here is a binding offer. Commercial terms sit on documents issued by [Legal Name]."
+    },
+    "product-line-a": {
+      "title": "Product line A",
+      "description": "Range A for OEM and wholesale programs.",
+      "content": "Review construction notes for product line A, then request a quote.",
+      "bullets": [
+        "Specs confirmed at sampling",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Confirmed at sampling"
+        },
+        {
+          "parameter": "Lead time",
+          "value": "After sample approval"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the constructions you shortlist.",
+      "related": [
+        {
+          "label": "Product line B",
+          "href": "/products/product-line-b"
+        },
+        {
+          "label": "Product line C",
+          "href": "/products/product-line-c"
+        }
+      ]
+    },
+    "product-line-b": {
+      "title": "Product line B",
+      "description": "Range B for OEM and wholesale programs.",
+      "content": "Review construction notes for product line B, then request a quote.",
+      "bullets": [
+        "Specs confirmed at sampling",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Confirmed at sampling"
+        },
+        {
+          "parameter": "Lead time",
+          "value": "After sample approval"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the constructions you shortlist.",
+      "related": [
+        {
+          "label": "Product line A",
+          "href": "/products/product-line-a"
+        },
+        {
+          "label": "Product line C",
+          "href": "/products/product-line-c"
+        }
+      ]
+    },
+    "product-line-c": {
+      "title": "Product line C",
+      "description": "Range C for OEM and wholesale programs.",
+      "content": "Review construction notes for product line C, then request a quote.",
+      "bullets": [
+        "Specs confirmed at sampling",
+        "Private-label packing available",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Material",
+          "value": "Confirmed at sampling"
+        },
+        {
+          "parameter": "Lead time",
+          "value": "After sample approval"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing on the constructions you shortlist.",
+      "related": [
+        {
+          "label": "Product line A",
+          "href": "/products/product-line-a"
+        },
+        {
+          "label": "Product line B",
+          "href": "/products/product-line-b"
+        }
+      ]
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "Get Quote",
+      "description": "Reply within one business day with next steps."
+    },
+    {
+      "title": "Product lines",
+      "description": "Open a line for specs and packing options."
+    },
+    {
+      "title": "OEM programs",
+      "description": "From your spec or our sampling team."
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "Product line A",
+      "description": "Range A for OEM and wholesale programs.",
+      "image": "/images/placeholder-card.svg",
+      "href": "/products/product-line-a"
+    },
+    {
+      "title": "Product line B",
+      "description": "Range B for OEM and wholesale programs.",
+      "image": "/images/placeholder-card.svg",
+      "href": "/products/product-line-b"
+    },
+    {
+      "title": "Product line C",
+      "description": "Range C for OEM and wholesale programs.",
+      "image": "/images/placeholder-card.svg",
+      "href": "/products/product-line-c"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Base",
+      "description": "[City]"
+    },
+    {
+      "step": "02",
+      "title": "Role",
+      "description": "OEM manufacturer"
+    },
+    {
+      "step": "03",
+      "title": "Legal name",
+      "description": "[Legal Name]"
+    },
+    {
+      "step": "04",
+      "title": "Primary CTA",
+      "description": "Get Quote"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "OEM programs",
+      "description": "Produce from your spec, or develop with our sampling team."
+    },
+    {
+      "title": "One business day",
+      "description": "We aim to respond to inquiries within one business day."
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "View lines",
+      "description": "Open a category for specs and packing options."
+    },
+    {
+      "title": "Get Quote",
+      "description": "Request factory pricing on the items you shortlist."
+    }
+  ]
+}

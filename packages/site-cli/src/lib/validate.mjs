@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { assertSiteExists, getWorkspaceRoot } from './paths.mjs';
+import { FILLED_INDUSTRY_SITES, scanSiteContentDirtyTokens } from './dirty-tokens.mjs';
 
 const REQUIRED_FILES = [
   'site.config.ts',
@@ -115,6 +116,12 @@ export function validateSite(slug, root = getWorkspaceRoot()) {
     });
   } catch {
     /* navigation parse errors caught above */
+  }
+
+  if (!FILLED_INDUSTRY_SITES.has(slug)) {
+    for (const hit of scanSiteContentDirtyTokens(siteDir)) {
+      errors.push(hit);
+    }
   }
 
   return {

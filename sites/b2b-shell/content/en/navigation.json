@@ -1,0 +1,67 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Product lines",
+          "links": [
+            {
+              "label": "Product line A",
+              "href": "/products/product-line-a",
+              "description": "Range A for OEM and wholesale programs."
+            },
+            {
+              "label": "Product line B",
+              "href": "/products/product-line-b",
+              "description": "Range B for OEM and wholesale programs."
+            },
+            {
+              "label": "Product line C",
+              "href": "/products/product-line-c",
+              "description": "Range C for OEM and wholesale programs."
+            }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse product lines and request a quote",
+        "href": "/products",
+        "image": "/images/placeholder-card.svg"
+      }
+    },
+    {
+      "id": "factory",
+      "label": "Factory",
+      "href": "/factory"
+    },
+    {
+      "id": "capabilities",
+      "label": "Capabilities",
+      "href": "/capabilities"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact"
+    }
+  ]
+}

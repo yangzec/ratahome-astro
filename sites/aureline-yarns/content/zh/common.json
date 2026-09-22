@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "Aureline Yarns",
+    "title": "面向纺织项目的色纱制造商与出口商",
+    "description": "Aureline Yarns 是[城市]的色纱制造商与出口商。我们供应涤纶、棉与尼龙色纱——含段染与加捻结构——服务全球针织、梭织与纺织项目。",
+    "whatsapp": "[Phone]",
+    "whatsappUrl": "#",
+    "hours": "周一至周六，09:00–18:00（中国时间）",
+    "location": "[城市]",
+    "address": "[城市]",
+    "phone": "[Phone]",
+    "email": "[Email]",
+    "tagline": "色纱制造商与出口商 · 面向纱厂、品牌与贸易伙伴的 OEM 供货"
+  },
+  "buttons": {
+    "startProject": "获取报价",
+    "uploadFloorPlan": "获取报价",
+    "factoryTour": "浏览产品",
+    "sendFloorPlan": "发送留言",
+    "sendMessage": "发送留言",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "查看全部",
+    "seeJourney": "打色与供货",
+    "readWarranty": "品质与色牢",
+    "exploreProjects": "浏览产品",
+    "requestQuote": "获取报价",
+    "discussJoinery": "联系我们"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "company": "公司",
+    "whatsapp": "WhatsApp",
+    "projectType": "询盘类型",
+    "message": "留言",
+    "projectDetails": "留言",
+    "floorPlan": "附件（PDF / JPG 色号参考）",
+    "privacy": "纤维类型、旦数、目标色号、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "+1 555 000 0000",
+    "companyPlaceholder": "纱厂、品牌或贸易公司",
+    "whatsappPlaceholder": "WhatsApp number",
+    "messagePlaceholder": "纤维类型、旦数、目标色号、数量与目的市场",
+    "detailsPlaceholder": "纤维类型、旦数、目标色号、数量与目的市场",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "获取报价",
+      "design": "联系我们",
+      "development": "打样需求",
+      "hospitality": "产品咨询",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "Aureline Yarns 是[城市]的色纱制造商与出口商。我们供应涤纶、棉与尼龙色纱——含段染与加捻结构——服务全球针织、梭织与纺织项目。",
+    "copyright": "All rights reserved.",
+    "foundedYear": "[年份]",
+    "columns": [
+      {
+        "title": "Aureline Yarns",
+        "body": "Aureline Yarns 是[城市]的色纱制造商与出口商。我们供应涤纶、棉与尼龙色纱——含段染与加捻结构——服务全球针织、梭织与纺织项目。",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "产品",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "涤纶色纱",
+            "href": "/products/polyester-dyed-yarn"
+          },
+          {
+            "label": "段染纱",
+            "href": "/products/space-dyed-yarn"
+          },
+          {
+            "label": "加捻色纱",
+            "href": "/products/twisted-yarn"
+          },
+          {
+            "label": "FDY 色纱",
+            "href": "/products/fdy-dyed-yarn"
+          },
+          {
+            "label": "棉色纱",
+            "href": "/products/cotton-dyed-yarn"
+          },
+          {
+            "label": "尼龙色纱",
+            "href": "/products/nylon-dyed-yarn"
+          },
+          {
+            "label": "全部产品",
+            "href": "/products"
+          }
+        ]
+      },
+      {
+        "title": "公司",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "关于我们",
+            "href": "/about"
+          },
+          {
+            "label": "品质与色牢",
+            "href": "/quality"
+          },
+          {
+            "label": "打色与供货能力",
+            "href": "/capabilities"
+          },
+          {
+            "label": "常见问题",
+            "href": "/faq"
+          },
+          {
+            "label": "联系我们",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "联系",
+        "body": "",
+        "links": [
+          {
+            "label": "地址：[城市]",
+            "href": "/contact"
+          },
+          {
+            "label": "电话：[Phone]",
+            "href": "/contact"
+          },
+          {
+            "label": "邮箱：[Email]",
+            "href": "mailto:"
+          },
+          {
+            "label": "WhatsApp：[Phone]",
+            "href": "#"
+          },
+          {
+            "label": "获取报价",
+            "href": "/contact/?intent=quote"
+          }
+        ],
+        "note": "工作时间：周一至周六，09:00–18:00（中国时间）"
+      }
+    ]
+  }
+}

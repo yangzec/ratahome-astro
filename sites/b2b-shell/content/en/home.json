@@ -1,0 +1,191 @@
+{
+  "hero": {
+    "eyebrow": "[City] · OEM",
+    "title": "[Brand] manufacturer & exporter",
+    "description": "OEM and wholesale supply from sampling through packed shipment.",
+    "image": "/images/placeholder-hero.svg",
+    "imageAlt": "[Brand] factory floor",
+    "primaryHref": "/contact/?intent=quote",
+    "secondaryHref": "/products"
+  },
+  "assurances": [],
+  "metrics": [],
+  "audiences": {
+    "title": "A factory partner in [City]",
+    "description": "[Brand] develops and manufactures programs for international buyers. Our team supports sampling, bulk production, packing, and export documents.",
+    "items": [
+      {
+        "title": "About Us",
+        "description": "The factory behind the program.",
+        "href": "/about",
+        "image": "/images/placeholder-card.svg"
+      },
+      {
+        "title": "Factory",
+        "description": "Production, QC, and packing.",
+        "href": "/factory",
+        "image": "/images/placeholder-card.svg"
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Product lines",
+    "description": "Open a line to review specs, then request a quote on the constructions that fit your program.",
+    "items": [
+      {
+        "title": "Product line A",
+        "description": "Range A for OEM and wholesale programs.",
+        "image": "/images/placeholder-card.svg",
+        "href": "/products/product-line-a"
+      },
+      {
+        "title": "Product line B",
+        "description": "Range B for OEM and wholesale programs.",
+        "image": "/images/placeholder-card.svg",
+        "href": "/products/product-line-b"
+      },
+      {
+        "title": "Product line C",
+        "description": "Range C for OEM and wholesale programs.",
+        "image": "/images/placeholder-card.svg",
+        "href": "/products/product-line-c"
+      }
+    ]
+  },
+  "process": {
+    "title": "How an OEM program runs",
+    "description": "From approved sample to export cartons, we run private-label and custom programs for brand and wholesale buyers.",
+    "image": "/images/placeholder-card.svg",
+    "imageAlt": "Sampling table for spec review",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Brief & feasibility",
+        "description": "Send a spec, photo, or reference sample—we confirm construction and material options."
+      },
+      {
+        "step": "02",
+        "title": "Sampling",
+        "description": "You receive samples for review before bulk."
+      },
+      {
+        "step": "03",
+        "title": "Bulk production",
+        "description": "Confirmed specs go to production with in-process checks."
+      },
+      {
+        "step": "04",
+        "title": "QC & packing",
+        "description": "Pre-shipment inspection and export-ready cartons."
+      },
+      {
+        "step": "05",
+        "title": "Shipping",
+        "description": "Documents and logistics prepared for your destination market."
+      }
+    ]
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "OEM service",
+    "title": "OEM service, production range, and packing",
+    "description": "Build programs with clear construction and packing choices.",
+    "commitment": "We work with brands, wholesalers, and trading offices. Named case studies appear only with client authorization.",
+    "cases": [
+      {
+        "question": "01",
+        "title": "OEM programs",
+        "description": "Build from your spec or develop with our sampling team."
+      },
+      {
+        "question": "02",
+        "title": "Production range",
+        "description": "Product lines for brand and wholesale assortments."
+      },
+      {
+        "question": "03",
+        "title": "Custom packing",
+        "description": "Labels, inner packs, and export cartons prepared to your brief."
+      }
+    ]
+  },
+  "rooms": {
+    "title": "Product lines",
+    "items": [
+      {
+        "label": "Product line A",
+        "slug": "product-line-a",
+        "href": "/products/product-line-a"
+      },
+      {
+        "label": "Product line B",
+        "slug": "product-line-b",
+        "href": "/products/product-line-b"
+      },
+      {
+        "label": "Product line C",
+        "slug": "product-line-c",
+        "href": "/products/product-line-c"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Featured products",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "Why buyers work with [Brand]",
+    "description": "Direct factory partnership for OEM programs.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Direct factory partnership",
+        "description": "Work with the manufacturing team on materials, construction, and packing."
+      },
+      {
+        "step": "02",
+        "title": "One project owner",
+        "description": "Development, sampling, bulk, branding, and export documents under one contact."
+      },
+      {
+        "step": "03",
+        "title": "Quality you can inspect",
+        "description": "In-line and pre-shipment checks against the approved sample."
+      },
+      {
+        "step": "04",
+        "title": "On-time delivery focus",
+        "description": "Clear sample and bulk schedules, with updates when materials or capacity change."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to start a program?",
+    "description": "Send product references, estimated quantity, and destination market. We reply within one business day with next steps.",
+    "formTitle": "Get Quote",
+    "formDescription": "A short note on product, quantity, and timing helps us reply within one business day.",
+    "steps": [
+      "Brief & feasibility",
+      "Sampling",
+      "Bulk production"
+    ]
+  },
+  "footerFeatures": [
+    {
+      "title": "OEM manufacturing",
+      "description": "Private label for brands and distributors"
+    },
+    {
+      "title": "[City]",
+      "description": "Production, finishing, and packing"
+    },
+    {
+      "title": "Product lines A · B · C",
+      "description": "Ranges for brand assortments"
+    },
+    {
+      "title": "Get Quote",
+      "description": "[Email]"
+    }
+  ]
+}

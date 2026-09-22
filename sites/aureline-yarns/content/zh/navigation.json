@@ -1,0 +1,82 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "首页",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "关于我们",
+      "href": "/about"
+    },
+    {
+      "id": "products",
+      "label": "产品",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "纱线系列",
+          "links": [
+            {
+              "label": "涤纶色纱",
+              "href": "/products/polyester-dyed-yarn",
+              "description": "面向针织与梭织项目的涤纶色纱，强调批次间色号稳定。"
+            },
+            {
+              "label": "段染纱",
+              "href": "/products/space-dyed-yarn",
+              "description": "多段色彩纱线，适用于地毯、时装针织与装饰面料。"
+            },
+            {
+              "label": "加捻色纱",
+              "href": "/products/twisted-yarn",
+              "description": "加捻色纱，为面料提供强度、握持感或纹理效果。"
+            },
+            {
+              "label": "FDY 色纱",
+              "href": "/products/fdy-dyed-yarn",
+              "description": "全拉伸染色纱，适用于需要光滑长丝手感的梭织等用途。"
+            },
+            {
+              "label": "棉色纱",
+              "href": "/products/cotton-dyed-yarn",
+              "description": "棉色纱，适用于需要天然纤维舒适感的针织与梭织项目。"
+            },
+            {
+              "label": "尼龙色纱",
+              "href": "/products/nylon-dyed-yarn",
+              "description": "尼龙与细旦尼龙色纱，适用于弹力、运动与特种面料。"
+            }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "查看全部产品",
+        "description": "浏览色纱系列并申请报价",
+        "href": "/products",
+        "image": "/images/series-polyester.webp"
+      }
+    },
+    {
+      "id": "quality",
+      "label": "品质与色牢",
+      "href": "/quality"
+    },
+    {
+      "id": "capabilities",
+      "label": "打色与供货能力",
+      "href": "/capabilities"
+    },
+    {
+      "id": "faq",
+      "label": "常见问题",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "联系我们",
+      "href": "/contact"
+    }
+  ]
+}

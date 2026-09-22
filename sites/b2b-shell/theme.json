@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "accentName": "slate",
+    "notes": "Empty B2B shell. Neutral slate accent. Not a customer site — do not deploy as a brand. Replace tokens after create."
+  },
+  "colors": {
+    "accent": "55 65 81",
+    "ink": "24 24 27",
+    "charcoal": "18 18 20",
+    "grayText": "63 63 70",
+    "grayMuted": "113 113 122",
+    "cream": "250 250 249",
+    "creamDeep": "231 229 228",
+    "stone": "168 162 158",
+    "border": "214 211 209",
+    "olive": "68 64 60",
+    "oliveDark": "28 25 23",
+    "chrome": "15 15 16"
+  },
+  "fonts": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "label": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "display": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  },
+  "radius": {
+    "hero": "16px",
+    "image": "12px",
+    "step": "12px",
+    "pill": "100px"
+  }
+}

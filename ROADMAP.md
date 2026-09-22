@@ -17,7 +17,8 @@
 | 阶段 2 试点行业 | **面料、服装、家纺** | 单站单部署，共用 `b2b-textile` 模板 |
 | 阶段 3 试点行业 | **包装、印刷** | 多站单 Worker，验证 Host 路由与租户隔离 |
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
-| D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例，查询 / 写入强制带 `site_id` |
+| D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例 `trade-platform`，查询 / 写入强制带 `site_id`；**不**拆每站独立库。产品目录是各站静态 content JSON，须在灌装时整份替换 |
+| 建站模板 | **`sites/b2b-shell` 空壳** | `b2b-manufacturing` 的 create 源；禁止再从 `ratahome-furniture` / 袜子站克隆行业文案 |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
 
 ---
@@ -39,7 +40,7 @@
 - [ ] Cloudflare 生产部署（需 `wrangler login` + D1/R2 创建）
 - [x] 统一 `[locale]` 路由（`site-paths.ts` + `[...slug].astro`，仅保留 `zh/index.astro`）
 - [x] `packages/sections` 独立包（12 Section + ui/forms + registry）
-- [x] `site-cli` 建站脚手架（create / validate / deploy）
+- [x] `site-cli` 建站脚手架（create / validate / deploy）；create 源改为 `sites/b2b-shell` 空壳
 - [ ] 阶段 2 试点站（面料 / 服装 / 家纺）
 - [ ] 阶段 3 多站试点（包装 / 印刷）
 - [ ] 阶段 4 扩展站（运动 / 户外）
@@ -285,6 +286,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 - 每个站点 `site.config.ts` 声明 `siteId`（如 `ratahome-furniture`、`textile-fabric`）
 - API 层从 `locals` / 环境变量读取 `SITE_ID`，**禁止**无 `site_id` 的写入与列表查询
 - 本地开发：各站 `wrangler.jsonc` 指向同一 D1 binding 名（如 `DB`），`site_id` 区分数据
+- 产品 / 页面买家文案在各站 `content/` 静态 JSON，**不**走 D1。共享库隔离不了未替换的家具 / 袜子文案；灌装必须整份覆盖 content
 
 ### 与部署模式关系
 
@@ -328,6 +330,8 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-22 11:47 | 重部署 Aureline Worker `aureline-yarns`（Version `6c408e3d-ba49-4760-a765-4436cf9242fb`）；EN https://aureline-yarns.yangzec.workers.dev/  ZH https://aureline-yarns.yangzec.workers.dev/zh/ ；不合 main |
+| 2026-09-22 11:45 | `b2b-manufacturing` create 源改为空壳 `sites/b2b-shell`；Aureline 城市 / 电话 / 邮箱改为 TBD；USAGE / AGENTS / D1 文档写明共享库 + 静态 content 须整份替换；不合 main |
 | 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
 | 2026-09-21 20:43 | LoftKnit 12 张占位 SVG 换成真实 webp（hero 16:9，factory/process/series 4:3）；EN/ZH `home.json` 路径与 alt 去掉 Placeholder；`pages.json` / `navigation.json` 同步路径防 404；About 死链改 `factory-knit.webp`；Worker Version `e688b63e-234a-40b0-be12-1052fe84c5f9`；不合 main |
 | 2026-09-21 20:01 | 新增 `sites/loftknit-oem`（袜子 OEM 蓝图套站，indigo 强调色；不合 main） |
@@ -346,8 +350,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
 | 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
 | 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
-| 2026-09-17 14:25 | 新增 `docs/DEPLOY.md` Cloudflare 部署指南 |
-| 2026-09-17 12:35 | 修复导航栏：BaseLayout 主题 CSS 变量正确注入 |
 
 ---
 
@@ -355,6 +357,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-22 11:47 | 空壳 create + Aureline 清理 | `pnpm site-cli validate`（b2b-shell / aureline / 三已填实例）；`.tmp/create-spotcheck` 下 create `probe-empty` 后扫描 content 无 Foshan/sofa/sock；`pnpm --filter b2b-shell build` 与 `aureline-yarns` build；`cf:deploy` 后 curl EN/ZH 首页、产品、涤纶、联系、关于 | 通过；预览 200；无 Shaoxing/绍兴/LoftKnit/sock；TBD 标记在线；Version `6c408e3d-ba49-4760-a765-4436cf9242fb` |
 | 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
 | 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
 | 2026-09-21 18:05 | AtelierBag OEM Hero / About / Why | curl EN/ZH 首页 200；CDP 测 Hero `996px`（`1100vh - header`）；About 双列等宽、两图 `623×467`；Why 新文案在线 | 通过；无右空、两图同高；Version `46b5d0e9-d56e-413f-9bfe-4994d1beaf28` |

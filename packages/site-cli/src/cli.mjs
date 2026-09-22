@@ -36,8 +36,8 @@ ${Object.entries(loadTemplates())
 
 Examples:
   site-cli create textile-fabric --from b2b-manufacturing --name "Textile Fabric"
-  site-cli validate ratahome-furniture
-  site-cli deploy ratahome-furniture --dry-run
+  site-cli validate b2b-shell
+  site-cli deploy textile-fabric --dry-run
 `);
 }
 

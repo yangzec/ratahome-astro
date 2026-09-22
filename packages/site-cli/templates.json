@@ -1,6 +1,6 @@
 {
   "b2b-manufacturing": {
-    "source": "ratahome-furniture",
-    "description": "B2B manufacturing — Hero, capabilities grid, process, case studies"
+    "source": "b2b-shell",
+    "description": "Empty B2B manufacturing shell — Hero, capabilities, process, cases. Industry copy is injected after create."
   }
 }

@@ -12,6 +12,10 @@ export function deploySite(slug, { dryRun = false, root = getWorkspaceRoot() } =
     throw new Error(`sites/${slug}/package.json has no name field`);
   }
 
+  if (slug === 'b2b-shell' || packageName === 'b2b-shell') {
+    throw new Error('b2b-shell is the empty create template; do not deploy it as a customer site');
+  }
+
   const steps = [
     { label: 'build', cmd: 'pnpm', args: ['--filter', packageName, 'build'] },
     { label: 'deploy', cmd: 'pnpm', args: ['--filter', packageName, 'exec', 'wrangler', 'deploy'] },

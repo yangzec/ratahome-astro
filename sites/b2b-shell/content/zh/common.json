@@ -1,0 +1,146 @@
+{
+  "site": {
+    "name": "[品牌]",
+    "title": "[品牌] | 制造商与出口商",
+    "description": "[品牌] 是位于 [城市] 的制造商与出口商。我们为工厂、品牌与贸易伙伴提供 OEM 与批发项目。",
+    "whatsapp": "[电话]",
+    "whatsappUrl": "#",
+    "hours": "周一至周六 09:00–18:00",
+    "location": "[城市]",
+    "address": "[地址]",
+    "phone": "[电话]",
+    "email": "[邮箱]",
+    "tagline": "制造商与出口商 · 服务工厂、品牌与贸易伙伴的 OEM 供应"
+  },
+  "buttons": {
+    "startProject": "获取报价",
+    "uploadFloorPlan": "获取报价",
+    "factoryTour": "浏览产品",
+    "sendFloorPlan": "发送留言",
+    "sendMessage": "发送留言",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "查看全部",
+    "seeJourney": "合作流程",
+    "readWarranty": "质量",
+    "exploreProjects": "浏览产品",
+    "requestQuote": "获取报价",
+    "discussJoinery": "联系我们"
+  },
+  "form": {
+    "name": "姓名",
+    "email": "邮箱",
+    "phone": "电话",
+    "company": "公司",
+    "whatsapp": "WhatsApp",
+    "projectType": "询盘类型",
+    "message": "留言",
+    "projectDetails": "留言",
+    "floorPlan": "附件（PDF / JPG）",
+    "privacy": "请简要说明产品、数量与交期，我们会在一个工作日内回复。",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "[电话]",
+    "companyPlaceholder": "工厂、品牌或贸易公司",
+    "whatsappPlaceholder": "WhatsApp 号码",
+    "messagePlaceholder": "产品、数量与目的市场",
+    "detailsPlaceholder": "产品、数量与目的市场",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "获取报价",
+      "design": "联系我们",
+      "development": "索样",
+      "hospitality": "产品询盘",
+      "other": "其他"
+    }
+  },
+  "footer": {
+    "description": "[品牌] 是位于 [城市] 的制造商与出口商。我们为工厂、品牌与贸易伙伴提供 OEM 与批发项目。",
+    "copyright": "版权所有。",
+    "foundedYear": "[年份]",
+    "columns": [
+      {
+        "title": "[品牌]",
+        "body": "[品牌] 是位于 [城市] 的制造商与出口商。我们为工厂、品牌与贸易伙伴提供 OEM 与批发项目。",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "产品",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "产品线 A",
+            "href": "/zh/products/product-line-a"
+          },
+          {
+            "label": "产品线 B",
+            "href": "/zh/products/product-line-b"
+          },
+          {
+            "label": "产品线 C",
+            "href": "/zh/products/product-line-c"
+          },
+          {
+            "label": "全部产品",
+            "href": "/zh/products"
+          }
+        ]
+      },
+      {
+        "title": "公司",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "关于我们",
+            "href": "/zh/about"
+          },
+          {
+            "label": "工厂",
+            "href": "/zh/factory"
+          },
+          {
+            "label": "能力",
+            "href": "/zh/capabilities"
+          },
+          {
+            "label": "常见问题",
+            "href": "/zh/faq"
+          },
+          {
+            "label": "联系我们",
+            "href": "/zh/contact"
+          }
+        ]
+      },
+      {
+        "title": "联系",
+        "body": "",
+        "links": [
+          {
+            "label": "地址：[地址]",
+            "href": "/zh/contact"
+          },
+          {
+            "label": "电话：[电话]",
+            "href": "/zh/contact"
+          },
+          {
+            "label": "邮箱：[邮箱]",
+            "href": "mailto:"
+          },
+          {
+            "label": "WhatsApp：[电话]",
+            "href": "#"
+          },
+          {
+            "label": "获取报价",
+            "href": "/zh/contact/?intent=quote"
+          }
+        ],
+        "note": "时间：周一至周六 09:00–18:00"
+      }
+    ]
+  }
+}
