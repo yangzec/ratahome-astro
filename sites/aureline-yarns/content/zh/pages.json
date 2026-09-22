@@ -1,0 +1,634 @@
+{
+  "about": {
+    "title": "关于 Aureline Yarns | 绍兴色纱",
+    "eyebrow": "关于 Aureline Yarns",
+    "heroTitle": "关于 Aureline Yarns",
+    "heroDescription": "总部位于中国绍兴的色纱制造商。",
+    "workflowTitle": "我们的故事",
+    "workflowDescription": "Aureline Yarns Co., Ltd. 是总部位于中国绍兴的色纱制造商。我们与纱厂、品牌与出口采购方合作涤纶、棉与尼龙色纱项目——色号开发、打样、大货、包装与单证——让纱线批次到达后即可进入下一工序。",
+    "story": "Aureline Yarns Co., Ltd. 是总部位于中国绍兴的色纱制造商。我们与纱厂、品牌与出口采购方合作涤纶、棉与尼龙色纱项目——色号开发、打样、大货、包装与单证——让纱线批次到达后即可进入下一工序。",
+    "approachTitle": "浏览产品 · 获取报价",
+    "approach": "打开产品中心，或为下一个色纱项目启动报价。",
+    "glanceTitle": "一览",
+    "closingTitle": "浏览产品 · 获取报价",
+    "closingDescription": "打开产品中心，或为下一个色纱项目启动报价。"
+  },
+  "collections": {
+    "title": "色纱产品中心",
+    "heroTitle": "色纱产品中心",
+    "heroDescription": "浏览涤纶、段染、加捻、FDY、棉与尼龙色纱系列。打开产品页查看技术细节，再对适合您面料线的结构申请样品或报价。",
+    "packagesTitle": "纱线系列",
+    "benefitsTitle": "获取报价 · 申请样品",
+    "benefitsDescription": "对入选系列申请工厂报价或样品。",
+    "stylesTitle": "按系列筛选",
+    "stylesDescription": "纤维 · 形态 · 用途",
+    "styles": [
+      "全部产品",
+      "涤纶色纱",
+      "段染纱",
+      "加捻色纱",
+      "FDY 色纱",
+      "棉色纱",
+      "尼龙色纱"
+    ]
+  },
+  "contact": {
+    "title": "联系我们 | 获取报价",
+    "heroTitle": "联系我们",
+    "heroDescription": "纤维类型、旦数、目标色号、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "getInTouch": "工厂联系方式",
+    "helper": "纤维类型、旦数、目标色号、数量与交期的简短说明，有助于我们在一个工作日内回复。",
+    "whatsappLine": "WhatsApp +86 138 0000 0000",
+    "visitNote": "绍兴工厂参观需预约。"
+  },
+  "slugs": {
+    "polyester-dyed-yarn": {
+      "title": "涤纶色纱 — OEM 与出口",
+      "description": "面向针织与梭织项目的涤纶色纱，强调批次间色号稳定。",
+      "content": "面向纱厂与品牌项目了解涤纶色纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n常用旦数与光泽的 DTY 等涤纶色纱，适用于服装与家纺。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "段染纱",
+          "href": "/products/space-dyed-yarn"
+        },
+        {
+          "label": "加捻色纱",
+          "href": "/products/twisted-yarn"
+        },
+        {
+          "label": "FDY 色纱",
+          "href": "/products/fdy-dyed-yarn"
+        }
+      ]
+    },
+    "space-dyed-yarn": {
+      "title": "段染纱 — OEM 与出口",
+      "description": "多段色彩纱线，适用于地毯、时装针织与装饰面料。",
+      "content": "面向纱厂与品牌项目了解段染纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n多色与渐变效果，适用于地毯、时装针织与装饰面料。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "加捻色纱",
+          "href": "/products/twisted-yarn"
+        },
+        {
+          "label": "FDY 色纱",
+          "href": "/products/fdy-dyed-yarn"
+        },
+        {
+          "label": "棉色纱",
+          "href": "/products/cotton-dyed-yarn"
+        }
+      ]
+    },
+    "twisted-yarn": {
+      "title": "加捻色纱 — OEM 与出口",
+      "description": "加捻色纱，为面料提供强度、握持感或纹理效果。",
+      "content": "面向纱厂与品牌项目了解加捻色纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n单股、双股与多股加捻色纱，兼顾强度与纹理。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "FDY 色纱",
+          "href": "/products/fdy-dyed-yarn"
+        },
+        {
+          "label": "棉色纱",
+          "href": "/products/cotton-dyed-yarn"
+        },
+        {
+          "label": "尼龙色纱",
+          "href": "/products/nylon-dyed-yarn"
+        }
+      ]
+    },
+    "fdy-dyed-yarn": {
+      "title": "FDY 色纱 — OEM 与出口",
+      "description": "全拉伸染色纱，适用于需要光滑长丝手感的梭织等用途。",
+      "content": "面向纱厂与品牌项目了解FDY 色纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n全拉伸染色纱，适用于梭织及需要光滑长丝手感的场景。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "棉色纱",
+          "href": "/products/cotton-dyed-yarn"
+        },
+        {
+          "label": "尼龙色纱",
+          "href": "/products/nylon-dyed-yarn"
+        },
+        {
+          "label": "涤纶色纱",
+          "href": "/products/polyester-dyed-yarn"
+        }
+      ]
+    },
+    "cotton-dyed-yarn": {
+      "title": "棉色纱 — OEM 与出口",
+      "description": "棉色纱，适用于需要天然纤维舒适感的针织与梭织项目。",
+      "content": "面向纱厂与品牌项目了解棉色纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n棉色纱，适用于追求天然纤维舒适感的针织与梭织项目。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "尼龙色纱",
+          "href": "/products/nylon-dyed-yarn"
+        },
+        {
+          "label": "涤纶色纱",
+          "href": "/products/polyester-dyed-yarn"
+        },
+        {
+          "label": "段染纱",
+          "href": "/products/space-dyed-yarn"
+        }
+      ]
+    },
+    "nylon-dyed-yarn": {
+      "title": "尼龙色纱 — OEM 与出口",
+      "description": "尼龙与细旦尼龙色纱，适用于弹力、运动与特种面料。",
+      "content": "面向纱厂与品牌项目了解尼龙色纱。在打样阶段确认纤维、旦数、光泽与色号——再对入选结构申请工厂报价。\n\n尼龙与细旦尼龙色纱，适用于弹力、运动与特种面料。",
+      "bullets": [
+        "打样时确认纤维、旦数与光泽",
+        "对照 Pantone、色样或在行色号打色",
+        "按目的市场准备出口包装",
+        "对入选结构报价"
+      ],
+      "specs": [
+        {
+          "parameter": "纤维 / 纱线类型",
+          "value": "按项目确认"
+        },
+        {
+          "parameter": "旦数 / 支数范围",
+          "value": "常用范围 — 打样确认"
+        },
+        {
+          "parameter": "光泽",
+          "value": "半消光 / 全消光 / 有光 — 视适用情况"
+        },
+        {
+          "parameter": "形态",
+          "value": "DTY / FDY / 加捻 / 段染 — 视适用情况"
+        },
+        {
+          "parameter": "颜色 / 色号选项",
+          "value": "打色与大货色号确认"
+        },
+        {
+          "parameter": "色牢度说明",
+          "value": "按最终用途做水洗、日晒与摩擦检查"
+        },
+        {
+          "parameter": "样品交期",
+          "value": "视色号与结构而定"
+        },
+        {
+          "parameter": "大货交期",
+          "value": "样品批准与产能确认后"
+        },
+        {
+          "parameter": "包装",
+          "value": "按收货纱厂要求的纱筒、纸箱与标签"
+        },
+        {
+          "parameter": "运输",
+          "value": "按目的市场准备单证"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "申请本纱线系列的工厂报价或样品。",
+      "related": [
+        {
+          "label": "涤纶色纱",
+          "href": "/products/polyester-dyed-yarn"
+        },
+        {
+          "label": "段染纱",
+          "href": "/products/space-dyed-yarn"
+        },
+        {
+          "label": "加捻色纱",
+          "href": "/products/twisted-yarn"
+        }
+      ]
+    },
+    "quality": {
+      "title": "品质与色牢度",
+      "description": "色号批准是订单的开始——不是检查的结束。我们在出货前对照参考样品检验批次。",
+      "content": "色号批准是订单的开始——不是检查的结束。我们在出货前对照参考样品检验批次。",
+      "sections": [
+        {
+          "title": "品质主题",
+          "body": "按您的市场与最终用途，可应要求提供现行认证与检测报告。",
+          "items": [
+            "色号控制 — 对照 Pantone、色样或在行色号做打色与大货确认。",
+            "色牢度 — 按询盘时说明的最终用途做水洗、日晒与摩擦检查。",
+            "物理检查 — 按纱线类型做外观、卷绕与强力检查。",
+            "单证 — 当市场需要时，提供检测报告与认证副本。"
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "title": "打色、打样与供货",
+      "description": "从首次色号说明到出口纸箱，由同一团队负责，让纱厂或品牌项目按计划推进。",
+      "content": "从首次色号说明到出口纸箱，由同一团队负责，让纱厂或品牌项目按计划推进。",
+      "sections": [
+        {
+          "title": "色纱项目如何推进",
+          "body": "样品交期视色号复杂度而定；大货在打色批准后启动。",
+          "items": [
+            "需求说明 — 提供纤维、旦数、光泽、目标色号、数量与目的市场。",
+            "打色 / 样品 — 您在安排大货前确认色号与手感。",
+            "大货染色 — 确认规格进入生产，并做过程色号检查。",
+            "包装 — 纱筒与纸箱按收货现场要求贴标。",
+            "出口 — 按目的市场准备单证。"
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "报价所需信息、定制色号、打样、纱线类型与回复时效。",
+      "content": "面向纱厂、品牌与贸易伙伴的色纱 OEM 简答。",
+      "sections": [
+        {
+          "title": "采购 FAQ",
+          "body": "我们力争在一个工作日内回复询盘。",
+          "items": [
+            "首次报价需要什么？ — 纤维类型、旦数或支数范围、光泽、目标色号（Pantone/色样/色号）、预估数量与目的市场。",
+            "是否支持定制色号？ — 是——在正式大货前，对照您的参考做打色与大货色号确认。",
+            "能否先要样品？ — 可以——在锁定大货计划前，通过产品页或联系表申请样品。",
+            "供应哪些纱线类型？ — 涤纶色纱、段染纱、加捻色纱、FDY 色纱、棉色纱与尼龙色纱——详见产品中心。",
+            "回复有多快？ — 我们力争在一个工作日内回复询盘。"
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "description": "Aureline Yarns 如何处理询盘数据。",
+      "content": "Aureline Yarns 使用您提交的联系信息回复报价与项目说明。我们不出售询盘数据。如需更新或删除信息，请发信至 sales@aurelineyarns.com。"
+    },
+    "terms": {
+      "title": "使用条款",
+      "description": "使用 Aureline Yarns 网站的条款。",
+      "content": "本网站内容仅供产品信息与询盘。规格与交期以每份书面报价确认为准。此处内容不构成有约束力的要约。商务条款以 Aureline Yarns Co., Ltd. 出具的文件为准。"
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "获取报价",
+      "description": "一个工作日内回复下一步。"
+    },
+    {
+      "title": "申请样品",
+      "description": "大货前确认色号与手感。"
+    },
+    {
+      "title": "打色",
+      "description": "Pantone、色样或在行色号。"
+    },
+    {
+      "title": "出口包装",
+      "description": "面向收货纱厂的纱筒与纸箱。"
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "涤纶色纱",
+      "description": "常用旦数与光泽的 DTY 等涤纶色纱，适用于服装与家纺。",
+      "image": "/images/series-polyester.webp",
+      "href": "/products/polyester-dyed-yarn"
+    },
+    {
+      "title": "段染纱",
+      "description": "多色与渐变效果，适用于地毯、时装针织与装饰面料。",
+      "image": "/images/series-space.webp",
+      "href": "/products/space-dyed-yarn"
+    },
+    {
+      "title": "加捻色纱",
+      "description": "单股、双股与多股加捻色纱，兼顾强度与纹理。",
+      "image": "/images/series-twisted.webp",
+      "href": "/products/twisted-yarn"
+    },
+    {
+      "title": "FDY 色纱",
+      "description": "全拉伸染色纱，适用于梭织及需要光滑长丝手感的场景。",
+      "image": "/images/series-fdy.webp",
+      "href": "/products/fdy-dyed-yarn"
+    },
+    {
+      "title": "棉色纱",
+      "description": "棉色纱，适用于追求天然纤维舒适感的针织与梭织项目。",
+      "image": "/images/series-cotton.webp",
+      "href": "/products/cotton-dyed-yarn"
+    },
+    {
+      "title": "尼龙色纱",
+      "description": "尼龙与细旦尼龙色纱，适用于弹力、运动与特种面料。",
+      "image": "/images/series-nylon.webp",
+      "href": "/products/nylon-dyed-yarn"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "基地",
+      "description": "中国绍兴"
+    },
+    {
+      "step": "02",
+      "title": "重心",
+      "description": "色纱 OEM 与出口"
+    },
+    {
+      "step": "03",
+      "title": "系列",
+      "description": "涤纶 · 棉 · 尼龙"
+    },
+    {
+      "step": "04",
+      "title": "流程",
+      "description": "打色 → 大货 → 包装"
+    },
+    {
+      "step": "05",
+      "title": "联系",
+      "description": "sales@aurelineyarns.com"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "纱厂",
+      "description": "面向针织与梭织线的可复现批次。"
+    },
+    {
+      "title": "品牌",
+      "description": "能经得起补货的色号库。"
+    },
+    {
+      "title": "贸易伙伴",
+      "description": "清晰的规格、包装与出口单证。"
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "查看规格",
+      "description": "打开系列了解纤维、旦数与色号说明。"
+    },
+    {
+      "title": "申请样品",
+      "description": "锁定大货前确认色号。"
+    },
+    {
+      "title": "获取报价",
+      "description": "对入选结构提供工厂报价。"
+    }
+  ]
+}

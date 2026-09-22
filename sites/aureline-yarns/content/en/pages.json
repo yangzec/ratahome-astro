@@ -1,0 +1,634 @@
+{
+  "about": {
+    "title": "About Aureline Yarns | Shaoxing Dyed Yarn",
+    "eyebrow": "About Aureline Yarns",
+    "heroTitle": "About Aureline Yarns",
+    "heroDescription": "A dyed yarn manufacturer based in Shaoxing, China.",
+    "workflowTitle": "Our Story",
+    "workflowDescription": "Aureline Yarns Co., Ltd. is a dyed yarn manufacturer based in Shaoxing, China. We partner with mills, brands, and export buyers on polyester, cotton, and nylon dyed yarn programs—shade development, sampling, bulk production, packing, and documents—so your yarn lots arrive ready for the next process.",
+    "story": "Aureline Yarns Co., Ltd. is a dyed yarn manufacturer based in Shaoxing, China. We partner with mills, brands, and export buyers on polyester, cotton, and nylon dyed yarn programs—shade development, sampling, bulk production, packing, and documents—so your yarn lots arrive ready for the next process.",
+    "approachTitle": "Browse Products · Get Quote",
+    "approach": "Open the product center, or start a quote for your next dyed yarn program.",
+    "glanceTitle": "At a glance",
+    "closingTitle": "Browse Products · Get Quote",
+    "closingDescription": "Open the product center, or start a quote for your next dyed yarn program."
+  },
+  "collections": {
+    "title": "Dyed yarn product center",
+    "heroTitle": "Dyed yarn product center",
+    "heroDescription": "Browse polyester, space-dyed, twisted, FDY, cotton, and nylon dyed yarn ranges. Open a product page for technical details, then request a sample or quote on the constructions that fit your fabric line.",
+    "packagesTitle": "Yarn ranges",
+    "benefitsTitle": "Get Quote · Request Sample",
+    "benefitsDescription": "Request factory pricing or a sample on the ranges you shortlist.",
+    "stylesTitle": "Filter by range",
+    "stylesDescription": "Fibre · Form · End use",
+    "styles": [
+      "All products",
+      "Polyester Dyed Yarn",
+      "Space Dyed Yarn",
+      "Twisted Yarn",
+      "FDY Dyed Yarn",
+      "Cotton Dyed Yarn",
+      "Nylon Dyed Yarn"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us | Get Quote",
+    "heroTitle": "Contact Us",
+    "heroDescription": "A short note on fibre type, denier, shade target, quantity, and timing helps us reply within one business day.",
+    "getInTouch": "Factory contacts",
+    "helper": "A short note on fibre type, denier, shade target, quantity, and timing helps us reply within one business day.",
+    "whatsappLine": "WhatsApp +86 138 0000 0000",
+    "visitNote": "Factory visits in Shaoxing are by appointment."
+  },
+  "slugs": {
+    "polyester-dyed-yarn": {
+      "title": "Polyester Dyed Yarn — OEM & export",
+      "description": "Dyed polyester yarns for knitting and weaving programs that need stable shade across repeat lots.",
+      "content": "Explore polyester dyed yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nDTY and related polyester dyed yarns in common deniers and lustres for apparel and home textiles.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "Space Dyed Yarn",
+          "href": "/products/space-dyed-yarn"
+        },
+        {
+          "label": "Twisted Yarn",
+          "href": "/products/twisted-yarn"
+        },
+        {
+          "label": "FDY Dyed Yarn",
+          "href": "/products/fdy-dyed-yarn"
+        }
+      ]
+    },
+    "space-dyed-yarn": {
+      "title": "Space Dyed Yarn — OEM & export",
+      "description": "Multi-colour dyed yarns for carpets, fashion knits, and decorative fabrics that need segmented colour effects.",
+      "content": "Explore space dyed yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nMulti-colour and ombre effects for carpets, fashion knits, and decorative fabrics.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "Twisted Yarn",
+          "href": "/products/twisted-yarn"
+        },
+        {
+          "label": "FDY Dyed Yarn",
+          "href": "/products/fdy-dyed-yarn"
+        },
+        {
+          "label": "Cotton Dyed Yarn",
+          "href": "/products/cotton-dyed-yarn"
+        }
+      ]
+    },
+    "twisted-yarn": {
+      "title": "Twisted Yarn — OEM & export",
+      "description": "Twisted dyed yarns for fabrics that need extra strength, grip, or textured surface interest.",
+      "content": "Explore twisted yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nSingle-, double-, and multi-ply twisted dyed yarns for strength and texture.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "FDY Dyed Yarn",
+          "href": "/products/fdy-dyed-yarn"
+        },
+        {
+          "label": "Cotton Dyed Yarn",
+          "href": "/products/cotton-dyed-yarn"
+        },
+        {
+          "label": "Nylon Dyed Yarn",
+          "href": "/products/nylon-dyed-yarn"
+        }
+      ]
+    },
+    "fdy-dyed-yarn": {
+      "title": "FDY Dyed Yarn — OEM & export",
+      "description": "Full drawn dyed yarns for weaving and applications that need a smooth filament hand.",
+      "content": "Explore fdy dyed yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nFull drawn dyed yarns for weaving and applications that need a smooth filament hand.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "Cotton Dyed Yarn",
+          "href": "/products/cotton-dyed-yarn"
+        },
+        {
+          "label": "Nylon Dyed Yarn",
+          "href": "/products/nylon-dyed-yarn"
+        },
+        {
+          "label": "Polyester Dyed Yarn",
+          "href": "/products/polyester-dyed-yarn"
+        }
+      ]
+    },
+    "cotton-dyed-yarn": {
+      "title": "Cotton Dyed Yarn — OEM & export",
+      "description": "Cotton dyed yarns for knitted and woven programs that need natural fibre comfort.",
+      "content": "Explore cotton dyed yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nCotton dyed yarns for knitted and woven programs that need natural fibre comfort.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "Nylon Dyed Yarn",
+          "href": "/products/nylon-dyed-yarn"
+        },
+        {
+          "label": "Polyester Dyed Yarn",
+          "href": "/products/polyester-dyed-yarn"
+        },
+        {
+          "label": "Space Dyed Yarn",
+          "href": "/products/space-dyed-yarn"
+        }
+      ]
+    },
+    "nylon-dyed-yarn": {
+      "title": "Nylon Dyed Yarn — OEM & export",
+      "description": "Nylon and micro-nylon dyed yarns for stretch, activewear, and specialty fabrics.",
+      "content": "Explore nylon dyed yarn for mill and brand programs. Confirm fibre, denier, lustre, and shade at sampling—then request factory pricing on the constructions you shortlist.\n\nNylon and micro-nylon dyed yarns for stretch, activewear, and specialty fabrics.",
+      "bullets": [
+        "Fibre, denier, and lustre confirmed at sampling",
+        "Shade matching against Pantone, swatch, or running code",
+        "Export packing for your destination market",
+        "Quote on shortlisted constructions"
+      ],
+      "specs": [
+        {
+          "parameter": "Fibre / yarn type",
+          "value": "Confirmed per program"
+        },
+        {
+          "parameter": "Denier / count range",
+          "value": "Common ranges — confirmed at sampling"
+        },
+        {
+          "parameter": "Lustre",
+          "value": "Semi dull / full dull / bright — as applicable"
+        },
+        {
+          "parameter": "Form",
+          "value": "DTY / FDY / twisted / space dyed — as applicable"
+        },
+        {
+          "parameter": "Colour / shade options",
+          "value": "Lab dips and bulk shade confirmation"
+        },
+        {
+          "parameter": "Colourfastness notes",
+          "value": "Wash, light, and rub checks aligned to end use"
+        },
+        {
+          "parameter": "Sample lead time",
+          "value": "Depends on shade and construction"
+        },
+        {
+          "parameter": "Bulk lead time",
+          "value": "After sample approval and capacity confirmation"
+        },
+        {
+          "parameter": "Packing",
+          "value": "Cones, cartons, and labels for your receiving mill"
+        },
+        {
+          "parameter": "Shipping",
+          "value": "Documents prepared for your destination market"
+        }
+      ],
+      "ctaTitle": "Get Quote",
+      "ctaBody": "Request factory pricing or a sample on this yarn range.",
+      "related": [
+        {
+          "label": "Polyester Dyed Yarn",
+          "href": "/products/polyester-dyed-yarn"
+        },
+        {
+          "label": "Space Dyed Yarn",
+          "href": "/products/space-dyed-yarn"
+        },
+        {
+          "label": "Twisted Yarn",
+          "href": "/products/twisted-yarn"
+        }
+      ]
+    },
+    "quality": {
+      "title": "Quality and colourfastness",
+      "description": "Shade approval is the start of the order—not the end of checking. We inspect lots against the reference sample before shipment.",
+      "content": "Shade approval is the start of the order—not the end of checking. We inspect lots against the reference sample before shipment.",
+      "sections": [
+        {
+          "title": "Quality topics",
+          "body": "Current certifications and test reports are shared on request for your market and end use.",
+          "items": [
+            "Shade control — Lab dips and bulk shade confirmation against Pantone, swatch, or running code.",
+            "Colourfastness — Wash, light, and rub checks aligned to the end use you name at inquiry.",
+            "Physical checks — Appearance, winding, and strength checks appropriate to the yarn type.",
+            "Documents — Test reports and certification copies shared when your market requires them."
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "title": "Colour matching, sampling, and supply",
+      "description": "From first shade brief to export cartons, one team owns the path so your mill or brand program stays on schedule.",
+      "content": "From first shade brief to export cartons, one team owns the path so your mill or brand program stays on schedule.",
+      "sections": [
+        {
+          "title": "How a dyed yarn program runs",
+          "body": "Sample timing depends on shade complexity; bulk starts after lab-dip approval.",
+          "items": [
+            "Brief — Share fibre, denier, lustre, shade target, quantity, and destination market.",
+            "Lab dip / sample — You review shade and hand-feel before bulk is scheduled.",
+            "Bulk dyeing — Confirmed specs move to production with in-process shade checks.",
+            "Packing — Cones and cartons labeled for your receiving site.",
+            "Export — Documents prepared for your destination market."
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "description": "Quote inputs, custom shades, sampling, yarn types, and reply timing.",
+      "content": "Short answers for mills, brands, and trading partners looking at a dyed yarn OEM.",
+      "sections": [
+        {
+          "title": "Buying FAQ",
+          "body": "We aim to respond to inquiries within one business day.",
+          "items": [
+            "What do you need for a first quote? — Fibre type, denier or count range, lustre, shade target (Pantone/swatch/code), estimated quantity, and destination market.",
+            "Do you support custom shades? — Yes—lab dips and bulk shade confirmation against your reference before full production.",
+            "Can I request samples first? — Yes—request a sample on the product page or contact form before you lock a bulk schedule.",
+            "Which yarn types do you supply? — Polyester dyed yarn, space dyed yarn, twisted yarn, FDY dyed yarn, cotton dyed yarn, and nylon dyed yarn—see the product center for details.",
+            "How fast do you reply? — We aim to respond to inquiries within one business day."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How Aureline Yarns handles enquiry data.",
+      "content": "Aureline Yarns uses the contact details you submit to reply to quotes and project briefs. We do not sell enquiry data. To update or delete information, write to sales@aurelineyarns.com."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "description": "Terms for using the Aureline Yarns website.",
+      "content": "Content on this website is for product information and enquiry. Specifications and lead times are confirmed in writing on each quotation. Nothing here is a binding offer. Commercial terms sit on documents issued by Aureline Yarns Co., Ltd."
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "Get Quote",
+      "description": "Reply within one business day with next steps."
+    },
+    {
+      "title": "Request Sample",
+      "description": "Confirm shade and hand-feel before bulk."
+    },
+    {
+      "title": "Shade matching",
+      "description": "Pantone, swatch, or running code."
+    },
+    {
+      "title": "Export packing",
+      "description": "Cones and cartons for your mill."
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "Polyester Dyed Yarn",
+      "description": "DTY and related polyester dyed yarns in common deniers and lustres for apparel and home textiles.",
+      "image": "/images/series-polyester.webp",
+      "href": "/products/polyester-dyed-yarn"
+    },
+    {
+      "title": "Space Dyed Yarn",
+      "description": "Multi-colour and ombre effects for carpets, fashion knits, and decorative fabrics.",
+      "image": "/images/series-space.webp",
+      "href": "/products/space-dyed-yarn"
+    },
+    {
+      "title": "Twisted Yarn",
+      "description": "Single-, double-, and multi-ply twisted dyed yarns for strength and texture.",
+      "image": "/images/series-twisted.webp",
+      "href": "/products/twisted-yarn"
+    },
+    {
+      "title": "FDY Dyed Yarn",
+      "description": "Full drawn dyed yarns for weaving and applications that need a smooth filament hand.",
+      "image": "/images/series-fdy.webp",
+      "href": "/products/fdy-dyed-yarn"
+    },
+    {
+      "title": "Cotton Dyed Yarn",
+      "description": "Cotton dyed yarns for knitted and woven programs that need natural fibre comfort.",
+      "image": "/images/series-cotton.webp",
+      "href": "/products/cotton-dyed-yarn"
+    },
+    {
+      "title": "Nylon Dyed Yarn",
+      "description": "Nylon and micro-nylon dyed yarns for stretch, activewear, and specialty fabrics.",
+      "image": "/images/series-nylon.webp",
+      "href": "/products/nylon-dyed-yarn"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "Base",
+      "description": "Shaoxing, China"
+    },
+    {
+      "step": "02",
+      "title": "Focus",
+      "description": "Dyed yarn OEM & export"
+    },
+    {
+      "step": "03",
+      "title": "Ranges",
+      "description": "Polyester · cotton · nylon"
+    },
+    {
+      "step": "04",
+      "title": "Process",
+      "description": "Lab dip → bulk → packing"
+    },
+    {
+      "step": "05",
+      "title": "Contact",
+      "description": "sales@aurelineyarns.com"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "Mills",
+      "description": "Repeatable lots for knitting and weaving lines."
+    },
+    {
+      "title": "Brands",
+      "description": "Shade libraries that survive replenishment."
+    },
+    {
+      "title": "Trading partners",
+      "description": "Clear specs, packing, and export documents."
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "View specs",
+      "description": "Open a range for fibre, denier, and shade notes."
+    },
+    {
+      "title": "Request sample",
+      "description": "Confirm shade before you lock bulk."
+    },
+    {
+      "title": "Get quote",
+      "description": "Factory pricing on shortlisted constructions."
+    }
+  ]
+}

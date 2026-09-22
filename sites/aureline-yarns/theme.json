@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "accentName": "indigo-teal",
+    "notes": "Dyed yarn B2B: 60% cream/white, 30% ink, 10% indigo-teal accent. Not Chromora. Brand Aureline Yarns temporary."
+  },
+  "colors": {
+    "accent": "37 99 120",
+    "ink": "22 30 38",
+    "charcoal": "18 24 32",
+    "grayText": "60 70 80",
+    "grayMuted": "100 110 120",
+    "cream": "246 248 250",
+    "creamDeep": "228 234 238",
+    "stone": "168 178 186",
+    "border": "208 216 222",
+    "olive": "40 70 86",
+    "oliveDark": "18 36 48",
+    "chrome": "14 20 28"
+  },
+  "fonts": {
+    "sans": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "label": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "display": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  },
+  "radius": {
+    "hero": "16px",
+    "image": "12px",
+    "step": "12px",
+    "pill": "100px"
+  }
+}

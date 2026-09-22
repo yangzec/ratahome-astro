@@ -1,0 +1,158 @@
+{
+  "site": {
+    "name": "Aureline Yarns",
+    "title": "Dyed Yarn Manufacturer & Exporter for Textile Programs",
+    "description": "Aureline Yarns is a dyed yarn manufacturer and exporter in Shaoxing, China. We supply polyester, cotton, and nylon dyed yarns—including space-dyed and twisted constructions—for knitting, weaving, and textile programs worldwide.",
+    "whatsapp": "+86 138 0000 0000",
+    "whatsappUrl": "https://wa.me/8613800000000",
+    "hours": "Mon–Sat, 09:00–18:00 (CST)",
+    "location": "Shaoxing, China",
+    "address": "Shaoxing, Zhejiang, China",
+    "phone": "+86 138 0000 0000",
+    "email": "sales@aurelineyarns.com",
+    "tagline": "Dyed yarn manufacturer & exporter · OEM supply for mills, brands, and trading partners"
+  },
+  "buttons": {
+    "startProject": "Get Quote",
+    "uploadFloorPlan": "Get Quote",
+    "factoryTour": "Browse Products",
+    "sendFloorPlan": "Send message",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "View All",
+    "seeJourney": "Colour matching & supply",
+    "readWarranty": "Quality & colourfastness",
+    "exploreProjects": "Browse Products",
+    "requestQuote": "Get Quote",
+    "discussJoinery": "Contact Us"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "whatsapp": "WhatsApp",
+    "projectType": "Enquiry type",
+    "message": "Message",
+    "projectDetails": "Message",
+    "floorPlan": "Attachments (PDF / JPG shade refs)",
+    "privacy": "A short note on fibre type, denier, shade target, quantity, and timing helps us reply within one business day.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "+1 555 000 0000",
+    "companyPlaceholder": "Mill, brand, or trading office",
+    "whatsappPlaceholder": "WhatsApp number",
+    "messagePlaceholder": "Fibre type, denier, shade target, quantity, and destination market",
+    "detailsPlaceholder": "Fibre type, denier, shade target, quantity, and destination market",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "Get Quote",
+      "design": "Contact Us",
+      "development": "Sample request",
+      "hospitality": "Product inquiry",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "Aureline Yarns is a dyed yarn manufacturer and exporter in Shaoxing, China. We supply polyester, cotton, and nylon dyed yarns—including space-dyed and twisted constructions—for knitting, weaving, and textile programs worldwide.",
+    "copyright": "All rights reserved.",
+    "foundedYear": "2010",
+    "columns": [
+      {
+        "title": "Aureline Yarns",
+        "body": "Aureline Yarns is a dyed yarn manufacturer and exporter in Shaoxing, China. We supply polyester, cotton, and nylon dyed yarns—including space-dyed and twisted constructions—for knitting, weaving, and textile programs worldwide.",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "Products",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "Polyester Dyed Yarn",
+            "href": "/products/polyester-dyed-yarn"
+          },
+          {
+            "label": "Space Dyed Yarn",
+            "href": "/products/space-dyed-yarn"
+          },
+          {
+            "label": "Twisted Yarn",
+            "href": "/products/twisted-yarn"
+          },
+          {
+            "label": "FDY Dyed Yarn",
+            "href": "/products/fdy-dyed-yarn"
+          },
+          {
+            "label": "Cotton Dyed Yarn",
+            "href": "/products/cotton-dyed-yarn"
+          },
+          {
+            "label": "Nylon Dyed Yarn",
+            "href": "/products/nylon-dyed-yarn"
+          },
+          {
+            "label": "All Products",
+            "href": "/products"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Quality",
+            "href": "/quality"
+          },
+          {
+            "label": "Capabilities",
+            "href": "/capabilities"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": "",
+        "links": [
+          {
+            "label": "Address: Shaoxing, Zhejiang, China",
+            "href": "/contact"
+          },
+          {
+            "label": "Phone: +86 138 0000 0000",
+            "href": "tel:+8613800000000"
+          },
+          {
+            "label": "Email: sales@aurelineyarns.com",
+            "href": "mailto:sales@aurelineyarns.com"
+          },
+          {
+            "label": "WhatsApp: +86 138 0000 0000",
+            "href": "https://wa.me/8613800000000"
+          },
+          {
+            "label": "Get Quote",
+            "href": "/contact/?intent=quote"
+          }
+        ],
+        "note": "Hours: Mon–Sat, 09:00–18:00 (CST)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "eyebrow": "Shaoxing · Dyed Yarn OEM",
+    "title": "Dyed Yarn Manufacturer & Exporter for Textile Programs",
+    "description": "Polyester, cotton, and nylon dyed yarns—including space-dyed and twisted options—for knitting, weaving, and export buyers who need consistent shade and repeatable lots.",
+    "image": "/images/hero-yarn.webp",
+    "imageAlt": "Cones of indigo and teal dyed yarn arranged on a studio table",
+    "primaryHref": "/contact/?intent=quote",
+    "secondaryHref": "/products"
+  },
+  "assurances": [],
+  "metrics": [],
+  "audiences": {
+    "title": "A Shaoxing dyed yarn partner for OEM and export orders",
+    "description": "Aureline Yarns develops and supplies dyed yarns for mills, brands, and trading partners. Our team aligns fibre type, denier, lustre, and shade with your fabric plan—then supports sampling, bulk lots, packing, and export documents under one project contact.",
+    "items": [
+      {
+        "title": "About Us",
+        "description": "The mill team behind the program.",
+        "href": "/about",
+        "image": "/images/factory-dye.webp"
+      },
+      {
+        "title": "Capabilities",
+        "description": "Colour matching, sampling, and supply.",
+        "href": "/capabilities",
+        "image": "/images/process-labdip.webp"
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Yarn ranges for knitting, weaving, and textile buyers",
+    "description": "Open a range to review specs, then request a sample or quote on the constructions that fit your fabric line.",
+    "items": [
+      {
+        "title": "Polyester Dyed Yarn",
+        "description": "DTY and related polyester dyed yarns in common deniers and lustres for apparel and home textiles.",
+        "image": "/images/series-polyester.webp",
+        "href": "/products/polyester-dyed-yarn"
+      },
+      {
+        "title": "Space Dyed Yarn",
+        "description": "Multi-colour and ombre effects for carpets, fashion knits, and decorative fabrics.",
+        "image": "/images/series-space.webp",
+        "href": "/products/space-dyed-yarn"
+      },
+      {
+        "title": "Twisted Yarn",
+        "description": "Single-, double-, and multi-ply twisted dyed yarns for strength and texture.",
+        "image": "/images/series-twisted.webp",
+        "href": "/products/twisted-yarn"
+      },
+      {
+        "title": "FDY Dyed Yarn",
+        "description": "Full drawn dyed yarns for weaving and applications that need a smooth filament hand.",
+        "image": "/images/series-fdy.webp",
+        "href": "/products/fdy-dyed-yarn"
+      },
+      {
+        "title": "Cotton Dyed Yarn",
+        "description": "Cotton dyed yarns for knitted and woven programs that need natural fibre comfort.",
+        "image": "/images/series-cotton.webp",
+        "href": "/products/cotton-dyed-yarn"
+      },
+      {
+        "title": "Nylon Dyed Yarn",
+        "description": "Nylon and micro-nylon dyed yarns for stretch, activewear, and specialty fabrics.",
+        "image": "/images/series-nylon.webp",
+        "href": "/products/nylon-dyed-yarn"
+      }
+    ]
+  },
+  "process": {
+    "title": "Colour matching and repeatable batch supply",
+    "description": "Send a Pantone reference, a fabric swatch, or a running shade code. We align lab dips to your target, then plan batch sizes that fit sampling, trial, and ongoing replenishment—without rewriting your shade library every season.",
+    "image": "/images/process-labdip.webp",
+    "imageAlt": "Lab dip cards and dyed yarn cones for shade confirmation",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Brief",
+        "description": "Share fibre, denier, lustre, shade target, quantity, and destination market."
+      },
+      {
+        "step": "02",
+        "title": "Lab dip / sample",
+        "description": "You review shade and hand-feel before bulk is scheduled."
+      },
+      {
+        "step": "03",
+        "title": "Bulk dyeing",
+        "description": "Confirmed specs move to production with in-process shade checks."
+      },
+      {
+        "step": "04",
+        "title": "Packing",
+        "description": "Cones and cartons labeled for your receiving site."
+      },
+      {
+        "step": "05",
+        "title": "Export",
+        "description": "Documents prepared for your destination market."
+      }
+    ]
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "Quality",
+    "title": "Quality and colourfastness you can inspect",
+    "description": "Shade, wash, light, and rub performance are checked against the approved sample before cartons leave.",
+    "commitment": "Current certifications and test reports are shared on request for your market and end use.",
+    "cases": [
+      {
+        "question": "01",
+        "title": "Shade control",
+        "description": "Lab dips and bulk shade confirmation against Pantone, swatch, or running code."
+      },
+      {
+        "question": "02",
+        "title": "Colourfastness",
+        "description": "Wash, light, and rub checks aligned to the end use you name at inquiry."
+      },
+      {
+        "question": "03",
+        "title": "Documents",
+        "description": "Test reports and certification copies shared when your market requires them."
+      }
+    ]
+  },
+  "rooms": {
+    "title": "Yarn ranges",
+    "items": []
+  },
+  "projects": {
+    "title": "Featured lots",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "Why textile buyers work with Aureline Yarns",
+    "description": "Direct manufacturer contact for dyed yarn OEM and export programs.",
+    "items": [
+      {
+        "step": "01",
+        "title": "Direct manufacturer contact",
+        "description": "Talk with the team that runs dyeing and finishing—not a desk that only forwards emails."
+      },
+      {
+        "step": "02",
+        "title": "Shade-focused sampling",
+        "description": "Lab dips and bulk shade confirmation before you commit a full production lot."
+      },
+      {
+        "step": "03",
+        "title": "Fibre and process range",
+        "description": "Polyester, cotton, and nylon dyed yarns, plus space-dyed and twisted constructions when your fabric needs them."
+      },
+      {
+        "step": "04",
+        "title": "Lot-to-lot discipline",
+        "description": "In-process checks on shade, strength, and appearance against the approved reference."
+      },
+      {
+        "step": "05",
+        "title": "Export packing ready",
+        "description": "Cones, cartons, and labels prepared for your destination market and receiving mill."
+      },
+      {
+        "step": "06",
+        "title": "Clear inquiry handling",
+        "description": "One owner from first brief through sample and bulk schedule updates."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to brief your next dyed yarn program?",
+    "description": "Send fibre type, denier range, lustre, target shades, estimated quantity, and destination market. We reply within one business day with next steps.",
+    "formTitle": "Get Quote",
+    "formDescription": "A short note on fibre type, denier, shade target, quantity, and timing helps us reply within one business day.",
+    "steps": [
+      "Brief",
+      "Lab dip / sample",
+      "Bulk dyeing"
+    ]
+  },
+  "footerFeatures": [
+    {
+      "title": "Dyed yarn OEM",
+      "description": "Polyester · cotton · nylon"
+    },
+    {
+      "title": "Shaoxing, China",
+      "description": "Dyeing, winding, and packing"
+    },
+    {
+      "title": "Space-dyed · twisted · FDY",
+      "description": "Ranges for knitting and weaving"
+    },
+    {
+      "title": "Get Quote",
+      "description": "sales@aurelineyarns.com"
+    }
+  ]
+}
