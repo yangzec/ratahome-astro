@@ -391,8 +391,8 @@ const panelGroups = (item: NavItem) => {
     left: 0;
     z-index: 60;
     box-sizing: border-box;
-    width: max-content;
-    min-width: 280px;
+    width: min(640px, calc(100vw - 2.5rem));
+    min-width: min(480px, calc(100vw - 2.5rem));
     max-width: min(720px, calc(100vw - 2.5rem));
     padding: 24px;
     border-radius: 0 0 8px 8px;
@@ -405,6 +405,7 @@ const panelGroups = (item: NavItem) => {
   }
 
   .site-nav-panel--narrow {
+    width: 220px;
     min-width: 200px;
     max-width: 280px;
     padding: 16px;
@@ -435,7 +436,7 @@ const panelGroups = (item: NavItem) => {
 
   .site-nav-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px 24px;
     margin: 0;
     padding: 0;
@@ -615,6 +616,10 @@ const panelGroups = (item: NavItem) => {
   @media (min-width: 768px) {
     .site-header-hours {
       display: inline;
+    }
+
+    .site-nav-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
