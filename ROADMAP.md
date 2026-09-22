@@ -322,7 +322,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
-| 共享询盘表单视觉 | 已改 `packages/sections` ContactForm / ContactCTA（标签上置、去重说明、自定义上传区、token 控件）；待 aureline 构建验证与 Worker 重部署 |
 | Cloudflare 生产部署（家具站） | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
 
 ---
@@ -331,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-22 13:50 | 共享询盘表单改为 token 化 B2B 控件：标签上置、去重说明、自定义上传区、主色 focus；重部署 `aureline-yarns` Version `a920311d-0702-47c7-978a-f0d591e4b634`；不合 main |
 | 2026-09-22 11:47 | 重部署 Aureline Worker `aureline-yarns`（Version `6c408e3d-ba49-4760-a765-4436cf9242fb`）；EN https://aureline-yarns.yangzec.workers.dev/  ZH https://aureline-yarns.yangzec.workers.dev/zh/ ；不合 main |
 | 2026-09-22 11:45 | `b2b-manufacturing` create 源改为空壳 `sites/b2b-shell`；Aureline 城市 / 电话 / 邮箱改为 TBD；USAGE / AGENTS / D1 文档写明共享库 + 静态 content 须整份替换；不合 main |
 | 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
@@ -358,6 +358,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-22 13:50 | 共享询盘表单（Aureline EN/ZH 联系页 + 首页 CTA） | `pnpm --filter aureline-yarns build`；`pnpm site-cli deploy`；curl EN/ZH `/contact/` 200；浏览器走表单：标签上置、说明只出现一次、自定义上传区悬停无 No file chosen、主色 focus、全宽提交 | 通过；预览 https://aureline-yarns.yangzec.workers.dev/zh/contact/ ；Version `a920311d-0702-47c7-978a-f0d591e4b634` |
 | 2026-09-22 11:47 | 空壳 create + Aureline 清理 | `pnpm site-cli validate`（b2b-shell / aureline / 三已填实例）；`.tmp/create-spotcheck` 下 create `probe-empty` 后扫描 content 无 Foshan/sofa/sock；`pnpm --filter b2b-shell build` 与 `aureline-yarns` build；`cf:deploy` 后 curl EN/ZH 首页、产品、涤纶、联系、关于 | 通过；预览 200；无 Shaoxing/绍兴/LoftKnit/sock；TBD 标记在线；Version `6c408e3d-ba49-4760-a765-4436cf9242fb` |
 | 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
 | 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
