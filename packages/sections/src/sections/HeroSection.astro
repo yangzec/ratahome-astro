@@ -16,18 +16,112 @@ const primaryHref = 'primaryHref' in hero && typeof hero.primaryHref === 'string
 const secondaryHref = 'secondaryHref' in hero && typeof hero.secondaryHref === 'string' ? hero.secondaryHref : '/foshan-sourcing-tour';
 ---
 
-<section class="relative min-h-[85vh] flex items-end overflow-hidden">
-  <img src={hero.image} alt={hero.imageAlt} class="absolute inset-0 w-full h-full object-cover" />
-  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
-  <div class="relative container-site pb-16 pt-32 w-full">
-    <p class="eyebrow text-white/90 mb-6">{hero.eyebrow}</p>
-    <h1 class="text-white text-4xl md:text-5xl lg:text-[52px] font-semibold max-w-4xl leading-tight mb-6">
-      {hero.title}
-    </h1>
-    <p class="text-white/80 text-lg max-w-2xl mb-8 leading-relaxed">{hero.description}</p>
-    <div class="flex flex-wrap gap-4">
+<section class="site-hero">
+  <img src={hero.image} alt={hero.imageAlt} class="site-hero-media" />
+  <div class="site-hero-shade"></div>
+  <div class="site-hero-copy container-site">
+    <p class="eyebrow site-hero-kicker">{hero.eyebrow}</p>
+    <h1 class="site-hero-title">{hero.title}</h1>
+    <p class="site-hero-desc">{hero.description}</p>
+    <div class="site-hero-actions">
       <Button href={primaryHref} variant="primary">{buttons.uploadFloorPlan}</Button>
       <Button href={localizedPath(secondaryHref, locale)} variant="outline">{buttons.factoryTour}</Button>
     </div>
   </div>
 </section>
+
+<style>
+  /* 必须用 column + 全宽文案层。行 flex 会把中文收成单字竖条（min-content）。 */
+  .site-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 28rem;
+    overflow: hidden;
+  }
+
+  .site-hero-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .site-hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(14, 20, 28, 0.72) 0%, rgba(14, 20, 28, 0.34) 46%, rgba(14, 20, 28, 0.18) 100%);
+  }
+
+  .site-hero-copy {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .site-hero-kicker {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .site-hero-title {
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    color: #fff;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .site-hero-desc {
+    max-width: 36em;
+    margin: 0 0 1.5rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  :global(html[lang='en']) .site-hero-desc {
+    max-width: 65ch;
+  }
+
+  .site-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .site-hero {
+      min-height: 32rem;
+    }
+
+    .site-hero-copy {
+      padding-top: 2.5rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-hero {
+      min-height: 36rem;
+      justify-content: center;
+    }
+
+    .site-hero-copy {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+</style>

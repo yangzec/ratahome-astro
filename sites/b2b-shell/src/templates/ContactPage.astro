@@ -18,8 +18,8 @@ const { site } = common;
 <BaseLayout locale={locale} title={contact.title} description={contact.heroDescription}>
   <PageHero title={contact.heroTitle} dark />
 
-  <section class="container-site py-20">
-    <div class="grid lg:grid-cols-2 gap-12">
+  <section class="container-site py-12">
+    <div class="grid lg:grid-cols-2 gap-8">
       <div>
         <h2 class="section-title mb-6">{contact.getInTouch}</h2>
         <div class="space-y-6">
@@ -44,7 +44,7 @@ const { site } = common;
         <p class="text-sm text-izza-gray-muted mt-8">{contact.whatsappLine}</p>
         {contact.visitNote && <p class="text-sm text-izza-gray-muted mt-4">{contact.visitNote}</p>}
       </div>
-      <div class="bg-izza-cream rounded-lg p-8">
+      <div class="inquiry-card">
         <ContactForm locale={locale} />
       </div>
     </div>

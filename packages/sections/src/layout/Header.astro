@@ -1,0 +1,657 @@
+---
+import type { Locale } from '@trade/core/i18n/config';
+import { getContent } from '@site/content';
+import { localizedPath } from '@trade/core/i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface NavLink {
+  label: string;
+  href: string;
+  description?: string;
+}
+
+interface NavItem {
+  id: string;
+  label: string;
+  href?: string;
+  groups?: { title: string; links: NavLink[] }[];
+  links?: NavLink[];
+  feature?: { title: string; description?: string; href: string; image?: string };
+}
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+  logoSrc?: string;
+  showSiteName?: boolean;
+  ctaHref?: string;
+  utility?: 'contact' | 'tagline';
+}
+
+const {
+  locale,
+  currentPath,
+  logoSrc = '/images/logo.svg',
+  showSiteName = false,
+  ctaHref,
+  utility = 'contact',
+} = Astro.props;
+
+const { common, navigation } = getContent(locale);
+const { site, buttons } = common;
+const items = (navigation.main as NavItem[]).filter(
+  (item) => !(item.id === 'home' && (item.href === '/' || item.href === '')),
+);
+
+const MAX_PRIMARY = 8;
+const primaryNav = items.length <= MAX_PRIMARY ? items : items.slice(0, MAX_PRIMARY);
+const moreNav = items.length <= MAX_PRIMARY ? [] : items.slice(MAX_PRIMARY);
+const moreLabel = locale === 'zh' ? '更多' : 'More';
+
+const resolveHref = (href: string) => {
+  if (href.startsWith('#')) return `${localizedPath('/', locale)}${href}`;
+  const [path, query] = href.split('?');
+  return `${localizedPath(path || '/', locale)}${query ? `?${query}` : ''}`;
+};
+
+const quoteHref = ctaHref
+  ? resolveHref(ctaHref)
+  : `${localizedPath('/contact', locale)}?intent=quote`;
+
+const hasLogo = Boolean(logoSrc);
+const brandIsText = showSiteName || !hasLogo;
+
+const utilityText =
+  utility === 'tagline'
+    ? site.tagline
+    : [site.phone, site.location].filter(Boolean).join(' · ');
+
+const panelGroups = (item: NavItem) => {
+  if (item.groups && item.groups.length > 0) return item.groups;
+  if (item.links && item.links.length > 0) return [{ title: '', links: item.links }];
+  return [];
+};
+---
+
+<header class="site-header">
+  <div class="site-header-utility">
+    <div class="site-header-wrap site-header-utility-inner">
+      {utilityText && <p class="site-header-utility-text">{utilityText}</p>}
+      <LanguageSwitcher locale={locale} currentPath={currentPath} />
+      <a
+        href={site.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="site-header-wa"
+      >
+        <span>WhatsApp {site.whatsapp}</span>
+        {site.hours && <span class="site-header-hours">{site.hours}</span>}
+      </a>
+    </div>
+  </div>
+
+  <nav class="site-header-nav" aria-label="Main navigation">
+    <div class="site-header-wrap site-header-row">
+      <a href={localizedPath('/', locale)} class="site-header-brand" aria-label={site.name}>
+        {hasLogo && (
+          <img
+            src={logoSrc}
+            alt={showSiteName ? '' : site.name}
+            class="site-header-logo"
+            width="168"
+            height="28"
+          />
+        )}
+        {brandIsText && <span class="site-header-name">{site.name}</span>}
+      </a>
+
+      <div class="site-header-links">
+        {primaryNav.map((item) => {
+          const groups = panelGroups(item);
+          const hasPanel = groups.length > 0;
+          const viewAll = item.feature?.href || item.href;
+          const viewAllLabel = item.feature?.title || buttons.viewAll;
+          return (
+            <div class="site-nav-item" data-nav={item.id}>
+              <a
+                href={item.href ? localizedPath(item.href, locale) : '#'}
+                class="site-nav-link"
+              >
+                {item.label}
+              </a>
+              {hasPanel && (
+                <div class="site-nav-panel" data-panel={item.id}>
+                  {groups.length === 1 ? (
+                    <div class="site-nav-block">
+                      {groups[0].title && <p class="site-nav-kicker">{groups[0].title}</p>}
+                      <ul class="site-nav-grid">
+                        {groups[0].links.map((link) => (
+                          <li>
+                            <a href={localizedPath(link.href, locale)} class="site-nav-card">
+                              <strong>{link.label}</strong>
+                              {link.description && <span>{link.description}</span>}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <div class="site-nav-columns">
+                      {groups.map((group) => (
+                        <div class="site-nav-block">
+                          {group.title && <p class="site-nav-kicker">{group.title}</p>}
+                          <ul class="site-nav-stack">
+                            {group.links.map((link) => (
+                              <li>
+                                <a href={localizedPath(link.href, locale)} class="site-nav-card">
+                                  <strong>{link.label}</strong>
+                                  {link.description && <span>{link.description}</span>}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {viewAll && (
+                    <a href={localizedPath(viewAll, locale)} class="site-nav-all">
+                      {viewAllLabel}
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {moreNav.length > 0 && (
+          <div class="site-nav-item" data-nav="more">
+            <button type="button" class="site-nav-link site-nav-more" aria-haspopup="true">
+              {moreLabel}
+            </button>
+            <div class="site-nav-panel site-nav-panel--narrow">
+              <ul class="site-nav-stack">
+                {moreNav.map((item) => (
+                  <li>
+                    <a
+                      href={item.href ? localizedPath(item.href, locale) : '#'}
+                      class="site-nav-card"
+                    >
+                      <strong>{item.label}</strong>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <a href={quoteHref} class="btn-primary site-header-cta">{buttons.startProject}</a>
+    </div>
+  </nav>
+
+  <div class="site-header-wrap site-header-mobile">
+    <a href={localizedPath('/', locale)} class="site-header-brand" aria-label={site.name}>
+      {hasLogo && (
+        <img src={logoSrc} alt={showSiteName ? '' : site.name} class="site-header-logo" width="152" height="24" />
+      )}
+      {brandIsText && <span class="site-header-name">{site.name}</span>}
+    </a>
+    <button id="mobile-menu-btn" class="site-header-burger" aria-label="Open menu">
+      <svg class="site-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div id="mobile-menu" class="site-mobile hidden">
+  <div class="site-mobile-top">
+    <a href={localizedPath('/', locale)} class="site-mobile-brand" aria-label={site.name}>
+      {hasLogo && <img src={logoSrc} alt={showSiteName ? '' : site.name} class="site-mobile-logo" width="168" height="28" />}
+      {brandIsText && <span>{site.name}</span>}
+    </a>
+    <button id="mobile-menu-close" class="site-header-burger site-header-burger--ink" aria-label="Close menu">
+      <svg class="site-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <nav class="site-mobile-nav">
+    {items.map((item) => {
+      const childLinks = [
+        ...(item.groups || []).flatMap((group) => group.links),
+        ...(item.links || []),
+      ];
+      return (
+        <div class="site-mobile-item">
+          {childLinks.length > 0 ? (
+            <>
+              <button data-accordion class="site-mobile-acc" type="button">
+                {item.label}
+                <svg data-chevron class="site-header-icon site-mobile-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="site-mobile-sub hidden">
+                {item.href && (
+                  <a href={localizedPath(item.href, locale)} class="site-mobile-all">{buttons.viewAll}</a>
+                )}
+                {childLinks.map((link) => (
+                  <a href={localizedPath(link.href, locale)} class="site-mobile-link">{link.label}</a>
+                ))}
+              </div>
+            </>
+          ) : (
+            <a href={item.href ? localizedPath(item.href, locale) : '#'} class="site-mobile-acc">
+              {item.label}
+            </a>
+          )}
+        </div>
+      );
+    })}
+    <a href={quoteHref} class="btn-primary site-header-cta site-header-cta--block">{buttons.startProject}</a>
+  </nav>
+</div>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--color-izza-olive-dark);
+    color: #fff;
+  }
+
+  .site-header-wrap {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  .site-header-utility {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .site-header-utility-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    min-height: 40px;
+  }
+
+  .site-header-utility-text {
+    display: none;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+
+  .site-header-wa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .site-header-wa:hover {
+    color: #fff;
+  }
+
+  .site-header-hours {
+    display: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+  }
+
+  .site-header-nav {
+    display: none;
+  }
+
+  .site-header-row {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    min-height: 64px;
+  }
+
+  .site-header-brand {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 0;
+    color: #fff;
+  }
+
+  .site-header-logo {
+    display: block;
+    height: 28px;
+    width: auto;
+    max-width: 10.5rem;
+    filter: brightness(0) invert(1);
+  }
+
+  .site-header-name {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .site-header-links {
+    display: flex;
+    flex: 1;
+    align-items: stretch;
+    justify-content: flex-end;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .site-nav-item {
+    position: static;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+
+  .site-nav-item[data-nav="more"] {
+    position: relative;
+  }
+
+  .site-nav-item:hover::after,
+  .site-nav-item:focus-within::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 16px;
+  }
+
+  .site-nav-link {
+    display: block;
+    padding: 8px;
+    border: 0;
+    background: none;
+    color: rgba(255, 255, 255, 0.88);
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .site-nav-link:hover,
+  .site-nav-item:hover > .site-nav-link,
+  .site-nav-item:focus-within > .site-nav-link {
+    color: #fff;
+  }
+
+  .site-nav-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 60;
+    box-sizing: border-box;
+    width: min(640px, calc(100vw - 2.5rem));
+    min-width: 0;
+    max-width: min(640px, calc(100vw - 2.5rem));
+    padding: 24px;
+    border-radius: 0 0 8px 8px;
+    background: var(--color-izza-cream);
+    color: var(--color-izza-ink);
+    box-shadow: 0 16px 40px rgba(14, 20, 28, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .site-nav-panel--narrow {
+    left: auto;
+    right: 0;
+    width: 220px;
+    min-width: 200px;
+    max-width: 280px;
+    padding: 16px;
+    transform: none;
+  }
+
+  .site-nav-item:hover .site-nav-panel,
+  .site-nav-item:focus-within .site-nav-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .site-nav-kicker {
+    margin: 0 0 12px;
+    font-family: var(--font-label, var(--font-sans));
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-izza-accent);
+  }
+
+  .site-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-nav-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+  }
+
+  .site-nav-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-nav-card {
+    display: block;
+    padding: 8px;
+    margin: 0 -8px;
+    border-radius: 8px;
+    color: inherit;
+  }
+
+  .site-nav-card:hover {
+    background: #fff;
+  }
+
+  .site-nav-card strong {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-izza-ink);
+  }
+
+  .site-nav-card:hover strong {
+    color: var(--color-izza-accent);
+  }
+
+  .site-nav-card span {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.8125rem;
+    line-height: 1.45;
+    color: var(--color-izza-gray-muted);
+  }
+
+  .site-nav-all {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--color-izza-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .site-nav-all:hover {
+    text-decoration: underline;
+  }
+
+  .site-header-cta {
+    align-self: center;
+    flex-shrink: 0;
+    min-height: 40px !important;
+    padding: 8px 20px !important;
+    background: var(--color-izza-accent);
+    font-size: 0.875rem !important;
+  }
+
+  .site-header-cta--block {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .site-header-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+  }
+
+  .site-header-burger {
+    padding: 8px;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .site-header-burger--ink {
+    color: var(--color-izza-ink);
+  }
+
+  .site-header-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .site-mobile {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: #fff;
+  }
+
+  .site-mobile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-izza-border);
+  }
+
+  .site-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-izza-ink);
+    font-weight: 600;
+  }
+
+  .site-mobile-logo {
+    height: 28px;
+    width: auto;
+    max-width: 10.5rem;
+  }
+
+  .site-mobile-nav {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding: 8px 20px 24px;
+  }
+
+  .site-mobile-item {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-izza-border) 60%, transparent);
+  }
+
+  .site-mobile-acc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 0;
+    border: 0;
+    background: none;
+    color: var(--color-izza-ink);
+    font: inherit;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .site-mobile-chevron {
+    flex-shrink: 0;
+  }
+
+  .site-mobile-sub {
+    padding: 0 0 16px 8px;
+  }
+
+  .site-mobile-all,
+  .site-mobile-link {
+    display: block;
+    padding: 8px 0;
+    color: var(--color-izza-gray-text);
+  }
+
+  .site-mobile-all {
+    color: var(--color-izza-accent);
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    .site-header-hours {
+      display: inline;
+    }
+
+    .site-nav-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-header-utility-text {
+      display: block;
+    }
+
+    .site-header-nav {
+      display: block;
+    }
+
+    .site-header-mobile {
+      display: none;
+    }
+  }
+</style>

@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { locale, showFileUpload = true, action = '/api/contact' } = Astro.props;
-const { common } = getContent(locale);
+const { common, home } = getContent(locale);
 const { form, buttons } = common;
 const phoneLabel = 'phone' in form && typeof form.phone === 'string' ? form.phone : '';
 const phonePlaceholder = 'phonePlaceholder' in form && typeof form.phonePlaceholder === 'string' ? form.phonePlaceholder : '';
@@ -19,115 +19,163 @@ const companyPlaceholder = 'companyPlaceholder' in form && typeof form.companyPl
 const whatsappLabel = 'whatsapp' in form && typeof form.whatsapp === 'string' ? form.whatsapp : '';
 const whatsappPlaceholder = 'whatsappPlaceholder' in form && typeof form.whatsappPlaceholder === 'string' ? form.whatsappPlaceholder : '';
 const messageRequired = 'messageRequired' in form && Boolean(form.messageRequired);
+const formTitle = home.cta?.formTitle ?? '';
+const formDescription = home.cta?.formDescription ?? '';
+const privacyNote =
+  typeof form.privacy === 'string' && form.privacy && form.privacy !== formDescription
+    ? form.privacy
+    : '';
 ---
 
-<form class="space-y-4 contact-form" data-action={action} enctype="multipart/form-data">
+{formTitle && (
+  <header class="inquiry-head">
+    <h3 class="inquiry-title">{formTitle}</h3>
+    {formDescription && <p class="inquiry-lede">{formDescription}</p>}
+  </header>
+)}
+
+<form class="inquiry-form contact-form" data-action={action} enctype="multipart/form-data">
   <input type="hidden" name="locale" value={locale} />
 
-  <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.name}</label>
-    <input
-      type="text"
-      name="name"
-      required
-      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
-      placeholder={form.namePlaceholder}
-    />
-  </div>
-
-  <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.email}</label>
-    <input
-      type="email"
-      name="email"
-      required
-      class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
-      placeholder={form.emailPlaceholder}
-    />
-  </div>
-
-  {phoneLabel && (
-    <div>
-      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{phoneLabel}</label>
-      <input
-        type="tel"
-        name="phone"
-        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
-        placeholder={phonePlaceholder}
-      />
-    </div>
-  )}
-
-  {companyLabel && (
-    <div>
-      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{companyLabel}</label>
+  <div class="inquiry-fields">
+    <label class="inquiry-field">
+      <span class="inquiry-label">{form.name}</span>
       <input
         type="text"
-        name="company"
-        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
-        placeholder={companyPlaceholder}
+        name="name"
+        required
+        class="inquiry-control"
+        placeholder={form.namePlaceholder}
+        autocomplete="name"
       />
-    </div>
-  )}
+    </label>
 
-  {whatsappLabel && (
-    <div>
-      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{whatsappLabel}</label>
+    <label class="inquiry-field">
+      <span class="inquiry-label">{form.email}</span>
       <input
-        type="tel"
-        name="whatsapp"
-        class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm"
-        placeholder={whatsappPlaceholder}
+        type="email"
+        name="email"
+        required
+        class="inquiry-control"
+        placeholder={form.emailPlaceholder}
+        autocomplete="email"
       />
-    </div>
-  )}
+    </label>
 
-  <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectType}</label>
-    <select name="projectType" class="w-full h-[54px] px-5 rounded-[5px] border border-izza-border bg-white text-sm">
-      <option value="residence">{form.projectTypes.residence}</option>
-      <option value="design">{form.projectTypes.design}</option>
-      <option value="development">{form.projectTypes.development}</option>
-      <option value="hospitality">{form.projectTypes.hospitality}</option>
-      <option value="other">{form.projectTypes.other}</option>
-    </select>
+    {phoneLabel && (
+      <label class="inquiry-field">
+        <span class="inquiry-label">{phoneLabel}</span>
+        <input
+          type="tel"
+          name="phone"
+          class="inquiry-control"
+          placeholder={phonePlaceholder}
+          autocomplete="tel"
+        />
+      </label>
+    )}
+
+    {companyLabel && (
+      <label class="inquiry-field">
+        <span class="inquiry-label">{companyLabel}</span>
+        <input
+          type="text"
+          name="company"
+          class="inquiry-control"
+          placeholder={companyPlaceholder}
+          autocomplete="organization"
+        />
+      </label>
+    )}
+
+    {whatsappLabel && (
+      <label class="inquiry-field">
+        <span class="inquiry-label">{whatsappLabel}</span>
+        <input
+          type="tel"
+          name="whatsapp"
+          class="inquiry-control"
+          placeholder={whatsappPlaceholder}
+        />
+      </label>
+    )}
+
+    <label class="inquiry-field">
+      <span class="inquiry-label">{form.projectType}</span>
+      <select name="projectType" class="inquiry-control inquiry-select">
+        <option value="residence">{form.projectTypes.residence}</option>
+        <option value="design">{form.projectTypes.design}</option>
+        <option value="development">{form.projectTypes.development}</option>
+        <option value="hospitality">{form.projectTypes.hospitality}</option>
+        <option value="other">{form.projectTypes.other}</option>
+      </select>
+    </label>
+
+    <label class="inquiry-field">
+      <span class="inquiry-label">{form.projectDetails}</span>
+      <textarea
+        name="message"
+        rows="4"
+        required={messageRequired}
+        class="inquiry-control inquiry-textarea"
+        placeholder={form.detailsPlaceholder}
+      ></textarea>
+    </label>
+
+    {showFileUpload && (
+      <div class="inquiry-field">
+        <span class="inquiry-label">{form.floorPlan}</span>
+        <label class="inquiry-upload">
+          <input
+            type="file"
+            name="file"
+            accept=".pdf,.jpg,.jpeg,.png,.webp,.dwg"
+            class="inquiry-upload-input"
+          />
+          <span class="inquiry-upload-ui">
+            <svg class="inquiry-upload-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M12 16V4m0 0 4 4m-4-4L8 8M6 14v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="inquiry-upload-name" data-file-name></span>
+          </span>
+        </label>
+      </div>
+    )}
   </div>
 
-  <div>
-    <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.projectDetails}</label>
-    <textarea
-      name="message"
-      rows="4"
-      required={messageRequired}
-      class="w-full px-5 py-4 rounded-[5px] border border-izza-border bg-white text-sm resize-none"
-      placeholder={form.detailsPlaceholder}
-    ></textarea>
+  <div class="inquiry-actions">
+    <Button type="submit" variant="primary">{buttons.sendFloorPlan}</Button>
   </div>
-
-  {showFileUpload && (
-    <div>
-      <label class="block text-xs font-medium uppercase tracking-wider text-izza-gray-muted mb-2">{form.floorPlan}</label>
-      <input
-        type="file"
-        name="file"
-        accept=".pdf,.jpg,.jpeg,.png,.webp,.dwg"
-        class="w-full text-sm text-izza-gray-text file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-izza-cream file:text-izza-ink file:font-medium hover:file:bg-izza-cream-deep"
-      />
-    </div>
-  )}
-
-  <Button type="submit" variant="primary" class="w-full">{buttons.sendFloorPlan}</Button>
 </form>
 
-<p class="text-xs text-izza-gray-muted mt-4 text-center">{form.privacy}</p>
-<div class="form-success hidden mt-4 p-4 rounded-lg bg-green-50 text-green-800 text-sm text-center"></div>
-<div class="form-error hidden mt-4 p-4 rounded-lg bg-red-50 text-red-800 text-sm text-center"></div>
+{privacyNote && <p class="inquiry-note">{privacyNote}</p>}
+<div class="form-success inquiry-status inquiry-status--ok hidden"></div>
+<div class="form-error inquiry-status inquiry-status--err hidden"></div>
 
 <script>
   document.querySelectorAll('.contact-form').forEach((form) => {
-    form.addEventListener('submit', async (e) => {
+    const el = form as HTMLFormElement;
+    const fileInput = el.querySelector<HTMLInputElement>('input[type="file"]');
+    const fileName = el.querySelector<HTMLElement>('[data-file-name]');
+
+    const renderFileName = () => {
+      if (!fileName) return;
+      const name = fileInput?.files?.[0]?.name ?? '';
+      fileName.textContent = name;
+      fileName.classList.toggle('is-selected', Boolean(name));
+    };
+
+    renderFileName();
+    fileInput?.addEventListener('change', renderFileName);
+
+    el.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const el = e.currentTarget as HTMLFormElement;
       const action = el.dataset.action || '/api/contact';
       const successEl = el.parentElement?.querySelector('.form-success') as HTMLElement;
       const errorEl = el.parentElement?.querySelector('.form-error') as HTMLElement;
@@ -142,6 +190,7 @@ const messageRequired = 'messageRequired' in form && Boolean(form.messageRequire
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Submission failed');
         el.reset();
+        renderFileName();
         if (successEl) {
           successEl.textContent = el.querySelector('[name="locale"]')?.value === 'zh'
             ? '提交成功！我们会尽快与您联系。'
@@ -159,3 +208,228 @@ const messageRequired = 'messageRequired' in form && Boolean(form.messageRequire
     });
   });
 </script>
+
+<style>
+  :global(.inquiry-card) {
+    background: var(--color-izza-cream);
+    border-radius: 16px;
+    padding: 24px;
+  }
+
+  @media (min-width: 768px) {
+    :global(.inquiry-card) {
+      padding: 32px;
+    }
+  }
+
+  .inquiry-head {
+    margin-bottom: 16px;
+  }
+
+  .inquiry-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-izza-ink);
+  }
+
+  .inquiry-lede {
+    margin: 8px 0 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-izza-gray-muted);
+  }
+
+  .inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .inquiry-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .inquiry-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .inquiry-label {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-label, var(--font-sans));
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-izza-ink);
+  }
+
+  .inquiry-control {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 12px 16px;
+    border: 1px solid var(--color-izza-border);
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--color-izza-ink);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .inquiry-control::placeholder {
+    color: var(--color-izza-gray-muted);
+    opacity: 1;
+  }
+
+  .inquiry-control:hover {
+    border-color: var(--color-izza-stone);
+  }
+
+  .inquiry-control:focus {
+    outline: none;
+    border-color: var(--color-izza-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-izza-accent) 22%, transparent);
+  }
+
+  .inquiry-select {
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c707a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+  }
+
+  .inquiry-textarea {
+    min-height: 96px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    resize: vertical;
+  }
+
+  .inquiry-upload {
+    position: relative;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .inquiry-upload-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    opacity: 0;
+  }
+
+  .inquiry-upload-ui {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: 64px;
+    padding: 16px;
+    border: 1px dashed var(--color-izza-stone);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--color-izza-gray-muted);
+    font-size: 0.875rem;
+    line-height: 1.4;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+
+  .inquiry-upload:hover .inquiry-upload-ui,
+  .inquiry-upload:focus-within .inquiry-upload-ui {
+    border-color: var(--color-izza-accent);
+    border-style: solid;
+    background: #fff;
+  }
+
+  .inquiry-upload:focus-within .inquiry-upload-ui {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-izza-accent) 22%, transparent);
+  }
+
+  .inquiry-upload-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--color-izza-accent);
+  }
+
+  .inquiry-upload-name {
+    min-width: 0;
+    color: var(--color-izza-gray-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .inquiry-upload-name:empty {
+    display: none;
+  }
+
+  .inquiry-upload-ui:not(:has(.is-selected)) {
+    justify-content: center;
+  }
+
+  .inquiry-upload-name.is-selected {
+    color: var(--color-izza-ink);
+    font-weight: 500;
+  }
+
+  .inquiry-actions :global(.btn-primary) {
+    width: 100%;
+  }
+
+  .inquiry-actions :global(.btn-primary:disabled) {
+    opacity: 0.6;
+    cursor: wait;
+  }
+
+  .inquiry-note {
+    margin: 16px 0 0;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-izza-gray-muted);
+  }
+
+  .inquiry-status {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .inquiry-status--ok {
+    background: color-mix(in srgb, var(--color-izza-accent) 10%, #fff);
+    color: var(--color-izza-ink);
+  }
+
+  .inquiry-status--err {
+    background: #fef2f2;
+    color: #991b1b;
+  }
+</style>

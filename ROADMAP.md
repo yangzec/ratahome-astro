@@ -335,6 +335,10 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 时间 | 事项 |
 |------|------|
 | 2026-09-22 20:55 | 写入「一站一仓 + 多语言蓝图前门禁」：本仓 main 纯模板、新站默认独立仓并钉模板版本、D1 只管运行时、灌站前 Suggest→确认→EN 母版→各语种 copy-final；`docs/site-repo-and-i18n.md` + AGENTS / USAGE / blueprint-rules / teardown-workflow；只改文档，不合 main、不迁仓 |
+| 2026-09-22 15:04 | 产品下拉相对主栏内容行居中（去掉 left:0 + 右推 clamp）；询盘 CTA / 联系页 / PageHero / 共享列表 section 垂直留白按 8 倍数下调；重部署 `aureline-yarns` Version `e2e1e2dc-fecb-487e-b3d4-0bdd78a38199`；不合 main |
+| 2026-09-22 14:37 | 共享 Hero 改为 column 全宽，修中文单字竖条与窄屏溢出；产品下拉贴齐主栏下沿并 clamp 防裁切；重部署 `aureline-yarns` Version `cbe20472-4031-4f85-a61e-fbb80b071b10`；不合 main |
+| 2026-09-22 14:26 | 共享 Header 按 `navigation.json` 自适应主栏，去掉家具 `primaryOrder`；产品下拉改为紧凑 2/3 列、去掉促销空卡；顶栏 / CTA 走 `theme.json` token；重部署 `aureline-yarns` Version `f7d92af2-10df-46f6-a035-338bcf9ac4ac`；不合 main |
+| 2026-09-22 13:50 | 共享询盘表单改为 token 化 B2B 控件：标签上置、去重说明、自定义上传区、主色 focus；重部署 `aureline-yarns` Version `a920311d-0702-47c7-978a-f0d591e4b634`；不合 main |
 | 2026-09-22 11:47 | 重部署 Aureline Worker `aureline-yarns`（Version `6c408e3d-ba49-4760-a765-4436cf9242fb`）；EN https://aureline-yarns.yangzec.workers.dev/  ZH https://aureline-yarns.yangzec.workers.dev/zh/ ；不合 main |
 | 2026-09-22 11:45 | `b2b-manufacturing` create 源改为空壳 `sites/b2b-shell`；Aureline 城市 / 电话 / 邮箱改为 TBD；USAGE / AGENTS / D1 文档写明共享库 + 静态 content 须整份替换；不合 main |
 | 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
@@ -350,10 +354,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-21 15:17 | 部署 AtelierBag OEM Worker `atelierbag-oem`（Version `c23f1263-321b-4ba3-b39f-a0cbaadd4260`）；EN https://atelierbag-oem.yangzec.workers.dev/  ZH https://atelierbag-oem.yangzec.workers.dev/zh/ |
 | 2026-09-21 15:13 | 新增手袋 OEM 站 `sites/atelierbag-oem`（从 Chromora 制造模板复制，未改 ratahome / chromora 内容） |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
-| 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
-| 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
-| 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
-| 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
 
 ---
 
@@ -362,6 +362,10 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
 | 2026-09-22 20:55 | 一站一仓 + 多语言蓝图前门禁文档 | 对读 `docs/site-repo-and-i18n.md`、`AGENTS.md`、`docs/USAGE.md` §13、`docs/blueprint-rules.md`、`docs/teardown-workflow.md`、`ROADMAP.md` 已确认决策；核对锁定原文是否写入，且无站点代码 / 迁仓改动 | 通过；决策原文已落入文档；`sites/` 与组件未改 |
+| 2026-09-22 15:04 | 产品下拉居中 + 询盘区减高 | headed Chrome：面板中心与主栏行中心 delta=0、gapFromHeader=0；Hero 1280/768/390 无竖条无横溢；首页 CTA 1243→1129（pad 80→48） | 通过；ZH/EN 下拉居中贴沿；联系页首屏直接见表单；Version `e2e1e2dc-fecb-487e-b3d4-0bdd78a38199` |
+| 2026-09-22 14:37 | Aureline Hero 1280/768/390 + 产品下拉定位 | headed Chrome 真实视口；度量 Hero `flex-direction:column`、h1 宽 640/335、无竖向溢出；下拉 itemH=64、gapFromHeader=0、无左右裁切 | 通过；ZH/EN 标题与 CTA 在首屏；面板贴主栏下沿；Version `cbe20472-4031-4f85-a61e-fbb80b071b10` |
+| 2026-09-22 14:26 | 共享顶栏（Aureline EN/ZH 桌面 + 390px 移动） | curl EN/ZH 首页 200；headed Chrome 1440 悬停「产品」；真实视口 390×844 开汉堡 / 产品手风琴 / 关闭；度量 headerBg `rgb(18, 36, 48)`、ctaBg `rgb(37, 99, 120)` | 通过；ZH/EN 主栏露出品质/打色/FAQ 等，无「更多」；产品菜单 3 列 6 卡、无促销空卡；汉堡可用；Version `f7d92af2-10df-46f6-a035-338bcf9ac4ac` |
+| 2026-09-22 13:50 | 共享询盘表单（Aureline EN/ZH 联系页 + 首页 CTA） | `pnpm --filter aureline-yarns build`；`pnpm site-cli deploy`；curl EN/ZH `/contact/` 200；浏览器走表单：标签上置、说明只出现一次、自定义上传区悬停无 No file chosen、主色 focus、全宽提交 | 通过；预览 https://aureline-yarns.yangzec.workers.dev/zh/contact/ ；Version `a920311d-0702-47c7-978a-f0d591e4b634` |
 | 2026-09-22 11:47 | 空壳 create + Aureline 清理 | `pnpm site-cli validate`（b2b-shell / aureline / 三已填实例）；`.tmp/create-spotcheck` 下 create `probe-empty` 后扫描 content 无 Foshan/sofa/sock；`pnpm --filter b2b-shell build` 与 `aureline-yarns` build；`cf:deploy` 后 curl EN/ZH 首页、产品、涤纶、联系、关于 | 通过；预览 200；无 Shaoxing/绍兴/LoftKnit/sock；TBD 标记在线；Version `6c408e3d-ba49-4760-a765-4436cf9242fb` |
 | 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
 | 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |
@@ -376,6 +380,4 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 14:25 | 联系表单 API | `POST /api/contact` + D1 查询 `site_id` | 通过 |
 | 2026-09-17 14:25 | 文件上传 API | `POST /api/upload` + R2 key 前缀 | 通过 |
 | 2026-09-17 14:25 | Wrangler 打包 | `wrangler deploy --dry-run` | 通过（bindings 正确） |
-| 2026-09-17 10:45 | 预览测试 en/zh | 浏览器访问 43124，首页/关于/联系/系列 | 通过 |
-| 2026-09-17 08:58 | 本地 build | `pnpm build` | 通过（152 页 prerender） |
 | 待确认 | Cloudflare 生产部署 | `pnpm cf:deploy` | 环境无 `wrangler login`，未执行 |

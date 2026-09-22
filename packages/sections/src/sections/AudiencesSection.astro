@@ -16,7 +16,7 @@ const items = Array.isArray(audiences?.items) ? audiences.items : [];
 ---
 
 {items.length > 0 && (
-<section class="container-site py-20">
+<section class="container-site py-12">
   <SectionHeader title={audiences.title} description={audiences.description} />
   <ListGrid min={240} count={items.length}>
     {items.map((item) => (

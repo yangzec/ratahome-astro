@@ -10,7 +10,7 @@ interface Props {
 const { title, description, eyebrow, dark = false, class: className = '' } = Astro.props;
 ---
 
-<div class={`max-w-2xl mb-12 ${className}`}>
+<div class={`max-w-2xl mb-8 ${className}`}>
   {eyebrow && <p class={`eyebrow mb-3 ${dark ? 'text-white/80' : ''}`}>{eyebrow}</p>}
   <h2 class={`section-title mb-4 ${dark ? 'text-white' : ''}`}>{title}</h2>
   {description && (
