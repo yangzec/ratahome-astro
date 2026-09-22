@@ -1,7 +1,8 @@
-import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { getSiteDir, getWorkspaceRoot } from './paths.mjs';
 import { resolveTemplate } from './templates.mjs';
+import { scanSiteContentDirtyTokens } from './dirty-tokens.mjs';
 
 const SKIP_DIRS = new Set(['node_modules', 'dist', '.astro', '.wrangler']);
 
@@ -58,6 +59,14 @@ export function createSite({ slug, templateId, siteId, name, root = getWorkspace
   replaceInFile(join(targetDir, 'package.json'), [
     [`"name": "${template.sourceSlug}"`, `"name": "${slug}"`],
   ]);
+
+  const dirty = scanSiteContentDirtyTokens(targetDir);
+  if (dirty.length) {
+    rmSync(targetDir, { recursive: true, force: true });
+    throw new Error(
+      `New site content still has furniture/sock leftover tokens. Template source must be the empty shell (sites/b2b-shell), not a filled demo.\n  ${dirty.join('\n  ')}`
+    );
+  }
 
   return { slug, siteId: id, name: displayName, templateId, path: targetDir };
 }

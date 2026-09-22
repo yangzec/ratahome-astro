@@ -49,7 +49,8 @@ trade-site-platform/
 │       ├── db.ts                  # D1 读写（带 site_id）
 │       ├── r2.ts                  # R2 上传/读取
 │       └── i18n/                  # 多语言配置与路径工具
-├── sites/ratahome-furniture/      # 站点实例
+├── sites/b2b-shell/               # 空壳模板（create 源，不是客户站）
+├── sites/ratahome-furniture/      # 家具站实例（已灌文案）
 │   ├── site.config.ts             # site_id、模板、语言
 │   ├── theme.json                 # 主题色、字体、圆角
 │   ├── blueprints/home.json       # 首页 composition（区块顺序，不是文案蓝图）
@@ -57,7 +58,7 @@ trade-site-platform/
 │   ├── public/                    # 图片、图标
 │   ├── src/                       # Astro 页面与组件
 │   └── wrangler.jsonc             # Cloudflare 部署配置
-└── migrations/                    # 共享 D1 迁移（全站共用）
+└── migrations/                    # 共享 D1 迁移（全站共用一个 trade-platform）
 ```
 
 ---
@@ -167,7 +168,9 @@ sites/ratahome-furniture/content/
 
 ## 9. 数据库（共享 D1 + site_id）
 
-**策略**：所有站点共用一个 D1 实例 `trade-platform`，用 `site_id` 列隔离数据。
+**策略**：全平台共用 **一个** Cloudflare D1 实例 `trade-platform`，用 `site_id` / `SITE_ID` 做逻辑隔离。**不要**为每个站点创建独立 D1。各站 `wrangler.jsonc` 绑定同一 `database_name` 与同一 `database_id`，只改 `vars.SITE_ID`。
+
+隔离范围（读写必须带当前站的 `site_id`）：
 
 | 表 | 用途 |
 |----|------|
@@ -175,7 +178,9 @@ sites/ratahome-furniture/content/
 | `assets` | R2 文件元数据 |
 | `page_content` | 可选运行时文案覆盖（预留） |
 
-当前站点 `site_id`：`ratahome-furniture`（见 `site.config.ts` 与 `wrangler.jsonc` 的 `SITE_ID`）。
+产品目录**不是** D1 数据。产品与页面文案在各站 `content/{locale}/*.json`（静态文件）。共享 D1 不会自动隔离这些文件；建站后必须用该行业蓝图整份替换 content，否则会把上一行业文案带上线。袜子产品出现在色纱站上，是静态 JSON 未换干净，不是 D1 串站。
+
+当前已填实例的 `site_id` 例：`ratahome-furniture`、`loftknit-oem`、`atelierbag-oem`、`aureline-yarns`（见各站 `site.config.ts` 与 `wrangler.jsonc` 的 `SITE_ID`）。空壳模板是 `b2b-shell`，不要当客户站部署。
 
 本地迁移：
 
@@ -211,7 +216,7 @@ pnpm db:migrate
 
 ## 12. Cloudflare 部署
 
-1. 在 Cloudflare 创建 D1 数据库 `trade-platform`，更新 `sites/ratahome-furniture/wrangler.jsonc` 中的 `database_id`
+1. 在 Cloudflare 创建 **一个** D1 数据库 `trade-platform`，把返回的 `database_id` 写入各站 `wrangler.jsonc`（同一 id）。不要每站新建 D1
 2. 创建 R2 bucket `trade-platform-assets`
 3. 执行远程迁移：`pnpm db:migrate:remote`
 4. 部署：`pnpm cf:deploy`
@@ -224,21 +229,22 @@ pnpm db:migrate
 # 查看可用行业模板
 pnpm site-cli templates
 
-# 从模板创建新站（复制 sites/ratahome-furniture 并替换 site_id）
+# 从空壳创建新站（复制 sites/b2b-shell，只改 site_id / Worker 名；不含家具或袜子文案）
 pnpm site-cli create textile-fabric --from b2b-manufacturing --name "Textile Fabric"
 
 # 校验配置、JSON、Blueprint section、SITE_ID 一致性
+# 非已填实例还会扫描家具 / 袜子脏词（sofa、Foshan、LoftKnit、sock 等）
 pnpm site-cli validate textile-fabric
 
 # 本地开发
 pnpm --filter textile-fabric dev
 
-# 部署（需 wrangler login + D1/R2 配置）
+# 部署（需 wrangler login + D1/R2 配置；不要 deploy b2b-shell）
 pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-创建后编辑 `sites/<slug>/content/`、`theme.json`、`blueprints/home.json`。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
+`b2b-manufacturing` 的源是空壳 `sites/b2b-shell`，**不是** `ratahome-furniture`。行业文案只在 create 之后，按 copy-final 蓝图整份写入 `sites/<slug>/content/`。不要把家具站或袜子站当模板源。已填实例（`ratahome-furniture`、`loftknit-oem`、`atelierbag-oem`）保持不动。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
 
 ---
 

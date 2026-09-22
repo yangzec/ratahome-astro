@@ -171,7 +171,8 @@ https://github.com/yangzec/ratahome-astro
 | 路径 | 职责 |
 |------|------|
 | `packages/core/` | 共享 db、r2、i18n（`@trade/core`） |
-| `sites/ratahome-furniture/` | 首个站点实例 |
+| `sites/b2b-shell/` | `b2b-manufacturing` 空壳模板（create 源；不是客户站，禁止当品牌部署） |
+| `sites/ratahome-furniture/` | 首个已填实例（家具），不是新站克隆源 |
 | `sites/*/site.config.ts` | site_id、模板、语言 |
 | `sites/*/theme.json` | 设计 token |
 | `sites/*/blueprints/` | 首页 composition（section 顺序，不是文案蓝图） |
@@ -184,12 +185,13 @@ https://github.com/yangzec/ratahome-astro
 ### 工作流导航
 
 1. 进入任务：读 `CLAUDE.md` → `AGENTS.md` → `ROADMAP.md`
-2. 改文案：编辑 `sites/ratahome-furniture/content/{en,zh}/*.json`
-3. 改首页区块顺序：编辑 `sites/ratahome-furniture/blueprints/home.json`
-4. 改主题色：编辑 `sites/ratahome-furniture/theme.json`
-5. 加页面路由：更新 `sites/ratahome-furniture/src/data/slugs.ts` + `pages.json`
-6. 本地开发：`pnpm dev`（端口 `43123`）
-7. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+2. 新建站：`pnpm site-cli create <slug> --from b2b-manufacturing`（复制 `sites/b2b-shell` 空壳）。行业文案只在 create 之后按蓝图写入 `content/`，禁止再从家具 / 袜子站克隆
+3. 改已有站文案：编辑该站 `sites/<slug>/content/{en,zh}/*.json`（家具实例仍是 `sites/ratahome-furniture/`）
+4. 改首页区块顺序：编辑该站 `blueprints/home.json`
+5. 改主题色：编辑该站 `theme.json`
+6. 加页面路由：更新该站 `src/data/slugs.ts` + `pages.json`
+7. 本地开发：`pnpm dev`（家具站端口 `43123`）
+8. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
 ### 文案 / 模板分层（硬规则）
 
@@ -216,7 +218,7 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 content JSON 与 composition 解决，避免为每个行业 fork 组件；列表栅格按 `docs/design.md` 自适应
-- D1：**全平台共享一个实例**，按 `site_id` 逻辑隔离；schema 变更、生产部署、Git push 属红线操作，须先确认
+- D1：**全平台共享一个 `trade-platform` 实例**，按 `site_id` / `SITE_ID` 逻辑隔离；联系表、上传、`page_content` 查询必须带站。产品目录是各站静态 `content/` JSON，共享 D1 不会自动隔离未换干净的文案。**不要**拆成每站一个 D1。schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
 
 ### 验证入口

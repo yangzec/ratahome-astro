@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* b2b-shell @theme 必须与 theme.json 一致：中性底 + 石板灰强调。禁止沿用家具橙 / 袜子靛蓝 / 色纱青绿。 */
+@theme {
+  --color-izza-accent: rgb(55 65 81);
+  --color-izza-ink: rgb(24 24 27);
+  --color-izza-charcoal: rgb(18 18 20);
+  --color-izza-gray-text: rgb(63 63 70);
+  --color-izza-gray-muted: rgb(113 113 122);
+  --color-izza-cream: rgb(250 250 249);
+  --color-izza-cream-deep: rgb(231 229 228);
+  --color-izza-stone: rgb(168 162 158);
+  --color-izza-border: rgb(214 211 209);
+  --color-izza-olive: rgb(68 64 60);
+  --color-izza-olive-dark: rgb(28 25 23);
+  --color-chrome: rgb(15 15 16);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-label: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-hero: 16px;
+  --radius-image: 12px;
+  --radius-step: 12px;
+  --radius-pill: 100px;
+
+  --text-label: 0.75rem;
+  --text-body: 1rem;
+  --text-title: 2rem;
+  --text-display: 3rem;
+}
+
+@layer base {
+  html {
+    --header-h: 5.75rem;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      --header-h: 6.5rem;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    color: var(--color-izza-gray-text);
+    background: white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--color-izza-ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  html[lang="en"] .text-measure,
+  html[lang="en"] .section-title + p,
+  html[lang="en"] section > .container-site > p {
+    max-width: 65ch;
+  }
+
+  html[lang="zh"] .text-measure,
+  html[lang="zh"] .section-title + p,
+  html[lang="zh"] section > .container-site > p {
+    max-width: 36em;
+  }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 4vw, 4rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-label);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-izza-accent);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3.5rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-izza-accent);
+    color: white;
+    font-size: var(--text-body);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-izza-ink);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(255 255 255 / 0.45);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .btn-outline:hover {
+    background: rgba(255 255 255 / 0.1);
+    border-color: white;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-izza-border);
+    color: var(--color-izza-ink);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-izza-accent);
+    color: var(--color-izza-accent);
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-izza-ink);
+  }
+
+  .card-image {
+    border-radius: var(--radius-image);
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.rounded-\[17px\],
+.rounded-\[20px\],
+.rounded-\[25px\] {
+  border-radius: 16px;
+}
+
+section.relative.min-h-\[85vh\] {
+  min-height: 70vh;
+}
+
+section.relative.min-h-\[85vh\] h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+@media (min-width: 1024px) {
+  section.relative.min-h-\[85vh\] {
+    min-height: calc(100vh - var(--header-h));
+    align-items: center;
+  }
+
+  section.relative.min-h-\[85vh\] .container-site {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+}
+
+main > section.bg-izza-cream + section.bg-izza-cream {
+  background: #fff;
+}
+
+/* 精选 4 卡：两列网格保持，间距走 8 刻度。 */
+.grid.md\:grid-cols-2.gap-8 {
+  gap: 2rem;
+}

@@ -1,0 +1,191 @@
+{
+  "hero": {
+    "eyebrow": "[城市] · OEM",
+    "title": "[品牌] 制造商与出口商",
+    "description": "从打样到装箱出运的 OEM 与批发供应。",
+    "image": "/images/placeholder-hero.svg",
+    "imageAlt": "[品牌] 车间",
+    "primaryHref": "/zh/contact/?intent=quote",
+    "secondaryHref": "/zh/products"
+  },
+  "assurances": [],
+  "metrics": [],
+  "audiences": {
+    "title": "位于 [城市] 的工厂伙伴",
+    "description": "[品牌] 为国际采购方开发与生产项目。团队支持打样、大货、包装与出口单证。",
+    "items": [
+      {
+        "title": "关于我们",
+        "description": "项目背后的工厂。",
+        "href": "/zh/about",
+        "image": "/images/placeholder-card.svg"
+      },
+      {
+        "title": "工厂",
+        "description": "生产、质检与包装。",
+        "href": "/zh/factory",
+        "image": "/images/placeholder-card.svg"
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "产品线",
+    "description": "打开一条产品线查看规格，再对适合你项目的结构询价。",
+    "items": [
+      {
+        "title": "产品线 A",
+        "description": "面向 OEM 与批发项目的 A 系列。",
+        "image": "/images/placeholder-card.svg",
+        "href": "/zh/products/product-line-a"
+      },
+      {
+        "title": "产品线 B",
+        "description": "面向 OEM 与批发项目的 B 系列。",
+        "image": "/images/placeholder-card.svg",
+        "href": "/zh/products/product-line-b"
+      },
+      {
+        "title": "产品线 C",
+        "description": "面向 OEM 与批发项目的 C 系列。",
+        "image": "/images/placeholder-card.svg",
+        "href": "/zh/products/product-line-c"
+      }
+    ]
+  },
+  "process": {
+    "title": "OEM 项目如何推进",
+    "description": "从确认样品到出口纸箱，我们为品牌与批发采购方运行贴牌与定制项目。",
+    "image": "/images/placeholder-card.svg",
+    "imageAlt": "规格核对打样台",
+    "steps": [
+      {
+        "step": "01",
+        "title": "需求与可行性",
+        "description": "请发规格、照片或参考样，我们确认结构与材料选项。"
+      },
+      {
+        "step": "02",
+        "title": "打样",
+        "description": "大货前你先收到样品核对。"
+      },
+      {
+        "step": "03",
+        "title": "大货生产",
+        "description": "确认规格进入生产，并做过程检查。"
+      },
+      {
+        "step": "04",
+        "title": "质检与包装",
+        "description": "出货前检验，纸箱按出口要求准备。"
+      },
+      {
+        "step": "05",
+        "title": "出运",
+        "description": "按目的市场准备单证与物流。"
+      }
+    ]
+  },
+  "testimonials": [],
+  "warranty": {
+    "eyebrow": "OEM 服务",
+    "title": "OEM 服务、生产范围与包装",
+    "description": "用清楚的结构与包装选项搭建项目。",
+    "commitment": "我们与品牌、批发商和贸易公司合作。具名案例仅在客户授权后出现。",
+    "cases": [
+      {
+        "question": "01",
+        "title": "OEM 项目",
+        "description": "按你的规格生产，或与打样团队共同开发。"
+      },
+      {
+        "question": "02",
+        "title": "生产范围",
+        "description": "面向品牌与批发组合的产品线。"
+      },
+      {
+        "question": "03",
+        "title": "定制包装",
+        "description": "按你的要求准备标签、内包装与出口纸箱。"
+      }
+    ]
+  },
+  "rooms": {
+    "title": "产品线",
+    "items": [
+      {
+        "label": "产品线 A",
+        "slug": "product-line-a",
+        "href": "/zh/products/product-line-a"
+      },
+      {
+        "label": "产品线 B",
+        "slug": "product-line-b",
+        "href": "/zh/products/product-line-b"
+      },
+      {
+        "label": "产品线 C",
+        "slug": "product-line-c",
+        "href": "/zh/products/product-line-c"
+      }
+    ]
+  },
+  "projects": {
+    "title": "精选产品",
+    "items": []
+  },
+  "ecosystem": {
+    "title": "采购方为何与 [品牌] 合作",
+    "description": "OEM 项目的工厂直连合作。",
+    "items": [
+      {
+        "step": "01",
+        "title": "工厂直连",
+        "description": "直接与制造团队沟通材料、结构与包装。"
+      },
+      {
+        "step": "02",
+        "title": "一个项目负责人",
+        "description": "开发、打样、大货、品牌包装与出口单证由同一联系人跟进。"
+      },
+      {
+        "step": "03",
+        "title": "可抽检的质量",
+        "description": "对照确认样品做过程检与出货前检验。"
+      },
+      {
+        "step": "04",
+        "title": "关注交期",
+        "description": "打样与大货节点清楚；材料或产能变化时及时同步。"
+      }
+    ]
+  },
+  "cta": {
+    "title": "准备启动项目？",
+    "description": "请发送产品参考、预估数量与目的市场。我们会在一个工作日内回复下一步。",
+    "formTitle": "获取报价",
+    "formDescription": "请简要说明产品、数量与交期，我们会在一个工作日内回复。",
+    "steps": [
+      "需求与可行性",
+      "打样",
+      "大货生产"
+    ]
+  },
+  "footerFeatures": [
+    {
+      "title": "OEM 制造",
+      "description": "为品牌与分销商提供贴牌"
+    },
+    {
+      "title": "[城市]",
+      "description": "生产、后道与包装"
+    },
+    {
+      "title": "产品线 A · B · C",
+      "description": "面向品牌组合的系列"
+    },
+    {
+      "title": "获取报价",
+      "description": "[邮箱]"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "main": [
+    {
+      "id": "home",
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "id": "about",
+      "label": "About Us",
+      "href": "/about"
+    },
+    {
+      "id": "products",
+      "label": "Products",
+      "href": "/products",
+      "groups": [
+        {
+          "title": "Yarn ranges",
+          "links": [
+            {
+              "label": "Polyester Dyed Yarn",
+              "href": "/products/polyester-dyed-yarn",
+              "description": "Dyed polyester yarns for knitting and weaving programs that need stable shade across repeat lots."
+            },
+            {
+              "label": "Space Dyed Yarn",
+              "href": "/products/space-dyed-yarn",
+              "description": "Multi-colour dyed yarns for carpets, fashion knits, and decorative fabrics that need segmented colour effects."
+            },
+            {
+              "label": "Twisted Yarn",
+              "href": "/products/twisted-yarn",
+              "description": "Twisted dyed yarns for fabrics that need extra strength, grip, or textured surface interest."
+            },
+            {
+              "label": "FDY Dyed Yarn",
+              "href": "/products/fdy-dyed-yarn",
+              "description": "Full drawn dyed yarns for weaving and applications that need a smooth filament hand."
+            },
+            {
+              "label": "Cotton Dyed Yarn",
+              "href": "/products/cotton-dyed-yarn",
+              "description": "Cotton dyed yarns for knitted and woven programs that need natural fibre comfort."
+            },
+            {
+              "label": "Nylon Dyed Yarn",
+              "href": "/products/nylon-dyed-yarn",
+              "description": "Nylon and micro-nylon dyed yarns for stretch, activewear, and specialty fabrics."
+            }
+          ]
+        }
+      ],
+      "feature": {
+        "title": "View All Products",
+        "description": "Browse dyed yarn ranges and request a quote",
+        "href": "/products",
+        "image": "/images/series-polyester.webp"
+      }
+    },
+    {
+      "id": "quality",
+      "label": "Quality",
+      "href": "/quality"
+    },
+    {
+      "id": "capabilities",
+      "label": "Capabilities",
+      "href": "/capabilities"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "href": "/faq"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Us",
+      "href": "/contact"
+    }
+  ]
+}

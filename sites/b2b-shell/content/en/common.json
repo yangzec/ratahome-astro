@@ -1,0 +1,146 @@
+{
+  "site": {
+    "name": "[Brand]",
+    "title": "[Brand] | Manufacturer & Exporter",
+    "description": "[Brand] is a manufacturer and exporter in [City]. We supply OEM and wholesale programs for mills, brands, and trading partners.",
+    "whatsapp": "[Phone]",
+    "whatsappUrl": "#",
+    "hours": "Mon–Sat, 09:00–18:00",
+    "location": "[City]",
+    "address": "[Address]",
+    "phone": "[Phone]",
+    "email": "[Email]",
+    "tagline": "Manufacturer & exporter · OEM supply for mills, brands, and trading partners"
+  },
+  "buttons": {
+    "startProject": "Get Quote",
+    "uploadFloorPlan": "Get Quote",
+    "factoryTour": "Browse Products",
+    "sendFloorPlan": "Send message",
+    "sendMessage": "Send message",
+    "whatsappUs": "WhatsApp",
+    "viewAll": "View All",
+    "seeJourney": "How we work",
+    "readWarranty": "Quality",
+    "exploreProjects": "Browse Products",
+    "requestQuote": "Get Quote",
+    "discussJoinery": "Contact Us"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "company": "Company",
+    "whatsapp": "WhatsApp",
+    "projectType": "Enquiry type",
+    "message": "Message",
+    "projectDetails": "Message",
+    "floorPlan": "Attachments (PDF / JPG)",
+    "privacy": "A short note on product, quantity, and timing helps us reply within one business day.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "phonePlaceholder": "[Phone]",
+    "companyPlaceholder": "Mill, brand, or trading office",
+    "whatsappPlaceholder": "WhatsApp number",
+    "messagePlaceholder": "Product, quantity, and destination market",
+    "detailsPlaceholder": "Product, quantity, and destination market",
+    "messageRequired": true,
+    "projectTypes": {
+      "residence": "Get Quote",
+      "design": "Contact Us",
+      "development": "Sample request",
+      "hospitality": "Product inquiry",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "description": "[Brand] is a manufacturer and exporter in [City]. We supply OEM and wholesale programs for mills, brands, and trading partners.",
+    "copyright": "All rights reserved.",
+    "foundedYear": "[Year]",
+    "columns": [
+      {
+        "title": "[Brand]",
+        "body": "[Brand] is a manufacturer and exporter in [City]. We supply OEM and wholesale programs for mills, brands, and trading partners.",
+        "links": [],
+        "note": ""
+      },
+      {
+        "title": "Products",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "Product line A",
+            "href": "/products/product-line-a"
+          },
+          {
+            "label": "Product line B",
+            "href": "/products/product-line-b"
+          },
+          {
+            "label": "Product line C",
+            "href": "/products/product-line-c"
+          },
+          {
+            "label": "All Products",
+            "href": "/products"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "body": "",
+        "note": "",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Factory",
+            "href": "/factory"
+          },
+          {
+            "label": "Capabilities",
+            "href": "/capabilities"
+          },
+          {
+            "label": "FAQ",
+            "href": "/faq"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": "",
+        "links": [
+          {
+            "label": "Address: [Address]",
+            "href": "/contact"
+          },
+          {
+            "label": "Phone: [Phone]",
+            "href": "/contact"
+          },
+          {
+            "label": "Email: [Email]",
+            "href": "mailto:"
+          },
+          {
+            "label": "WhatsApp: [Phone]",
+            "href": "#"
+          },
+          {
+            "label": "Get Quote",
+            "href": "/contact/?intent=quote"
+          }
+        ],
+        "note": "Hours: Mon–Sat, 09:00–18:00"
+      }
+    ]
+  }
+}

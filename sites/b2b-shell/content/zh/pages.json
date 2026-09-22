@@ -1,0 +1,275 @@
+{
+  "about": {
+    "title": "关于 [品牌] | 制造商",
+    "eyebrow": "关于 [品牌]",
+    "heroTitle": "关于 [品牌]",
+    "heroDescription": "总部位于 [城市] 的制造商。",
+    "workflowTitle": "我们的故事",
+    "workflowDescription": "[法律名称] 是总部位于 [城市] 的制造商。我们与工厂、品牌与出口采购方合作 OEM 项目——开发、打样、大货、包装与单证。",
+    "story": "[法律名称] 是总部位于 [城市] 的制造商。我们与工厂、品牌与出口采购方合作 OEM 项目——开发、打样、大货、包装与单证。",
+    "approachTitle": "OEM · 获取报价",
+    "approach": "查看工厂流程，或为下一个项目询价。",
+    "glanceTitle": "一览",
+    "closingTitle": "OEM · 获取报价",
+    "closingDescription": "查看工厂流程，或为下一个项目询价。"
+  },
+  "collections": {
+    "title": "产品中心",
+    "heroTitle": "产品中心",
+    "heroDescription": "浏览产品线。打开分类查看规格，再对适合你项目的结构询价。",
+    "packagesTitle": "产品线",
+    "benefitsTitle": "获取报价",
+    "benefitsDescription": "询厂价，或打开一条产品线。",
+    "stylesTitle": "按产品线筛选",
+    "stylesDescription": "产品线 · 结构 · 用途",
+    "styles": [
+      "全部产品",
+      "产品线 A",
+      "产品线 B",
+      "产品线 C"
+    ]
+  },
+  "contact": {
+    "title": "联系我们 | 获取报价",
+    "heroTitle": "联系我们",
+    "heroDescription": "请简要说明产品、数量与交期，我们会在一个工作日内回复。",
+    "getInTouch": "工厂联系方式",
+    "helper": "请简要说明产品、数量与交期，我们会在一个工作日内回复。",
+    "whatsappLine": "WhatsApp [电话]",
+    "visitNote": "[城市] 工厂参观需预约。"
+  },
+  "slugs": {
+    "factory": {
+      "title": "工厂",
+      "description": "位于 [城市] 的生产、质检与包装。",
+      "content": "位于 [城市] 的生产、质检与包装。参观需预约。",
+      "sections": [
+        {
+          "title": "工厂说明",
+          "body": "生产、质检与包装地址：[地址]。",
+          "items": [
+            "基地 — [城市]",
+            "法律名称 — [法律名称]",
+            "角色 — OEM 制造商与出口商"
+          ]
+        }
+      ]
+    },
+    "capabilities": {
+      "title": "能力",
+      "description": "开发、打样、大货、质检、包装与出口单证。",
+      "content": "开发、打样、大货、质检、包装与出口单证。",
+      "sections": [
+        {
+          "title": "我们做什么",
+          "body": "从需求到装箱出运由同一项目负责人跟进。",
+          "items": [
+            "开发 — 按你的规格或参考样确认结构与材料选项。",
+            "打样 — 大货前你先核对样品。",
+            "大货 — 确认规格进入生产，并做过程检查。",
+            "包装 — 按你的要求准备标签、内包装与出口纸箱。"
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "询价资料、OEM、打样与回复时效。",
+      "content": "给品牌与批发采购方的简短答复。",
+      "sections": [
+        {
+          "title": "采购问答",
+          "body": "我们目标在一个工作日内回复询盘。",
+          "items": [
+            "首次询价需要什么？ — 产品参考、预估数量、目的市场，以及标识或包装要求。",
+            "是否支持 OEM？ — 支持。可按你的规格生产，或与打样团队共同开发。",
+            "打样与大货周期如何安排？ — 打样时间取决于结构；大货在样品确认与材料落实后开始。",
+            "回复有多快？ — 我们目标在一个工作日内回复询盘。"
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "description": "[品牌] 如何处理询盘资料。",
+      "content": "[品牌] 使用你提交的联系方式回复报价与项目需求。我们不出售询盘数据。如需更正或删除信息，请写至 [邮箱]。"
+    },
+    "terms": {
+      "title": "使用条款",
+      "description": "使用 [品牌] 网站的条款。",
+      "content": "本网站内容用于产品说明与询盘。规格与交期以书面报价为准。此处不构成要约。商务条款以 [法律名称] 出具的文件为准。"
+    },
+    "product-line-a": {
+      "title": "产品线 A",
+      "description": "面向 OEM 与批发项目的 A 系列。",
+      "content": "查看产品线 A 的结构要点，然后询价。",
+      "bullets": [
+        "规格在打样时确认",
+        "可提供贴牌包装",
+        "对入围结构询价"
+      ],
+      "specs": [
+        {
+          "parameter": "材料",
+          "value": "打样时确认"
+        },
+        {
+          "parameter": "交期",
+          "value": "样品确认后"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入围结构询厂价。",
+      "related": [
+        {
+          "label": "产品线 B",
+          "href": "/zh/products/product-line-b"
+        },
+        {
+          "label": "产品线 C",
+          "href": "/zh/products/product-line-c"
+        }
+      ]
+    },
+    "product-line-b": {
+      "title": "产品线 B",
+      "description": "面向 OEM 与批发项目的 B 系列。",
+      "content": "查看产品线 B 的结构要点，然后询价。",
+      "bullets": [
+        "规格在打样时确认",
+        "可提供贴牌包装",
+        "对入围结构询价"
+      ],
+      "specs": [
+        {
+          "parameter": "材料",
+          "value": "打样时确认"
+        },
+        {
+          "parameter": "交期",
+          "value": "样品确认后"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入围结构询厂价。",
+      "related": [
+        {
+          "label": "产品线 A",
+          "href": "/zh/products/product-line-a"
+        },
+        {
+          "label": "产品线 C",
+          "href": "/zh/products/product-line-c"
+        }
+      ]
+    },
+    "product-line-c": {
+      "title": "产品线 C",
+      "description": "面向 OEM 与批发项目的 C 系列。",
+      "content": "查看产品线 C 的结构要点，然后询价。",
+      "bullets": [
+        "规格在打样时确认",
+        "可提供贴牌包装",
+        "对入围结构询价"
+      ],
+      "specs": [
+        {
+          "parameter": "材料",
+          "value": "打样时确认"
+        },
+        {
+          "parameter": "交期",
+          "value": "样品确认后"
+        }
+      ],
+      "ctaTitle": "获取报价",
+      "ctaBody": "对入围结构询厂价。",
+      "related": [
+        {
+          "label": "产品线 A",
+          "href": "/zh/products/product-line-a"
+        },
+        {
+          "label": "产品线 B",
+          "href": "/zh/products/product-line-b"
+        }
+      ]
+    }
+  },
+  "packageBenefits": [
+    {
+      "title": "获取报价",
+      "description": "一个工作日内回复下一步。"
+    },
+    {
+      "title": "产品线",
+      "description": "打开一条产品线查看规格与包装选项。"
+    },
+    {
+      "title": "OEM 项目",
+      "description": "按你的规格，或与打样团队共同开发。"
+    }
+  ],
+  "collectionPackages": [
+    {
+      "title": "产品线 A",
+      "description": "面向 OEM 与批发项目的 A 系列。",
+      "image": "/images/placeholder-card.svg",
+      "href": "/zh/products/product-line-a"
+    },
+    {
+      "title": "产品线 B",
+      "description": "面向 OEM 与批发项目的 B 系列。",
+      "image": "/images/placeholder-card.svg",
+      "href": "/zh/products/product-line-b"
+    },
+    {
+      "title": "产品线 C",
+      "description": "面向 OEM 与批发项目的 C 系列。",
+      "image": "/images/placeholder-card.svg",
+      "href": "/zh/products/product-line-c"
+    }
+  ],
+  "workflow": [
+    {
+      "step": "01",
+      "title": "基地",
+      "description": "[城市]"
+    },
+    {
+      "step": "02",
+      "title": "角色",
+      "description": "OEM 制造商"
+    },
+    {
+      "step": "03",
+      "title": "法律名称",
+      "description": "[法律名称]"
+    },
+    {
+      "step": "04",
+      "title": "主要行动",
+      "description": "获取报价"
+    }
+  ],
+  "aboutAudiences": [
+    {
+      "title": "OEM 项目",
+      "description": "按你的规格生产，或与打样团队共同开发。"
+    },
+    {
+      "title": "一个工作日",
+      "description": "我们目标在一个工作日内回复询盘。"
+    }
+  ],
+  "collectionBenefits": [
+    {
+      "title": "查看产品线",
+      "description": "打开分类查看规格与包装选项。"
+    },
+    {
+      "title": "获取报价",
+      "description": "对入围产品询厂价。"
+    }
+  ]
+}

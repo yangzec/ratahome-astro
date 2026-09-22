@@ -11,7 +11,7 @@
 
 | 资源 | 名称 | 说明 |
 |------|------|------|
-| D1 数据库 | `trade-platform` | 全平台共享，按 `site_id` 隔离 |
+| D1 数据库 | `trade-platform` | 全平台共享一个实例，按 `site_id` 隔离；不要每站新建 D1 |
 | R2 Bucket | `trade-platform-assets` | 对象 key 前缀 `{site_id}/` |
 
 创建 D1 后，将返回的 `database_id` 写入 `sites/ratahome-furniture/wrangler.jsonc`：
