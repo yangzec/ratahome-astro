@@ -9,15 +9,15 @@
 | 项 | 决策 | 说明 |
 |----|------|------|
 | 部署顺序 | **先单站单部署，后多站单部署** | 先证明「站可复制」，再证明「部署可合并」 |
-| 代码组织 | Monorepo + `sites/{industry}/` | 共享 `packages/core`，每站独立配置 |
+| 代码组织 | **本仓 main 纯模板 + 新站一站一仓** | `yangzec/ratahome-astro` 的 main 只放空壳 `sites/b2b-shell`、共享 packages、create / 校验、文档；品牌站部署源码进独立 Git 仓并钉模板版本。已在本仓的老站（`ratahome-furniture`、`aureline-yarns`、`loftknit-oem`、`atelierbag-oem` 等）过渡期可留，有空再迁。不要再默认在本仓 `sites/<slug>/` 堆新品牌成品 |
 | 行业语义 | **内容文案为主，组件为辅** | 80% 差异在 JSON / 路由 / 素材；仅 ~20% 需新 Section |
 | 页面多样化 | Section Registry + Page Blueprint | 首页等由 JSON 配置区块顺序，非写死模板 |
-| 多语言 | en 默认 + zh（`/zh/`） | 后续按需扩展 locale |
+| 多语言 | 同站一套槽位，按 locale 分文案 | 蓝图阶段、灌站前：Google Suggest 收各语种真实说法 → 人工确认本地化表达 → EN 先出 copy-final 母版 → 其他语种同槽位本地化 copy-final（禁止机翻当定稿）→ 再灌 `content/<locale>/`。不是每语种一个仓库。有 locale 文件 ≠ 做过关键词 / 本地化验收。Ads 关键词规划师可选、后期排量级 / 竞争；早期不必上 Ads。行业横比蓝图按产品线一份结构参考，落到品牌站再拆各语种 copy-final |
 | 技术栈 | Astro 7 + Tailwind 4 + Cloudflare D1/R2 | 不引入第二套 UI 框架 |
 | 阶段 2 试点行业 | **面料、服装、家纺** | 单站单部署，共用 `b2b-textile` 模板 |
 | 阶段 3 试点行业 | **包装、印刷** | 多站单 Worker，验证 Host 路由与租户隔离 |
 | 阶段 4 扩展行业 | **运动、户外** | 规模化复制，扩 Section 库与 CI |
-| D1 策略 | **共享 D1 + `site_id`** | 从阶段 1 起所有站绑定同一 D1 实例 `trade-platform`，查询 / 写入强制带 `site_id`；**不**拆每站独立库。产品目录是各站静态 content JSON，须在灌装时整份替换 |
+| D1 策略 | **共享 D1 + `site_id`，只管运行时** | 从阶段 1 起所有站绑定同一 D1 实例 `trade-platform`，按 `site_id` / `SITE_ID` 隔离，**只管运行时询盘等**，不用数据库管部署文件 / 文案源；**不**拆每站独立库。产品目录是各站静态 content JSON，须在灌装时整份替换。`dist` 不进 Git；大图优先对象存储；竞品抓取包与 Suggest 词表作资料归档，不进部署树 |
 | 建站模板 | **`sites/b2b-shell` 空壳** | `b2b-manufacturing` 的 create 源；禁止再从 `ratahome-furniture` / 袜子站克隆行业文案 |
 | 阶段 4 部署模式 | **阶段 3 跑通后再定** | 运动 / 户外单站或多站并入 Worker，待多站试点验证后决策 |
 
@@ -244,8 +244,12 @@ trade-site-platform/
 
 ### 4.2 建站标准流程（目标 2--4 小时 / 站）
 
+**新站默认**：钉住某一版模板 → 独立品牌站仓 → 灌 `content/en/`、`content/zh/` → 从该站仓 deploy。见 `docs/site-repo-and-i18n.md` 、`docs/USAGE.md` §13。
+
+本仓 `site-cli create` 是过渡路径，不推荐新站再用：
+
 ```bash
-pnpm site-cli create <slug> --from <industry-template>
+pnpm site-cli create <slug> --from <industry-template>   # 过渡：复制进本仓 sites/<slug>/
 # 填充 content、上传 public、调整 routes
 pnpm site-cli validate <slug>
 pnpm site-cli deploy <slug>          # 单站模式
@@ -330,6 +334,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-22 20:55 | 写入「一站一仓 + 多语言蓝图前门禁」：本仓 main 纯模板、新站默认独立仓并钉模板版本、D1 只管运行时、灌站前 Suggest→确认→EN 母版→各语种 copy-final；`docs/site-repo-and-i18n.md` + AGENTS / USAGE / blueprint-rules / teardown-workflow；只改文档，不合 main、不迁仓 |
 | 2026-09-22 11:47 | 重部署 Aureline Worker `aureline-yarns`（Version `6c408e3d-ba49-4760-a765-4436cf9242fb`）；EN https://aureline-yarns.yangzec.workers.dev/  ZH https://aureline-yarns.yangzec.workers.dev/zh/ ；不合 main |
 | 2026-09-22 11:45 | `b2b-manufacturing` create 源改为空壳 `sites/b2b-shell`；Aureline 城市 / 电话 / 邮箱改为 TBD；USAGE / AGENTS / D1 文档写明共享库 + 静态 content 须整份替换；不合 main |
 | 2026-09-21 20:55 | 写入「同一 section 单一主题」纪律：生成顺序同主题保持 → 好拆则拆 → 难拆调 H2 → 宁少勿凑；与「不为迁就模板而改蓝图」用触发条件划分（买家问题 vs 格子好看）；`docs/blueprint-rules.md` + `AGENTS.md`；不合 main |
@@ -349,7 +354,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
 | 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
 | 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
-| 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
 
 ---
 
@@ -357,6 +361,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-22 20:55 | 一站一仓 + 多语言蓝图前门禁文档 | 对读 `docs/site-repo-and-i18n.md`、`AGENTS.md`、`docs/USAGE.md` §13、`docs/blueprint-rules.md`、`docs/teardown-workflow.md`、`ROADMAP.md` 已确认决策；核对锁定原文是否写入，且无站点代码 / 迁仓改动 | 通过；决策原文已落入文档；`sites/` 与组件未改 |
 | 2026-09-22 11:47 | 空壳 create + Aureline 清理 | `pnpm site-cli validate`（b2b-shell / aureline / 三已填实例）；`.tmp/create-spotcheck` 下 create `probe-empty` 后扫描 content 无 Foshan/sofa/sock；`pnpm --filter b2b-shell build` 与 `aureline-yarns` build；`cf:deploy` 后 curl EN/ZH 首页、产品、涤纶、联系、关于 | 通过；预览 200；无 Shaoxing/绍兴/LoftKnit/sock；TBD 标记在线；Version `6c408e3d-ba49-4760-a765-4436cf9242fb` |
 | 2026-09-21 20:43 | LoftKnit 真实配图 | `pnpm site-cli validate` + `cf:deploy`；curl EN/ZH 首页、About、产品及 12 张 webp | 通过；页面 200；图均为 `image/webp`；home alt 无 Placeholder；Version `e688b63e-234a-40b0-be12-1052fe84c5f9` |
 | 2026-09-21 18:17 | ListGrid 2/3/4/6 条 | 夹具 + 线上 CDP：各行列 unused=0；Why 4 卡满行；Process 6 步末行两卡均分 | 通过；无半宽空栏；Version `94d6a387-1a71-4a63-b44a-b66041c1d6a0` |

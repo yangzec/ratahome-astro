@@ -1,6 +1,6 @@
 # 使用文档 -- Trade Site Platform
 
-面向开发者与内容编辑。当前首个站点为 **Ratahome 家具站**（`sites/ratahome-furniture`）。
+面向开发者与内容编辑。本仓 `yangzec/ratahome-astro` 的 **main 是纯模板仓**。当前过渡期仍留在本仓的首个已填实例为 **Ratahome 家具站**（`sites/ratahome-furniture`）。新站默认一站一仓，见 §13 与 `docs/site-repo-and-i18n.md` 。
 
 ---
 
@@ -58,8 +58,10 @@ trade-site-platform/
 │   ├── public/                    # 图片、图标
 │   ├── src/                       # Astro 页面与组件
 │   └── wrangler.jsonc             # Cloudflare 部署配置
-└── migrations/                    # 共享 D1 迁移（全站共用一个 trade-platform）
+└── migrations/                    # 共享 D1 迁移（全站共用一个 trade-platform；只管运行时）
 ```
+
+本仓 `sites/` 下除空壳 `b2b-shell` 外，已填实例（家具、色纱、袜子、手袋等）是**过渡期老站**，不是新品牌站默认落点。新站源码进独立 Git 仓。构建产物 `dist` 不进 Git；大图优先对象存储；竞品抓取包与 Suggest 词表作资料归档，不进部署树。
 
 ---
 
@@ -168,7 +170,7 @@ sites/ratahome-furniture/content/
 
 ## 9. 数据库（共享 D1 + site_id）
 
-**策略**：全平台共用 **一个** Cloudflare D1 实例 `trade-platform`，用 `site_id` / `SITE_ID` 做逻辑隔离。**不要**为每个站点创建独立 D1。各站 `wrangler.jsonc` 绑定同一 `database_name` 与同一 `database_id`，只改 `vars.SITE_ID`。
+**策略**：全平台共用 **一个** Cloudflare D1 实例 `trade-platform`，用 `site_id` / `SITE_ID` 做逻辑隔离，**只管运行时询盘等**，不用数据库管部署文件 / 文案源。**不要**为每个站点创建独立 D1。各站 `wrangler.jsonc` 绑定同一 `database_name` 与同一 `database_id`，只改 `vars.SITE_ID`。
 
 隔离范围（读写必须带当前站的 `site_id`）：
 
@@ -223,13 +225,35 @@ pnpm db:migrate
 
 ---
 
-## 13. 新增站点（site-cli）
+## 13. 新增站点
+
+规范正文：`docs/site-repo-and-i18n.md` 。多语言门禁：`docs/blueprint-rules.md` 、`docs/teardown-workflow.md` 。
+
+### 新站默认：一站一仓
+
+一句话流程：**钉住某一版模板 → 新建独立品牌站仓 → 按已验收 copy-final 写入 `content/en/`、`content/zh/` → 从该站仓 deploy。**
+
+不要再默认在本仓 `sites/<slug>/` 堆新品牌成品。
+
+1. **钉模板版本**：在本仓 `yangzec/ratahome-astro` 记下将使用的 tag 或 commit（空壳 `sites/b2b-shell`、共享 packages、文档以该版为准）。
+2. **新建站仓**：品牌站部署源码进独立 Git 仓，从钉住的模板版复制空壳与所需 packages，写入该站 `site.config.ts` / `SITE_ID` / Worker 名。
+3. **灌文案**：蓝图前门禁通过后，把各语种 copy-final 写入该站仓 `content/en/`、`content/zh/`（同站一套槽位 / 路由，不是每语种一仓）。有 locale 文件 ≠ 做过关键词 / 本地化验收。
+4. **deploy**：从该站仓构建并部署。`dist` 不进 Git；大图优先对象存储；竞品抓取包与 Suggest 词表只作资料归档，不进部署树。
+5. **运行时**：仍绑定共享 D1 `trade-platform`，按 `site_id` / `SITE_ID` 隔离。D1 **只管运行时询盘等**，不用数据库管部署文件 / 文案源。
+
+`b2b-manufacturing` 的源是空壳 `sites/b2b-shell`，**不是** `ratahome-furniture` 或袜子 / 手袋站。禁止再从已填实例克隆行业文案。
+
+### 本仓 `site-cli create`（过渡 / 不推荐新站再用）
+
+下列命令仍会把空壳复制进**本仓** `sites/<slug>/`。只用于已在本仓的老站维护，或尚未迁出的实验。新品牌站不要再用这条路径当默认建站方式。
+
+已在本仓的老站（`ratahome-furniture`、`aureline-yarns`、`loftknit-oem`、`atelierbag-oem` 等）过渡期可留着，有空再迁。
 
 ```bash
 # 查看可用行业模板
 pnpm site-cli templates
 
-# 从空壳创建新站（复制 sites/b2b-shell，只改 site_id / Worker 名；不含家具或袜子文案）
+# 过渡：复制 sites/b2b-shell 进本仓 sites/<slug>/（只改 site_id / Worker 名；不含家具或袜子文案）
 pnpm site-cli create textile-fabric --from b2b-manufacturing --name "Textile Fabric"
 
 # 校验配置、JSON、Blueprint section、SITE_ID 一致性
@@ -244,7 +268,7 @@ pnpm site-cli deploy textile-fabric
 pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 ```
 
-`b2b-manufacturing` 的源是空壳 `sites/b2b-shell`，**不是** `ratahome-furniture`。行业文案只在 create 之后，按 copy-final 蓝图整份写入 `sites/<slug>/content/`。不要把家具站或袜子站当模板源。已填实例（`ratahome-furniture`、`loftknit-oem`、`atelierbag-oem`）保持不动。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json`。
+若走这条过渡路径：行业文案仍须在 create 之后，按已验收的 copy-final 整份写入 `sites/<slug>/content/`，并先过蓝图前门禁。`b2b-textile` 等行业模板将在阶段 2 加入 `packages/site-cli/templates.json` 。
 
 ---
 
@@ -262,6 +286,9 @@ pnpm site-cli deploy textile-fabric --dry-run   # 仅打印命令
 
 ## 15. 相关文档
 
+- 一站一仓 / 多语言门禁：`docs/site-repo-and-i18n.md`
+- 蓝图规则：`docs/blueprint-rules.md`
+- 拆站流程：`docs/teardown-workflow.md`
 - 架构与进度：`ROADMAP.md`
 - Agent 协作规范：`AGENTS.md`
 - 项目概览：`README.md`
