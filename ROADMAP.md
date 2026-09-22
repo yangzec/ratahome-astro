@@ -330,6 +330,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 事项 |
 |------|------|
+| 2026-09-22 15:04 | 产品下拉相对主栏内容行居中（去掉 left:0 + 右推 clamp）；询盘 CTA / 联系页 / PageHero / 共享列表 section 垂直留白按 8 倍数下调；重部署 `aureline-yarns` Version `e2e1e2dc-fecb-487e-b3d4-0bdd78a38199`；不合 main |
 | 2026-09-22 14:37 | 共享 Hero 改为 column 全宽，修中文单字竖条与窄屏溢出；产品下拉贴齐主栏下沿并 clamp 防裁切；重部署 `aureline-yarns` Version `cbe20472-4031-4f85-a61e-fbb80b071b10`；不合 main |
 | 2026-09-22 14:26 | 共享 Header 按 `navigation.json` 自适应主栏，去掉家具 `primaryOrder`；产品下拉改为紧凑 2/3 列、去掉促销空卡；顶栏 / CTA 走 `theme.json` token；重部署 `aureline-yarns` Version `f7d92af2-10df-46f6-a035-338bcf9ac4ac`；不合 main |
 | 2026-09-22 13:50 | 共享询盘表单改为 token 化 B2B 控件：标签上置、去重说明、自定义上传区、主色 focus；重部署 `aureline-yarns` Version `a920311d-0702-47c7-978a-f0d591e4b634`；不合 main |
@@ -349,7 +350,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-21 15:13 | 新增手袋 OEM 站 `sites/atelierbag-oem`（从 Chromora 制造模板复制，未改 ratahome / chromora 内容） |
 | 2026-09-18 07:35 | 以 GitHub `yangzec/ratahome-astro` 为 canonical 远程；更新 README / AGENTS / ROADMAP |
 | 2026-09-18 07:27 | 仓库远程与文档统一（后改为以 GitHub 为主） |
-| 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
 
 ---
 
@@ -357,6 +357,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 时间 | 对象 | 方式 | 结果 |
 |------|------|------|------|
+| 2026-09-22 15:04 | 产品下拉居中 + 询盘区减高 | headed Chrome：面板中心与主栏行中心 delta=0、gapFromHeader=0；Hero 1280/768/390 无竖条无横溢；首页 CTA 1243→1129（pad 80→48） | 通过；ZH/EN 下拉居中贴沿；联系页首屏直接见表单；Version `e2e1e2dc-fecb-487e-b3d4-0bdd78a38199` |
 | 2026-09-22 14:37 | Aureline Hero 1280/768/390 + 产品下拉定位 | headed Chrome 真实视口；度量 Hero `flex-direction:column`、h1 宽 640/335、无竖向溢出；下拉 itemH=64、gapFromHeader=0、无左右裁切 | 通过；ZH/EN 标题与 CTA 在首屏；面板贴主栏下沿；Version `cbe20472-4031-4f85-a61e-fbb80b071b10` |
 | 2026-09-22 14:26 | 共享顶栏（Aureline EN/ZH 桌面 + 390px 移动） | curl EN/ZH 首页 200；headed Chrome 1440 悬停「产品」；真实视口 390×844 开汉堡 / 产品手风琴 / 关闭；度量 headerBg `rgb(18, 36, 48)`、ctaBg `rgb(37, 99, 120)` | 通过；ZH/EN 主栏露出品质/打色/FAQ 等，无「更多」；产品菜单 3 列 6 卡、无促销空卡；汉堡可用；Version `f7d92af2-10df-46f6-a035-338bcf9ac4ac` |
 | 2026-09-22 13:50 | 共享询盘表单（Aureline EN/ZH 联系页 + 首页 CTA） | `pnpm --filter aureline-yarns build`；`pnpm site-cli deploy`；curl EN/ZH `/contact/` 200；浏览器走表单：标签上置、说明只出现一次、自定义上传区悬停无 No file chosen、主色 focus、全宽提交 | 通过；预览 https://aureline-yarns.yangzec.workers.dev/zh/contact/ ；Version `a920311d-0702-47c7-978a-f0d591e4b634` |
