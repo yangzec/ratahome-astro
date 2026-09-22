@@ -43,7 +43,9 @@ pnpm dev          # http://localhost:43123
 pnpm build
 pnpm db:migrate # local shared D1
 pnpm cf:deploy  # deploy ratahome-furniture
-pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"  # copies sites/b2b-shell; fill industry copy after
+# New brand sites: pin a template version → own Git repo → content/en|zh → deploy
+# (do not default to stacking finished brands under this repo's sites/<slug>/)
+pnpm site-cli create <slug> --from b2b-manufacturing --name "Site Name"  # transitional / not for new brand sites; copies sites/b2b-shell into this repo
 pnpm site-cli validate <slug>
 pnpm site-cli deploy <slug>
 # AtelierBag OEM local: pnpm --filter atelierbag-oem dev  → http://localhost:43126
@@ -64,7 +66,8 @@ pnpm site-cli deploy <slug>
 
 ## Docs
 
-- **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)
+- **使用文档（开发 / 内容编辑）**：[`docs/USAGE.md`](docs/USAGE.md)（§13 新站一站一仓）
+- **一站一仓 / 多语言门禁**：[`docs/site-repo-and-i18n.md`](docs/site-repo-and-i18n.md)
 - **Cloudflare 部署**：[`docs/DEPLOY.md`](docs/DEPLOY.md)
 - Agent 协作规范：`AGENTS.md`
 - 进度与计划：`ROADMAP.md`

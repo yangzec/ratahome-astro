@@ -166,36 +166,39 @@
 **Canonical 仓库：** `yangzec/ratahome-astro`（GitHub）  
 https://github.com/yangzec/ratahome-astro
 
+**本仓 `main` = 纯模板仓**（空壳、共享 packages、create / 校验、文档）。**新站默认一站一仓**，不要再在本仓 `sites/<slug>/` 堆新品牌成品。已在本仓的老站过渡期可留。D1 共用 `trade-platform`，按 `site_id` / `SITE_ID` 隔离，**只管运行时询盘等**，不用数据库管部署文件 / 文案源。多语言在蓝图阶段、灌站前做 Suggest → 确认 → EN 母版 → 各语种 copy-final。细则：`docs/site-repo-and-i18n.md` 。
+
 ### 核心目录及职责
 
 | 路径 | 职责 |
 |------|------|
 | `packages/core/` | 共享 db、r2、i18n（`@trade/core`） |
 | `sites/b2b-shell/` | `b2b-manufacturing` 空壳模板（create 源；不是客户站，禁止当品牌部署） |
-| `sites/ratahome-furniture/` | 首个已填实例（家具），不是新站克隆源 |
+| `sites/ratahome-furniture/` 等已填实例 | 过渡期留在本仓的老站（家具 / 色纱 / 袜子 / 手袋等），不是新站克隆源，也不是新站默认落点 |
 | `sites/*/site.config.ts` | site_id、模板、语言 |
 | `sites/*/theme.json` | 设计 token |
 | `sites/*/blueprints/` | 首页 composition（section 顺序，不是文案蓝图） |
-| `sites/*/content/{locale}/` | 文案 JSON |
+| `sites/*/content/{locale}/` | 文案 JSON（同站一套槽位，按 locale 分文案） |
 | `sites/*/src/` | Astro 页面、模板、组件 |
-| `migrations/` | 共享 D1 schema（`site_id` 隔离） |
+| `migrations/` | 共享 D1 schema（`site_id` 隔离；只管运行时） |
 | `ROADMAP.md` | 进度与计划（进度源） |
 | `README.md` | 安装、运行、部署说明 |
 
 ### 工作流导航
 
 1. 进入任务：读 `CLAUDE.md` → `AGENTS.md` → `ROADMAP.md`
-2. 新建站：`pnpm site-cli create <slug> --from b2b-manufacturing`（复制 `sites/b2b-shell` 空壳）。行业文案只在 create 之后按蓝图写入 `content/`，禁止再从家具 / 袜子站克隆
-3. 改已有站文案：编辑该站 `sites/<slug>/content/{en,zh}/*.json`（家具实例仍是 `sites/ratahome-furniture/`）
-4. 改首页区块顺序：编辑该站 `blueprints/home.json`
-5. 改主题色：编辑该站 `theme.json`
-6. 加页面路由：更新该站 `src/data/slugs.ts` + `pages.json`
-7. 本地开发：`pnpm dev`（家具站端口 `43123`）
-8. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
+2. 新建站（默认）：钉住某一版模板 → 独立品牌站仓 → 按已验收 copy-final 写入该仓 `content/en/`、`content/zh/` → 从该站仓 deploy。禁止再默认在本仓 `sites/<slug>/` 堆新品牌成品。细则：`docs/site-repo-and-i18n.md` 、`docs/USAGE.md` §13
+3. 本仓 `pnpm site-cli create <slug> --from b2b-manufacturing`：过渡 / 不推荐新站再用（复制 `sites/b2b-shell`）。已在本仓的老站过渡期可留，有空再迁
+4. 改已有站文案：过渡期老站仍编辑本仓 `sites/<slug>/content/{en,zh}/*.json`；新站改其独立仓的 `content/`
+5. 改首页区块顺序：编辑该站 `blueprints/home.json`
+6. 改主题色：编辑该站 `theme.json`
+7. 加页面路由：更新该站 `src/data/slugs.ts` + `pages.json`
+8. 本地开发：`pnpm dev`（家具站端口 `43123`）
+9. 部署前：`pnpm build`，Cloudflare 部署见 `README.md`
 
 ### 文案 / 模板分层（硬规则）
 
-- **copy-final 蓝图**（`industry-*-blueprint.md`）：只写买家可见文案；禁止指令、布局 / CSS、行话（如 fit the brief）。只把该蓝图写入 `sites/*/content/`。
+- **copy-final 蓝图**（`industry-*-blueprint.md`）：只写买家可见文案；禁止指令、布局 / CSS、行话（如 fit the brief）。只把该蓝图写入该站 `content/`（新站独立仓；本仓老站过渡期仍是 `sites/*/content/`）。
 - **站点 composition**（`sites/*/blueprints/*.json`）：section 列表与顺序，属模板侧配置，勿称文案蓝图。
 - **Section + design token**：高度 / 栅格 / 比例 / 断点。列表按 `items.length` 自适应；禁止写死 N 列 / N 步；禁止为凑版生造或截断文案；0 条隐藏整段。
 - **不为迁就模板而改蓝图。** 仅当文案本身很差（行话、指令腔、事实错误、不知所云、同 section 主题拼盘 / 硬凑细项）才改蓝图。排版 / 列数 / Hero 高度 / 图比例只改模板或 composition / token。禁止为凑 N 列删补卡片、为 Hero 砍标题、把排版问题包装成「文案优化」。
@@ -203,10 +206,12 @@ https://github.com/yangzec/ratahome-astro
 - 默认顺序：先让模板吃下现有文案（自适应 / 换 section / 调 token）→ 缺一类站通用能力再改共享模板 → 品牌皮肤只动 theme。微调模板只沉淀通用能力，禁止为单版蓝图开小灶。
 - brief / cross-compare / closure-status 不上站。禁止 Share / 请发 / as drawn / Those three notes / slogan wall / quotation-path / 未核实产能与客户名。
 - 规则全文：`docs/blueprint-rules.md`；栅格：`docs/design.md`；拆站：`docs/teardown-workflow.md`。
+- **多语言蓝图前门禁**：同站一套槽位 / 路由，按 locale 分文案；灌站前须 Suggest → 人工确认 → EN copy-final 母版 → 其他语种同槽位本地化 copy-final（禁止机翻当定稿）。有 locale 文件 ≠ 做过关键词 / 本地化验收。细则：`docs/site-repo-and-i18n.md` 、`docs/blueprint-rules.md` 。
 
 ### 文档指针
 
-- **使用文档**：`docs/USAGE.md`（安装、改文案、composition、主题、部署）
+- **使用文档**：`docs/USAGE.md`（安装、改文案、composition、主题、部署；§13 新站一站一仓）
+- **一站一仓 / 多语言门禁**：`docs/site-repo-and-i18n.md`
 - **蓝图规则**：`docs/blueprint-rules.md`
 - **设计 / 列表栅格**：`docs/design.md`
 - **拆站流程**：`docs/teardown-workflow.md`
@@ -218,7 +223,8 @@ https://github.com/yangzec/ratahome-astro
 
 - 组件层保持 Astro + Tailwind 4，不引入第二套 React 组件库
 - 行业差异优先用 content JSON 与 composition 解决，避免为每个行业 fork 组件；列表栅格按 `docs/design.md` 自适应
-- D1：**全平台共享一个 `trade-platform` 实例**，按 `site_id` / `SITE_ID` 逻辑隔离；联系表、上传、`page_content` 查询必须带站。产品目录是各站静态 `content/` JSON，共享 D1 不会自动隔离未换干净的文案。**不要**拆成每站一个 D1。schema 变更、生产部署、Git push 属红线操作，须先确认
+- **仓库模型**：本仓 `main` 纯模板；新站一站一仓；已在本仓的老站过渡期可留。构建产物 `dist` 不进 Git；大图优先对象存储；竞品抓取包与 Suggest 词表作资料归档，不进部署树
+- D1：**全平台共享一个 `trade-platform` 实例**，按 `site_id` / `SITE_ID` 逻辑隔离，**只管运行时询盘等**，不用数据库管部署文件 / 文案源。联系表、上传、`page_content` 查询必须带站。产品目录是各站静态 `content/` JSON，共享 D1 不会自动隔离未换干净的文案。**不要**拆成每站一个 D1。schema 变更、生产部署、Git push 属红线操作，须先确认
 - Git 远程 `origin` → `yangzec/ratahome-astro`（GitHub）；Cursor Origin 镜像可选，非 canonical
 
 ### 验证入口

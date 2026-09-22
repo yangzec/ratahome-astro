@@ -161,7 +161,7 @@
 
 ### 项目定位
 
-基于 Astro 7 + Cloudflare（D1 / R2）的外贸 B2B 独立站模板，目标支撑 **100 个不同行业** 的多语言站点快速复制。当前首个实例为家具行业 Ratahome 复刻站。
+基于 Astro 7 + Cloudflare（D1 / R2）的外贸 B2B 独立站模板，目标支撑 **100 个不同行业** 的多语言站点快速复制。当前首个实例为家具行业 Ratahome 复刻站。项目规范正文是 `AGENTS.md`；仓库模型与多语言蓝图前门禁见 `docs/site-repo-and-i18n.md` 。
 
 ### 核心目录及职责
 
@@ -190,10 +190,11 @@
 
 ### 文档指针
 
-- **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署）
+- **使用文档**：`docs/USAGE.md`（安装、改文案、Blueprint、主题、部署；§13 新站一站一仓）
+- **一站一仓 / 多语言门禁**：`docs/site-repo-and-i18n.md`
 - 项目概览：`README.md`
 - 进度与决策：`ROADMAP.md`
-- Agent 协作规范：本文件
+- Agent 协作规范：`AGENTS.md`（项目规范正文）；本文件仅为兼容入口
 
 ### 工程边界
 
