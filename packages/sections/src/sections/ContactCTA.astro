@@ -27,11 +27,9 @@ const { site, buttons } = common;
         ))}
       </ol>
     </div>
-    <div class="bg-izza-cream rounded-lg p-8">
-      <h3 class="text-xl font-semibold text-izza-ink mb-2">{cta.formTitle}</h3>
-      <p class="text-sm text-izza-gray-muted mb-6">{cta.formDescription}</p>
+    <div class="inquiry-card">
       <ContactForm locale={locale} />
-      <div class="mt-4 text-center">
+      <div class="mt-6 text-center">
         <a href={site.whatsappUrl} target="_blank" rel="noopener" class="text-izza-accent font-medium hover:underline">{buttons.whatsappUs}</a>
       </div>
     </div>

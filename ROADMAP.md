@@ -322,6 +322,7 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 
 | 事项 | 状态 |
 |------|------|
+| 共享询盘表单视觉 | 已改 `packages/sections` ContactForm / ContactCTA（标签上置、去重说明、自定义上传区、token 控件）；待 aureline 构建验证与 Worker 重部署 |
 | Cloudflare 生产部署（家具站） | 本地 dry-run 通过；待 `wrangler login` 后按 `docs/DEPLOY.md` 执行 |
 
 ---
