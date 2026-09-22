@@ -321,6 +321,7 @@ const panelGroups = (item: NavItem) => {
   }
 
   .site-header-row {
+    position: relative;
     display: flex;
     align-items: stretch;
     gap: 16px;
@@ -362,11 +363,25 @@ const panelGroups = (item: NavItem) => {
   }
 
   .site-nav-item {
-    position: relative;
+    position: static;
     display: flex;
     align-items: center;
     align-self: stretch;
     flex-shrink: 0;
+  }
+
+  .site-nav-item[data-nav="more"] {
+    position: relative;
+  }
+
+  .site-nav-item:hover::after,
+  .site-nav-item:focus-within::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 16px;
   }
 
   .site-nav-link {
@@ -392,7 +407,7 @@ const panelGroups = (item: NavItem) => {
   .site-nav-panel {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
     z-index: 60;
     box-sizing: border-box;
     width: min(640px, calc(100vw - 2.5rem));
@@ -406,19 +421,17 @@ const panelGroups = (item: NavItem) => {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform: translateX(-50%);
   }
 
   .site-nav-panel--narrow {
+    left: auto;
+    right: 0;
     width: 220px;
     min-width: 200px;
     max-width: 280px;
     padding: 16px;
-  }
-
-  .site-nav-item:last-child .site-nav-panel,
-  .site-nav-item[data-nav="more"] .site-nav-panel {
-    left: auto;
-    right: 0;
+    transform: none;
   }
 
   .site-nav-item:hover .site-nav-panel,
@@ -642,39 +655,3 @@ const panelGroups = (item: NavItem) => {
     }
   }
 </style>
-
-<script>
-  const EDGE = 20;
-
-  const clampPanel = (panel: HTMLElement) => {
-    panel.style.transform = '';
-    const rect = panel.getBoundingClientRect();
-    let dx = 0;
-    if (rect.right > window.innerWidth - EDGE) {
-      dx = window.innerWidth - EDGE - rect.right;
-    }
-    if (rect.left + dx < EDGE) {
-      dx = EDGE - rect.left;
-    }
-    panel.style.transform = dx ? `translateX(${Math.round(dx)}px)` : '';
-  };
-
-  const bind = () => {
-    document.querySelectorAll('.site-nav-item').forEach((item) => {
-      const panel = item.querySelector('.site-nav-panel');
-      if (!(panel instanceof HTMLElement)) return;
-      const run = () => clampPanel(panel);
-      item.addEventListener('mouseenter', run);
-      item.addEventListener('focusin', run);
-    });
-  };
-
-  bind();
-  window.addEventListener('resize', () => {
-    document.querySelectorAll('.site-nav-panel').forEach((panel) => {
-      if (panel instanceof HTMLElement && getComputedStyle(panel).visibility === 'visible') {
-        clampPanel(panel);
-      }
-    });
-  });
-</script>

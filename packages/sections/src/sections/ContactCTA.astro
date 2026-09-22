@@ -13,12 +13,12 @@ const { cta } = home;
 const { site, buttons } = common;
 ---
 
-<section id="upload" class="container-site py-20">
-  <div class="grid lg:grid-cols-2 gap-12 items-center">
+<section id="upload" class="container-site py-12">
+  <div class="grid lg:grid-cols-2 gap-8 items-start">
     <div>
       <h2 class="section-title mb-4">{cta.title}</h2>
-      <p class="text-izza-gray-text text-lg mb-8">{cta.description}</p>
-      <ol class="space-y-4 mb-8">
+      <p class="text-izza-gray-text text-lg mb-6">{cta.description}</p>
+      <ol class="space-y-3 mb-6">
         {cta.steps.map((step, i) => (
           <li class="flex gap-4">
             <span class="eyebrow text-xs shrink-0">{String(i + 1).padStart(2, '0')}</span>
