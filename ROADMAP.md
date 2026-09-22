@@ -350,7 +350,6 @@ pnpm site-cli deploy --multi-tenant  # 多站 Worker 模式
 | 2026-09-17 17:59 | `packages/site-cli`：create / validate / deploy 命令就绪 |
 | 2026-09-17 15:36 | 抽取 `packages/sections`：Section Registry + `@site/content` 注入 |
 | 2026-09-17 15:19 | 统一 locale 路由：`site-paths.ts` 集中生成 152 页 en/zh 路径 |
-| 2026-09-17 14:25 | 路线 A：Monorepo 提交推送 origin；修复 API runtime；本地表单/上传验证通过 |
 
 ---
 
